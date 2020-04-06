@@ -1,0 +1,76 @@
+@CHARSET "UTF-8";
+
+body,html {
+
+  margin:0;
+
+  padding:0;
+
+  background:#e0e0e0;
+  height:100%;
+  font-family: Verdana;
+  
+
+}
+
+
+#drawing {
+	position: relative;
+	width:100%;
+	 height:  calc(100% - 78px);
+    
+}
+
+.my-styling-class{
+      background-color:#e0e0e0;
+      color:black;
+	  overflow-y: auto;
+	  height:50%;
+      /*all CSS goes here*/
+    }
+	
+	
+/* .navbar {
+position:relative;
+z-index:2;
+font-size:17px;
+background-color:#5f5f5f;
+color:#f1f1f1;
+width:100%;
+padding:0;
+letter-spacing:1px;
+font-family:"Segoe UI",Arial,sans-serif;
+}
+.navbar a{
+padding:10px 15px 9px 15px !important;
+}
+.navbar .w3-bar a:hover,.navbar .w3-bar a:focus{
+background-color:#000000 !important;
+color:#ffffff !important;
+}
+.navbar .w3-bar a.active {
+background-color:#4CAF50;
+color:#ffffff;
+} */
+/* .navbar {
+  min-height: 80px;
+}
+
+.navbar-brand {
+  padding: 0 15px;
+  height: 80px;
+  line-height: 80px;
+}
+
+.navbar-toggle {
+  margin-top: 23px;
+  padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav > li > a {
+    padding-top: 26.5px;
+    padding-bottom: 26.5px;
+    line-height: 27px;
+  }
+} */
