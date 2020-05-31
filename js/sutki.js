@@ -406,104 +406,105 @@ function init(){
 				meg.id(keey);
 				//DragnDrop
 				//Контроль что начался драг
-				var draggi= false;
-			 	meg.on('beforedrag', function(e){
-					e.detail.event.stopPropagation();
-					refresh = false; //navigation.js
-					draggi = true;
-					this.front();
-					}) 
-				meg.draggable().on('dragstart', function(e){
-					exs = e.detail.p.x;
-					eys = e.detail.p.y;
-					})
-				meg.draggable().on('dragmove', function(e){
-					ex = e.detail.p.x;
-					ey = e.detail.p.y;
-					})
-				meg.draggable(
-				).on('dragend', function(e){
-					if (isMobile) { parPan(this.attr('id'));}
-					var oldCol = txtPar[this.attr('id')].poz.x;
-					var oldStr = txtPar[this.attr('id')].poz.y;
-					for (var key in Columns) {
-						//В какой столбец дропнуто
-						if (Columns[key].poz.x<=ex/w1 && ((Columns[key].poz.x+Columns[key].size.w)>=ex/w1)){
-							
-							var newCol = Number(key.substr(3));
-							//Отступ в столбце
-							ycolmn1Poz = h1*Columns[key].poz.y;
-							//В какую строку дропнуто
-							var newStr = Math.trunc((ey)/height_colmn1_p1)+1;
-							if (newStr>0 ){
-								//если текущий столбец 
-								 if (newCol==oldCol){
-									for (var keey in basePar) {
-										//Ищем текущий столбец
-										var how= oldStr - newStr;
-										if (basePar[keey].poz.x==newCol){
-											if (oldStr<newStr){
-											if (basePar[keey].poz.y<=newStr && basePar[keey].poz.y>oldStr){
-												basePar[keey].poz.y=basePar[keey].poz.y-1;
-												}
-											} else {
-												if (basePar[keey].poz.y>=newStr && basePar[keey].poz.y<oldStr){
-												basePar[keey].poz.y=basePar[keey].poz.y+1;
-												}}}}
-									for (var keey in txtPar) {
-										//Ищем текущий столбец
-										var how= oldStr - newStr;
-										if (txtPar[keey].poz.x==newCol){
-											if (oldStr<newStr){
-											if (txtPar[keey].poz.y<=newStr && txtPar[keey].poz.y>oldStr){
-												txtPar[keey].poz.y=txtPar[keey].poz.y-1;
-												}
-											} else {
-												if (txtPar[keey].poz.y>=newStr && txtPar[keey].poz.y<oldStr){
-												txtPar[keey].poz.y=txtPar[keey].poz.y+1;
-												}}}}
-									for (var keey in txtOknOPar) {
-										//Ищем текущий столбец
-										var how= oldStr - newStr;
-										if (txtOknOPar[keey].poz.x==newCol){
-											if (oldStr<newStr){
-											if (txtOknOPar[keey].poz.y<=newStr && txtOknOPar[keey].poz.y>oldStr){
-												txtOknOPar[keey].poz.y=txtOknOPar[keey].poz.y-1;
-												}
-											} else {
-												if (txtOknOPar[keey].poz.y>=newStr && txtOknOPar[keey].poz.y<oldStr){
-												txtOknOPar[keey].poz.y=txtOknOPar[keey].poz.y+1;
-												}}}}
-									
-								} else{
-									for (var keey in basePar) {
-										//Ищем текущий столбец
-										var how= oldStr - newStr;
-										if (basePar[keey].poz.x==newCol){											
-												if (basePar[keey].poz.y>=newStr){
-												basePar[keey].poz.y=basePar[keey].poz.y+1;
-												}	}}
-									for (var keey in txtPar) {
-										//Ищем текущий столбец
-										var how= oldStr - newStr;
-										if (txtPar[keey].poz.x==newCol){											
-												if (txtPar[keey].poz.y>=newStr){
-												txtPar[keey].poz.y=txtPar[keey].poz.y+1;
-												}	}}
-									for (var keey in txtOknOPar) {
-										//Ищем текущий столбец
-										var how= oldStr - newStr;
-										if (txtOknOPar[keey].poz.x==newCol){											
-												if (txtOknOPar[keey].poz.y>=newStr){
-												txtOknOPar[keey].poz.y=txtOknOPar[keey].poz.y+1;
-												}	}}
+				if (Sheet.editscrn){
+					var draggi= false;
+					meg.on('beforedrag', function(e){
+						e.detail.event.stopPropagation();
+						refresh = false; //navigation.js
+						draggi = true;
+						this.front();
+						}) 
+					meg.draggable().on('dragstart', function(e){
+						exs = e.detail.p.x;
+						eys = e.detail.p.y;
+						})
+					meg.draggable().on('dragmove', function(e){
+						ex = e.detail.p.x;
+						ey = e.detail.p.y;
+						})
+					meg.draggable(
+					).on('dragend', function(e){
+						if (isMobile) { parPan(this.attr('id'));}
+						var oldCol = txtPar[this.attr('id')].poz.x;
+						var oldStr = txtPar[this.attr('id')].poz.y;
+						for (var key in Columns) {
+							//В какой столбец дропнуто
+							if (Columns[key].poz.x<=ex/w1 && ((Columns[key].poz.x+Columns[key].size.w)>=ex/w1)){
+								
+								var newCol = Number(key.substr(3));
+								//Отступ в столбце
+								ycolmn1Poz = h1*Columns[key].poz.y;
+								//В какую строку дропнуто
+								var newStr = Math.trunc((ey)/height_colmn1_p1)+1;
+								if (newStr>0 ){
+									//если текущий столбец 
+									 if (newCol==oldCol){
+										for (var keey in basePar) {
+											//Ищем текущий столбец
+											var how= oldStr - newStr;
+											if (basePar[keey].poz.x==newCol){
+												if (oldStr<newStr){
+												if (basePar[keey].poz.y<=newStr && basePar[keey].poz.y>oldStr){
+													basePar[keey].poz.y=basePar[keey].poz.y-1;
+													}
+												} else {
+													if (basePar[keey].poz.y>=newStr && basePar[keey].poz.y<oldStr){
+													basePar[keey].poz.y=basePar[keey].poz.y+1;
+													}}}}
+										for (var keey in txtPar) {
+											//Ищем текущий столбец
+											var how= oldStr - newStr;
+											if (txtPar[keey].poz.x==newCol){
+												if (oldStr<newStr){
+												if (txtPar[keey].poz.y<=newStr && txtPar[keey].poz.y>oldStr){
+													txtPar[keey].poz.y=txtPar[keey].poz.y-1;
+													}
+												} else {
+													if (txtPar[keey].poz.y>=newStr && txtPar[keey].poz.y<oldStr){
+													txtPar[keey].poz.y=txtPar[keey].poz.y+1;
+													}}}}
+										for (var keey in txtOknOPar) {
+											//Ищем текущий столбец
+											var how= oldStr - newStr;
+											if (txtOknOPar[keey].poz.x==newCol){
+												if (oldStr<newStr){
+												if (txtOknOPar[keey].poz.y<=newStr && txtOknOPar[keey].poz.y>oldStr){
+													txtOknOPar[keey].poz.y=txtOknOPar[keey].poz.y-1;
+													}
+												} else {
+													if (txtOknOPar[keey].poz.y>=newStr && txtOknOPar[keey].poz.y<oldStr){
+													txtOknOPar[keey].poz.y=txtOknOPar[keey].poz.y+1;
+													}}}}
+										
+									} else{
+										for (var keey in basePar) {
+											//Ищем текущий столбец
+											var how= oldStr - newStr;
+											if (basePar[keey].poz.x==newCol){											
+													if (basePar[keey].poz.y>=newStr){
+													basePar[keey].poz.y=basePar[keey].poz.y+1;
+													}	}}
+										for (var keey in txtPar) {
+											//Ищем текущий столбец
+											var how= oldStr - newStr;
+											if (txtPar[keey].poz.x==newCol){											
+													if (txtPar[keey].poz.y>=newStr){
+													txtPar[keey].poz.y=txtPar[keey].poz.y+1;
+													}	}}
+										for (var keey in txtOknOPar) {
+											//Ищем текущий столбец
+											var how= oldStr - newStr;
+											if (txtOknOPar[keey].poz.x==newCol){											
+													if (txtOknOPar[keey].poz.y>=newStr){
+													txtOknOPar[keey].poz.y=txtOknOPar[keey].poz.y+1;
+													}	}}
+									}
+								txtPar[this.attr('id')].poz.x=Number(newCol);
+								txtPar[this.attr('id')].poz.y=newStr;
 								}
-							txtPar[this.attr('id')].poz.x=Number(newCol);
-							txtPar[this.attr('id')].poz.y=newStr;
 							}
 						}
-					}
-					repaint();
+						repaint();
 			})
 				//Клик по названию параметра
 				//События Драг
@@ -524,7 +525,7 @@ function init(){
 				//console.log("drag");
 					}
 				}, false);
-			}
+			}}
 		}
 		
 		
@@ -615,6 +616,7 @@ function init(){
 				meg.id(keey);
 				//DragnDrop
 				//Контроль что начался драг
+				if (Sheet.editscrn){
 				var draggi= false;
 			 	meg.on('beforedrag', function(e){
 					e.detail.event.stopPropagation();
@@ -733,7 +735,7 @@ function init(){
 				//console.log("drag");
 					}
 				}, false);
-		}
+		}}
 		
 		
 		
@@ -880,6 +882,7 @@ function init(){
 				meg.id(key);
 				//DragnDrop
 				//Контроль что начался драг
+				if (Sheet.editscrn){
 				var draggi= false;
 			 	meg.on('beforedrag', function(e){
 					e.detail.event.stopPropagation();
@@ -1039,7 +1042,7 @@ function init(){
 				//this.attr('font-size', Number(size_text_p)) ;			
 				this.attr('fill', backcolor);
 				//console.log(this.attr());
-				}) 
+			}) }
 		
 		
 				//Графики рисуем полилинию
@@ -1820,20 +1823,20 @@ function init(){
 			group1.attr('fill', Sheet['rawsvg'+String(kn)]);
 			//Если колокольчик то случ. цвет
 			var randcol=getRandomColor();
-			if (kn==4){group1.attr('fill', randcol)}
+			if (kn==5){group1.attr('fill', randcol)}
 			//Прозрачный квадрат для катания по кнопке
 			var rec1 = group1.rect(curicosize,curicosize);
 			rec1.attr('opacity','0.0');
 			//rec1.attr('x',String(x2));
 			group1.mouseover(function() {
-			if (kn!=4){
+			if (kn!=5){
 			this.attr('fill', getRandomColor() );}
 			})
 			group1.mouseout(function() {
-			if (kn!=4){
+			if (kn!=5){
 			this.attr('fill',Sheet['rawsvg'+String(this.attr('id'))])}});
 			//Если нажата тарелка
-			if (kn==4){
+			if (kn==5){
 				group1.click(function() {
 					this.attr('fill','#000');
 					if (loaddata == false){
@@ -1842,15 +1845,25 @@ function init(){
 					this.attr('fill',Sheet['rawsvg'+String(this.attr('id'))]);
 				})
 			}
+			
+			//Если нажата редактировать экран
+			if (kn==0){
+				group1.click(function() {
+					
+					//colPan3();
+					colOK11();
+				})
+			}
+			
 			//Если нажата лупа	
-			if (kn==2){
+			if (kn==3){
 				group1.click(function() {
 					colPan4();
 				})
 				
 			}
 			//Если нажата календарь
-			if (kn==1){
+			if (kn==2){
 				group1.click(function() {
 					
 					colPan3();
@@ -1858,7 +1871,7 @@ function init(){
 			}
 			
 			//Если нажата скважина
-			if (kn==0){
+			if (kn==1){
 				group1.click(function() {
 					colPan10();
 					
@@ -1867,7 +1880,7 @@ function init(){
 			}
 			
 				//Если нажата открыть сохранить
-			if (kn==3){
+			if (kn==4){
 				group1.click(function() {
 					colPan9();
 					
@@ -1875,9 +1888,10 @@ function init(){
 				
 			}
 		}
-
 		
 		//Управляшки
+		if (Sheet.editscrn){
+		
 		for (key  in  Columns){
 			if (key !='col0' ){
 				
@@ -1987,6 +2001,7 @@ function init(){
 				.center(x2,y2)
 				.fill({ color: '#000000'});
 			*/
+			if (Sheet.editscrn){
 			var group1 = draw.nested();
 			group1.svg(rawsvg2);
 			group1.id(key)
@@ -2083,7 +2098,7 @@ function init(){
 			
 			}
 		}
-		
+		}
 		
 				
 
@@ -2257,7 +2272,25 @@ function init(){
 		
 			addcoll();//см. settings.js
 		})		
-		
+		} else{
+			
+			//Управляшки Ключевая Колонка!!!!
+		//Полоса меню с градиентом в ключевой колонке
+		var gradient = draw.gradient('linear', function(stop) {
+		stop.at(0, Sheet.grcol1)
+		stop.at(1, Sheet.grcol2)
+		})
+		gradient.from(0, 0).to(0, 1);
+		//Коррекция размера
+		var key = 'col0';
+		var curicosizem = 0;
+		if (Sheet.icosize*w1< height_colmn1_p1){
+			curicosizem = Sheet.icosize*w1;
+		} else { curicosizem= height_colmn1_p1;}
+		var colmn1 = draw.polygon(Number(Columns[key].poz.x)*w1+','+Number(Columns[key].poz.y)*h1+' '+(Number(Columns[key].poz.x)*w1+Number(Columns[key].size.w)*w1)+','+Number(Columns[key].poz.y)*h1+' '+(Number(Columns[key].poz.x)*w1+Number(Columns[key].size.w)*w1)+','+(Number(Columns[key].poz.y)*h1+curicosizem)+' '+Number(Columns[key].poz.x)*w1+','+(Number(Columns[key].poz.y)*h1+curicosizem) )
+		.fill({ color: gradient})
+		.stroke({ width: Sheet.width_line_p , color: Sheet.syscolor });
+		}
 		//Первый параметр
 		/*
 		Wkp=-100.0

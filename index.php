@@ -12,11 +12,11 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-<!-- Bootstrap -->
+<!-- Bootstrap --> 
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="js/iziModal.min.js"></script>
+
 <script type="text/javascript" src="js/svg.min.js"></script>
 <script type="text/javascript" src="js/svg.draggable.min.js"></script>
 
@@ -29,7 +29,7 @@
 
 
 </head>
-<body >
+<body>
 <!-- Brand -->
 <!-- 	<a class="navbar-brand align-middle" href="#">
     <img src="css/logo.svg" width="60" height="30" class="d-inline-block align-middle" alt="">
@@ -53,8 +53,8 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-
-
+     
+   
 	  <li>
 	  <div class="dropdown">
 		<button class="btn bg-light btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -64,18 +64,19 @@
 		<button class="dropdown-item btn-lg" type="button" id="par0" >АГКМ406-1</button>
 		<button class="dropdown-item btn-lg" type="button" id="par1">АГКМ73-1</button>
 		<button class="dropdown-item btn-lg" type="button" id="par2">АГКМ99-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par3">АГКМ605-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par4">АГКМ610-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par5">АГКМ628-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par3">АГКМ609-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par4">АГКМ260-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par5">АГКМ9917-1</button>
 		<button class="dropdown-item btn-lg" type="button" id="par6">АГКМ629-1</button>
 		<button class="dropdown-item btn-lg" type="button" id="par7">АГКМ627-1</button>
 		<button class="dropdown-item btn-lg" type="button" id="par8">АГКМ934-1</button>
 		<button class="dropdown-item btn-lg" type="button" id="par9">АГКМ604-1</button>
 		<button class="dropdown-item btn-lg" type="button" id="par10">АГКМ106-1</button>
+		<!--<button class="dropdown-item btn-lg" type="button" id="par11">АГКМ71-1</button>-->
 		</div>
 		</div>
 	  </li>
-
+	  
 	   <li>
 	  <div class="dropdown">
 	  <!--
@@ -99,7 +100,7 @@
         <button class="btn bg-light btn-lg">Save changes</button>
     </div>
 </div> -->
-
+	
 
 		<button class="dropdown-item btn-lg" type="button">Открыть</button>
 		<button class="dropdown-item btn-lg" type="button ">Сохранить</button>
@@ -111,7 +112,7 @@
 			<button type="button" class="btnbg-light bg-light btn-lg">ГРАФИЧЕСКАЯ</button>
 			<button type="button" class="btnbg-light bg-light btn-lg">ТАБЛИЧНАЯ</button>
 			<!-- <button type="button" class="btn btn-secondary">Видео</button> -->
-
+			
 		</div>
 		</li>
 		<li>
@@ -129,15 +130,15 @@
 			</div>
 		</div>
 		</li>
-
+		
     </ul>
-
+	
   </div>
-
+  
   <div class="media-left">
     <img src="css/img_avatar1.png" class="rounded-circle" style="width:50px">
   </div>
-
+  
   <div class="btn-group" role="group" aria-label="Basic example">
 			<button type="button" class="btnbg-light bg-light btn-lg">ВЫХОД</button>
 			</div>
@@ -150,13 +151,13 @@
   <div class="modal" id="myModal">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
-
+      
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title">Список шаблонов</h4>
           <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
-
+        
         <!-- Modal body -->
         <div class="modal-body">
           <h3>Выберите шаблон</h3>
@@ -165,16 +166,16 @@
 
           <p>Some text to enable scrolling.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
         </div>
-
+        
         <!-- Modal footer -->
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
-
+        
       </div>
     </div>
   </div>
-
+  
 </div>
 
 
@@ -185,7 +186,7 @@
 function getStart() {
       //alert('ok');
 	  pongpong();
-	  $("#wells").iziModal();
+	 /*  $("#wells").iziModal();
 	  //$("#modal").iziModal();
 	  $("#kalendar").iziModal();
 	  $("#lupa").iziModal();
@@ -196,9 +197,9 @@ function getStart() {
 	  $("#nastrtxtpar").iziModal();
 	  $("#nastrtxtlabel").iziModal();
 	  $("#openfile").iziModal();
-	  $("#savefile").iziModal();
-
-
+	  $("#savefile").iziModal(); */
+	  
+	  
 }
 window.onload = getStart;
 window.onresize = function(event) {
@@ -210,19 +211,19 @@ window.onresize = function(event) {
 <div class="modal" id="myModal1">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
-
+      
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title">Настройки формы</h4>
           <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
-
+        
         <!-- Modal body -->
         <div class="modal-body">
           <table>
 
-  <tr>
-
+  <tr>  
+ 
   <tr>
   <td><label for="hcolcolor">Цвет линий:</label></td><td><input type="color" id="syscolor" name="syscolor" value="#e66465"/>
   </tr>
@@ -265,13 +266,13 @@ window.onresize = function(event) {
   </tr>
   <tr>
   <td><label for="hcolcolor">Цвет 2 панели инструментов:</label></td><td><input type="color" id="grcol2" name="grcol2" value="#e66465"/>
-  </tr>
+  </tr>	
   <tr>
   <td><label for="hcolcolor">Пунктирная линия:</label></td><td><input type="text" id="dasharray" name="dasharray" value="0"/>
   </tr>
   <tr>
   <td><label for="hcolcolor">Цвет пунктирной линии:</label></td><td><input type="color" id="dashcol1" name="dashcol1" value="#e66465"/>
-  </tr>
+  </tr>	
   <tr>
   <td><label for="hcolcolor">Цвет области пропуска значений:</label></td><td><input type="color" id="holcol" name="holcol" value="#e66465"/>
   </tr>
@@ -297,28 +298,34 @@ window.onresize = function(event) {
   <td><label for="hcolcolor">Кнопка "Добавить":</label></td><td><input type="color" id="pluscol" name="pluscol" value="#e66465"/>
   </tr>
   <tr>
-  <td><label for="hcolcolor">Кнопка "Скважина":</label></td><td><input type="color" id="rawsvg0" name="rawsvg0" value="#e66465"/>
+  <td><label for="hcolcolor">Кнопка "Замок":</label></td><td><input type="color" id="rawsvg0" name="rawsvg0" value="#e66465"/>
   </tr>
   <tr>
-  <td><label for="hcolcolor">Кнопка "Календарь":</label></td><td><input type="color" id="rawsvg1" name="rawsvg1" value="#e66465"/>
+  <td><label for="hcolcolor">Редактирование экрана:</label></td><td><input type="checkbox" id="editscrn" name="editscrn"/>
   </tr>
   <tr>
-  <td><label for="hcolcolor">Кнопка "Лупа":</label></td><td><input type="color" id="rawsvg2" name="rawsvg2" value="#e66465"/>
+  <td><label for="hcolcolor">Кнопка "Скважина":</label></td><td><input type="color" id="rawsvg1" name="rawsvg1" value="#e66465"/>
+  </tr>
+  <tr>
+  <td><label for="hcolcolor">Кнопка "Календарь":</label></td><td><input type="color" id="rawsvg2" name="rawsvg2" value="#e66465"/>
   </tr>
    <tr>
-  <td><label for="hcolcolor">Кнопка "Форма":</label></td><td><input type="color" id="rawsvg3" name="rawsvg3" value="#e66465"/>
+  <td><label for="hcolcolor">Кнопка "Лупа":</label></td><td><input type="color" id="rawsvg3" name="rawsvg3" value="#e66465"/>
+  </tr>
+   <tr>
+  <td><label for="hcolcolor">Кнопка "Форма":</label></td><td><input type="color" id="rawsvg4" name="rawsvg4" value="#e66465"/>
   </tr>
   <tr>
   <td><label for="hcolcolor">Фон кнопок(белый/черный):</label></td><td><input type="checkbox" id="fonbut" name="fonbut"/>
 </table>
         </div>
-
+        
         <!-- Modal footer -->
         <div class="modal-footer">
 			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK5()'>Применить</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
-
+        
       </div>
     </div>
   </div>
@@ -328,30 +335,30 @@ window.onresize = function(event) {
 <div class="modal" id="myModal2">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
-
+      
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title">Выбор даты</h4>
           <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
-
+        
         <!-- Modal body -->
         <div class="modal-body">
 <table>
   <tr><td>Выбор даты(<10 дней)</td></tr>
   <tr>
   <td> <input type='date' id='localdate1' name='date1' max=<?php echo date('Y-m-d');?> min=<?php $date = new DateTime(); $date->modify('-9 day'); echo $date->format('Y-m-d'); ?>>
-  </td>
+  </td> 
   </tr>
 </div>
 </table>
-</div>
+</div>        
         <!-- Modal footer -->
         <div class="modal-footer">
 			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK3()'>Применить</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
-
+        
       </div>
     </div>
   </div>
@@ -359,13 +366,13 @@ window.onresize = function(event) {
 <div class="modal" id="myModal3">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
-
+      
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title">Ширина интервала</h4>
           <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
-
+        
         <!-- Modal body -->
         <div class="modal-body">
 <table>
@@ -382,13 +389,13 @@ window.onresize = function(event) {
 </tr>
 </div>
 </table>
-</div>
+</div>        
         <!-- Modal footer -->
         <div class="modal-footer">
 			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK4()'>Применить</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
-
+        
       </div>
     </div>
   </div>
@@ -397,13 +404,13 @@ window.onresize = function(event) {
 <div class="modal" id="myModal4">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
-
+      
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title">Выбор скважины</h4>
           <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
-
+        
         <!-- Modal body -->
         <div class="modal-body">
 <table>
@@ -427,13 +434,13 @@ window.onresize = function(event) {
   </tr>
 </div>
 </table>
-</div>
+</div>        
         <!-- Modal footer -->
         <div class="modal-footer">
 			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK10()'>Применить</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
-
+        
       </div>
     </div>
   </div>
@@ -441,13 +448,13 @@ window.onresize = function(event) {
 <div class="modal" id="myModal5">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
-
+      
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title">Добавить параметр</h4>
           <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
-
+        
         <!-- Modal body -->
         <div class="modal-body">
 <table>
@@ -456,20 +463,20 @@ window.onresize = function(event) {
   <tr>
   <td><label for="hcolcolor">Тип параметра:</label></td><td><select name="colitems7" id="colitems7"  size="1">
   </tr>
-
+  
   <tr>
   <td><label for="hcolcolor" name="colitems22" id="colitems22">Параметр:</label></td><td><select name="colitems2" id="colitems2"  size="1" >
   </tr>
 </tr>
 </div>
 </table>
-</div>
+</div>        
         <!-- Modal footer -->
         <div class="modal-footer">
 			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK2()'>Применить</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
-
+        
       </div>
     </div>
   </div>
@@ -478,13 +485,13 @@ window.onresize = function(event) {
 <div class="modal" id="myModal6">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
-
+      
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title">Настройки колонки</h4>
           <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
-
+        
         <!-- Modal body -->
         <div class="modal-body">
 <table>
@@ -502,13 +509,13 @@ window.onresize = function(event) {
 </tr>
 </div>
 </table>
-</div>
+</div>        
         <!-- Modal footer -->
         <div class="modal-footer">
 			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK()'>Применить</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
-
+        
       </div>
     </div>
   </div>
@@ -517,13 +524,13 @@ window.onresize = function(event) {
 <div class="modal" id="myModal7">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
-
+      
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title">Настройки параметра</h4>
           <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
-
+        
         <!-- Modal body -->
         <div class="modal-body">
 <table>
@@ -549,13 +556,13 @@ window.onresize = function(event) {
   </tr>
 </div>
 </table>
-</div>
+</div>        
         <!-- Modal footer -->
         <div class="modal-footer">
 			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='parOK()'>Применить</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
-
+        
       </div>
     </div>
   </div>
@@ -563,13 +570,13 @@ window.onresize = function(event) {
 <div class="modal" id="myModal8">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
-
+      
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title">Настройки параметра</h4>
           <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
-
+        
         <!-- Modal body -->
         <div class="modal-body">
 <table>
@@ -593,13 +600,13 @@ window.onresize = function(event) {
 </tr>
 	</div>
 </table>
-</div>
+</div>        
         <!-- Modal footer -->
         <div class="modal-footer">
 			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK7()'>Применить</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
-
+        
       </div>
     </div>
   </div>
@@ -608,13 +615,13 @@ window.onresize = function(event) {
 <div class="modal" id="myModal9">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
-
+      
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title">Настройки параметра</h4>
           <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
-
+        
         <!-- Modal body -->
         <div class="modal-body">
 <table>
@@ -633,57 +640,48 @@ window.onresize = function(event) {
 </tr>
 	</div>
 </table>
-</div>
+</div>        
         <!-- Modal footer -->
         <div class="modal-footer">
 			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK6()'>Применить</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
-
+        
       </div>
     </div>
   </div>
 
-<div id="openfile">
- <table style="margin-left: auto;margin-right: auto;">
-    <div>
- <tr>
-  <td><select name="colitems8" id="colitems8"  size="5" style="height: auto">
-  </tr>
-	</div>
-</table>
-<!-- <button onclick='colOK8()' style="width:120Px;height:40Px;font-size:30" >OK </button> <br> -->
-</div>
+
 
 
 <div class="modal fade" id="myModal10">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
-
+      
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title">Загрузить/Сохранить(Создать) форму</h4>
           <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
-
+        
         <!-- Modal body -->
         <div class="modal-body">
 <table>
-
+    
  <tr><td><label for="hcolcolor">Каталог форм:   </label></td></tr>
   <tr><td><select name="colitems9" id="colitems9"  size="5" style="height: auto; width: 300px;"></tr>
   <tr><label for="hcolcolor">Имя формы:      </label></tr>
   <tr><input type="text" id="colitems99" name="colitems99" value=""/></tr>
-
+  
 </table>
-</div>
+</div>        
         <!-- Modal footer -->
         <div class="modal-footer">
 			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK8()'>Загрузить</button>
 			<button type="button" class="btn btn-warning" data-dismiss="modal" onclick='colOK9()'>Сохранить</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
-
+        
       </div>
     </div>
   </div>

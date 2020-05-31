@@ -114,7 +114,7 @@ function read_next(){
 			cache: false,
 			success: function(data){
 				//var jsonn = JSON.encode(data);
-				//console.log(jsonn);
+				/* console.log(data); */
 				//<?php echo ' d110d = '.json_encode(data).';' ?>;
 				//console.log(json["Vrema"]);
 				//alert(json["Vrema"]);
