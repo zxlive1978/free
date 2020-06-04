@@ -1241,8 +1241,8 @@ function init(){
 							if (basePar[keey].poz.x == strN) {
 								var cur_val = -2147480;
 								if (disp_val1>0){cur_val=String(d110d[disp_val1][basePar[keey].par])};
-								if (Number(cur_val)<= -2147480){ cur_val ="NaN";}
-								var text_value = draw.text(cur_val)
+								if (Number(cur_val)<= -2147480){ cur_val =basePar[keey].txt+" "+"NaN";}
+								var text_value = draw.text(basePar[keey].txt+" "+cur_val)
 								.font({ family: 'Inconsolata', size: text_size_value})
 								.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.cx(X_cur_mouse_click)
@@ -1257,8 +1257,8 @@ function init(){
 							if (txtPar[keey].poz.x == strN) {
 								var cur_val = -2147480;
 								if (disp_val1>0){cur_val=String(d110d[disp_val1][txtPar[keey].par])};
-								if (Number(cur_val)<= -2147480){ cur_val ="NaN";}
-								var text_value = draw.text(cur_val) 
+								if (Number(cur_val)<= -2147480){ cur_val =txtPar[keey].txt+" "+"NaN";}
+								var text_value = draw.text(txtPar[keey].txt+" "+cur_val) 
 								.font({ family: 'Inconsolata', size: text_size_value})
 								.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.cx(X_cur_mouse_click)
@@ -1275,7 +1275,7 @@ function init(){
 								if (txtOknOPar[keey].par=="Vrema"){
 									var cur_val = -2147480;
 									if (disp_val1>0){cur_val=String(d110d[disp_val1][txtOknOPar[keey].par])};
-									if (Number(cur_val)<= -2147480){ cur_val ="NaN";}
+									if (Number(cur_val)<= -2147480){ cur_val =txtOknOPar[keey].txt+" "+"NaN";}
 									var day = new Date(cur_val*1000);
 									var last_hour = day.getHours();
 									var minutes = day.getMinutes();
@@ -1287,7 +1287,7 @@ function init(){
 									var month = day.getMonth() + 1;
 									if (month<10){month="0"+month;}
 									var time_viz1 = ' '+last_hour+":"+minutes+" "+dates+"."+month +(2000-yearr);
-									var text_value = draw.text(time_viz1) 
+									var text_value = draw.text(txtOknOPar[keey].txt+" "+time_viz1) 
 									.font({ family: 'Inconsolata', size: text_size_value})
 									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
