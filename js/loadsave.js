@@ -119,7 +119,7 @@ function loadddata(name) {
 //Чтение списка файлов
 function readddir() {
 	/* filesss= {}; */
-	fileName = '../scr/scr11.scr';
+	//fileName = '../scr/scr11.scr';
 	$.ajax({
 			type: "POST",
 			url: 'js/readddir.php',

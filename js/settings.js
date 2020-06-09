@@ -983,15 +983,17 @@ function colOK8 () {
 	refresh = false; //navigation.js
 	if (($("#colitems9")[0].selectedIndex) > -1){
 		loadddata(filesss[$("#colitems9")[0].selectedIndex]);
+		
+		//Сохранить в локальное хранилище
+		colPan9save(wellName,skv,namecmt,filesss[$("#colitems9")[0].selectedIndex]);
+		formname =filesss[$("#colitems9")[0].selectedIndex];
+		repaint();
 	} else {
 		
 	}
 	/* $('#savefile').iziModal('close'); */
 
-	repaint();
-	//Сохранить в локальное хранилище
-	colPan9save(wellName,skv,namecmt,filesss[$("#colitems9")[0].selectedIndex]);
-	formname =filesss[$("#colitems9")[0].selectedIndex];
+	
 }
 
 //Сохранить в локальное хранилище текущие настройки
@@ -1044,15 +1046,17 @@ function colOK9 () {
 	refresh = false; //navigation.js
 	if (($("#colitems99").val()) != ""){
 		savedata($("#colitems99").val());
+		//Сохранить в локальное хранилище
+		colPan9save(wellName,skv,namecmt,$("#colitems99").val());
+		fileName=String($("#colitems99").val());
+
+		repaint();
 		/* loadddata(filesss[$("#colitems8")[0].selectedIndex]); */
 	} else {
 		
 	}
 	/* $('#savefile').iziModal('close'); */
-	//Сохранить в локальное хранилище
-	colPan9save(wellName,skv,namecmt,filesss[$("#colitems9")[0].selectedIndex]);
-
-	repaint();
+	
 }
 
 
