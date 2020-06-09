@@ -48,8 +48,12 @@ function savedatafile() {
     a.click();
 }
 //download(jsonData, 'json.txt', 'text/plain');
-//Сохранение на сервер файла
+//Сохранение на сервер файла  и в хранилище
 function savedata(name){
+	localStorage.setItem('wellName', wellName );
+	localStorage.setItem('skv', skv);
+	localStorage.setItem('namecmt', namecmt);
+	localStorage.setItem('formname', formname);
 	var curscr =[];
 	/* curscr =JSON.parse(curscr); */
 	curscr.push(Sheet);
