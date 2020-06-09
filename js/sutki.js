@@ -1242,7 +1242,7 @@ function init(){
 								var cur_val = -2147480;
 								if (disp_val1>0){cur_val=String(d110d[disp_val1][basePar[keey].par])};
 								if (Number(cur_val)<= -2147480){ cur_val =basePar[keey].txt+" "+"NaN";}
-								var text_value = draw.text(basePar[keey].txt+" "+cur_val)
+								var text_value = draw.text(basePar[keey].txt+" "+cur_val+" "+basePar[keey].unit)
 								.font({ family: 'Inconsolata', size: text_size_value})
 								.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.cx(X_cur_mouse_click)
@@ -1258,7 +1258,7 @@ function init(){
 								var cur_val = -2147480;
 								if (disp_val1>0){cur_val=String(d110d[disp_val1][txtPar[keey].par])};
 								if (Number(cur_val)<= -2147480){ cur_val =txtPar[keey].txt+" "+"NaN";}
-								var text_value = draw.text(txtPar[keey].txt+" "+cur_val) 
+								var text_value = draw.text(txtPar[keey].txt+" "+cur_val+" "+txtPar[keey].unit) 
 								.font({ family: 'Inconsolata', size: text_size_value})
 								.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.cx(X_cur_mouse_click)

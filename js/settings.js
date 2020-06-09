@@ -72,6 +72,9 @@ var bigPar = {
 	par17 : {par: 'V3', txt: 'Объем 3 емкости', min: 0, max: 120, color: '#f21890', poz: {x:4,y:4}, unit: 'м3'},
 	par18 : {par: 'V4', txt: 'Объем 4 емкости', min: 0, max: 90, color: '#006400', poz: {x:4,y:5}, unit: 'м3'},
 	par19 : {par: 'Vdol', txt: 'Объем дол.емк.', min: 0, max: 30, color: '#a92ab8', poz: {x:4,y:6}, unit: 'м3'},
+	par20: {par: 'Zaboj', txt: 'Глубина Забоя', color: '#ff0066', poz: {x:1,y:6}, show: true, step: 0.75, unit: 'м'},
+	par21: {par: 'Instr', txt: 'Пол.долота', color: '#ff0066', poz: {x:2,y:7}, show: true, step: 0.75, unit: 'м'},
+	par22: {par: 'Vobj', txt: 'Cумм. объем емк.', color: '#ff0066', poz: {x:4,y:8}, show: true, step: 0.5, unit: 'м3'},
 	};
 	
 //Справочник параметры графики цифровой параметры
