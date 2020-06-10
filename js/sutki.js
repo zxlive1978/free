@@ -158,6 +158,18 @@ function init(){
 		Y_cur_mouse_click = cursor.y;
 		}, false);
 		
+		//Колесико
+		svg.addEventListener('wheel', function(e) {
+			var whee1 = e.deltaY;
+			if (whee1> 0){
+				if (loaddata == false){
+				read_down();}//см .navigation.js 
+			} else {
+				if (loaddata == false){
+				read_up()};//см .navigation.js 
+			}
+			
+			}, false);
 		//ТЕСТ
 		//Бакграунт
 		/*
@@ -367,7 +379,8 @@ function init(){
 			var meg =draw.nested();
 			//если включен показывать параметр
 			if (txtPar[keey].show){
-				var name_p1 = txtPar[keey].txt+' '+cur_val;
+				var name_p1 = txtPar[keey].txt+' '+cur_val+' ('+txtPar[keey].unit+')';
+				console.log(name_p1);
 				var text_name_p1 = draw.text(name_p1)
 				.font({ family: 'Inconsolata', size: size_text_p, })
 				.move(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(txtPar[keey].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
@@ -783,7 +796,7 @@ function init(){
 				 cur_val = String(d110d[d110d.length-1][basePar[key].par]);
 				} catch(e) {cur_val = -2147480;}
 				if (Number(cur_val)<= -2147480){ cur_val ="NaN";}
-				var name_p1 = basePar[key].txt+' '+cur_val;
+				var name_p1 = basePar[key].txt+' '+cur_val+ ' ('+ basePar[key].unit+')';
 				var text_name_p1 = draw.text(name_p1)
 				.font({ family: 'Inconsolata', size: size_text_p })
 				.move(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(basePar[key].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
@@ -1245,7 +1258,7 @@ function init(){
 								var cur_val = -2147480;
 								if (disp_val1>0){cur_val=String(d110d[disp_val1][basePar[keey].par])};
 								if (Number(cur_val)<= -2147480){ cur_val =basePar[keey].txt+" "+"NaN";}
-								var text_value = draw.text(basePar[keey].txt+" "+cur_val+" "+basePar[keey].unit)
+								var text_value = draw.text(basePar[keey].txt+" "+cur_val)
 								.font({ family: 'Inconsolata', size: text_size_value})
 								.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.cx(X_cur_mouse_click)
@@ -1261,7 +1274,7 @@ function init(){
 								var cur_val = -2147480;
 								if (disp_val1>0){cur_val=String(d110d[disp_val1][txtPar[keey].par])};
 								if (Number(cur_val)<= -2147480){ cur_val =txtPar[keey].txt+" "+"NaN";}
-								var text_value = draw.text(txtPar[keey].txt+" "+cur_val+" "+txtPar[keey].unit) 
+								var text_value = draw.text(txtPar[keey].txt+" "+cur_val) 
 								.font({ family: 'Inconsolata', size: text_size_value})
 								.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.cx(X_cur_mouse_click)

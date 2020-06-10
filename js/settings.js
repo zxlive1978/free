@@ -4,8 +4,8 @@ var loaddata = false;
 
 //Список скважин
 var wells = {	
-	par0 :  {wellN: 's401', txt: 'АГКМ-406', type: 'Ремонт', typeStn:'Разрез', nach:'Сидоров С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
-	par1 :  {wellN: 's20', txt: 'АГКМ-73', type: 'Ремонт', typeStn:'Разрез', nach:'Иванов И.И.', tel:'222222', email:'sobaka12@sobaka.com'},
+	//par0 :  {wellN: 's401', txt: 'АГКМ-406', type: 'Ремонт', typeStn:'Разрез', nach:'Сидоров С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
+	//par1 :  {wellN: 's20', txt: 'АГКМ-73', type: 'Ремонт', typeStn:'Разрез', nach:'Иванов И.И.', tel:'222222', email:'sobaka12@sobaka.com'},
 	par2 :  {wellN: 's110', txt: 'АГКМ-99', type: 'Ремонт', typeStn:'Разрез', nach:'Петров П.П.', tel:'232222', email:'sobaka13@sobaka.com'},
 	par3 :  {wellN: 's908', txt: 'АГКМ-609', type: 'Ремонт', typeStn:'Разрез', nach:'Огурцов О.О.', tel:'252222', email:'sobaka15@sobaka.com'},
 	par4 :  {wellN: 's610', txt: 'АГКМ-260', type: 'Бурение', typeStn:'ИМС', nach:'Помидоров П.П.', tel:'262222', email:'sobaka16@sobaka.com'},
@@ -15,7 +15,7 @@ var wells = {
 	par8 :  {wellN: 's915', txt: 'АГКМ-934', type: 'Бурение', typeStn:'ИМС', nach:'Капустин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
 	par9 :  {wellN: 's224', txt: 'АГКМ-604', type: 'Бурение', typeStn:'ИМС', nach:'Капустин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
 	par10 :  {wellN: 's83', txt: 'АГКМ-106', type: 'Ремонт', typeStn:'Разрез', nach:'Сидоров С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
-	/* par11 :  {wellN: 's4450', txt: 'АГКМ-71', type: 'Ремонт', typeStn:'ИМС', nach:'Сидоров С.С.', tel:'242222', email:'sobaka14@sobaka.com'}, */
+	par11 :  {wellN: 's4450', txt: 'АГКМ-71', type: 'Ремонт', typeStn:'ИМС', nach:'Сидоров С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
 	
 };
 
