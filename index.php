@@ -551,6 +551,17 @@ window.onresize = function(event) {
             <td><input type="color" id="parcolor" name="parcolor" value="#e66465"/>
         </td>
   </tr>
+
+  <tr>
+            <td><label for="ncolor">Логарифмическая шкала:</label></td>
+            <td><input type="checkbox" id="parlog" name="parlog" value="#e66465"/>
+        </td>
+  </tr>
+  <tr>
+            <td><label for="ncolor">Единицы измерения:</label></td>
+            <td><input type="text" name="nameUnit" id="nameUnit" value="0">
+        </td>
+  </tr>
   <tr>
             <td><input type="checkbox" id="pardel" name="pardel"/> <label for="ncolor">Удалить?</label></td>
   </tr>
