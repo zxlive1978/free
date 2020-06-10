@@ -165,13 +165,15 @@ function init(){
 			if (whee1> 0){
 				
 				if (loaddata == false){
-					cir2.y(Columns.col0.poz.y*h1);
-					cir4.y(Columns.col0.poz.y*h1);
+					cir1.y(30*h1);
+					cir2.y(30*h1);
+					cir4.y(30*h1);
 					read_down();}//см .navigation.js 
 			} else {
 				if (loaddata == false){
-					cir2.y(Columns.col0.poz.y*h1*100);
-					cir4.y(Columns.col0.poz.y*h1*100);
+					cir1.y(0);
+					cir2.y(0);
+					cir4.y(0);
 				read_up()};//см .navigation.js 
 			}
 			

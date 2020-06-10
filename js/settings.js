@@ -1152,9 +1152,18 @@ function colOK10 () {
 function colOK11 () {
 	refresh = false;
 	if (Sheet.editscrn){
-	Sheet.editscrn= false;}
-	else {Sheet.editscrn= true;}
-	console.log(Sheet.editscrn);
+	Sheet.editscrn= false;
+	$("#bigpan").attr("style", "display:none");
+	Sheet.icosize=0;
+	Sheet.icosizem=0;}
+	else {Sheet.editscrn= true;
+	$("#bigpan").attr("style", "display:yes");
+	Sheet.icosize=String($("#icosize").val());
+	Sheet.icosizem=String($("#icosizem").val());
+	}
+	//console.log(Sheet.editscrn);
+	
+	
 	repaint();
 	
 }
