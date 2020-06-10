@@ -161,11 +161,17 @@ function init(){
 		//Колесико
 		svg.addEventListener('wheel', function(e) {
 			var whee1 = e.deltaY;
+			
 			if (whee1> 0){
+				
 				if (loaddata == false){
-				read_down();}//см .navigation.js 
+					cir2.y(Columns.col0.poz.y*h1);
+					cir4.y(Columns.col0.poz.y*h1);
+					read_down();}//см .navigation.js 
 			} else {
 				if (loaddata == false){
+					cir2.y(Columns.col0.poz.y*h1*100);
+					cir4.y(Columns.col0.poz.y*h1*100);
 				read_up()};//см .navigation.js 
 			}
 			
@@ -380,7 +386,6 @@ function init(){
 			//если включен показывать параметр
 			if (txtPar[keey].show){
 				var name_p1 = txtPar[keey].txt+' '+cur_val+' ('+txtPar[keey].unit+')';
-				console.log(name_p1);
 				var text_name_p1 = draw.text(name_p1)
 				.font({ family: 'Inconsolata', size: size_text_p, })
 				.move(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(txtPar[keey].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
