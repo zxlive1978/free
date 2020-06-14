@@ -110,7 +110,9 @@ function loadddata(name) {
 				$("#drawing").find("*").not("rect, g").remove();
 				}
 				catch(e){ }
+				onoffpan();
 				init();
+				
 				
 			}
 		});

@@ -18,8 +18,8 @@ body,html {
 	position: relative;
   width:100%;
   
-	 height:  calc(100% - 78px);
-   /* height:100% */
+	 /* height:  calc(100% - 78px); */
+   height:100%
 }
 
 .my-styling-class{

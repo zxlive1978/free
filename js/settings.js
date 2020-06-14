@@ -6,16 +6,16 @@ var loaddata = false;
 var wells = {	
 	//par0 :  {wellN: 's401', txt: 'АГКМ-406', type: 'Ремонт', typeStn:'Разрез', nach:'Сидоров С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
 	//par1 :  {wellN: 's20', txt: 'АГКМ-73', type: 'Ремонт', typeStn:'Разрез', nach:'Иванов И.И.', tel:'222222', email:'sobaka12@sobaka.com'},
-	par2 :  {wellN: 's110', txt: 'АГКМ-99', type: 'Ремонт', typeStn:'Разрез', nach:'Петров П.П.', tel:'232222', email:'sobaka13@sobaka.com'},
-	par3 :  {wellN: 's908', txt: 'АГКМ-609', type: 'Ремонт', typeStn:'Разрез', nach:'Огурцов О.О.', tel:'252222', email:'sobaka15@sobaka.com'},
-	par4 :  {wellN: 's610', txt: 'АГКМ-260', type: 'Бурение', typeStn:'ИМС', nach:'Помидоров П.П.', tel:'262222', email:'sobaka16@sobaka.com'},
-	par5 :  {wellN: 's630', txt: 'АГКМ-9917', type: 'Бурение', typeStn:'ИМС', nach:'Баклажанов Б.Б.', tel:'272222', email:'sobaka17@sobaka.com'},
-	par6 :  {wellN: 's629', txt: 'АГКМ-629', type: 'Бурение', typeStn:'ИМС', nach:'Редискин Р.Р.', tel:'282222', email:'sobaka18@sobaka.com'},
-	par7 :  {wellN: 's627', txt: 'АГКМ-627', type: 'Бурение', typeStn:'ИМС', nach:'Капустин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
-	par8 :  {wellN: 's915', txt: 'АГКМ-934', type: 'Бурение', typeStn:'ИМС', nach:'Капустин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
-	par9 :  {wellN: 's224', txt: 'АГКМ-604', type: 'Бурение', typeStn:'ИМС', nach:'Капустин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
-	par10 :  {wellN: 's83', txt: 'АГКМ-106', type: 'Ремонт', typeStn:'Разрез', nach:'Сидоров С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
-	par11 :  {wellN: 's4450', txt: 'АГКМ-71', type: 'Ремонт', typeStn:'ИМС', nach:'Сидоров С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
+	par0 :  {wellN: 's110', txt: 'АГКМ-99', type: 'Ремонт', typeStn:'Разрез', nach:'Петров П.П.', tel:'232222', email:'sobaka13@sobaka.com'},
+	par1 :  {wellN: 's908', txt: 'АГКМ-609', type: 'Ремонт', typeStn:'Разрез', nach:'Огурцов О.О.', tel:'252222', email:'sobaka15@sobaka.com'},
+	par2 :  {wellN: 's610', txt: 'АГКМ-260', type: 'Бурение', typeStn:'ИМС', nach:'Помидоров П.П.', tel:'262222', email:'sobaka16@sobaka.com'},
+	par3 :  {wellN: 's630', txt: 'АГКМ-9917', type: 'Бурение', typeStn:'ИМС', nach:'Баклажанов Б.Б.', tel:'272222', email:'sobaka17@sobaka.com'},
+	par4 :  {wellN: 's629', txt: 'АГКМ-629', type: 'Бурение', typeStn:'ИМС', nach:'Редискин Р.Р.', tel:'282222', email:'sobaka18@sobaka.com'},
+	par5 :  {wellN: 's627', txt: 'АГКМ-627', type: 'Бурение', typeStn:'ИМС', nach:'Капустин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
+	par6 :  {wellN: 's915', txt: 'АГКМ-934', type: 'Бурение', typeStn:'ИМС', nach:'Капустин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
+	par7 :  {wellN: 's224', txt: 'АГКМ-604', type: 'Бурение', typeStn:'ИМС', nach:'Капустин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
+	par8 :  {wellN: 's83', txt: 'АГКМ-106', type: 'Ремонт', typeStn:'Разрез', nach:'Сидоров С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
+	par9 :  {wellN: 's4450', txt: 'АГКМ-71', type: 'Ремонт', typeStn:'ИМС', nach:'Сидоров С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
 	
 };
 
@@ -982,6 +982,8 @@ function colPan8 (name_select) {
 function colOK8start(name_start){
 	var name = name_start;
 	loadddata(name);
+	onoffpan();
+	
 }
 
 //Загрузить файл
@@ -998,6 +1000,7 @@ function colOK8 () {
 	} else {
 		
 	}
+	onoffpan();
 	/* $('#savefile').iziModal('close'); */
 
 	
@@ -1148,19 +1151,28 @@ function colOK10 () {
 }
 
 
+//включение и отключение верхней панели и панели настроек
+function onoffpan(){
+	console.log(Sheet.editscrn);
+	if (Sheet.editscrn){
+		$("#bigpan").attr("style", "display:yes");
+		Sheet.icosize=String($("#icosize").val());
+		Sheet.icosizem=String($("#icosizem").val());		
+	}else {
+		$("#bigpan").attr("style", "display:none");
+		Sheet.icosize=0;
+		Sheet.icosizem=0;
+		}
+}
+
 //редактирование экрана вкл выкл
 function colOK11 () {
 	refresh = false;
 	if (Sheet.editscrn){
-	Sheet.editscrn= false;
-	$("#bigpan").attr("style", "display:none");
-	Sheet.icosize=0;
-	Sheet.icosizem=0;}
-	else {Sheet.editscrn= true;
-	$("#bigpan").attr("style", "display:yes");
-	Sheet.icosize=String($("#icosize").val());
-	Sheet.icosizem=String($("#icosizem").val());
-	}
+		Sheet.editscrn= false;}
+	else{Sheet.editscrn=true;}
+	onoffpan();
+	
 	//console.log(Sheet.editscrn);
 	
 	
