@@ -63,19 +63,21 @@
 		<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
 		<!-- <button class="dropdown-item btn-lg" type="button" id="par0" >АГКМ406-1</button>
 		<button class="dropdown-item btn-lg" type="button" id="par1">АГКМ73-1</button> -->
-		<button class="dropdown-item btn-lg" type="button" id="par2">АГКМ99-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par3">АГКМ609-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par4">АГКМ260-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par5">АГКМ9917-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par6">АГКМ629-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par7">АГКМ627-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par8">АГКМ934-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par9">АГКМ604-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par10">АГКМ106-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par11">АГКМ71-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par0">АГКМ99-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par1">АГКМ609-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par2">АГКМ260-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par3">АГКМ9917-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par4">АГКМ629-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par5">АГКМ627-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par6">АГКМ934-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par7">АГКМ604-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par8">АГКМ106-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par9">АГКМ71-1</button>
 		</div>
 		</div>
 	  </li>
+
+    
 	  
 	   <li>
 	  <div class="dropdown">
