@@ -121,7 +121,7 @@
 
 		</li>
 		<li>
-		<button type="button" class="btnbg-light bg-light btn-lg" data-toggle="modal" data-target="#videoModal" data-theVideo="">ВИДЕО</button>
+		<button type="button" class="btnbg-light bg-light btn-lg" data-toggle="modal" data-target="#videoModal" data-theVideo="">В окне</button>
 		<div class="modal fade bd-example-modal-lg" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
 			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
