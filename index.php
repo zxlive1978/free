@@ -110,24 +110,25 @@
 		</div>
 	  </li>
 		<li>
-		<div class="btn-group" role="group" aria-label="Basic example">
-			<button type="button" class="btnbg-light bg-light btn-lg">ГРАФИЧЕСКАЯ</button>
+		<!-- <div class="btn-group" role="group" aria-label="Basic example">
+			<button type="button" class="btnbg-light bg-light btn-lg" >ГРАФИЧЕСКАЯ</button>
 			<button type="button" class="btnbg-light bg-light btn-lg">ТАБЛИЧНАЯ</button>
 			<!-- <button type="button" class="btn btn-secondary">Видео</button> -->
 			
-		</div>
-    <a class="btn btn-primary" href="http://hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572" role="button">Link</a>
+		</div> -->
+    <a class="btnbg-light bg-light btn-lg" href="http://hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572" role="button">ВИДЕО АГКМ71</a>
+    
 
 		</li>
 		<li>
 		<button type="button" class="btnbg-light bg-light btn-lg" data-toggle="modal" data-target="#videoModal" data-theVideo="">ВИДЕО</button>
-		<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
-			<div class="modal-dialog">
+		<div class="modal fade bd-example-modal-lg" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
 					<div class="modal-body">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div>
-							<iframe width="100%" height="50%" src="http://hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572"></iframe>
+							<iframe width="100%" height="800px" src="http://hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572"></iframe>
 						</div>
 					</div>
 				</div>
