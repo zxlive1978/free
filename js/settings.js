@@ -1153,7 +1153,7 @@ function colOK10 () {
 
 //включение и отключение верхней панели и панели настроек
 function onoffpan(){
-	console.log(Sheet.editscrn);
+	// console.log(Sheet.editscrn);
 	if (Sheet.editscrn){
 		$("#bigpan").attr("style", "display:yes");
 		Sheet.icosize=String($("#icosize").val());

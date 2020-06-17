@@ -110,13 +110,14 @@
 		</div>
 	  </li>
 		<li>
-		<!-- <div class="btn-group" role="group" aria-label="Basic example">
-			<button type="button" class="btnbg-light bg-light btn-lg" >ГРАФИЧЕСКАЯ</button>
-			<button type="button" class="btnbg-light bg-light btn-lg">ТАБЛИЧНАЯ</button>
-			<button type="button" class="btn btn-secondary">Видео</button>
+		<div class="btn-group" role="group" aria-label="Basic example">
+			<button type="button" class="btnbg-light bg-light btn-lg" ><a class="btnbg-light bg-light btn-lg" href="http://hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572" role="button">РОТОР КАМЕРА АГКМ71</a></button>
+			<!-- <button type="button" class="btnbg-light bg-light btn-lg">ТАБЛИЧНАЯ</button> -->
+			<!-- <button type="button" class="btn btn-secondary">Видео</button> -->
+      <!-- <a href="#" class="btnbg-light bg-light btn-lg" role="button" aria-pressed="true">Primary link</a> -->
 			
-		</div> -->
-    <a class="btnbg-light bg-light btn-lg" href="http://hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572" role="button">ВИДЕО АГКМ71</a>
+		</div>
+    <!-- <a class="btnbg-light bg-light btn-lg" href="http://hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572" role="button">ВИДЕО АГКМ71</a> -->
     
 
 		</li>
@@ -128,7 +129,7 @@
 					<div class="modal-body">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div>
-							<iframe width="100%" height="800px" src="http://hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572"></iframe>
+							<iframe width="100%" height="800px" src="https://hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572"></iframe>
 						</div>
 					</div>
 				</div>

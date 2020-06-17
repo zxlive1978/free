@@ -171,9 +171,9 @@ function init(){
 					read_down();}//см .navigation.js 
 			} else {
 				if (loaddata == false){
-					cir1.y(0);
-					cir2.y(0);
-					cir4.y(0);
+					cir1.y(Columns.col0.poz.y*h1);
+					cir2.y(Columns.col0.poz.y*h1);
+					cir4.y(Columns.col0.poz.y*h1);
 				read_up()};//см .navigation.js 
 			}
 			
@@ -1173,8 +1173,12 @@ function init(){
 						/* text_size_value = Sheet.curvalsize; */
 						if (text_size_value>height_colmn1_p1*h1/7.6){
 						text_size_value = height_colmn1_p1*h1/7.6;}
-						
-						var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
+
+						let wcol=w1/2.0*Number(Columns[this.attr('id')].size.w);
+						// console.log(w1/2.0*Number(Columns[this.attr('id')].size.w));
+						var gfxr = draw.polygon((X_cur_mouse_click-wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+wcol)+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-wcol)+' '+Y_cur_mouse_click)
+				
+						// var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
 						//ширина поля со клик зачениями
 						//weight_colmn1 = w1*(Columns["col"+String(Number((txtPar[keey].poz.x)))].size.w)/2;
 						//var gfxr = draw.polygon((X_cur_mouse_click-weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+weight_colmn1)+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-weight_colmn1)+','+Y_cur_mouse_click)
