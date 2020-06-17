@@ -113,7 +113,7 @@
 		<!-- <div class="btn-group" role="group" aria-label="Basic example">
 			<button type="button" class="btnbg-light bg-light btn-lg" >ГРАФИЧЕСКАЯ</button>
 			<button type="button" class="btnbg-light bg-light btn-lg">ТАБЛИЧНАЯ</button>
-			<!-- <button type="button" class="btn btn-secondary">Видео</button> -->
+			<button type="button" class="btn btn-secondary">Видео</button>
 			
 		</div> -->
     <a class="btnbg-light bg-light btn-lg" href="http://hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572" role="button">ВИДЕО АГКМ71</a>
