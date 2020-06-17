@@ -116,16 +116,18 @@
 			<!-- <button type="button" class="btn btn-secondary">Видео</button> -->
 			
 		</div>
+    <a class="btn btn-primary" href="http://hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572" role="button">Link</a>
+
 		</li>
 		<li>
-		<button type="button" class="btnbg-light bg-light btn-lg" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/loFtozxZG0s">ВИДЕО</button>
+		<button type="button" class="btnbg-light bg-light btn-lg" data-toggle="modal" data-target="#videoModal" data-theVideo="">ВИДЕО</button>
 		<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
 			<div class="modal-dialog">
 				<div class="modal-content">
 					<div class="modal-body">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div>
-							<iframe width="100%" height="350" src=""></iframe>
+							<iframe width="100%" height="50%" src="http://hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572"></iframe>
 						</div>
 					</div>
 				</div>
