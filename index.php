@@ -63,19 +63,21 @@
 		<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
 		<!-- <button class="dropdown-item btn-lg" type="button" id="par0" >АГКМ406-1</button>
 		<button class="dropdown-item btn-lg" type="button" id="par1">АГКМ73-1</button> -->
-		<button class="dropdown-item btn-lg" type="button" id="par2">АГКМ99-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par3">АГКМ609-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par4">АГКМ260-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par5">АГКМ9917-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par6">АГКМ629-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par7">АГКМ627-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par8">АГКМ934-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par9">АГКМ604-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par10">АГКМ106-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par11">АГКМ71-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par0">АГКМ99-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par1">АГКМ609-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par2">АГКМ260-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par3">АГКМ9917-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par4">АГКМ629-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par5">АГКМ627-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par6">АГКМ934-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par7">АГКМ604-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par8">АГКМ106-1</button>
+		<button class="dropdown-item btn-lg" type="button" id="par9">АГКМ71-1</button>
 		</div>
 		</div>
 	  </li>
+
+    
 	  
 	   <li>
 	  <div class="dropdown">
@@ -108,22 +110,25 @@
 		</div>
 	  </li>
 		<li>
-		<div class="btn-group" role="group" aria-label="Basic example">
-			<button type="button" class="btnbg-light bg-light btn-lg">ГРАФИЧЕСКАЯ</button>
+		<!-- <div class="btn-group" role="group" aria-label="Basic example">
+			<button type="button" class="btnbg-light bg-light btn-lg" >ГРАФИЧЕСКАЯ</button>
 			<button type="button" class="btnbg-light bg-light btn-lg">ТАБЛИЧНАЯ</button>
-			<!-- <button type="button" class="btn btn-secondary">Видео</button> -->
+			<button type="button" class="btn btn-secondary">Видео</button>
 			
-		</div>
+		</div> -->
+    <a class="btnbg-light bg-light btn-lg" href="http://hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572" role="button">ВИДЕО АГКМ71</a>
+    
+
 		</li>
 		<li>
-		<button type="button" class="btnbg-light bg-light btn-lg" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/loFtozxZG0s">ВИДЕО</button>
-		<div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
-			<div class="modal-dialog">
+		<button type="button" class="btnbg-light bg-light btn-lg" data-toggle="modal" data-target="#videoModal" data-theVideo="">В окне</button>
+		<div class="modal fade bd-example-modal-lg" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
 				<div class="modal-content">
 					<div class="modal-body">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div>
-							<iframe width="100%" height="350" src=""></iframe>
+							<iframe width="100%" height="800px" src="http://hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572"></iframe>
 						</div>
 					</div>
 				</div>

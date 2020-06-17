@@ -18,8 +18,13 @@ body,html {
 	position: relative;
   width:100%;
   
+<<<<<<< HEAD
 	 /* height:  calc(100% - 78px); */
    height:100%
+=======
+	 height:  calc(100% - 50px);
+   /* height:100% */
+>>>>>>> e6793065177bbfa7c2e017d3c41357b122f8b5c0
 }
 
 .my-styling-class{
