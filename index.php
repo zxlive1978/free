@@ -144,9 +144,11 @@
     
 
     </li>
-    <button class="btn bg-light btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button class="btn bg-light btn-lg " type="button" id="stop" name="stop">
     STOP поток</button>
-    <button class="btn bg-light btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <button class="btn bg-light btn-lg " type="button" id="start" >
+
+    
 		START поток</button>
     <li>
 

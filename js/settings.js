@@ -1228,11 +1228,32 @@ $(document).ready(function () {
 			$('#shab').click(function (){
 				/* console.log(this.id); */
 				$('#shab1').modal('show');
-            });
+			});
 			
+			//Стоп видео поток
+			$("#stop").on("click", function(event) {
+				console.log("stop");
+				//event.preventDefault(); // To prevent following the link (optional)
+				$.ajax({
+					type: 'POST',
+					url: 'https://hydrofalll.ddns.net:5443/v2/broadcasts/983687349095562644239572/stop',
+					crossDomain: true,
+					//data: '{"some":"json"}',
+					dataType: 'jsonp',
+					success: function(responseData, textStatus, jqXHR) {
+						var value = responseData.someKey;
+					},
+					error: function (responseData, textStatus, errorThrown) {
+						alert('POST failed.');
+					}
+				});
+				// $.post('https://hydrofalll.ddns.net:5443/v2/broadcasts/983687349095562644239572/stop', {text: 'Текст'}, function(data){
+				// alert(data);});
+			});
 			//ВИДЕО
-			autoPlayYouTubeModal();
+			//autoPlayYouTubeModal();
  });
+
 
 
 //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
