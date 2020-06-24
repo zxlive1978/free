@@ -185,7 +185,9 @@
 </nav>
 
 
-
+<!-- MAIN -->
+<main class="main">
+  <div class="container-fluid">
 
  <!-- The Modal шаблон-->
   <div class="modal" id="myModal">
@@ -737,5 +739,8 @@ window.onresize = function(event) {
     </div>
   </div>
 
+
+  </div>
+</main>
 </body>
 </html>
