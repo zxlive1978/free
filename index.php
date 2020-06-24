@@ -143,8 +143,17 @@
     <!-- <a class="btnbg-light bg-light btn-lg" href="http://hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572" role="button">ВИДЕО АГКМ71</a> -->
     
 
-		</li>
-		<li>
+    </li>
+    <button class="btn bg-light btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    STOP поток</button>
+    <button class="btn bg-light btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		START поток</button>
+    <li>
+
+    </li>
+
+
+		<!-- <li>
 		<button type="button" class="btnbg-light bg-light btn-lg" data-toggle="modal" data-target="#videoModal" data-theVideo="">В окне</button>
 		<div class="modal fade bd-example-modal-lg" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
 			<div class="modal-dialog modal-lg">
@@ -152,13 +161,13 @@
 					<div class="modal-body">
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 						<div>
-							<!-- <iframe width="100%" height="800px" src="https://hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572"></iframe> -->
+							<iframe width="100%" height="800px" src="https://hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572"></iframe>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		</li>
+		</li> -->
 		
     </ul>
 	
