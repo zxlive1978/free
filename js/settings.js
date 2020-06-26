@@ -1229,6 +1229,9 @@ $(document).ready(function () {
 				/* console.log(this.id); */
 				$('#shab1').modal('show');
 			});
+
+			
+			$('#drawing').height($(window).height());
 			
 			//Стоп видео поток
 			$("#stop").on("click", function(event) {
