@@ -984,6 +984,10 @@ function colOK8start(name_start){
 	loadddata(name);
 	onoffpan();
 	
+	
+	
+
+	
 }
 
 //Загрузить файл
@@ -1163,6 +1167,9 @@ function onoffpan(){
 		Sheet.icosize=0;
 		Sheet.icosizem=0;
 		}
+	$('#drawing').height($(window).height()-$('#bigpan').height())
+	let a =$('#bigpan').height();
+	console.log(a);
 }
 
 //редактирование экрана вкл выкл
@@ -1212,7 +1219,7 @@ function vertical() {
 
 
 //Выбор скважины Bootstrap navi
-$(document).ready(function () {
+$(document).load(function () {
 			//Список скважин
             $('[id^="par"]').click(function (){
 				/* console.log(this.id); */
@@ -1231,7 +1238,7 @@ $(document).ready(function () {
 			});
 
 			
-			$('#drawing').height($(window).height());
+			
 			
 			//Стоп видео поток
 			$("#stop").on("click", function(event) {
