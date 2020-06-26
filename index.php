@@ -20,8 +20,8 @@
     $( "#dialogvideo" ).dialog(
       {
         position: { my: "right  top", at: "right center", of:"#drawing" },
-        width: 550,
-        height: 350,
+        width: 160,
+        height: 180,
         //appendTo: "fullscreen",
         //modal: true
       }
@@ -128,8 +128,15 @@
 	  </li>
 		<li>
     <div id="dialogvideo" title="Камера ротор скв.106">
-    <iframe width="100%" height="100%" frameborder="0" allowTransparency src="https://hydrofalll.ddns.net:5443/WebRTCApp/play.html?name=983687349095562644239572"> </iframe>
-    <button type="button" class="btn-light bg-light " ><a class="btn-light bg-light " href="https://hydrofalll.ddns.net:5443/WebRTCApp/play.html?name=983687349095562644239572" role="button">В отдельном окне(можно во весь экран)</a></button>
+    <iframe width="100%" height="100%"
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+    webkitAllowFullScreen mozallowfullscreen allowfullscreen
+    title="0" byline="0" portrait="0"
+    width="320" height="240"
+    frameborder="0"
+    allow="autoplay"
+      src="https://hydrofalll.ddns.net:5443/WebRTCApp/play.html?name=983687349095562644239572"> </iframe>
+    <!-- <button type="button" class="btn-light bg-light " ><a class="btn-light bg-light " href="https://hydrofalll.ddns.net:5443/WebRTCApp/play.html?name=983687349095562644239572" role="button">В отдельном окне(можно во весь экран)</a></button> -->
     <!-- <link rel="В отдельном окне(можно во весь экран)" href="https://hydrofalll.ddns.net:5443/WebRTCApp/play.html?name=983687349095562644239572"> -->
     <!-- <a href=""https://hydrofalll.ddns.net:5443/WebRTCApp/play.html?name=983687349095562644239572"" class="btnbg-light bg-light btn-lg" role="button" aria-pressed="true">В отдельном окне(можно во весь экран)</a> -->
     </div>
