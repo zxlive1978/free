@@ -328,24 +328,24 @@ function init(){
 				.fill({ color: Columns[key].colorbody })
 				.stroke({ width: Sheet.width_line_p , color: Sheet.syscolor})
 				bodygroup.add(colmn2);
-				if (Sheet.editscrn){
-					//Полоса меню с градиентом
-					var gradient = draw.gradient('linear', function(stop) {
-					stop.at(0, Sheet.grcol1)
-					stop.at(1, Sheet.grcol2)
-					})
-					gradient.from(0, 0).to(0, 1);
-					//Коррекция размера
-					var curicosize = 0;
-					if (Sheet.icosize*w1< height_colmn1_p1){
-						curicosize = Sheet.icosize*w1;
-					} else { curicosize= height_colmn1_p1;}
-					var colmn1 = draw.polygon(Number(Columns[key].poz.x)*w1+','+Number(Columns[key].poz.y)*h1+' '+(Number(Columns[key].poz.x)*w1+Number(Columns[key].size.w)*w1)+','+Number(Columns[key].poz.y)*h1+' '+(Number(Columns[key].poz.x)*w1+Number(Columns[key].size.w)*w1)+','+(Number(Columns[key].poz.y)*h1+curicosize)+' '+Number(Columns[key].poz.x)*w1+','+(Number(Columns[key].poz.y)*h1+curicosize) )
-					.fill({ color: gradient})
-					.stroke({width: Sheet.width_line_p , color: Sheet.syscolor});
+				
+				//Полоса меню с градиентом
+				var gradient = draw.gradient('linear', function(stop) {
+				stop.at(0, Sheet.grcol1)
+				stop.at(1, Sheet.grcol2)
+				})
+				gradient.from(0, 0).to(0, 1);
+				//Коррекция размера
+				var curicosize = 0;
+				if (Sheet.icosize*w1< height_colmn1_p1){
+					curicosize = Sheet.icosize*w1;
+				} else { curicosize= height_colmn1_p1;}
+				var colmn1 = draw.polygon(Number(Columns[key].poz.x)*w1+','+Number(Columns[key].poz.y)*h1+' '+(Number(Columns[key].poz.x)*w1+Number(Columns[key].size.w)*w1)+','+Number(Columns[key].poz.y)*h1+' '+(Number(Columns[key].poz.x)*w1+Number(Columns[key].size.w)*w1)+','+(Number(Columns[key].poz.y)*h1+curicosize)+' '+Number(Columns[key].poz.x)*w1+','+(Number(Columns[key].poz.y)*h1+curicosize) )
+				.fill({ color: gradient})
+				.stroke({width: Sheet.width_line_p , color: Sheet.syscolor});
 					
 				headgroup.add(colmn1);
-				}
+				
 				//Пунктирная решетка
 				//var Sheet.numbr_teeth_сolmn4 = 10;
 				//Шаг засечек

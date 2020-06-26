@@ -779,7 +779,7 @@ function colPan5 () {
 	$("#fonbut").prop('checked', Sheet.fonbut);
 	$("#editscrn").prop('checked', Sheet.editscrn);
 	//iziModal
-	//$("#fonbut").prop('checked', Sheet.fonbut);
+	$("#fonbut").prop('checked', Sheet.fonbut);
 	//$("#modal").css('background-color', Sheet.curcolorval);
 	//$('#modal').iziModal('open');
 	
@@ -980,6 +980,7 @@ function colPan8 (name_select) {
 }
 //Загрузить форму файл при старте
 function colOK8start(name_start){
+	console.log(Sheet.editscrn);
 	var name = name_start;
 	loadddata(name);
 	onoffpan();
@@ -1171,7 +1172,7 @@ function onoffpan(){
 
 //редактирование экрана вкл выкл
 function colOK11 () {
-	refresh = false;
+	//refresh = false;
 	if (Sheet.editscrn){
 		Sheet.editscrn= false;}
 	else{Sheet.editscrn=true;}
@@ -1179,7 +1180,7 @@ function colOK11 () {
 	
 	console.log(Sheet.editscrn,Sheet.icosize);
 	
-	refresh = true;
+	//refresh = true;
 	repaint();
 	
 }
@@ -1263,7 +1264,7 @@ $(document).load(function () {
  // ресайз окна
  $(window).resize(function (){
  
-onoffpan();
+	onoffpan();
 
  });
 
