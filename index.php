@@ -127,7 +127,7 @@
 		</div>
 	  </li>
 		<li>
-    <div id="dialogvideo" title="Камера ротор скв.106">
+    <div id="dialogvideo" title="Камера 2">
     <iframe width="100%" height="100%"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
     webkitAllowFullScreen mozallowfullscreen allowfullscreen
