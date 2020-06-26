@@ -980,7 +980,7 @@ function colPan8 (name_select) {
 }
 //Загрузить форму файл при старте
 function colOK8start(name_start){
-	console.log(Sheet.editscrn);
+	// console.log(Sheet.editscrn);
 	var name = name_start;
 	loadddata(name);
 	onoffpan();
