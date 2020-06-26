@@ -983,11 +983,7 @@ function colOK8start(name_start){
 	var name = name_start;
 	loadddata(name);
 	onoffpan();
-	
-	
-	
-
-	
+		
 }
 
 //Загрузить файл
@@ -1160,17 +1156,17 @@ function onoffpan(){
 	// console.log(Sheet.editscrn);
 	if (Sheet.editscrn){
 		$("#bigpan").attr("style", "display:yes");
-		Sheet.icosize=String($("#icosize").val());
-		Sheet.icosizem=String($("#icosizem").val());
+		// Sheet.icosize=String($("#icosize").val());
+		// Sheet.icosizem=String($("#icosizem").val());
 		$('#drawing').height($(window).height()-$('#bigpan').height())
 	}else {
 		$("#bigpan").attr("style", "display:none");
-		Sheet.icosize=0;
-		Sheet.icosizem=0;
+		// Sheet.icosize=0;
+		// Sheet.icosizem=0;
 		$('#drawing').height($(window).height());
 		}
 	
-	
+		
 }
 
 //редактирование экрана вкл выкл
@@ -1181,9 +1177,9 @@ function colOK11 () {
 	else{Sheet.editscrn=true;}
 	onoffpan();
 	
-	//console.log(Sheet.editscrn);
+	console.log(Sheet.editscrn,Sheet.icosize);
 	
-	
+	refresh = true;
 	repaint();
 	
 }
@@ -1264,7 +1260,12 @@ $(document).load(function () {
 			//ВИДЕО
 			//autoPlayYouTubeModal();
  });
+ // ресайз окна
+ $(window).resize(function (){
+ 
+onoffpan();
 
+ });
 
 
 //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
