@@ -1319,11 +1319,11 @@ function init(){
 									var coef =text_value.length()/text_value.attr('font-size')
 									text_value.clear();
 									delete(text_value);
-									var text_value = draw.text(basePar[keey].txt+" "+cur_val)
+									var text_value = draw.text(txtPar[keey].txt+" "+cur_val)
 									.font({ family: 'Inconsolata', size: Number(Columns[this.attr('id')].size.w)*w1/coef*0.7})
 									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
-									.fill(basePar[keey].color);
+									.fill(txtPar[keey].color);
 									text_value.attr({'fill-opacity': 1});
 									
 									
@@ -1361,11 +1361,11 @@ function init(){
 										var coef =text_value.length()/text_value.attr('font-size')
 										text_value.clear();
 										delete(text_value);
-										var text_value = draw.text(basePar[keey].txt+" "+cur_val)
+										var text_value = draw.text(txtOknOPar[keey].txt+" "+cur_val)
 										.font({ family: 'Inconsolata', size: Number(Columns[this.attr('id')].size.w)*w1/coef*0.7})
 										.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 										.cx(X_cur_mouse_click)
-										.fill(basePar[keey].color);
+										.fill(txtOknOPar[keey].color);
 										text_value.attr({'fill-opacity': 1});
 										
 										
