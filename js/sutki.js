@@ -1282,7 +1282,7 @@ function init(){
 
 								//Ресайз текста если не влезает!
 								
-								if (text_value.length()>Sheet.width_value*w1){
+								if (text_value.length()>Sheet.width_value){
 									var coef =text_value.length()/text_value.attr('font-size')
 									text_value.clear();
 									delete(text_value);
@@ -1321,7 +1321,7 @@ function init(){
 								var cur_val = -2147480;
 								if (disp_val1>0){cur_val=String(d110d[disp_val1][txtPar[keey].par])};
 								if (Number(cur_val)<= -2147480){ cur_val =txtPar[keey].txt+" "+"NaN";}
-								var text_value = draw.text(txtPar[keey].txt+" "+cur_val) 
+								var text_value = draw.text(txtPar[keey].txt+" "+cur_val+" ("+ txtPar[keey].unit+")") 
 								.font({ family: 'Inconsolata', size: text_size_value})
 								.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.cx(X_cur_mouse_click)
@@ -1331,7 +1331,7 @@ function init(){
 								
 								//Ресайз текста если не влезает!
 								
-								if (text_value.length()>Sheet.width_value*w1){
+								if (text_value.length()>Sheet.width_value){
 									var coef =text_value.length()/text_value.attr('font-size')
 									text_value.clear();
 									delete(text_value);
@@ -1380,7 +1380,7 @@ function init(){
 									var month = day.getMonth() + 1;
 									if (month<10){month="0"+month;}
 									var time_viz1 = ' '+last_hour+":"+minutes+" "+dates+"."+month +(2000-yearr);
-									var text_value = draw.text(txtOknOPar[keey].txt+" "+time_viz1) 
+									var text_value = draw.text(txtOknOPar[keey].txt+" "+time_viz1+" ("+ txtOknOPar[keey].unit+")") 
 									.font({ family: 'Inconsolata', size: text_size_value})
 									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
@@ -1389,11 +1389,11 @@ function init(){
 									
 								//Ресайз текста если не влезает!
 								
-								if (text_value.length()>Sheet.width_value*w1){
+								if (text_value.length()>Sheet.width_value){
 									var coef =text_value.length()/text_value.attr('font-size')
 									text_value.clear();
 									delete(text_value);
-									var text_value = draw.text(txtOknOPar[keey].txt+" "+cur_val+" ("+ txtOknOPar[keey].unit+")")
+									var text_value = draw.text(txtOknOPar[keey].txt+" "+time_viz1+" ("+ txtOknOPar[keey].unit+")")
 									.font({ family: 'Inconsolata', size: Sheet.width_value*w1/coef*0.7})
 									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)

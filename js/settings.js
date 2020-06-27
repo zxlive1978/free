@@ -1178,7 +1178,7 @@ function colOK11 () {
 	else{Sheet.editscrn=true;}
 	onoffpan();
 	
-	console.log(Sheet.editscrn,Sheet.icosize);
+	// console.log(Sheet.editscrn,Sheet.icosize);
 	
 	//refresh = true;
 	repaint();
