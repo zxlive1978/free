@@ -1153,6 +1153,7 @@ function init(){
 				.stroke({ width: Sheet.width_line_p , color: Sheet.syscolor})
 				.id(key);
 				colmn2.attr({'fill-opacity': 0});
+				
 
 				//Табличка со значениями
 				colmn2.click(function() { 
@@ -1616,6 +1617,19 @@ function init(){
 					
 					
 				}
+
+				
+				if (Number(text_name_p1.attr('font-size'))>K_rul * stepMin * 60*h1/7.7){
+					let resizeV = K_rul * stepMin * 60*h1/7.7;
+					//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
+					text_name_p1.clear();
+					delete(text_name_p1);
+					var text_name_p1 = draw.text(name_p1)
+					.font({ family: 'Inconsolata', size: resizeV })
+					.move(w1*time_w/2, beg_plats)
+					.center(w1*time_w/2, beg_plats)
+					.fill(Sheet.syscolor)
+				}
 				
 				//Текстовые значения на КолонкаХ забой глубина суммарный объем и тд.
 				try{
@@ -1670,6 +1684,19 @@ function init(){
 							.fill(txtPar[keey].color)
 							.id(keey)
 							
+						}
+
+						if (Number(text_name_p1.attr('font-size'))>K_rul * stepMin * 60*h1/7.7){
+							let resizeV = K_rul * stepMin * 60*h1/7.7;
+							//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
+							text_name_p1.clear();
+							delete(text_name_p1);
+							var text_name_p1 = draw.text(name_p1)
+							.font({ family: 'Inconsolata', size: resizeV })
+							.move(colmn11_x0+txtPar[keey].step*w1*weight_colmn1, beg_plats)
+							.center(colmn11_x0+txtPar[keey].step*w1*weight_colmn1,beg_plats)
+							.fill(txtPar[keey].color)
+							.id(keey)
 						}
 						
 						
