@@ -1281,14 +1281,13 @@ function init(){
 								
 
 								//Ресайз текста если не влезает!
-								console.log(text_value.length(),Number(Columns[this.attr('id')].size.w)*w1*0.9);
+								
 								if (text_value.length()>Number(Columns[this.attr('id')].size.w)*w1*0.9){
 									var coef =text_value.length()/text_value.attr('font-size')
 									text_value.clear();
 									delete(text_value);
-									
 									var text_value = draw.text(basePar[keey].txt+" "+cur_val)
-									.font({ family: 'Inconsolata', size: text_size_value})
+									.font({ family: 'Inconsolata', size: Number(Columns[this.attr('id')].size.w)*w1/coef*0.7})
 									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
 									.fill(basePar[keey].color);
@@ -1297,18 +1296,7 @@ function init(){
 									
 								}
 								
-								if (Number(text_value.attr('font-size'))>height_colmn1_p1*h1/7.6){
-									//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
-									text_value.clear();
-									delete(text_value);
-
-									var text_value = draw.text(basePar[keey].txt+" "+cur_val)
-									.font({ family: 'Inconsolata', size: text_size_value})
-									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
-									.cx(X_cur_mouse_click)
-									.fill(basePar[keey].color);
-									text_value.attr({'fill-opacity': 1});
-								}
+								
 								all_step = all_step + step_val;
 								gfx_group.add(text_value);
 								// console.log(text_value.length());
@@ -1326,6 +1314,20 @@ function init(){
 								.cx(X_cur_mouse_click)
 								.fill(txtPar[keey].color);
 								text_value.attr({'fill-opacity': 1});
+
+								if (text_value.length()>Number(Columns[this.attr('id')].size.w)*w1*0.9){
+									var coef =text_value.length()/text_value.attr('font-size')
+									text_value.clear();
+									delete(text_value);
+									var text_value = draw.text(basePar[keey].txt+" "+cur_val)
+									.font({ family: 'Inconsolata', size: Number(Columns[this.attr('id')].size.w)*w1/coef*0.7})
+									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									.cx(X_cur_mouse_click)
+									.fill(basePar[keey].color);
+									text_value.attr({'fill-opacity': 1});
+									
+									
+								}
 								all_step = all_step + step_val;
 								gfx_group.add(text_value);
 							}
@@ -1355,6 +1357,19 @@ function init(){
 									.cx(X_cur_mouse_click)
 									.fill(txtOknOPar[keey].color);
 									text_value.attr({'fill-opacity': 1});
+									if (text_value.length()>Number(Columns[this.attr('id')].size.w)*w1*0.9){
+										var coef =text_value.length()/text_value.attr('font-size')
+										text_value.clear();
+										delete(text_value);
+										var text_value = draw.text(basePar[keey].txt+" "+cur_val)
+										.font({ family: 'Inconsolata', size: Number(Columns[this.attr('id')].size.w)*w1/coef*0.7})
+										.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+										.cx(X_cur_mouse_click)
+										.fill(basePar[keey].color);
+										text_value.attr({'fill-opacity': 1});
+										
+										
+									}
 									all_step = all_step + step_val;
 									gfx_group.add(text_value);
 								}
