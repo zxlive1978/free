@@ -1281,8 +1281,9 @@ function init(){
 								
 
 								//Ресайз текста если не влезает!
-								if (text_value.length()>weight_colmn1*w1*0.9){
-									var coef =text_name_p1.length()/text_value.attr('font-size')
+								console.log(text_value.length(),Number(Columns[this.attr('id')].size.w)*w1*0.9);
+								if (text_value.length()>Number(Columns[this.attr('id')].size.w)*w1*0.9){
+									var coef =text_value.length()/text_value.attr('font-size')
 									text_value.clear();
 									delete(text_value);
 									
@@ -1310,7 +1311,7 @@ function init(){
 								}
 								all_step = all_step + step_val;
 								gfx_group.add(text_value);
-								console.log(text_value.length());
+								// console.log(text_value.length());
 								}
 						}
 							//Текстовые метки
