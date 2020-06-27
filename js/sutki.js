@@ -1176,11 +1176,11 @@ function init(){
 
 						
 
-						let wcol=w1/2.0*Number(Columns[this.attr('id')].size.w);
+						// let wcol=w1/2.0*Number(Columns[this.attr('id')].size.w);
 						// console.log(w1/2.0*Number(Columns[this.attr('id')].size.w));
-						var gfxr = draw.polygon((X_cur_mouse_click-wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+wcol)+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-wcol)+' '+Y_cur_mouse_click)
+						// var gfxr = draw.polygon((X_cur_mouse_click-wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+wcol)+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-wcol)+' '+Y_cur_mouse_click)
 				
-						// var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
+						var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
 						//ширина поля со клик зачениями
 						//weight_colmn1 = w1*(Columns["col"+String(Number((txtPar[keey].poz.x)))].size.w)/2;
 						//var gfxr = draw.polygon((X_cur_mouse_click-weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+weight_colmn1)+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-weight_colmn1)+','+Y_cur_mouse_click)
@@ -1271,7 +1271,7 @@ function init(){
 								var cur_val = -2147480;
 								if (disp_val1>0){cur_val=String(d110d[disp_val1][basePar[keey].par])};
 								if (Number(cur_val)<= -2147480){ cur_val =basePar[keey].txt+" "+"NaN";}
-								var text_value = draw.text(basePar[keey].txt+" "+cur_val)
+								var text_value = draw.text(basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
 								.font({ family: 'Inconsolata', size: text_size_value})
 								.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.cx(X_cur_mouse_click)
@@ -1282,18 +1282,31 @@ function init(){
 
 								//Ресайз текста если не влезает!
 								
-								if (text_value.length()>Number(Columns[this.attr('id')].size.w)*w1*0.9){
+								if (text_value.length()>Sheet.width_value*w1){
 									var coef =text_value.length()/text_value.attr('font-size')
 									text_value.clear();
 									delete(text_value);
-									var text_value = draw.text(basePar[keey].txt+" "+cur_val)
-									.font({ family: 'Inconsolata', size: Number(Columns[this.attr('id')].size.w)*w1/coef*0.7})
+									var text_value = draw.text(basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
+									.font({ family: 'Inconsolata', size: Sheet.width_value*w1/coef*0.7})
 									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
 									.fill(basePar[keey].color);
 									text_value.attr({'fill-opacity': 1});
 									
 									
+								}
+
+								if (Number(text_value.attr('font-size'))>height_colmn1_p1*h1/7.7){
+									let resizeV = height_colmn1_p1*h1/7.7;
+									//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
+									text_value.clear();
+									delete(text_value);
+									var text_value = draw.text(basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
+									.font({ family: 'Inconsolata', size: resizeV})
+									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									.cx(X_cur_mouse_click)
+									.fill(basePar[keey].color);
+									text_value.attr({'fill-opacity': 1});
 								}
 								
 								
@@ -1315,18 +1328,34 @@ function init(){
 								.fill(txtPar[keey].color);
 								text_value.attr({'fill-opacity': 1});
 
-								if (text_value.length()>Number(Columns[this.attr('id')].size.w)*w1*0.9){
+								
+								//Ресайз текста если не влезает!
+								
+								if (text_value.length()>Sheet.width_value*w1){
 									var coef =text_value.length()/text_value.attr('font-size')
 									text_value.clear();
 									delete(text_value);
-									var text_value = draw.text(txtPar[keey].txt+" "+cur_val)
-									.font({ family: 'Inconsolata', size: Number(Columns[this.attr('id')].size.w)*w1/coef*0.7})
+									var text_value = draw.text(txtPar[keey].txt+" "+cur_val+" ("+ txtPar[keey].unit+")")
+									.font({ family: 'Inconsolata', size: Sheet.width_value*w1/coef*0.7})
 									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
 									.fill(txtPar[keey].color);
 									text_value.attr({'fill-opacity': 1});
 									
 									
+								}
+
+								if (Number(text_value.attr('font-size'))>height_colmn1_p1*h1/7.7){
+									let resizeV = height_colmn1_p1*h1/7.7;
+									//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
+									text_value.clear();
+									delete(text_value);
+									var text_value = draw.text(txtPar[keey].txt+" "+cur_val+" ("+ txtPar[keey].unit+")")
+									.font({ family: 'Inconsolata', size: resizeV})
+									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									.cx(X_cur_mouse_click)
+									.fill(txtPar[keey].color);
+									text_value.attr({'fill-opacity': 1});
 								}
 								all_step = all_step + step_val;
 								gfx_group.add(text_value);
@@ -1357,19 +1386,35 @@ function init(){
 									.cx(X_cur_mouse_click)
 									.fill(txtOknOPar[keey].color);
 									text_value.attr({'fill-opacity': 1});
-									if (text_value.length()>Number(Columns[this.attr('id')].size.w)*w1*0.9){
-										var coef =text_value.length()/text_value.attr('font-size')
-										text_value.clear();
-										delete(text_value);
-										var text_value = draw.text(txtOknOPar[keey].txt+" "+cur_val)
-										.font({ family: 'Inconsolata', size: Number(Columns[this.attr('id')].size.w)*w1/coef*0.7})
-										.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
-										.cx(X_cur_mouse_click)
-										.fill(txtOknOPar[keey].color);
-										text_value.attr({'fill-opacity': 1});
-										
-										
-									}
+									
+								//Ресайз текста если не влезает!
+								
+								if (text_value.length()>Sheet.width_value*w1){
+									var coef =text_value.length()/text_value.attr('font-size')
+									text_value.clear();
+									delete(text_value);
+									var text_value = draw.text(txtOknOPar[keey].txt+" "+cur_val+" ("+ txtOknOPar[keey].unit+")")
+									.font({ family: 'Inconsolata', size: Sheet.width_value*w1/coef*0.7})
+									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									.cx(X_cur_mouse_click)
+									.fill(txtOknOPar[keey].color);
+									text_value.attr({'fill-opacity': 1});
+									
+									
+								}
+
+								if (Number(text_value.attr('font-size'))>height_colmn1_p1*h1/7.7){
+									let resizeV = height_colmn1_p1*h1/7.7;
+									//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
+									text_value.clear();
+									delete(text_value);
+									var text_value = draw.text(txtOknOPar[keey].txt+" "+cur_val+" ("+ txtOknOPar[keey].unit+")")
+									.font({ family: 'Inconsolata', size: resizeV})
+									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									.cx(X_cur_mouse_click)
+									.fill(txtOknOPar[keey].color);
+									text_value.attr({'fill-opacity': 1});
+								}
 									all_step = all_step + step_val;
 									gfx_group.add(text_value);
 								}
