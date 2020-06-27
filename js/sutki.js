@@ -1174,6 +1174,8 @@ function init(){
 						if (text_size_value>height_colmn1_p1*h1/7.6){
 						text_size_value = height_colmn1_p1*h1/7.6;}
 
+						
+
 						let wcol=w1/2.0*Number(Columns[this.attr('id')].size.w);
 						// console.log(w1/2.0*Number(Columns[this.attr('id')].size.w));
 						var gfxr = draw.polygon((X_cur_mouse_click-wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+wcol)+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-wcol)+' '+Y_cur_mouse_click)
@@ -1277,6 +1279,7 @@ function init(){
 								text_value.attr({'fill-opacity': 1});
 								all_step = all_step + step_val;
 								gfx_group.add(text_value);
+								console.log(text_value.length());
 								}
 						}
 							//Текстовые метки
