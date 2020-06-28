@@ -20,8 +20,8 @@
     $( "#dialogvideo" ).dialog(
       {
         position: { my: "right  top", at: "right center", of:"#drawing" },
-        width: 160,
-        height: 180,
+        width: 170,
+        height: 140,
         //appendTo: "fullscreen",
         //modal: true
       }
@@ -96,43 +96,14 @@
 
     
 	  
-	   <li>
-	  <div class="dropdown">
-	  <!--
-		<button class="btn bg-light btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		ФОРМА
-		</button> -->
-		<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-		<!-- <button class="dropdown-item btn-lg"  id="shab" data-toggle="modal"  type="button" data-target="exampleModalLong">Шаблон</button> -->
-		<button  class="dropdown-item btn-lg" data-toggle="modal" data-target="#myModal">Шаблон</button>
-		<!-- Modal -->
-<!-- <div id="shab1" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">Modal header</h3>
-    </div>
-    <div class="modal-body">
-        <p>One fine body…</p>
-    </div>
-    <div class="modal-footer">
-        <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-        <button class="btn bg-light btn-lg">Save changes</button>
-    </div>
-</div> -->
-	
-
-		<button class="dropdown-item btn-lg" type="button">Открыть</button>
-		<button class="dropdown-item btn-lg" type="button ">Сохранить</button>
-		</div>
-		</div>
-	  </li>
+	   
 		<li>
     <div id="dialogvideo" title="Камера 2">
     <iframe width="100%" height="100%"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
     webkitAllowFullScreen mozallowfullscreen allowfullscreen
     title="0" byline="0" portrait="0"
-    width="320" height="240"
+    width="280" height="157"
     frameborder="0"
     allow="autoplay"
       src="https://hydrofalll.ddns.net:5443/LiveApp/play.html?name=211275258683608619992096"> </iframe>

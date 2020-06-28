@@ -1244,9 +1244,9 @@ $(document).load(function () {
 				//event.preventDefault(); // To prevent following the link (optional)
 				$.ajax({
 					type: 'POST',
-					url: 'https://hydrofalll.ddns.net:5443/v2/broadcasts/983687349095562644239572/stop',
+					url: 'https://hydrofalll.ddns.net:5443/LiveApp/rest/broadcasts/stop',
 					crossDomain: true,
-					//data: '{"some":"json"}',
+					data: '{"streamId":"211275258683608619992096"}',
 					dataType: 'jsonp',
 					success: function(responseData, textStatus, jqXHR) {
 						var value = responseData.someKey;
