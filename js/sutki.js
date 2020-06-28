@@ -165,7 +165,6 @@ function init(){
 				oneW=false;
 				var whee1 = e.deltaY;
 				let mi=h1*(Columns.col0.size.h)/2;
-				console.log(Columns, cir1);
 				if (whee1> 0){
 					
 					if (loaddata == false){
