@@ -159,23 +159,28 @@ function init(){
 		}, false);
 		
 		//Колесико
+		let oneW = true;
 		svg.addEventListener('wheel', function(e) {
-			var whee1 = e.deltaY;
-			
-			if (whee1> 0){
-				
-				if (loaddata == false){
-					cir1.y(30*h1);
-					cir2.y(30*h1);
-					cir4.y(30*h1);
-					read_down();}//см .navigation.js 
-			} else {
-				if (loaddata == false){
-					cir1.y(Columns.col0.poz.y*h1);
-					cir2.y(Columns.col0.poz.y*h1);
-					cir4.y(Columns.col0.poz.y*h1);
-				read_up()};//см .navigation.js 
-			}
+			if (oneW){
+				oneW=false;
+				var whee1 = e.deltaY;
+				let mi=h1*(Columns.col0.size.h)/2;
+				console.log(Columns, cir1);
+				if (whee1> 0){
+					
+					if (loaddata == false){
+						cir1.dy(-mi);
+						cir2.dy(-mi);
+						cir4.dy(-mi);
+						read_up()};//см .navigation.js 
+						
+				} else {
+					if (loaddata == false){
+						cir1.dy(mi);
+						cir2.dy(mi);
+						cir4.dy(mi);
+						read_down();}//см .navigation.js 
+				}} 
 			
 			}, false);
 		//ТЕСТ
@@ -1154,7 +1159,7 @@ function init(){
 				.id(key);
 				colmn2.attr({'fill-opacity': 0});
 				
-
+				
 				//Табличка со значениями
 				colmn2.click(function() { 
 						//Группа
