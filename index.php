@@ -122,7 +122,7 @@
     
 
     </li>
-    <button class="btn bg-light btn-lg " type="button" id="stop" name="stop">
+    <button class="btn bg-light btn-lg " type="button" id="stop" name="stop" onclick='stopCam()'>
     STOP поток</button>
     <button class="btn bg-light btn-lg " type="button" id="start" >
 
