@@ -164,21 +164,22 @@ function init(){
 			if (oneW){
 				oneW=false;
 				var whee1 = e.deltaY;
-				let mi=h1*(Columns.col0.size.h)/2;
+				let mi=Sheet.markheighttime*w1/2;
 				if (whee1> 0){
 					
-					if (loaddata == false){
-						cir1.dy(-mi);
-						cir2.dy(-mi);
-						cir4.dy(-mi);
-						read_up()};//см .navigation.js 
-						
-				} else {
 					if (loaddata == false){
 						cir1.dy(mi);
 						cir2.dy(mi);
 						cir4.dy(mi);
-						read_down();}//см .navigation.js 
+						read_down();};//см .navigation.js 
+						
+				} else {
+					if (loaddata == false){
+						cir1.dy(-mi);
+						cir2.dy(-mi);
+						cir4.dy(-mi);
+						
+						read_up();}//см .navigation.js 
 				}} 
 			
 			}, false);
