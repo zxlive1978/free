@@ -164,7 +164,7 @@ function init(){
 			if (oneW){
 				oneW=false;
 				var whee1 = e.deltaY;
-				let mi=Sheet.markheighttime*w1/2;
+				let mi=Sheet.markwidthtime/2;
 				if (whee1> 0){
 					
 					if (loaddata == false){
