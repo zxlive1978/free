@@ -1056,9 +1056,9 @@ function init(){
 				*/
 				//На шрифте по названию параметра
 				meg.mouseover(function(e) { 
-				//this.attr('font-size', Number(this.attr('font-size'+3))) ;
-				backcolor=this.attr('fill');
-				this.attr('fill', getRandomColor()) ;
+				this.attr('font-size', Number(this.attr('font-size'+3))) ;
+				// backcolor=this.attr('fill');
+				// this.attr('fill', getRandomColor()) ;
 				})
 				
 				//За шрифтом по названию параметра
@@ -1276,7 +1276,7 @@ function init(){
 							if (basePar[keey].poz.x == strN) {
 								var cur_val = -2147480;
 								if (disp_val1>0){cur_val=String(d110d[disp_val1][basePar[keey].par])};
-								if (Number(cur_val)<= -2147480){ cur_val =basePar[keey].txt+" "+"NaN";}
+								if (Number(cur_val)<= -2147480){ cur_val ="NaN";}
 								var text_value = draw.text(basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
 								.font({ family: 'Inconsolata', size: text_size_value})
 								.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
