@@ -23,31 +23,7 @@ var wells = {
 //Текущие параметры Справочник параметров графики обычные
 
 var basePar = {
-	par0 :  {par: 'Wkp', txt: 'Вес на крюке', min: 0, max: 270, color: '#ff0066', poz: {x:1,y:2}, unit: 'т', log: false},
-	par1 : {par: 'Wdol', txt: 'Нагрузка на дол.', min: 0, max: 70, color: '#006eea', poz: {x:1,y:3}, unit: 'т', log: false},
-	par2 : {par: 'Npot', txt: 'Обороты ротора', min: 0, max: 200, color: '#a92ab8', poz: {x:1,y:4}, unit: '1/мин', log: false},
-	par3 : {par: 'Mpot', txt: 'Момент на роторе', min: 0, max: 5, color: '#006400', poz: {x:1,y:5}, unit: 'Н*м', log: false},
-	par4 : {par: 'Pbx', txt: 'Давление на входе', min: 0, max: 300, color: '#f40503', poz: {x:2,y:2}, unit: 'атм', log: false},
-	par5 : {par: 'Talblok', txt: 'Пол. тальблока', min: 0, max: 45, color: '#006eea', poz: {x:2,y:3}, unit: 'м', log: false},
-	par6 : {par: 'Qbx', txt: 'Расход на входе', min: 0, max: 70, color: '#006400', poz: {x:2,y:4}, unit: 'л/сек', log: false},
-	par7 : {par: 'C1', txt: 'С1', min: 0, max: 0.5, color: '#f21890', poz: {x:2,y:5}, unit: '%', log: false},
-	par8 : {par: 'C1C5', txt: 'Сумма газов', min: 0, max: 5, color: '#855f30', poz: {x:2,y:6}, unit: '%', log: false},
-	par9 : {par: 'Xn1', txt: 'Ходы 1 насоса', min: 0, max: 150, color: '#f40503', poz: {x:3,y:2}, unit: '1/мин', log: false},
-	par10 : {par: 'Xn2', txt: 'Ходы 2 насоса', min: 0, max: 150, color: '#006eea', poz: {x:3,y:3}, unit: '1/мин', log: false},
-	par11 : {par: 'Tbix', txt: 'Темп. на выходе', min: 0, max: 70, color: '#f21890', poz: {x:3,y:4}, unit: 'град', log: false},
-	par12 : {par: 'Potok', txt: 'Поток на выходе', min: 0, max: 70, color: '#006400', poz: {x:3,y:5}, unit: 'у.е', log: false},
-	par13 : {par: 'Vinstr', txt: 'Скор. тальблока', min: -5, max: 5, color: '#a92ab8', poz: {x:3,y:6}, unit: 'м/сек', log: false},
-	par14 : {par: 'Vobj', txt: 'Cумм. объем емк.', min: 0, max: 370, color: '#000000', poz: {x:3,y:7}, unit: 'м3', log: false},
-	par15 : {par: 'V1', txt: 'Объем 1 емкости', min: 0, max: 100, color: '#f40503', poz: {x:4,y:2}, unit: 'м3', log: false},
-	par16 : {par: 'V2', txt: 'Объем 2 емкости', min: 0, max: 90, color: '#006eea', poz: {x:4,y:3}, unit: 'м3', log: false},
-	par17 : {par: 'V3', txt: 'Объем 3 емкости', min: 0, max: 120, color: '#f21890', poz: {x:4,y:4}, unit: 'м3', log: false},
-	par18 : {par: 'V4', txt: 'Объем 4 емкости', min: 0, max: 90, color: '#006400', poz: {x:4,y:5}, unit: 'м3', log: false},
-	par19 : {par: 'Vdol', txt: 'Объем дол.емк.', min: 0, max: 30, color: '#a92ab8', poz: {x:4,y:6}, unit: 'м3', log: false},
-	par20 : {par: 'Vobj', txt: 'Cумм. объем емк.', min: 0, max: 370, color: '#000000', poz: {x:4,y:7}, unit: 'м3', log: false},
-	par21 : {par: 'Vobj', txt: 'Cумм. объем емк.', min: 0, max: 370, color: '#000000', poz: {x:3,y:8}, unit: 'м3', log: false},
-	par22 : {par: 'Vobj', txt: 'Cумм. объем емк.', min: 0, max: 370, color: '#000000', poz: {x:3,y:9}, unit: 'м3', log: false},
-	par23 : {par: 'Vobj', txt: 'Cумм. объем емк.', min: 0, max: 370, color: '#000000', poz: {x:3,y:10}, unit: 'м3', log: false},
-	
+
 	};
 	
 //Справочник параметров графики обычные	

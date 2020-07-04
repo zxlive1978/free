@@ -72,15 +72,15 @@
     <ul class="navbar-nav">
      
    
-	  <li>
+	  <!-- <li>
 	  <div class="dropdown">
 		<button class="btn bg-light btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		СКВАЖИНА
 		</button>
-		<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+		<div class="dropdown-menu" aria-labelledby="dropdownMenu2"> -->
 		<!-- <button class="dropdown-item btn-lg" type="button" id="par0" >АГКМ406-1</button>
 		<button class="dropdown-item btn-lg" type="button" id="par1">АГКМ73-1</button> -->
-		<button class="dropdown-item btn-lg" type="button" id="par0">АГКМ99-1</button>
+		<!-- <button class="dropdown-item btn-lg" type="button" id="par0">АГКМ99-1</button>
 		<button class="dropdown-item btn-lg" type="button" id="par1">АГКМ609-1</button>
 		<button class="dropdown-item btn-lg" type="button" id="par2">АГКМ260-1</button>
 		<button class="dropdown-item btn-lg" type="button" id="par3">АГКМ9917-1</button>
@@ -92,7 +92,7 @@
 		<button class="dropdown-item btn-lg" type="button" id="par9">АГКМ71-1</button>
 		</div>
 		</div>
-	  </li>
+	  </li> -->
 
     
 	  
