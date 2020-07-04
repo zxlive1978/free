@@ -1188,8 +1188,8 @@ function init(){
 				
 						var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
 						//ширина поля со клик зачениями
-						//weight_colmn1 = w1*(Columns["col"+String(Number((txtPar[keey].poz.x)))].size.w)/2;
-						//var gfxr = draw.polygon((X_cur_mouse_click-weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+weight_colmn1)+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-weight_colmn1)+','+Y_cur_mouse_click)
+						// weight_colmn1 = w1*(Columns["col"+String(Number((txtPar[keey].poz.x)))].size.w)/2;
+						// var gfxr = draw.polygon((X_cur_mouse_click-weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+weight_colmn1)+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-weight_colmn1)+','+Y_cur_mouse_click)
 						.fill({ color: Sheet.curcolorval })
 						.stroke({ width: Sheet.width_gxf_line, dasharray: '2,3', color: Sheet.syscolor })
 						.id(this.attr('id'));
@@ -1277,7 +1277,7 @@ function init(){
 								var cur_val = -2147480;
 								if (disp_val1>0){cur_val=String(d110d[disp_val1][basePar[keey].par])};
 								if (Number(cur_val)<= -2147480){ cur_val ="NaN";}
-								var text_value = draw.text(basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
+								var text_value = draw.text( basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
 								.font({ family: 'Inconsolata', size: text_size_value})
 								.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.cx(X_cur_mouse_click)
@@ -1292,7 +1292,7 @@ function init(){
 									var coef =text_value.length()/text_value.attr('font-size')
 									text_value.clear();
 									delete(text_value);
-									var text_value = draw.text(basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
+									var text_value = draw.text( basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
 									.font({ family: 'Inconsolata', size: Sheet.width_value*w1/coef*0.7})
 									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
@@ -1307,7 +1307,7 @@ function init(){
 									//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
 									text_value.clear();
 									delete(text_value);
-									var text_value = draw.text(basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
+									var text_value = draw.text( basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
 									.font({ family: 'Inconsolata', size: resizeV})
 									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
@@ -1327,7 +1327,7 @@ function init(){
 								var cur_val = -2147480;
 								if (disp_val1>0){cur_val=String(d110d[disp_val1][txtPar[keey].par])};
 								if (Number(cur_val)<= -2147480){ cur_val =txtPar[keey].txt+" "+"NaN";}
-								var text_value = draw.text(txtPar[keey].txt+" "+cur_val+" ("+ txtPar[keey].unit+")") 
+								var text_value = draw.text( txtPar[keey].txt+" "+cur_val+" ("+ txtPar[keey].unit+")") 
 								.font({ family: 'Inconsolata', size: text_size_value})
 								.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.cx(X_cur_mouse_click)
@@ -1374,7 +1374,7 @@ function init(){
 								if (txtOknOPar[keey].par=="Vrema"){
 									var cur_val = -2147480;
 									if (disp_val1>0){cur_val=String(d110d[disp_val1][txtOknOPar[keey].par])};
-									if (Number(cur_val)<= -2147480){ cur_val =txtOknOPar[keey].txt+" "+"NaN";}
+									if (Number(cur_val)<= -2147480){ cur_val ="NaN";}
 									var day = new Date(cur_val*1000);
 									var last_hour = day.getHours();
 									var minutes = day.getMinutes();
@@ -1426,6 +1426,16 @@ function init(){
 								}
 							}
 						}
+						var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
+						//ширина поля со клик зачениями
+						// weight_colmn1 = w1*(Columns["col"+String(Number((txtPar[keey].poz.x)))].size.w)/2;
+						// var gfxr = draw.polygon((X_cur_mouse_click-weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+weight_colmn1)+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-weight_colmn1)+','+Y_cur_mouse_click)
+						.fill({ color: Sheet.curcolorval })
+						.opacity(0)
+						.stroke({ width: Sheet.width_gxf_line, dasharray: '2,3', color: Sheet.syscolor})
+						.id(this.attr('id'));
+
+						gfx_group.add(gfxr);
 						
 						//Удаление текущих значений
 						gfxr.click(function() { 
