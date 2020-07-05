@@ -94,8 +94,8 @@ function init(){
 				//Если телефон горизонтально
 			
 				width = widthdiv;
-				// height = widthdiv *Sheet.K_A4*1.3;
-				height = widthdiv *Sheet.K_A4;
+				height = widthdiv *Sheet.K_A4*1.3;
+				// height = widthdiv *Sheet.K_A4;
 			
 			}
 		}
