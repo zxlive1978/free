@@ -248,7 +248,10 @@ window.onresize = function(event) {
   <td><label for="hcolcolor">Цвет линий:</label></td><td><input type="color" id="syscolor" name="syscolor" value="#e66465"/>
   </tr>
    <tr>
-  <td><label for="hcolcolor">Толщина линий:</label></td><td><input type="text" id="width_line_p" name="width_line_p" value="0"/>
+  <td><label for="hcolcolor">Толщина линий оформления:</label></td><td><input type="text" id="width_line_p" name="width_line_p" value="0"/>
+  </tr>
+  <tr>
+  <td><label for="hcolcolor">Толщина линий графиков:</label></td><td><input type="text" id="width_gxf_line" name="width_gxf_line" value="0"/>
   </tr>
   <tr>
   <tr>

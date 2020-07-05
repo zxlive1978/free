@@ -724,6 +724,7 @@ function colPan5 () {
 	/* PArmyDialog5.show(); */
 	
 	$("#width_line_p").val(Sheet.width_line_p);
+	$("#width_gxf_line").val(Sheet.width_gxf_line);
 	$("#syscolor").val(Sheet.syscolor);
 	$("#K_size_txt").val(Sheet.K_size_txt);
 	$("#K_size_txt_mobile").val(Sheet.K_size_txt_mobile);
@@ -772,6 +773,7 @@ function colOK5 () {
 	
 	
 	Sheet.width_line_p=Number($("#width_line_p").val());
+	Sheet.width_gxf_line=Number($("#width_gxf_line").val());
 	Sheet.syscolor=String($("#syscolor").val());
 	Sheet.K_size_txt=Number($("#K_size_txt").val());
 	Sheet.K_size_txt_mobile=Number($("#K_size_txt_mobile").val());
