@@ -1557,9 +1557,16 @@ function init(){
 				.id(key);
 				colmn2.attr({'fill-opacity': 0});
 				
+				var mouseDwn =false;
+				colmn2.mousedown(function(e){
+					mouseDwn = true;
+					console.log(mouseDwn);
+				});
 				
 				//Табличка со значениями
-				colmn2.mousedown(function(e) { 
+				colmn2.mousemove(function(e) {
+					
+					if (mouseDwn===true){ 
 						//Группа
 						var gfx_group = draw.group();
 						//parPan(this.attr('id'));
@@ -1849,13 +1856,17 @@ function init(){
 
 						gfx_group.add(gfxr);
 						
+						gfxr.mouseup(function(e){
+							mouseDwn = false;
+							console.log(mouseDwn);
+						});
 						//Удаление текущих значений
 						gfxr.click(function() { 
 							this.remove();
 							gfx_group.remove();
 							/* if (online == true){refresh = true;} */
 								})
-				})
+				}})
 			}
 		}
 		
