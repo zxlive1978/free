@@ -1559,7 +1559,7 @@ function init(){
 				
 				
 				//Табличка со значениями
-				colmn2.click(function() { 
+				colmn2.mousedown(function(e) { 
 						//Группа
 						var gfx_group = draw.group();
 						//parPan(this.attr('id'));
@@ -1584,7 +1584,8 @@ function init(){
 						// console.log(w1/2.0*Number(Columns[this.attr('id')].size.w));
 						// var gfxr = draw.polygon((X_cur_mouse_click-wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+wcol)+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-wcol)+' '+Y_cur_mouse_click)
 				
-						var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
+						//var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
+						var gfxr = draw.polygon((e.x-w1*(Sheet.width_value/2-0.5))+','+(e.y -h1*(Sheet.height_value+0.5)) +' '+(e.x+w1*(Sheet.width_value/2+0.5))+','+(e.y -h1*(Sheet.height_value+0.5))+' '+(e.x+w1*(Sheet.width_value/2+0.5))+' '+e.y+' '+(e.x-w1*(Sheet.width_value/2-0.5))+' '+e.y)
 						//ширина поля со клик зачениями
 						// weight_colmn1 = w1*(Columns["col"+String(Number((txtPar[keey].poz.x)))].size.w)/2;
 						// var gfxr = draw.polygon((X_cur_mouse_click-weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+weight_colmn1)+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-weight_colmn1)+','+Y_cur_mouse_click)
@@ -1595,7 +1596,8 @@ function init(){
 						
 						//Визир
 						gfxr.attr({'fill-opacity': Sheet.faderr});
-						var gfxr_line = draw.line( '0 ,'+ Y_cur_mouse_click +' ' +(w1*100)+',' + Y_cur_mouse_click)
+						//var gfxr_line = draw.line( '0 ,'+ Y_cur_mouse_click +' ' +(w1*100)+',' + Y_cur_mouse_click)
+						var gfxr_line = draw.line( '0 ,'+ e.y +' ' +(w1*100)+',' + e.y)
 						.stroke({ width: Sheet.width_line_p , color: Sheet.syscolor});
 						
 						gfx_group.add(gfxr_line);
@@ -1609,7 +1611,8 @@ function init(){
 						//Точное время
 						//String ((startTime.getTime() + i* stepMin* 60 *1000)/1000)
 						var cur_value_y_step_val = (h1*100 - (Number(Columns[this.attr('id')].size.h)*h1))/(Sheet.Kzoom*60*60);
-						var ttime =start_time/1 + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h)*h1)/cur_value_y_step_val);
+						// var ttime =start_time/1 + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h)*h1)/cur_value_y_step_val);
+						var ttime =start_time/1 + Math.round((e.y - Number(Columns[this.attr('id')].size.h)*h1)/cur_value_y_step_val);
 						//Индекс искомой записи -1 не найдена
 						var disp_val1 = -1;
 						//Разница между значение записи и клика
@@ -1677,7 +1680,8 @@ function init(){
 								if (Number(cur_val)<= -2147480){ cur_val ="NaN";}
 								var text_value = draw.text( basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
 								.font({ family: 'Inconsolata', size: text_size_value})
-								.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+								.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 								.cx(X_cur_mouse_click)
 								.fill(basePar[keey].color);
 								text_value.attr({'fill-opacity': 1});
@@ -1693,7 +1697,8 @@ function init(){
 									delete(text_value);
 									var text_value = draw.text( basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
 									.font({ family: 'Inconsolata', size: resizeH})
-									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
 									.fill(basePar[keey].color);
 									text_value.attr({'fill-opacity': 1});
@@ -1708,7 +1713,8 @@ function init(){
 									delete(text_value);
 									var text_value = draw.text( basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
 									.font({ family: 'Inconsolata', size: resizeV})
-									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
 									.fill(basePar[keey].color);
 									text_value.attr({'fill-opacity': 1});
@@ -1728,7 +1734,8 @@ function init(){
 								if (Number(cur_val)<= -2147480){ cur_val =txtPar[keey].txt+" "+"NaN";}
 								var text_value = draw.text( txtPar[keey].txt+" "+cur_val+" ("+ txtPar[keey].unit+")") 
 								.font({ family: 'Inconsolata', size: text_size_value})
-								.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+								.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 								.cx(X_cur_mouse_click)
 								.fill(txtPar[keey].color);
 								text_value.attr({'fill-opacity': 1});
@@ -1742,7 +1749,8 @@ function init(){
 									delete(text_value);
 									var text_value = draw.text(txtPar[keey].txt+" "+cur_val+" ("+ txtPar[keey].unit+")")
 									.font({ family: 'Inconsolata', size: Sheet.width_value*w1/coef*0.7})
-									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
 									.fill(txtPar[keey].color);
 									text_value.attr({'fill-opacity': 1});
@@ -1757,7 +1765,8 @@ function init(){
 									delete(text_value);
 									var text_value = draw.text(txtPar[keey].txt+" "+cur_val+" ("+ txtPar[keey].unit+")")
 									.font({ family: 'Inconsolata', size: resizeV})
-									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
 									.fill(txtPar[keey].color);
 									text_value.attr({'fill-opacity': 1});
@@ -1787,7 +1796,8 @@ function init(){
 									var time_viz1 = ' '+last_hour+":"+minutes+" "+dates+"."+month +(2000-yearr);
 									var text_value = draw.text(txtOknOPar[keey].txt+" "+time_viz1+" ("+ txtOknOPar[keey].unit+")") 
 									.font({ family: 'Inconsolata', size: text_size_value})
-									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
 									.fill(txtOknOPar[keey].color);
 									text_value.attr({'fill-opacity': 1});
@@ -1800,7 +1810,8 @@ function init(){
 									delete(text_value);
 									var text_value = draw.text(txtOknOPar[keey].txt+" "+time_viz1+" ("+ txtOknOPar[keey].unit+")")
 									.font({ family: 'Inconsolata', size: Sheet.width_value*w1/coef*0.7})
-									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
 									.fill(txtOknOPar[keey].color);
 									text_value.attr({'fill-opacity': 1});
@@ -1815,7 +1826,8 @@ function init(){
 									delete(text_value);
 									var text_value = draw.text(txtOknOPar[keey].txt+" "+cur_val+" ("+ txtOknOPar[keey].unit+")")
 									.font({ family: 'Inconsolata', size: resizeV})
-									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
 									.fill(txtOknOPar[keey].color);
 									text_value.attr({'fill-opacity': 1});
@@ -1825,7 +1837,8 @@ function init(){
 								}
 							}
 						}
-						var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
+						// var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
+						var gfxr = draw.polygon((e.x-w1*(Sheet.width_value/2-0.5))+','+(e.y -h1*(Sheet.height_value+0.5)) +' '+(e.x+w1*(Sheet.width_value/2+0.5))+','+(e.y -h1*(Sheet.height_value+0.5))+' '+(e.x+w1*(Sheet.width_value/2+0.5))+' '+e.y+' '+(e.x-w1*(Sheet.width_value/2-0.5))+' '+e.y)
 						//ширина поля со клик зачениями
 						// weight_colmn1 = w1*(Columns["col"+String(Number((txtPar[keey].poz.x)))].size.w)/2;
 						// var gfxr = draw.polygon((X_cur_mouse_click-weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+weight_colmn1)+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-weight_colmn1)+','+Y_cur_mouse_click)
