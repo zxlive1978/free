@@ -1682,12 +1682,12 @@ function init(){
 								.font({ family: 'Inconsolata', size: text_size_value})
 								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
-								.cx(X_cur_mouse_click)
+								.cx(e.x)
 								.fill(basePar[keey].color);
 								text_value.attr({'fill-opacity': 1});
 								
 								
-
+						
 								//Ресайз текста если не влезает!
 								
 								if (text_value.length()>Sheet.width_value*0.7){
@@ -1699,13 +1699,13 @@ function init(){
 									.font({ family: 'Inconsolata', size: resizeH})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
-									.cx(X_cur_mouse_click)
+									.cx(e.x)
 									.fill(basePar[keey].color);
 									text_value.attr({'fill-opacity': 1});
 									
 									
 								}
-
+						
 								if (Number(text_value.attr('font-size'))>height_colmn1_p1*h1/7.7){
 									let resizeV = height_colmn1_p1*h1/7.7;
 									//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
@@ -1715,7 +1715,7 @@ function init(){
 									.font({ family: 'Inconsolata', size: resizeV})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
-									.cx(X_cur_mouse_click)
+									.cx(e.x)
 									.fill(basePar[keey].color);
 									text_value.attr({'fill-opacity': 1});
 								}
@@ -1736,10 +1736,10 @@ function init(){
 								.font({ family: 'Inconsolata', size: text_size_value})
 								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
-								.cx(X_cur_mouse_click)
+								.cx(e.x)
 								.fill(txtPar[keey].color);
 								text_value.attr({'fill-opacity': 1});
-
+						
 								
 								//Ресайз текста если не влезает!
 								
@@ -1751,13 +1751,13 @@ function init(){
 									.font({ family: 'Inconsolata', size: Sheet.width_value*w1/coef*0.7})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
-									.cx(X_cur_mouse_click)
+									.cx(e.x)
 									.fill(txtPar[keey].color);
 									text_value.attr({'fill-opacity': 1});
 									
 									
 								}
-
+						
 								if (Number(text_value.attr('font-size'))>height_colmn1_p1*h1/7.7){
 									let resizeV = height_colmn1_p1*h1/7.7;
 									//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
@@ -1767,7 +1767,7 @@ function init(){
 									.font({ family: 'Inconsolata', size: resizeV})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
-									.cx(X_cur_mouse_click)
+									.cx(e.x)
 									.fill(txtPar[keey].color);
 									text_value.attr({'fill-opacity': 1});
 								}
@@ -1798,7 +1798,7 @@ function init(){
 									.font({ family: 'Inconsolata', size: text_size_value})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
-									.cx(X_cur_mouse_click)
+									.cx(e.x)
 									.fill(txtOknOPar[keey].color);
 									text_value.attr({'fill-opacity': 1});
 									
@@ -1812,13 +1812,13 @@ function init(){
 									.font({ family: 'Inconsolata', size: Sheet.width_value*w1/coef*0.7})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
-									.cx(X_cur_mouse_click)
+									.cx(e.x)
 									.fill(txtOknOPar[keey].color);
 									text_value.attr({'fill-opacity': 1});
 									
 									
 								}
-
+						
 								if (Number(text_value.attr('font-size'))>height_colmn1_p1*h1/7.7){
 									let resizeV = height_colmn1_p1*h1/7.7;
 									//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
@@ -1828,7 +1828,7 @@ function init(){
 									.font({ family: 'Inconsolata', size: resizeV})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
-									.cx(X_cur_mouse_click)
+									.cx(e.x)
 									.fill(txtOknOPar[keey].color);
 									text_value.attr({'fill-opacity': 1});
 								}
