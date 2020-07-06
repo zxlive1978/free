@@ -139,7 +139,7 @@ function init(){
 		
 		// Загрузка прогресс
 		var text_value = draw.text('Загрузка...') 
-		.font({ family: 'Arial Black', size: size_text_p +7})
+		.font({ family: 'Arial', size: size_text_p +7})
 		.move(50*w1, 50*h1)
 		.center(50*w1, 50*h1)
 		
@@ -192,7 +192,7 @@ function init(){
 		//Текст
 		draw.text('Вес на крюке')
 		.move(w1*50, 1)
-		.font({ family: 'Arial Black', size: 16 })
+		.font({ family: 'Arial', size: 16 })
 		.fill('#ff0066')
 		
 		//Линия
@@ -395,7 +395,7 @@ function init(){
 			if (txtPar[keey].show){
 				var name_p1 = txtPar[keey].txt+' '+cur_val+' ('+txtPar[keey].unit+')';
 				var text_name_p1 = draw.text(name_p1)
-				.font({ family: 'Arial Black', size: size_text_p, })
+				.font({ family: 'Arial', size: size_text_p, })
 				.move(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(txtPar[keey].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 				.center(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(txtPar[keey].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 				.fill(txtPar[keey].color)
@@ -408,7 +408,7 @@ function init(){
 					text_name_p1.clear();
 					delete(text_name_p1);
 					var text_name_p1 = draw.text(name_p1)
-					.font({ family: 'Arial Black', size: weight_colmn1*w1/coef*0.7, })
+					.font({ family: 'Arial', size: weight_colmn1*w1/coef*0.7, })
 					.move(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(txtPar[keey].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 					.center(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(txtPar[keey].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 					.fill(txtPar[keey].color)
@@ -421,7 +421,7 @@ function init(){
 					text_name_p1.clear();
 					delete(text_name_p1);
 					var text_name_p1 = draw.text(name_p1)
-					.font({ family: 'Arial Black', size: height_colmn1_p1*h1/7.6 })
+					.font({ family: 'Arial', size: height_colmn1_p1*h1/7.6 })
 					.move(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(txtPar[keey].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 					.center(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(txtPar[keey].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 					.fill(txtPar[keey].color)
@@ -605,7 +605,7 @@ function init(){
 			
 			var name_p1 = 'Скв.'+skv+': '+ time_viz1+' -'+time_viz2;
 			var text_name_p1 = draw.text(name_p1)
-			.font({ family: 'Arial Black', size: size_text_p })
+			.font({ family: 'Arial', size: size_text_p })
 			.move(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(txtOknOPar[keey].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 			.center(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(txtOknOPar[keey].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 			.fill(txtOknOPar[keey].color)
@@ -618,7 +618,7 @@ function init(){
 					delete(text_name_p1);
 					
 					var text_name_p1 = draw.text(name_p1)
-					.font({ family: 'Arial Black', size: weight_colmn1*w1/coef*0.9 })
+					.font({ family: 'Arial', size: weight_colmn1*w1/coef*0.9 })
 					.move(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(txtOknOPar[keey].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 					.center(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(txtOknOPar[keey].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 					.fill(txtOknOPar[keey].color)
@@ -631,7 +631,7 @@ function init(){
 					text_name_p1.clear();
 					delete(text_name_p1);
 					var text_name_p1 = draw.text(name_p1)
-					.font({ family: 'Arial Black', size: height_colmn1_p1*h1/7.6 })
+					.font({ family: 'Arial', size: height_colmn1_p1*h1/7.6 })
 					.move(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(txtOknOPar[keey].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 					.center(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(txtOknOPar[keey].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 					.fill(txtOknOPar[keey].color)
@@ -811,7 +811,7 @@ function init(){
 				if (Number(cur_val)<= -2147480){ cur_val ="NaN";}
 				var name_p1 = basePar[key].txt+' '+cur_val+ ' ('+ basePar[key].unit+')';
 				var text_name_p1 = draw.text(name_p1)
-				.font({ family: 'Arial Black', size: size_text_p })
+				.font({ family: 'Arial', size: size_text_p })
 				.move(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(basePar[key].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 				.center(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(basePar[key].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 				.fill(basePar[key].color)
@@ -827,7 +827,7 @@ function init(){
 					text_name_p1.clear();
 					delete(text_name_p1);
 					var text_name_p1 = draw.text(name_p1)
-					.font({ family: 'Arial Black', size: weight_colmn1*w1/coef*0.7 })
+					.font({ family: 'Arial', size: weight_colmn1*w1/coef*0.7 })
 					.move(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(basePar[key].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 					.center(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(basePar[key].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 					.fill(basePar[key].color)
@@ -843,7 +843,7 @@ function init(){
 					text_name_p1.clear();
 					delete(text_name_p1);
 					var text_name_p1 = draw.text(name_p1)
-					.font({ family: 'Arial Black', size: resizeV })
+					.font({ family: 'Arial', size: resizeV })
 					.move(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(basePar[key].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 					.center(colmn11_x0+w1*weight_colmn1/2, colmn1_y0+Number(basePar[key].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 					.fill(basePar[key].color)
@@ -862,7 +862,7 @@ function init(){
 				if ((size_text_p!= resizeV) && (resizeV<resizeH)){sizeedge =resizeV;}
 				//console.log(size_text_p, resizeH, resizeV);
 				var text_l_p1 = draw.text(String(l_p1))
-				.font({ family: 'Arial Black', size: sizeedge})
+				.font({ family: 'Arial', size: sizeedge})
 				.move(colmn11_x0+w1*steep_risk1/4, colmn1_y0 +Number(basePar[key].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 				.center(colmn11_x0+w1*steep_risk1/4, colmn1_y0+Number(basePar[key].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 				.fill(basePar[key].color)
@@ -875,7 +875,7 @@ function init(){
 					text_l_p1.clear();
 					delete(text_l_p1);
 					var text_l_p1 = draw.text(String(l_p1))
-					.font({ family: 'Arial Black', size: resizeH})
+					.font({ family: 'Arial', size: resizeH})
 					.move(colmn11_x0+w1*steep_risk1/4, colmn1_y0 +Number(basePar[key].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 					.center(colmn11_x0+w1*steep_risk1/4, colmn1_y0+Number(basePar[key].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 					.fill(basePar[key].color)
@@ -883,7 +883,7 @@ function init(){
 				
 				
 				var text_r_p1 = draw.text(String(r_p1))
-				.font({ family: 'Arial Black', size: sizeedge})
+				.font({ family: 'Arial', size: sizeedge})
 				.move(colmn11_x0+9.3*w1*steep_risk1/2, colmn1_y0+Number(basePar[key].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 				.center(colmn11_x0+9.3*w1*steep_risk1/2, colmn1_y0+Number(basePar[key].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 				.fill(basePar[key].color)
@@ -896,7 +896,7 @@ function init(){
 					text_r_p1.clear();
 					delete(text_r_p1);
 					var text_r_p1 = draw.text(String(r_p1))
-					.font({ family: 'Arial Black', size: resizeH})
+					.font({ family: 'Arial', size: resizeH})
 					.move(colmn11_x0+9.3*w1*steep_risk1/2, colmn1_y0+Number(basePar[key].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 					.center(colmn11_x0+9.3*w1*steep_risk1/2, colmn1_y0+Number(basePar[key].poz.y)*height_colmn1_p1 - height_colmn1_p1/2)
 					.fill(basePar[key].color)
@@ -1064,7 +1064,7 @@ function init(){
 				
 				//За шрифтом по названию параметра
 				meg.mouseout(function(e) { 
-				//this.attr(font,({ family: 'Arial Black', size: size_text_p }));
+				//this.attr(font,({ family: 'Arial', size: size_text_p }));
 				//this.attr('font-size', Number(size_text_p)) ;			
 				this.attr('fill', backcolor);
 				//console.log(this.attr());
@@ -1207,7 +1207,7 @@ function init(){
 							cur_comm = cur_comm + name_p3[i]
 						}
 						var text_name_p3 = draw.text(cur_comm)
-							.font({ family: 'Arial Black', size: Sheet.cmtsize  })
+							.font({ family: 'Arial', size: Sheet.cmtsize  })
 							.move(ncolcmt, cury)
 							.center(ncolcmt, cury)
 							.fill(Sheet.cmtcolor)
@@ -1315,7 +1315,7 @@ function init(){
 				//var text_time = draw.text(String(date)+' '+String(hour)+':'+String(minutes))
 				var name_p1 =String(hour)+':'+String(minutes);
 				var text_name_p1 = draw.text(name_p1)
-				.font({ family: 'Arial Black', size: size_text_p, color:Columns.col0.color })
+				.font({ family: 'Arial', size: size_text_p, color:Columns.col0.color })
 				.move(w1*time_w/2, beg_plats)
 				.center(w1*time_w/2, beg_plats)
 				.fill(Sheet.syscolor)
@@ -1327,7 +1327,7 @@ function init(){
 					delete(text_name_p1);
 					
 					var text_name_p1 = draw.text(name_p1)
-					.font({ family: 'Arial Black', size: weight_colmn1*w1/coef*0.5 })
+					.font({ family: 'Arial', size: weight_colmn1*w1/coef*0.5 })
 					.move(w1*time_w/2, beg_plats)
 					.center(w1*time_w/2, beg_plats)
 					.fill(Sheet.syscolor)
@@ -1342,7 +1342,7 @@ function init(){
 					text_name_p1.clear();
 					delete(text_name_p1);
 					var text_name_p1 = draw.text(name_p1)
-					.font({ family: 'Arial Black', size: resizeV })
+					.font({ family: 'Arial', size: resizeV })
 					.move(w1*time_w/2, beg_plats)
 					.center(w1*time_w/2, beg_plats)
 					.fill(Sheet.syscolor)
@@ -1382,7 +1382,7 @@ function init(){
 						
 						
 						var text_name_p1 = draw.text(name_p1)
-						.font({ family: 'Arial Black', size: size_text_p })
+						.font({ family: 'Arial', size: size_text_p })
 						.move(colmn11_x0+txtPar[keey].step*w1*weight_colmn1, beg_plats)
 						.center(colmn11_x0+txtPar[keey].step*w1*weight_colmn1,beg_plats)
 						.fill(txtPar[keey].color)
@@ -1395,7 +1395,7 @@ function init(){
 							delete(text_name_p1);
 							
 							var text_name_p1 = draw.text(name_p1)
-							.font({ family: 'Arial Black', size: weight_colmn1*w1/coef*0.3 })
+							.font({ family: 'Arial', size: weight_colmn1*w1/coef*0.3 })
 							.move(colmn11_x0+txtPar[keey].step*w1*weight_colmn1, beg_plats)
 							.center(colmn11_x0+txtPar[keey].step*w1*weight_colmn1,beg_plats)
 							.fill(txtPar[keey].color)
@@ -1409,7 +1409,7 @@ function init(){
 							text_name_p1.clear();
 							delete(text_name_p1);
 							var text_name_p1 = draw.text(name_p1)
-							.font({ family: 'Arial Black', size: resizeV })
+							.font({ family: 'Arial', size: resizeV })
 							.move(colmn11_x0+txtPar[keey].step*w1*weight_colmn1, beg_plats)
 							.center(colmn11_x0+txtPar[keey].step*w1*weight_colmn1,beg_plats)
 							.fill(txtPar[keey].color)
@@ -1692,7 +1692,7 @@ function init(){
 								if (disp_val1>0){cur_val=String(d110d[disp_val1][basePar[keey].par])};
 								if (Number(cur_val)<= -2147480){ cur_val ="NaN";}
 								var text_value = draw.text( basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
-								.font({ family: 'Arial Black', size: text_size_value})
+								.font({ family: 'Arial', size: text_size_value})
 								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 								.cx(e.x)
@@ -1709,7 +1709,7 @@ function init(){
 									text_value.clear();
 									delete(text_value);
 									var text_value = draw.text( basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
-									.font({ family: 'Arial Black', size: resizeH})
+									.font({ family: 'Arial', size: resizeH})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(e.x)
@@ -1725,7 +1725,7 @@ function init(){
 									text_value.clear();
 									delete(text_value);
 									var text_value = draw.text( basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
-									.font({ family: 'Arial Black', size: resizeV})
+									.font({ family: 'Arial', size: resizeV})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(e.x)
@@ -1746,7 +1746,7 @@ function init(){
 								if (disp_val1>0){cur_val=String(d110d[disp_val1][txtPar[keey].par])};
 								if (Number(cur_val)<= -2147480){ cur_val =txtPar[keey].txt+" "+"NaN";}
 								var text_value = draw.text( txtPar[keey].txt+" "+cur_val+" ("+ txtPar[keey].unit+")") 
-								.font({ family: 'Arial Black', size: text_size_value})
+								.font({ family: 'Arial', size: text_size_value})
 								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 								.cx(e.x)
@@ -1761,7 +1761,7 @@ function init(){
 									text_value.clear();
 									delete(text_value);
 									var text_value = draw.text(txtPar[keey].txt+" "+cur_val+" ("+ txtPar[keey].unit+")")
-									.font({ family: 'Arial Black', size: Sheet.width_value*w1/coef*0.7})
+									.font({ family: 'Arial', size: Sheet.width_value*w1/coef*0.7})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(e.x)
@@ -1777,7 +1777,7 @@ function init(){
 									text_value.clear();
 									delete(text_value);
 									var text_value = draw.text(txtPar[keey].txt+" "+cur_val+" ("+ txtPar[keey].unit+")")
-									.font({ family: 'Arial Black', size: resizeV})
+									.font({ family: 'Arial', size: resizeV})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(e.x)
@@ -1808,7 +1808,7 @@ function init(){
 									if (month<10){month="0"+month;}
 									var time_viz1 = ' '+last_hour+":"+minutes+" "+dates+"."+month +(2000-yearr);
 									var text_value = draw.text(txtOknOPar[keey].txt+" "+time_viz1+" ("+ txtOknOPar[keey].unit+")") 
-									.font({ family: 'Arial Black', size: text_size_value})
+									.font({ family: 'Arial', size: text_size_value})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(e.x)
@@ -1822,7 +1822,7 @@ function init(){
 									text_value.clear();
 									delete(text_value);
 									var text_value = draw.text(txtOknOPar[keey].txt+" "+time_viz1+" ("+ txtOknOPar[keey].unit+")")
-									.font({ family: 'Arial Black', size: Sheet.width_value*w1/coef*0.7})
+									.font({ family: 'Arial', size: Sheet.width_value*w1/coef*0.7})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(e.x)
@@ -1838,7 +1838,7 @@ function init(){
 									text_value.clear();
 									delete(text_value);
 									var text_value = draw.text(txtOknOPar[keey].txt+" "+cur_val+" ("+ txtOknOPar[keey].unit+")")
-									.font({ family: 'Arial Black', size: resizeV})
+									.font({ family: 'Arial', size: resizeV})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(e.x)
@@ -1999,7 +1999,7 @@ function init(){
 								if (disp_val1>0){cur_val=String(d110d[disp_val1][basePar[keey].par])};
 								if (Number(cur_val)<= -2147480){ cur_val ="NaN";}
 								var text_value = draw.text( basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
-								.font({ family: 'Arial Black', size: text_size_value})
+								.font({ family: 'Arial', size: text_size_value})
 								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 								.cx(e.x)
@@ -2016,7 +2016,7 @@ function init(){
 									text_value.clear();
 									delete(text_value);
 									var text_value = draw.text( basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
-									.font({ family: 'Arial Black', size: resizeH})
+									.font({ family: 'Arial', size: resizeH})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(e.x)
@@ -2032,7 +2032,7 @@ function init(){
 									text_value.clear();
 									delete(text_value);
 									var text_value = draw.text( basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
-									.font({ family: 'Arial Black', size: resizeV})
+									.font({ family: 'Arial', size: resizeV})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(e.x)
@@ -2053,7 +2053,7 @@ function init(){
 								if (disp_val1>0){cur_val=String(d110d[disp_val1][txtPar[keey].par])};
 								if (Number(cur_val)<= -2147480){ cur_val =txtPar[keey].txt+" "+"NaN";}
 								var text_value = draw.text( txtPar[keey].txt+" "+cur_val+" ("+ txtPar[keey].unit+")") 
-								.font({ family: 'Arial Black', size: text_size_value})
+								.font({ family: 'Arial', size: text_size_value})
 								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 								.cx(e.x)
@@ -2068,7 +2068,7 @@ function init(){
 									text_value.clear();
 									delete(text_value);
 									var text_value = draw.text(txtPar[keey].txt+" "+cur_val+" ("+ txtPar[keey].unit+")")
-									.font({ family: 'Arial Black', size: Sheet.width_value*w1/coef*0.7})
+									.font({ family: 'Arial', size: Sheet.width_value*w1/coef*0.7})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(e.x)
@@ -2084,7 +2084,7 @@ function init(){
 									text_value.clear();
 									delete(text_value);
 									var text_value = draw.text(txtPar[keey].txt+" "+cur_val+" ("+ txtPar[keey].unit+")")
-									.font({ family: 'Arial Black', size: resizeV})
+									.font({ family: 'Arial', size: resizeV})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(e.x)
@@ -2115,7 +2115,7 @@ function init(){
 									if (month<10){month="0"+month;}
 									var time_viz1 = ' '+last_hour+":"+minutes+" "+dates+"."+month +(2000-yearr);
 									var text_value = draw.text(txtOknOPar[keey].txt+" "+time_viz1+" ("+ txtOknOPar[keey].unit+")") 
-									.font({ family: 'Arial Black', size: text_size_value})
+									.font({ family: 'Arial', size: text_size_value})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(e.x)
@@ -2129,7 +2129,7 @@ function init(){
 									text_value.clear();
 									delete(text_value);
 									var text_value = draw.text(txtOknOPar[keey].txt+" "+time_viz1+" ("+ txtOknOPar[keey].unit+")")
-									.font({ family: 'Arial Black', size: Sheet.width_value*w1/coef*0.7})
+									.font({ family: 'Arial', size: Sheet.width_value*w1/coef*0.7})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(e.x)
@@ -2145,7 +2145,7 @@ function init(){
 									text_value.clear();
 									delete(text_value);
 									var text_value = draw.text(txtOknOPar[keey].txt+" "+cur_val+" ("+ txtOknOPar[keey].unit+")")
-									.font({ family: 'Arial Black', size: resizeV})
+									.font({ family: 'Arial', size: resizeV})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 									.cx(e.x)
@@ -2498,7 +2498,7 @@ function init(){
 			//Кнопка Настройки
 			/*
 			var text_name_p2 = draw.text('Настройки')
-				.font({ family: 'Arial Black', size:calcsize})
+				.font({ family: 'Arial', size:calcsize})
 				.move(x2, y2)
 				.center(x2,y2)
 				.fill({ color: '#000000'});
@@ -2590,7 +2590,7 @@ function init(){
 			var x2 =(Number(Columns[key].poz.x)*w1+steep_col4/2);
 			var y2 = (Number(Columns[key].poz.y)*h1+ height_colmn1_p1*(Sheet.numbs_colmn1-1)+height_colmn1_p1/2);
 			var text_name_p2 = draw.text('Добавить')
-				.font({ family: 'Arial Black', size:calcsize})
+				.font({ family: 'Arial', size:calcsize})
 				.move(x2, y2)
 				//.center(x2,y2)
 				.cy(y2)
@@ -2689,7 +2689,7 @@ function init(){
 		//Кнопка Настройки Ключевая колонка
 			/*
 			var text_name_p2 = draw.text('Настройки')
-				.font({ family: 'Arial Black', size:calcsize})
+				.font({ family: 'Arial', size:calcsize})
 				.move(x2, y2)
 				.center(x2,y2)
 				.fill({ color: '#000000'});
