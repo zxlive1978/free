@@ -1546,7 +1546,11 @@ function init(){
 
 		//Невидимые столбцы для клика
 		//Параметры шапки для объектов
-		
+		var invisible = draw.polygon( Number(Columns["col1"].poz.x)*w1+','+(Number(Columns["col1"].poz.y)*h1+Number(Columns["col1"].size.h)*h1)+' '+Number(Columns["col1"].poz.x)*w1+','+(Number(Columns["col1"].poz.y)*h1+Number(Columns["col1"].size.h)*h1)+' '+(Number(Columns["col1"].poz.x)*w1+Number(Columns["col1"].size.w)*w1)+','+100*h1+' '+100*w1+','+100*h1 )
+				.fill({ color: Sheet.syscolor })
+				.stroke({ width: Sheet.width_line_p , color: Sheet.syscolor})
+				.id(key);
+				colmn2.attr({'fill-opacity': 0.5});
 		for (key  in  Columns){
 			if (key !='col0' ){
 			
