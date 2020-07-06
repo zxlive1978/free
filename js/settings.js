@@ -75,7 +75,14 @@ var ShablontxtOknOPar = {
 	par0:{par: 'Vrema', txt: 'Время', color: '#000000', poz: {x:1,y:7}, unit: 'ч'},
 };
 
-
+// Arial
+// Arial Black
+// Comic Sans MS
+// Courier New
+// Georgia
+// Impact
+// Times New Roman
+// Trebuchet MS
 
 var Sheet = {
 	//Вертикально/горизонтально
