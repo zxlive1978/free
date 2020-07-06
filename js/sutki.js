@@ -1692,7 +1692,7 @@ function init(){
 								if (disp_val1>0){cur_val=String(d110d[disp_val1][basePar[keey].par])};
 								if (Number(cur_val)<= -2147480){ cur_val ="NaN";}
 								var text_value = draw.text( basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
-								.font({ family: 'Verdana', size: text_size_value})
+								.font({ family: 'Courier New', size: text_size_value})
 								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.move(e.x, e.y -h1*Sheet.height_value + h1*all_step)
 								.cx(e.x)
