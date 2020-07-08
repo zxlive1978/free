@@ -106,7 +106,7 @@ var Sheet = {
 	//Высота риски
 	height_risk: 0.4,
 	//Шрифт
-	fnt: "2",
+	fnt: "Impact",
 	//Коэфф системный размера шрифта PC
 	K_size_txt: 92,//
 	//Коэфф шрифта Mobile
@@ -760,7 +760,6 @@ function colPan5 () {
 	//console.log($('#font option:selected').text());
 	// $('#select option:contains("виноград")').prop('selected', true);
 	//var option_val = $("#my_val").val(); //store the dynamic value of select option
-	Sheet.fnt="Impact";
 	// $( "#font" ).find( 'option[value="' + Sheet.fnt + '"]' ).prop( "selected", true );
     $( '#font option:contains("' + Sheet.fnt + '")' ).prop( "selected", true );
 	//$("#font > select > option[value=" + Sheet.fnt + "]").prop("selected",true);
