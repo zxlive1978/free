@@ -759,7 +759,9 @@ function colPan5 () {
 	//$('#font option:contains("{$Sheet.fnt}")').prop('selected', true);
 	//console.log($('#font option:selected').text());
 	//var option_val = $("#my_val").val(); //store the dynamic value of select option
-    $( "#font" ).find( 'option[value="' + Sheet.fnt + '"]' ).prop( "selected", true );
+	Sheet.fnt="Impact";
+	// $( "#font" ).find( 'option[value="' + Sheet.fnt + '"]' ).prop( "selected", true );
+    $( "#font" ).find( 'option:contains="' + Sheet.fnt + '"]' ).prop( "selected", true );
 	//$("#font > select > option[value=" + Sheet.fnt + "]").prop("selected",true);
 	//console.log($('#font option:selected').text());
 
