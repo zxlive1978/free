@@ -105,6 +105,8 @@ var Sheet = {
 	numbs_risk: 5,//
 	//Высота риски
 	height_risk: 0.4,
+	//Шрифт
+	fnt: "2",
 	//Коэфф системный размера шрифта PC
 	K_size_txt: 92,//
 	//Коэфф шрифта Mobile
@@ -197,6 +199,8 @@ var Sheet = {
 	
 	//фон кнопок светлее/ темнее
 	fonbut: true,
+
+	
 	
 };
 //Столбцы
@@ -746,7 +750,18 @@ function colPan5 () {
 				text : fonts[keey].name
 				}));
 	}
-	$('#font option:contains("Impact")').prop('selected', true);
+	//console.log(Sheet.fnt);
+	// ff ='#font option:contains("'+Sheet.fonst.toString()+'")';
+	// console.log(ff);
+	//#select option:contains("виноград")
+	//Sheet.fnt= 2;
+	//$('#font option[value={$Sheet.fnt}]').prop('selected', true);
+	//$('#font option:contains("{$Sheet.fnt}")').prop('selected', true);
+	//console.log($('#font option:selected').text());
+	//var option_val = $("#my_val").val(); //store the dynamic value of select option
+    $( "#font" ).find( 'option[value="' + Sheet.fnt + '"]' ).prop( "selected", true );
+	//$("#font > select > option[value=" + Sheet.fnt + "]").prop("selected",true);
+	//console.log($('#font option:selected').text());
 
 	$("#K_size_txt").val(Sheet.K_size_txt);
 	$("#K_size_txt_mobile").val(Sheet.K_size_txt_mobile);
@@ -797,6 +812,7 @@ function colOK5 () {
 	Sheet.width_line_p=Number($("#width_line_p").val());
 	Sheet.width_gxf_line=Number($("#width_gxf_line").val());
 	Sheet.syscolor=String($("#syscolor").val());
+	Sheet.fnt=String($('#font option:selected').val());
 	Sheet.K_size_txt=Number($("#K_size_txt").val());
 	Sheet.K_size_txt_mobile=Number($("#K_size_txt_mobile").val());
 	Sheet.width_gxf_line=Number($("#width_gxf_line").val());
