@@ -256,12 +256,8 @@ window.onresize = function(event) {
   <tr>
   <tr>
   <td><label for="hcolcolor">Шрифт:</label></td><td><select id="font" name="font" value="3">
-
-<option value="3">3 часа</option>
- <option value="1">1 час</option>
-<option value="8">8 часов</option>
-<option value="24">1 день</option>
-</select>
+  <option value="1">3 часа</option>
+  </select>
   </tr>
   <tr>
   <td><label for="hcolcolor">Коэфф. размера шрифта:</label></td><td><input type="text" id="K_size_txt" name="K_size_txt" value="0"/>

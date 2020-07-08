@@ -75,14 +75,17 @@ var ShablontxtOknOPar = {
 	par0:{par: 'Vrema', txt: 'Время', color: '#000000', poz: {x:1,y:7}, unit: 'ч'},
 };
 
-// Arial
-// Arial Black
-// Comic Sans MS
-// Courier New
-// Georgia
-// Impact
-// Times New Roman
-// Trebuchet MS
+//Список шрифтов
+var fonts = {
+num0:"Arial",
+num1:"Arial Black",
+num2:"Comic Sans MS",
+num3:"Courier New",
+num4:"Georgia",
+num5:"Impact",
+num6:"Times New Roman",
+num7:"Trebuchet MS"
+};
 
 var Sheet = {
 	//Вертикально/горизонтально
@@ -733,6 +736,24 @@ function colPan5 () {
 	$("#width_line_p").val(Sheet.width_line_p);
 	$("#width_gxf_line").val(Sheet.width_gxf_line);
 	$("#syscolor").val(Sheet.syscolor);
+
+	//добавление в список
+	for (var keey in fonts) {
+		$('#font').append($('<option>',
+			{
+				value:  keey,
+				text : font[keey]
+				}));
+		/* if (basePar[keey].poz.x == Number(name_select.toString().substr(3))){
+			$('#colitems1').append($('<option>',
+			{
+				value:  basePar[keey].par,
+				text : basePar[keey].txt
+				}));
+				numbcol +=1;
+				console.log(basePar[keey].txt);
+				} */
+	}
 	$("#K_size_txt").val(Sheet.K_size_txt);
 	$("#K_size_txt_mobile").val(Sheet.K_size_txt_mobile);
 	$("#width_gxf_line").val(Sheet.width_gxf_line);
