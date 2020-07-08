@@ -77,14 +77,14 @@ var ShablontxtOknOPar = {
 
 //Список шрифтов
 var fonts = {
-num0:"Arial",
-num1:"Arial Black",
-num2:"Comic Sans MS",
-num3:"Courier New",
-num4:"Georgia",
-num5:"Impact",
-num6:"Times New Roman",
-num7:"Trebuchet MS"
+0:{name:"Arial"},
+1:{name:"Arial Black"},
+2:{name:"Comic Sans MS"},
+3:{name:"Courier New"},
+4:{name:"Georgia"},
+5:{name:"Impact"},
+6:{name:"Times New Roman"},
+7:{name:"Trebuchet MS"},
 };
 
 var Sheet = {
@@ -737,23 +737,17 @@ function colPan5 () {
 	$("#width_gxf_line").val(Sheet.width_gxf_line);
 	$("#syscolor").val(Sheet.syscolor);
 
-	//добавление в список
+	$('#font').empty();
+	//добавление в список шрифтов
 	for (var keey in fonts) {
 		$('#font').append($('<option>',
 			{
 				value:  keey,
-				text : font[keey]
+				text : fonts[keey].name
 				}));
-		/* if (basePar[keey].poz.x == Number(name_select.toString().substr(3))){
-			$('#colitems1').append($('<option>',
-			{
-				value:  basePar[keey].par,
-				text : basePar[keey].txt
-				}));
-				numbcol +=1;
-				console.log(basePar[keey].txt);
-				} */
 	}
+	$('#font option:contains("Impact")').prop('selected', true);
+
 	$("#K_size_txt").val(Sheet.K_size_txt);
 	$("#K_size_txt_mobile").val(Sheet.K_size_txt_mobile);
 	$("#width_gxf_line").val(Sheet.width_gxf_line);
