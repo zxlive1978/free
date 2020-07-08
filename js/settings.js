@@ -106,7 +106,7 @@ var Sheet = {
 	//Высота риски
 	height_risk: 0.4,
 	//Шрифт
-	fnt: "Impact",
+	fnt: "Arial",
 	//Коэфф системный размера шрифта PC
 	K_size_txt: 92,//
 	//Коэфф шрифта Mobile
