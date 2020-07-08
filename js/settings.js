@@ -758,10 +758,11 @@ function colPan5 () {
 	//$('#font option[value={$Sheet.fnt}]').prop('selected', true);
 	//$('#font option:contains("{$Sheet.fnt}")').prop('selected', true);
 	//console.log($('#font option:selected').text());
+	// $('#select option:contains("виноград")').prop('selected', true);
 	//var option_val = $("#my_val").val(); //store the dynamic value of select option
 	Sheet.fnt="Impact";
 	// $( "#font" ).find( 'option[value="' + Sheet.fnt + '"]' ).prop( "selected", true );
-    $( "#font" ).find( 'option:contains="' + Sheet.fnt + '"]' ).prop( "selected", true );
+    $( '#font option:contains("' + Sheet.fnt + '")' ).prop( "selected", true );
 	//$("#font > select > option[value=" + Sheet.fnt + "]").prop("selected",true);
 	//console.log($('#font option:selected').text());
 
@@ -814,7 +815,7 @@ function colOK5 () {
 	Sheet.width_line_p=Number($("#width_line_p").val());
 	Sheet.width_gxf_line=Number($("#width_gxf_line").val());
 	Sheet.syscolor=String($("#syscolor").val());
-	Sheet.fnt=String($('#font option:selected').val());
+	Sheet.fnt=String($('#font option:selected').text());
 	Sheet.K_size_txt=Number($("#K_size_txt").val());
 	Sheet.K_size_txt_mobile=Number($("#K_size_txt_mobile").val());
 	Sheet.width_gxf_line=Number($("#width_gxf_line").val());
