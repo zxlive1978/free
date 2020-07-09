@@ -1861,9 +1861,10 @@ function init(){
 						.fill({ color: Sheet.curcolorval })
 						.opacity(0)
 						.stroke({ width: Sheet.width_gxf_line, dasharray: '2,3', color: Sheet.syscolor})
-						.id(this.attr('id'));
+						.id(this.attr('id'))
 
 						gfx_group.add(gfxr);
+						console.log(gfxr.attr(id));
 						//gfx_group.after(colmn2);
 						colmn2.front();
 
@@ -1887,10 +1888,12 @@ function init(){
 						//var gfx_group = draw.group();
 						//parPan(this.attr('id'));
 						//Выкл обновления
-						mouseDwn=true;
-						
+						mouseDwn=true;		
 					});
-		
+				
+				
+				
+				}}
 		//Маркер сдвига по времени и глубине
 		/////////////////////
 		//var colmn4 = draw.circle(Sheet.markheighttime*h1)
