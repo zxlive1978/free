@@ -1551,16 +1551,19 @@ function init(){
 		// 		.stroke({ width: Sheet.width_line_p , color: Sheet.syscolor})
 		// 		.id(key);
 		// 		colmn2.attr({'fill-opacity': 0.5});
+		inv_col = draw.group();
 		for (key  in  Columns){
 			if (key !='col0' ){
 			
+				//inv_col.clear();
+				
 				//Столбец
 				var colmn2 = draw.polygon( Number(Columns[key].poz.x)*w1+','+(Number(Columns[key].poz.y)*h1+Number(Columns[key].size.h)*h1)+' '+(Number(Columns[key].poz.x)*w1+Number(Columns[key].size.w)*w1)+','+(Number(Columns[key].poz.y)*h1+Number(Columns[key].size.h)*h1)+' '+(Number(Columns[key].poz.x)*w1+Number(Columns[key].size.w)*w1)+','+100*h1+' '+Number(Columns[key].poz.x)*w1+','+100*h1 )
 				.fill({ color: Sheet.syscolor })
 				.stroke({ width: Sheet.width_line_p , color: Sheet.syscolor})
 				.id(key);
 				colmn2.attr({'fill-opacity': 0});
-				
+				inv_col.add(colmn2);
 				
 				var mouseDwn = false;
 				var gfx_group = draw.group();
@@ -1601,7 +1604,7 @@ function init(){
 						// var gfxr = draw.polygon((X_cur_mouse_click-wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+wcol)+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-wcol)+' '+Y_cur_mouse_click)
 				
 						//var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
-						var gfxr = draw.polygon((e.x-w1*(Sheet.width_value/2-0.5))+','+(e.y -h1*(Sheet.height_value+0.5)) +' '+(e.x+w1*(Sheet.width_value/2+0.5))+','+(e.y -h1*(Sheet.height_value+0.5))+' '+(e.x+w1*(Sheet.width_value/2+0.5))+' '+e.y+' '+(e.x-w1*(Sheet.width_value/2-0.5))+' '+e.y)
+						var gfxr = draw.polygon((e.x-w1*(Sheet.width_value/2))+','+(e.y -h1*(Sheet.height_value)) +' '+(e.x+w1*(Sheet.width_value/2))+','+(e.y -h1*(Sheet.height_value))+' '+(e.x+w1*(Sheet.width_value/2))+','+e.y+' '+(e.x-w1*(Sheet.width_value))+','+e.y)
 						//ширина поля со клик зачениями
 						// weight_colmn1 = w1*(Columns["col"+String(Number((txtPar[keey].poz.x)))].size.w)/2;
 						// var gfxr = draw.polygon((X_cur_mouse_click-weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+weight_colmn1)+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-weight_colmn1)+','+Y_cur_mouse_click)
@@ -1853,8 +1856,8 @@ function init(){
 								}
 							}
 						}
-						// var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
-						var gfxr = draw.polygon((e.x-w1*(Sheet.width_value/2-0.5))+','+(e.y -h1*(Sheet.height_value+0.5)) +' '+(e.x+w1*(Sheet.width_value/2+0.5))+','+(e.y -h1*(Sheet.height_value+0.5))+' '+(e.x+w1*(Sheet.width_value/2+0.5))+' '+e.y+' '+(e.x-w1*(Sheet.width_value/2-0.5))+' '+e.y)
+						var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
+						//var gfxr = draw.polygon((e.x-w1*(Sheet.width_value/2-0.5))+','+(e.y -h1*(Sheet.height_value+0.5)) +' '+(e.x+w1*(Sheet.width_value/2+0.5))+','+(e.y -h1*(Sheet.height_value+0.5))+' '+(e.x+w1*(Sheet.width_value/2+0.5))+' '+e.y+' '+(e.x-w1*(Sheet.width_value/2-0.5))+' '+e.y)
 						//ширина поля со клик зачениями
 						// weight_colmn1 = w1*(Columns["col"+String(Number((txtPar[keey].poz.x)))].size.w)/2;
 						// var gfxr = draw.polygon((X_cur_mouse_click-weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+weight_colmn1)+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-weight_colmn1)+','+Y_cur_mouse_click)
@@ -1864,9 +1867,9 @@ function init(){
 						.id(this.attr('id'))
 
 						gfx_group.add(gfxr);
-						console.log(gfxr.attr(id));
+						//console.log(gfxr.attr(id));
 						//gfx_group.after(colmn2);
-						colmn2.front();
+						inv_col.front();
 
 						// gfx_group.mousemove(function(){
 						// 	//mouseDwn = false;
