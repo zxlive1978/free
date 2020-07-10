@@ -1877,7 +1877,7 @@ function init(){
 						// 	gfx_group.clear();
 						// });
 						//Удаление текущих значений
-						gfx_group.click(function() { 
+						gfxr.click(function() { 
 							this.remove();
 							gfx_group.remove();
 							/* if (online == true){refresh = true;} */
