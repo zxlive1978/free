@@ -1570,8 +1570,9 @@ function init(){
 				colmn2.mouseup(function(e) {
 					mouseDwn = false;
 					gfx_group=null;
-					gfx_group.front();
+					
 					gfx_group = draw.group();
+					gfx_group.front();
 				});
 
 
