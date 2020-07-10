@@ -1569,7 +1569,7 @@ function init(){
 				var gfx_group = draw.group();
 				colmn2.mouseup(function(e) {
 					mouseDwn = false;
-					gfx_group.clear();
+					gfx_group=null;
 					gfx_group = draw.group();
 				});
 
