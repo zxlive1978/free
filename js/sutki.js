@@ -1717,13 +1717,13 @@ function init(){
 						
 								//Ресайз текста если не влезает!
 								
-								if (text_value.length()>Sheet.width_value*0.7){
+								if (text_value.length()>Sheet.width_value*w1*0.7){
 									var coef =text_value.length()/text_value.attr('font-size');
-									resizeH = Sheet.width_value*w1/coef*0.7;
+									//resizeH = 22/coef*0.7;
 									text_value.clear();
 									delete(text_value);
 									var text_value = draw.text( basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
-									.font({ family: Sheet.fnt, size: resizeH})
+									.font({ family: Sheet.fnt, size: weight_colmn1*w1/coef*0.7})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
