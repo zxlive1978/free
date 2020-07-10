@@ -1570,6 +1570,7 @@ function init(){
 				colmn2.mouseup(function(e) {
 					mouseDwn = false;
 					gfx_group=null;
+					gfx_group.front();
 					gfx_group = draw.group();
 				});
 
@@ -1876,7 +1877,7 @@ function init(){
 						// 	gfx_group.clear();
 						// });
 						//Удаление текущих значений
-						gfxr.click(function() { 
+						gfx_group.click(function() { 
 							this.remove();
 							gfx_group.remove();
 							/* if (online == true){refresh = true;} */
