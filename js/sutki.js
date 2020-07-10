@@ -1569,18 +1569,22 @@ function init(){
 				var gfx_group = draw.group();
 				colmn2.mouseup(function(e) {
 					mouseDwn = false;
-					gfx_group=null;
-					
-					gfx_group = draw.group();
-					//gfx_group.front();
+					//inv_col.clear();
+					//inv_col = draw.group();
+					gfx_group.clear();
+					//gfx_group = draw.group();
 				});
 
 
 
 				colmn2.mousemove(function(e) {
+
 					
 					if (mouseDwn){
-					gfx_group.clear();
+						gfx_group.clear();
+						let  cursor = getCursorPosition(e, svg);
+						let X_cur_mouse_click = cursor.x;
+						let Y_cur_mouse_click = cursor.y;
 					//Группа
 						//var gfx_group = draw.group();
 						//parPan(this.attr('id'));
@@ -1593,6 +1597,8 @@ function init(){
 							Sheet.height_value = disp_up;
 						}
 						//не уверен!
+						
+						
 						var text_size_value = size_text_p;
 						/* if (resizeH>resizeV) {text_size_value=resizeV;} */
 						/* text_size_value = Sheet.curvalsize; */
@@ -1727,8 +1733,8 @@ function init(){
 									
 								}
 						
-								if (Number(text_value.attr('font-size'))>height_colmn1_p1*h1/7.7){
-									let resizeV = height_colmn1_p1*h1/7.7;
+								if (Number(text_value.attr('font-size'))>height_colmn1_p1*h1/7.6){
+									let resizeV = height_colmn1_p1*h1/7.6;
 									//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
 									text_value.clear();
 									delete(text_value);
@@ -1878,7 +1884,7 @@ function init(){
 						// 	gfx_group.clear();
 						// });
 						//Удаление текущих значений
-						gfx_group.click(function() { 
+						gfxr.click(function() { 
 							this.remove();
 							gfx_group.remove();
 							/* if (online == true){refresh = true;} */
