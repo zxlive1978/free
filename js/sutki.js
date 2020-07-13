@@ -1651,7 +1651,7 @@ function init(){
 						for (let tmark in d110d){
 							
 							sub = (d110d[tmark]['Vrema'])-ttime;
-							/* console.log (Number (d110d[tmark]['Vrema']) ,'-',ttime,'-' ,sub); */
+							// console.log (Number (d110d[tmark]['Vrema']) ,'-',ttime,'-' ,sub);
 							if ( sub < 60 && sub > -60){
 								if (fidx==-1){
 									fidx = tmark;
