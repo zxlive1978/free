@@ -1733,12 +1733,12 @@ function init(){
 									
 								}
 						
-								if (Number(text_value.attr('font-size'))>height_colmn1_p1*h1/7.6){
-									let resizeV = height_colmn1_p1*h1/7.6;
+								if (Number(text_value.attr('font-size'))>height_colmn1_p1*h1/7.7){
+									let resizeV = height_colmn1_p1*h1/7.7;
 									//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
 									text_value.clear();
 									delete(text_value);
-									var text_value = draw.text( basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
+									var text_value = draw.text(basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
 									.font({ family: Sheet.fnt, size: resizeV})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
