@@ -1612,7 +1612,7 @@ function init(){
 						// var gfxr = draw.polygon((X_cur_mouse_click-wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+wcol)+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-wcol)+' '+Y_cur_mouse_click)
 				
 						//var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
-						var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2))+','+(Y_cur_mouse_click -h1*(Sheet.height_value)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2))+','+(Y_cur_mouse_click -h1*(Sheet.height_value))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2))+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value))+','+Y_cur_mouse_click)
+						var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2))+','+(Y_cur_mouse_click -h1*(Sheet.height_value)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2))+','+(Y_cur_mouse_click -h1*(Sheet.height_value))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2))+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2))+','+Y_cur_mouse_click)
 						//ширина поля со клик зачениями
 						// weight_colmn1 = w1*(Columns["col"+String(Number((txtPar[keey].poz.x)))].size.w)/2;
 						// var gfxr = draw.polygon((X_cur_mouse_click-weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+weight_colmn1)+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-weight_colmn1)+','+Y_cur_mouse_click)
@@ -1648,26 +1648,26 @@ function init(){
 						var fidx=-1;
 						// Последняя запись индекс
 						var lidx=-1;
-						for (let tmark in d110d){
+						// for (let tmark in d110d){
 							
-							sub = (d110d[tmark]['Vrema'])-ttime;
-							// console.log (Number (d110d[tmark]['Vrema']) ,'-',ttime,'-' ,sub);
-							if ( sub < 60 && sub > -60){
-								if (fidx==-1){
-									fidx = tmark;
-								}
-								lidx = tmark;
+						// 	sub = (d110d[tmark]['Vrema'])-ttime;
+						// 	// console.log (Number (d110d[tmark]['Vrema']) ,'-',ttime,'-' ,sub);
+						// 	if ( sub < 60 && sub > -60){
+						// 		if (fidx==-1){
+						// 			fidx = tmark;
+						// 		}
+						// 		lidx = tmark;
 
-							}
+						// 	}
 							
-						}
-						// Если несколько записей подходят в диапазон
-						if (fidx!=lidx && fidx!=-1 && lidx!=-1){
-							disp_val1 =Number(fidx) + Number(Math.floor((lidx-fidx)/2.0));
-						} else {
-							if(fidx!=-1){disp_val1=lidx;}
-						}
-						
+						// }
+						// // Если несколько записей подходят в диапазон
+						// if (fidx!=lidx && fidx!=-1 && lidx!=-1){
+						// 	disp_val1 =Number(fidx) + Number(Math.floor((lidx-fidx)/2.0));
+						// } else {
+						// 	if(fidx!=-1){disp_val1=lidx;}
+						// }
+						disp_val1=100;
 						
 						/* console.log (fidx,lidx,disp_val1); */
 						//1543429113 - 15434189587804
