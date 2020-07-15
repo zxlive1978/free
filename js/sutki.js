@@ -1567,8 +1567,6 @@ function init(){
 				
 				var mouseDwn = false;
 				var gfx_group = draw.group();
-				var xold=0;
-				var yold=0;
 				colmn2.mouseup(function(e) {
 					mouseDwn = false;
 					//inv_col.clear();
@@ -1580,16 +1578,13 @@ function init(){
 
 
 				colmn2.mousemove(function(e) {
-					let  cursor = getCursorPosition(e, svg);
+
+					
+					if (mouseDwn){
+						gfx_group.clear();
+						let  cursor = getCursorPosition(e, svg);
 						let X_cur_mouse_click = cursor.x;
 						let Y_cur_mouse_click = cursor.y;
-
-					console.log(X_cur_mouse_click, '  =', xold);
-					if (mouseDwn && X_cur_mouse_click!=xold && Y_cur_mouse_click!=yold ){
-						gfx_group.clear();
-						
-						xold= X_cur_mouse_click;
-						yold=Y_cur_mouse_click;
 					//Группа
 						//var gfx_group = draw.group();
 						//parPan(this.attr('id'));
