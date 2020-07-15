@@ -1581,6 +1581,22 @@ function init(){
 
 					
 					if (mouseDwn){
+						let  cursor = getCursorPosition(e, svg);
+						let X_cur_mouse_click = cursor.x;
+						let Y_cur_mouse_click = cursor.y;
+						//gfx_group.move(X_cur_mouse_click,Y_cur_mouse_click);
+						gfx_group.center(X_cur_mouse_click,Y_cur_mouse_click);
+						
+				}});
+				//Табличка со значениями
+				colmn2.mousedown(function(e) {
+					
+				
+						//Группа
+						//var gfx_group = draw.group();
+						//parPan(this.attr('id'));
+						//Выкл обновления
+						mouseDwn=true;
 						gfx_group.clear();
 						let  cursor = getCursorPosition(e, svg);
 						let X_cur_mouse_click = cursor.x;
@@ -1888,17 +1904,7 @@ function init(){
 							gfx_group.remove();
 							/* if (online == true){refresh = true;} */
 								})
-
-				}});
-				//Табличка со значениями
-				colmn2.mousedown(function(e) {
-					
-				
-						//Группа
-						//var gfx_group = draw.group();
-						//parPan(this.attr('id'));
-						//Выкл обновления
-						mouseDwn=true;		
+		
 					});
 				
 				
