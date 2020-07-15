@@ -1584,7 +1584,7 @@ function init(){
 						let X_cur_mouse_click = cursor.x;
 						let Y_cur_mouse_click = cursor.y;
 
-					
+					console.log(X_cur_mouse_click, '  =', xold);
 					if (mouseDwn && X_cur_mouse_click!=xold && Y_cur_mouse_click!=yold ){
 						gfx_group.clear();
 						
