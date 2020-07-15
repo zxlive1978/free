@@ -1551,18 +1551,18 @@ function init(){
 		// 		.stroke({ width: Sheet.width_line_p , color: Sheet.syscolor})
 		// 		.id(key);
 		// 		colmn2.attr({'fill-opacity': 0.5});
-		inv_col = draw.group();
+		//inv_col = draw.group();
 		for (key  in  Columns){
 			if (key !='col0' ){
-			
-				//inv_col.clear();
+				var inv_col = draw.group();
+				inv_col.clear();
 				
 				//Столбец
 				var colmn2 = draw.polygon( Number(Columns[key].poz.x)*w1+','+(Number(Columns[key].poz.y)*h1+Number(Columns[key].size.h)*h1)+' '+(Number(Columns[key].poz.x)*w1+Number(Columns[key].size.w)*w1)+','+(Number(Columns[key].poz.y)*h1+Number(Columns[key].size.h)*h1)+' '+(Number(Columns[key].poz.x)*w1+Number(Columns[key].size.w)*w1)+','+100*h1+' '+Number(Columns[key].poz.x)*w1+','+100*h1 )
-				.fill({ color: Sheet.syscolor })
+				.fill({ color: getRandomColor() })
 				.stroke({ width: Sheet.width_line_p , color: Sheet.syscolor})
 				.id(key);
-				colmn2.attr({'fill-opacity': 0});
+				colmn2.attr({'fill-opacity': 0.5});
 				inv_col.add(colmn2);
 				
 				var mouseDwn = false;
@@ -1582,6 +1582,8 @@ function init(){
 					
 					if (mouseDwn){
 						gfx_group.clear();
+						//gfxr.clear();
+						// inv_col.clear();
 						let  cursor = getCursorPosition(e, svg);
 						let X_cur_mouse_click = cursor.x;
 						let Y_cur_mouse_click = cursor.y;
@@ -1716,14 +1718,12 @@ function init(){
 								
 						
 								//Ресайз текста если не влезает!
-								
-								if (text_value.length()>Sheet.width_value*w1*0.7){
-									var coef =text_value.length()/text_value.attr('font-size');
-									//resizeH = 22/coef*0.7;
+								if (text_value.length()>Sheet.width_value){
+									var coef =text_value.length()/text_value.attr('font-size')
 									text_value.clear();
 									delete(text_value);
-									var text_value = draw.text( basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
-									.font({ family: Sheet.fnt, size: weight_colmn1*w1/coef*0.7})
+									var text_value = draw.text(basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
+									.font({ family: Sheet.fnt, size: Sheet.width_value*w1/coef*0.7})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
@@ -1733,12 +1733,12 @@ function init(){
 									
 								}
 						
-								if (Number(text_value.attr('font-size'))>height_colmn1_p1*h1/7.6){
-									let resizeV = height_colmn1_p1*h1/7.6;
+								if (Number(text_value.attr('font-size'))>height_colmn1_p1*h1/7.7){
+									let resizeV = height_colmn1_p1*h1/7.7;
 									//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
 									text_value.clear();
 									delete(text_value);
-									var text_value = draw.text( basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
+									var text_value = draw.text(basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
 									.font({ family: Sheet.fnt, size: resizeV})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
