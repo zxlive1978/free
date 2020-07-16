@@ -1564,14 +1564,14 @@ function init(){
 				.id(key);
 				colmn2.attr({'fill-opacity': 0.5});
 				inv_col.add(colmn2);
-				
+				var gfx_group = draw.group();
 				var mouseDwn = false;
 				
 				colmn2.mouseup(function(e) {
 					mouseDwn = false;
 					//inv_col.clear();
 					//inv_col = draw.group();
-					gfx_group.clear();
+					//gfx_group.remove();
 					//gfx_group = draw.group();
 				});
 
@@ -1579,10 +1579,10 @@ function init(){
 
 				colmn2.mousemove(function(e) {
 
-					
+					gfx_group.clear();
 					if (mouseDwn){
-						var gfx_group = draw.group();
-						//gfxr.clear();
+						//var gfx_group = draw.group();
+						gfx_group.clear();
 						// inv_col.clear();
 						let  cursor = getCursorPosition(e, svg);
 						let X_cur_mouse_click = cursor.x;
@@ -1878,7 +1878,7 @@ function init(){
 						//console.log(gfxr.attr(id));
 						//gfx_group.after(colmn2);
 						
-
+						inv_col.front();
 						// gfx_group.mousemove(function(){
 						// 	//mouseDwn = false;
 						// 	gfx_group.clear();
@@ -1905,7 +1905,7 @@ function init(){
 				
 				
 				}}
-				inv_col.front();
+				
 		//Маркер сдвига по времени и глубине
 		/////////////////////
 		//var colmn4 = draw.circle(Sheet.markheighttime*h1)
