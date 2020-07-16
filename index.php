@@ -161,7 +161,7 @@
   <div class="container-fluid">
 
  <!-- The Modal шаблон-->
-  <div class="modal" id="myModal">
+  <div class="modal fade" id="myModal">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
       
@@ -221,7 +221,7 @@ window.onresize = function(event) {
 </script>
 
 
-<div class="modal" id="myModal1">
+<div class="modal fade" id="myModal1">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
       
@@ -257,9 +257,6 @@ window.onresize = function(event) {
   </tr>
   <tr>
   <td><label for="hcolcolor">Коэфф. размера шрифта(моб):</label></td><td><input type="text" id="K_size_txt_mobile" name="K_size_txt_mobile" value="0"/>
-  </tr>
-   <tr>
-  <td><label for="hcolcolor">Толщина линий графиков:</label></td><td><input type="text" id="width_gxf_line" name="width_gxf_line" value="0"/>
   </tr>
   <tr>
   <td><label for="hcolcolor">Радиус круга полож. столбца:</label></td><td><input type="text" id="markheight" name="markheight" value="0"/>
@@ -353,7 +350,7 @@ window.onresize = function(event) {
 
 
 
-<div class="modal" id="myModal2">
+<div class="modal fade" id="myModal2">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
       
@@ -384,7 +381,7 @@ window.onresize = function(event) {
     </div>
   </div>
 
-<div class="modal" id="myModal3">
+<div class="modal fade" id="myModal3">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
       
@@ -422,7 +419,7 @@ window.onresize = function(event) {
   </div>
 
 
-<div class="modal" id="myModal4">
+<div class="modal fade" id="myModal4">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
       
@@ -466,7 +463,7 @@ window.onresize = function(event) {
     </div>
   </div>
 
-<div class="modal" id="myModal5">
+<div class="modal fade" id="myModal5">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
       
@@ -503,7 +500,7 @@ window.onresize = function(event) {
   </div>
 
 
-<div class="modal" id="myModal6">
+<div class="modal fade" id="myModal6">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
       
@@ -542,7 +539,7 @@ window.onresize = function(event) {
   </div>
 
 
-<div class="modal" id="myModal7">
+<div class="modal fade" id="myModal7">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
       
@@ -599,7 +596,7 @@ window.onresize = function(event) {
     </div>
   </div>
 
-<div class="modal" id="myModal8">
+<div class="modal fade" id="myModal8">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
       
@@ -644,7 +641,7 @@ window.onresize = function(event) {
   </div>
 
 
-<div class="modal" id="myModal9">
+<div class="modal fade" id="myModal9">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
       
