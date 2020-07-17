@@ -1563,8 +1563,9 @@ function init(){
 				.stroke({ width: Sheet.width_line_p , color: Sheet.syscolor})
 				.id(key);
 				colmn2.attr({'fill-opacity': 0.5});
-				inv_col.add(colmn2);
-				var gfx_group = draw.group();
+				//inv_col.add(colmn2);
+				var gfx_group = draw.group()
+				.id(key);
 				var mouseDwn = false;
 				
 				colmn2.mouseup(function(e) {
@@ -1878,7 +1879,7 @@ function init(){
 						//console.log(gfxr.attr(id));
 						//gfx_group.after(colmn2);
 						
-						inv_col.front();
+						//inv_col.front();
 						// gfx_group.mousemove(function(){
 						// 	//mouseDwn = false;
 						// 	gfx_group.clear();
