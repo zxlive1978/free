@@ -1551,45 +1551,46 @@ function init(){
 		// 		.stroke({ width: Sheet.width_line_p , color: Sheet.syscolor})
 		// 		.id(key);
 		// 		colmn2.attr({'fill-opacity': 0.5});
-		inv_col = draw.group();
+		// inv_col = draw.group();
 		for (key  in  Columns){
 			if (key !='col0' ){
-				var inv_col = draw.group();
-				inv_col.clear();
+				// var inv_col = draw.group();
+				// inv_col.clear();
 				
 				//Столбец
 				var colmn2 = draw.polygon( Number(Columns[key].poz.x)*w1+','+(Number(Columns[key].poz.y)*h1+Number(Columns[key].size.h)*h1)+' '+(Number(Columns[key].poz.x)*w1+Number(Columns[key].size.w)*w1)+','+(Number(Columns[key].poz.y)*h1+Number(Columns[key].size.h)*h1)+' '+(Number(Columns[key].poz.x)*w1+Number(Columns[key].size.w)*w1)+','+100*h1+' '+Number(Columns[key].poz.x)*w1+','+100*h1 )
 				.fill({ color: getRandomColor() })
 				.stroke({ width: Sheet.width_line_p , color: Sheet.syscolor})
+				.opacity(0)
 				.id(key);
-				colmn2.attr({'fill-opacity': 0.5});
-				//inv_col.add(colmn2);
-				var gfx_group = draw.group()
-				.id(key);
-				var mouseDwn = false;
+				// colmn2.attr({'fill-opacity': 0.5});
+				// //inv_col.add(colmn2);
+				// var gfx_group = draw.group()
+				// .id(key);
+				// var mouseDwn = false;
 				
-				colmn2.mouseup(function(e) {
-					mouseDwn = false;
-					//inv_col.clear();
-					//inv_col = draw.group();
-					//gfx_group.remove();
-					//gfx_group = draw.group();
-				});
+				// colmn2.mouseup(function(e) {
+				// 	mouseDwn = false;
+				// 	//inv_col.clear();
+				// 	//inv_col = draw.group();
+				// 	gfx_group.remove();
+				// 	gfx_group = draw.group();
+				// });
 
 
 
-				colmn2.mousemove(function(e) {
+				colmn2.click(function(e) {
 
-					gfx_group.clear();
-					if (mouseDwn){
-						//var gfx_group = draw.group();
-						gfx_group.clear();
-						// inv_col.clear();
+					// gfx_group.clear();
+					// if (mouseDwn){
+					// 	//var gfx_group = draw.group();
+					// 	gfx_group.clear();
+					// 	// inv_col.clear();
 						let  cursor = getCursorPosition(e, svg);
 						let X_cur_mouse_click = cursor.x;
 						let Y_cur_mouse_click = cursor.y;
 					//Группа
-						//var gfx_group = draw.group();
+						var gfx_group = draw.group();
 						//parPan(this.attr('id'));
 						//Выкл обновления
 						refresh = false;
@@ -1615,7 +1616,7 @@ function init(){
 						// var gfxr = draw.polygon((X_cur_mouse_click-wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+wcol)+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-wcol)+' '+Y_cur_mouse_click)
 				
 						//var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
-						var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2))+','+(Y_cur_mouse_click -h1*(Sheet.height_value)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2))+','+(Y_cur_mouse_click -h1*(Sheet.height_value))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2))+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value))+','+Y_cur_mouse_click)
+						var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2))+','+(Y_cur_mouse_click -h1*(Sheet.height_value)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2))+','+(Y_cur_mouse_click -h1*(Sheet.height_value))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2))+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2))+','+Y_cur_mouse_click)
 						//ширина поля со клик зачениями
 						// weight_colmn1 = w1*(Columns["col"+String(Number((txtPar[keey].poz.x)))].size.w)/2;
 						// var gfxr = draw.polygon((X_cur_mouse_click-weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+weight_colmn1)+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-weight_colmn1)+','+Y_cur_mouse_click)
@@ -1719,12 +1720,12 @@ function init(){
 								
 						
 								//Ресайз текста если не влезает!
-								if (text_value.length()>Sheet.width_value){
+								if (text_value.length()>Sheet.width_value*w1){
 									var coef =text_value.length()/text_value.attr('font-size')
 									text_value.clear();
 									delete(text_value);
 									var text_value = draw.text(basePar[keey].txt+" "+cur_val+" ("+ basePar[keey].unit+")")
-									.font({ family: Sheet.fnt, size: Sheet.width_value*w1/coef*0.7})
+									.font({ family: Sheet.fnt, size: Sheet.width_value*w1/(coef*1.1)})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
@@ -1771,12 +1772,12 @@ function init(){
 								
 								//Ресайз текста если не влезает!
 								
-								if (text_value.length()>Sheet.width_value){
+								if (text_value.length()>Sheet.width_value*w1){
 									var coef =text_value.length()/text_value.attr('font-size')
 									text_value.clear();
 									delete(text_value);
 									var text_value = draw.text(txtPar[keey].txt+" "+cur_val+" ("+ txtPar[keey].unit+")")
-									.font({ family: Sheet.fnt, size: Sheet.width_value*w1/coef*0.7})
+									.font({ family: Sheet.fnt, size: Sheet.width_value*w1/(coef*1.1)})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
@@ -1832,12 +1833,12 @@ function init(){
 									
 								//Ресайз текста если не влезает!
 								
-								if (text_value.length()>Sheet.width_value){
+								if (text_value.length()>Sheet.width_value*w1){
 									var coef =text_value.length()/text_value.attr('font-size')
 									text_value.clear();
 									delete(text_value);
 									var text_value = draw.text(txtOknOPar[keey].txt+" "+time_viz1+" ("+ txtOknOPar[keey].unit+")")
-									.font({ family: Sheet.fnt, size: Sheet.width_value*w1/coef*0.7})
+									.font({ family: Sheet.fnt, size: Sheet.width_value*w1/(coef*1.1)})
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.cx(X_cur_mouse_click)
@@ -1887,25 +1888,25 @@ function init(){
 						//Удаление текущих значений
 						gfxr.click(function() { 
 							
-							gfx_group.clear();
+							// gfx_group.clear();
 							/* if (online == true){refresh = true;} */
-								})
-
-				}});
+							this.remove();
+							gfx_group.remove();
+						})
+					})
+				}
+			}
 				//Табличка со значениями
-				colmn2.mousedown(function(e) {
+				// colmn2.mousedown(function(e) {
 					
 				
-						//Группа
-						//var gfx_group = draw.group();
-						//parPan(this.attr('id'));
-						//Выкл обновления
-						mouseDwn=true;		
-					});
+				// 		//Группа
+				// 		//var gfx_group = draw.group();
+				// 		//parPan(this.attr('id'));
+				// 		//Выкл обновления
+				// 		mouseDwn=true;		
+				// 	});
 				
-				
-				
-				}}
 				
 		//Маркер сдвига по времени и глубине
 		/////////////////////
