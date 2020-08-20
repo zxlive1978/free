@@ -1594,20 +1594,20 @@ function init(){
 						//parPan(this.attr('id'));
 						//Выкл обновления
 						refresh = false;
-						if (!isMobile) {
-							Sheet.height_value = disp_up;
-						} else {
+						// if (!isMobile) {
+						// 	Sheet.height_value = disp_up;
+						// } else {
 							
-							Sheet.height_value = disp_up;
-						}
+						// 	Sheet.height_value = disp_up;
+						// }
 						//не уверен!
 						
 						
 						var text_size_value = size_text_p;
 						/* if (resizeH>resizeV) {text_size_value=resizeV;} */
 						/* text_size_value = Sheet.curvalsize; */
-						if (text_size_value>height_colmn1_p1*h1/7.6){
-						text_size_value = height_colmn1_p1*h1/7.6;}
+						if (text_size_value>Sheet.height_value*h1/7.6){
+						text_size_value = Sheet.height_value*h1/7.6;}
 
 						
 
@@ -1735,8 +1735,8 @@ function init(){
 									
 								}
 						
-								if (Number(text_value.attr('font-size'))>height_colmn1_p1*h1/7.7){
-									let resizeV = height_colmn1_p1*h1/7.7;
+								if (Number(text_value.attr('font-size'))>Sheet.height_value*h1/7.7){
+									let resizeV = Sheet.height_value*h1/7.7;
 									//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
 									text_value.clear();
 									delete(text_value);
@@ -1787,8 +1787,8 @@ function init(){
 									
 								}
 						
-								if (Number(text_value.attr('font-size'))>height_colmn1_p1*h1/7.7){
-									let resizeV = height_colmn1_p1*h1/7.7;
+								if (Number(text_value.attr('font-size'))>Sheet.height_value*h1/7.7){
+									let resizeV = Sheet.height_value*h1/7.7;
 									//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
 									text_value.clear();
 									delete(text_value);
@@ -1848,8 +1848,8 @@ function init(){
 									
 								}
 						
-								if (Number(text_value.attr('font-size'))>height_colmn1_p1*h1/7.7){
-									let resizeV = height_colmn1_p1*h1/7.7;
+								if (Number(text_value.attr('font-size'))>Sheet.height_value*h1/7.7){
+									let resizeV = Sheet.height_value*h1/7.7;
 									//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
 									text_value.clear();
 									delete(text_value);
