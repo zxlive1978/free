@@ -796,7 +796,12 @@ function colPan5 () {
 	$("#fonbut").prop('checked', Sheet.fonbut);
 	$("#editscrn").prop('checked', Sheet.editscrn);
 	//iziModal
-	$("#fonbut").prop('checked', Sheet.fonbut);
+	
+	
+	
+	//$("#fonbut").prop('checked', Sheet.fonbut);
+	
+	
 	//$("#modal").css('background-color', Sheet.curcolorval);
 	//$('#modal').iziModal('open');
 	
