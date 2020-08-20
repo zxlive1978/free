@@ -301,6 +301,9 @@ window.onresize = function(event) {
   <td><label for="hcolcolor">Ширина области текущ. значений:</label></td><td><input type="text" id="width_value" name="width_value" value="0"/>
   </tr>
   <tr>
+  <td><label for="hcolcolor">Высота области текущ. значений:</label></td><td><input type="text" id="height_value" name="height_value" value="0"/>
+  </tr>
+  <tr>
   <td><label for="hcolcolor">Цвет области текущ. значений:</label></td><td><input type="color" id="curcolorval" name="curcolorval" value="#e66465"/>
   </tr>
   <tr>

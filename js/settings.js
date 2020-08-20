@@ -781,6 +781,7 @@ function colPan5 () {
 	$("#dashcol1").val(Sheet.dashcol1);
 	$("#holcol").val(Sheet.holcol);
 	$("#holhide").val(Sheet.holhide);
+	$("#height_value").val(Sheet.height_value);
 	$("#width_value").val(Sheet.width_value);
 	$("#curcolorval").val(Sheet.curcolorval);
 	$("#faderr").val(Sheet.faderr);
@@ -832,6 +833,7 @@ function colOK5 () {
 	Sheet.dashcol1=String($("#dashcol1").val());
 	Sheet.holcol=String($("#holcol").val());
 	Sheet.holhide=Number($("#holhide").val());
+	Sheet.height_value =Number($("#height_value").val());
 	Sheet.width_value=Number($("#width_value").val());
 	Sheet.curcolorval=String($("#curcolorval").val());
 	Sheet.faderr=Number($("#faderr").val());
