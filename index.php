@@ -77,10 +77,10 @@
 		<button class="btn bg-light btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		СКВАЖИНА
 		</button>
-		<div class="dropdown-menu" aria-labelledby="dropdownMenu2"> -->
-		<!-- <button class="dropdown-item btn-lg" type="button" id="par0" >АГКМ406-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par1">АГКМ73-1</button> -->
-		<!-- <button class="dropdown-item btn-lg" type="button" id="par0">АГКМ99-1</button>
+		<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+		 <button class="dropdown-item btn-lg" type="button" id="par0" >АГКМ406-1</button> -->
+		<!-- <button class="dropdown-item btn-lg" type="button" id="par1">АГКМ73-1</button> 
+		<button class="dropdown-item btn-lg" type="button" id="par0">АГКМ99-1</button>
 		<button class="dropdown-item btn-lg" type="button" id="par1">АГКМ609-1</button>
 		<button class="dropdown-item btn-lg" type="button" id="par2">АГКМ260-1</button>
 		<button class="dropdown-item btn-lg" type="button" id="par3">АГКМ9917-1</button>
@@ -97,7 +97,7 @@
     
 	  
 	   
-		<!-- <li>
+		<li>
     <div id="dialogvideo" title="Камера 2">
     <iframe width="100%" height="100%"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
@@ -106,7 +106,7 @@
     width="280" height="157"
     frameborder="0"
     allow="autoplay"
-      src="https://hydrofalll.ddns.net:5443/LiveApp/play.html?name=211275258683608619992096"> </iframe>
+      src="//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188" </iframe>
     
     </div>
 		<div class="btn-group" role="group" aria-label="Basic example">
@@ -114,7 +114,7 @@
 			
 		</div>
   
-    </li>
+    <!--</li>
     <button class="btn bg-light btn-lg " type="button" id="stop" name="stop" onclick='stopCam()'>
     STOP поток</button>
     <button class="btn bg-light btn-lg " type="button" id="start" >
