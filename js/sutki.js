@@ -1941,6 +1941,7 @@ function init(){
 		.style({ cursor: 'pointer' });
 		cir4.add(cir1);
 		cir4.add(cir2);
+		cir4.front();
 		
 		
 		var ex=0;
