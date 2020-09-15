@@ -1892,6 +1892,8 @@ function init(){
 							/* if (online == true){refresh = true;} */
 							this.remove();
 							gfx_group.remove();
+							//Очистка холста и перерисовка
+							repaint();
 						})
 					})
 				}

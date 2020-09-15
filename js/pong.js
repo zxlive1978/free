@@ -39,8 +39,8 @@ let d110d =function (){
 }
 
 //var d110d = null;
-var wellName ="s83";
-var skv ="АГКМ-106";
+var wellName ="s20";
+var skv ="АГКМ-938";
 var namecmt = wellName + "kr";
 var formname = "Цветная";
 

@@ -14,7 +14,7 @@ var wells = {
 	par5 :  {wellN: 's627', txt: 'АГКМ-627', type: 'Бурение', typeStn:'ИМС', nach:'Капустин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
 	par6 :  {wellN: 's915', txt: 'АГКМ-934', type: 'Бурение', typeStn:'ИМС', nach:'Капустин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
 	par7 :  {wellN: 's224', txt: 'АГКМ-604', type: 'Бурение', typeStn:'ИМС', nach:'Капустин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
-	par8 :  {wellN: 's83', txt: 'АГКМ-106', type: 'Ремонт', typeStn:'Разрез', nach:'Сидоров С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
+	par8 :  {wellN: 's20', txt: 'АГКМ-938', type: 'Ремонт', typeStn:'Разрез', nach:'Сидоров С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
 	par9 :  {wellN: 's4450', txt: 'АГКМ-71', type: 'Ремонт', typeStn:'ИМС', nach:'Сидоров С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
 	
 };
@@ -702,7 +702,7 @@ function colOK4 () {
 	refresh = false; //navigation.js
 	Sheet.Kzoom = Number($("#zooom1").val()) ;
 	read_random();
-	$('#lupa').iziModal('close');
+	//$('#lupa').iziModal('close');
 }
 
 
