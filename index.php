@@ -217,6 +217,7 @@ function getStart() {
 window.onload = getStart;
 window.onresize = function(event) {
     repaint();
+    console.log('ресайз');
 };
 </script>
 
