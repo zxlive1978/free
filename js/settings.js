@@ -1324,6 +1324,9 @@ function adm (){
 	online = false;
 	refresh = false;
 	$('#drawing').empty();
+	
+	$("#dialogvideo").css("display", "none;"); // Для скрытия
+	//$("#myblock").css("display", "block;"); // Для показа
 
 }
 
