@@ -1325,8 +1325,10 @@ function adm (){
 	refresh = false;
 	$('#drawing').empty();
 	
-	$('#modal').hide(); // Для скрытия
-	//$("#myblock").css("display", "block;"); // Для показа
+	
+	$('#dialogvideo').dialog( "close" );// Для скрытия
+	//$('#dialogvideo').dialog( "open" ); // Для показа
+	
 
 }
 
