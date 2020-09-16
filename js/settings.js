@@ -1319,6 +1319,13 @@ $(document).load(function () {
 
 
 
+//Админка
+function adm (){
+	online = false;
+	refresh = false;
+	$('#drawing').empty();
+
+}
 
 
 
@@ -1327,6 +1334,7 @@ function repaint() {
 	//Очистка документа
 	try {
 		$("#drawing").find("*").not("rect, g").remove();
+		$('#drawing').empty();
 			}
 	catch(e){ }
 	

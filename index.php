@@ -105,13 +105,13 @@
     title="0" byline="0" portrait="0"
     width="280" height="157"
     frameborder="0"
-    allow="autoplay"
+    <!--allow="autoplay"-->
       src="//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188" </iframe>
     
     </div>
 		<div class="btn-group" role="group" aria-label="Basic example">
-			
-			
+		<button class="btn bg-light btn-lg " type="button" id="adm" name="adm" onclick='adm()'>
+    Админка</button>	
 		</div>
   
     <!--</li>
