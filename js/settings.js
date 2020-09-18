@@ -1318,17 +1318,42 @@ $(document).load(function () {
 
 
 
-
+//Открыть закрыть админку
+var onofadm= true;
+var row_str = 'Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.';
 //Админка
-function adm (){
+function adm (e){
+	if (onofadm){
+	
 	online = false;
 	refresh = false;
 	$('#drawing').empty();
+	$('#drawing').hide();
 	
 	
 	$('#dialogvideo').dialog( "close" );// Для скрытия
+	$('#tabs').show();
+	onofadm = false;
+	//$('#tabs-1').empty();
+	e.preventDefault();
+	$('#tabs-1').html(' <p>'+row_str+'</p>');
+	e.preventDefault();
 	//$('#dialogvideo').dialog( "open" ); // Для показа
-	
+	} else {
+		
+		
+		
+		$('#dialogvideo').dialog( "open" );// Для скрытия
+		$('#tabs').hide();
+		
+		$('#drawing').empty();
+		$('#drawing').show();
+		online = true;
+		refresh = true;
+		onofadm = true;
+		init();
+
+	}
 
 }
 

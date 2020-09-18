@@ -16,7 +16,17 @@
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 
-<script>
+
+    
+  <script>
+  //JQUERY tabЫ
+  $( function() {
+    $( "#tabs" ).tabs();
+    $('#tabs').hide();
+  } );
+  $('#tabs').hide();
+  </script>
+  <script>
 //Окно видео
   $( function() {
     $( "#dialogvideo" ).dialog(
@@ -28,13 +38,6 @@
         //modal: true
       }
     );
-  } );
-  </script>
-    
-  <script>
-  //JQUERY tabЫ
-  $( function() {
-    $( "#tabs" ).tabs();
   } );
   </script>
 
@@ -202,12 +205,12 @@
   </div>
   
 </div>
-
+<!-- Табы -->
 <div id="tabs">
   <ul>
-    <li><a href="#tabs-1">Nunc tincidunt</a></li>
-    <li><a href="#tabs-2">Proin dolor</a></li>
-    <li><a href="#tabs-3">Aenean lacinia</a></li>
+    <li><a href="#tabs-1">Пользователи</a></li>
+    <li><a href="#tabs-2">Скважины</a></li>
+    <li><a href="#tabs-3">ЕЩЕ..чего</a></li>
   </ul>
   <div id="tabs-1">
     <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
