@@ -1342,12 +1342,75 @@ function adm (){
 	//e.preventDefault();
 	$('#tabs-1').html(' <p>'+row_str+'</p>');
 	$('#tabs-1').append(' <p>'+row_str+'</p>');
-	for (i = 0; i < 10; i++){ 
-     $('#mySelect').append($('<option>',
-     {
-        value: i,
-        text : "Option "+i 
-	}));}
+	
+	$('#tabs-2').empty();
+	//e.preventDefault();
+	//$('#tabs-1').html(' <p>'+row_str+'</p>');
+	
+{/* <div class="container">
+  <div class="row">
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+    <div class="col-sm">
+      One of three columns
+    </div>
+  </div>
+</div> */}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>№ п/п</th>
+      <th>Имя</th>
+      <th>Фамилия</th>
+      <th>E-mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Иван</td>
+      <td>Чмель</td>
+      <td>ivan@mail.ru</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Петр</td>
+      <td>Щербаков</td>
+      <td>petr@mail.ru</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Юрий</td>
+      <td>Голов</td>
+      <td>yuri@mail.ru</td>
+    </tr>
+  </tbody>
+</table>
+
+	$('#tabs-2').append('<table class="table"><thead><tr><th>№ п/п</th><th>№ п/п</th><th>№ п/п</th><th>№ п/п</th><th>№ п/п</th><th>№ п/п</th><th>№ п/п</th><th>№ п/п</th></tr></thead><tbody>');
+	for (var keey in wells) {
+		$('#tabs-2').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+'</td><td>'+wells[keey].typeStn+ '</td></tr>');
+		//$('#tabs-2').append('</div>');	
+	}
+	$('#tabs-2').append('</tbody></table>');
+	//Восстановление выбора
+	//$('#wellN').val(wellName);
+	
+	/* var selIdx=$("#wellN").prop('selectedIndex');
+	wellidx = selIdx; */
+	
+	// $("#wellNwork1").text(wells['par'+wellidx].type);
+	// $("#wellNwork2").text(wells['par'+wellidx].typeStn);
+	// $("#wellNwork3").text(wells['par'+wellidx].nach);
+	// $("#wellNwork4").text(wells['par'+wellidx].tel);
+	// $("#wellNwork5").text(wells['par'+wellidx].email);
+	
+	
 	
 	//e.preventDefault();
 	//$('#dialogvideo').dialog( "open" ); // Для показа
