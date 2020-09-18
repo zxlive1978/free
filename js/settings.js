@@ -2,6 +2,9 @@
 //Выполняется ли загрузка
 var loaddata = false;
 
+//Открыть закрыть админку
+var onofadm= true;
+
 //Список скважин
 var wells = {	
 	//par0 :  {wellN: 's401', txt: 'АГКМ-406', type: 'Ремонт', typeStn:'Разрез', nach:'Сидоров С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
@@ -1319,10 +1322,10 @@ $(document).load(function () {
 
 
 //Открыть закрыть админку
-var onofadm= true;
-var row_str = 'Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.';
+
 //Админка
-function adm (e){
+function adm (){
+	var row_str = '<p>This is PARAGRAPH.</p>';
 	if (onofadm){
 	
 	online = false;
@@ -1335,9 +1338,10 @@ function adm (e){
 	$('#tabs').show();
 	onofadm = false;
 	//$('#tabs-1').empty();
-	e.preventDefault();
+	//e.preventDefault();
 	$('#tabs-1').html(' <p>'+row_str+'</p>');
-	e.preventDefault();
+	$('#tabs-1').append(' <p>'+row_str+'</p>');
+	//e.preventDefault();
 	//$('#dialogvideo').dialog( "open" ); // Для показа
 	} else {
 		
