@@ -4,6 +4,7 @@ var loaddata = false;
 
 //Открыть закрыть админку
 var onofadm= true;
+var row_str = '<tr><td><select name="auser" id="auser"  size="5" style="height: auto; width: 300px;"></tr>';
 
 //Список скважин
 var wells = {	
@@ -1325,7 +1326,7 @@ $(document).load(function () {
 
 //Админка
 function adm (){
-	var row_str = '<p>This is PARAGRAPH.</p>';
+	
 	if (onofadm){
 	
 	online = false;
@@ -1337,10 +1338,17 @@ function adm (){
 	$('#dialogvideo').dialog( "close" );// Для скрытия
 	$('#tabs').show();
 	onofadm = false;
-	//$('#tabs-1').empty();
+	$('#tabs-1').empty();
 	//e.preventDefault();
 	$('#tabs-1').html(' <p>'+row_str+'</p>');
 	$('#tabs-1').append(' <p>'+row_str+'</p>');
+	for (i = 0; i < 10; i++){ 
+     $('#mySelect').append($('<option>',
+     {
+        value: i,
+        text : "Option "+i 
+	}));}
+	
 	//e.preventDefault();
 	//$('#dialogvideo').dialog( "open" ); // Для показа
 	} else {
