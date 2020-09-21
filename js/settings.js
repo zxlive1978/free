@@ -1392,7 +1392,7 @@ function adm (){
   </tbody>
 </table> */}
 
-	$('#tabs-2').append('<table class="table"><thead><tr><th>Скважина</th><th>База</th><th>Тип работ</th><th>Тип станции</th><th>Фамилия начальника</th><th>Телефон</th><th>Эл.почта</th></tr></thead><tbody>');
+	$('#tabs-2').append('<table class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Тип работ</th><th>Тип станции</th><th>Фамилия начальника</th><th>Телефон</th><th>Эл.почта</th></tr></thead><tbody>');
 	for (var keey in wells) {
 		$('#tabs-2').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td></tr>');//+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
 		//$('#tabs-2').append('</div>');	
