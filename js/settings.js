@@ -23,7 +23,7 @@ var wells = {
 	
 };
 
-//Шаблон Интервал параметр всего окна 
+//Шаблон скважины
 var Shablontxtwell = {
 	par0 :  {wellN: 's110', txt: 'АГКМ-99', type: 'Ремонт', typeStn:'Разрез', nach:'Петров П.П.', tel:'232222', email:'sobaka13@sobaka.com'},
 };
@@ -1402,11 +1402,11 @@ curPar.email = String($("#colitems127").val());
 
 
 //console.log(curPar);
-var idr = makeid();
+// var idr = makeid();
 //var idr = bigPar[String($("#colitems2").val())].par;
 //Создание новой записи параметра!!!
 //basePar[String('par'+(Object.keys(basePar).length+1))]=curPar;
-wells[String('par'+idr)]=curPar;
+wells[String('par'+String((Object.keys(wells).length)))]=curPar;
 
 
 $('#skvs tr:last').after('<tr><td>'+String($("#colitems121").val())+'</td>'+
@@ -1417,7 +1417,7 @@ $('#skvs tr:last').after('<tr><td>'+String($("#colitems121").val())+'</td>'+
 '<td>'+String($("#colitems126").val())+'</td>'+
 '<td>'+String($("#colitems127").val())+'</td>'+
 '</tr>');
-console.log(wells);
+//console.log(wells);
 //$('#skvs tbody').append('<tr><td>'+String($("#colitems121").val())+'</td></tr>');
 //Открыть закрыть админку
 }
@@ -1471,8 +1471,17 @@ function adm (){
 	// var inlineScript = document.createTextNode("alert('Hello World!');");
 	// newScript.appendChild(inlineScript); 
 	// target.appendChild(newScript);
+	
 
-	$('#cams tr').click(function() {
+	//Добавить скважину
+	$('#addskv').click(function() {
+		
+	
+		colPan12 ();
+	});
+
+	//Клик скважины
+	$('#skvs tr').click(function() {
 		var tableData = $(this).children("td").map(function() {
 			return $(this).text();
 		}).get();
@@ -1480,11 +1489,14 @@ function adm (){
 		alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
 	});
 
-	//Добавить скважину
-	$('#addskv').click(function() {
-		
+
+	//Клик Камеры
+	$('#cams tr').click(function() {
+		var tableData = $(this).children("td").map(function() {
+			return $(this).text();
+		}).get();
 	
-		colPan12 ();
+		alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
 	});
 
 	
