@@ -751,7 +751,7 @@ window.onresize = function(event) {
 
 
 
-  <div class="modal fade" id="myModal11">
+  <div class="modal fade" id="myModal12">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
       
@@ -787,7 +787,7 @@ window.onresize = function(event) {
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
-			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK12()'>Добавить</button>
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK10()'>Применить</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
         

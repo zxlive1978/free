@@ -1375,7 +1375,8 @@ $(document).load(function () {
 
 //Добавление записи по скважине
 function colPan12 () {
-	$('#mymodal11').modal();
+	$("#myModal12").modal();
+	console.log('fdsf');
 }
 
 //Открыть закрыть админку
@@ -1401,11 +1402,11 @@ function adm (){
 	
 	//Скважины
 	$('#tabs-2').empty();
-	$('#tabs-2').append('<button type="button" class="btn btn-success mb-1" data-dismiss="modal" onclick="colPan12">+</button>');
+	$('#tabs-2').append('<button type="button" name="addskv" id="addskv" class="btn btn-success mb-1" data-dismiss="modal" >+</button>');
 	$('#tabs-2').append('<div class="table-responsive table-hover"><table id="skvs" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Тип работ</th><th>Тип станции</th><th>Фамилия начальника</th><th>Телефон</th><th>Эл.почта</th></tr></thead><tbody></tbody></table></div>');
 	//Камеры
 	$('#tabs-3').empty();
-	$('#tabs-3').append('<button type="button" class="btn btn-success mb-1" data-dismiss="modal" onclick="colPan13">+</button>');
+	$('#tabs-3').append('<button type="button" class="btn btn-success mb-1" data-dismiss="modal">+</button>');
 	$('#tabs-3').append('<div class="table-responsive table-hover"><table id="cams" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Камера1-станция</th><th>Камера1-стрим'+
 	'</th><th>Камера2-станция</th><th>Камера2-стрим</th><th>Камера3-станция</th><th>Камера3-стрим'+
 	'</th><th>Камера4-станция</th><th>Камера4-стрим'+
@@ -1437,6 +1438,13 @@ function adm (){
 		}).get();
 	
 		alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
+	});
+
+	//Добавить скважину
+	$('#addskv').click(function() {
+		
+	
+		colPan12 ();
 	});
 
 	
