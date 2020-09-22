@@ -23,6 +23,58 @@ var wells = {
 	
 };
 
+//Список камер
+var cams = {
+
+	par0 :  {wellN: 's110', txt: 'АГКМ-99',
+	rtsp1:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp2:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
+	rtsp3:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1902', rtsp4:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/2002',
+	liveapp1:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp2:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',
+	liveapp3:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp4:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=1503157987892256296791828',},
+	par1 :  {wellN: 's908', txt: 'АГКМ-609', 
+	rtsp1:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp2:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
+	rtsp3:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp4:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
+	liveapp1:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp2:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',
+	liveapp3:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp4:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',},
+	par2 :  {wellN: 's610', txt: 'АГКМ-260',
+	rtsp1:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp2:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
+	rtsp3:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp4:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
+	liveapp1:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp2:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',
+	liveapp3:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp4:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',},
+
+	par3 :  {wellN: 's630', txt: 'АГКМ-9917',
+	rtsp1:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp2:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
+	rtsp3:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp4:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
+	liveapp1:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp2:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',
+	liveapp3:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp4:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',},
+	//par4 :  {wellN: 's629', txt: 'АГКМ-629', type: 'Бурение', typeStn:'ИМС', nach:'Редискин Р.Р.', tel:'282222', email:'sobaka18@sobaka.com'},
+	par4 :  {wellN: 's627', txt: 'АГКМ-627',
+	rtsp1:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp2:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
+	rtsp3:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp4:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
+	liveapp1:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp2:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',
+	liveapp3:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp4:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',},
+	par5 :  {wellN: 's915', txt: 'АГКМ-934',
+	rtsp1:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp2:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
+	rtsp3:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp4:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
+	liveapp1:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp2:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',
+	liveapp3:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp4:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',},
+	par6 :  {wellN: 's224', txt: 'АГКМ-604',
+	rtsp1:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp2:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
+	rtsp3:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp4:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
+	liveapp1:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp2:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',
+	liveapp3:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp4:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',},
+	par7 :  {wellN: 's20', txt: 'АГКМ-938', 
+	rtsp1:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp2:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
+	rtsp3:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp4:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
+	liveapp1:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp2:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',
+	liveapp3:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp4:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',},
+	par8 :  {wellN: 's4450', txt: 'АГКМ-71', 
+	rtsp1:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp2:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
+	rtsp3:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp4:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
+	liveapp1:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp2:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',
+	liveapp3:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp4:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',},
+
+};
 
 //Текущие параметры Справочник параметров графики обычные
 
@@ -1321,6 +1373,10 @@ $(document).load(function () {
 //<iframe width="560" height="315" src="//hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572" frameborder="0" allowfullscreen></iframe>
 
 
+//Добавление записи по скважине
+function colPan12 () {
+	$('#mymodal11').modal();
+}
 
 //Открыть закрыть админку
 
@@ -1343,77 +1399,70 @@ function adm (){
 	$('#tabs-1').html(' <p>'+row_str+'</p>');
 	$('#tabs-1').append(' <p>'+row_str+'</p>');
 	
+	//Скважины
 	$('#tabs-2').empty();
-	//e.preventDefault();
-	//$('#tabs-1').html(' <p>'+row_str+'</p>');
+	$('#tabs-2').append('<button type="button" class="btn btn-success mb-1" data-dismiss="modal" onclick="colPan12">+</button>');
+	$('#tabs-2').append('<div class="table-responsive table-hover"><table id="skvs" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Тип работ</th><th>Тип станции</th><th>Фамилия начальника</th><th>Телефон</th><th>Эл.почта</th></tr></thead><tbody></tbody></table></div>');
+	//Камеры
+	$('#tabs-3').empty();
+	$('#tabs-3').append('<button type="button" class="btn btn-success mb-1" data-dismiss="modal" onclick="colPan13">+</button>');
+	$('#tabs-3').append('<div class="table-responsive table-hover"><table id="cams" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Камера1-станция</th><th>Камера1-стрим'+
+	'</th><th>Камера2-станция</th><th>Камера2-стрим</th><th>Камера3-станция</th><th>Камера3-стрим'+
+	'</th><th>Камера4-станция</th><th>Камера4-стрим'+
+	'</th></tr></thead><tbody></tbody></table></div>');
 	
-{/* <div class="container">
-  <div class="row">
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-  </div>
-</div> */}
-
-{/* <table class="table">
-  <thead>
-    <tr>
-      <th>№ п/п</th>
-      <th>Имя</th>
-      <th>Фамилия</th>
-      <th>E-mail</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>Иван</td>
-      <td>Чмель</td>
-      <td>ivan@mail.ru</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Петр</td>
-      <td>Щербаков</td>
-      <td>petr@mail.ru</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>Юрий</td>
-      <td>Голов</td>
-      <td>yuri@mail.ru</td>
-    </tr>
-  </tbody>
-</table> */}
-
-	$('#tabs-2').append('<table class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Тип работ</th><th>Тип станции</th><th>Фамилия начальника</th><th>Телефон</th><th>Эл.почта</th></tr></thead><tbody>');
 	for (var keey in wells) {
-		$('#tabs-2').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td></tr>');//+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
+		$('#skvs tbody').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
 		//$('#tabs-2').append('</div>');	
 	}
-	$('#tabs-2').append('</tbody></table>');
-	//Восстановление выбора
-	//$('#wellN').val(wellName);
 	
-	/* var selIdx=$("#wellN").prop('selectedIndex');
-	wellidx = selIdx; */
+
+	for (var keey in cams) {
+		$('#cams tbody').append('<tr><td>'+cams[keey].txt+'</td><td>'+cams[keey].wellN+
+		'</td><td>'+cams[keey].rtsp1+'</td><td>'+cams[keey].liveapp1+'</td><td>'+cams[keey].rtsp2+'</td><td>'+cams[keey].liveapp2+
+		'</td><td>'+cams[keey].rtsp3+'</td><td>'+cams[keey].liveapp3+'</td><td>'+cams[keey].rtsp4+'</td><td>'+cams[keey].liveapp4+
+		 '</td></tr>');
+		//$('#tabs-2').append('</div>');	
+	}
 	
-	// $("#wellNwork1").text(wells['par'+wellidx].type);
-	// $("#wellNwork2").text(wells['par'+wellidx].typeStn);
-	// $("#wellNwork3").text(wells['par'+wellidx].nach);
-	// $("#wellNwork4").text(wells['par'+wellidx].tel);
-	// $("#wellNwork5").text(wells['par'+wellidx].email);
+	//Динамически добавить скрипт
+	// var newScript = document.createElement("script");
+	// var inlineScript = document.createTextNode("alert('Hello World!');");
+	// newScript.appendChild(inlineScript); 
+	// target.appendChild(newScript);
+
+	$('#cams tr').click(function() {
+		var tableData = $(this).children("td").map(function() {
+			return $(this).text();
+		}).get();
 	
+		alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
+	});
+
 	
-	
-	//e.preventDefault();
-	//$('#dialogvideo').dialog( "open" ); // Для показа
+	// $("#myButton").on('click',function(){
+ 
+	// 	var arrData=[];
+	// 	// loop over each table row (tr)
+	// 	$("#myTable tr").each(function(){
+	// 		 var currentRow=$(this);
+		 
+	// 		 var col1_value=currentRow.find("td:eq(0)").text();
+	// 		 var col2_value=currentRow.find("td:eq(1)").text();
+	// 		 var col3_value=currentRow.find("td:eq(2)").text();
+	 
+	// 		  var obj={};
+	// 		 obj.col1=col1_value;
+	// 		 obj.col2=col2_value;
+	// 		 obj.col3=col3_value;
+	 
+	// 		 arrData.push(obj);
+	// 	});
+	// 	 alert(arrData);
+	// 	 console.log(arrData);
+	 
+	//  });
+
 	} else {
 		
 		

@@ -12,7 +12,7 @@
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <!-- Jquery -->
 <link rel="stylesheet" href="css/jquery-ui.min.css">
-<link rel="stylesheet" href="css/style.css">
+<!-- <link rel="stylesheet" href="css/style.css"> -->
 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 
@@ -210,7 +210,7 @@
   <ul>
     <li><a href="#tabs-1">Пользователи</a></li>
     <li><a href="#tabs-2">Скважины</a></li>
-    <li><a href="#tabs-3">ЕЩЕ..чего</a></li>
+    <li><a href="#tabs-3">Камеры</a></li>
   </ul>
   <div id="tabs-1">
   </div>
@@ -745,9 +745,63 @@ window.onresize = function(event) {
       </div>
     </div>
   </div>
-
-
   </div>
+
+
+
+
+
+  <div class="modal fade" id="myModal11">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Выбор скважины</h4>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+<table>
+  <tr>
+  <td><label for="hcolcolor">Название скважины:</label></td><td><select name="wellN" id="wellN"  size="1" >
+  </tr>
+  <tr>
+  <td><label for="hcolcolor">Тип работ:</label></td><td><label for="namePar" name="wellNwork1" id="wellNwork1"></label>
+  </tr>
+  <tr>
+  <td><label for="hcolcolor">Тип станции:</label></td><td><label for="namePar" name="wellNwork2" id="wellNwork2"></label>
+  </tr>
+  <tr>
+  <td><label for="hcolcolor">Нач. партии:</label></td><td><label for="namePar" name="wellNwork3" id="wellNwork3"></label>
+  </tr>
+  <tr>
+  <td><label for="hcolcolor">Телефон:</label></td><td><label for="namePar" name="wellNwork4" id="wellNwork4"></label>
+  </tr>
+  <tr>
+  <td><label for="hcolcolor">E-mail:</label></td><td><label for="namePar" name="wellNwork5" id="wellNwork5"></label>
+  </tr>
+</div>
+</table>
+</div>        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK10()'>Применить</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
 </main>
 </body>
 </html>

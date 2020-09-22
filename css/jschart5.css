@@ -22,7 +22,9 @@ html, body, .container {
       /*all CSS goes here*/
     }
 	
-	
+  
+#skvs tr:hover{cursor:pointer;}
+#cams tr:hover{cursor:pointer;}  
 /* .navbar {
 position:relative;
 z-index:2;
