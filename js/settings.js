@@ -23,6 +23,12 @@ var wells = {
 	
 };
 
+//Шаблон Интервал параметр всего окна 
+var Shablontxtwell = {
+	par0 :  {wellN: 's110', txt: 'АГКМ-99', type: 'Ремонт', typeStn:'Разрез', nach:'Петров П.П.', tel:'232222', email:'sobaka13@sobaka.com'},
+};
+
+
 //Список камер
 var cams = {
 
@@ -1373,17 +1379,51 @@ $(document).load(function () {
 //<iframe width="560" height="315" src="//hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572" frameborder="0" allowfullscreen></iframe>
 
 
-//Добавление записи по скважине
+//Добавление  диалогзаписи по скважине
 function colPan12 () {
 	$("#myModal12").modal();
+	
 	console.log('fdsf');
 }
 
+//Добавление  записи по скважине
+function colOK12 () {
+var curPar ={};
+curPar = JSON.stringify(Object.assign({}, Shablontxtwell['par0']));
+curPar = JSON.parse(curPar);
+	
+curPar.wellN = String($("#colitems122").val());
+curPar.txt = String($("#colitems121").val());
+curPar.type = String($("#colitems123").val());
+curPar.typeStn = String($("#colitems124").val());
+curPar.nach = String($("#colitems125").val());
+curPar.tel = String($("#colitems126").val());
+curPar.email = String($("#colitems127").val());
+
+
+//console.log(curPar);
+var idr = makeid();
+//var idr = bigPar[String($("#colitems2").val())].par;
+//Создание новой записи параметра!!!
+//basePar[String('par'+(Object.keys(basePar).length+1))]=curPar;
+wells[String('par'+idr)]=curPar;
+
+
+$('#skvs tr:last').after('<tr><td>'+String($("#colitems121").val())+'</td>'+
+'<td>'+String($("#colitems122").val())+'</td>'+
+'<td>'+String($("#colitems123").val())+'</td>'+
+'<td>'+String($("#colitems124").val())+'</td>'+
+'<td>'+String($("#colitems125").val())+'</td>'+
+'<td>'+String($("#colitems126").val())+'</td>'+
+'<td>'+String($("#colitems127").val())+'</td>'+
+'</tr>');
+console.log(wells);
+//$('#skvs tbody').append('<tr><td>'+String($("#colitems121").val())+'</td></tr>');
 //Открыть закрыть админку
+}
 
 //Админка
 function adm (){
-	
 	if (onofadm){
 	
 	online = false;

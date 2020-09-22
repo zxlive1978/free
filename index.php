@@ -765,11 +765,35 @@ window.onresize = function(event) {
         <div class="modal-body">
 <table>
   <tr>
-  <td><label for="hcolcolor">Название скважины:</label></td>
-  <tr>
-            <td><label for="ncolor">Название скважины:</label></td>
+            <td><label for="ncolor">Скважина:</label></td>
             <td><input type="text" id="colitems121" name="colitems121" value=""></td>
   </tr>
+  <tr>
+            <td><label for="ncolor">База:</label></td>
+            <td><input type="text" id="colitems122" name="colitems122" value=""></td>
+  </tr>
+  <tr>
+            <td><label for="ncolor">Тип работ:</label></td>
+            <td><input type="text" id="colitems123" name="colitems123" value=""></td>
+  </tr>
+  <tr>
+            <td><label for="ncolor">Тип станции:</label></td>
+            <td><input type="text" id="colitems124" name="colitems124" value=""></td>
+  </tr>
+  <tr>
+            <td><label for="ncolor">Фамилия начальника:</label></td>
+            <td><input type="text" id="colitems125" name="colitems125" value=""></td>
+  </tr>
+  <tr>
+            <td><label for="ncolor">Телефон:</label></td>
+            <td><input type="text" id="colitems126" name="colitems126" value=""></td>
+  </tr>
+  <tr>
+            <td><label for="ncolor">БаЭл.почта:</label></td>
+            <td><input type="text" id="colitems127" name="colitems127" value=""></td>
+  </tr>
+  
+
 </div>
 </table>
 </div>        
