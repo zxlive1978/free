@@ -757,7 +757,7 @@ window.onresize = function(event) {
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Выбор скважины</h4>
+          <h4 class="modal-title">Добавить скважину</h4>
           <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
         
@@ -765,29 +765,17 @@ window.onresize = function(event) {
         <div class="modal-body">
 <table>
   <tr>
-  <td><label for="hcolcolor">Название скважины:</label></td><td><select name="wellN" id="wellN"  size="1" >
-  </tr>
+  <td><label for="hcolcolor">Название скважины:</label></td>
   <tr>
-  <td><label for="hcolcolor">Тип работ:</label></td><td><label for="namePar" name="wellNwork1" id="wellNwork1"></label>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Тип станции:</label></td><td><label for="namePar" name="wellNwork2" id="wellNwork2"></label>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Нач. партии:</label></td><td><label for="namePar" name="wellNwork3" id="wellNwork3"></label>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Телефон:</label></td><td><label for="namePar" name="wellNwork4" id="wellNwork4"></label>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">E-mail:</label></td><td><label for="namePar" name="wellNwork5" id="wellNwork5"></label>
+            <td><label for="ncolor">Название скважины:</label></td>
+            <td><input type="text" id="colitems121" name="colitems121" value=""></td>
   </tr>
 </div>
 </table>
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
-			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK10()'>Применить</button>
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK12()'>Применить</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
         
