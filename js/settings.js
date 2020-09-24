@@ -1453,11 +1453,11 @@ function adm (){
 	//Скважины
 	$('#tabs-2').empty();
 	$('#tabs-2').append('<button type="button" name="addskv" id="addskv" class="btn btn-success mb-1" data-dismiss="modal" >+</button>');
-	$('#tabs-2').append('<div class="table-responsive table-hover"><table id="skvs" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Тип работ</th><th>Тип станции</th><th>Фамилия начальника</th><th>Телефон</th><th>Эл.почта</th></tr></thead><tbody></tbody></table></div>');
+	$('#tabs-2').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="skvs" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Тип работ</th><th>Тип станции</th><th>Фамилия начальника</th><th>Телефон</th><th>Эл.почта</th></tr></thead><tbody></tbody></table></div>');
 	//Камеры
 	$('#tabs-3').empty();
 	$('#tabs-3').append('<button type="button" class="btn btn-success mb-1" data-dismiss="modal">+</button>');
-	$('#tabs-3').append('<div class="table-responsive table-hover"><table id="cams" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Камера1-станция</th><th>Камера1-стрим'+
+	$('#tabs-3').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="cams" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Камера1-станция</th><th>Камера1-стрим'+
 	'</th><th>Камера2-станция</th><th>Камера2-стрим</th><th>Камера3-станция</th><th>Камера3-стрим'+
 	'</th><th>Камера4-станция</th><th>Камера4-стрим'+
 	'</th></tr></thead><tbody></tbody></table></div>');
@@ -1495,13 +1495,13 @@ function adm (){
 		var tableData = $(this).children("td").map(function() {
 			return $(this).text();
 		}).get();
-		$("#colitems131").text($.trim(tableData[0]));
-		$("#colitems132").text($.trim(tableData[1]));
-		$("#colitems133").text($.trim(tableData[2]));
-		$("#colitems134").text($.trim(tableData[3]));
-		$("#colitems135").text($.trim(tableData[4]));
-		$("#colitems136").text($.trim(tableData[5]));
-		$("#colitems137").text($.trim(tableData[6]));
+		$("#colitems131").val($.trim(tableData[0]));
+		$("#colitems132").val($.trim(tableData[1]));
+		$("#colitems133").val($.trim(tableData[2]));
+		$("#colitems134").val($.trim(tableData[3]));
+		$("#colitems135").val($.trim(tableData[4]));
+		$("#colitems136").val($.trim(tableData[5]));
+		$("#colitems137").val($.trim(tableData[6]));
 		colPan13();
 		
 		//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
