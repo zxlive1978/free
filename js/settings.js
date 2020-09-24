@@ -1377,13 +1377,23 @@ $(document).load(function () {
 
 
 //<iframe width="560" height="315" src="//hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572" frameborder="0" allowfullscreen></iframe>
+//
+
+//Изменить/ удалить  диалог по скважине
+function colPan13 () {
+	$("#myModal13").modal();
+	
+	//console.log('fdsf');
+}
+
+
 
 
 //Добавление  диалогзаписи по скважине
 function colPan12 () {
 	$("#myModal12").modal();
 	
-	console.log('fdsf');
+	//console.log('fdsf');
 }
 
 //Добавление  записи по скважине
