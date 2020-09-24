@@ -1495,8 +1495,16 @@ function adm (){
 		var tableData = $(this).children("td").map(function() {
 			return $(this).text();
 		}).get();
-	
-		alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
+		$("#colitems131").text(trim(tableData[0]));
+		$("#colitems132").text(trim(tableData[1]));
+		$("#colitems133").text(trim(tableData[2]));
+		$("#colitems134").text(trim(tableData[3]));
+		$("#colitems135").text(trim(tableData[4]));
+		$("#colitems136").text(trim(tableData[5]));
+		$("#colitems137").text(trim(tableData[6]));
+		colPan13();
+		
+		//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
 	});
 
 

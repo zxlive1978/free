@@ -825,31 +825,31 @@ window.onresize = function(event) {
 <table>
   <tr>
             <td><label for="ncolor">Скважина:</label></td>
-            <td><input type="text" id="colitems121" name="colitems131" value=""></td>
+            <td><input type="text" id="colitems131" name="colitems131" value=""></td>
   </tr>
   <tr>
             <td><label for="ncolor">База:</label></td>
-            <td><input type="text" id="colitems122" name="colitems132" value=""></td>
+            <td><input type="text" id="colitems132" name="colitems132" value=""></td>
   </tr>
   <tr>
             <td><label for="ncolor">Тип работ:</label></td>
-            <td><input type="text" id="colitems123" name="colitems133" value=""></td>
+            <td><input type="text" id="colitems133" name="colitems133" value=""></td>
   </tr>
   <tr>
             <td><label for="ncolor">Тип станции:</label></td>
-            <td><input type="text" id="colitems124" name="colitems134" value=""></td>
+            <td><input type="text" id="colitems134" name="colitems134" value=""></td>
   </tr>
   <tr>
             <td><label for="ncolor">Фамилия начальника:</label></td>
-            <td><input type="text" id="colitems125" name="colitems135" value=""></td>
+            <td><input type="text" id="colitems135" name="colitems135" value=""></td>
   </tr>
   <tr>
             <td><label for="ncolor">Телефон:</label></td>
-            <td><input type="text" id="colitems126" name="colitems136" value=""></td>
+            <td><input type="text" id="colitems136" name="colitems136" value=""></td>
   </tr>
   <tr>
             <td><label for="ncolor">Эл.почта:</label></td>
-            <td><input type="text" id="colitems127" name="colitems137" value=""></td>
+            <td><input type="text" id="colitems137" name="colitems137" value=""></td>
   </tr>
   
 
