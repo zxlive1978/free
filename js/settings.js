@@ -1497,7 +1497,7 @@ function adm (){
 	});
 
 	//Клик скважины
-	$('#skvs tr').on('click','#skvs tr' , function() {
+	$('#skvs tr').on('tr','click' , function() {
 		var tableData = $(this).children("td").map(function() {
 			return $(this).text();
 		}).get();
