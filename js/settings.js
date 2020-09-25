@@ -1426,7 +1426,14 @@ $('#skvs tr:last').after('<tr><td>'+String($("#colitems121").val())+'</td>'+
 '<td>'+String($("#colitems125").val())+'</td>'+
 '<td>'+String($("#colitems126").val())+'</td>'+
 '<td>'+String($("#colitems127").val())+'</td>'+
-'</tr>');
+'</tr>'
+);
+
+
+	//colPan13();
+	
+	//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
+});
 //console.log(wells);
 //$('#skvs tbody').append('<tr><td>'+String($("#colitems121").val())+'</td></tr>');
 //Открыть закрыть админку
@@ -1491,7 +1498,7 @@ function adm (){
 	});
 
 	//Клик скважины
-	$('#skvs tr').click(function() {
+	$('#skvs tr').on('click','#skvs tr' , function() {
 		var tableData = $(this).children("td").map(function() {
 			return $(this).text();
 		}).get();
