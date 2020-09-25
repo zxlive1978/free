@@ -1385,6 +1385,23 @@ function colPan13 () {
 	
 	//console.log('fdsf');
 }
+//Изменить запись
+function colOK13 () {
+//Изменить выбранную из скважин
+for (var keey in wells) {
+	if (wells[keey].wellN == String($("#colitems132").val())) {
+		
+		wells[keey].txt = String($("#colitems131").val());
+		wells[keey].type = String($("#colitems133").val());
+		wells[keey].typeStn = String($("#colitems134").val());
+		wells[keey].nach = String($("#colitems135").val());
+		wells[keey].tel = String($("#colitems136").val());
+		wells[keey].email = String($("#colitems137").val());
+	}
+}
+	
+}
+
 //Удалить запись
 function colOK131 () {
 	
@@ -1411,7 +1428,7 @@ function colOK131 () {
 		indx += 1;
 		fullnameidx = String(nameidx+indx);
 	}
-	console.log(tmpwells);
+	//{}освобождение
 	wells = null;
 	wells= tmpwells;
 	tmpwells = null;
