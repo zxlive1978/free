@@ -56,6 +56,7 @@
 <script type="text/javascript" src="js/pong.js"></script>
 <script type="text/javascript" src="js/sutki.js"></script>
 <script type="text/javascript" src="js/read_comment.js"></script>
+<script type="text/javascript" src="js/writeskvs.js"></script>
 
 
 

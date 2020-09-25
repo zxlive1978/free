@@ -1,46 +1,31 @@
-//Чтение произвольного куска
-function read_random(){
-	refresh = false;
-	online = false;
-	/* if (refresh==true){ */
-	end_time = start_time/1 + Sheet.Kzoom*60*60;
-	var data = null;
-	$.ajax({
-		type: "GET",
-		url: 'js/read_random.php',
-		data: {name: 'Wayne',well_Name: wellName, start_time: start_time, end_time: end_time},
-		cache: false,
-		success: function(data){
-			
-			var mass = eval(data);
-			//var mass = data;
-			//console.log(mass);
-			//alert(mass);
-			d110d = null;
-			d110d = mass.slice();
-			
-			//numbs110d = null;
-			
-			
-			//А ЭТО АХУЕННО ИНТЕРЕСНО!
-			//Если нет данных
-			/* if (d110d.length == 0){
-				drawGraf =false ;
-				d110d = beg_rec.slice();
-				d110d[0]["Vrema"] = start_time;
-				d110d[d110d.length-1]["Vrema"] = end_time;
-				//console.log (beg_rec);
-				//console.log (d110d);
-				} else {drawGraf = true ;} */
-			//ГО
-			repaint ();
-			
-		}
-	});
-/* 	}
-	setTimeout(read_random, 3000); */
-	//} else {
-	//start_time = back_start_time;
-	//end_time = back_end_time;
-	//}
-};
+<?php
+	$dbc= mysqli_connect('127.0.0.1', 'goodman', 'NRywfHcXEmzenn7S') or
+		die(mysqli_sqlstate($dbc));
+	
+	$code_page="SET NAMES 'utf8';";
+	mysqli_query($dbc,$code_page) or
+		die(mysqli_sqlstate($dbc));
+
+	$name_base="pozitron";
+	$xy_value110d=array();
+	
+	$table="skvs";
+	$p000 = $_GET['p000'];
+	$skvjson = $_GET['skvsjson'];
+	$nu = "ok";
+	
+
+
+	$query="SELECT * FROM ".$name_base.".".$table." WHERE ".$x_id.">".(int)$start_time." AND ".$x_id."<".(int)$end_time.";";
+	#echo $table;
+	$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+	//echo mysqli_sqlstate($dbc);
+	// echo $_POST['email'];
+	//echo $result;
+	
+	$xy_value110d = array();
+	
+	echo json_encode($nu);
+    mysqli_close($dbc);
+		
+?>
