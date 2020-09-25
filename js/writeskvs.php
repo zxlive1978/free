@@ -16,7 +16,7 @@
 	
 
 
-	$query="INSERT INTO ".$name_base.".".$table." VALUES (".$p000.",".$skvjson.");";
+	$query="INSERT INTO ".$name_base.".".$table." VALUES ( ".$p000.",".$skvjson." );";
 	#echo $table;
 	$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 	//echo mysqli_sqlstate($dbc);
