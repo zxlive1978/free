@@ -1389,12 +1389,18 @@ function colPan13 () {
 function colOK131 () {
 	//Удалить выбранную из скважин
 	for (var keey in wells) {
-		if (wells[keey].wellN = String($("#colitems132").val())) {
-			console.log(wells[keey].wellN);
+		if (wells[keey].wellN == String($("#colitems132").val())) {
 			delete (wells[keey]);
-		
 		}
 	}
+	//Пересчитать индексы
+	var i=0
+	for (var keey in wells) {
+		wells[keey]=i;
+		i=i+1;
+
+	}
+
 	//Очистка и добавка
 	$('#tabs-2').empty();
 	$('#tabs-2').append('<button type="button" name="addskv" id="addskv" class="btn btn-success mb-1" data-dismiss="modal" >+</button>');
