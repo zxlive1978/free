@@ -1387,6 +1387,8 @@ function colPan13 () {
 }
 //Удалить запись
 function colOK131 () {
+	var myRow = $("#skvs tr").index($tr);
+	console.log(myRow);
 	//Удалить выбранную из скважин
 	for (var keey in wells) {
 		if (wells[keey].wellN == String($("#colitems132").val())) {
@@ -1396,7 +1398,7 @@ function colOK131 () {
 	//Пересчитать индексы
 	var i=0
 	for (var keey in wells) {
-		wells[keey]=i;
+		wells[keey]='par'+String(i);
 		i=i+1;
 
 	}
