@@ -1396,12 +1396,21 @@ function colOK131 () {
 		}
 	}
 	//Пересчитать индексы
-	var i=0
-	for (var keey in wells) {
-		wells[keey]='par'+String(i);
-		i=i+1;
-
+	 var indx = 0;
+	var nameidx = 'par'
+	var fullnameidx = String(nameidx+indx);
+	for (key in wells){
+		
+		var curPar ={};
+		
+		curPar = JSON.stringify(Object.assign({}, wells[key]));
+		curPar = JSON.parse(curPar);
+		wells[String(fullnameidx)]=curPar;
+		delete curPar;
+		indx += 1;
+		fullnameidx = String(nameidx+indx);
 	}
+	console.log(wells);
 
 	//Очистка и добавка
 	$('#tabs-2').empty();
