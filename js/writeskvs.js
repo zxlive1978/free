@@ -1,9 +1,8 @@
 //Запись скважины
-function write(){
+function writeskvs(p000,skvsjson){
 	refresh = false;
-	online = false;
-	/* if (refresh==true){ */
-	end_time = start_time/1 + Sheet.Kzoom*60*60;
+    online = false;
+    
 	var data = null;
 	$.ajax({
 		type: "GET",
@@ -37,10 +36,5 @@ function write(){
 			
 		}
 	});
-/* 	}
-	setTimeout(read_random, 3000); */
-	//} else {
-	//start_time = back_start_time;
-	//end_time = back_end_time;
-	//}
+
 };
