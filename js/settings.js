@@ -1174,6 +1174,7 @@ var selIdx=0;
 
 function colPan10 (name_select) {
 	refresh = false;
+	
 	$('#wellN').empty();
 	//добавление в список
 	for (var keey in wells) {
@@ -1188,7 +1189,9 @@ function colPan10 (name_select) {
 	
 	/* var selIdx=$("#wellN").prop('selectedIndex');
 	wellidx = selIdx; */
-	
+	if (Object.keys(wells).length-1<wellidx){
+		wellidx=0;
+	}
 	$("#wellNwork1").text(wells['par'+wellidx].type);
 	$("#wellNwork2").text(wells['par'+wellidx].typeStn);
 	$("#wellNwork3").text(wells['par'+wellidx].nach);
@@ -1399,6 +1402,10 @@ for (var keey in wells) {
 		wells[keey].email = String($("#colitems137").val());
 	}
 }
+$('#skvs tbody').empty();
+for (var keey in wells) {
+	$('#skvs tbody').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
+}
 	
 }
 
@@ -1431,35 +1438,32 @@ function colOK131 () {
 	//{}освобождение
 	wells = null;
 	wells= tmpwells;
-	tmpwells = null;
-	console.log(wells);
+	//console.log(wells);
 	//Очистка и добавка
-	$('#tabs-2').empty();
-	$('#tabs-2').append('<button type="button" name="addskv" id="addskv" class="btn btn-success mb-1" data-dismiss="modal" >+</button>');
-	$('#tabs-2').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="skvs" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Тип работ</th><th>Тип станции</th><th>Фамилия начальника</th><th>Телефон</th><th>Эл.почта</th></tr></thead><tbody></tbody></table></div>');
+	$('#skvs tbody').empty();
 	for (var keey in wells) {
 		$('#skvs tbody').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
 	}
 	//Клик скважины
-	$("#skvs tbody").on("click", "tr", function(event){
-		var tableData = $(this).children("td").map(function() {
-			return $(this).text();
-		}).get();
-		$("#colitems131").val($.trim(tableData[0]));
-		$("#colitems132").val($.trim(tableData[1]));
-		$("#colitems133").val($.trim(tableData[2]));
-		$("#colitems134").val($.trim(tableData[3]));
-		$("#colitems135").val($.trim(tableData[4]));
-		$("#colitems136").val($.trim(tableData[5]));
-		$("#colitems137").val($.trim(tableData[6]));
-		colPan13();
+	// $("#skvs tbody").on("click", "tr", function(event){
+	// 	var tableData = $(this).children("td").map(function() {
+	// 		return $(this).text();
+	// 	}).get();
+	// 	$("#colitems131").val($.trim(tableData[0]));
+	// 	$("#colitems132").val($.trim(tableData[1]));
+	// 	$("#colitems133").val($.trim(tableData[2]));
+	// 	$("#colitems134").val($.trim(tableData[3]));
+	// 	$("#colitems135").val($.trim(tableData[4]));
+	// 	$("#colitems136").val($.trim(tableData[5]));
+	// 	$("#colitems137").val($.trim(tableData[6]));
+	// 	colPan13();
 		
-	});
+	// });
 	
 	//Добавить скважину
-	$('#addskv').click(function() {
-		colPan12 ();
-	});
+	// $('#addskv').click(function() {
+	// 	colPan12 ();
+	// });
 	
 }
 
