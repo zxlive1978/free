@@ -1387,14 +1387,18 @@ function colPan13 () {
 }
 //Удалить запись
 function colOK131 () {
-	var myRow = $("#skvs tr").index($tr);
-	console.log(myRow);
+	
 	//Удалить выбранную из скважин
 	for (var keey in wells) {
 		if (wells[keey].wellN == String($("#colitems132").val())) {
 			delete (wells[keey]);
 		}
 	}
+	tmpwells={};
+	tmpwells=wells;
+	wells = {};
+	wells= tmpwells;
+	console.log(wells);
 	//Пересчитать индексы
 	 var indx = 0;
 	var nameidx = 'par'
@@ -1434,7 +1438,7 @@ function colOK131 () {
 		colPan13();
 		
 	});
-	console.log(wells);
+	
 }
 
 //Добавление  диалогзаписи по скважине
