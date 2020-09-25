@@ -1387,12 +1387,37 @@ function colPan13 () {
 }
 //Удалить запись
 function colOK131 () {
-	$("skvs tbody").find('input[name="record"]').each(function() {
-		if ($(this).is(":checked")) {
-			$(this).parents("tr").remove();
+	//Удалить выбранную из скважин
+	for (var keey in wells) {
+		if (wells[keey].wellN = String($("#colitems132").val())) {
+			console.log(wells[keey].wellN);
+			delete (wells[keey]);
+		
 		}
+	}
+	//Очистка и добавка
+	$('#tabs-2').empty();
+	$('#tabs-2').append('<button type="button" name="addskv" id="addskv" class="btn btn-success mb-1" data-dismiss="modal" >+</button>');
+	$('#tabs-2').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="skvs" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Тип работ</th><th>Тип станции</th><th>Фамилия начальника</th><th>Телефон</th><th>Эл.почта</th></tr></thead><tbody></tbody></table></div>');
+	for (var keey in wells) {
+		$('#skvs tbody').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
+	}
+	//Клик скважины
+	$("#skvs tbody").on("click", "tr", function(event){
+		var tableData = $(this).children("td").map(function() {
+			return $(this).text();
+		}).get();
+		$("#colitems131").val($.trim(tableData[0]));
+		$("#colitems132").val($.trim(tableData[1]));
+		$("#colitems133").val($.trim(tableData[2]));
+		$("#colitems134").val($.trim(tableData[3]));
+		$("#colitems135").val($.trim(tableData[4]));
+		$("#colitems136").val($.trim(tableData[5]));
+		$("#colitems137").val($.trim(tableData[6]));
+		colPan13();
+		
 	});
-
+	console.log(wells);
 }
 
 //Добавление  диалогзаписи по скважине
