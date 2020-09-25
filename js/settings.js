@@ -1385,9 +1385,15 @@ function colPan13 () {
 	
 	//console.log('fdsf');
 }
+//Удалить запись
+function colOK131 () {
+	$("skvs tbody").find('input[name="record"]').each(function() {
+		if ($(this).is(":checked")) {
+			$(this).parents("tr").remove();
+		}
+	});
 
-
-
+}
 
 //Добавление  диалогзаписи по скважине
 function colPan12 () {
