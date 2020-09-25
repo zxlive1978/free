@@ -16,14 +16,12 @@
 	
 
 
-	$query="SELECT * FROM ".$name_base.".".$table." WHERE ".$x_id.">".(int)$start_time." AND ".$x_id."<".(int)$end_time.";";
+	$query="INSERT INTO ".$name_base.".".$table." VALUES (".$p000.",".$skvjson.");";
 	#echo $table;
 	$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 	//echo mysqli_sqlstate($dbc);
 	// echo $_POST['email'];
 	//echo $result;
-	
-	$xy_value110d = array();
 	
 	echo json_encode($nu);
     mysqli_close($dbc);
