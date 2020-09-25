@@ -1429,7 +1429,6 @@ $('#skvs tr:last').after('<tr><td>'+String($("#colitems121").val())+'</td>'+
 '</tr>'
 );
 
-
 	//colPan13();
 	
 	//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
@@ -1491,13 +1490,11 @@ function adm (){
 
 	//Добавить скважину
 	$('#addskv').click(function() {
-		
-	
 		colPan12 ();
 	});
 
 	//Клик скважины
-	$('#skvs tr').on('tr','click' , function() {
+	$("#skvs tbody").on("click", "tr", function(event){
 		var tableData = $(this).children("td").map(function() {
 			return $(this).text();
 		}).get();
@@ -1515,7 +1512,7 @@ function adm (){
 
 
 	//Клик Камеры
-	$('#cams tr').click(function() {
+	$("#cams tbody").on("click", "tr", function(event){
 		var tableData = $(this).children("td").map(function() {
 			return $(this).text();
 		}).get();
