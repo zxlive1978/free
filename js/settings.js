@@ -1433,7 +1433,6 @@ $('#skvs tr:last').after('<tr><td>'+String($("#colitems121").val())+'</td>'+
 	//colPan13();
 	
 	//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
-});
 //console.log(wells);
 //$('#skvs tbody').append('<tr><td>'+String($("#colitems121").val())+'</td></tr>');
 //Открыть закрыть админку
