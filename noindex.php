@@ -1,3 +1,10 @@
+<?php
+
+if (!$_SESSION['start']) {
+	header("Location: index.html");
+	exit;
+}
+?>
 <html>
 <title></title>
 <head>
