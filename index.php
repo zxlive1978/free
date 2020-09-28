@@ -47,7 +47,9 @@
 			$_SESSION['id'] = $user['id']; 
       $_SESSION['login'] = $user['login']; 
       echo 'Привет, '.$_SESSION['login'];
-      include './noindex.html';
+      $_SESSION['start'] = true;
+      include './noindex.php';
+      
       //include './noindex.php';
 		} else {
       //Пользователь неверно ввел логин или пароль, выполним какой-то код.
