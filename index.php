@@ -25,13 +25,13 @@
     mysqli_query($dbc,$code_page) or die(mysqli_sqlstate($dbc));
     $name_base="pozitron";
     $table="USERS";
-    $query = "SELECT * FROM ".$name_base.".".$table."  WHERE login=".$login." AND password=".$pass.";";
+    $query = "SELECT * FROM ".$name_base.".".$table."  WHERE login='".$login."' AND password='".$pass."';";
     echo $query;
     echo $pass;
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc)); //ответ базы запишем в переменную $result. 
     $user = mysqli_fetch_assoc($result); //преобразуем ответ из БД в нормальный массив PHP
-    echo $result;
-    echo $query;
+    //echo $result;
+    //echo $query;
     mysqli_close($dbc);
 
 		//Если база данных вернула не пустой ответ - значит пара логин-пароль правильная
@@ -48,7 +48,7 @@
       $_SESSION['login'] = $user['login']; 
       echo 'Привет, dasdsdad'.$_SESSION['login'];
       
-      //include './noindex.php';
+      include './noindex.php';
 		} else {
       //Пользователь неверно ввел логин или пароль, выполним какой-то код.
       echo 'Привет,fdsf'.$_SESSION['login'];
