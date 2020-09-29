@@ -25,7 +25,7 @@ function writeskvs(p000,skvsjson){
 	var data = null;
 	$.ajax({
 		type: "POST",
-		url: 'js/writeskv.php',
+		url: 'js/writeskvs.php',
 		data: {p000: p000, skvsjson:skvsjson },
 		cache: false,
 		async: false,
