@@ -1,6 +1,6 @@
 <?php
-
-if (!$_SESSION['start']) {
+//session_start();
+if (!$_SESSION['auth']) {
 	header("Location: index.html");
 	exit;
 }
@@ -124,12 +124,12 @@ if (!$_SESSION['start']) {
     <div id="dialogvideo" name="dialogvideo" title="Камера 2">
     <iframe width="100%" height="100%"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-    webkitAllowFullScreen mozallowfullscreen allowfullscreen
+    webkitAllowFullScreen mozallowfullscreen allowfullscreen allow="autoplay"
     title="0" byline="0" portrait="0"
     width="280" height="157"
     frameborder="0"
-    <!--allow="autoplay"-->
-      src="//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188" </iframe>
+    allow="autoplay"
+      src="//hydrofalll.ddns.net:5443/LiveApp/play.html?name=728732916424756293354866"> </iframe>
     
     </div>
 		<div class="btn-group" role="group" aria-label="Basic example">
@@ -169,11 +169,14 @@ if (!$_SESSION['start']) {
 	
   </div>
   
-  <div class="media-left">
+  <div class="media-left" title="">
+  <a class="navbar-brand" href="#">
     <img src="css/img_avatar1.png" class="rounded-circle" style="width:50px">
+    <?php echo 'Добрый день, '.$_SESSION['login']; ?>
+  </a>
   </div>
   
-  <div class="btn-group" role="group" aria-label="Basic example">
+  <div class="btn-group" role="group" aria-label="Basic example" onClick='location.href="index.html"'>
 			<button type="button" class="btnbg-light bg-light btn-lg">ВЫХОД</button>
 			</div>
 </nav>

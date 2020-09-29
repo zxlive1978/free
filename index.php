@@ -45,18 +45,20 @@
 
 			//Пишем в сессию логин и id пользователя (их мы берем из переменной $user!):
 			$_SESSION['id'] = $user['id']; 
-      $_SESSION['login'] = $user['login']; 
-      echo 'Привет, '.$_SESSION['login'];
-      $_SESSION['start'] = true;
+      $_SESSION['login'] = $user['login'];
       include './noindex.php';
       
       //include './noindex.php';
 		} else {
-      //Пользователь неверно ввел логин или пароль, выполним какой-то код.
-      echo 'Привет,fdsf'.$_SESSION['login'];
+	  //Пользователь неверно ввел логин или пароль, выполним какой-то код.
+	  //echo "<script>alert(\"Неверный пароль или логин\");</script>"; 
+      //echo 'Неверный пароль или логин'.$_SESSION['login'];
       
-      //include './index.html';
+      header("Location: index.html");
     }
     
+	} else {
+		header("Location: index.html");
+
 	}
 ?>
