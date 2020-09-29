@@ -2,18 +2,38 @@
 function writeskvs(p000,skvsjson){
 	refresh = false;
     online = false;
-    
+    /*$.ajax({
+	      method: "POST", // метод HTTP, используемый для запроса
+	      url: "about.php", // строка, содержащая URL адрес, на который отправляется запрос
+	      data: { // данные, которые будут отправлены на сервер
+	        name: "Denis",
+	        city: "Erebor"
+	      },
+	      success: [function ( msg ) { // функции обратного вызова, которые вызываются если AJAX запрос выполнится успешно (если несколько функций, то необходимо помещать их в массив)
+	        $( "p" ).text( "User saved: " + msg ); // добавляем текстовую информацию и данные возвращенные с сервера
+	      },
+	      function () { // вызов второй функции из массива
+	        console.log( "next function" );
+	      }],
+	      statusCode: {
+	        200: function () { // выполнить функцию если код ответа HTTP 200
+	          console.log( "Ok" );
+	        }
+	      }
+	    });
+    */
 	var data = null;
 	$.ajax({
-		type: "GET",
+		type: "POST",
 		url: 'js/writeskv.php',
 		data: {p000: p000, skvsjson:skvsjson },
 		cache: false,
+		async: false,
 		success: function(data){
 			
 			var mass = eval(data);
 			//var mass = data;
-			console.log(mass);
+			alert(mass);
 			//alert(mass);
 			//d110d = null;
 			//d110d = mass.slice();

@@ -1,4 +1,9 @@
 <?php
+
+/* Отладка ошибок */
+	ini_set('display_errors',1);
+	error_reporting(E_ALL ^E_NOTICE);
+	
 	$dbc= mysqli_connect('127.0.0.1', 'goodman', 'NRywfHcXEmzenn7S') or
 		die(mysqli_sqlstate($dbc));
 	
@@ -10,8 +15,8 @@
 	$xy_value110d=array();
 	
 	$table="skvs";
-	$p000 = $_GET['p000'];
-	$skvjson = $_GET['skvsjson'];
+	$p000 = $_POST['p000'];
+	$skvjson = $_POST['skvsjson'];
 	$nu = "ok";
 	
 

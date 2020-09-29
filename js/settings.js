@@ -1568,7 +1568,8 @@ function adm (){
 
 	//Добавить скважину
 	$('#addskv').click(function() {
-		colPan12 ();
+		//colPan12 ();
+		writeskvs("p000",JSON.stringify(Object.assign({}, wells['par0'])));
 	});
 
 	//Клик скважины
