@@ -1489,14 +1489,11 @@ curPar.tel = String($("#colitems126").val());
 curPar.email = String($("#colitems127").val());
 
 
-//console.log(curPar);
-// var idr = makeid();
-//var idr = bigPar[String($("#colitems2").val())].par;
+
 //Создание новой записи параметра!!!
-//basePar[String('par'+(Object.keys(basePar).length+1))]=curPar;
 wells[String('par'+String((Object.keys(wells).length)))]=curPar;
 
-
+//Добавление в таблицу отображения
 $('#skvs tr:last').after('<tr><td>'+String($("#colitems121").val())+'</td>'+
 '<td>'+String($("#colitems122").val())+'</td>'+
 '<td>'+String($("#colitems123").val())+'</td>'+
@@ -1506,13 +1503,8 @@ $('#skvs tr:last').after('<tr><td>'+String($("#colitems121").val())+'</td>'+
 '<td>'+String($("#colitems127").val())+'</td>'+
 '</tr>'
 );
-
-	//colPan13();
-	
-	//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
-//console.log(wells);
-//$('#skvs tbody').append('<tr><td>'+String($("#colitems121").val())+'</td></tr>');
-//Открыть закрыть админку
+//Запись в mysql в таблицу skvs
+writeskvs(String('par'+String((Object.keys(wells).length-1))),JSON.stringify(Object.assign({}, curPar)));
 }
 
 //Админка
@@ -1568,8 +1560,7 @@ function adm (){
 
 	//Добавить скважину
 	$('#addskv').click(function() {
-		//colPan12 ();
-		writeskvs("p000",JSON.stringify(Object.assign({}, wells['par0'])));
+		colPan12 ();		
 	});
 
 	//Клик скважины
