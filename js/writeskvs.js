@@ -30,7 +30,7 @@ function writeskvs(table, p000, skvsjson){
 		cache: false,
 		async: false,
 		success: function(data){
-			if data!='1' {};
+			if data!='1' {alert('нет связи')};
 			
 			//var mass = eval(data);
 			//var mass = data;
