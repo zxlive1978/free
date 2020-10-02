@@ -23,11 +23,11 @@
 
 
 	$query="INSERT INTO ".$name_base.".".$table." VALUES ( '".$p000."' , '".$skvjson."' );";
-	echo $query;
+	//echo $query;
 	$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 	//echo mysqli_sqlstate($dbc);
 	// echo $_POST['email'];
-	echo $result;
+	//echo $result;
 	
 	//echo json_encode($nu);
     mysqli_close($dbc);

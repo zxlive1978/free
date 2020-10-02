@@ -30,10 +30,11 @@ function writeskvs(table, p000, skvsjson){
 		cache: false,
 		async: false,
 		success: function(data){
+			if data!='1' {};
 			
-			var mass = eval(data);
+			//var mass = eval(data);
 			//var mass = data;
-			alert(data);
+			
 			//alert(mass);
 			//d110d = null;
 			//d110d = mass.slice();
