@@ -1,5 +1,5 @@
 //Запись скважины
-function writeskvs(table, p000, skvsjson){
+function writeskvs(whatdo, table, p000, skvsjson){
 	refresh = false;
 	online = false;
     /*$.ajax({
@@ -26,7 +26,7 @@ function writeskvs(table, p000, skvsjson){
 	$.ajax({
 		type: "POST",
 		url: 'js/writeskvs.php',
-		data: {table: table, p000: p000, skvsjson:skvsjson },
+		data: {whatdo:whatdo, table: table, p000: p000, skvsjson:skvsjson },
 		cache: false,
 		async: false,
 		success: function(data){

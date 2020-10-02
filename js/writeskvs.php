@@ -15,13 +15,13 @@
 	$xy_value110d=array();
 	
 	$table=$_POST['table'];
-	//$table="skvs";
+	$whatdo=$_POST['whatdo'];
 	$p000 = $_POST['p000'];
 	$skvjson = $_POST['skvsjson'];
 	$nu = "ok";
 	
 
-	if ($table == 'skvs'){
+	if ($table == 'skvs' && $whatdo == 'create'){
 		$query="INSERT INTO ".$name_base.".".$table." VALUES ( '".$p000."' , '".$skvjson."' );";}
 	//echo $query;
 	$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
