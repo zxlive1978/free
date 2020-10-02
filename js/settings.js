@@ -1504,7 +1504,7 @@ $('#skvs tr:last').after('<tr><td>'+String($("#colitems121").val())+'</td>'+
 '</tr>'
 );
 //Запись в mysql в таблицу skvs
-writeskvs('skvs', String('par'+String((Object.keys(wells).length-1))),JSON.stringify(Object.assign({}, curPar)));
+writeskvs("skvs", String('par'+String((Object.keys(wells).length-1))),JSON.stringify(Object.assign({}, curPar)));
 }
 
 //Админка
