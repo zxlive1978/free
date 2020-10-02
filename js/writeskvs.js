@@ -1,7 +1,8 @@
 //Запись скважины
 function writeskvs(table, p000, skvsjson){
 	refresh = false;
-    online = false;
+	online = false;
+	console.log( table );
     /*$.ajax({
 	      method: "POST", // метод HTTP, используемый для запроса
 	      url: "about.php", // строка, содержащая URL адрес, на который отправляется запрос
