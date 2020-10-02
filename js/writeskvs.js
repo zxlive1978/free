@@ -1,5 +1,5 @@
 //Запись скважины
-function writeskvs(table ,p000,skvsjson){
+function writeskvs(table, p000, skvsjson){
 	refresh = false;
     online = false;
     /*$.ajax({
