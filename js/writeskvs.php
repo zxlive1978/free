@@ -15,14 +15,15 @@
 	$xy_value110d=array();
 	
 	$table=$_POST['table'];
+	//$table="skvs";
 	$p000 = $_POST['p000'];
 	$skvjson = $_POST['skvsjson'];
 	$nu = "ok";
 	
 
 
-	$query="INSERT INTO ".$name_base.".".$table." VALUES ( ".$p000.", ".$skvjson." );";
-	echo $table;
+	$query="INSERT INTO ".$name_base.".".$table." VALUES ( '".$p000."' , '".$skvjson."' );";
+	echo $query;
 	$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 	//echo mysqli_sqlstate($dbc);
 	// echo $_POST['email'];

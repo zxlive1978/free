@@ -33,7 +33,7 @@ function writeskvs(table, p000, skvsjson){
 			
 			var mass = eval(data);
 			//var mass = data;
-			alert(mass);
+			alert(data);
 			//alert(mass);
 			//d110d = null;
 			//d110d = mass.slice();
