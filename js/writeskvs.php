@@ -14,7 +14,7 @@
 	$name_base="pozitron";
 	$xy_value110d=array();
 	
-	$table=$_POST['skvs'];
+	$table=$_POST['table'];
 	$p000 = $_POST['p000'];
 	$skvjson = $_POST['skvsjson'];
 	$nu = "ok";
