@@ -20,14 +20,25 @@
 	$skvjson = $_POST['skvsjson'];
 	$nu = "ok";
 	
-
+	//create
 	if ($table == 'skvs' && $whatdo == 'create'){
-		$query="INSERT INTO ".$name_base.".".$table." VALUES ( '".$p000."' , '".$skvjson."' );";}
-	//echo $query;
-	$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
-	//echo mysqli_sqlstate($dbc);
-	// echo $_POST['email'];
-	echo $result;
+		$query="INSERT INTO ".$name_base.".".$table." VALUES ( '".$p000."' , '".$skvjson."' );";
+		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+		echo $result;}
+	
+	//read
+	if ($table == 'skvs' && $whatdo == 'read'){
+		$comment = array();
+		while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
+			//echo $row[$x_id]." - ".$row[$y_id]."<br />";
+			$cur_rec= array('p000' => $row['p000'],'skvjson' => $row['skvjson']);
+			//$cur_rec['Wkp'] = $row['Wkp'];
+			array_push($comment, $cur_rec);
+			}
+		mysqli_free_result($result);
+		
+		echo json_encode($comment);}
+
 	
 	//echo json_encode($nu);
     mysqli_close($dbc);
