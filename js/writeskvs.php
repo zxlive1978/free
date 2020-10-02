@@ -27,7 +27,7 @@
 	$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 	//echo mysqli_sqlstate($dbc);
 	// echo $_POST['email'];
-	//echo $result;
+	echo $result;
 	
 	//echo json_encode($nu);
     mysqli_close($dbc);
