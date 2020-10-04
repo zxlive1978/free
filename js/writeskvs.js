@@ -77,14 +77,15 @@ function readskvs(whatdo, table, p000, skvsjson){
 			//console.log(data);
 			//var mass = eval(data);
 			//var mass = data;
-			console.log(data);
+			
 			console.log(wells);
 			//alert(mass);
 			wellstr = null;
 			//wellstr = mass.slice();
 
 			var wellstr = JSON.stringify(Object.assign({}, data));  // convert array to string
-			//var wells = JSON.parse(wellstr);  // convert string to json object
+			var data = JSON.parse(wellstr);  // convert string to json object
+			console.log(data);
 			console.log(wells);
 			
 			//numbs110d = null;
