@@ -28,10 +28,12 @@
 	
 	//read
 	if ($table == 'skvs' && $whatdo == 'read'){
+		$query="SELECT * FROM ".$name_base.".".$table.";";
+		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		$comment = array();
 		while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
 			//echo $row[$x_id]." - ".$row[$y_id]."<br />";
-			$cur_rec= array('p000' => $row['p000'],'skvjson' => $row['skvjson']);
+			$cur_rec= array($row['p000'] => $row['skvjson']);
 			//$cur_rec['Wkp'] = $row['Wkp'];
 			array_push($comment, $cur_rec);
 			}
