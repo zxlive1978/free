@@ -75,15 +75,16 @@ function readskvs(whatdo, table, p000, skvsjson){
 		success: function(data){
 			//if (Number(data)!=1) {alert('нет связи')};
 			//console.log(data);
-			var mass = eval(data);
+			//var mass = eval(data);
 			//var mass = data;
+			console.log(data);
 			console.log(wells);
 			//alert(mass);
 			wellstr = null;
-			wellstr = mass.slice();
+			//wellstr = mass.slice();
 
-			var wellstr = JSON.stringify(Object.assign({}, wellstr));  // convert array to string
-			var wells = JSON.parse(arrayToString);  // convert string to json object
+			var wellstr = JSON.stringify(Object.assign({}, data));  // convert array to string
+			//var wells = JSON.parse(wellstr);  // convert string to json object
 			console.log(wells);
 			
 			//numbs110d = null;
