@@ -75,12 +75,13 @@ function readskvs(whatdo, table, p000, skvsjson){
 		success: function(data){
 			//if (Number(data)!=1) {alert('нет связи')};
 			//console.log(data);
-			//var mass = eval(data);
+			var mass = eval(data);
 			//var mass = data;
-			console.log(data);
+			console.log(well);
 			//alert(mass);
-			//d110d = null;
-			//d110d = mass.slice();
+			well = null;
+			well = mass.slice();
+			console.log(well);
 			
 			//numbs110d = null;
 			
