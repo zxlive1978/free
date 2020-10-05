@@ -65,7 +65,7 @@ function readskvs(whatdo, table, p000, skvsjson){
 				
 				}
 			//  console.log(wellss);
-			//  console.log(wells);
+			console.log(wells);
 			
 		
 			

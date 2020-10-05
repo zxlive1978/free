@@ -10,16 +10,16 @@ var row_str = '<tr><td><select name="auser" id="auser"  size="5" style="height: 
 var wells = {	
 	//par0 :  {wellN: 's401', txt: 'АГКМ-406', type: 'Ремонт', typeStn:'Разрез', nach:'Сидоров С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
 	//par1 :  {wellN: 's20', txt: 'АГКМ-73', type: 'Ремонт', typeStn:'Разрез', nach:'Иванов И.И.', tel:'222222', email:'sobaka12@sobaka.com'},
-	par0 :  {wellN: 's110', txt: 'АГКМ-99', type: 'Ремонт', typeStn:'Разрез', nach:'Арбузов П.П.', tel:'232222', email:'sobaka13@sobaka.com'},
-	par1 :  {wellN: 's908', txt: 'АГКМ-609', type: 'Ремонт', typeStn:'Разрез', nach:'Огурцов О.О.', tel:'252222', email:'sobaka15@sobaka.com'},
-	par2 :  {wellN: 's610', txt: 'АГКМ-260', type: 'Бурение', typeStn:'ИМС', nach:'Помидоров П.П.', tel:'262222', email:'sobaka16@sobaka.com'},
-	par3 :  {wellN: 's630', txt: 'АГКМ-9917', type: 'Бурение', typeStn:'ИМС', nach:'Баклажанов Б.Б.', tel:'272222', email:'sobaka17@sobaka.com'},
-	//par4 :  {wellN: 's629', txt: 'АГКМ-629', type: 'Бурение', typeStn:'ИМС', nach:'Редискин Р.Р.', tel:'282222', email:'sobaka18@sobaka.com'},
-	par4 :  {wellN: 's627', txt: 'АГКМ-627', type: 'Бурение', typeStn:'ИМС', nach:'Капустин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
-	par5 :  {wellN: 's915', txt: 'АГКМ-934', type: 'Бурение', typeStn:'ИМС', nach:'Кабачков К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
-	par6 :  {wellN: 's224', txt: 'АГКМ-604', type: 'Бурение', typeStn:'ИМС', nach:'Репин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
-	par7 :  {wellN: 's20', txt: 'АГКМ-938', type: 'Ремонт', typeStn:'Разрез', nach:'Редискин С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
-	par8 :  {wellN: 's4450', txt: 'АГКМ-71', type: 'Ремонт', typeStn:'ИМС', nach:'Морковкин С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
+	// par0 :  {wellN: 's110', txt: 'АГКМ-99', type: 'Ремонт', typeStn:'Разрез', nach:'Арбузов П.П.', tel:'232222', email:'sobaka13@sobaka.com'},
+	// par1 :  {wellN: 's908', txt: 'АГКМ-609', type: 'Ремонт', typeStn:'Разрез', nach:'Огурцов О.О.', tel:'252222', email:'sobaka15@sobaka.com'},
+	// par2 :  {wellN: 's610', txt: 'АГКМ-260', type: 'Бурение', typeStn:'ИМС', nach:'Помидоров П.П.', tel:'262222', email:'sobaka16@sobaka.com'},
+	// par3 :  {wellN: 's630', txt: 'АГКМ-9917', type: 'Бурение', typeStn:'ИМС', nach:'Баклажанов Б.Б.', tel:'272222', email:'sobaka17@sobaka.com'},
+	// //par4 :  {wellN: 's629', txt: 'АГКМ-629', type: 'Бурение', typeStn:'ИМС', nach:'Редискин Р.Р.', tel:'282222', email:'sobaka18@sobaka.com'},
+	// par4 :  {wellN: 's627', txt: 'АГКМ-627', type: 'Бурение', typeStn:'ИМС', nach:'Капустин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
+	// par5 :  {wellN: 's915', txt: 'АГКМ-934', type: 'Бурение', typeStn:'ИМС', nach:'Кабачков К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
+	// par6 :  {wellN: 's224', txt: 'АГКМ-604', type: 'Бурение', typeStn:'ИМС', nach:'Репин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
+	// par7 :  {wellN: 's20', txt: 'АГКМ-938', type: 'Ремонт', typeStn:'Разрез', nach:'Редискин С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
+	// par8 :  {wellN: 's4450', txt: 'АГКМ-71', type: 'Ремонт', typeStn:'ИМС', nach:'Морковкин С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
 	
 };
 
@@ -1307,7 +1307,9 @@ function vertical() {
 
 
 //Выбор скважины Bootstrap navi
-$(document).load(function () {
+$(document).ready(function () {
+			//Чтение списка скважин
+			readskvs('read','skvs', '','');
 			//Список скважин
             $('[id^="par"]').click(function (){
 				/* console.log(this.id); */

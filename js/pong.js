@@ -65,11 +65,13 @@ if(!window.localStorage.getItem('wellName')) {
 
 
 //$("#wellNwork1").text(wells['par0'].type);
-$("#wellNwork1").text('fdfsfsf');
-$("#wellNwork2").text(wells['par0'].typeStn);
-$("#wellNwork3").text(wells['par0'].nach);
-$("#wellNwork4").text(wells['par0'].tel);
-$("#wellNwork5").text(wells['par0'].email);
+// $("#wellNwork1").text('fdfsfsf');
+// $("#wellNwork2").text(wells['par0'].typeStn);
+// $("#wellNwork3").text(wells['par0'].nach);
+// $("#wellNwork4").text(wells['par0'].tel);
+// $("#wellNwork5").text(wells['par0'].email);
+
+
 
 //Загрузка формы при старте
 colOK8start(formname);
