@@ -45,7 +45,6 @@
 	if ($table == 'skvs' && $whatdo == 'update'){
 		$query="UPDATE ".$name_base.".".$table." SET skvjson='".$skvjson."' WHERE p000='".$p000."';";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
-		
 		echo $result;}
 
 	
