@@ -1502,10 +1502,12 @@ $('#skvs tr:last').after('<tr><td>'+String($("#colitems121").val())+'</td>'+
 '<td>'+String($("#colitems127").val())+'</td>'+
 '</tr>'
 );
-//Запись всех текущих скважин
-for (var keey in wells) {
-	writeskvs('create','skvs', String(keey),wells[keey]);
-}
+// //Запись всех текущих скважин
+// for (var keey in wells) {
+// 	writeskvs('create','skvs', String(keey), JSON.stringify(wells[keey]));
+// 	// console.log(keey);
+// 	// console.log(wells[keey]);
+// }
 
 //Создание новой записи параметра!!!
 //wells[String('par'+String((Object.keys(wells).length)))]=curPar;
@@ -1514,7 +1516,7 @@ for (var keey in wells) {
 //writeskvs('create','skvs', String('par'+String((Object.keys(wells).length-1))),JSON.stringify(Object.assign({}, curPar)));
 
 //Чтение всех скважин
-//readskvs('read','skvs', String('par'+String((Object.keys(wells).length-1))),JSON.stringify(Object.assign({}, curPar)));
+readskvs('read','skvs', '','');
 }
 
 //Админка
