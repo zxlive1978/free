@@ -78,12 +78,17 @@ function readskvs(whatdo, table, p000, skvsjson){
 			//console.log(data);
 			//var mass = eval(data);
 			//var mass = data;
+			var wellss = {};
 			var len = response.length;
             for(var i=0; i<len; i++){
                 var p000 = response[i].p000;
 				var skvjson = response[i].skvjson;
-				console.log(skvjson);
-                }
+				//skvjson = JSON.parse(skvjson);
+				
+				wellss = JSON.parse('{ '+p000+': ' + skvjson+' },');
+				
+				}
+			console.log(wellss);
 			
 			//alert(mass);
 			// wellstr = null;
