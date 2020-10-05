@@ -26,7 +26,7 @@
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		echo $result;}
 	
-	//read
+	//read all
 	if ($table == 'skvs' && $whatdo == 'read'){
 		$query="SELECT * FROM ".$name_base.".".$table.";";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
@@ -40,6 +40,13 @@
 		mysqli_free_result($result);
 		
 		echo json_encode($comment);}
+
+	//update
+	if ($table == 'skvs' && $whatdo == 'update'){
+		$query="UPDATE ".$name_base.".".$table." SET skvjson='".$skvjson."' WHERE p000='".$p000."';";
+		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+		
+		echo $result;}
 
 	
 	//echo json_encode($nu);
