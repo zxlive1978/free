@@ -71,13 +71,28 @@ function readskvs(whatdo, table, p000, skvsjson){
 		url: 'js/writeskvs.php',
 		data: {whatdo:whatdo, table: table, p000: p000, skvsjson:skvsjson },
 		cache: false,
+		dataType: 'JSON',
 		async: false,
-		success: function(data){
+		success: function(response){
 			//if (Number(data)!=1) {alert('нет связи')};
 			//console.log(data);
 			//var mass = eval(data);
 			//var mass = data;
-			
+			var len = response.length;
+            for(var i=0; i<len; i++){
+                var id = response[i].id;
+                var username = response[i].username;
+                var name = response[i].name;
+                var email = response[i].email;
+
+                var tr_str = "<tr>" +
+                    "<td align='center'>" + (i+1) + "</td>" +
+                    "<td align='center'>" + username + "</td>" +
+                    "<td align='center'>" + name + "</td>" +
+                    "<td align='center'>" + email + "</td>" +
+                    "</tr>";
+
+                $("#userTable tbody").append(tr_str);}
 			console.log(wells);
 			//alert(mass);
 			wellstr = null;
