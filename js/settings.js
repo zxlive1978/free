@@ -1398,7 +1398,7 @@ function colPan13 () {
 function colOK13 () {
 //Изменить выбранную из скважин
 for (var keey in wells) {
-	if (wells[keey].wellN == selectkeey) {
+	if ( keey== selectkeey) {
 		wells[keey].wellN =  String($("#colitems132").val());
 		wells[keey].txt = String($("#colitems131").val());
 		wells[keey].type = String($("#colitems133").val());
