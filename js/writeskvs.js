@@ -80,30 +80,21 @@ function readskvs(whatdo, table, p000, skvsjson){
 			//var mass = data;
 			var len = response.length;
             for(var i=0; i<len; i++){
-                var id = response[i].id;
-                var username = response[i].username;
-                var name = response[i].name;
-                var email = response[i].email;
-
-                var tr_str = "<tr>" +
-                    "<td align='center'>" + (i+1) + "</td>" +
-                    "<td align='center'>" + username + "</td>" +
-                    "<td align='center'>" + name + "</td>" +
-                    "<td align='center'>" + email + "</td>" +
-                    "</tr>";
-
-                $("#userTable tbody").append(tr_str);}
-			console.log(wells);
-			//alert(mass);
-			wellstr = null;
-			//wellstr = mass.slice();
-
-			var wellstr = JSON.stringify(Object.assign({}, data));  // convert array to string
-			var data = JSON.parse(wellstr);  // convert string to json object
-			console.log(data);
-			console.log(wells);
+                var p000 = response[i].p000;
+				var skvjson = response[i].skvjson;
+				console.log(skvjson);
+                }
 			
-			//numbs110d = null;
+			//alert(mass);
+			// wellstr = null;
+			// //wellstr = mass.slice();
+
+			// var wellstr = JSON.stringify(Object.assign({}, data));  // convert array to string
+			// var data = JSON.parse(wellstr);  // convert string to json object
+			// console.log(data);
+			// console.log(wells);
+			
+			// //numbs110d = null;
 			
 			
 			//А ЭТО АХУЕННО ИНТЕРЕСНО!
