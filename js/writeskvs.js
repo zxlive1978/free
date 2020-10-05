@@ -93,30 +93,7 @@ function readskvs(whatdo, table, p000, skvsjson){
 			 console.log(wellss);
 			 console.log(wells);
 			
-			//alert(mass);
-			// wellstr = null;
-			// //wellstr = mass.slice();
-
-			// var wellstr = JSON.stringify(Object.assign({}, data));  // convert array to string
-			// var data = JSON.parse(wellstr);  // convert string to json object
-			// console.log(data);
-			// console.log(wells);
-			
-			// //numbs110d = null;
-			
-			
-			//А ЭТО АХУЕННО ИНТЕРЕСНО!
-			//Если нет данных
-			/* if (d110d.length == 0){
-				drawGraf =false ;
-				d110d = beg_rec.slice();
-				d110d[0]["Vrema"] = start_time;
-				d110d[d110d.length-1]["Vrema"] = end_time;
-				//console.log (beg_rec);
-				//console.log (d110d);
-				} else {drawGraf = true ;} */
-			//ГО
-			
+		
 			
 		}
 	});
