@@ -46,7 +46,12 @@
 		$query="UPDATE ".$name_base.".".$table." SET skvjson='".$skvjson."' WHERE p000='".$p000."';";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		echo $result;}
-
+	
+	//delete & reindex
+	if ($table == 'skvs' && $whatdo == 'delete'){
+		$query="UPDATE ".$name_base.".".$table." SET skvjson='".$skvjson."' WHERE p000='".$p000."';";
+		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+		echo $result;}
 	
 	//echo json_encode($nu);
     mysqli_close($dbc);
