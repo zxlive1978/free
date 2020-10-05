@@ -1383,10 +1383,14 @@ $(document).ready(function () {
 
 //<iframe width="560" height="315" src="//hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572" frameborder="0" allowfullscreen></iframe>
 //
-
+var selectkeey='';
 //Изменить/ удалить  диалог по скважине
 function colPan13 () {
 	$("#myModal13").modal();
+	for (var keey in wells) {
+		if (wells[keey].wellN == String($("#colitems132").val())) {
+			selectkeey=keey;
+		}
 	
 	//console.log('fdsf');
 }
@@ -1394,8 +1398,8 @@ function colPan13 () {
 function colOK13 () {
 //Изменить выбранную из скважин
 for (var keey in wells) {
-	if (wells[keey].wellN == String($("#colitems132").val())) {
-		
+	if (wells[keey].wellN == selectkeey) {
+		wells[keey].wellN =  String($("#colitems132").val());
 		wells[keey].txt = String($("#colitems131").val());
 		wells[keey].type = String($("#colitems133").val());
 		wells[keey].typeStn = String($("#colitems134").val());

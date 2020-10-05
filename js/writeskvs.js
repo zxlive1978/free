@@ -28,6 +28,7 @@ function writeskvs(whatdo, table, p000, skvsjson){
 		async: false,
 		success: function(data){
 			if (Number(data)!=1) {alert('нет связи')};
+			//alert(data);
 			
 		}
 	});
