@@ -1390,7 +1390,7 @@ function colPan13 () {
 	for (var keey in wells) {
 		if (wells[keey].wellN == String($("#colitems132").val())) {
 			selectkeey=keey;
-		}
+		}}
 	
 	//console.log('fdsf');
 }
