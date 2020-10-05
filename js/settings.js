@@ -1512,10 +1512,10 @@ $('#skvs tr:last').after('<tr><td>'+String($("#colitems121").val())+'</td>'+
 // }
 
 //Создание новой записи параметра!!!
-//wells[String('par'+String((Object.keys(wells).length)))]=curPar;
+wells[String('par'+String((Object.keys(wells).length)))]=curPar;
 
 //Добавление скважины в mysql в таблицу skvs
-//writeskvs('create','skvs', String('par'+String((Object.keys(wells).length-1))),JSON.stringify(Object.assign({}, curPar)));
+writeskvs('create','skvs', String('par'+String((Object.keys(wells).length-1))),JSON.stringify(Object.assign({}, curPar)));
 
 //Чтение всех скважин
 readskvs('read','skvs', '','');
