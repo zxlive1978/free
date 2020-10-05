@@ -1490,8 +1490,7 @@ curPar.email = String($("#colitems127").val());
 
 
 
-//Создание новой записи параметра!!!
-wells[String('par'+String((Object.keys(wells).length)))]=curPar;
+
 
 //Добавление в таблицу отображения
 $('#skvs tr:last').after('<tr><td>'+String($("#colitems121").val())+'</td>'+
@@ -1507,6 +1506,9 @@ $('#skvs tr:last').after('<tr><td>'+String($("#colitems121").val())+'</td>'+
 for (var keey in wells) {
 	writeskvs('create','skvs', String(keey),wells[keey]);
 }
+
+//Создание новой записи параметра!!!
+//wells[String('par'+String((Object.keys(wells).length)))]=curPar;
 
 //Добавление скважины в mysql в таблицу skvs
 //writeskvs('create','skvs', String('par'+String((Object.keys(wells).length-1))),JSON.stringify(Object.assign({}, curPar)));
