@@ -1309,24 +1309,8 @@ function vertical() {
 //Выбор скважины Bootstrap navi
 $(document).ready(function () {
 			//Чтение списка скважин
-			readskvs('read','skvs', '','');
-			//Список скважин
-            $('[id^="par"]').click(function (){
-				/* console.log(this.id); */
-				skv =wells[this.id].txt;
-				wellName =wells[this.id].wellN;
-				namecmt = wellName + "kr";
-				//Сохранить в локальное хранилище
-				colPan9save(wellName,skv,namecmt,formname);
-				refresh = true;
-				read_next();
-            });
-			
-			$('#shab').click(function (){
-				/* console.log(this.id); */
-				$('#shab1').modal('show');
-			});
-
+			readskvstart('read','skvs', '','');
+		
 			
 			
 			

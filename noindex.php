@@ -9,7 +9,7 @@ if (!$_SESSION['auth']) {
 <title></title>
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 
 <link rel="stylesheet" type="text/css" href="css/jschart5.css">
@@ -262,7 +262,7 @@ window.onresize = function(event) {
 </script>
 
 
-<div class="modal fade" id="myModal1">
+<div class="modal fade col-md-4" id="myModal1">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
       
