@@ -42,7 +42,7 @@ let d110d =function (){
 var wellName ="s20";
 var skv ="АГКМ-938";
 var namecmt = wellName + "kr";
-var formname = "Цветная";
+var formname = "Под телефон";
 
 
 //Сохранение и чтение настроей из локального хранилища
