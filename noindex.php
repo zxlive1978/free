@@ -134,7 +134,7 @@ if (!$_SESSION['auth']) {
       src="//hydrofalll.ddns.net:5443/LiveApp/play.html?name=728732916424756293354866"> </iframe>
     
     </div>
-		<div class="btn-group" role="group" aria-label="Basic example">
+		<div class="btn-group" role="group" aria-label="">
 		<button class="btn bg-light btn-lg " type="button" id="adm" name="adm" onclick='adm()'>
     Админка</button>	
 		</div>
@@ -174,12 +174,12 @@ if (!$_SESSION['auth']) {
   <div class="media-left" title="">
   <a class="navbar-brand" href="#">
     <img src="css/img_avatar1.png" class="rounded-circle" style="width:50px">
-    <?php echo 'Добрый день, '.$_SESSION['login']; ?>
+    <?php echo ' '.$_SESSION['login']; ?>
   </a>
   </div>
   
   <div class="btn-group" role="group" aria-label="Basic example" onClick='location.href="index.html"'>
-			<button type="button" class="btnbg-light bg-light btn-lg">ВЫХОД</button>
+			<button type="button" class="btnbg-light bg-light btn-md">ВЫХОД</button>
 			</div>
 </nav>
 
@@ -262,7 +262,7 @@ window.onresize = function(event) {
 </script>
 
 
-<div class="modal fade col-md-4" id="myModal1">
+<div class="modal fade col-md-4 form-inline" id="myModal1">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
       
@@ -282,7 +282,7 @@ window.onresize = function(event) {
   <td><label for="hcolcolor">Цвет линий:</label></td><td><input type="color" id="syscolor" name="syscolor" value="#e66465"/>
   </tr>
    <tr>
-  <td><label for="hcolcolor">Толщина линий оформления:</label></td><td><input type="text" id="width_line_p" name="width_line_p" value="0"/>
+  <td><label for="hcolcolor">Толщина линий оформления:</label></td><td><input type="text" class="form-control" id="width_line_p" name="width_line_p" value="0"/>
   </tr>
   <tr>
   <td><label for="hcolcolor">Толщина линий графиков:</label></td><td><input type="text" id="width_gxf_line" name="width_gxf_line" value="0"/>
