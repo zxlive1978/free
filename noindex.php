@@ -178,7 +178,7 @@ if (!$_SESSION['auth']) {
   </a>
   </div>
   
-  <div class="btn-group" role="group" aria-label="Basic example" onClick='location.href="index.html"'>
+  <div class="btn-group" aria-hidden="true" role="group" aria-label="Basic example" onClick='location.href="index.html"'>
 			<button type="button" class="btnbg-light bg-light btn-md">ВЫХОД</button>
 			</div>
 </nav>
@@ -262,7 +262,7 @@ window.onresize = function(event) {
 </script>
 
 
-<div class="modal fade col-md-4 form-inline" id="myModal1">
+<div class="modal fade" id="myModal1">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
       
@@ -282,7 +282,7 @@ window.onresize = function(event) {
   <td><label for="hcolcolor">Цвет линий:</label></td><td><input type="color" id="syscolor" name="syscolor" value="#e66465"/>
   </tr>
    <tr>
-  <td><label for="hcolcolor">Толщина линий оформления:</label></td><td><input type="text" class="form-control" id="width_line_p" name="width_line_p" value="0"/>
+  <label for="hcolcolor">Толщина линий оформления:</label><input type="text"  class="form-control input-lg"  id="width_line_p" name="width_line_p" value="0"/>
   </tr>
   <tr>
   <td><label for="hcolcolor">Толщина линий графиков:</label></td><td><input type="text" id="width_gxf_line" name="width_gxf_line" value="0"/>
