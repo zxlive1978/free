@@ -61,7 +61,7 @@ function readskvs(whatdo, table, p000, skvsjson){
 };
 
 //Чтение всех скважинпри старте
-function readskvs(whatdo, table, p000, skvsjson){
+function readskvstart(whatdo, table, p000, skvsjson){
 	refresh = false;
 	online = false;
 	$.ajax({
