@@ -44,6 +44,8 @@ var skv ="АГКМ-938";
 var namecmt = wellName + "kr";
 var formname = "Под телефон";
 
+if (!isMobile){formname="Цветная";}
+
 
 //Сохранение и чтение настроей из локального хранилища
 if(!window.localStorage.getItem('wellName')) {
