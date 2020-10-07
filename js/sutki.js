@@ -450,7 +450,7 @@ function init(){
 						})
 					meg.draggable(
 					).on('dragend', function(e){
-						if (isMobile) { parPan(this.attr('id'));}
+						if (isMobile) { colPan7 (this.attr('id'));}
 						var oldCol = txtPar[this.attr('id')].poz.x;
 						var oldStr = txtPar[this.attr('id')].poz.y;
 						for (var key in Columns) {
@@ -660,7 +660,7 @@ function init(){
 					})
 				meg.draggable(
 				).on('dragend', function(e){
-					if (isMobile) { parPan(this.attr('id'));}
+					if (isMobile) { colPan6 (this.attr('id'));}
 					var oldCol = txtOknOPar[this.attr('id')].poz.x;
 					var oldStr = txtOknOPar[this.attr('id')].poz.y;
 					for (var key in Columns) {
