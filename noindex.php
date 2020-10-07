@@ -273,37 +273,26 @@ window.onresize = function(event) {
         </div>
         
         <!-- Modal body -->
-        <form>
-        <div class="input-group mb-1 px-2">
-        <div class="input-group-prepend">
-        <span class="input-group-text" id="">Цвет линий оформления:</span>
-        </div>
-        <input type="color" id="syscolor" name="syscolor" value="#e66465" class="form-control">
-        </div>
-        <div class="input-group mb-1 px-2">
-        <div class="input-group-prepend">
-        <span class="input-group-text" id="">Толщина линий оформления:</span>
-        </div>
-        <input class="form-control" type="text" id="width_line_p" name="width_line_p" value="0">
-        </div>
-        <div class="input-group mb-1 px-2"><div class="input-group-prepend">
-        <span class="input-group-text" id="">Толщина линий графиков:</span></div>
-        <input class="form-control" type="text"  id="width_gxf_line" name="width_gxf_line" value="0"></div>
-        
-        <div class="input-group mb-1 px-2"><div class="input-group-prepend">
-        <span class="input-group-text" id="">Шрифт:</span></div>
-        <select class="form-control" type="text"  id="font" name="font" value="0"></div>
-        
-        <div class="input-group mb-1 px-2"><div class="input-group-prepend">
-        <span class="input-group-text" id="">Коэфф. размера шрифта:</span></div>
-        <select class="form-control" type="text"  id="K_size_txt" name="K_size_txt" value="0"></div>
-        
-      
-      </form>
-      <br>
-  <table>
-  
-  
+        <div class="modal-body">
+          <table>
+
+  <tr>  
+ 
+  <tr>
+  <td><label for="hcolcolor">Цвет линий:</label></td><td><input type="color" id="syscolor" name="syscolor" value="#e66465"/>
+  </tr>
+   <tr>
+  <label for="hcolcolor">Толщина линий оформления:</label><input type="text"  class="form-control input-lg"  id="width_line_p" name="width_line_p" value="0"/>
+  </tr>
+  <tr>
+  <td><label for="hcolcolor">Толщина линий графиков:</label></td><td><input type="text" id="width_gxf_line" name="width_gxf_line" value="0"/>
+  </tr>
+  <tr>
+  <tr>
+  <td><label for="hcolcolor">Шрифт:</label></td><td><select id="font" name="font" value="3">
+  <option value="1">3 часа</option>
+  </select>
+  </tr>
   <tr>
   <td><label for="hcolcolor">Коэфф. размера шрифта:</label></td><td><input type="text" id="K_size_txt" name="K_size_txt" value="0"/>
   </tr>
@@ -329,7 +318,7 @@ window.onresize = function(event) {
   <td><label for="hcolcolor">Высота панели инструментов:</label></td><td><input type="text" id="icosize" name="icosize" value="0"/>
   </tr>
    <tr>
-  <td><label for="hcolcolor">Высота панели инструментов (моб):</label></td><td><input type="text" id="icosizem" name="icosizem" value="0"/>
+  <td><label for="hcolcolor">Высота панели инструментов(моб):</label></td><td><input type="text" id="icosizem" name="icosizem" value="0"/>
   </tr>
   <tr>
   <td><label for="hcolcolor">Цвет 1 панели инструментов:</label></td><td><input type="color" id="grcol1" name="grcol1" value="#e66465"/>
@@ -389,7 +378,7 @@ window.onresize = function(event) {
   <td><label for="hcolcolor">Кнопка "Форма":</label></td><td><input type="color" id="rawsvg4" name="rawsvg4" value="#e66465"/>
   </tr>
   <tr>
-  <td><label for="hcolcolor">Фон кнопок (белый/черный):</label></td><td><input type="checkbox" id="fonbut" name="fonbut"/>
+  <td><label for="hcolcolor">Фон кнопок(белый/черный):</label></td><td><input type="checkbox" id="fonbut" name="fonbut"/>
 </table>
         </div>
         
@@ -626,7 +615,7 @@ window.onresize = function(event) {
   </tr>
 
   <tr>
-            <td><label for="ncolor">Логарифм. шкала:</label></td>
+            <td><label for="ncolor">Логарифмическая шкала:</label></td>
             <td><input type="checkbox" id="parlog" name="parlog" value="#e66465"/>
         </td>
   </tr>
