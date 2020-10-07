@@ -318,7 +318,7 @@ window.onresize = function(event) {
   <td><label for="hcolcolor">Высота панели инструментов:</label></td><td><input type="text" id="icosize" name="icosize" value="0"/>
   </tr>
    <tr>
-  <td><label for="hcolcolor">Высота панели инструментов(моб):</label></td><td><input type="text" id="icosizem" name="icosizem" value="0"/>
+  <td><label for="hcolcolor">Высота панели инструментов (моб):</label></td><td><input type="text" id="icosizem" name="icosizem" value="0"/>
   </tr>
   <tr>
   <td><label for="hcolcolor">Цвет 1 панели инструментов:</label></td><td><input type="color" id="grcol1" name="grcol1" value="#e66465"/>
@@ -378,7 +378,7 @@ window.onresize = function(event) {
   <td><label for="hcolcolor">Кнопка "Форма":</label></td><td><input type="color" id="rawsvg4" name="rawsvg4" value="#e66465"/>
   </tr>
   <tr>
-  <td><label for="hcolcolor">Фон кнопок(белый/черный):</label></td><td><input type="checkbox" id="fonbut" name="fonbut"/>
+  <td><label for="hcolcolor">Фон кнопок (белый/ черный):</label></td><td><input type="checkbox" id="fonbut" name="fonbut"/>
 </table>
         </div>
         
@@ -615,7 +615,7 @@ window.onresize = function(event) {
   </tr>
 
   <tr>
-            <td><label for="ncolor">Логарифмическая шкала:</label></td>
+            <td><label for="ncolor">Логариф. шкала:</label></td>
             <td><input type="checkbox" id="parlog" name="parlog" value="#e66465"/>
         </td>
   </tr>
