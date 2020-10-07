@@ -281,10 +281,9 @@ window.onresize = function(event) {
 
   <label for="hcolcolor">Толщина линий графиков:</label><input type="text" class="form-control input-lg" id="width_gxf_line" name="width_gxf_line" value="0"/>
 
-  <label for="hcolcolor">Шрифт:</label><select id="font" class="form-control input-lg" name="font" value="3">
+  <label for="hcolcolor">Шрифт:</label><select id="font"  class="form-control input-lg" name="font" /></select>
 
-  <label for="hcolcolor">Коэфф. размера шрифта:</label></td><td><input type="text" id="K_size_txt" name="K_size_txt" value="0"/>
-  <label for="hcolcolor">Коэфф. размера шрифта:</label><input class="form-control input-lg"type="text" id="K_size_txt" name="K_size_txt" value="0"/>
+  <label for="hcolcolor">Коэфф. размера шрифта:</label><input class="form-control input-lg" type="text" id="K_size_txt" name="K_size_txt" value="0"/>
   
   
   <label for="hcolcolor">Коэфф. размера шрифта(моб):</label><input class="form-control input-lg"type="text" id="K_size_txt_mobile" name="K_size_txt_mobile" value="0"/>
