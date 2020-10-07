@@ -1407,29 +1407,35 @@ function colOK131 () {
 	//Удалить выбранную из скважин
 	for (var keey in wells) {
 		if (wells[keey].wellN == String($("#colitems132").val())) {
+			deleteskvs('delete','skvs', keey,'');
 			delete (wells[keey]);
 		}
 	}
 	tmpwells={};
-	
-	//Пересчитать индексы
-	 var indx = 0;
-	var nameidx = 'par'
-	var fullnameidx = String(nameidx+indx);
-	for (key in wells){
+	//Чтение всех скважин
+	readskvs('read','skvs', '','');
+
+	///////////
+	// //Пересчитать индексы
+	//  var indx = 0;
+	// var nameidx = 'par'
+	// var fullnameidx = String(nameidx+indx);
+	// for (key in wells){
 		
-		var curPar ={};
+	// 	var curPar ={};
 		
-		curPar = JSON.stringify(Object.assign({}, wells[key]));
-		curPar = JSON.parse(curPar);
-		tmpwells[String(fullnameidx)]=curPar;
-		delete curPar;
-		indx += 1;
-		fullnameidx = String(nameidx+indx);
-	}
-	//{}освобождение
-	wells = null;
-	wells= tmpwells;
+	// 	curPar = JSON.stringify(Object.assign({}, wells[key]));
+	// 	curPar = JSON.parse(curPar);
+	// 	tmpwells[String(fullnameidx)]=curPar;
+	// 	delete curPar;
+	// 	indx += 1;
+	// 	fullnameidx = String(nameidx+indx);
+	// }
+	// //{}освобождение
+	// wells = null;
+	// wells= tmpwells;
+
+
 	//console.log(wells);
 	//Очистка и добавка
 	$('#skvs tbody').empty();
