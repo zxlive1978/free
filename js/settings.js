@@ -1184,19 +1184,19 @@ function colPan10 (name_select) {
 				text : wells[keey].txt
 				}));
 	}
-	//Восстановление выбора
-	$('#wellN').val(wellName);
+	// //Восстановление выбора
+	// $('#wellN').val(wellName);
 	
-	/* var selIdx=$("#wellN").prop('selectedIndex');
-	wellidx = selIdx; */
-	if (Object.keys(wells).length-1<wellidx){
-		wellidx=0;
-	}
-	$("#wellNwork1").text(wells['par'+wellidx].type);
-	$("#wellNwork2").text(wells['par'+wellidx].typeStn);
-	$("#wellNwork3").text(wells['par'+wellidx].nach);
-	$("#wellNwork4").text(wells['par'+wellidx].tel);
-	$("#wellNwork5").text(wells['par'+wellidx].email);
+	// /* var selIdx=$("#wellN").prop('selectedIndex');
+	// wellidx = selIdx; */
+	// if (Object.keys(wells).length-1<wellidx){
+	// 	wellidx=0;
+	// }
+	// $("#wellNwork1").text(wells['par'+wellidx].type);
+	// $("#wellNwork2").text(wells['par'+wellidx].typeStn);
+	// $("#wellNwork3").text(wells['par'+wellidx].nach);
+	// $("#wellNwork4").text(wells['par'+wellidx].tel);
+	// $("#wellNwork5").text(wells['par'+wellidx].email);
 	
 
 	//Выбранная скважина
@@ -1406,10 +1406,10 @@ function colOK131 () {
 	
 	//Удалить выбранную из скважин
 	for (var keey in wells) {
-		console.log( keey);
+		//console.log( keey);
 		if (wells[keey].wellN == String($("#colitems132").val())) {
-			deleteskvs('delete','skvs', keey);
-			console.log( keey, keey.slice(1 , ));
+			deleteskvs('delete','skvs', keey.slice(3 , ));
+			//console.log( keey, keey.slice(3 , ));
 			delete (wells[keey]);
 		}
 	}
