@@ -33,7 +33,7 @@
 		$comment = array();
 		while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
 			//echo $row[$x_id]." - ".$row[$y_id]."<br />";
-			$cur_rec= array('p000'=>$row['id'], 'skvjson'=> $row['skvjson']);
+			$cur_rec= array('p000'=>'p'.$row['id'], 'skvjson'=> $row['skvjson']);
 			//$cur_rec['Wkp'] = $row['Wkp'];
 			array_push($comment, $cur_rec);
 			}
@@ -49,7 +49,7 @@
 	
 	//delete &  reindex
 	if ($table == 'skvs' && $whatdo == 'delete'){
-		$query="DELETE  FROM  ".$name_base.".".$table." WHERE p000='".$p000."';";
+		$query="DELETE  FROM  ".$name_base.".".$table." WHERE id=".$p000.";";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		echo $result;}
 	

@@ -1406,8 +1406,10 @@ function colOK131 () {
 	
 	//Удалить выбранную из скважин
 	for (var keey in wells) {
+		console.log( keey);
 		if (wells[keey].wellN == String($("#colitems132").val())) {
-			deleteskvs('delete','skvs', keey,'');
+			deleteskvs('delete','skvs', keey.slice(1 , ),'');
+			console.log( keey, keey.slice(1 , ));
 			delete (wells[keey]);
 		}
 	}
