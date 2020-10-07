@@ -274,113 +274,102 @@ window.onresize = function(event) {
         
         <!-- Modal body -->
         <div class="modal-body">
-          <table>
 
-  <tr>  
- 
-  <tr>
-  <td><label for="hcolcolor">Цвет линий:</label></td><td><input type="color" id="syscolor" name="syscolor" value="#e66465"/>
-  </tr>
-   <tr>
+  <label for="hcolcolor">Цвет линий:</label><input type="color" class="form-control input-lg" id="syscolor" name="syscolor" value="#e66465"/>
+
   <label for="hcolcolor">Толщина линий оформления:</label><input type="text"  class="form-control input-lg"  id="width_line_p" name="width_line_p" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Толщина линий графиков:</label></td><td><input type="text" id="width_gxf_line" name="width_gxf_line" value="0"/>
-  </tr>
-  <tr>
-  <tr>
-  <td><label for="hcolcolor">Шрифт:</label></td><td><select id="font" name="font" value="3">
-  <option value="1">3 часа</option>
-  </select>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Коэфф. размера шрифта:</label></td><td><input type="text" id="K_size_txt" name="K_size_txt" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Коэфф. размера шрифта(моб):</label></td><td><input type="text" id="K_size_txt_mobile" name="K_size_txt_mobile" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Радиус круга полож. столбца:</label></td><td><input type="text" id="markheight" name="markheight" value="0"/>
-  </tr>
-   <tr>
-  <td><label for="hcolcolor">Цвет круга полож. столбца:</label></td><td><input type="color" id="markcol" name="markcol" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Цвет ключевого столбца:</label></td><td><input type="color" id="marktime" name="marktime" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Размер шрифта комментариев:</label></td><td><input type="text" id="cmtsize" name="cmtsize" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Цвет комментариев:</label></td><td><input type="color" id="cmtcolor" name="cmtcolor" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Высота панели инструментов:</label></td><td><input type="text" id="icosize" name="icosize" value="0"/>
-  </tr>
-   <tr>
-  <td><label for="hcolcolor">Высота панели инструментов (моб):</label></td><td><input type="text" id="icosizem" name="icosizem" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Цвет 1 панели инструментов:</label></td><td><input type="color" id="grcol1" name="grcol1" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Цвет 2 панели инструментов:</label></td><td><input type="color" id="grcol2" name="grcol2" value="#e66465"/>
-  </tr>	
-  <tr>
-  <td><label for="hcolcolor">Пунктирная линия:</label></td><td><input type="text" id="dasharray" name="dasharray" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Цвет пунктирной линии:</label></td><td><input type="color" id="dashcol1" name="dashcol1" value="#e66465"/>
-  </tr>	
-  <tr>
-  <td><label for="hcolcolor">Цвет области пропуска значений:</label></td><td><input type="color" id="holcol" name="holcol" value="#e66465"/>
-  </tr>
-   <tr>
-  <td><label for="hcolcolor">Прозрачность обл. пропуска значений:</label></td><td><input type="text" id="holhide" name="holhide" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Ширина области текущ. значений:</label></td><td><input type="text" id="width_value" name="width_value" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Высота области текущ. значений:</label></td><td><input type="text" id="height_value" name="height_value" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Цвет области текущ. значений:</label></td><td><input type="color" id="curcolorval" name="curcolorval" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Прозрачность области текущ. значений:</label></td><td><input type="text" id="faderr" name="faderr" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Кнопка "Удалить":</label></td><td><input type="color" id="delcol" name="delcol" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Кнопка "Настройки":</label></td><td><input type="color" id="toolcol" name="toolcol" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Кнопка "Добавить":</label></td><td><input type="color" id="pluscol" name="pluscol" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Кнопка "Замок":</label></td><td><input type="color" id="rawsvg0" name="rawsvg0" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Редактирование экрана:</label></td><td><input type="checkbox" id="editscrn" name="editscrn"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Кнопка "Скважина":</label></td><td><input type="color" id="rawsvg1" name="rawsvg1" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Кнопка "Календарь":</label></td><td><input type="color" id="rawsvg2" name="rawsvg2" value="#e66465"/>
-  </tr>
-   <tr>
-  <td><label for="hcolcolor">Кнопка "Лупа":</label></td><td><input type="color" id="rawsvg3" name="rawsvg3" value="#e66465"/>
-  </tr>
-   <tr>
-  <td><label for="hcolcolor">Кнопка "Форма":</label></td><td><input type="color" id="rawsvg4" name="rawsvg4" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Фон кнопок (белый/ черный):</label></td><td><input type="checkbox" id="fonbut" name="fonbut"/>
-</table>
-        </div>
+
+  <label for="hcolcolor">Толщина линий графиков:</label><input type="text" class="form-control input-lg" id="width_gxf_line" name="width_gxf_line" value="0"/>
+
+  <label for="hcolcolor">Шрифт:</label><select id="font" class="form-control input-lg" name="font" value="3">
+
+  <label for="hcolcolor">Коэфф. размера шрифта:</label></td><td><input type="text" id="K_size_txt" name="K_size_txt" value="0"/>
+  <label for="hcolcolor">Коэфф. размера шрифта:</label><input class="form-control input-lg"type="text" id="K_size_txt" name="K_size_txt" value="0"/>
+  
+  
+  <label for="hcolcolor">Коэфф. размера шрифта(моб):</label><input class="form-control input-lg"type="text" id="K_size_txt_mobile" name="K_size_txt_mobile" value="0"/>
+  
+  
+  <label for="hcolcolor">Радиус круга полож. столбца:</label><input class="form-control input-lg"type="text" id="markheight" name="markheight" value="0"/>
+  
+   
+  <label for="hcolcolor">Цвет круга полож. столбца:</label><input class="form-control input-lg"type="color" id="markcol" name="markcol" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Цвет ключевого столбца:</label><input class="form-control input-lg"type="color" id="marktime" name="marktime" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Размер шрифта комментариев:</label><input class="form-control input-lg"type="text" id="cmtsize" name="cmtsize" value="0"/>
+  
+  
+  <label for="hcolcolor">Цвет комментариев:</label><input class="form-control input-lg"type="color" id="cmtcolor" name="cmtcolor" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Высота панели инструментов:</label><input class="form-control input-lg"type="text" id="icosize" name="icosize" value="0"/>
+  
+   
+  <label for="hcolcolor">Высота панели инструментов (моб):</label><input class="form-control input-lg"type="text" id="icosizem" name="icosizem" value="0"/>
+  
+  
+  <label for="hcolcolor">Цвет 1 панели инструментов:</label><input class="form-control input-lg"type="color" id="grcol1" name="grcol1" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Цвет 2 панели инструментов:</label><input class="form-control input-lg"type="color" id="grcol2" name="grcol2" value="#e66465"/>
+  	
+  
+  <label for="hcolcolor">Пунктирная линия:</label><input class="form-control input-lg"type="text" id="dasharray" name="dasharray" value="0"/>
+  
+  
+  <label for="hcolcolor">Цвет пунктирной линии:</label><input class="form-control input-lg"type="color" id="dashcol1" name="dashcol1" value="#e66465"/>
+  	
+  
+  <label for="hcolcolor">Цвет области пропуска значений:</label><input class="form-control input-lg"type="color" id="holcol" name="holcol" value="#e66465"/>
+  
+   
+  <label for="hcolcolor">Прозрачность обл. пропуска значений:</label><input class="form-control input-lg"type="text" id="holhide" name="holhide" value="0"/>
+  
+  
+  <label for="hcolcolor">Ширина области текущ. значений:</label><input class="form-control input-lg"type="text" id="width_value" name="width_value" value="0"/>
+  
+  
+  <label for="hcolcolor">Высота области текущ. значений:</label><input class="form-control input-lg"type="text" id="height_value" name="height_value" value="0"/>
+  
+  
+  <label for="hcolcolor">Цвет области текущ. значений:</label><input class="form-control input-lg"type="color" id="curcolorval" name="curcolorval" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Прозрачность области текущ. значений:</label><input class="form-control input-lg"type="text" id="faderr" name="faderr" value="0"/>
+  
+  
+  <label for="hcolcolor">Кнопка "Удалить":</label><input class="form-control input-lg"type="color" id="delcol" name="delcol" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Кнопка "Настройки":</label><input class="form-control input-lg"type="color" id="toolcol" name="toolcol" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Кнопка "Добавить":</label><input class="form-control input-lg"type="color" id="pluscol" name="pluscol" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Кнопка "Замок":</label><input class="form-control input-lg"type="color" id="rawsvg0" name="rawsvg0" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Редактирование экрана:</label><input class="form-control input-lg"type="checkbox" id="editscrn" name="editscrn"/>
+  
+  
+  <label for="hcolcolor">Кнопка "Скважина":</label><input class="form-control input-lg"type="color" id="rawsvg1" name="rawsvg1" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Кнопка "Календарь":</label><input class="form-control input-lg"type="color" id="rawsvg2" name="rawsvg2" value="#e66465"/>
+  
+   
+  <label for="hcolcolor">Кнопка "Лупа":</label><input class="form-control input-lg"type="color" id="rawsvg3" name="rawsvg3" value="#e66465"/>
+  
+   
+  <label for="hcolcolor">Кнопка "Форма":</label><input class="form-control input-lg"type="color" id="rawsvg4" name="rawsvg4" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Фон кнопок (белый/ черный):</label><input class="form-control input-lg"type="checkbox" id="fonbut" name="fonbut"/>
+         </div>
         
         <!-- Modal footer -->
         <div class="modal-footer">
