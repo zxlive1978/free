@@ -18,7 +18,9 @@
   -webkit-box-shadow:0 3px 50px 0 rgba(0,0,0,.1);
   box-shadow:0 3px 50px 0 rgba(0,0,0,.1);
   text-align:center;
-  border-radius:5px
+  border-radius:5px;
+  width:100%;
+  max-width:460px;
 }
 .login-block h1,.login-block h6,.login-block h4
 {
