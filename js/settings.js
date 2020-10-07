@@ -1408,7 +1408,7 @@ function colOK131 () {
 	for (var keey in wells) {
 		console.log( keey);
 		if (wells[keey].wellN == String($("#colitems132").val())) {
-			deleteskvs('delete','skvs', keey.slice(1 , ),'');
+			deleteskvs('delete','skvs', keey);
 			console.log( keey, keey.slice(1 , ));
 			delete (wells[keey]);
 		}
