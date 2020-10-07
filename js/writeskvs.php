@@ -33,7 +33,7 @@
 		$comment = array();
 		while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
 			//echo $row[$x_id]." - ".$row[$y_id]."<br />";
-			$cur_rec= array('p000'=>'p'.$row['id'], 'skvjson'=> $row['skvjson']);
+			$cur_rec= array('p000'=>'par'.$row['id'], 'skvjson'=> $row['skvjson']);
 			//$cur_rec['Wkp'] = $row['Wkp'];
 			array_push($comment, $cur_rec);
 			}
