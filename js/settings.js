@@ -1392,6 +1392,7 @@ for (var keey in wells) {
 		wells[keey].email = String($("#colitems137").val());
 		//Обновить скважину в mysql в таблицу skvs
 		update('update','skvs', String(keey),JSON.stringify(Object.assign({}, wells[keey])));
+		console.log(wells[keey]);
 	}
 }
 $('#skvs tbody').empty();
