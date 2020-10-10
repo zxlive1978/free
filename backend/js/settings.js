@@ -1738,7 +1738,7 @@ function adm (){
 
 var selectuser='';
 //Изменить/ удалить  диалог по пользователю
-function colPan13 () {
+function colPan15 () {
 	$("#myModal15").modal();
 	for (var keey in users_rights) {
 		if (users_rights[keey].login == String($("#colitems162").val())) {
