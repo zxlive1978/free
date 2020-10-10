@@ -1656,6 +1656,28 @@ function adm (){
 		//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
 	});
 
+	//Добавить скважину
+	$('#adduserright').click(function() {
+		colPan14 ();		
+	});
+
+	//Клик скважины
+	$("#userright tbody").on("click", "tr", function(event){
+		var tableData = $(this).children("td").map(function() {
+			return $(this).text();
+		}).get();
+		$("#colitems131").val($.trim(tableData[0]));
+		$("#colitems132").val($.trim(tableData[1]));
+		$("#colitems133").val($.trim(tableData[2]));
+		$("#colitems134").val($.trim(tableData[3]));
+		$("#colitems135").val($.trim(tableData[4]));
+		$("#colitems136").val($.trim(tableData[5]));
+		$("#colitems137").val($.trim(tableData[6]));
+		colPan15();
+		
+		//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
+	});
+
 
 	//Клик Камеры
 	$("#cams tbody").on("click", "tr", function(event){
