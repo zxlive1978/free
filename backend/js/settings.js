@@ -29,7 +29,7 @@ var users_rights = {
 	par1 : {name:'Слива О.О', login:'sliva', pass:'mon123',dolgnost:'Супевайзер скв АГКМ-632',tel:'7172737', email:'odin0001@odin.org',forms:'/sliva',time:{skv0:'АГКМ-627'}, video:{skv0:'АГКМ-627'}, karotag:{skv0:'АГКМ-627'},comments:{skv0:'АГКМ-627'},geolog:{skv0:'АГКМ-627'},depth:{skv0:'АГКМ-627'},svodka:{skv0:'АГКМ-627'},chat:{skv0:'АГКМ-627'}},
 	par2 : {name:'Груша Т.О', login:'grusha', pass:'mon123',dolgnost:'Мастер скв АГКМ-632',tel:'7172737', email:'odin002@odin.org',forms:'/grusha',time:{skv0:'АГКМ-627'}, video:{}, karotag:{},comments:{},geolog:{},depth:{},svodka:{},chat:{}},
 	par3 : {name:'Тамарилло А.О', login:'tommarillo', pass:'mon123',dolgnost:'Технолог скв АГКМ-632',tel:'7172727', email:'sobaka19@sobaka.com',forms:'/tommarillo',time:{skv0:'АГКМ-627'}, video:{}, karotag:{skv0:'АГКМ-627'},comments:{skv0:'АГКМ-627'},geolog:{skv0:'АГКМ-627'},depth:{skv0:'АГКМ-627'},svodka:{skv0:'АГКМ-627'},chat:{skv0:'АГКМ-627'}},
-	par4 : {name:'Хризофиллум Ф.Л', login:'hrizo', pass:'mon123',dolgnost:'Геолог скв АГКМ-632',tel:'7172727', email:'sobaka19@sobaka.com',forms:'/hrizo',time:{}, video:{}, karotag:{skv0:'АГКМ-627'},comments:{skv0:'АГКМ-627'},geolog:{skv0:'АГКМ-627'},depth:{skv0:'АГКМ-627'},svodka:{skv0:'АГКМ-627'},chat:{skv0:'АГКМ-627'}},
+	//par4 : {name:'Хризофиллум Ф.Л', login:'hrizo', pass:'mon123',dolgnost:'Геолог скв АГКМ-632',tel:'7172727', email:'sobaka19@sobaka.com',forms:'/hrizo',time:{}, video:{}, karotag:{skv0:'АГКМ-627'},comments:{skv0:'АГКМ-627'},geolog:{skv0:'АГКМ-627'},depth:{skv0:'АГКМ-627'},svodka:{skv0:'АГКМ-627'},chat:{skv0:'АГКМ-627'}},
 };
 
 //Шаблон скважины
@@ -1810,21 +1810,21 @@ function colOK14 () {
 	'<td>'+String($("#colitems155").val())+'</td>'+
 	'</tr>'
 	);
-	//Запись всех текущих скважин
-	for (var keey in users_rights) {
-		writeskvs('create','user_right', String(keey), JSON.stringify(users_rights[keey]));
-		// console.log(keey);
-		// console.log(wells[keey]);
-	}
+	// //Запись всех текущих пользователей
+	// for (var keey in users_rights) {
+	// 	writeskvs('create','user_right', String(keey), JSON.stringify(users_rights[keey]));
+	// 	// console.log(keey);
+	// 	// console.log(wells[keey]);
+	// }
 	
-	// //Создание новой записи параметра!!!
-	// wells[String('par'+String((Object.keys(wells).length)))]=curPar;
+	//Создание новой записи параметра!!!
+	users_rights[String('par'+String((Object.keys(users_rights).length)))]=curPar;
 	
-	// //Добавление скважины в mysql в таблицу skvs
-	// writeskvs('create','skvs', String('par'+String((Object.keys(wells).length-1))),JSON.stringify(Object.assign({}, curPar)));
+	//Добавление скважины в mysql в таблицу skvs
+	writeskvs('create','user_right', String('par'+String((Object.keys(users_rights).length-1))),JSON.stringify(Object.assign({}, curPar)));
 	
-	// //Чтение всех скважин
-	// readskvs('read','skvs', '','');
+	//Чтение всех скважин
+	readskvs('read','user_right', '','');
 	}
 
 

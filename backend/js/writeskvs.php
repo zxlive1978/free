@@ -26,7 +26,7 @@
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		echo $result;}
 	
-	//create
+	//create user_right
 	if ($table == 'user_right' && $whatdo == 'create'){
 		$query="INSERT INTO ".$name_base.".".$table." VALUES ( NULL, '".$p000."' , '".$skvjson."' ); ";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
@@ -34,6 +34,21 @@
 
 	//read all
 	if ($table == 'skvs' && $whatdo == 'read'){
+		$query="SELECT * FROM ".$name_base.".".$table.";";
+		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+		$comment = array();
+		while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
+			//echo $row[$x_id]." - ".$row[$y_id]."<br />";
+			$cur_rec= array('p000'=>'par'.$row['id'], 'skvjson'=> $row['skvjson']);
+			//$cur_rec['Wkp'] = $row['Wkp'];
+			array_push($comment, $cur_rec);
+			}
+		mysqli_free_result($result);
+		
+		echo json_encode($comment);}
+
+	//read all user_right
+	if ($table == 'user_right' && $whatdo == 'read'){
 		$query="SELECT * FROM ".$name_base.".".$table.";";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		$comment = array();
@@ -59,6 +74,20 @@
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		echo $result;}
 	
+
+	//update user_right
+	if ($table == 'user_right' && $whatdo == 'update'){
+		$query="UPDATE ".$name_base.".".$table." SET skvjson='".$skvjson."' WHERE id=".$p000.";";
+		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+		echo $result;}
+	
+	//delete user_right
+	if ($table == 'user_right' && $whatdo == 'delete'){
+		$query="DELETE  FROM  ".$name_base.".".$table." WHERE id=".$p000.";";
+		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+		echo $result;}
+	
+
 	//echo json_encode($nu);
     mysqli_close($dbc);
 		
