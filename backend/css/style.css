@@ -1,6 +1,6 @@
 .login-page
 {
-  background-color:#e5e7ed
+  background-color:#062992
 }
 .login-page main
 {
@@ -13,7 +13,7 @@
 
 .login-block
 {
-  background-color:#fff;
+  background-color:rgba(139, 0, 0, 0.795);
   padding:60px;
   -webkit-box-shadow:0 3px 50px 0 rgba(0,0,0,.1);
   box-shadow:0 3px 50px 0 rgba(0,0,0,.1);
@@ -26,7 +26,7 @@
 .login-block h1,.login-block h6,.login-block h4
 {
   font-family:Open Sans,sans-serif;
-  color:#96a2b2;
+  color:#004094;
   letter-spacing:1px
 }
 .login-block h1

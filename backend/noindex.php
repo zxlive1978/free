@@ -183,13 +183,15 @@ if (!$_SESSION['auth']) {
 <!-- Табы -->
 <div id="tabs">
   <ul>
-    <li><a href="#tabs-1">Пользователи</a></li>
+    
     <li><a href="#tabs-2">Скважины</a></li>
+    <li><a href="#tabs-1">Пользователи</a></li>
     <li><a href="#tabs-3">Камеры</a></li>
-  </ul>
-  <div id="tabs-1">
-  </div>
+    </ul>
   <div id="tabs-2">
+  </div>
+
+  <div id="tabs-1">
   </div>
   <div id="tabs-3">
   </div>

@@ -23,6 +23,11 @@ var wells = {
 	
 };
 
+var users = {
+	par0 : {name:'Малинин Я.Я', login:'malinin', pass:'Mon123', dolgnost:'Супевайзер Cупервайзеров',tel:'7172737', email:'odin@odin.org',forms:'/malinin',skvs:{skv0:'s110',skv1:'s629',skv2:'s627'}, video:{skv0:'s110',skv1:'s629',skv2:'s627'}, karotag:{skv0:'s110',skv1:'s629',skv2:'s627'},comments:{skv0:'s110',skv1:'s629',skv2:'s627'},geolog:{skv0:'s110',skv1:'s629',skv2:'s627'}, chat:{skv0:'s110',skv1:'s629',skv2:'s627'}},
+	par1 : {name:'Вишня О.О', login:'vishnija', pass:'Mon123', dolgnost:'Супевайзер скв АГКМ-632',tel:'7172737', email:'odin0001@odin.org',forms:'/vishnija',skvs:{skv1:'s629'}, video:{skv1:'s629'}, karotag:{skv1:'s629'},comments:{skv1:'s629'},geolog:{skv1:'s629'},chat:{skv1:'s629'}},
+};
+
 //Шаблон скважины
 var Shablontxtwell = {
 	par0 :  {wellN: 's110', txt: 'АГКМ-99', type: 'Ремонт', typeStn:'Разрез', nach:'Арбузов П.П.', tel:'232222', email:'sobaka13@sobaka.com'},
