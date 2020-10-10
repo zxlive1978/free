@@ -1184,16 +1184,16 @@ function colPan10 (name_select) {
 
 	if ((Object.keys(wells).length>0)){
 		for (var keey in wells) {
-			console.log(keey);
-			console.log(wells[keey].txt);
-			console.log(skv);
-			console.log(name_select);
-			if(keey==name_select){
-			$("#wellNwork1").text(wells[keey].text);
-			$("#wellNwork2").text(wells[keey].typeStn);
-			$("#wellNwork3").text(wells[keey].nach);
-			$("#wellNwork4").text(wells[keey].tel);
-			$("#wellNwork5").text(wells[keey].email);}
+			// console.log(keey);
+			// console.log(wells[keey].txt);
+			// console.log(skv);
+			// console.log(name_select);
+			if(wells[keey].txt==skv){
+				$("#wellNwork1").text(wells[keey].type);
+				$("#wellNwork2").text(wells[keey].typeStn);
+				$("#wellNwork3").text(wells[keey].nach);
+				$("#wellNwork4").text(wells[keey].tel);
+				$("#wellNwork5").text(wells[keey].email);
 	}}
 
 	
