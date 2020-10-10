@@ -24,7 +24,7 @@ var wells = {
 };
 
 //Пользователи УМ
-var users = {
+var users_rights = {
 	par0 : {name:'Малина Я.Я', login:'malina', pass:'mon123', dolgnost:'Супевайзер Cупервайзеров',tel:'7172737', email:'odin@odin.org',forms:'/malinin',time:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, video:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, karotag:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},comments:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},geolog:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},depth:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},svodka:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, chat:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}},
 	par1 : {name:'Слива О.О', login:'sliva', pass:'mon123',dolgnost:'Супевайзер скв АГКМ-632',tel:'7172737', email:'odin0001@odin.org',forms:'/sliva',time:{skv1:'АГКМ-627'}, video:{skv1:'АГКМ-627'}, karotag:{skv1:'АГКМ-627'},comments:{skv1:'АГКМ-627'},geolog:{skv1:'АГКМ-627'},depth:{skv1:'АГКМ-627'},svodka:{skv1:'АГКМ-627'},chat:{skv1:'АГКМ-627'}},
 	par2 : {name:'Груша Т.О', login:'grusha', pass:'mon123',dolgnost:'Мастер скв АГКМ-632',tel:'7172737', email:'odin002@odin.org',forms:'/grusha',time:{skv1:'АГКМ-627'}, video:{}, karotag:{},comments:{},geolog:{},depth:{},svodka:{},chat:{}},
@@ -1590,6 +1590,25 @@ function adm (){
 		//$('#tabs-2').append('</div>');	
 	}
 	
+	for (var keey in users_rights) {
+		$('#userright tbody').append('<tr>'
+		+'<td>'+users_rights[keey].name +'</td>'
+		+'<td>'+users_rights[keey].login +'</td>'
+		+'<td>'+users_rights[keey].pass +'</td>'
+		+'<td>'+users_rights[keey].dolgnost +'</td>'
+		+'<td>'+users_rights[keey].tel +'</td>'
+		+'<td>'+users_rights[keey].email +'</td>'
+		+'<td>'+users_rights[keey].forms +'</td>'
+		+'<td>'+users_rights[keey].time +'</td>'
+		+'<td>'+users_rights[keey].video +'</td>'
+		+'<td>'+users_rights[keey].karotag +'</td>'
+		+'<td>'+users_rights[keey].comments +'</td>'
+		+'<td>'+users_rights[keey].geolog +'</td>'
+		+'<td>'+users_rights[keey].depth +'</td>'
+		+'<td>'+users_rights[keey].svodka +'</td>'
+		+'<td>'+users_rights[keey].chat +'</td>'
+		+'</tr>');
+	}
 	//Динамически добавить скрипт
 	// var newScript = document.createElement("script");
 	// var inlineScript = document.createTextNode("alert('Hello World!');");
