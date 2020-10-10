@@ -816,14 +816,29 @@ if (!$_SESSION['auth']) {
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Добавить скважину</h4>
+          <h4 class="modal-title">Добавить пользователя</h4>
           <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
         
         <!-- Modal body -->
         <div class="modal-body">
         <label for="hcolcolor">Фамилия Имя Отчество:</label><input class="form-control input-lg" type="text" id="colitems141" name="colitems141"/>
-</div>        
+        <label for="hcolcolor">Логин:</label><input class="form-control input-lg" type="text" id="colitems142" name="colitems142"/>
+        <label for="hcolcolor">Пароль:</label><input class="form-control input-lg" type="text" id="colitems143" name="colitems143"/>
+        <label for="hcolcolor">Должность:</label><input class="form-control input-lg" type="text" id="colitems144" name="colitems144"/>
+        <label for="hcolcolor">Телефон:</label><input class="form-control input-lg" type="text" id="colitems145" name="colitems145"/>
+        <label for="hcolcolor">Эл.почта:</label><input class="form-control input-lg" type="text" id="colitems146" name="colitems146"/>
+        <label for="hcolcolor">Путь к формам:</label><input class="form-control input-lg" type="text" id="colitems147" name="colitems147"/>
+        <label for="hcolcolor">Временные:</label><input class="form-control input-lg" type="text" id="colitems148" name="colitems148"/>
+        <label for="hcolcolor">Видео:</label><input class="form-control input-lg" type="text" id="colitems149" name="colitems149"/>
+        <label for="hcolcolor">Каротажи:</label><input class="form-control input-lg" type="text" id="colitems150" name="colitems150"/>
+        <label for="hcolcolor">Комментарии:</label><input class="form-control input-lg" type="text" id="colitems151" name="colitems151"/>
+        <label for="hcolcolor">Геология:</label><input class="form-control input-lg" type="text" id="colitems152" name="colitems152"/>
+        <label for="hcolcolor">Глубинные:</label><input class="form-control input-lg" type="text" id="colitems153" name="colitems153"/>
+        <label for="hcolcolor">Сводка:</label><input class="form-control input-lg" type="text" id="colitems154" name="colitems154"/>
+        <label for="hcolcolor">Чат:</label><input class="form-control input-lg" type="text" id="colitems155" name="colitems155"/>
+     
+        </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
 			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK14()'>Применить</button>
@@ -849,39 +864,22 @@ if (!$_SESSION['auth']) {
         
         <!-- Modal body -->
         <div class="modal-body">
-<table>
-  <tr>
-            <td><label for="ncolor">Скважина:</label></td>
-            <td><input type="text" id="colitems131" name="colitems131" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">База:</label></td>
-            <td><input type="text" id="colitems132" name="colitems132" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Тип работ:</label></td>
-            <td><input type="text" id="colitems133" name="colitems133" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Тип станции:</label></td>
-            <td><input type="text" id="colitems134" name="colitems134" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Фамилия начальника:</label></td>
-            <td><input type="text" id="colitems135" name="colitems135" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Телефон:</label></td>
-            <td><input type="text" id="colitems136" name="colitems136" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Эл.почта:</label></td>
-            <td><input type="text" id="colitems137" name="colitems137" value=""></td>
-  </tr>
-  
-
-</div>
-</table>
+        <label for="hcolcolor">Фамилия Имя Отчество:</label><input class="form-control input-lg" type="text" id="colitems161" name="colitems161"/>
+        <label for="hcolcolor">Логин:</label><input class="form-control input-lg" type="text" id="colitems162" name="colitems162"/>
+        <label for="hcolcolor">Пароль:</label><input class="form-control input-lg" type="text" id="colitems163" name="colitems163"/>
+        <label for="hcolcolor">Должность:</label><input class="form-control input-lg" type="text" id="colitems164" name="colitems164"/>
+        <label for="hcolcolor">Телефон:</label><input class="form-control input-lg" type="text" id="colitems165" name="colitems165"/>
+        <label for="hcolcolor">Эл.почта:</label><input class="form-control input-lg" type="text" id="colitems166" name="colitems166"/>
+        <label for="hcolcolor">Путь к формам:</label><input class="form-control input-lg" type="text" id="colitems167" name="colitems167"/>
+        <label for="hcolcolor">Временные:</label><input class="form-control input-lg" type="text" id="colitems168" name="colitems168"/>
+        <label for="hcolcolor">Видео:</label><input class="form-control input-lg" type="text" id="colitems169" name="colitems169"/>
+        <label for="hcolcolor">Каротажи:</label><input class="form-control input-lg" type="text" id="colitems170" name="colitems170"/>
+        <label for="hcolcolor">Комментарии:</label><input class="form-control input-lg" type="text" id="colitems171" name="colitems171"/>
+        <label for="hcolcolor">Геология:</label><input class="form-control input-lg" type="text" id="colitems172" name="colitems172"/>
+        <label for="hcolcolor">Глубинные:</label><input class="form-control input-lg" type="text" id="colitems173" name="colitems173"/>
+        <label for="hcolcolor">Сводка:</label><input class="form-control input-lg" type="text" id="colitems174" name="colitems174"/>
+        <label for="hcolcolor">Чат:</label><input class="form-control input-lg" type="text" id="colitems175" name="colitems175"/>
+     
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">

@@ -1666,13 +1666,20 @@ function adm (){
 		var tableData = $(this).children("td").map(function() {
 			return $(this).text();
 		}).get();
-		$("#colitems131").val($.trim(tableData[0]));
-		$("#colitems132").val($.trim(tableData[1]));
-		$("#colitems133").val($.trim(tableData[2]));
-		$("#colitems134").val($.trim(tableData[3]));
-		$("#colitems135").val($.trim(tableData[4]));
-		$("#colitems136").val($.trim(tableData[5]));
-		$("#colitems137").val($.trim(tableData[6]));
+		$("#colitems161").val($.trim(tableData[0]));
+		$("#colitems162").val($.trim(tableData[1]));
+		$("#colitems163").val($.trim(tableData[2]));
+		$("#colitems164").val($.trim(tableData[3]));
+		$("#colitems165").val($.trim(tableData[4]));
+		$("#colitems166").val($.trim(tableData[5]));
+		$("#colitems167").val($.trim(tableData[6]));
+		$("#colitems168").val($.trim(tableData[7]));
+		$("#colitems169").val($.trim(tableData[8]));
+		$("#colitems170").val($.trim(tableData[9]));
+		$("#colitems172").val($.trim(tableData[10]));
+		$("#colitems173").val($.trim(tableData[11]));
+		$("#colitems174").val($.trim(tableData[12]));
+		$("#colitems175").val($.trim(tableData[13]));
 		colPan15();
 		
 		//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
@@ -1726,6 +1733,19 @@ function adm (){
 
 	}
 
+}
+
+
+var selectuser='';
+//Изменить/ удалить  диалог по пользователю
+function colPan13 () {
+	$("#myModal15").modal();
+	for (var keey in users_rights) {
+		if (users_rights[keey].login == String($("#colitems162").val())) {
+			selectuser=keey;
+		}}
+	
+	//console.log('fdsf');
 }
 
 //Добавление  диалог пользователя
