@@ -1599,7 +1599,7 @@ function adm (){
 		+'<td>'+users_rights[keey].tel +'</td>'
 		+'<td>'+users_rights[keey].email +'</td>'
 		+'<td>'+users_rights[keey].forms +'</td>'
-		+'<td>'+users_rights[keey].time +'</td>'
+		+'<td>'+map.get(users_rights[keey].time) +'</td>'
 		+'<td>'+users_rights[keey].video +'</td>'
 		+'<td>'+users_rights[keey].karotag +'</td>'
 		+'<td>'+users_rights[keey].comments +'</td>'
