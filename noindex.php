@@ -135,9 +135,9 @@ if (!$_SESSION['auth']) {
     
     </div>
 		<div class="btn-group" role="group" aria-label="">
-		<button class="btn bg-light btn-lg " type="button" id="adm" name="adm" onclick='adm()'>
+		<!-- <button class="btn bg-light btn-lg " type="button" id="adm" name="adm" onclick='adm()'>
     Админка</button>	
-		</div>
+		</div> -->
   
     <!--</li>
     <button class="btn bg-light btn-lg " type="button" id="stop" name="stop" onclick='stopCam()'>
@@ -218,8 +218,10 @@ if (!$_SESSION['auth']) {
   </div>
   
 </div>
+
+
 <!-- Табы -->
-<div id="tabs">
+<!-- <div id="tabs">
   <ul>
     <li><a href="#tabs-1">Пользователи</a></li>
     <li><a href="#tabs-2">Скважины</a></li>
@@ -231,7 +233,7 @@ if (!$_SESSION['auth']) {
   </div>
   <div id="tabs-3">
   </div>
-</div>
+</div> -->
 
 
 <div id="drawing"  ></div>
