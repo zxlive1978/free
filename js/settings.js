@@ -1173,8 +1173,8 @@ function colPan10 (name_select) {
 				text : wells[keey].txt
 				}));
 	}
-	// //Восстановление выбора
-	// $('#wellN').val(wellName);
+	//Восстановление выбора
+	$('#wellN').val(wellName);
 	
 	// /* var selIdx=$("#wellN").prop('selectedIndex');
 	// wellidx = selIdx; */
