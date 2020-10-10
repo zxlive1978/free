@@ -808,6 +808,92 @@ if (!$_SESSION['auth']) {
   </div>
 
 
+ 
+  <!-- Добавить скважину -->
+  <div class="modal fade" id="myModal14">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Добавить скважину</h4>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <label for="hcolcolor">Фамилия Имя Отчество:</label><input class="form-control input-lg" type="text" id="colitems141" name="colitems141"/>
+</div>        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK14()'>Применить</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Редактировать, удалить пользователя -->
+<div class="modal fade" id="myModal15">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Редактировать/удалить пользователя</h4>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+<table>
+  <tr>
+            <td><label for="ncolor">Скважина:</label></td>
+            <td><input type="text" id="colitems131" name="colitems131" value=""></td>
+  </tr>
+  <tr>
+            <td><label for="ncolor">База:</label></td>
+            <td><input type="text" id="colitems132" name="colitems132" value=""></td>
+  </tr>
+  <tr>
+            <td><label for="ncolor">Тип работ:</label></td>
+            <td><input type="text" id="colitems133" name="colitems133" value=""></td>
+  </tr>
+  <tr>
+            <td><label for="ncolor">Тип станции:</label></td>
+            <td><input type="text" id="colitems134" name="colitems134" value=""></td>
+  </tr>
+  <tr>
+            <td><label for="ncolor">Фамилия начальника:</label></td>
+            <td><input type="text" id="colitems135" name="colitems135" value=""></td>
+  </tr>
+  <tr>
+            <td><label for="ncolor">Телефон:</label></td>
+            <td><input type="text" id="colitems136" name="colitems136" value=""></td>
+  </tr>
+  <tr>
+            <td><label for="ncolor">Эл.почта:</label></td>
+            <td><input type="text" id="colitems137" name="colitems137" value=""></td>
+  </tr>
+  
+
+</div>
+</table>
+</div>        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-dismiss="modal" onclick='colOK151()'>Удалить</button>
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK15()'>Сохранить</button>
+      
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 
 
 

@@ -1728,7 +1728,12 @@ function adm (){
 
 }
 
-
+//Добавление  диалог пользователя
+function colPan14 () {
+	$("#myModal14").modal();
+	
+	//console.log('fdsf');
+}
 
 //Очистка и рендеринг
 function repaint() {
