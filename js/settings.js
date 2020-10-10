@@ -1193,7 +1193,7 @@ function colPan10 (name_select) {
 				$("#wellNwork2").text(wells[keey].typeStn);
 				$("#wellNwork3").text(wells[keey].nach);
 				$("#wellNwork4").text(wells[keey].tel);
-				$("#wellNwork5").text(wells[keey].email);
+				$("#wellNwork5").text(wells[keey].email);}
 	}}
 
 	
