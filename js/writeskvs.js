@@ -17,7 +17,7 @@ function writeskvs(whatdo, table, p000, skvsjson){
 };
 
 //Обновить скважину
-function writeskvs(whatdo, table, p000, skvsjson){
+function update(whatdo, table, p000, skvsjson){
 	refresh = false;
 	online = false;
 	$.ajax({
