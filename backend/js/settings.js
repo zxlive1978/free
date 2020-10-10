@@ -1548,7 +1548,7 @@ function adm (){
 	$('#tabs-2').empty();
 	$('#tabs-2').append('<button type="button" name="addskv" id="addskv" class="btn btn-success mb-1" data-dismiss="modal" >+</button>');
 	$('#tabs-2').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="skvs" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Тип работ</th><th>Тип станции</th><th>Фамилия начальника</th><th>Телефон</th><th>Эл.почта</th></tr></thead><tbody></tbody></table></div>');
-	//Пользователи
+	//Пользователи table-sm
 	$('#tabs-1').empty();
 	$('#tabs-1').append('<button type="button" name="adduserright" id="adduserright" class="btn btn-success mb-1" data-dismiss="modal" >+</button>');
 	$('#tabs-1').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="userright" class="table table-bordered table-striped "><thead><tr><th>Фамилия Имя Отчество</th>'
