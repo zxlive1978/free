@@ -1591,6 +1591,24 @@ function adm (){
 	}
 	
 	for (var keey in users_rights) {
+		strtime ='';strvideo='';strkarotag='';strcomments='';strgeolog='';
+		strdepth=''; strsvodka='';strchat ='';
+		for (var k in users_rights[keey].time){
+			strtime=strtime + users_rights[keey].time[k] +', ';}
+		for (var g in users_rights[keey].video){
+			strvideo=strvideo + users_rights[keey].video[g] +', ';}
+		for (var k in users_rights[keey].karotag){
+			strkarotag=strkarotag + users_rights[keey].time[k] +', ';}
+		for (var k in users_rights[keey].comments){
+			strcomments=strcomments + users_rights[keey].time[k] +', ';}
+		for (var k in users_rights[keey].geolog){
+			strgeolog=strgeolog + users_rights[keey].time[k] +', ';}
+		for (var k in users_rights[keey].depth){
+			strdepth=strdepth + users_rights[keey].time[k] +', ';}
+		for (var k in users_rights[keey].svodka){
+			strsvodka=strsvodka + users_rights[keey].time[k] +', ';}
+		for (var k in users_rights[keey].chat){
+			strchat=strchat + users_rights[keey].time[k] +', ';}
 		$('#userright tbody').append('<tr>'
 		+'<td>'+users_rights[keey].name +'</td>'
 		+'<td>'+users_rights[keey].login +'</td>'
@@ -1599,14 +1617,14 @@ function adm (){
 		+'<td>'+users_rights[keey].tel +'</td>'
 		+'<td>'+users_rights[keey].email +'</td>'
 		+'<td>'+users_rights[keey].forms +'</td>'
-		+'<td>'+JSON.stringify((users_rights[keey].time)) +'</td>'
-		+'<td>'+users_rights[keey].video +'</td>'
-		+'<td>'+users_rights[keey].karotag +'</td>'
-		+'<td>'+users_rights[keey].comments +'</td>'
-		+'<td>'+users_rights[keey].geolog +'</td>'
-		+'<td>'+users_rights[keey].depth +'</td>'
-		+'<td>'+users_rights[keey].svodka +'</td>'
-		+'<td>'+users_rights[keey].chat +'</td>'
+		+'<td>'+strtime +'</td>'
+		+'<td>'+strvideo +'</td>'
+		+'<td>'+strkarotag +'</td>'
+		+'<td>'+strcomments +'</td>'
+		+'<td>'+strgeolog +'</td>'
+		+'<td>'+strdepth +'</td>'
+		+'<td>'+strsvodka +'</td>'
+		+'<td>'+strchat +'</td>'
 		+'</tr>');
 	}
 	//Динамически добавить скрипт
