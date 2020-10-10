@@ -26,6 +26,12 @@
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		echo $result;}
 	
+	//create
+	if ($table == 'user_right' && $whatdo == 'create'){
+		$query="INSERT INTO ".$name_base.".".$table." VALUES ( NULL, '".$p000."' , '".$skvjson."' ); ";
+		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+		echo $result;}
+
 	//read all
 	if ($table == 'skvs' && $whatdo == 'read'){
 		$query="SELECT * FROM ".$name_base.".".$table.";";
