@@ -1676,10 +1676,11 @@ function adm (){
 		$("#colitems168").val($.trim(tableData[7]));
 		$("#colitems169").val($.trim(tableData[8]));
 		$("#colitems170").val($.trim(tableData[9]));
-		$("#colitems172").val($.trim(tableData[10]));
-		$("#colitems173").val($.trim(tableData[11]));
-		$("#colitems174").val($.trim(tableData[12]));
-		$("#colitems175").val($.trim(tableData[13]));
+		$("#colitems171").val($.trim(tableData[10]));
+		$("#colitems172").val($.trim(tableData[11]));
+		$("#colitems173").val($.trim(tableData[12]));
+		$("#colitems174").val($.trim(tableData[13]));
+		$("#colitems175").val($.trim(tableData[14]));
 		colPan15();
 		
 		//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
