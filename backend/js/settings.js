@@ -1531,7 +1531,7 @@ function adm (){
 	$('#drawing').hide();
 	
 	
-	$('#dialogvideo').dialog( "close" );// Для скрытия
+	
 	$('#tabs').show();
 	onofadm = false;
 	$('#tabs-1').empty();
@@ -1632,15 +1632,13 @@ function adm (){
 		
 		
 		
-		$('#dialogvideo').dialog( "open" );// Для скрытия
 		$('#tabs').hide();
 		
-		$('#drawing').empty();
-		$('#drawing').show();
+		
 		online = true;
 		refresh = true;
 		onofadm = true;
-		init();
+		//init();
 
 	}
 
