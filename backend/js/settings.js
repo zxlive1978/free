@@ -1310,6 +1310,9 @@ function vertical() {
 $(document).ready(function () {
 			//Чтение списка скважин
 			readskvstart('read','skvs', '','');
+			//открыть панель
+			adm();
+			
 		
 			
 			
@@ -1318,12 +1321,7 @@ $(document).ready(function () {
 			//ВИДЕО
 			//autoPlayYouTubeModal();
  });
- // ресайз окна
- $(window).resize(function (){
- 
-	onoffpan();
 
- });
 
 
  //Стоп видео поток

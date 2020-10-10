@@ -97,7 +97,7 @@ if (!$_SESSION['auth']) {
     
     </div>
 		<div class="btn-group" role="group" aria-label="">
-		<button class="btn bg-light btn-lg " type="button" id="adm" name="adm" onclick='adm()'>
+		<button class="btn bg-light btn-lg " type="button" id="adm" name="adm" >
     Админка</button>	
 		</div>
   
