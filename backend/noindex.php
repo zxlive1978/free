@@ -29,24 +29,12 @@ if (!$_SESSION['auth']) {
   //JQUERY tabЫ
   $( function() {
     $( "#tabs" ).tabs();
-    $('#tabs').hide();
+    //$('#tabs').hide();
   } );
-  $('#tabs').hide();
+  //$('#tabs').hide();
   </script>
   <script>
-//Окно видео
-  $( function() {
-    $( "#dialogvideo" ).dialog(
-      {
-        position: { my: "right  top", at: "right center", of:"#drawing" },
-        width: 170,
-        height: 140,
-        //appendTo: "fullscreen",
-        //modal: true
-      }
-    );
-  } );
-  </script>
+
 
 
 
@@ -97,27 +85,7 @@ if (!$_SESSION['auth']) {
     <ul class="navbar-nav">
      
    
-	  <!-- <li>
-	  <div class="dropdown">
-		<button class="btn bg-light btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		СКВАЖИНА
-		</button>
-		<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-		 <button class="dropdown-item btn-lg" type="button" id="par0" >АГКМ406-1</button> -->
-		<!-- <button class="dropdown-item btn-lg" type="button" id="par1">АГКМ73-1</button> 
-		<button class="dropdown-item btn-lg" type="button" id="par0">АГКМ99-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par1">АГКМ609-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par2">АГКМ260-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par3">АГКМ9917-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par4">АГКМ629-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par5">АГКМ627-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par6">АГКМ934-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par7">АГКМ604-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par8">АГКМ106-1</button>
-		<button class="dropdown-item btn-lg" type="button" id="par9">АГКМ71-1</button>
-		</div>
-		</div>
-	  </li> -->
+	 
 
     
 	  
@@ -234,32 +202,6 @@ if (!$_SESSION['auth']) {
 </div>
 
 
-<div id="drawing"  ></div>
-<script type="text/javascript">
-function getStart() {
-      //alert('ok');
-	  pongpong();
-	 /*  $("#wells").iziModal();
-	  //$("#modal").iziModal();
-	  $("#kalendar").iziModal();
-	  $("#lupa").iziModal();
-	  $("#lupa").iziModal();
-	  $("#addgraf").iziModal();
-	  $("#nastrstolb").iziModal();
-	  $("#nastrgraf").iziModal();
-	  $("#nastrtxtpar").iziModal();
-	  $("#nastrtxtlabel").iziModal();
-	  $("#openfile").iziModal();
-	  $("#savefile").iziModal(); */
-	  
-	  
-}
-window.onload = getStart;
-window.onresize = function(event) {
-    repaint();
-    //console.log('ресайз');
-};
-</script>
 
 
 <div class="modal fade" id="myModal1">
