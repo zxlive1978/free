@@ -25,9 +25,9 @@ var wells = {
 
 //Пользователи УМ
 var users = {
-	par0 : {name:'Малина Я.Я', login:'malina', pass:'mon123',last:'',ip:'', dolgnost:'Супевайзер Cупервайзеров',tel:'7172737', email:'odin@odin.org',forms:'/malinin',time:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, video:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, karotag:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},comments:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},geolog:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},depth:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},svodka:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, chat:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}},
-	par1 : {name:'Слива О.О', login:'sliva', pass:'mon123', last:'',ip:'',dolgnost:'Супевайзер скв АГКМ-632',tel:'7172737', email:'odin0001@odin.org',forms:'/sliva',time:{skv1:'АГКМ-627'}, video:{skv1:'АГКМ-627'}, karotag:{skv1:'АГКМ-627'},comments:{skv1:'АГКМ-627'},geolog:{skv1:'АГКМ-627'},depth:{skv1:'АГКМ-627'},svodka:{skv1:'АГКМ-627'},chat:{skv1:'АГКМ-627'}},
-	par2 : {name:'Груша Т.О', login:'grusha', pass:'mon123',last:'',ip:'', dolgnost:'Мастер скв АГКМ-632',tel:'7172737', email:'odin002@odin.org',forms:'/grusha',time:{skv1:'АГКМ-627'}, video:{}, karotag:{},comments:{},geolog:{},depth:{},svodka:{},chat:{}},
+	par0 : {name:'Малина Я.Я', login:'malina', pass:'mon123', dolgnost:'Супевайзер Cупервайзеров',tel:'7172737', email:'odin@odin.org',forms:'/malinin',time:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, video:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, karotag:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},comments:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},geolog:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},depth:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},svodka:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, chat:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}},
+	par1 : {name:'Слива О.О', login:'sliva', pass:'mon123',dolgnost:'Супевайзер скв АГКМ-632',tel:'7172737', email:'odin0001@odin.org',forms:'/sliva',time:{skv1:'АГКМ-627'}, video:{skv1:'АГКМ-627'}, karotag:{skv1:'АГКМ-627'},comments:{skv1:'АГКМ-627'},geolog:{skv1:'АГКМ-627'},depth:{skv1:'АГКМ-627'},svodka:{skv1:'АГКМ-627'},chat:{skv1:'АГКМ-627'}},
+	par2 : {name:'Груша Т.О', login:'grusha', pass:'mon123',dolgnost:'Мастер скв АГКМ-632',tel:'7172737', email:'odin002@odin.org',forms:'/grusha',time:{skv1:'АГКМ-627'}, video:{}, karotag:{},comments:{},geolog:{},depth:{},svodka:{},chat:{}},
 };
 
 //Шаблон скважины
@@ -1541,13 +1541,33 @@ function adm (){
 	onofadm = false;
 	$('#tabs-1').empty();
 	//e.preventDefault();
-	$('#tabs-1').html(' <p>'+row_str+'</p>');
-	$('#tabs-1').append(' <p>'+row_str+'</p>');
+	// $('#tabs-1').html(' <p>'+row_str+'</p>');
+	// $('#tabs-1').append(' <p>'+row_str+'</p>');
 	
 	//Скважины
 	$('#tabs-2').empty();
 	$('#tabs-2').append('<button type="button" name="addskv" id="addskv" class="btn btn-success mb-1" data-dismiss="modal" >+</button>');
 	$('#tabs-2').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="skvs" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Тип работ</th><th>Тип станции</th><th>Фамилия начальника</th><th>Телефон</th><th>Эл.почта</th></tr></thead><tbody></tbody></table></div>');
+	//Пользователи
+	$('#tabs-1').empty();
+	$('#tabs-1').append('<button type="button" name="adduserright" id="adduserright" class="btn btn-success mb-1" data-dismiss="modal" >+</button>');
+	$('#tabs-1').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="userright" class="table table-bordered table-striped "><thead><tr><th>ФИО</th>'
+	+'<th>Логин</th>'
+	+'<th>Пароль</th>'
+	+'<th>Должность</th>'
+	+'<th>Телефон</th>'
+	+'<th>Эл.почта</th>'
+	+'<th>Путь к формам</th>'
+	+'<th>Временные</th>'
+	+'<th>Видео</th>'
+	+'<th>Каротажи</th>'
+	+'<th>Комментарии</th>'
+	+'<th>Геология</th>'
+	+'<th>Глубинные</th>'
+	+'<th>Сводка</th>'
+	+'<th>Чат</th>'
+	+'</tr></thead><tbody></tbody></table></div>');
+
 	//Камеры
 	$('#tabs-3').empty();
 	$('#tabs-3').append('<button type="button" class="btn btn-success mb-1" data-dismiss="modal">+</button>');
