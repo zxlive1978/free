@@ -23,9 +23,11 @@ var wells = {
 	
 };
 
+//Пользователи УМ
 var users = {
-	par0 : {name:'Малинин Я.Я', login:'malinin', pass:'Mon123', dolgnost:'Супевайзер Cупервайзеров',tel:'7172737', email:'odin@odin.org',forms:'/malinin',skvs:{skv0:'s110',skv1:'s629',skv2:'s627'}, video:{skv0:'s110',skv1:'s629',skv2:'s627'}, karotag:{skv0:'s110',skv1:'s629',skv2:'s627'},comments:{skv0:'s110',skv1:'s629',skv2:'s627'},geolog:{skv0:'s110',skv1:'s629',skv2:'s627'}, chat:{skv0:'s110',skv1:'s629',skv2:'s627'}},
-	par1 : {name:'Вишня О.О', login:'vishnija', pass:'Mon123', dolgnost:'Супевайзер скв АГКМ-632',tel:'7172737', email:'odin0001@odin.org',forms:'/vishnija',skvs:{skv1:'s629'}, video:{skv1:'s629'}, karotag:{skv1:'s629'},comments:{skv1:'s629'},geolog:{skv1:'s629'},chat:{skv1:'s629'}},
+	par0 : {name:'Малина Я.Я', login:'malina', pass:'mon123', dolgnost:'Супевайзер Cупервайзеров',tel:'7172737', email:'odin@odin.org',forms:'/malinin',time:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, video:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, karotag:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},comments:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},geolog:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},depth:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},svodka:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, chat:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}},
+	par1 : {name:'Слива О.О', login:'sliva', pass:'mon123', dolgnost:'Супевайзер скв АГКМ-632',tel:'7172737', email:'odin0001@odin.org',forms:'/sliva',time:{skv1:'АГКМ-627'}, video:{skv1:'АГКМ-627'}, karotag:{skv1:'АГКМ-627'},comments:{skv1:'АГКМ-627'},geolog:{skv1:'АГКМ-627'},depth:{skv1:'АГКМ-627'},svodka:{skv1:'АГКМ-627'},chat:{skv1:'АГКМ-627'}},
+	par2 : {name:'Груша Т.О', login:'grusha', pass:'mon123', dolgnost:'Мастер скв АГКМ-632',tel:'7172737', email:'odin002@odin.org',forms:'/grusha',time:{skv1:'АГКМ-627'}, video:{}, karotag:{},comments:{},geolog:{},depth:{},svodka:{},chat:{}},
 };
 
 //Шаблон скважины
