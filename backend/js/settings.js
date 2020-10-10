@@ -1551,7 +1551,7 @@ function adm (){
 	//Пользователи
 	$('#tabs-1').empty();
 	$('#tabs-1').append('<button type="button" name="adduserright" id="adduserright" class="btn btn-success mb-1" data-dismiss="modal" >+</button>');
-	$('#tabs-1').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="userright" class="table table-bordered table-striped "><thead><tr><th>ФИО</th>'
+	$('#tabs-1').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="userright" class="table table-bordered table-striped "><thead><tr><th>Фамилия Имя Отчество</th>'
 	+'<th>Логин</th>'
 	+'<th>Пароль</th>'
 	+'<th>Должность</th>'
