@@ -1328,7 +1328,7 @@ $(document).ready(function () {
 
  //Стоп видео поток
  function stopCam (event) {
-	console.log("stop");
+	
 	//event.preventDefault(); // To prevent following the link (optional)
 	$.ajax({
 		type: 'POST',
@@ -1394,6 +1394,8 @@ for (var keey in wells) {
 		update('update','skvs',  keey.slice(3 , ),JSON.stringify(Object.assign({}, wells[keey])));
 	}
 }
+
+console.log(wells);
 $('#skvs tbody').empty();
 for (var keey in wells) {
 	$('#skvs tbody').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');

@@ -47,7 +47,7 @@
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		echo $result;}
 	
-	//delete &  reindex
+	//delete 
 	if ($table == 'skvs' && $whatdo == 'delete'){
 		$query="DELETE  FROM  ".$name_base.".".$table." WHERE id=".$p000.";";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
