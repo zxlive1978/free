@@ -35,6 +35,11 @@ var Shablontxtwell = {
 	par0 :  {wellN: 's110', txt: 'АГКМ-99', type: 'Ремонт', typeStn:'Разрез', nach:'Арбузов П.П.', tel:'232222', email:'sobaka13@sobaka.com'},
 };
 
+//Шаблон пользователя
+var Shablontxtuserright = {
+	par0 : {name:'Малина Я.Я', login:'malina', pass:'mon123', dolgnost:'Супевайзер Cупервайзеров',tel:'7172737', email:'odin@odin.org',forms:'/malinin',time:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, video:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, karotag:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},comments:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},geolog:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},depth:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},svodka:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, chat:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}},
+};
+
 
 //Список камер
 var cams = {
@@ -1755,6 +1760,71 @@ function colPan14 () {
 	
 	//console.log('fdsf');
 }
+
+
+//Добавление  записи по пользователям
+function colOK14 () {
+	var curPar ={};
+	curPar = JSON.stringify(Object.assign({}, Shablontxtuserright['par0']));
+	curPar = JSON.parse(curPar);
+		
+	curPar.name = String($("#colitems141").val());
+	curPar.login = String($("#colitems142").val());
+	curPar.pass = String($("#colitems143").val());
+	curPar.dolgnost = String($("#colitems144").val());
+	curPar.tel = String($("#colitems145").val());
+	curPar.email = String($("#colitems146").val());
+	curPar.forms = String($("#colitems147").val());
+	curPar.time = String($("#colitems148").val());
+	curPar.video = String($("#colitems149").val());
+	curPar.karotag = String($("#colitems150").val());
+	curPar.comments = String($("#colitems151").val());
+	curPar.geolog = String($("#colitems152").val());
+	curPar.depth = String($("#colitems153").val());
+	curPar.svodka = String($("#colitems154").val());
+	curPar.chat = String($("#colitems155").val());
+
+	
+	
+	
+	
+	
+	
+	//Добавление в таблицу отображения
+	$('#userright tr:last').after('<tr><td>'+String($("#colitems141").val())+'</td>'+
+	'<td>'+String($("#colitems142").val())+'</td>'+
+	'<td>'+String($("#colitems143").val())+'</td>'+
+	'<td>'+String($("#colitems144").val())+'</td>'+
+	'<td>'+String($("#colitems145").val())+'</td>'+
+	'<td>'+String($("#colitems146").val())+'</td>'+
+	'<td>'+String($("#colitems147").val())+'</td>'+
+	'<td>'+String($("#colitems148").val())+'</td>'+
+	'<td>'+String($("#colitems149").val())+'</td>'+
+	'<td>'+String($("#colitems150").val())+'</td>'+
+	'<td>'+String($("#colitems151").val())+'</td>'+
+	'<td>'+String($("#colitems152").val())+'</td>'+
+	'<td>'+String($("#colitems153").val())+'</td>'+
+	'<td>'+String($("#colitems154").val())+'</td>'+
+	'<td>'+String($("#colitems155").val())+'</td>'+
+	'</tr>'
+	);
+	//Запись всех текущих скважин
+	for (var keey in users_rights) {
+		writeskvs('create','user_right', String(keey), JSON.stringify(users_rights[keey]));
+		// console.log(keey);
+		// console.log(wells[keey]);
+	}
+	
+	// //Создание новой записи параметра!!!
+	// wells[String('par'+String((Object.keys(wells).length)))]=curPar;
+	
+	// //Добавление скважины в mysql в таблицу skvs
+	// writeskvs('create','skvs', String('par'+String((Object.keys(wells).length-1))),JSON.stringify(Object.assign({}, curPar)));
+	
+	// //Чтение всех скважин
+	// readskvs('read','skvs', '','');
+	}
+
 
 //Очистка и рендеринг
 function repaint() {
