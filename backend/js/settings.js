@@ -1815,7 +1815,7 @@ function colOK14 () {
 	);
 	//Запись всех текущих пользователей
 	for (var keey in users_rights) {
-		insertuser('create','users_rights',curPar.login, curPar.pass, String(keey), JSON.stringify(users_rights[keey]));
+		insertuser('create','users_rights',String(users_rights[keey].login), String(users_rights[keey].pass), String(keey), JSON.stringify(users_rights[keey]));
 		// console.log(keey);
 		// console.log(wells[keey]);
 	}
