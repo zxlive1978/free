@@ -1323,7 +1323,7 @@ function vertical() {
 //Выбор скважины Bootstrap navi
 $(document).ready(function () {
 	//Чтение всех пользователей
-	readskvs('read','user_right', '','');
+	readusers('read','users_rights', '','');
 			//Чтение списка скважин
 			readskvstart('read','skvs', '','');
 			
@@ -1758,7 +1758,97 @@ function colPan15 () {
 	
 	//console.log('fdsf');
 }
-
+//Изменить запись
+function colOK15 () {
+	//Изменить выбранную из скважин
+	for (var keey in wells) {
+		if ( keey== selectkeey) {
+			wells[keey].wellN =  String($("#colitems132").val());
+			wells[keey].txt = String($("#colitems131").val());
+			wells[keey].type = String($("#colitems133").val());
+			wells[keey].typeStn = String($("#colitems134").val());
+			wells[keey].nach = String($("#colitems135").val());
+			wells[keey].tel = String($("#colitems136").val());
+			wells[keey].email = String($("#colitems137").val());
+			//Обновить скважину в mysql в таблицу skvs
+			update('update','skvs',  keey.slice(3 , ),JSON.stringify(Object.assign({}, wells[keey])));
+		}
+	}
+	
+	// console.log(wells);
+	$('#skvs tbody').empty();
+	for (var keey in wells) {
+		$('#skvs tbody').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
+	}
+		
+	}
+	
+	//Удалить запись
+	function colOK151 () {
+		
+		//Удалить выбранную из скважин
+		for (var keey in wells) {
+			//console.log( keey);
+			if (wells[keey].wellN == String($("#colitems132").val())) {
+				deleteskvs('delete','skvs', keey.slice(3 , ));
+				//console.log( keey, keey.slice(3 , ));
+				delete (wells[keey]);
+			}
+		}
+		tmpwells={};
+		//Чтение всех скважин
+		readskvs('read','skvs', '','');
+	
+		///////////
+		// //Пересчитать индексы
+		//  var indx = 0;
+		// var nameidx = 'par'
+		// var fullnameidx = String(nameidx+indx);
+		// for (key in wells){
+			
+		// 	var curPar ={};
+			
+		// 	curPar = JSON.stringify(Object.assign({}, wells[key]));
+		// 	curPar = JSON.parse(curPar);
+		// 	tmpwells[String(fullnameidx)]=curPar;
+		// 	delete curPar;
+		// 	indx += 1;
+		// 	fullnameidx = String(nameidx+indx);
+		// }
+		// //{}освобождение
+		// wells = null;
+		// wells= tmpwells;
+	
+	
+		//console.log(wells);
+		//Очистка и добавка
+		$('#skvs tbody').empty();
+		for (var keey in wells) {
+			$('#skvs tbody').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
+		}
+		//Клик скважины
+		// $("#skvs tbody").on("click", "tr", function(event){
+		// 	var tableData = $(this).children("td").map(function() {
+		// 		return $(this).text();
+		// 	}).get();
+		// 	$("#colitems131").val($.trim(tableData[0]));
+		// 	$("#colitems132").val($.trim(tableData[1]));
+		// 	$("#colitems133").val($.trim(tableData[2]));
+		// 	$("#colitems134").val($.trim(tableData[3]));
+		// 	$("#colitems135").val($.trim(tableData[4]));
+		// 	$("#colitems136").val($.trim(tableData[5]));
+		// 	$("#colitems137").val($.trim(tableData[6]));
+		// 	colPan13();
+			
+		// });
+		
+		//Добавить скважину
+		// $('#addskv').click(function() {
+		// 	colPan12 ();
+		// });
+		
+	}
+	
 //Добавление  диалог пользователя
 function colPan14 () {
 	$("#myModal14").modal();
@@ -1813,21 +1903,23 @@ function colOK14 () {
 	'<td>'+String($("#colitems155").val())+'</td>'+
 	'</tr>'
 	);
-	//Запись всех текущих пользователей
-	for (var keey in users_rights) {
-		insertuser('create','users_rights',String(users_rights[keey].login), String(users_rights[keey].pass), String(keey), JSON.stringify(users_rights[keey]));
-		// console.log(keey);
-		// console.log(wells[keey]);
-	}
+	// //Запись всех текущих пользователей
+	// for (var keey in users_rights) {
+	// 	insertuser('create','users_rights',String(users_rights[keey].login), String(users_rights[keey].pass), String(keey), JSON.stringify(users_rights[keey]));
+	// 	// console.log(keey);
+	// 	// console.log(wells[keey]);
+	// }
 	
-	// //Создание новой записи параметра!!!
-	// users_rights[String('par'+String((Object.keys(users_rights).length)))]=curPar;
+	//Создание новой записи параметра!!!
+	users_rights[String('par'+String((Object.keys(users_rights).length)))]=curPar;
 	
-	// //Добавление пользователей в mysql в таблицу skvs
-	// writeskvs('create','user_right', String('par'+String((Object.keys(users_rights).length-1))),JSON.stringify(Object.assign({}, curPar)));
+	//Добавление пользователей в mysql в таблицу skvs
+	insertuser('create','users_rights',String(curPar.login), String(curPar.pass), String('par'+String((Object.keys(users_rights).length-1))), JSON.stringify(curPar));
 	
-	// //Чтение всех пользователей
-	// readskvs('read','user_right', '','');
+	//Чтение всех пользователей
+	readusers('read','users_rights', '','');
+	//console.log(users_rights);
+	updateuser('create','users_rights',String(curPar.login), String(curPar.pass), String('par'+String((Object.keys(users_rights).length-1))), JSON.stringify(curPar));
 	}
 
 

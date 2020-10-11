@@ -140,3 +140,74 @@ function insertuser(whatdo, table, login, password, p000, skvsjson){
 	});
 
 };
+
+//Изменить пользователя
+function updateuser(whatdo, table, login, password, p000, skvsjson){
+	refresh = false;
+	online = false;
+	$.ajax({
+		type: "POST",
+		url: 'js/writeskvs.php',
+		data: {whatdo:whatdo, table: table, login:login, password:password, p000: p000, skvsjson:skvsjson },
+		cache: false,
+		async: false,
+		success: function(data){
+			alert(data);
+			//if (Number(data)!=1) {alert('нет связи')};
+			
+		}
+	});
+
+};
+
+
+
+//Чтение всех пользователей
+function readusers(whatdo, table, p000, skvsjson){
+	refresh = false;
+	online = false;
+	$.ajax({
+		type: "POST",
+		url: 'js/writeskvs.php',
+		data: {whatdo:whatdo, table: table, p000: p000, skvsjson:skvsjson },
+		cache: false,
+		dataType: 'JSON',
+		async: false,
+		success: function(response){
+			users_rights = {};
+			var len = response.length;
+            for(var i=0; i<len; i++){
+                var p000 = response[i].p000;
+				var skvjson = response[i].skvjson;
+				skvjson = JSON.parse(skvjson);
+				users_rights[String(p000)] =  skvjson;
+				}
+		}
+	});
+
+};
+//Чтение всех пользователей при старте
+function readuserstart(whatdo, table, p000, skvsjson){
+	refresh = false;
+	online = false;
+	$.ajax({
+		type: "POST",
+		url: 'js/writeskvs.php',
+		data: {whatdo:whatdo, table: table, p000: p000, skvsjson:skvsjson },
+		cache: false,
+		dataType: 'JSON',
+		async: false,
+		success: function(response){
+			wells = {};
+			var len = response.length;
+            for(var i=0; i<len; i++){
+                var p000 = response[i].p000;
+				var skvjson = response[i].skvjson;
+				skvjson = JSON.parse(skvjson);
+				 users_rights[String(p000)] =  skvjson;
+				}
+				
+		}
+	});
+
+};
