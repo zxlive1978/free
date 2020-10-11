@@ -1919,7 +1919,7 @@ function colOK14 () {
 	//Чтение всех пользователей
 	readusers('read','users_rights', '','');
 	//console.log(users_rights);
-	updateuser('create','users_rights',String(curPar.login), String(curPar.pass), String('par'+String((Object.keys(users_rights).length-1))), JSON.stringify(curPar));
+	//updateuser('create','users_rights',String(curPar.login), String(curPar.pass), String('par'+String((Object.keys(users_rights).length-1))), JSON.stringify(curPar));
 	}
 
 
