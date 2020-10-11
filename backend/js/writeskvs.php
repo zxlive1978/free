@@ -85,7 +85,7 @@
 	if ($table == 'users_rights' && $whatdo == 'update'){
 		$login = $_POST['login'];
 		$password = $_POST['password'];
-		$query="UPDATE ".$name_base.".".$table." SET login='".$login."', password='".$password."', skvjson='".$skvjson."' WHERE id=".$p000.";";
+		$query="UPDATE ".$name_base.".".$table." SET login='".$login."', password='".$password.", p000='par".$p000."', skvjson='".$skvjson."' WHERE id=".$p000.";";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		echo $result;}
 	
