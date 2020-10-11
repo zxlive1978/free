@@ -61,7 +61,7 @@
 	if ($table == 'user_right' && $whatdo == 'create'){
 		$login = $_POST['login'];
 		$password = $_POST['password'];
-		$query="INSERT INTO ".$name_base.".".$table." VALUES ( NULL,'".$login."', '".$password."', '".$p000."' , '".$skvjson."' ); ";
+		$query="INSERT INTO ".$name_base.".".$table." VALUES ( NULL, '".$login."', '".$password."', '".$p000."', '".$skvjson."' ); ";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		echo $result;}
 	
