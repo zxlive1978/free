@@ -58,7 +58,7 @@
 	
 
 	//create user_right
-	if ($table == 'user_right' && $whatdo == 'create'){
+	if ($table == 'users_rights' && $whatdo == 'create'){
 		$login = $_POST['login'];
 		$password = $_POST['password'];
 		$query="INSERT INTO ".$name_base.".".$table." VALUES ( NULL, '".$login."', '".$password."', '".$p000."', '".$skvjson."' ); ";
