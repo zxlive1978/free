@@ -33,7 +33,7 @@ if (!$_SESSION['auth']) {
   } );
   //$('#tabs').hide();
   </script>
-  <script>
+
 
 
 
