@@ -120,3 +120,22 @@ function readskvstart(whatdo, table, p000, skvsjson){
 	});
 
 };
+
+
+//Создать пользователя
+function insertuser(whatdo, table,login,password, p000, skvsjson){
+	refresh = false;
+	online = false;
+	$.ajax({
+		type: "POST",
+		url: 'js/writeskvs.php',
+		data: {whatdo:whatdo, table: table,login:login,password:password,p000: p000, skvsjson:skvsjson },
+		cache: false,
+		async: false,
+		success: function(data){
+			if (Number(data)!=1) {alert('нет связи')};
+			
+		}
+	});
+
+};

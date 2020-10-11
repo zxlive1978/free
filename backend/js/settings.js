@@ -1813,21 +1813,21 @@ function colOK14 () {
 	'<td>'+String($("#colitems155").val())+'</td>'+
 	'</tr>'
 	);
-	// //Запись всех текущих пользователей
-	// for (var keey in users_rights) {
-	// 	writeskvs('create','user_right', String(keey), JSON.stringify(users_rights[keey]));
-	// 	// console.log(keey);
-	// 	// console.log(wells[keey]);
-	// }
+	//Запись всех текущих пользователей
+	for (var keey in users_rights) {
+		insertuser('create','user_right',curPar.login, curPar.pass, String(keey), JSON.stringify(users_rights[keey]));
+		// console.log(keey);
+		// console.log(wells[keey]);
+	}
 	
-	//Создание новой записи параметра!!!
-	users_rights[String('par'+String((Object.keys(users_rights).length)))]=curPar;
+	// //Создание новой записи параметра!!!
+	// users_rights[String('par'+String((Object.keys(users_rights).length)))]=curPar;
 	
-	//Добавление пользователей в mysql в таблицу skvs
-	writeskvs('create','user_right', String('par'+String((Object.keys(users_rights).length-1))),JSON.stringify(Object.assign({}, curPar)));
+	// //Добавление пользователей в mysql в таблицу skvs
+	// writeskvs('create','user_right', String('par'+String((Object.keys(users_rights).length-1))),JSON.stringify(Object.assign({}, curPar)));
 	
-	//Чтение всех пользователей
-	readskvs('read','user_right', '','');
+	// //Чтение всех пользователей
+	// readskvs('read','user_right', '','');
 	}
 
 

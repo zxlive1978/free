@@ -18,6 +18,7 @@
 	$whatdo=$_POST['whatdo'];
 	$p000 = $_POST['p000'];
 	$skvjson = $_POST['skvsjson'];
+	
 	$nu = "ok";
 	
 	//create
@@ -58,7 +59,9 @@
 
 	//create user_right
 	if ($table == 'user_right' && $whatdo == 'create'){
-		$query="INSERT INTO ".$name_base.".".$table." VALUES ( NULL, '".$p000."' , '".$skvjson."' ); ";
+		$login = $_POST['login'];
+		$password = $_POST['password'];
+		$query="INSERT INTO ".$name_base.".".$table." VALUES ( NULL,'".$login."', '".$password."', '".$p000."' , '".$skvjson."' ); ";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		echo $result;}
 	
