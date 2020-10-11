@@ -1322,8 +1322,11 @@ function vertical() {
 
 //Выбор скважины Bootstrap navi
 $(document).ready(function () {
+	//Чтение всех пользователей
+	readskvs('read','user_right', '','');
 			//Чтение списка скважин
 			readskvstart('read','skvs', '','');
+			
 			//открыть панель
 			adm();
 			
@@ -1554,7 +1557,7 @@ function adm (){
 	//Скважины
 	$('#tabs-2').empty();
 	$('#tabs-2').append('<button type="button" name="addskv" id="addskv" class="btn btn-success mb-1" data-dismiss="modal" >+</button>');
-	$('#tabs-2').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="skvs" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Тип работ</th><th>Тип станции</th><th>Фамилия начальника</th><th>Телефон</th><th>Эл.почта</th></tr></thead><tbody></tbody></table></div>');
+	$('#tabs-2').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="skvs" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Тип работ</th><th>Тип станции</th><th>Начальник станции</th><th>Телефон</th><th>Эл.почта</th></tr></thead><tbody></tbody></table></div>');
 	//Пользователи table-sm
 	$('#tabs-1').empty();
 	$('#tabs-1').append('<button type="button" name="adduserright" id="adduserright" class="btn btn-success mb-1" data-dismiss="modal" >+</button>');
@@ -1820,10 +1823,10 @@ function colOK14 () {
 	//Создание новой записи параметра!!!
 	users_rights[String('par'+String((Object.keys(users_rights).length)))]=curPar;
 	
-	//Добавление скважины в mysql в таблицу skvs
+	//Добавление пользователей в mysql в таблицу skvs
 	writeskvs('create','user_right', String('par'+String((Object.keys(users_rights).length-1))),JSON.stringify(Object.assign({}, curPar)));
 	
-	//Чтение всех скважин
+	//Чтение всех пользователей
 	readskvs('read','user_right', '','');
 	}
 

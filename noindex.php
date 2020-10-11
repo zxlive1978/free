@@ -784,7 +784,7 @@ window.onresize = function(event) {
             <td><input type="text" id="colitems124" name="colitems124" value=""></td>
   </tr>
   <tr>
-            <td><label for="ncolor">Фамилия начальника:</label></td>
+            <td><label for="ncolor">Начальник станции:</label></td>
             <td><input type="text" id="colitems125" name="colitems125" value=""></td>
   </tr>
   <tr>
@@ -843,7 +843,7 @@ window.onresize = function(event) {
             <td><input type="text" id="colitems134" name="colitems134" value=""></td>
   </tr>
   <tr>
-            <td><label for="ncolor">Фамилия начальника:</label></td>
+            <td><label for="ncolor">Начальник станции:</label></td>
             <td><input type="text" id="colitems135" name="colitems135" value=""></td>
   </tr>
   <tr>
