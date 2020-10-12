@@ -1776,6 +1776,7 @@ function colOK15 () {
 			users_rights[keey].depth = String($("#colitems153").val());
 			users_rights[keey].svodka = String($("#colitems154").val());
 			users_rights[keey].chat = String($("#colitems155").val());
+			console.log(users_rights[keey]);
 			//Обновить пользователя в mysql в таблицу users_rights
 			update('update','users_rights',  String(users_rights[keey].login),  String(users_rights[keey].pass), keey.slice(3 , ),JSON.stringify(Object.assign({}, users_rights[keey])));
 		}
