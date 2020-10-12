@@ -152,9 +152,7 @@ function updateuser(whatdo, table, login, password, p000, skvsjson){
 		cache: false,
 		async: false,
 		success: function(data){
-			alert(data);
-			//if (Number(data)!=1) {alert('нет связи')};
-			
+			if (Number(data)!=1) {alert('нет связи')};
 		}
 	});
 

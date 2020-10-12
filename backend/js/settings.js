@@ -1778,13 +1778,11 @@ function colOK15 () {
 			users_rights[keey].depth = String($("#colitems173").val());
 			users_rights[keey].svodka = String($("#colitems174").val());
 			users_rights[keey].chat = String($("#colitems175").val());
-			console.log(users_rights[keey]);
 			//Обновить пользователя в mysql в таблицу users_rights
 			updateuser('update','users_rights',  String(users_rights[keey].login),  String(users_rights[keey].pass), keey.slice(3 , ),JSON.stringify(Object.assign({}, users_rights[keey])));
 		}
 	}
-	
-	// console.log(wells);
+
 	$('#userright tbody').empty();
 	for (var keey in users_rights) {
 		$('#userright tbody').append('<tr><td>'+
