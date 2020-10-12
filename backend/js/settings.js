@@ -25,13 +25,13 @@ var wells = {
 
 //Пользователи УМ
 var users_rights = {
-	par0 : {name:'Малина Я.Я', login:'malina', pass:'mon123', dolgnost:'Супевайзер Cупервайзеров',tel:'7172737', email:'odin@odin.org',forms:'/malina',time:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, video:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, karotag:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},comments:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},geolog:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},depth:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},svodka:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, chat:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}},
-	par1 : {name:'Слива О.О', login:'sliva', pass:'mon123',dolgnost:'Супевайзер скв АГКМ-632',tel:'7172737', email:'odin0001@odin.org',forms:'/sliva',time:{skv0:'АГКМ-627'}, video:{skv0:'АГКМ-627'}, karotag:{skv0:'АГКМ-627'},comments:{skv0:'АГКМ-627'},geolog:{skv0:'АГКМ-627'},depth:{skv0:'АГКМ-627'},svodka:{skv0:'АГКМ-627'},chat:{skv0:'АГКМ-627'}},
-	par2 : {name:'Груша Т.О', login:'grusha', pass:'mon123',dolgnost:'Мастер скв АГКМ-632',tel:'7172737', email:'odin002@odin.org',forms:'/grusha',time:{skv0:'АГКМ-627'}, video:{}, karotag:{},comments:{},geolog:{},depth:{},svodka:{},chat:{}},
-	par3 : {name:'Тамарилло А.О', login:'tommarillo', pass:'mon123',dolgnost:'Технолог скв АГКМ-632',tel:'7172727', email:'sobaka19@sobaka.com',forms:'/tommarillo',time:{skv0:'АГКМ-627'}, video:{}, karotag:{skv0:'АГКМ-627'},comments:{skv0:'АГКМ-627'},geolog:{skv0:'АГКМ-627'},depth:{skv0:'АГКМ-627'},svodka:{skv0:'АГКМ-627'},chat:{skv0:'АГКМ-627'}},
+	// par0 : {name:'Малина Я.Я', login:'malina', pass:'mon123', dolgnost:'Супевайзер Cупервайзеров',tel:'7172737', email:'odin@odin.org',forms:'/malina',time:'АГКМ-9917, АГКМ-632, АГКМ-627', video:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, karotag:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},comments:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},geolog:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},depth:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'},svodka:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}, chat:{skv0:'АГКМ-9917',skv1:'АГКМ-632',skv2:'АГКМ-627'}},
+	// par1 : {name:'Слива О.О', login:'sliva', pass:'mon123',dolgnost:'Супевайзер скв АГКМ-632',tel:'7172737', email:'odin0001@odin.org',forms:'/sliva',time:{skv0:'АГКМ-627'}, video:{skv0:'АГКМ-627'}, karotag:{skv0:'АГКМ-627'},comments:{skv0:'АГКМ-627'},geolog:{skv0:'АГКМ-627'},depth:{skv0:'АГКМ-627'},svodka:{skv0:'АГКМ-627'},chat:{skv0:'АГКМ-627'}},
+	// par2 : {name:'Груша Т.О', login:'grusha', pass:'mon123',dolgnost:'Мастер скв АГКМ-632',tel:'7172737', email:'odin002@odin.org',forms:'/grusha',time:{skv0:'АГКМ-627'}, video:{}, karotag:{},comments:{},geolog:{},depth:{},svodka:{},chat:{}},
+	// par3 : {name:'Тамарилло А.О', login:'tommarillo', pass:'mon123',dolgnost:'Технолог скв АГКМ-632',tel:'7172727', email:'sobaka19@sobaka.com',forms:'/tommarillo',time:{skv0:'АГКМ-627'}, video:{}, karotag:{skv0:'АГКМ-627'},comments:{skv0:'АГКМ-627'},geolog:{skv0:'АГКМ-627'},depth:{skv0:'АГКМ-627'},svodka:{skv0:'АГКМ-627'},chat:{skv0:'АГКМ-627'}},
 	//par4 : {name:'Хризофиллум Ф.Л', login:'hrizo', pass:'mon123',dolgnost:'Геолог скв АГКМ-632',tel:'7172727', email:'sobaka19@sobaka.com',forms:'/hrizo',time:{}, video:{}, karotag:{skv0:'АГКМ-627'},comments:{skv0:'АГКМ-627'},geolog:{skv0:'АГКМ-627'},depth:{skv0:'АГКМ-627'},svodka:{skv0:'АГКМ-627'},chat:{skv0:'АГКМ-627'}},
 };
-
+"АГКМ-627"
 //Шаблон скважины
 var Shablontxtwell = {
 	par0 :  {wellN: 's110', txt: 'АГКМ-99', type: 'Ремонт', typeStn:'Разрез', nach:'Арбузов П.П.', tel:'232222', email:'sobaka13@sobaka.com'},
@@ -1586,12 +1586,13 @@ function adm (){
 	'</th><th>Камера4-станция</th><th>Камера4-стрим'+
 	'</th></tr></thead><tbody></tbody></table></div>');
 	
+	//скважины
 	for (var keey in wells) {
 		$('#skvs tbody').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
 		//$('#tabs-2').append('</div>');	
 	}
 	
-
+	//камеры
 	for (var keey in cams) {
 		$('#cams tbody').append('<tr><td>'+cams[keey].txt+'</td><td>'+cams[keey].wellN+
 		'</td><td>'+cams[keey].rtsp1+'</td><td>'+cams[keey].liveapp1+'</td><td>'+cams[keey].rtsp2+'</td><td>'+cams[keey].liveapp2+
@@ -1599,26 +1600,26 @@ function adm (){
 		 '</td></tr>');
 		//$('#tabs-2').append('</div>');	
 	}
-	
+	//пользватели
 	for (var keey in users_rights) {
-		strtime ='';strvideo='';strkarotag='';strcomments='';strgeolog='';
-		strdepth=''; strsvodka='';strchat ='';
-		for (var k in users_rights[keey].time){
-			strtime=strtime + users_rights[keey].time[k] +', ';}
-		for (var g in users_rights[keey].video){
-			strvideo=strvideo + users_rights[keey].video[g] +', ';}
-		for (var k in users_rights[keey].karotag){
-			strkarotag=strkarotag + users_rights[keey].time[k] +', ';}
-		for (var k in users_rights[keey].comments){
-			strcomments=strcomments + users_rights[keey].time[k] +', ';}
-		for (var k in users_rights[keey].geolog){
-			strgeolog=strgeolog + users_rights[keey].time[k] +', ';}
-		for (var k in users_rights[keey].depth){
-			strdepth=strdepth + users_rights[keey].time[k] +', ';}
-		for (var k in users_rights[keey].svodka){
-			strsvodka=strsvodka + users_rights[keey].time[k] +', ';}
-		for (var k in users_rights[keey].chat){
-			strchat=strchat + users_rights[keey].time[k] +', ';}
+		// strtime ='';strvideo='';strkarotag='';strcomments='';strgeolog='';
+		// strdepth=''; strsvodka='';strchat ='';
+		// for (var k in users_rights[keey].time){
+		// 	strtime=strtime + users_rights[keey].time[k] +', ';}
+		// for (var g in users_rights[keey].video){
+		// 	strvideo=strvideo + users_rights[keey].video[g] +', ';}
+		// for (var k in users_rights[keey].karotag){
+		// 	strkarotag=strkarotag + users_rights[keey].time[k] +', ';}
+		// for (var k in users_rights[keey].comments){
+		// 	strcomments=strcomments + users_rights[keey].time[k] +', ';}
+		// for (var k in users_rights[keey].geolog){
+		// 	strgeolog=strgeolog + users_rights[keey].time[k] +', ';}
+		// for (var k in users_rights[keey].depth){
+		// 	strdepth=strdepth + users_rights[keey].time[k] +', ';}
+		// for (var k in users_rights[keey].svodka){
+		// 	strsvodka=strsvodka + users_rights[keey].time[k] +', ';}
+		// for (var k in users_rights[keey].chat){
+		// 	strchat=strchat + users_rights[keey].time[k] +', ';}
 		$('#userright tbody').append('<tr>'
 		+'<td>'+users_rights[keey].name +'</td>'
 		+'<td>'+users_rights[keey].login +'</td>'
@@ -1627,22 +1628,18 @@ function adm (){
 		+'<td>'+users_rights[keey].tel +'</td>'
 		+'<td>'+users_rights[keey].email +'</td>'
 		+'<td>'+users_rights[keey].forms +'</td>'
-		+'<td>'+strtime +'</td>'
-		+'<td>'+strvideo +'</td>'
-		+'<td>'+strkarotag +'</td>'
-		+'<td>'+strcomments +'</td>'
-		+'<td>'+strgeolog +'</td>'
-		+'<td>'+strdepth +'</td>'
-		+'<td>'+strsvodka +'</td>'
-		+'<td>'+strchat +'</td>'
+
+		+'<td>'+users_rights[keey].time +'</td>'
+		+'<td>'+users_rights[keey].video +'</td>'
+		+'<td>'+users_rights[keey].karotag +'</td>'
+		+'<td>'+users_rights[keey].comments +'</td>'
+		+'<td>'+users_rights[keey].geolog +'</td>'
+		+'<td>'+users_rights[keey].depth +'</td>'
+		+'<td>'+users_rights[keey].svodka +'</td>'
+		+'<td>'+users_rights[keey].chat +'</td>'
+	
 		+'</tr>');
 	}
-	//Динамически добавить скрипт
-	// var newScript = document.createElement("script");
-	// var inlineScript = document.createTextNode("alert('Hello World!');");
-	// newScript.appendChild(inlineScript); 
-	// target.appendChild(newScript);
-	
 
 	//Добавить скважину
 	$('#addskv').click(function() {
@@ -1760,7 +1757,7 @@ function colPan15 () {
 }
 //Изменить запись
 function colOK15 () {
-	//Изменить выбранную из скважин
+	//Изменить выбранного пользователя
 	for (var keey in wells) {
 		if ( keey== selectkeey) {
 			wells[keey].wellN =  String($("#colitems132").val());
@@ -1870,6 +1867,12 @@ function colOK14 () {
 	curPar.tel = String($("#colitems145").val());
 	curPar.email = String($("#colitems146").val());
 	curPar.forms = String($("#colitems147").val());
+	curPar.time ={};
+	arr = String($("#colitems148").val()).split(',');
+	console.log(arr);
+	arr.forEach(function(item, i, arr) {
+		console.log( i + ": " + item );
+	  });
 	curPar.time = String($("#colitems148").val());
 	curPar.video = String($("#colitems149").val());
 	curPar.karotag = String($("#colitems150").val());
