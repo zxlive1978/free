@@ -1755,8 +1755,6 @@ function colPan15 () {
 		}}
 }
 
-
-
 //Изменить запись
 function colOK15 () {
 	//Изменить выбранного пользователя
@@ -1819,64 +1817,21 @@ function colOK15 () {
 			}
 		}
 		tmpuser={};
-		//Чтение всех скважин
-		readskvs('read','skvs', '','');
+		//Чтение всех пользователей
+		readusers('read','users_rights', '','');
 	
-		///////////
-		// //Пересчитать индексы
-		//  var indx = 0;
-		// var nameidx = 'par'
-		// var fullnameidx = String(nameidx+indx);
-		// for (key in wells){
-			
-		// 	var curPar ={};
-			
-		// 	curPar = JSON.stringify(Object.assign({}, wells[key]));
-		// 	curPar = JSON.parse(curPar);
-		// 	tmpwells[String(fullnameidx)]=curPar;
-		// 	delete curPar;
-		// 	indx += 1;
-		// 	fullnameidx = String(nameidx+indx);
-		// }
-		// //{}освобождение
-		// wells = null;
-		// wells= tmpwells;
-	
-	
-		//console.log(wells);
+
 		//Очистка и добавка
 		$('#skvs tbody').empty();
 		for (var keey in wells) {
 			$('#skvs tbody').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
 		}
-		//Клик скважины
-		// $("#skvs tbody").on("click", "tr", function(event){
-		// 	var tableData = $(this).children("td").map(function() {
-		// 		return $(this).text();
-		// 	}).get();
-		// 	$("#colitems131").val($.trim(tableData[0]));
-		// 	$("#colitems132").val($.trim(tableData[1]));
-		// 	$("#colitems133").val($.trim(tableData[2]));
-		// 	$("#colitems134").val($.trim(tableData[3]));
-		// 	$("#colitems135").val($.trim(tableData[4]));
-		// 	$("#colitems136").val($.trim(tableData[5]));
-		// 	$("#colitems137").val($.trim(tableData[6]));
-		// 	colPan13();
-			
-		// });
-		
-		//Добавить скважину
-		// $('#addskv').click(function() {
-		// 	colPan12 ();
-		// });
 		
 	}
 	
 //Добавление  диалог пользователя
 function colPan14 () {
 	$("#myModal14").modal();
-	
-	//console.log('fdsf');
 }
 
 
@@ -1902,12 +1857,6 @@ function colOK14 () {
 	curPar.svodka = String($("#colitems154").val());
 	curPar.chat = String($("#colitems155").val());
 
-	
-	
-	
-	
-	
-	
 	//Добавление в таблицу отображения
 	$('#userright tr:last').after('<tr><td>'+String($("#colitems141").val())+'</td>'+
 	'<td>'+String($("#colitems142").val())+'</td>'+
@@ -1940,7 +1889,8 @@ function colOK14 () {
 	insertuser('create','users_rights',String(curPar.login), String(curPar.pass), String('par'+String((Object.keys(users_rights).length))), JSON.stringify(curPar));
 	
 	//Чтение всех пользователей
-	readusers('read','users_rights', '','');
+	selectuser=String(curPar.login);
+	colOK15 ();
 	//console.log(users_rights);
 	//updateuser('create','users_rights',String(curPar.login), String(curPar.pass), String('par'+String((Object.keys(users_rights).length-1))), JSON.stringify(curPar));
 	}
