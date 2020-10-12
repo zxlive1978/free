@@ -1809,9 +1809,10 @@ function colOK15 () {
 		
 		//Удалить выбранную из скважин
 		for (var keey in users_rights) {
-			//console.log( keey);
-			if (users_rights[keey].wellN == String($("#colitems162").val())) {
-				deleteuser('delete','user_right', keey.slice(3 , ));
+			// console.log( keey);
+			// console.log( String($("#colitems162").val()));
+			if (users_rights[keey].login == String($("#colitems162").val())) {
+				deleteuser('delete','users_rights', keey.slice(3 , ));
 				//console.log( keey, keey.slice(3 , ));
 				delete (users_rights[keey]);
 			}

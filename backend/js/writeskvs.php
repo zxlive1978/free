@@ -90,10 +90,10 @@
 	echo $result;}
 	
 	//delete user_right
-	if ($table == 'user_right' && $whatdo == 'delete'){
+	if ($table == 'users_rights' && $whatdo == 'delete'){
 		$query="DELETE  FROM  ".$name_base.".".$table." WHERE id=".$p000.";";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
-		echo $result;}
+	echo $result;}
 	
 
 	//echo json_encode($nu);
