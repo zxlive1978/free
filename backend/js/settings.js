@@ -1762,25 +1762,25 @@ function colOK15 () {
 	//Изменить выбранного пользователя
 	for (var keey in users_rights) {
 		console.log(selectuser, keey);
-		if ( String(keey)== selectkeey) {
-			users_rights[keey].name = String($("#colitems141").val());
-			users_rights[keey].login = String($("#colitems142").val());
-			users_rights[keey].pass = String($("#colitems143").val());
-			users_rights[keey].dolgnost = String($("#colitems144").val());
-			users_rights[keey].tel = String($("#colitems145").val());
-			users_rights[keey].email = String($("#colitems146").val());
-			users_rights[keey].forms = String($("#colitems147").val());
-			users_rights[keey].time = String($("#colitems148").val());
-			users_rights[keey].video = String($("#colitems149").val());
-			users_rights[keey].karotag = String($("#colitems150").val());
-			users_rights[keey].comments = String($("#colitems151").val());
-			users_rights[keey].geolog = String($("#colitems152").val());
-			users_rights[keey].depth = String($("#colitems153").val());
-			users_rights[keey].svodka = String($("#colitems154").val());
-			users_rights[keey].chat = String($("#colitems155").val());
+		if ( keey== selectuser) {
+			users_rights[keey].name = String($("#colitems161").val());
+			users_rights[keey].login = String($("#colitems162").val());
+			users_rights[keey].pass = String($("#colitems163").val());
+			users_rights[keey].dolgnost = String($("#colitems164").val());
+			users_rights[keey].tel = String($("#colitems165").val());
+			users_rights[keey].email = String($("#colitems166").val());
+			users_rights[keey].forms = String($("#colitems167").val());
+			users_rights[keey].time = String($("#colitems168").val());
+			users_rights[keey].video = String($("#colitems169").val());
+			users_rights[keey].karotag = String($("#colitems170").val());
+			users_rights[keey].comments = String($("#colitems171").val());
+			users_rights[keey].geolog = String($("#colitems172").val());
+			users_rights[keey].depth = String($("#colitems173").val());
+			users_rights[keey].svodka = String($("#colitems174").val());
+			users_rights[keey].chat = String($("#colitems175").val());
 			console.log(users_rights[keey]);
 			//Обновить пользователя в mysql в таблицу users_rights
-			update('update','users_rights',  String(users_rights[keey].login),  String(users_rights[keey].pass), keey.slice(3 , ),JSON.stringify(Object.assign({}, users_rights[keey])));
+			updateuser('update','users_rights',  String(users_rights[keey].login),  String(users_rights[keey].pass), keey.slice(3 , ),JSON.stringify(Object.assign({}, users_rights[keey])));
 		}
 	}
 	
