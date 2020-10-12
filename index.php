@@ -24,7 +24,7 @@
     $code_page="SET NAMES 'utf8';";
     mysqli_query($dbc,$code_page) or die(mysqli_sqlstate($dbc));
     $name_base="pozitron";
-    $table="USERS";
+    $table="users_rights";
     $query = "SELECT * FROM ".$name_base.".".$table."  WHERE login='".$login."' AND password='".$pass."';";
     //echo $query;
     //echo $pass;
