@@ -31,7 +31,7 @@ var users_rights = {
 	// par3 : {name:'Тамарилло А.О', login:'tommarillo', pass:'mon123',dolgnost:'Технолог скв АГКМ-632',tel:'7172727', email:'sobaka19@sobaka.com',forms:'/tommarillo',time:{skv0:'АГКМ-627'}, video:{}, karotag:{skv0:'АГКМ-627'},comments:{skv0:'АГКМ-627'},geolog:{skv0:'АГКМ-627'},depth:{skv0:'АГКМ-627'},svodka:{skv0:'АГКМ-627'},chat:{skv0:'АГКМ-627'}},
 	//par4 : {name:'Хризофиллум Ф.Л', login:'hrizo', pass:'mon123',dolgnost:'Геолог скв АГКМ-632',tel:'7172727', email:'sobaka19@sobaka.com',forms:'/hrizo',time:{}, video:{}, karotag:{skv0:'АГКМ-627'},comments:{skv0:'АГКМ-627'},geolog:{skv0:'АГКМ-627'},depth:{skv0:'АГКМ-627'},svodka:{skv0:'АГКМ-627'},chat:{skv0:'АГКМ-627'}},
 };
-"АГКМ-627"
+
 //Шаблон скважины
 var Shablontxtwell = {
 	par0 :  {wellN: 's110', txt: 'АГКМ-99', type: 'Ремонт', typeStn:'Разрез', nach:'Арбузов П.П.', tel:'232222', email:'sobaka13@sobaka.com'},
@@ -1752,23 +1752,32 @@ function colPan15 () {
 		if (users_rights[keey].login == String($("#colitems162").val())) {
 			selectuser=keey;
 		}}
-	
-	//console.log('fdsf');
 }
+
+
+
 //Изменить запись
 function colOK15 () {
 	//Изменить выбранного пользователя
-	for (var keey in wells) {
+	for (var keey in users_rights) {
 		if ( keey== selectkeey) {
-			wells[keey].wellN =  String($("#colitems132").val());
-			wells[keey].txt = String($("#colitems131").val());
-			wells[keey].type = String($("#colitems133").val());
-			wells[keey].typeStn = String($("#colitems134").val());
-			wells[keey].nach = String($("#colitems135").val());
-			wells[keey].tel = String($("#colitems136").val());
-			wells[keey].email = String($("#colitems137").val());
-			//Обновить скважину в mysql в таблицу skvs
-			update('update','skvs',  keey.slice(3 , ),JSON.stringify(Object.assign({}, wells[keey])));
+			users_rights[keey].name = String($("#colitems141").val());
+			users_rights[keey].login = String($("#colitems142").val());
+			users_rights[keey].pass = String($("#colitems143").val());
+			users_rights[keey].dolgnost = String($("#colitems144").val());
+			users_rights[keey].tel = String($("#colitems145").val());
+			users_rights[keey].email = String($("#colitems146").val());
+			users_rights[keey].forms = String($("#colitems147").val());
+			users_rights[keey].time = String($("#colitems148").val());
+			users_rights[keey].video = String($("#colitems149").val());
+			users_rights[keey].karotag = String($("#colitems150").val());
+			users_rights[keey].comments = String($("#colitems151").val());
+			users_rights[keey].geolog = String($("#colitems152").val());
+			users_rights[keey].depth = String($("#colitems153").val());
+			users_rights[keey].svodka = String($("#colitems154").val());
+			users_rights[keey].chat = String($("#colitems155").val());
+			//Обновить пользователя в mysql в таблицу users_rights
+			update('update','users_rights',  String(users_rights[keey].login),  String(users_rights[keey].pass), keey.slice(3 , ),JSON.stringify(Object.assign({}, users_rights[keey])));
 		}
 	}
 	
@@ -1867,12 +1876,6 @@ function colOK14 () {
 	curPar.tel = String($("#colitems145").val());
 	curPar.email = String($("#colitems146").val());
 	curPar.forms = String($("#colitems147").val());
-	curPar.time ={};
-	arr = String($("#colitems148").val()).split(',');
-	console.log(arr);
-	arr.forEach(function(item, i, arr) {
-		console.log( i + ": " + item );
-	  });
 	curPar.time = String($("#colitems148").val());
 	curPar.video = String($("#colitems149").val());
 	curPar.karotag = String($("#colitems150").val());
