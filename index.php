@@ -45,7 +45,8 @@
 
 			//Пишем в сессию логин и id пользователя (их мы берем из переменной $user!):
 			$_SESSION['id'] = $user['id']; 
-      $_SESSION['login'] = $user['login'];
+	  $_SESSION['login'] = $user['login'];
+	  $_SESSION['skvjson'] = $user['skvjson'];
       include './noindex.php';
       
       //include './noindex.php';

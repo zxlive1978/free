@@ -174,7 +174,7 @@ if (!$_SESSION['auth']) {
   <div class="media-left" title="">
   <a class="navbar-brand" href="#">
     <img src="css/img_avatar1.png" class="rounded-circle" style="width:50px">
-    <?php echo ' '.$_SESSION['login']; ?>
+    <?php echo ' '.$_SESSION['login']; ?>  <?php echo $_SESSION['skvjson']; ?>
   </a>
   </div>
   
