@@ -1761,7 +1761,7 @@ function colPan15 () {
 function colOK15 () {
 	//Изменить выбранного пользователя
 	for (var keey in users_rights) {
-		console.log(selectuser, keey);
+		
 		if ( keey== selectuser) {
 			users_rights[keey].name = String($("#colitems161").val());
 			users_rights[keey].login = String($("#colitems162").val());
@@ -1785,9 +1785,25 @@ function colOK15 () {
 	}
 	
 	// console.log(wells);
-	$('#skvs tbody').empty();
-	for (var keey in wells) {
-		$('#skvs tbody').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
+	$('#userright tbody').empty();
+	for (var keey in users_rights) {
+		$('#userright tbody').append('<tr><td>'+
+		users_rights[keey].name+'</td><td>'+
+		users_rights[keey].login+'</td><td>'+
+		users_rights[keey].pass+'</td><td>'+
+		users_rights[keey].dolgnost+'</td><td>'+
+		users_rights[keey].tel+'</td><td>'+
+		users_rights[keey].email+'</td><td>'+
+		users_rights[keey].forms+'</td><td>'+
+		users_rights[keey].time+'</td><td>'+
+		users_rights[keey].video+'</td><td>'+
+		users_rights[keey].karotag+'</td><td>'+
+		users_rights[keey].comments+'</td><td>'+
+		users_rights[keey].geolog+'</td><td>'+
+		users_rights[keey].depth+'</td><td>'+
+		users_rights[keey].svodka+'</td><td>'+
+		users_rights[keey].chat+'</td><td>'+
+		'</td></tr>');
 	}
 		
 	}
@@ -1804,7 +1820,7 @@ function colOK15 () {
 				delete (wells[keey]);
 			}
 		}
-		tmpwells={};
+		tmpuser={};
 		//Чтение всех скважин
 		readskvs('read','skvs', '','');
 	
