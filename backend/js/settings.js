@@ -1663,12 +1663,12 @@ function adm (){
 		//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
 	});
 
-	//Добавить скважину
+	//Добавить пользователя
 	$('#adduserright').click(function() {
 		colPan14 ();		
 	});
 
-	//Клик скважины
+	//Клик пользователя
 	$("#userright tbody").on("click", "tr", function(event){
 		var tableData = $(this).children("td").map(function() {
 			return $(this).text();
@@ -1751,6 +1751,7 @@ function colPan15 () {
 	for (var keey in users_rights) {
 		if (users_rights[keey].login == String($("#colitems162").val())) {
 			selectuser=keey;
+			console.log(selectuser, users_rights[keey].login);
 		}}
 }
 
