@@ -1937,7 +1937,7 @@ function colOK14 () {
 	users_rights[String('par'+String((Object.keys(users_rights).length)))]=curPar;
 	
 	//Добавление пользователей в mysql в таблицу skvs
-	insertuser('create','users_rights',String(curPar.login), String(curPar.pass), String('par'+String((Object.keys(users_rights).length-1))), JSON.stringify(curPar));
+	insertuser('create','users_rights',String(curPar.login), String(curPar.pass), String('par'+String((Object.keys(users_rights).length))), JSON.stringify(curPar));
 	
 	//Чтение всех пользователей
 	readusers('read','users_rights', '','');
