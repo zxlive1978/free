@@ -1808,12 +1808,12 @@ function colOK15 () {
 	function colOK151 () {
 		
 		//Удалить выбранную из скважин
-		for (var keey in wells) {
+		for (var keey in users_rights) {
 			//console.log( keey);
-			if (wells[keey].wellN == String($("#colitems132").val())) {
-				deleteskvs('delete','skvs', keey.slice(3 , ));
+			if (users_rights[keey].wellN == String($("#colitems162").val())) {
+				deleteuser('delete','user_right', keey.slice(3 , ));
 				//console.log( keey, keey.slice(3 , ));
-				delete (wells[keey]);
+				delete (users_rights[keey]);
 			}
 		}
 		tmpuser={};
@@ -1822,9 +1822,25 @@ function colOK15 () {
 	
 
 		//Очистка и добавка
-		$('#skvs tbody').empty();
-		for (var keey in wells) {
-			$('#skvs tbody').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
+		$('#userright tbody').empty();
+		for (var keey in users_rights) {
+			$('#userright tbody').append('<tr><td>'+
+			users_rights[keey].name+'</td><td>'+
+			users_rights[keey].login+'</td><td>'+
+			users_rights[keey].pass+'</td><td>'+
+			users_rights[keey].dolgnost+'</td><td>'+
+			users_rights[keey].tel+'</td><td>'+
+			users_rights[keey].email+'</td><td>'+
+			users_rights[keey].forms+'</td><td>'+
+			users_rights[keey].time+'</td><td>'+
+			users_rights[keey].video+'</td><td>'+
+			users_rights[keey].karotag+'</td><td>'+
+			users_rights[keey].comments+'</td><td>'+
+			users_rights[keey].geolog+'</td><td>'+
+			users_rights[keey].depth+'</td><td>'+
+			users_rights[keey].svodka+'</td><td>'+
+			users_rights[keey].chat+'</td><td>'+
+			'</td></tr>');
 		}
 		
 	}
@@ -1889,8 +1905,7 @@ function colOK14 () {
 	insertuser('create','users_rights',String(curPar.login), String(curPar.pass), String('par'+String((Object.keys(users_rights).length))), JSON.stringify(curPar));
 	
 	//Чтение всех пользователей
-	selectuser=String(curPar.login);
-	colOK15 ();
+	readusers('read','users_rights', '','');
 	//console.log(users_rights);
 	//updateuser('create','users_rights',String(curPar.login), String(curPar.pass), String('par'+String((Object.keys(users_rights).length-1))), JSON.stringify(curPar));
 	}

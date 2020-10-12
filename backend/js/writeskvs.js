@@ -157,7 +157,24 @@ function updateuser(whatdo, table, login, password, p000, skvsjson){
 
 };
 
+//Удалить пользователя
+function deleteuser(whatdo, table, p000, skvsjson){
+	refresh = false;
+	online = false;
+	$.ajax({
+		type: "POST",
+		url: 'js/writeskvs.php',
+		data: {whatdo:whatdo, table: table, p000: p000, skvsjson:skvsjson },
+		cache: false,
+		async: false,
+		success: function(data){
+			if (Number(data)!=1) {alert('нет связи')};
+			//alert(data);
+			
+		}
+	});
 
+};
 
 //Чтение всех пользователей
 function readusers(whatdo, table, p000, skvsjson){
