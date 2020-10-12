@@ -174,7 +174,7 @@ if (!$_SESSION['auth']) {
   <div class="media-left" title="">
   <a class="navbar-brand" href="#">
     <img src="css/img_avatar1.png" class="rounded-circle" style="width:50px">
-    <?php echo ' '.$_SESSION['login']; ?>  <?php echo $_SESSION['skvjson']; ?>
+    <?php echo ' '.$_SESSION['login']; ?>  const users_rights=<?php echo $_SESSION['skvjson']; ?>;
   </a>
   </div>
   
@@ -753,125 +753,7 @@ window.onresize = function(event) {
 
 
 
- <!-- Добавить скважину -->
-  <div class="modal fade" id="myModal12">
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Добавить скважину</h4>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-<table>
-  <tr>
-            <td><label for="ncolor">Скважина:</label></td>
-            <td><input type="text" id="colitems121" name="colitems121" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">База:</label></td>
-            <td><input type="text" id="colitems122" name="colitems122" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Тип работ:</label></td>
-            <td><input type="text" id="colitems123" name="colitems123" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Тип станции:</label></td>
-            <td><input type="text" id="colitems124" name="colitems124" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Начальник станции:</label></td>
-            <td><input type="text" id="colitems125" name="colitems125" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Телефон:</label></td>
-            <td><input type="text" id="colitems126" name="colitems126" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Эл.почта:</label></td>
-            <td><input type="text" id="colitems127" name="colitems127" value=""></td>
-  </tr>
-  
-
-</div>
-</table>
-</div>        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK12()'>Применить</button>
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-
-
-
-<!-- Редактировать, удалить скважину -->
-<div class="modal fade" id="myModal13">
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Редактировать/удалить скважину</h4>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-<table>
-  <tr>
-            <td><label for="ncolor">Скважина:</label></td>
-            <td><input type="text" id="colitems131" name="colitems131" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">База:</label></td>
-            <td><input type="text" id="colitems132" name="colitems132" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Тип работ:</label></td>
-            <td><input type="text" id="colitems133" name="colitems133" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Тип станции:</label></td>
-            <td><input type="text" id="colitems134" name="colitems134" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Начальник станции:</label></td>
-            <td><input type="text" id="colitems135" name="colitems135" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Телефон:</label></td>
-            <td><input type="text" id="colitems136" name="colitems136" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Эл.почта:</label></td>
-            <td><input type="text" id="colitems137" name="colitems137" value=""></td>
-  </tr>
-  
-
-</div>
-</table>
-</div>        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-        <button type="button" class="btn btn-warning" data-dismiss="modal" onclick='colOK131()'>Удалить</button>
-			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK13()'>Сохранить</button>
-      
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-
-
+ 
 
 
 
