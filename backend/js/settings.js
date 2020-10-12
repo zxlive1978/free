@@ -1751,7 +1751,7 @@ function colPan15 () {
 	for (var keey in users_rights) {
 		if (users_rights[keey].login == String($("#colitems162").val())) {
 			selectuser=keey;
-			console.log(selectuser, users_rights[keey].login);
+			
 		}}
 }
 
@@ -1761,7 +1761,8 @@ function colPan15 () {
 function colOK15 () {
 	//Изменить выбранного пользователя
 	for (var keey in users_rights) {
-		if ( keey== selectkeey) {
+		console.log(selectuser, keey);
+		if ( String(keey)== selectkeey) {
 			users_rights[keey].name = String($("#colitems141").val());
 			users_rights[keey].login = String($("#colitems142").val());
 			users_rights[keey].pass = String($("#colitems143").val());
