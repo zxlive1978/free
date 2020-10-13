@@ -124,6 +124,7 @@ function loadddata(name) {
 function readddir() {
 	/* filesss= {}; */
 	//fileName = '../scr/scr11.scr';
+	
 	$.ajax({
 			type: "POST",
 			url: 'js/readddir.php',
