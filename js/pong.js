@@ -47,9 +47,10 @@ var formname = "Под телефон";
 
 if (!isMobile){formname="Цветная";}
 
-
 //Сохранение и чтение настроей из локального хранилища
+function readsavestartstorage(){
 if(!window.localStorage.getItem('wellName')) {
+	//for(keey in wells){}
 	localStorage.setItem('wellName', wellName );
 	localStorage.setItem('skv', skv);
 	localStorage.setItem('namecmt', namecmt);
@@ -60,17 +61,21 @@ if(!window.localStorage.getItem('wellName')) {
 	wellName="";
 	skv="";
 	namecmt = wellName + "kr";
-	for(keey in wells){
+	console.log(localStorage.getItem('skv'));
+	console.log(wells);
+	for(var keey in wells){
+		console.log(wells[keey].txt);
 		if 	(wells[keey].txt==localStorage.getItem('skv')){
 		wellName = localStorage.getItem('wellName');
 		skv = localStorage.getItem('skv');
 		namecmt = localStorage.getItem('namecmt');
 		formname = localStorage.getItem('formname');
+		console.log('есть');
 		}
 	}
 	/* console.log('есть'); */
 }
-
+}
 
 //$("#wellNwork1").text(wells['par0'].type);
 // $("#wellNwork1").text('fdfsfsf');
