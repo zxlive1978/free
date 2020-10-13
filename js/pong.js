@@ -115,11 +115,13 @@ function read_cycle (){
 
 //Чтение последних значений
 function read_next(){
-	online = true;
+	
 	//refresh = false;
 	//alert(wellName);
 	//console.log(Kzoom);
-	if (refresh==true &&  wellName!=""){
+	if (refresh==true &&  wellName!='' ){
+		online = true;
+		console.log(online);
 		refresh=false;
 		let data = null;
 		$.ajax({

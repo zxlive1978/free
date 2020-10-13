@@ -32,7 +32,7 @@ var namecmt= wellName + "kr";
 
 //Чтение комментариев
 function read_comment(){
-	if(wellName!=""){
+	if(wellName!=''){
 	online = true;
 	//refresh = false;
 	//alert(wellName);
