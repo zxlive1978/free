@@ -63,9 +63,10 @@ if(!window.localStorage.getItem(_uz[0])) {
 	// console.log(wells);
 	let _uloc = decodeURIComponent(escape(window.atob(localStorage.getItem(_uz[0]))));
 	let arr = _uloc.split(',');
+	let _nam = decodeURIComponent(escape(window.atob(localStorage.getItem(arr[1]))));
 	for(var keey in wells){
 		// console.log(wells[keey].txt);
-		if 	(wells[keey].txt==decodeURIComponent(escape(window.atob(localStorage.getItem(arr[1]))))){
+		if 	(wells[keey].txt==_nam){
 		wellName = decodeURIComponent(escape(window.atob(localStorage.getItem(arr[0]))));
 		skv = decodeURIComponent(escape(window.atob(localStorage.getItem(arr[1]))));
 		namecmt = decodeURIComponent(escape(window.atob(localStorage.getItem(arr[2]))));
