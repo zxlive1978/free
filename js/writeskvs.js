@@ -115,6 +115,9 @@ function readskvstart(whatdo, table, p000, skvsjson){
 			}
 					//Сохранение и чтение настроей из локального хранилища
 					readsavestartstorage();
+					//Загрузка формы при старте
+					colOK8start(formname);
+					//Старт!!!
 					read_now();
 					//read_next();
 					//Список скважин

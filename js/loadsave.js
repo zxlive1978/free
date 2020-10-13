@@ -66,13 +66,13 @@ function savedata(name){
 	curscr = JSON.stringify(Object.assign({}, curscr));
 	/* console.log(curscr); */
 	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
-	fileName=_uzdec;
-	fileName = fileName+'/'+ name;
+	filedir=_uzdec;
+	filedir = filedir+'/'+ name;
 	
 	$.ajax({
 			type: "POST",
 			url: 'js/savetoserver.php',
-			data: {name: 'Wayne',well_Name: wellName, fileData: curscr, fileName: fileName},
+			data: {name: 'Wayne',well_Name: wellName, fileData: curscr, fileName: filedir},
 			success: function(data){
 			
 				alert(data);
@@ -91,13 +91,13 @@ function savedata(name){
 //Загрузка файла с сервера
 function loadddata(name) {
 	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
-	fileName=_uzdec;
-	fileName = fileName+'/'+ name;
-	console.log(fileName);
+	var filedir=_uzdec;
+	filedir = filedir+'/'+ name;
+	//console.log(filedir);
 	$.ajax({
 			type: "GET",
 			url: 'js/loadfromserver.php',
-			data: {name: 'Wayne',well_Name: wellName, fileName: fileName},
+			data: {name: 'Wayne',well_Name: wellName, fileName: filedir},
 			success: function(data){
 				//Обновление
 				var refresh = false;
@@ -129,13 +129,13 @@ function readddir() {
 	/* filesss= {}; */
 	//fileName = '../scr/scr11.scr';
 	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
-	fileName=_uzdec;
-	fileName = fileName+'/';
+	filedir=_uzdec;
+	filedir = filedir+'/';
 	$.ajax({
 			type: "POST",
 			url: 'js/readddir.php',
 			async:false,
-			data: {name: 'Wayne',well_Name: wellName, fileName: fileName},
+			data: {name: 'Wayne',well_Name: wellName, fileName: filedir},
 			success: function(data){
 				//Обновление
 				var refresh = false;

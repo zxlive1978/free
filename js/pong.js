@@ -75,6 +75,7 @@ if(!window.localStorage.getItem('wellName')) {
 	}
 	/* console.log('есть'); */
 }
+
 }
 
 //$("#wellNwork1").text(wells['par0'].type);
@@ -86,8 +87,7 @@ if(!window.localStorage.getItem('wellName')) {
 
 
 
-//Загрузка формы при старте
-colOK8start(formname);
+
 
 //Эмулятор данных
 function read_cycle (){
