@@ -40,8 +40,8 @@ let d110d =function (){
 }
 
 //var d110d = null;
-var wellName ="s20";
-var skv ="АГКМ-938";
+var wellName ="";
+var skv ="";
 var namecmt = wellName + "kr";
 var formname = "Под телефон";
 
@@ -57,12 +57,17 @@ if(!window.localStorage.getItem('wellName')) {
 	/* console.log('нету'); */
 	
 } else {
-	
-	wellName = localStorage.getItem('wellName');
-	skv = localStorage.getItem('skv');
-	namecmt = localStorage.getItem('namecmt');
-	formname = localStorage.getItem('formname');
-	
+	wellName="";
+	skv="";
+	namecmt = wellName + "kr";
+	while(keey in wells){
+		if 	(wells[keey].txt==localStorage.getItem('skv')){
+		wellName = localStorage.getItem('wellName');
+		skv = localStorage.getItem('skv');
+		namecmt = localStorage.getItem('namecmt');
+		formname = localStorage.getItem('formname');
+		}
+	}
 	/* console.log('есть'); */
 }
 
