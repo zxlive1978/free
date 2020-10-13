@@ -4,7 +4,7 @@
 //твой код
 })(); */
 
-console.log (users_rights);
+console.log (users_rights, window.atob(users_rights[0]));
 
 var isMobile = false; //
 // ТЕЛЕФОН ПЛАНШЕТ???

@@ -50,7 +50,7 @@
 	  $obj = json_decode($user['skvjson'], true);
 	  //print_r($obj['name']);
 	  $userrights = array ();
-	  $userrights[]=$obj['name'];
+	  $userrights[]=base64_encode(($obj['name']);
 	  $userrights[]=$obj['dolgnost'];
 	  $userrights[]=$obj['tel'];
 	  $userrights[]=$obj['email'];
