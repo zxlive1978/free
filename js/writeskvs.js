@@ -105,15 +105,11 @@ function readskvstart(whatdo, table, p000, skvsjson){
 				let _uzdec =decodeURIComponent(escape(window.atob(_uz[5])));
 				let result = _uzdec.split(",");
 				for (var j=0; j<result.length; j++){
-					
-					//console.log($.trim(result[j]));
 					if (($.trim(result[j]))=='ALL'){
 					wells[String(p000)] =  skvjson;
-					console.log(skvjson.txt);
 					break;}
 					if (($.trim(result[j]))==skvjson.txt){
-						wells[String(p000)] =  skvjson;
-						console.log(skvjson.txt);}
+						wells[String(p000)] =  skvjson;}
 					
 				}
 			}
