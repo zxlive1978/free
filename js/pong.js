@@ -61,16 +61,16 @@ if(!window.localStorage.getItem('wellName')) {
 	wellName="";
 	skv="";
 	namecmt = wellName + "kr";
-	console.log(localStorage.getItem('skv'));
-	console.log(wells);
+	// console.log(localStorage.getItem('skv'));
+	// console.log(wells);
 	for(var keey in wells){
-		console.log(wells[keey].txt);
+		// console.log(wells[keey].txt);
 		if 	(wells[keey].txt==localStorage.getItem('skv')){
 		wellName = localStorage.getItem('wellName');
 		skv = localStorage.getItem('skv');
 		namecmt = localStorage.getItem('namecmt');
 		formname = localStorage.getItem('formname');
-		console.log('есть');
+		// console.log('есть');
 		}
 	}
 	/* console.log('есть'); */
