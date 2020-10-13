@@ -72,8 +72,13 @@ function readskvs(whatdo, table, p000, skvsjson){
                 var p000 = response[i].p000;
 				var skvjson = response[i].skvjson;
 				skvjson = JSON.parse(skvjson);
-				 wells[String(p000)] =  skvjson;
+				for (var j=0; j<_uz.length; j++){
+					let _uzdec =decodeURIComponent(escape(window.atob(_uz[5])))
+					console.log(_uzdec);
+				 	wells[String(p000)] =  skvjson;
 				}
+
+			}
 		}
 	});
 
@@ -97,8 +102,13 @@ function readskvstart(whatdo, table, p000, skvsjson){
                 var p000 = response[i].p000;
 				var skvjson = response[i].skvjson;
 				skvjson = JSON.parse(skvjson);
-				 wells[String(p000)] =  skvjson;
+				for (var j=0; j<_uz.length; j++){
+					let _uzdec =decodeURIComponent(escape(window.atob(_uz[5])))
+					console.log(_uzdec);
+					wells[String(p000)] =  skvjson;
+					console.log(skvjson.txt);
 				}
+			}
 					//Список скважин
 					$('[id^="par"]').click(function (){
 						/* console.log(this.id); */
