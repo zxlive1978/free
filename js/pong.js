@@ -60,7 +60,7 @@ if(!window.localStorage.getItem('wellName')) {
 	wellName="";
 	skv="";
 	namecmt = wellName + "kr";
-	while(keey in wells){
+	for(keey in wells){
 		if 	(wells[keey].txt==localStorage.getItem('skv')){
 		wellName = localStorage.getItem('wellName');
 		skv = localStorage.getItem('skv');
@@ -114,7 +114,7 @@ function read_next(){
 	//refresh = false;
 	//alert(wellName);
 	//console.log(Kzoom);
-	if (refresh==true){
+	if (refresh==true &&  wellName!=""){
 		refresh=false;
 		let data = null;
 		$.ajax({
