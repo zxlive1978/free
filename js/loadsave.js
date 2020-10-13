@@ -35,18 +35,18 @@ function savedata111() {
 
 //function download(content, fileName, contentType) {
 //Сохранение в файл на компе!
-function savedatafile() {
-	var curscr ={};
-	curscr = JSON.stringify(Object.assign({}, basePar));
-	content = curscr;
-	fileName = 'scr1.scr';
-	contentType = 'text/plain';
-    var a = document.createElement("a");
-    var file = new Blob([content], {type: contentType});
-    a.href = URL.createObjectURL(file);
-    a.download = fileName;
-    a.click();
-}
+// function savedatafile() {
+// 	var curscr ={};
+// 	curscr = JSON.stringify(Object.assign({}, basePar));
+// 	content = curscr;
+// 	fileName = 'scr1.scr';
+// 	contentType = 'text/plain';
+//     var a = document.createElement("a");
+//     var file = new Blob([content], {type: contentType});
+//     a.href = URL.createObjectURL(file);
+//     a.download = fileName;
+//     a.click();
+// }
 //download(jsonData, 'json.txt', 'text/plain');
 //Сохранение на сервер файла  и в хранилище
 function savedata(name){
@@ -64,7 +64,7 @@ function savedata(name){
 	/* console.log(curscr); */
 	curscr = JSON.stringify(Object.assign({}, curscr));
 	/* console.log(curscr); */
-	fileName = name;
+	fileName =  name;
 	
 	$.ajax({
 			type: "POST",
@@ -87,7 +87,9 @@ function savedata(name){
 
 //Загрузка файла с сервера
 function loadddata(name) {
-	fileName = name;
+	let _uzdec =decodeURIComponent(escape(window.atob(_uz[7])));
+	fileName=_uzdec;
+	fileName = + name;
 	$.ajax({
 			type: "GET",
 			url: 'js/loadfromserver.php',
