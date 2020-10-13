@@ -63,14 +63,15 @@ if(!window.localStorage.getItem(_uz[0])) {
 	// console.log(wells);
 	let _uloc = decodeURIComponent(escape(window.atob(localStorage.getItem(_uz[0]))));
 	let arr = _uloc.split(',');
-	let _nam = decodeURIComponent(escape(window.atob(localStorage.getItem(arr[1]))));
+	let _nam = arr[1];
+	//console.log(_nam, _uloc);
 	for(var keey in wells){
 		// console.log(wells[keey].txt);
 		if 	(wells[keey].txt==_nam){
-		wellName = decodeURIComponent(escape(window.atob(localStorage.getItem(arr[0]))));
-		skv = decodeURIComponent(escape(window.atob(localStorage.getItem(arr[1]))));
-		namecmt = decodeURIComponent(escape(window.atob(localStorage.getItem(arr[2]))));
-		formname = decodeURIComponent(escape(window.atob(localStorage.getItem(arr[3]))));
+		wellName = arr[0];
+		skv = arr[1];
+		namecmt = arr[2];
+		formname = arr[3];
 		// console.log('есть');
 		}
 	}
