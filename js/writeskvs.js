@@ -102,9 +102,11 @@ function readskvstart(whatdo, table, p000, skvsjson){
                 var p000 = response[i].p000;
 				var skvjson = response[i].skvjson;
 				skvjson = JSON.parse(skvjson);
-				for (var j=0; j<_uz.length; j++){
-					let _uzdec =decodeURIComponent(escape(window.atob(_uz[5])))
-					console.log(_uzdec);
+				let _uzdec =decodeURIComponent(escape(window.atob(_uz[5])));
+				let result = _uzdec.split(",").trim();
+				for (var j=0; j<result.length; j++){
+					
+					console.log(result);
 					wells[String(p000)] =  skvjson;
 					console.log(skvjson.txt);
 				}
