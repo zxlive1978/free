@@ -115,6 +115,7 @@ function readskvstart(whatdo, table, p000, skvsjson){
 			}
 					//Сохранение и чтение настроей из локального хранилища
 					readsavestartstorage();
+					read_now();
 					//read_next();
 					//Список скважин
 					$('[id^="par"]').click(function (){

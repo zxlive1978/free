@@ -121,7 +121,6 @@ function read_next(){
 	//console.log(Kzoom);
 	if (refresh==true &&  wellName!='' ){
 		online = true;
-		console.log(online);
 		refresh=false;
 		let data = null;
 		$.ajax({

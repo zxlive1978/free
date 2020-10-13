@@ -37,7 +37,6 @@ function read_comment(){
 	//refresh = false;
 	//alert(wellName);
 	//alert(Kzoom);
-	console.log (start_time);
 	//console.log (end_time);
 	var data = null;
 	$.ajax({
