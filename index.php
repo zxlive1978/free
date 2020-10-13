@@ -47,7 +47,24 @@
 			$_SESSION['id'] = $user['id']; 
 	  $_SESSION['login'] = $user['login'];
 	  //$userjson=json_encode($user['skvjson'], JSON_UNESCAPED_UNICODE);
-	  $_SESSION['skvjson'] = $user['skvjson'];
+	  $obj = json_decode($user['skvjson'], true);
+	  //print_r($obj['name']);
+	  $userrights = array ();
+	  $userrights[]=$obj['name'];
+	  $userrights[]=$obj['dolgnost'];
+	  $userrights[]=$obj['tel'];
+	  $userrights[]=$obj['email'];
+	  $userrights[]=$obj['forms'];
+	  $userrights[]=$obj['time'];
+	  $userrights[]=$obj['video'];
+	  $userrights[]=$obj['karotag'];
+	  $userrights[]=$obj['comments'];
+	  $userrights[]=$obj['geolog'];
+	  $userrights[]=$obj['depth'];
+	  $userrights[]=$obj['svodka'];
+	  $userrights[]=$obj['chat'];
+	  //print_r(json_encode($userrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT ));
+	  $_SESSION['skvjson'] = json_encode($userrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT );
       include './noindex.php';
       
       //include './noindex.php';

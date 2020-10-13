@@ -13,7 +13,7 @@ if (!$_SESSION['auth']) {
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
-<script>var users_rights=<?php echo $_SESSION['skvjson']; ?>;</script>
+<script>const users_rights=<?php echo $_SESSION['skvjson']; ?>;</script>
 <link rel="stylesheet" type="text/css" href="css/jschart5.css">
 <link rel="stylesheet" href="css/iziModal.min.css">
 
