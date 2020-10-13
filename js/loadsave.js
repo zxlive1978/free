@@ -87,9 +87,10 @@ function savedata(name){
 
 //Загрузка файла с сервера
 function loadddata(name) {
-	let _uzdec =decodeURIComponent(escape(window.atob(_uz[7])));
+	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
 	fileName=_uzdec;
-	fileName = + name;
+	fileName = fileName+'/'+ name;
+	console.log(fileName);
 	$.ajax({
 			type: "GET",
 			url: 'js/loadfromserver.php',
@@ -124,7 +125,7 @@ function loadddata(name) {
 function readddir() {
 	/* filesss= {}; */
 	//fileName = '../scr/scr11.scr';
-	
+
 	$.ajax({
 			type: "POST",
 			url: 'js/readddir.php',
