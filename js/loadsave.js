@@ -50,6 +50,7 @@ function savedata111() {
 //download(jsonData, 'json.txt', 'text/plain');
 //Сохранение на сервер файла  и в хранилище
 function savedata(name){
+
 	localStorage.setItem('wellName', wellName );
 	localStorage.setItem('skv', skv);
 	localStorage.setItem('namecmt', namecmt);
@@ -64,7 +65,9 @@ function savedata(name){
 	/* console.log(curscr); */
 	curscr = JSON.stringify(Object.assign({}, curscr));
 	/* console.log(curscr); */
-	fileName =  name;
+	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
+	fileName=_uzdec;
+	fileName = fileName+'/'+ name;
 	
 	$.ajax({
 			type: "POST",
@@ -125,7 +128,9 @@ function loadddata(name) {
 function readddir() {
 	/* filesss= {}; */
 	//fileName = '../scr/scr11.scr';
-
+	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
+	fileName=_uzdec;
+	fileName = fileName+'/'+ name;
 	$.ajax({
 			type: "POST",
 			url: 'js/readddir.php',
