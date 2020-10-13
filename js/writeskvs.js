@@ -113,6 +113,8 @@ function readskvstart(whatdo, table, p000, skvsjson){
 					
 				}
 			}
+					//Имя
+					$("#ava").text(decodeURIComponent(escape(window.atob(_uz[0]))));
 					//Сохранение и чтение настроей из локального хранилища
 					readsavestartstorage();
 					//Загрузка формы при старте
