@@ -130,7 +130,7 @@ function readddir() {
 	//fileName = '../scr/scr11.scr';
 	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
 	fileName=_uzdec;
-	fileName = fileName+'/'+ name;
+	fileName = fileName+'/';
 	$.ajax({
 			type: "POST",
 			url: 'js/readddir.php',

@@ -15,7 +15,7 @@
 		echo 'Сохранено';}
 	else 
 	    echo "Ошибка"; */
-	$dir= '../scr/';
+	$dir= '../scr'.$myFile;
 	$files = array_slice(scandir($dir), 2);
 	echo json_encode($files);
 	/* $str = file_get_contents('../scr/scr11.scr');

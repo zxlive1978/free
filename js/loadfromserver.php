@@ -15,7 +15,7 @@
 		echo 'Сохранено';}
 	else 
 	    echo "Ошибка"; */
-	$dir ='../scr/'.$myFile;
+	$dir ='../scr'.$myFile;
 	$str = file_get_contents($dir);
 	echo json_decode($str);
 	/* $myfile = fopen("../scr/testfile.txt", "w"); */

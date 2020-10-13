@@ -5,7 +5,7 @@
 	
 	$table=$_POST['well_Name'];
 	$jsondata = $_POST['fileData'];
-	$myFile ='../scr/'.$_POST['fileName'];
+	$myFile ='../scr'.$_POST['fileName'];
 	$x_id="Vrema";
 	/*echo $jsondata;
 	echo getcwd();
