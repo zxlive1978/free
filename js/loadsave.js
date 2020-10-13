@@ -51,10 +51,8 @@ function savedata111() {
 //Сохранение на сервер файла  и в хранилище
 function savedata(name){
 
-	localStorage.setItem('wellName', wellName );
-	localStorage.setItem('skv', skv);
-	localStorage.setItem('namecmt', namecmt);
-	localStorage.setItem('formname', formname);
+	localStorage.setItem(_uz[0],
+		window.btoa(unescape(encodeURIComponent(wellName+','+skv+','+namecmt+','+formname))));
 	var curscr =[];
 	/* curscr =JSON.parse(curscr); */
 	curscr.push(Sheet);

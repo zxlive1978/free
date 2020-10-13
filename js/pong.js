@@ -49,12 +49,10 @@ if (!isMobile){formname="Цветная";}
 
 //Сохранение и чтение настроей из локального хранилища
 function readsavestartstorage(){
-if(!window.localStorage.getItem('wellName')) {
+if(!window.localStorage.getItem(_uz[0])) {
 	//for(keey in wells){}
-	localStorage.setItem('wellName', wellName );
-	localStorage.setItem('skv', skv);
-	localStorage.setItem('namecmt', namecmt);
-	localStorage.setItem('formname', formname);
+	localStorage.setItem(_uz[0],
+	window.btoa(unescape(encodeURIComponent(wellName+','+skv+','+namecmt+','+formname))));
 	/* console.log('нету'); */
 	
 } else {
@@ -63,13 +61,15 @@ if(!window.localStorage.getItem('wellName')) {
 	namecmt = wellName + "kr";
 	// console.log(localStorage.getItem('skv'));
 	// console.log(wells);
+	let _uloc = decodeURIComponent(escape(window.atob(localStorage.getItem(_uz[0]))));
+	let arr = _uloc.split(',');
 	for(var keey in wells){
 		// console.log(wells[keey].txt);
-		if 	(wells[keey].txt==localStorage.getItem('skv')){
-		wellName = localStorage.getItem('wellName');
-		skv = localStorage.getItem('skv');
-		namecmt = localStorage.getItem('namecmt');
-		formname = localStorage.getItem('formname');
+		if 	(wells[keey].txt==decodeURIComponent(escape(window.atob(localStorage.getItem(arr[1]))))){
+		wellName = decodeURIComponent(escape(window.atob(localStorage.getItem(arr[0]))));
+		skv = decodeURIComponent(escape(window.atob(localStorage.getItem(arr[1]))));
+		namecmt = decodeURIComponent(escape(window.atob(localStorage.getItem(arr[2]))));
+		formname = decodeURIComponent(escape(window.atob(localStorage.getItem(arr[3]))));
 		// console.log('есть');
 		}
 	}
