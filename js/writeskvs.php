@@ -22,18 +22,18 @@
 	
 	//create
 	if ($table == 'skvs' && $whatdo == 'create'){
-		$query="INSERT INTO ".$name_base.".".$table." VALUES ( '".$p000."' , '".$skvjson."' );";
+		$query="INSERT INTO ".$name_base.".".$table." VALUES ( NULL, '".$p000."' , '".$skvjson."' ); ";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		echo $result;}
 	
-	//read
+	//read all
 	if ($table == 'skvs' && $whatdo == 'read'){
 		$query="SELECT * FROM ".$name_base.".".$table.";";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		$comment = array();
 		while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
 			//echo $row[$x_id]." - ".$row[$y_id]."<br />";
-			$cur_rec= array('p000'=>$row['p000'], 'skvjson'=> $row['skvjson']);
+			$cur_rec= array('p000'=>'par'.$row['id'], 'skvjson'=> $row['skvjson']);
 			//$cur_rec['Wkp'] = $row['Wkp'];
 			array_push($comment, $cur_rec);
 			}
@@ -41,6 +41,17 @@
 		
 		echo json_encode($comment);}
 
+	//update
+	if ($table == 'skvs' && $whatdo == 'update'){
+		$query="UPDATE ".$name_base.".".$table." SET skvjson='".$skvjson."' WHERE id=".$p000.";";
+		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+		echo $result;}
+	
+	//delete 
+	if ($table == 'skvs' && $whatdo == 'delete'){
+		$query="DELETE  FROM  ".$name_base.".".$table." WHERE id=".$p000.";";
+		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+		echo $result;}
 	
 	//echo json_encode($nu);
     mysqli_close($dbc);

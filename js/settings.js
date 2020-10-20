@@ -7,19 +7,19 @@ var onofadm= true;
 var row_str = '<tr><td><select name="auser" id="auser"  size="5" style="height: auto; width: 300px;"></tr>';
 
 //Список скважин
-var wells = {	
+var	 wells = {	
 	//par0 :  {wellN: 's401', txt: 'АГКМ-406', type: 'Ремонт', typeStn:'Разрез', nach:'Сидоров С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
 	//par1 :  {wellN: 's20', txt: 'АГКМ-73', type: 'Ремонт', typeStn:'Разрез', nach:'Иванов И.И.', tel:'222222', email:'sobaka12@sobaka.com'},
-	par0 :  {wellN: 's110', txt: 'АГКМ-99', type: 'Ремонт', typeStn:'Разрез', nach:'Арбузов П.П.', tel:'232222', email:'sobaka13@sobaka.com'},
-	par1 :  {wellN: 's908', txt: 'АГКМ-609', type: 'Ремонт', typeStn:'Разрез', nach:'Огурцов О.О.', tel:'252222', email:'sobaka15@sobaka.com'},
-	par2 :  {wellN: 's610', txt: 'АГКМ-260', type: 'Бурение', typeStn:'ИМС', nach:'Помидоров П.П.', tel:'262222', email:'sobaka16@sobaka.com'},
-	par3 :  {wellN: 's630', txt: 'АГКМ-9917', type: 'Бурение', typeStn:'ИМС', nach:'Баклажанов Б.Б.', tel:'272222', email:'sobaka17@sobaka.com'},
-	//par4 :  {wellN: 's629', txt: 'АГКМ-629', type: 'Бурение', typeStn:'ИМС', nach:'Редискин Р.Р.', tel:'282222', email:'sobaka18@sobaka.com'},
-	par4 :  {wellN: 's627', txt: 'АГКМ-627', type: 'Бурение', typeStn:'ИМС', nach:'Капустин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
-	par5 :  {wellN: 's915', txt: 'АГКМ-934', type: 'Бурение', typeStn:'ИМС', nach:'Кабачков К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
-	par6 :  {wellN: 's224', txt: 'АГКМ-604', type: 'Бурение', typeStn:'ИМС', nach:'Репин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
-	par7 :  {wellN: 's20', txt: 'АГКМ-938', type: 'Ремонт', typeStn:'Разрез', nach:'Редискин С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
-	par8 :  {wellN: 's4450', txt: 'АГКМ-71', type: 'Ремонт', typeStn:'ИМС', nach:'Морковкин С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
+	// par0 :  {wellN: 's110', txt: 'АГКМ-99', type: 'Ремонт', typeStn:'Разрез', nach:'Арбузов П.П.', tel:'232222', email:'sobaka13@sobaka.com'},
+	// par1 :  {wellN: 's908', txt: 'АГКМ-609', type: 'Ремонт', typeStn:'Разрез', nach:'Огурцов О.О.', tel:'252222', email:'sobaka15@sobaka.com'},
+	// par2 :  {wellN: 's610', txt: 'АГКМ-260', type: 'Бурение', typeStn:'ИМС', nach:'Помидоров П.П.', tel:'262222', email:'sobaka16@sobaka.com'},
+	// par3 :  {wellN: 's630', txt: 'АГКМ-9917', type: 'Бурение', typeStn:'ИМС', nach:'Баклажанов Б.Б.', tel:'272222', email:'sobaka17@sobaka.com'},
+	// //par4 :  {wellN: 's629', txt: 'АГКМ-629', type: 'Бурение', typeStn:'ИМС', nach:'Редискин Р.Р.', tel:'282222', email:'sobaka18@sobaka.com'},
+	// par4 :  {wellN: 's627', txt: 'АГКМ-627', type: 'Бурение', typeStn:'ИМС', nach:'Капустин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
+	// par5 :  {wellN: 's915', txt: 'АГКМ-934', type: 'Бурение', typeStn:'ИМС', nach:'Кабачков К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
+	// par6 :  {wellN: 's224', txt: 'АГКМ-604', type: 'Бурение', typeStn:'ИМС', nach:'Репин К.К.', tel:'292222', email:'sobaka19@sobaka.com'},
+	// par7 :  {wellN: 's20', txt: 'АГКМ-938', type: 'Ремонт', typeStn:'Разрез', nach:'Редискин С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
+	// par8 :  {wellN: 's4450', txt: 'АГКМ-71', type: 'Ремонт', typeStn:'ИМС', nach:'Морковкин С.С.', tel:'242222', email:'sobaka14@sobaka.com'},
 	
 };
 
@@ -1097,10 +1097,8 @@ function colOK8 () {
 //Сохранить в локальное хранилище текущие настройки
 function colPan9save(wellName,skv,namecmt,formname)
 {
-	localStorage.setItem('wellName', wellName);
-	localStorage.setItem('skv', skv);
-	localStorage.setItem('namecmt', namecmt);
-	localStorage.setItem('formname', formname);
+	localStorage.setItem(_uz[0],
+	window.btoa(unescape(encodeURIComponent(wellName+','+skv+','+namecmt+','+formname))));
 	
 	
 	
@@ -1159,19 +1157,8 @@ function colOK9 () {
 
 
 //Выбор скважины
-var wellSelectBase="";
-var wellSelectName="";
-var wellidx=0;
-var selIdx=0;
-/* var feedWell=function(){
-			$("#wellNwork1").text(wells['par0'].type);
-			$("#wellNwork2").text(wells['par0'].typeStn);
-			$("#wellNwork3").text(wells['par0'].nach);
-			$("#wellNwork4").text(wells['par0'].tel);
-			$("#wellNwork5").text(wells['par0'].email);
-			console.log('fdffds');
-}(); */
-
+var wellSelectBase ='';
+var wellSelectName = '';
 function colPan10 (name_select) {
 	refresh = false;
 	
@@ -1187,31 +1174,43 @@ function colPan10 (name_select) {
 	//Восстановление выбора
 	$('#wellN').val(wellName);
 	
-	/* var selIdx=$("#wellN").prop('selectedIndex');
-	wellidx = selIdx; */
-	if (Object.keys(wells).length-1<wellidx){
-		wellidx=0;
-	}
-	$("#wellNwork1").text(wells['par'+wellidx].type);
-	$("#wellNwork2").text(wells['par'+wellidx].typeStn);
-	$("#wellNwork3").text(wells['par'+wellidx].nach);
-	$("#wellNwork4").text(wells['par'+wellidx].tel);
-	$("#wellNwork5").text(wells['par'+wellidx].email);
+	// /* var selIdx=$("#wellN").prop('selectedIndex');
+	// wellidx = selIdx; */
+	// if (Object.keys(wells).length-1<wellidx){
+	// 	wellidx=0;
+	// }
+
+	if ((Object.keys(wells).length>0)){
+		for (var keey in wells) {
+			// console.log(keey);
+			// console.log(wells[keey].txt);
+			// console.log(skv);
+			// console.log(name_select);
+			if(wells[keey].txt==skv){
+				$("#wellNwork1").text(wells[keey].type);
+				$("#wellNwork2").text(wells[keey].typeStn);
+				$("#wellNwork3").text(wells[keey].nach);
+				$("#wellNwork4").text(wells[keey].tel);
+				$("#wellNwork5").text(wells[keey].email);}
+	}}
+
+	
 	
 
 	//Выбранная скважина
 	$('#wellN').on('change', function() {
 		wellSelectBase = $("#wellN").prop('value');
 		wellSelectName = $("#wellN option:selected").text();
-		selIdx=$("#wellN").prop('selectedIndex');
+		
 		/* wellidx = selIdx; */
-		if (selIdx>-1){
-			$("#wellNwork1").text(wells['par'+$("#wellN").prop('selectedIndex')].type);
-			$("#wellNwork2").text(wells['par'+$("#wellN").prop('selectedIndex')].typeStn);
-			$("#wellNwork3").text(wells['par'+$("#wellN").prop('selectedIndex')].nach);
-			$("#wellNwork4").text(wells['par'+$("#wellN").prop('selectedIndex')].tel);
-			$("#wellNwork5").text(wells['par'+$("#wellN").prop('selectedIndex')].email);
-		}
+		for (var keey in wells) {
+		if (wells[keey].txt==wellSelectName){
+			$("#wellNwork1").text(wells[keey].type);
+			$("#wellNwork2").text(wells[keey].typeStn);
+			$("#wellNwork3").text(wells[keey].nach);
+			$("#wellNwork4").text(wells[keey].tel);
+			$("#wellNwork5").text(wells[keey].email);
+		}}
 		/*  $('[name=wellN] option').filter(function() { 
         return ($(this).text() == 'Blue');}).prop('selected', true); */
 		//bootstrap modal
@@ -1228,7 +1227,6 @@ function colPan10 (name_select) {
 function colOK10 () {
 	refresh = false; //pong.js
 	//$('#wells').iziModal('close');
-	wellidx = selIdx;
 	skv =wellSelectName;
 	wellName =wellSelectBase;
 	namecmt = wellName + "kr";
@@ -1307,24 +1305,10 @@ function vertical() {
 
 
 //Выбор скважины Bootstrap navi
-$(document).load(function () {
-			//Список скважин
-            $('[id^="par"]').click(function (){
-				/* console.log(this.id); */
-				skv =wells[this.id].txt;
-				wellName =wells[this.id].wellN;
-				namecmt = wellName + "kr";
-				//Сохранить в локальное хранилище
-				colPan9save(wellName,skv,namecmt,formname);
-				refresh = true;
-				read_next();
-            });
-			
-			$('#shab').click(function (){
-				/* console.log(this.id); */
-				$('#shab1').modal('show');
-			});
-
+$(document).ready(function () {
+			//Чтение списка скважин
+			readskvstart('read','skvs', '','');
+		
 			
 			
 			
@@ -1342,7 +1326,7 @@ $(document).load(function () {
 
  //Стоп видео поток
  function stopCam (event) {
-	console.log("stop");
+	
 	//event.preventDefault(); // To prevent following the link (optional)
 	$.ajax({
 		type: 'POST',
@@ -1381,10 +1365,14 @@ $(document).load(function () {
 
 //<iframe width="560" height="315" src="//hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572" frameborder="0" allowfullscreen></iframe>
 //
-
+var selectkeey='';
 //Изменить/ удалить  диалог по скважине
 function colPan13 () {
 	$("#myModal13").modal();
+	for (var keey in wells) {
+		if (wells[keey].wellN == String($("#colitems132").val())) {
+			selectkeey=keey;
+		}}
 	
 	//console.log('fdsf');
 }
@@ -1392,16 +1380,20 @@ function colPan13 () {
 function colOK13 () {
 //Изменить выбранную из скважин
 for (var keey in wells) {
-	if (wells[keey].wellN == String($("#colitems132").val())) {
-		
+	if ( keey== selectkeey) {
+		wells[keey].wellN =  String($("#colitems132").val());
 		wells[keey].txt = String($("#colitems131").val());
 		wells[keey].type = String($("#colitems133").val());
 		wells[keey].typeStn = String($("#colitems134").val());
 		wells[keey].nach = String($("#colitems135").val());
 		wells[keey].tel = String($("#colitems136").val());
 		wells[keey].email = String($("#colitems137").val());
+		//Обновить скважину в mysql в таблицу skvs
+		update('update','skvs',  keey.slice(3 , ),JSON.stringify(Object.assign({}, wells[keey])));
 	}
 }
+
+console.log(wells);
 $('#skvs tbody').empty();
 for (var keey in wells) {
 	$('#skvs tbody').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
@@ -1414,30 +1406,38 @@ function colOK131 () {
 	
 	//Удалить выбранную из скважин
 	for (var keey in wells) {
+		//console.log( keey);
 		if (wells[keey].wellN == String($("#colitems132").val())) {
+			deleteskvs('delete','skvs', keey.slice(3 , ));
+			//console.log( keey, keey.slice(3 , ));
 			delete (wells[keey]);
 		}
 	}
 	tmpwells={};
-	
-	//Пересчитать индексы
-	 var indx = 0;
-	var nameidx = 'par'
-	var fullnameidx = String(nameidx+indx);
-	for (key in wells){
+	//Чтение всех скважин
+	readskvs('read','skvs', '','');
+
+	///////////
+	// //Пересчитать индексы
+	//  var indx = 0;
+	// var nameidx = 'par'
+	// var fullnameidx = String(nameidx+indx);
+	// for (key in wells){
 		
-		var curPar ={};
+	// 	var curPar ={};
 		
-		curPar = JSON.stringify(Object.assign({}, wells[key]));
-		curPar = JSON.parse(curPar);
-		tmpwells[String(fullnameidx)]=curPar;
-		delete curPar;
-		indx += 1;
-		fullnameidx = String(nameidx+indx);
-	}
-	//{}освобождение
-	wells = null;
-	wells= tmpwells;
+	// 	curPar = JSON.stringify(Object.assign({}, wells[key]));
+	// 	curPar = JSON.parse(curPar);
+	// 	tmpwells[String(fullnameidx)]=curPar;
+	// 	delete curPar;
+	// 	indx += 1;
+	// 	fullnameidx = String(nameidx+indx);
+	// }
+	// //{}освобождение
+	// wells = null;
+	// wells= tmpwells;
+
+
 	//console.log(wells);
 	//Очистка и добавка
 	$('#skvs tbody').empty();
@@ -1467,7 +1467,7 @@ function colOK131 () {
 	
 }
 
-//Добавление  диалогзаписи по скважине
+//Добавление  диалог записи по скважине
 function colPan12 () {
 	$("#myModal12").modal();
 	
@@ -1490,8 +1490,7 @@ curPar.email = String($("#colitems127").val());
 
 
 
-//Создание новой записи параметра!!!
-wells[String('par'+String((Object.keys(wells).length)))]=curPar;
+
 
 //Добавление в таблицу отображения
 $('#skvs tr:last').after('<tr><td>'+String($("#colitems121").val())+'</td>'+
@@ -1503,9 +1502,21 @@ $('#skvs tr:last').after('<tr><td>'+String($("#colitems121").val())+'</td>'+
 '<td>'+String($("#colitems127").val())+'</td>'+
 '</tr>'
 );
-//Запись в mysql в таблицу skvs
+// //Запись всех текущих скважин
+// for (var keey in wells) {
+// 	writeskvs('create','skvs', String(keey), JSON.stringify(wells[keey]));
+// 	// console.log(keey);
+// 	// console.log(wells[keey]);
+// }
+
+//Создание новой записи параметра!!!
+wells[String('par'+String((Object.keys(wells).length)))]=curPar;
+
+//Добавление скважины в mysql в таблицу skvs
 writeskvs('create','skvs', String('par'+String((Object.keys(wells).length-1))),JSON.stringify(Object.assign({}, curPar)));
-readskvs('read','skvs', String('par'+String((Object.keys(wells).length-1))),JSON.stringify(Object.assign({}, curPar)));
+
+//Чтение всех скважин
+readskvs('read','skvs', '','');
 }
 
 //Админка

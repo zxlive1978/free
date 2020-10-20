@@ -24,7 +24,7 @@
     $code_page="SET NAMES 'utf8';";
     mysqli_query($dbc,$code_page) or die(mysqli_sqlstate($dbc));
     $name_base="pozitron";
-    $table="USERS";
+    $table="users_rights";
     $query = "SELECT * FROM ".$name_base.".".$table."  WHERE login='".$login."' AND password='".$pass."';";
     //echo $query;
     //echo $pass;
@@ -45,7 +45,26 @@
 
 			//Пишем в сессию логин и id пользователя (их мы берем из переменной $user!):
 			$_SESSION['id'] = $user['id']; 
-      $_SESSION['login'] = $user['login'];
+	  $_SESSION['login'] = $user['login'];
+	  //$userjson=json_encode($user['skvjson'], JSON_UNESCAPED_UNICODE);
+	  $obj = json_decode($user['skvjson'], true);
+	  //print_r($obj['name']);
+	  $userrights = array ();
+	  $userrights[]=base64_encode($obj['name']);
+	  $userrights[]=base64_encode($obj['dolgnost']);
+	  $userrights[]=base64_encode($obj['tel']);
+	  $userrights[]=base64_encode($obj['email']);
+	  $userrights[]=base64_encode($obj['forms']);
+	  $userrights[]=base64_encode($obj['time']);
+	  $userrights[]=base64_encode($obj['video']);
+	  $userrights[]=base64_encode($obj['karotag']);
+	  $userrights[]=base64_encode($obj['comments']);
+	  $userrights[]=base64_encode($obj['geolog']);
+	  $userrights[]=base64_encode($obj['depth']);
+	  $userrights[]=base64_encode($obj['svodka']);
+	  $userrights[]=base64_encode($obj['chat']);
+	  //print_r(json_encode($userrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT ));
+	  $_SESSION['skvjson'] = json_encode($userrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT );
       include './noindex.php';
       
       //include './noindex.php';

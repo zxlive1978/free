@@ -4,6 +4,7 @@
 //твой код
 })(); */
 
+//console.log (users_rights, decodeURIComponent(escape(window.atob(users_rights[0]))));
 
 var isMobile = false; //
 // ТЕЛЕФОН ПЛАНШЕТ???
@@ -39,40 +40,56 @@ let d110d =function (){
 }
 
 //var d110d = null;
-var wellName ="s20";
-var skv ="АГКМ-938";
+var wellName ="";
+var skv ="";
 var namecmt = wellName + "kr";
-var formname = "Цветная";
+var formname = "Под телефон";
 
+if (!isMobile){formname="Цветная";}
 
 //Сохранение и чтение настроей из локального хранилища
-if(!window.localStorage.getItem('wellName')) {
-	localStorage.setItem('wellName', wellName );
-	localStorage.setItem('skv', skv);
-	localStorage.setItem('namecmt', namecmt);
-	localStorage.setItem('formname', formname);
+function readsavestartstorage(){
+if(!window.localStorage.getItem(_uz[0])) {
+	//for(keey in wells){}
+	localStorage.setItem(_uz[0],
+	window.btoa(unescape(encodeURIComponent(wellName+','+skv+','+namecmt+','+formname))));
 	/* console.log('нету'); */
 	
 } else {
-	
-	wellName = localStorage.getItem('wellName');
-	skv = localStorage.getItem('skv');
-	namecmt = localStorage.getItem('namecmt');
-	formname = localStorage.getItem('formname');
-	
+	wellName="";
+	skv="";
+	namecmt = wellName + "kr";
+	// console.log(localStorage.getItem('skv'));
+	// console.log(wells);
+	let _uloc = decodeURIComponent(escape(window.atob(localStorage.getItem(_uz[0]))));
+	let arr = _uloc.split(',');
+	let _nam = arr[1];
+	//console.log(_nam, _uloc);
+	for(var keey in wells){
+		// console.log(wells[keey].txt);
+		if 	(wells[keey].txt==_nam){
+		wellName = arr[0];
+		skv = arr[1];
+		namecmt = arr[2];
+		formname = arr[3];
+		// console.log('есть');
+		}
+	}
 	/* console.log('есть'); */
 }
 
+}
 
 //$("#wellNwork1").text(wells['par0'].type);
-$("#wellNwork1").text('fdfsfsf');
-$("#wellNwork2").text(wells['par0'].typeStn);
-$("#wellNwork3").text(wells['par0'].nach);
-$("#wellNwork4").text(wells['par0'].tel);
-$("#wellNwork5").text(wells['par0'].email);
+// $("#wellNwork1").text('fdfsfsf');
+// $("#wellNwork2").text(wells['par0'].typeStn);
+// $("#wellNwork3").text(wells['par0'].nach);
+// $("#wellNwork4").text(wells['par0'].tel);
+// $("#wellNwork5").text(wells['par0'].email);
 
-//Загрузка формы при старте
-colOK8start(formname);
+
+
+
 
 //Эмулятор данных
 function read_cycle (){
@@ -100,11 +117,12 @@ function read_cycle (){
 
 //Чтение последних значений
 function read_next(){
-	online = true;
+	
 	//refresh = false;
 	//alert(wellName);
 	//console.log(Kzoom);
-	if (refresh==true){
+	if (refresh==true &&  wellName!='' ){
+		online = true;
 		refresh=false;
 		let data = null;
 		$.ajax({

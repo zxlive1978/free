@@ -32,11 +32,11 @@ var namecmt= wellName + "kr";
 
 //Чтение комментариев
 function read_comment(){
+	if(wellName!=''){
 	online = true;
 	//refresh = false;
 	//alert(wellName);
 	//alert(Kzoom);
-	//console.log (start_time);
 	//console.log (end_time);
 	var data = null;
 	$.ajax({
@@ -68,7 +68,7 @@ function read_comment(){
 			//init();
 		}
 	});
-	
+}
 	//back_start_time = start_time;
 	//back_end_time = end_time;
 }

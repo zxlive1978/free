@@ -1,28 +1,7 @@
-//Запись скважины
+//Создать скважину
 function writeskvs(whatdo, table, p000, skvsjson){
 	refresh = false;
 	online = false;
-    /*$.ajax({
-	      method: "POST", // метод HTTP, используемый для запроса
-	      url: "about.php", // строка, содержащая URL адрес, на который отправляется запрос
-	      data: { // данные, которые будут отправлены на сервер
-	        name: "Denis",
-	        city: "Erebor"
-	      },
-	      success: [function ( msg ) { // функции обратного вызова, которые вызываются если AJAX запрос выполнится успешно (если несколько функций, то необходимо помещать их в массив)
-	        $( "p" ).text( "User saved: " + msg ); // добавляем текстовую информацию и данные возвращенные с сервера
-	      },
-	      function () { // вызов второй функции из массива
-	        console.log( "next function" );
-	      }],
-	      statusCode: {
-	        200: function () { // выполнить функцию если код ответа HTTP 200
-	          console.log( "Ok" );
-	        }
-	      }
-	    });
-    */
-	var data = null;
 	$.ajax({
 		type: "POST",
 		url: 'js/writeskvs.php',
@@ -31,41 +10,54 @@ function writeskvs(whatdo, table, p000, skvsjson){
 		async: false,
 		success: function(data){
 			if (Number(data)!=1) {alert('нет связи')};
-			//console.log(data);
-			//var mass = eval(data);
-			//var mass = data;
-			
-			//alert(mass);
-			//d110d = null;
-			//d110d = mass.slice();
-			
-			//numbs110d = null;
-			
-			
-			//А ЭТО АХУЕННО ИНТЕРЕСНО!
-			//Если нет данных
-			/* if (d110d.length == 0){
-				drawGraf =false ;
-				d110d = beg_rec.slice();
-				d110d[0]["Vrema"] = start_time;
-				d110d[d110d.length-1]["Vrema"] = end_time;
-				//console.log (beg_rec);
-				//console.log (d110d);
-				} else {drawGraf = true ;} */
-			//ГО
-			
 			
 		}
 	});
 
 };
 
-//Запись скважины
+//Обновить скважину
+function update(whatdo, table, p000, skvsjson){
+	refresh = false;
+	online = false;
+	$.ajax({
+		type: "POST",
+		url: 'js/writeskvs.php',
+		data: {whatdo:whatdo, table: table, p000: p000, skvsjson:skvsjson },
+		cache: false,
+		async: false,
+		success: function(data){
+			if (Number(data)!=1) {alert('нет связи')};
+			//alert(data);
+			
+		}
+	});
+
+};
+
+//Удалить скважину
+function deleteskvs(whatdo, table, p000, skvsjson){
+	refresh = false;
+	online = false;
+	$.ajax({
+		type: "POST",
+		url: 'js/writeskvs.php',
+		data: {whatdo:whatdo, table: table, p000: p000, skvsjson:skvsjson },
+		cache: false,
+		async: false,
+		success: function(data){
+			if (Number(data)!=1) {alert('нет связи')};
+			//alert(data);
+			
+		}
+	});
+
+};
+
+//Чтение всех скважин
 function readskvs(whatdo, table, p000, skvsjson){
 	refresh = false;
 	online = false;
- 
-	var data = null;
 	$.ajax({
 		type: "POST",
 		url: 'js/writeskvs.php',
@@ -74,50 +66,79 @@ function readskvs(whatdo, table, p000, skvsjson){
 		dataType: 'JSON',
 		async: false,
 		success: function(response){
-			//if (Number(data)!=1) {alert('нет связи')};
-			//console.log(data);
-			//var mass = eval(data);
-			//var mass = data;
-			var wellss = {};
+			wells = {};
 			var len = response.length;
             for(var i=0; i<len; i++){
                 var p000 = response[i].p000;
 				var skvjson = response[i].skvjson;
 				skvjson = JSON.parse(skvjson);
-				// console.log(p000);
-				// console.log(skvjson);
-				// p000 = JSON.parse('{' +String(p000)+':'+skvjson+'},');
-				 wellss[String(p000)] =  skvjson;
-				
+				for (var j=0; j<_uz.length; j++){
+					let _uzdec =decodeURIComponent(escape(window.atob(_uz[5])))
+					console.log(_uzdec);
+				 	wells[String(p000)] =  skvjson;
 				}
-			 console.log(wellss);
-			 console.log(wells);
-			
-			//alert(mass);
-			// wellstr = null;
-			// //wellstr = mass.slice();
 
-			// var wellstr = JSON.stringify(Object.assign({}, data));  // convert array to string
-			// var data = JSON.parse(wellstr);  // convert string to json object
-			// console.log(data);
-			// console.log(wells);
-			
-			// //numbs110d = null;
-			
-			
-			//А ЭТО АХУЕННО ИНТЕРЕСНО!
-			//Если нет данных
-			/* if (d110d.length == 0){
-				drawGraf =false ;
-				d110d = beg_rec.slice();
-				d110d[0]["Vrema"] = start_time;
-				d110d[d110d.length-1]["Vrema"] = end_time;
-				//console.log (beg_rec);
-				//console.log (d110d);
-				} else {drawGraf = true ;} */
-			//ГО
-			
-			
+			}
+		}
+	});
+
+};
+
+//Чтение всех скважинпри старте
+function readskvstart(whatdo, table, p000, skvsjson){
+	refresh = false;
+	online = false;
+	$.ajax({
+		type: "POST",
+		url: 'js/writeskvs.php',
+		data: {whatdo:whatdo, table: table, p000: p000, skvsjson:skvsjson },
+		cache: false,
+		dataType: 'JSON',
+		async: false,
+		success: function(response){
+			wells = {};
+			var len = response.length;
+            for(var i=0; i<len; i++){
+                var p000 = response[i].p000;
+				var skvjson = response[i].skvjson;
+				skvjson = JSON.parse(skvjson);
+				let _uzdec =decodeURIComponent(escape(window.atob(_uz[5])));
+				let result = _uzdec.split(",");
+				for (var j=0; j<result.length; j++){
+					if (($.trim(result[j]))=='ALL'){
+					wells[String(p000)] =  skvjson;
+					break;}
+					if (($.trim(result[j]))==skvjson.txt){
+						wells[String(p000)] =  skvjson;}
+					
+				}
+			}
+					//Имя
+					$("#ava").text(decodeURIComponent(escape(window.atob(_uz[0]))));
+					//Сохранение и чтение настроей из локального хранилища
+					readsavestartstorage();
+					//Загрузка формы при старте
+					colOK8start(formname);
+					//Старт!!!
+					read_now();
+					//read_next();
+					//Список скважин
+					$('[id^="par"]').click(function (){
+						/* console.log(this.id); */
+						skv =wells[this.id].txt;
+						wellName =wells[this.id].wellN;
+						namecmt = wellName + "kr";
+						//Сохранить в локальное хранилище
+						colPan9save(wellName,skv,namecmt,formname);
+						refresh = true;
+						read_next();
+					});
+					
+					$('#shab').click(function (){
+						/* console.log(this.id); */
+						$('#shab1').modal('show');
+					});
+		
 		}
 	});
 

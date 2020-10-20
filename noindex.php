@@ -4,14 +4,16 @@ if (!$_SESSION['auth']) {
 	header("Location: index.html");
 	exit;
 }
+
 ?>
 <html>
-<title></title>
+<title>
+</title>
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
-
+<script>const _uz=<?php echo $_SESSION['skvjson']; ?>;</script>
 <link rel="stylesheet" type="text/css" href="css/jschart5.css">
 <link rel="stylesheet" href="css/iziModal.min.css">
 
@@ -59,11 +61,13 @@ if (!$_SESSION['auth']) {
 <script type="text/javascript" src="js/svg.draggable.min.js"></script>
 
 <script type="text/javascript" src="js/loadsave.js"></script>
+<script type="text/javascript" src="js/writeskvs.js"></script>
 <script type="text/javascript" src="js/settings.js"></script>
+
 <script type="text/javascript" src="js/pong.js"></script>
 <script type="text/javascript" src="js/sutki.js"></script>
 <script type="text/javascript" src="js/read_comment.js"></script>
-<script type="text/javascript" src="js/writeskvs.js"></script>
+
 
 
 
@@ -128,14 +132,14 @@ if (!$_SESSION['auth']) {
     title="0" byline="0" portrait="0"
     width="280" height="157"
     frameborder="0"
-    <!-- allow="autoplay" -->
-      src="//hydrofalll.ddns.net:5443/LiveApp/play.html?name=728732916424756293354866"> </iframe>
+     allow="autoplay"
+      src="//hydrofalll.ddns.net:5443/LiveApp/play.html?name=259399779848013677881662"> </iframe>
     
     </div>
-		<div class="btn-group" role="group" aria-label="Basic example">
-		<button class="btn bg-light btn-lg " type="button" id="adm" name="adm" onclick='adm()'>
+		<div class="btn-group" role="group" aria-label="">
+		<!-- <button class="btn bg-light btn-lg " type="button" id="adm" name="adm" onclick='adm()'>
     Админка</button>	
-		</div>
+		</div> -->
   
     <!--</li>
     <button class="btn bg-light btn-lg " type="button" id="stop" name="stop" onclick='stopCam()'>
@@ -171,13 +175,14 @@ if (!$_SESSION['auth']) {
   
   <div class="media-left" title="">
   <a class="navbar-brand" href="#">
+  <label for="hcolcolor"  id="ava" name="ava"></label>
     <img src="css/img_avatar1.png" class="rounded-circle" style="width:50px">
-    <?php echo 'Добрый день, '.$_SESSION['login']; ?>
+   
   </a>
   </div>
   
-  <div class="btn-group" role="group" aria-label="Basic example" onClick='location.href="index.html"'>
-			<button type="button" class="btnbg-light bg-light btn-lg">ВЫХОД</button>
+  <div class="btn-group" aria-hidden="true" role="group" aria-label="Basic example" onClick='location.href="index.html"'>
+			<button type="button" class="btnbg-light bg-light btn-md">ВЫХОД</button>
 			</div>
 </nav>
 
@@ -216,8 +221,10 @@ if (!$_SESSION['auth']) {
   </div>
   
 </div>
+
+
 <!-- Табы -->
-<div id="tabs">
+<!-- <div id="tabs">
   <ul>
     <li><a href="#tabs-1">Пользователи</a></li>
     <li><a href="#tabs-2">Скважины</a></li>
@@ -229,7 +236,7 @@ if (!$_SESSION['auth']) {
   </div>
   <div id="tabs-3">
   </div>
-</div>
+</div> -->
 
 
 <div id="drawing"  ></div>
@@ -272,113 +279,101 @@ window.onresize = function(event) {
         
         <!-- Modal body -->
         <div class="modal-body">
-          <table>
 
-  <tr>  
- 
-  <tr>
-  <td><label for="hcolcolor">Цвет линий:</label></td><td><input type="color" id="syscolor" name="syscolor" value="#e66465"/>
-  </tr>
-   <tr>
-  <td><label for="hcolcolor">Толщина линий оформления:</label></td><td><input type="text" id="width_line_p" name="width_line_p" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Толщина линий графиков:</label></td><td><input type="text" id="width_gxf_line" name="width_gxf_line" value="0"/>
-  </tr>
-  <tr>
-  <tr>
-  <td><label for="hcolcolor">Шрифт:</label></td><td><select id="font" name="font" value="3">
-  <option value="1">3 часа</option>
-  </select>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Коэфф. размера шрифта:</label></td><td><input type="text" id="K_size_txt" name="K_size_txt" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Коэфф. размера шрифта(моб):</label></td><td><input type="text" id="K_size_txt_mobile" name="K_size_txt_mobile" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Радиус круга полож. столбца:</label></td><td><input type="text" id="markheight" name="markheight" value="0"/>
-  </tr>
-   <tr>
-  <td><label for="hcolcolor">Цвет круга полож. столбца:</label></td><td><input type="color" id="markcol" name="markcol" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Цвет ключевого столбца:</label></td><td><input type="color" id="marktime" name="marktime" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Размер шрифта комментариев:</label></td><td><input type="text" id="cmtsize" name="cmtsize" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Цвет комментариев:</label></td><td><input type="color" id="cmtcolor" name="cmtcolor" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Высота панели инструментов:</label></td><td><input type="text" id="icosize" name="icosize" value="0"/>
-  </tr>
-   <tr>
-  <td><label for="hcolcolor">Высота панели инструментов(моб):</label></td><td><input type="text" id="icosizem" name="icosizem" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Цвет 1 панели инструментов:</label></td><td><input type="color" id="grcol1" name="grcol1" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Цвет 2 панели инструментов:</label></td><td><input type="color" id="grcol2" name="grcol2" value="#e66465"/>
-  </tr>	
-  <tr>
-  <td><label for="hcolcolor">Пунктирная линия:</label></td><td><input type="text" id="dasharray" name="dasharray" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Цвет пунктирной линии:</label></td><td><input type="color" id="dashcol1" name="dashcol1" value="#e66465"/>
-  </tr>	
-  <tr>
-  <td><label for="hcolcolor">Цвет области пропуска значений:</label></td><td><input type="color" id="holcol" name="holcol" value="#e66465"/>
-  </tr>
-   <tr>
-  <td><label for="hcolcolor">Прозрачность обл. пропуска значений:</label></td><td><input type="text" id="holhide" name="holhide" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Ширина области текущ. значений:</label></td><td><input type="text" id="width_value" name="width_value" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Высота области текущ. значений:</label></td><td><input type="text" id="height_value" name="height_value" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Цвет области текущ. значений:</label></td><td><input type="color" id="curcolorval" name="curcolorval" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Прозрачность области текущ. значений:</label></td><td><input type="text" id="faderr" name="faderr" value="0"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Кнопка "Удалить":</label></td><td><input type="color" id="delcol" name="delcol" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Кнопка "Настройки":</label></td><td><input type="color" id="toolcol" name="toolcol" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Кнопка "Добавить":</label></td><td><input type="color" id="pluscol" name="pluscol" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Кнопка "Замок":</label></td><td><input type="color" id="rawsvg0" name="rawsvg0" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Редактирование экрана:</label></td><td><input type="checkbox" id="editscrn" name="editscrn"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Кнопка "Скважина":</label></td><td><input type="color" id="rawsvg1" name="rawsvg1" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Кнопка "Календарь":</label></td><td><input type="color" id="rawsvg2" name="rawsvg2" value="#e66465"/>
-  </tr>
-   <tr>
-  <td><label for="hcolcolor">Кнопка "Лупа":</label></td><td><input type="color" id="rawsvg3" name="rawsvg3" value="#e66465"/>
-  </tr>
-   <tr>
-  <td><label for="hcolcolor">Кнопка "Форма":</label></td><td><input type="color" id="rawsvg4" name="rawsvg4" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Фон кнопок(белый/черный):</label></td><td><input type="checkbox" id="fonbut" name="fonbut"/>
-</table>
-        </div>
+  <label for="hcolcolor">Цвет линий:</label><input type="color" class="form-control input-lg" id="syscolor" name="syscolor" value="#e66465"/>
+
+  <label for="hcolcolor">Толщина линий оформления:</label><input type="text"  class="form-control input-lg"  id="width_line_p" name="width_line_p" value="0"/>
+
+  <label for="hcolcolor">Толщина линий графиков:</label><input type="text" class="form-control input-lg" id="width_gxf_line" name="width_gxf_line" value="0"/>
+
+  <label for="hcolcolor">Шрифт:</label><select id="font"  class="form-control input-lg" name="font" /></select>
+
+  <label for="hcolcolor">Коэфф. размера шрифта:</label><input class="form-control input-lg" type="text" id="K_size_txt" name="K_size_txt" value="0"/>
+  
+  
+  <label for="hcolcolor">Коэфф. размера шрифта(моб):</label><input class="form-control input-lg"type="text" id="K_size_txt_mobile" name="K_size_txt_mobile" value="0"/>
+  
+  
+  <label for="hcolcolor">Радиус круга полож. столбца:</label><input class="form-control input-lg"type="text" id="markheight" name="markheight" value="0"/>
+  
+   
+  <label for="hcolcolor">Цвет круга полож. столбца:</label><input class="form-control input-lg"type="color" id="markcol" name="markcol" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Цвет ключевого столбца:</label><input class="form-control input-lg"type="color" id="marktime" name="marktime" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Размер шрифта комментариев:</label><input class="form-control input-lg"type="text" id="cmtsize" name="cmtsize" value="0"/>
+  
+  
+  <label for="hcolcolor">Цвет комментариев:</label><input class="form-control input-lg"type="color" id="cmtcolor" name="cmtcolor" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Высота панели инструментов:</label><input class="form-control input-lg"type="text" id="icosize" name="icosize" value="0"/>
+  
+   
+  <label for="hcolcolor">Высота панели инструментов (моб):</label><input class="form-control input-lg"type="text" id="icosizem" name="icosizem" value="0"/>
+  
+  
+  <label for="hcolcolor">Цвет 1 панели инструментов:</label><input class="form-control input-lg"type="color" id="grcol1" name="grcol1" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Цвет 2 панели инструментов:</label><input class="form-control input-lg"type="color" id="grcol2" name="grcol2" value="#e66465"/>
+  	
+  
+  <label for="hcolcolor">Пунктирная линия:</label><input class="form-control input-lg"type="text" id="dasharray" name="dasharray" value="0"/>
+  
+  
+  <label for="hcolcolor">Цвет пунктирной линии:</label><input class="form-control input-lg"type="color" id="dashcol1" name="dashcol1" value="#e66465"/>
+  	
+  
+  <label for="hcolcolor">Цвет области пропуска значений:</label><input class="form-control input-lg"type="color" id="holcol" name="holcol" value="#e66465"/>
+  
+   
+  <label for="hcolcolor">Прозрачность обл. пропуска значений:</label><input class="form-control input-lg"type="text" id="holhide" name="holhide" value="0"/>
+  
+  
+  <label for="hcolcolor">Ширина области текущ. значений:</label><input class="form-control input-lg"type="text" id="width_value" name="width_value" value="0"/>
+  
+  
+  <label for="hcolcolor">Высота области текущ. значений:</label><input class="form-control input-lg"type="text" id="height_value" name="height_value" value="0"/>
+  
+  
+  <label for="hcolcolor">Цвет области текущ. значений:</label><input class="form-control input-lg"type="color" id="curcolorval" name="curcolorval" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Прозрачность области текущ. значений:</label><input class="form-control input-lg"type="text" id="faderr" name="faderr" value="0"/>
+  
+  
+  <label for="hcolcolor">Кнопка "Удалить":</label><input class="form-control input-lg"type="color" id="delcol" name="delcol" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Кнопка "Настройки":</label><input class="form-control input-lg"type="color" id="toolcol" name="toolcol" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Кнопка "Добавить":</label><input class="form-control input-lg"type="color" id="pluscol" name="pluscol" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Кнопка "Замок":</label><input class="form-control input-lg"type="color" id="rawsvg0" name="rawsvg0" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Редактирование экрана:</label><input class="form-control input-lg"type="checkbox" id="editscrn" name="editscrn"/>
+  
+  
+  <label for="hcolcolor">Кнопка "Скважина":</label><input class="form-control input-lg"type="color" id="rawsvg1" name="rawsvg1" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Кнопка "Календарь":</label><input class="form-control input-lg"type="color" id="rawsvg2" name="rawsvg2" value="#e66465"/>
+  
+   
+  <label for="hcolcolor">Кнопка "Лупа":</label><input class="form-control input-lg"type="color" id="rawsvg3" name="rawsvg3" value="#e66465"/>
+  
+   
+  <label for="hcolcolor">Кнопка "Форма":</label><input class="form-control input-lg"type="color" id="rawsvg4" name="rawsvg4" value="#e66465"/>
+  
+  
+  <label for="hcolcolor">Фон кнопок (белый/ черный):</label><input class="form-control input-lg"type="checkbox" id="fonbut" name="fonbut"/>
+         </div>
         
         <!-- Modal footer -->
         <div class="modal-footer">
@@ -613,7 +608,7 @@ window.onresize = function(event) {
   </tr>
 
   <tr>
-            <td><label for="ncolor">Логарифмическая шкала:</label></td>
+            <td><label for="ncolor">Логариф. шкала:</label></td>
             <td><input type="checkbox" id="parlog" name="parlog" value="#e66465"/>
         </td>
   </tr>
@@ -761,125 +756,7 @@ window.onresize = function(event) {
 
 
 
- <!-- Добавить скважину -->
-  <div class="modal fade" id="myModal12">
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Добавить скважину</h4>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-<table>
-  <tr>
-            <td><label for="ncolor">Скважина:</label></td>
-            <td><input type="text" id="colitems121" name="colitems121" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">База:</label></td>
-            <td><input type="text" id="colitems122" name="colitems122" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Тип работ:</label></td>
-            <td><input type="text" id="colitems123" name="colitems123" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Тип станции:</label></td>
-            <td><input type="text" id="colitems124" name="colitems124" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Фамилия начальника:</label></td>
-            <td><input type="text" id="colitems125" name="colitems125" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Телефон:</label></td>
-            <td><input type="text" id="colitems126" name="colitems126" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Эл.почта:</label></td>
-            <td><input type="text" id="colitems127" name="colitems127" value=""></td>
-  </tr>
-  
-
-</div>
-</table>
-</div>        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK12()'>Применить</button>
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-
-
-
-<!-- Редактировать, удалить скважину -->
-<div class="modal fade" id="myModal13">
-    <div class="modal-dialog modal-dialog-scrollable">
-      <div class="modal-content">
-      
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Редактировать/удалить скважину</h4>
-          <button type="button" class="close" data-dismiss="modal">×</button>
-        </div>
-        
-        <!-- Modal body -->
-        <div class="modal-body">
-<table>
-  <tr>
-            <td><label for="ncolor">Скважина:</label></td>
-            <td><input type="text" id="colitems131" name="colitems131" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">База:</label></td>
-            <td><input type="text" id="colitems132" name="colitems132" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Тип работ:</label></td>
-            <td><input type="text" id="colitems133" name="colitems133" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Тип станции:</label></td>
-            <td><input type="text" id="colitems134" name="colitems134" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Фамилия начальника:</label></td>
-            <td><input type="text" id="colitems135" name="colitems135" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Телефон:</label></td>
-            <td><input type="text" id="colitems136" name="colitems136" value=""></td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Эл.почта:</label></td>
-            <td><input type="text" id="colitems137" name="colitems137" value=""></td>
-  </tr>
-  
-
-</div>
-</table>
-</div>        
-        <!-- Modal footer -->
-        <div class="modal-footer">
-        <button type="button" class="btn btn-warning" data-dismiss="modal" onclick='colOK131()'>Удалить</button>
-			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK13()'>Сохранить</button>
-      
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
-        </div>
-        
-      </div>
-    </div>
-  </div>
-
-
+ 
 
 
 
