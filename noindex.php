@@ -458,18 +458,13 @@ window.onresize = function(event) {
         
         <!-- Modal body -->
         <div class="modal-body">
-<table>
-  <tr>
-  <td><label for="hcolcolor">Название скважины:</label></td><td><select name="wellN" id="wellN"  size="1" >
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Тип работ:</label></td><td><label for="namePar" name="wellNwork1" id="wellNwork1"></label>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Тип станции:</label></td><td><label for="namePar" name="wellNwork2" id="wellNwork2"></label>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Нач. партии:</label></td><td><label for="namePar" name="wellNwork3" id="wellNwork3"></label>
+
+<label for="hcolcolor">Название скважины:</label><select class="form-control input-lg" name="wellN" id="wellN"  size="1" >
+
+<label class="form-control input-lg" for="hcolcolor">Тип работ:</label><label class="form-control input-lg" for="namePar" name="wellNwork1" id="wellNwork1"></label>
+<label class="form-control input-lg" for="hcolcolor">Тип станции:</label><label  class="form-control input-lg" for="namePar" name="wellNwork2" id="wellNwork2"></label>
+
+<label for="hcolcolor">Нач. партии:</label></td><td><label for="namePar" name="wellNwork3" id="wellNwork3"></label>
   </tr>
   <tr>
   <td><label for="hcolcolor">Телефон:</label></td><td><label for="namePar" name="wellNwork4" id="wellNwork4"></label>
