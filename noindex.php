@@ -498,19 +498,9 @@ window.onresize = function(event) {
         
         <!-- Modal body -->
         <div class="modal-body">
-<table>
-    <div>
-  <tr>
-  <tr>
-  <td><label for="hcolcolor">Тип параметра:</label></td><td><select name="colitems7" id="colitems7"  size="1">
-  </tr>
-  
-  <tr>
-  <td><label for="hcolcolor" name="colitems22" id="colitems22">Параметр:</label></td><td><select name="colitems2" id="colitems2"  size="1" >
-  </tr>
-</tr>
-</div>
-</table>
+<label for="hcolcolor" class="control-label">Тип параметра:</label><select class="form-control input-lg" name="colitems7" id="colitems7"  size="1"></select>
+<label for="hcolcolor" class="control-label" name="colitems22" id="colitems22">Параметр:</label></td><td><select class="form-control input-lg" name="colitems2" id="colitems2"  size="1" ></select>
+
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
