@@ -464,16 +464,12 @@ window.onresize = function(event) {
 <label class="form-control input-lg" for="hcolcolor">Тип работ:</label><label class="form-control input-lg" for="namePar" name="wellNwork1" id="wellNwork1"></label>
 <label class="form-control input-lg" for="hcolcolor">Тип станции:</label><label  class="form-control input-lg" for="namePar" name="wellNwork2" id="wellNwork2"></label>
 
-<label for="hcolcolor">Нач. партии:</label></td><td><label for="namePar" name="wellNwork3" id="wellNwork3"></label>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Телефон:</label></td><td><label for="namePar" name="wellNwork4" id="wellNwork4"></label>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">E-mail:</label></td><td><label for="namePar" name="wellNwork5" id="wellNwork5"></label>
-  </tr>
-</div>
-</table>
+<label class="form-control input-lg" for="hcolcolor">Нач. партии:</label><label class="form-control input-lg" for="namePar" name="wellNwork3" id="wellNwork3"></label>
+
+<label for="hcolcolor">Телефон:</label><label for="namePar" name="wellNwork4" id="wellNwork4"></label>
+
+<label for="hcolcolor">E-mail:</label><label for="namePar" name="wellNwork5" id="wellNwork5"></label>
+
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
