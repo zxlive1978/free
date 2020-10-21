@@ -500,7 +500,6 @@ window.onresize = function(event) {
         <div class="modal-body">
 <label for="hcolcolor" class="control-label">Тип параметра:</label><select class="form-control input-lg" name="colitems7" id="colitems7"  size="1"></select>
 <label for="hcolcolor" class="control-label" name="colitems22" id="colitems22">Параметр:</label></td><td><select class="form-control input-lg" name="colitems2" id="colitems2"  size="1" ></select>
-
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
@@ -525,21 +524,12 @@ window.onresize = function(event) {
         
         <!-- Modal body -->
         <div class="modal-body">
-<table>
- <tr>
-  <td><label for="hcolcolor">Область легенд:</label></td><td><input type="color" id="colcolor1" name="colcolor1" value="#e66465"/>
-  </tr>
-  <tr>
-  <td><label for="hcolcolor">Область графиков:</label></td><td><input type="color" id="colcolor2" name="colcolor2" value="#e66465"/>
-  </tr>
- <!--   <tr>
-  <td><label for="hcolcolor">Тип сетки:</label></td><td><select name="gridtype" id="gridtype"  size="1" style="height: auto">
-  </tr> -->
-  <tr>
-  <td><label for="hcolcolor">Шаг сетки:</label></td><td><input type="text" id="gridnum" name="gridnum" value="0"/>
-</tr>
-</div>
-</table>
+<label for="hcolcolor">Область легенд:</label><input class="form-control input-lg"  type="color" id="colcolor1" name="colcolor1" value="#e66465"/>
+
+<label for="hcolcolor">Область графиков:</label><input class="form-control input-lg"  type="color" id="colcolor2" name="colcolor2" value="#e66465"/>
+
+<label for="hcolcolor">Шаг сетки:</label><input class="form-control input-lg"  type="text" id="gridnum" name="gridnum" value="0"/>
+
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
@@ -564,40 +554,13 @@ window.onresize = function(event) {
         
         <!-- Modal body -->
         <div class="modal-body">
-<table>
-<td><label for="name">Параметр:  </label></td>
-  <td><label for="namePar" name="namePar" id="namePar"></label></td>
-  </tr>
-        <tr>
-            <td><label for="name">Начало:</label></td>
-            <td><input type="text" name="begedge" id="begedge" value="0">
-        </td>
-        <tr>
-            <td><label for="address">Конец:</label></td>
-            <td><input type="text" name="endedge" id="endedge" value="0">
-        </td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Цвет:</label></td>
-            <td><input type="color" id="parcolor" name="parcolor" value="#e66465"/>
-        </td>
-  </tr>
-
-  <tr>
-            <td><label for="ncolor">Логариф. шкала:</label></td>
-            <td><input type="checkbox" id="parlog" name="parlog" value="#e66465"/>
-        </td>
-  </tr>
-  <tr>
-            <td><label for="ncolor">Единицы измерения:</label></td>
-            <td><input type="text" name="nameUnit" id="nameUnit" value="0">
-        </td>
-  </tr>
-  <tr>
-            <td><input type="checkbox" id="pardel" name="pardel"/> <label for="ncolor">Удалить?</label></td>
-  </tr>
-</div>
-</table>
+<label for="name">Параметр:  </label><label for="namePar" name="namePar" id="namePar"></label>
+<label for="name">Начало:</label><input  class="form-control input-lg" type="text" name="begedge" id="begedge" value="0">
+<label for="address">Конец:</label><input  class="form-control input-lg" type="text" name="endedge" id="endedge" value="0">
+<label for="ncolor">Цвет:</label><input  class="form-control input-lg" type="color" id="parcolor" name="parcolor" value="#e66465"/>
+<label for="ncolor">Логариф. шкала:</label><input  class="form-control input-lg" type="checkbox" id="parlog" name="parlog" value="#e66465"/>
+<label for="ncolor">Единицы измерения:</label><input  class="form-control input-lg" type="text" name="nameUnit" id="nameUnit" value="0">
+<label for="ncolor">Удалить?</label><input class="form-control input-lg" type="checkbox" id="pardel" name="pardel"/> 
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
