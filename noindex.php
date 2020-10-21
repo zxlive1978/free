@@ -399,14 +399,9 @@ window.onresize = function(event) {
         
         <!-- Modal body -->
         <div class="modal-body">
-<table>
-  <tr><td>Выбор даты(<10 дней)</td></tr>
-  <tr>
-  <td> <input type='date' id='localdate1' name='date1' max=<?php echo date('Y-m-d');?> min=<?php $date = new DateTime(); $date->modify('-9 day'); echo $date->format('Y-m-d'); ?>>
-  </td> 
-  </tr>
-</div>
-</table>
+
+  <label for="hcolcolor">Выбор даты(<10 дней):</label> <input type='date'  class="form-control input-lg" id='localdate1' name='date1' max=<?php echo date('Y-m-d');?> min=<?php $date = new DateTime(); $date->modify('-9 day'); echo $date->format('Y-m-d'); ?>>
+
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
@@ -430,20 +425,15 @@ window.onresize = function(event) {
         
         <!-- Modal body -->
         <div class="modal-body">
-<table>
-	<tr><td>Ширина интервала</tr></td>
-  <tr><td>
-  <select id="zooom1" name="zooom1" value="3">
+
+  <label for="hcolcolor">Ширина интервала:</label><select id="zooom1" class="form-control input-lg" name="zooom1" value="3">
 
   <option value="3">3 часа</option>
    <option value="1">1 час</option>
   <option value="8">8 часов</option>
   <option value="24">1 день</option>
  </select>
-  </tr>
-</tr>
-</div>
-</table>
+  
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
