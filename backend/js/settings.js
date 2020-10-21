@@ -1546,7 +1546,7 @@ function adm (){
 	//Камеры
 	$('#tabs-3').empty();
 	$('#tabs-3').append('<button type="button" name="addcam" id="addcam" class="btn btn-success mb-1" data-dismiss="modal">+</button>');
-	$('#tabs-3').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="cams" class="table table-bordered table-striped "><thead><tr>'
+	$('#tabs-3').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="cams" class="table table-bordered"><thead><tr>'
 	+'<th>Название</th>'
 	+'<th>Скважина</th>'
 	+'<th>Строка подключения</th>'
