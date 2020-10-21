@@ -913,7 +913,7 @@ if (!$_SESSION['auth']) {
         </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
-			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK14()'>Применить</button>
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK16()'>Применить</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
         
@@ -941,8 +941,8 @@ if (!$_SESSION['auth']) {
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
-        <button type="button" class="btn btn-warning" data-dismiss="modal" onclick='colOK151()'>Удалить</button>
-			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK15()'>Сохранить</button>
+        <button type="button" class="btn btn-warning" data-dismiss="modal" onclick='colOK171()'>Удалить</button>
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK17()'>Сохранить</button>
       
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>

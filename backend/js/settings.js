@@ -48,6 +48,11 @@ var cams = {
 	par0 :  {name: 'WP00001',  txt: 'АГКМ-99', rtsp:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702'},
 };
 
+// Шаблон камер
+var Shabloncams = {
+	par0 :  {name: 'WP00001',  txt: 'АГКМ-99', rtsp:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702'},
+};
+
 //Текущие параметры Справочник параметров графики обычные
 
 var basePar = {
@@ -1862,6 +1867,54 @@ function colOK14 () {
 	//console.log(users_rights);
 	//updateuser('create','users_rights',String(curPar.login), String(curPar.pass), String('par'+String((Object.keys(users_rights).length-1))), JSON.stringify(curPar));
 	}
+
+
+//Добавление  диалог камеры
+function colPan16 () {
+	$("#myModal17").modal();
+}
+
+
+//Добавление  записи по камерам
+function colOK16 () {
+	var curPar ={};
+	curPar = JSON.stringify(Object.assign({}, Shabloncams['par0']));
+	curPar = JSON.parse(curPar);
+		
+	curPar.name = String($("#colitems181").val());
+	curPar.txt = String($("#colitems182").val());
+	curPar.rtsp = String($("#colitems183").val());
+	
+
+	//Добавление в таблицу отображения
+	$('#userright tr:last').after('<tr><td>'+String($("#colitems181").val())+'</td>'+
+	'<td>'+String($("#colitems182").val())+'</td>'+
+	'<td>'+String($("#colitems183").val())+'</td>'+
+	'</tr>'
+	);
+	// //Запись всех текущих пользователей
+	// for (var keey in users_rights) {
+	// 	insertuser('create','users_rights',String(users_rights[keey].login), String(users_rights[keey].pass), String(keey), JSON.stringify(users_rights[keey]));
+	// 	// console.log(keey);
+	// 	// console.log(wells[keey]);
+	// }
+	
+	//Создание новой записи параметра!!!
+	cams[String('par'+String((Object.keys(cams).length)))]=curPar;
+
+	//Добавление скважины в mysql в таблицу skvs
+	writecams('create','cams', String('par'+String((Object.keys(cams).length-1))),JSON.stringify(Object.assign({}, curPar)));
+
+	//Чтение всех скважин
+	readcams('read','cams', '','');
+	//console.log(users_rights);
+	//updateuser('create','users_rights',String(curPar.login), String(curPar.pass), String('par'+String((Object.keys(users_rights).length-1))), JSON.stringify(curPar));
+	}
+
+
+
+
+
 
 
 //Очистка и рендеринг
