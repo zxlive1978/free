@@ -554,13 +554,13 @@ window.onresize = function(event) {
         
         <!-- Modal body -->
         <div class="modal-body">
-<label for="name" class="control-label">Параметр:  </label><label class="control-label" for="namePar" name="namePar" id="namePar"></label>
+<label for="name" class="control-label">Параметр:  </label><label class="form-control input-lg" for="namePar" name="namePar" id="namePar"></label>
 <label for="name" class="control-label">Начало:</label><input  class="form-control input-lg" type="text" name="begedge" id="begedge" value="0">
-<label for="address">Конец:</label><input  class="form-control input-lg" type="text" name="endedge" id="endedge" value="0">
-<label for="ncolor">Цвет:</label><input  class="form-control input-lg" type="color" id="parcolor" name="parcolor" value="#e66465"/>
-<label for="ncolor">Логариф. шкала:</label><input  class="form-check-input" type="checkbox" id="parlog" name="parlog" value="#e66465"/>
-<label for="ncolor">Единицы измерения:</label><input  class="form-control input-lg" type="text" name="nameUnit" id="nameUnit" value="0">
-<label for="ncolor">Удалить?</label><input class="form-check-input" type="checkbox" id="pardel" name="pardel"/> 
+<label for="address" class="control-label">Конец:</label><input  class="form-control input-lg" type="text" name="endedge" id="endedge" value="0">
+<label for="ncolor" class="control-label">Цвет:</label><input  class="form-control input-lg" type="color" id="parcolor" name="parcolor" value="#e66465"/><br>
+<div class="form-check"><input  class="form-check-input"  type="checkbox" id="parlog" name="parlog" value="#e66465"/><label class="form-check-label" for="ncolor">Логарифметическая шкала:</label></div><br>
+<label for="ncolor" >Единицы измерения:</label><input  class="form-control input-lg" type="text" name="nameUnit" id="nameUnit" value="0"><br>
+<div class="form-check"><input class="form-check-input" type="checkbox" id="pardel" name="pardel"/> <label class="form-check-label" for="ncolor">Удалить параметр?</label></div>
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
