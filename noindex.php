@@ -399,9 +399,8 @@ window.onresize = function(event) {
         
         <!-- Modal body -->
         <div class="modal-body">
-
-  <label for="hcolcolor">Выбор даты(<10 дней):</label> <input type='date'  class="form-control input-lg" id='localdate1' name='date1' max=<?php echo date('Y-m-d');?> min=<?php $date = new DateTime(); $date->modify('-9 day'); echo $date->format('Y-m-d'); ?>>
-
+        <label for="hcolcolor">Выбор даты(<10 дней):</label>
+<input type='date' class="form-control input-lg" id='localdate1' name='date1' max=<?php echo date('Y-m-d');?> min=<?php $date = new DateTime(); $date->modify('-9 day'); echo $date->format('Y-m-d'); ?>>
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
@@ -425,15 +424,16 @@ window.onresize = function(event) {
         
         <!-- Modal body -->
         <div class="modal-body">
+        <label for="hcolcolor">Ширина интервала:</label>
 
-  <label for="hcolcolor">Ширина интервала:</label><select id="zooom1" class="form-control input-lg" name="zooom1" value="3">
+  <select id="zooom1" class="form-control input-lg" name="zooom1" value="3">
 
   <option value="3">3 часа</option>
    <option value="1">1 час</option>
   <option value="8">8 часов</option>
   <option value="24">1 день</option>
  </select>
-  
+
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
@@ -458,18 +458,23 @@ window.onresize = function(event) {
         
         <!-- Modal body -->
         <div class="modal-body">
-
-<label for="hcolcolor">Название скважины:</label><select class="form-control input-lg" name="wellN" id="wellN"  size="1" >
-
-<label class="form-control input-lg" for="hcolcolor">Тип работ:</label><label class="form-control input-lg" for="namePar" name="wellNwork1" id="wellNwork1"></label>
-<label class="form-control input-lg" for="hcolcolor">Тип станции:</label><label  class="form-control input-lg" for="namePar" name="wellNwork2" id="wellNwork2"></label>
-
-<label class="form-control input-lg" for="hcolcolor">Нач. партии:</label><label class="form-control input-lg" for="namePar" name="wellNwork3" id="wellNwork3"></label>
-
-<label for="hcolcolor">Телефон:</label><label for="namePar" name="wellNwork4" id="wellNwork4"></label>
-
-<label for="hcolcolor">E-mail:</label><label for="namePar" name="wellNwork5" id="wellNwork5"></label>
-
+        <label for="hcolcolor">Название скважины:</label><select class="form-control input-lg" name="wellN" id="wellN"  size="1" ></select>
+  
+  
+  <label for="hcolcolor" class="control-label">Тип работ:</label><label class="form-control" for="namePar" name="wellNwork1" id="wellNwork1"></label>
+  
+  
+  <label for="hcolcolor" class="control-label">Тип станции:</label><label class="form-control" for="namePar" name="wellNwork2" id="wellNwork2"></label>
+  
+  
+  <label for="hcolcolor" class="control-label">Нач. партии:</label><label class="form-control" for="namePar" name="wellNwork3" id="wellNwork3"></label>
+  
+  
+  <label for="hcolcolor" class="control-label">Телефон:</label><label class="form-control" for="namePar" name="wellNwork4" id="wellNwork4"></label>
+  
+  
+  <label for="hcolcolor" class="control-label">E-mail:</label><label class="form-control" for="namePar" name="wellNwork5" id="wellNwork5"></label>
+  
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
