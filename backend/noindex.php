@@ -809,7 +809,7 @@ if (!$_SESSION['auth']) {
 
 
  
-  <!-- Добавить скважину -->
+  <!-- Добавить пользователя -->
   <div class="modal fade" id="myModal14">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
@@ -894,6 +894,62 @@ if (!$_SESSION['auth']) {
   </div>
 
 
+<!-- Добавить камеру -->
+<div class="modal fade" id="myModal16">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Добавить камеру</h4>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <label for="hcolcolor">Название камеры(инв. номер):</label><input class="form-control input-lg" type="text" id="colitems181" name="colitems181"/>
+        <label for="hcolcolor">Скважина:</label><input class="form-control input-lg" type="text" id="colitems182" name="colitems182"/>
+        <label for="hcolcolor">Строка подключения:</label><input class="form-control input-lg" type="text" id="colitems183" name="colitems183"/>
+        </div>        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK14()'>Применить</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Редактировать, удалить камеру -->
+  <div class="modal fade" id="myModal17">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Редактировать/удалить камеру</h4>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <label for="hcolcolor">Название камеры(инв. номер):</label><input class="form-control input-lg" type="text" id="colitems191" name="colitems191"/>
+        <label for="hcolcolor">Скважина:</label><input class="form-control input-lg" type="text" id="colitems192" name="colitems192"/>
+        <label for="hcolcolor">Строка подключения:</label><input class="form-control input-lg" type="text" id="colitems193" name="colitems193"/>
+
+</div>        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-dismiss="modal" onclick='colOK151()'>Удалить</button>
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK15()'>Сохранить</button>
+      
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 
 
 </main>

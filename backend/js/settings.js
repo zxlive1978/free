@@ -1544,37 +1544,17 @@ function adm (){
 	+'<th>Строка подключения</th>'
 	+'</tr></thead><tbody></tbody></table></div>');
 	
-	
-	
 	//камеры
 	for (var keey in cams) {
 		$('#cams tbody').append('<tr><td>'
 		+cams[keey].name+'</td><td>'
 		+cams[keey].txt+'</td><td>'
 		+cams[keey].rtsp+'</td><td>'
-		+'</td></tr>');
-		//$('#tabs-2').append('</div>');	
+		+'</td></tr>');	
 	}
+	
 	//пользватели
 	for (var keey in users_rights) {
-		// strtime ='';strvideo='';strkarotag='';strcomments='';strgeolog='';
-		// strdepth=''; strsvodka='';strchat ='';
-		// for (var k in users_rights[keey].time){
-		// 	strtime=strtime + users_rights[keey].time[k] +', ';}
-		// for (var g in users_rights[keey].video){
-		// 	strvideo=strvideo + users_rights[keey].video[g] +', ';}
-		// for (var k in users_rights[keey].karotag){
-		// 	strkarotag=strkarotag + users_rights[keey].time[k] +', ';}
-		// for (var k in users_rights[keey].comments){
-		// 	strcomments=strcomments + users_rights[keey].time[k] +', ';}
-		// for (var k in users_rights[keey].geolog){
-		// 	strgeolog=strgeolog + users_rights[keey].time[k] +', ';}
-		// for (var k in users_rights[keey].depth){
-		// 	strdepth=strdepth + users_rights[keey].time[k] +', ';}
-		// for (var k in users_rights[keey].svodka){
-		// 	strsvodka=strsvodka + users_rights[keey].time[k] +', ';}
-		// for (var k in users_rights[keey].chat){
-		// 	strchat=strchat + users_rights[keey].time[k] +', ';}
 		$('#userright tbody').append('<tr>'
 		+'<td>'+users_rights[keey].name +'</td>'
 		+'<td>'+users_rights[keey].login +'</td>'
@@ -1618,6 +1598,25 @@ function adm (){
 		//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
 	});
 
+	//Добавить камеру
+	$('#addcam').click(function() {
+		colPan16 ();		
+	});
+
+	//Клик по камере
+	$("#cams tbody").on("click", "tr", function(event){
+		var tableData = $(this).children("td").map(function() {
+			return $(this).text();
+		}).get();
+		$("#colitems191").val($.trim(tableData[0]));
+		$("#colitems192").val($.trim(tableData[1]));
+		$("#colitems193").val($.trim(tableData[2]));
+		
+		colPan17();
+		
+		//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
+	});
+
 	//Добавить пользователя
 	$('#adduserright').click(function() {
 		colPan14 ();		
@@ -1647,16 +1646,14 @@ function adm (){
 		
 		//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
 	});
-
-
-	//Клик Камеры
-	$("#cams tbody").on("click", "tr", function(event){
-		var tableData = $(this).children("td").map(function() {
-			return $(this).text();
-		}).get();
+	// //Клик Камеры
+	// $("#cams tbody").on("click", "tr", function(event){
+	// 	var tableData = $(this).children("td").map(function() {
+	// 		return $(this).text();
+	// 	}).get();
 	
-		alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
-	});
+	// 	alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
+	// });
 
 	
 	// $("#myButton").on('click',function(){
