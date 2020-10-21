@@ -46,7 +46,7 @@ var Shablontxtuserright = {
 //Список камер
 var cams = {
 
-	par0 :  {name: 'WP00001', txt: 'АГКМ-99', rtsp:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702'},
+	par0 :  {name: 'WP00001', show:true, txt: 'АГКМ-99', rtsp:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702'},
 	
 };
 
