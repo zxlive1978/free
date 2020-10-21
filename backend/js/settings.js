@@ -1872,7 +1872,7 @@ function colOK14 () {
 
 //Добавление  диалог камеры
 function colPan16 () {
-	$("#myModal17").modal();
+	$("#myModal16").modal();
 }
 
 
@@ -1888,7 +1888,7 @@ function colOK16 () {
 	
 
 	//Добавление в таблицу отображения
-	$('#userright tr:last').after('<tr><td>'+String($("#colitems181").val())+'</td>'+
+	$('#cams tr:last').after('<tr><td>'+String($("#colitems181").val())+'</td>'+
 	'<td>'+String($("#colitems182").val())+'</td>'+
 	'<td>'+String($("#colitems183").val())+'</td>'+
 	'</tr>'
