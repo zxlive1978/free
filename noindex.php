@@ -643,9 +643,9 @@ window.onresize = function(event) {
         
         <!-- Modal body -->
         <div class="modal-body">
-<label class="control-label" for="hcolcolor">Каталог форм:   </label><select class="form-control input-lg" name="colitems9" id="colitems9"  size="5" style="height: auto; width: 300px;"><br>
+<label class="control-label" for="hcolcolor">Каталог форм:   </label><select class="form-control input-lg" name="colitems9" id="colitems9"  size="5" ></select>
 <label class="control-label" for="hcolcolor">Имя формы:      </label><input class="form-control input-lg" type="text" id="colitems99" name="colitems99" value=""/>
-</div>        
+</div>
         <!-- Modal footer -->
         <div class="modal-footer">
 			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK8()'>Загрузить</button>
