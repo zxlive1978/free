@@ -1629,7 +1629,7 @@ function adm (){
 	$('#adduserright').click(function() {
 		colPan14 ();		
 	});
-
+	
 	//Клик пользователя
 	$("#userright tbody").on("click", "tr", function(event){
 		var tableData = $(this).children("td").map(function() {
@@ -1933,12 +1933,12 @@ function colOK17 () {
 	for (var keey in cams) {
 		
 		if ( keey== selectcam) {
-			cams[keey].name = String($("#colitems161").val());
-			cams[keey].txt = String($("#colitems162").val());
-			cams[keey].rtsp = String($("#colitems163").val());
+			cams[keey].name = String($("#colitems191").val());
+			cams[keey].txt = String($("#colitems192").val());
+			cams[keey].rtsp = String($("#colitems193").val());
 			
 			//Обновить камеру в mysql в таблицу cams
-			updatecams('update','cams',  String(cams[keey].txt),  String(cams[keey].rtsp), keey.slice(3 , ),JSON.stringify(Object.assign({}, cams[keey])));
+			updatecams('update','cams', keey.slice(3 , ),JSON.stringify(Object.assign({}, cams[keey])));
 		}
 	}
 
@@ -1947,8 +1947,8 @@ function colOK17 () {
 		$('#cams tbody').append('<tr><td>'+
 		cams[keey].name+'</td><td>'+
 		cams[keey].txt+'</td><td>'+
-		cams[keey].rtsp+'</td><td>'+
-		'</td></tr>');
+		cams[keey].rtsp+'</td>'+
+		'</tr>');
 	}
 		
 	}
@@ -1956,11 +1956,11 @@ function colOK17 () {
 	//Удалить запись
 	function colOK171 () {
 		
-		//Удалить выбранную из скважин
+		//Удалить выбранную из камеру
 		for (var keey in cams) {
 			// console.log( keey);
 			// console.log( String($("#colitems162").val()));
-			if (cams[keey].txt == String($("#colitems191").val())) {
+			if (cams[keey].name == String($("#colitems191").val())) {
 				deletecams('delete','cams', keey.slice(3 , ));
 				//console.log( keey, keey.slice(3 , ));
 				delete (cams[keey]);
@@ -1977,8 +1977,8 @@ function colOK17 () {
 			$('#cams tbody').append('<tr><td>'+
 			cams[keey].name+'</td><td>'+
 			cams[keey].txt+'</td><td>'+
-			cams[keey].rtsp+'</td><td>'+
-			'</td></tr>');
+			cams[keey].rtsp+'</td>'+
+			'</tr>');
 		}
 		
 	}

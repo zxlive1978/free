@@ -117,6 +117,19 @@
 		
 		echo json_encode($comment);}
 
+
+	//update cams
+	if ($table == 'cams' && $whatdo == 'update'){
+		$query="UPDATE ".$name_base.".".$table." SET p000='par".$p000."', skvjson='".$skvjson."' WHERE id=".$p000.";";
+		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+		echo $result;}
+
+	//delete cams
+	if ($table == 'cams' && $whatdo == 'delete'){
+		$query="DELETE  FROM  ".$name_base.".".$table." WHERE id=".$p000.";";
+		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+		echo $result;}
+
 	//echo json_encode($nu);
     mysqli_close($dbc);
 		

@@ -268,3 +268,41 @@ function insertcams(whatdo, table, p000, skvsjson){
 	});
 
 };
+
+//Обновить камеру
+function updatecams(whatdo, table, p000, skvsjson){
+	refresh = false;
+	online = false;
+	$.ajax({
+		type: "POST",
+		url: 'js/writeskvs.php',
+		data: {whatdo:whatdo, table: table, p000: p000, skvsjson:skvsjson },
+		cache: false,
+		async: false,
+		success: function(data){
+			if (Number(data)!=1) {alert('нет связи')};
+			//alert(data);
+			
+		}
+	});
+
+};
+
+//Удалить камеру
+function deletecams(whatdo, table, p000, skvsjson){
+	refresh = false;
+	online = false;
+	$.ajax({
+		type: "POST",
+		url: 'js/writeskvs.php',
+		data: {whatdo:whatdo, table: table, p000: p000, skvsjson:skvsjson },
+		cache: false,
+		async: false,
+		success: function(data){
+			if (Number(data)!=1) {alert('нет связи')};
+			//alert(data);
+			
+		}
+	});
+
+};
