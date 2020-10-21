@@ -588,8 +588,7 @@ window.onresize = function(event) {
 <label  class="control-label" for="name">Параметр:  </label><label  class="form-control input-lg" for="namePar1" name="namePar1" id="namePar1"></label>
 <label  class="control-label" for="name">Позиция (0..1):</label><input class="form-control input-lg" type="text" name="txt7" id="txt7" ></input>
 <label  class="control-label" for="ncolor">Цвет:</label><input class="form-control input-lg" type="color" id="parcolor7" name="parcolor7" value="#e66465"/><br>
-<div class="form-check"><input type="checkbox" id="pardel7" name="pardel7"/> <label for="ncolor">Удалить параметр?</label></div>
-
+<div class="form-check"><input class="form-check-input" type="checkbox" id="pardel7" name="pardel7"/> <label class="form-check-label" for="ncolor">Удалить параметр?</label></div>
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
@@ -614,23 +613,11 @@ window.onresize = function(event) {
         
         <!-- Modal body -->
         <div class="modal-body">
-<table>
-    <div>
-	<tr>
-  <td><label for="name">Параметр:  </label></td>
-  <td><label for="namePar2" name="namePar2" id="namePar2"></label></td>
-  <tr>
-            <td><label for="ncolor">Цвет:</label></td>
-            <td><input type="color" id="parcolor6" name="parcolor6" value="#e66465"/>
-        </td>
-  </tr>
-  <tr>
-            <td><input type="checkbox" id="pardel6" name="pardel6"/> <label for="ncolor">Удалить?</label></td>
-  </tr>
-</tr>
-	</div>
-</table>
-</div>        
+
+<label  class="control-label" for="name">Параметр:  </label><label class="form-control input-lg" for="namePar2" name="namePar2" id="namePar2"></label>
+<label  class="control-label" for="ncolor">Цвет:</label><input class="form-control input-lg" type="color" id="parcolor6" name="parcolor6" value="#e66465"/><br>
+<div class="form-check"><input class="form-check-input" type="checkbox" id="pardel6" name="pardel6"/> <label class="form-check-label" for="ncolor">Удалить параметр?</label></div>
+</div>      
         <!-- Modal footer -->
         <div class="modal-footer">
 			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK6()'>Применить</button>
@@ -656,14 +643,8 @@ window.onresize = function(event) {
         
         <!-- Modal body -->
         <div class="modal-body">
-<table>
-    
- <tr><td><label for="hcolcolor">Каталог форм:   </label></td></tr>
-  <tr><td><select name="colitems9" id="colitems9"  size="5" style="height: auto; width: 300px;"></tr>
-  <tr><label for="hcolcolor">Имя формы:      </label></tr>
-  <tr><input type="text" id="colitems99" name="colitems99" value=""/></tr>
-  
-</table>
+<label for="hcolcolor">Каталог форм:   </label><select name="colitems9" id="colitems9"  size="5" style="height: auto; width: 300px;">
+<label for="hcolcolor">Имя формы:      </label><input type="text" id="colitems99" name="colitems99" value=""/>
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
