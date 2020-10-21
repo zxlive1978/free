@@ -1557,8 +1557,8 @@ function adm (){
 		$('#cams tbody').append('<tr><td>'
 		+cams[keey].name+'</td><td>'
 		+cams[keey].txt+'</td><td>'
-		+cams[keey].rtsp+'</td><td>'
-		+'</td></tr>');	
+		+cams[keey].rtsp+'</td>'
+		+'</tr>');	
 	}
 	
 	//пользватели
@@ -1908,7 +1908,7 @@ function colOK16 () {
 	//Добавление скважины в mysql в таблицу skvs
 	insertcams('create','cams', String('par'+String((Object.keys(cams).length-1))),JSON.stringify(Object.assign({}, curPar)));
 
-	//Чтение всех скважин
+	//Чтение всех 
 	readcams('read','cams', '','');
 	//console.log(users_rights);
 	//updateuser('create','users_rights',String(curPar.login), String(curPar.pass), String('par'+String((Object.keys(users_rights).length-1))), JSON.stringify(curPar));
@@ -1916,7 +1916,72 @@ function colOK16 () {
 
 
 
+var selectcam='';
+//Изменить/ удалить  диалог камеру
+function colPan17 () {
+	$("#myModal17").modal();
+	for (var keey in cams) {
+		if (cams[keey].name == String($("#colitems191").val())) {
+			selectcam=keey;
+			
+		}}
+}
 
+//Изменить запись
+function colOK17 () {
+	//Изменить выбранного камеру
+	for (var keey in cams) {
+		
+		if ( keey== selectcam) {
+			cams[keey].name = String($("#colitems161").val());
+			cams[keey].txt = String($("#colitems162").val());
+			cams[keey].rtsp = String($("#colitems163").val());
+			
+			//Обновить камеру в mysql в таблицу cams
+			updatecams('update','cams',  String(cams[keey].txt),  String(cams[keey].rtsp), keey.slice(3 , ),JSON.stringify(Object.assign({}, cams[keey])));
+		}
+	}
+
+	$('#cams tbody').empty();
+	for (var keey in cams) {
+		$('#cams tbody').append('<tr><td>'+
+		cams[keey].name+'</td><td>'+
+		cams[keey].txt+'</td><td>'+
+		cams[keey].rtsp+'</td><td>'+
+		'</td></tr>');
+	}
+		
+	}
+	
+	//Удалить запись
+	function colOK171 () {
+		
+		//Удалить выбранную из скважин
+		for (var keey in cams) {
+			// console.log( keey);
+			// console.log( String($("#colitems162").val()));
+			if (cams[keey].txt == String($("#colitems191").val())) {
+				deletecams('delete','cams', keey.slice(3 , ));
+				//console.log( keey, keey.slice(3 , ));
+				delete (cams[keey]);
+			}
+		}
+		tmpuser={};
+		//Чтение всех камеру
+		readcams('read','cams', '','');
+	
+
+		//Очистка и добавка
+		$('#cams tbody').empty();
+		for (var keey in cams) {
+			$('#cams tbody').append('<tr><td>'+
+			cams[keey].name+'</td><td>'+
+			cams[keey].txt+'</td><td>'+
+			cams[keey].rtsp+'</td><td>'+
+			'</td></tr>');
+		}
+		
+	}
 
 
 
