@@ -79,7 +79,7 @@ function readskvs(whatdo, table, p000, skvsjson){
 
 };
 
-//Чтение всех скважинпри старте
+//Чтение всех скважин при старте
 function readskvstart(whatdo, table, p000, skvsjson){
 	refresh = false;
 	online = false;
@@ -221,6 +221,49 @@ function readuserstart(whatdo, table, p000, skvsjson){
 				 users_rights[String(p000)] =  skvjson;
 				}
 				
+		}
+	});
+
+};
+
+//Чтение всех камер
+function readcams(whatdo, table, p000, skvsjson){
+	refresh = false;
+	online = false;
+	$.ajax({
+		type: "POST",
+		url: 'js/writeskvs.php',
+		data: {whatdo:whatdo, table: table, p000: p000, skvsjson:skvsjson },
+		cache: false,
+		dataType: 'JSON',
+		async: false,
+		success: function(response){
+			cams = {};
+			var len = response.length;
+            for(var i=0; i<len; i++){
+                var p000 = response[i].p000;
+				var skvjson = response[i].skvjson;
+				skvjson = JSON.parse(skvjson);
+				 cams[String(p000)] =  skvjson;
+				}
+		}
+	});
+
+};
+
+//Создать камеру
+function insertcams(whatdo, table, p000, skvsjson){
+	refresh = false;
+	online = false;
+	$.ajax({
+		type: "POST",
+		url: 'js/writeskvs.php',
+		data: {whatdo:whatdo, table: table, p000: p000, skvsjson:skvsjson },
+		cache: false,
+		async: false,
+		success: function(data){
+			if (Number(data)!=1) {alert('нет связи')};
+			
 		}
 	});
 

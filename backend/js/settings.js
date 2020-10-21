@@ -45,7 +45,7 @@ var Shablontxtuserright = {
 
 //Список камер
 var cams = {
-	par0 :  {name: 'WP00001',  txt: 'АГКМ-99', rtsp:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702'},
+	//par0 :  {name: 'WP00001',  txt: 'АГКМ-99', rtsp:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702'},
 };
 
 // Шаблон камер
@@ -1281,6 +1281,8 @@ function vertical() {
 $(document).ready(function () {
 	//Чтение всех пользователей
 	readusers('read','users_rights', '','');
+	//Чтение всех камер
+	readcams('read','cams', '','');
 			//Чтение списка скважин
 			readskvstart('read','skvs', '','');
 			
@@ -1904,7 +1906,7 @@ function colOK16 () {
 	cams[String('par'+String((Object.keys(cams).length)))]=curPar;
 
 	//Добавление скважины в mysql в таблицу skvs
-	writecams('create','cams', String('par'+String((Object.keys(cams).length-1))),JSON.stringify(Object.assign({}, curPar)));
+	insertcams('create','cams', String('par'+String((Object.keys(cams).length-1))),JSON.stringify(Object.assign({}, curPar)));
 
 	//Чтение всех скважин
 	readcams('read','cams', '','');
