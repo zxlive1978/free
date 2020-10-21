@@ -45,9 +45,7 @@ var Shablontxtuserright = {
 
 //Список камер
 var cams = {
-
-	par0 :  {name: 'WP00001', show:true, txt: 'АГКМ-99', rtsp:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702'},
-	
+	par0 :  {name: 'WP00001',  txt: 'АГКМ-99', rtsp:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702'},
 };
 
 //Текущие параметры Справочник параметров графики обычные
@@ -1531,27 +1529,30 @@ function adm (){
 	+'<th>Сводка</th>'
 	+'<th>Чат</th>'
 	+'</tr></thead><tbody></tbody></table></div>');
-
-	//Камеры
-	$('#tabs-3').empty();
-	$('#tabs-3').append('<button type="button" class="btn btn-success mb-1" data-dismiss="modal">+</button>');
-	$('#tabs-3').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="cams" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Камера1-станция</th><th>Камера1-стрим'+
-	'</th><th>Камера2-станция</th><th>Камера2-стрим</th><th>Камера3-станция</th><th>Камера3-стрим'+
-	'</th><th>Камера4-станция</th><th>Камера4-стрим'+
-	'</th></tr></thead><tbody></tbody></table></div>');
-	
 	//скважины
 	for (var keey in wells) {
 		$('#skvs tbody').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
 		//$('#tabs-2').append('</div>');	
 	}
+
+	//Камеры
+	$('#tabs-3').empty();
+	$('#tabs-3').append('<button type="button" class="btn btn-success mb-1" data-dismiss="modal">+</button>');
+	$('#tabs-3').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="cams" class="table table-bordered table-striped "><thead><tr>'
+	+'<th>Название</th>'
+	+'<th>Скважина</th>'
+	+'<th>Строка подключения</th>'
+	+'</tr></thead><tbody></tbody></table></div>');
+	
+	
 	
 	//камеры
 	for (var keey in cams) {
-		$('#cams tbody').append('<tr><td>'+cams[keey].txt+'</td><td>'+cams[keey].wellN+
-		'</td><td>'+cams[keey].rtsp1+'</td><td>'+cams[keey].liveapp1+'</td><td>'+cams[keey].rtsp2+'</td><td>'+cams[keey].liveapp2+
-		'</td><td>'+cams[keey].rtsp3+'</td><td>'+cams[keey].liveapp3+'</td><td>'+cams[keey].rtsp4+'</td><td>'+cams[keey].liveapp4+
-		 '</td></tr>');
+		$('#cams tbody').append('<tr><td>'
+		+cams[keey].name+'</td><td>'
+		+cams[keey].txt+'</td><td>'
+		+cams[keey].rtsp+'</td><td>'
+		+'</td></tr>');
 		//$('#tabs-2').append('</div>');	
 	}
 	//пользватели
