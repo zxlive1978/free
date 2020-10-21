@@ -1625,6 +1625,8 @@ function adm (){
 		//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
 	});
 
+	
+
 	//Добавить пользователя
 	$('#adduserright').click(function() {
 		colPan14 ();		
@@ -1895,6 +1897,8 @@ function colOK16 () {
 	'<td>'+String($("#colitems183").val())+'</td>'+
 	'</tr>'
 	);
+
+	
 	// //Запись всех текущих пользователей
 	// for (var keey in users_rights) {
 	// 	insertuser('create','users_rights',String(users_rights[keey].login), String(users_rights[keey].pass), String(keey), JSON.stringify(users_rights[keey]));
@@ -1942,14 +1946,17 @@ function colOK17 () {
 		}
 	}
 
-	$('#cams tbody').empty();
+
+	//Очистка и добавка
+	$("#cams  tbody").empty();
 	for (var keey in cams) {
-		$('#cams tbody').append('<tr><td>'+
+		$("#cams tbody").append('<tr><td>'+
 		cams[keey].name+'</td><td>'+
 		cams[keey].txt+'</td><td>'+
 		cams[keey].rtsp+'</td>'+
 		'</tr>');
 	}
+	
 		
 	}
 	
@@ -1969,17 +1976,21 @@ function colOK17 () {
 		tmpuser={};
 		//Чтение всех камеру
 		readcams('read','cams', '','');
-	
-
+		
+		
 		//Очистка и добавка
-		$('#cams tbody').empty();
+		$("#cams tbody").empty();
 		for (var keey in cams) {
-			$('#cams tbody').append('<tr><td>'+
+			$("#cams tbody").append('<tr><td>'+
 			cams[keey].name+'</td><td>'+
 			cams[keey].txt+'</td><td>'+
 			cams[keey].rtsp+'</td>'+
 			'</tr>');
 		}
+
+		
+
+	
 		
 	}
 
