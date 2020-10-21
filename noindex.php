@@ -584,27 +584,12 @@ window.onresize = function(event) {
         
         <!-- Modal body -->
         <div class="modal-body">
-<table>
-    <div>
-	<tr>
-  <td><label for="name">Параметр:  </label></td>
-  <td><label for="namePar1" name="namePar1" id="namePar1"></label></td>
 
-  <tr>
-            <td><label for="name">Позиция (0..1):</label></td>
-            <td><input type="text" name="txt7" id="txt7" ></input>
-  </td>
-  <tr>
-            <td><label for="ncolor">Цвет:</label></td>
-            <td><input type="color" id="parcolor7" name="parcolor7" value="#e66465"/>
-        </td>
-  </tr>
-  <tr>
-            <td><input type="checkbox" id="pardel7" name="pardel7"/> <label for="ncolor">Удалить?</label></td>
-  </tr>
-</tr>
-	</div>
-</table>
+<label  class="control-label" for="name">Параметр:  </label><label  class="form-control input-lg" for="namePar1" name="namePar1" id="namePar1"></label>
+<label  class="control-label" for="name">Позиция (0..1):</label><input class="form-control input-lg" type="text" name="txt7" id="txt7" ></input>
+<label  class="control-label" for="ncolor">Цвет:</label><input class="form-control input-lg" type="color" id="parcolor7" name="parcolor7" value="#e66465"/><br>
+<div class="form-check"><input type="checkbox" id="pardel7" name="pardel7"/> <label for="ncolor">Удалить параметр?</label></div>
+
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
