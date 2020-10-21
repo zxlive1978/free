@@ -1519,6 +1519,7 @@ function adm (){
 	$('#tabs-1').empty();
 	$('#tabs-1').append('<button type="button" name="adduserright" id="adduserright" class="btn btn-success mb-1" data-dismiss="modal" >+</button>');
 	$('#tabs-1').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="userright" class="table table-bordered table-striped "><thead><tr><th>Фамилия Имя Отчество</th>'
+
 	+'<th>Логин</th>'
 	+'<th>Пароль</th>'
 	+'<th>Должность</th>'
@@ -1542,7 +1543,7 @@ function adm (){
 
 	//Камеры
 	$('#tabs-3').empty();
-	$('#tabs-3').append('<button type="button" class="btn btn-success mb-1" data-dismiss="modal">+</button>');
+	$('#tabs-3').append('<button type="button" name="addcam" id="addcam" class="btn btn-success mb-1" data-dismiss="modal">+</button>');
 	$('#tabs-3').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="cams" class="table table-bordered table-striped "><thead><tr>'
 	+'<th>Название</th>'
 	+'<th>Скважина</th>'
@@ -1605,7 +1606,7 @@ function adm (){
 
 	//Добавить камеру
 	$('#addcam').click(function() {
-		colPan16 ();		
+		colPan16 ();
 	});
 
 	//Клик по камере
