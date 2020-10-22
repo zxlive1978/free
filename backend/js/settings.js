@@ -1619,10 +1619,16 @@ function adm (){
 		$("#colitems191").val($.trim(tableData[0]));
 		$("#colitems192").val($.trim(tableData[1]));
 		$("#colitems193").val($.trim(tableData[2]));
-		
+		// alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]), $(this).closest("tr").index());
+
+		var colIndex = $(this).parent().children().index($(this));
+		var rowIndex = $(this).parent().parent().children().index($(this).parent());
+		alert('Row: ' + rowIndex + ', Column: ' + colIndex);
+
+
 		colPan17();
 		
-		//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
+		
 	});
 
 	
@@ -1979,7 +1985,9 @@ function colOK17 () {
 		
 		
 		//Очистка и добавка
-		$("#cams tbody").empty();
+		// $("#cams tbody").empty();
+		$("#cams").dataTable.fnDeleteRow(0);
+
 		for (var keey in cams) {
 			$("#cams tbody").append('<tr><td>'+
 			cams[keey].name+'</td><td>'+
