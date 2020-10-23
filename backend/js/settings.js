@@ -1985,10 +1985,10 @@ function colOK17 () {
 		
 		
 		//Очистка и добавка
-		// $("#cams tbody").empty();
+		$("#cams tbody").empty();
 		//$("#cams").dataTable.fnDeleteRow(0);
 
-		
+
 		// var oTable = $('#example').dataTable(
 		// 	{
 		// 		"bSort" : false
