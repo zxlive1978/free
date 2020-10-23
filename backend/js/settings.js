@@ -1986,7 +1986,18 @@ function colOK17 () {
 		
 		//Очистка и добавка
 		// $("#cams tbody").empty();
-		$("#cams").dataTable.fnDeleteRow(0);
+		//$("#cams").dataTable.fnDeleteRow(0);
+
+		
+		// var oTable = $('#example').dataTable(
+		// 	{
+		// 		"bSort" : false
+		// 	});
+			
+		// 	$('#delete').click(function(e){
+		// 			var row = oTable.find('tr').eq(3);
+		// 		oTable.fnDeleteRow( row[0] );
+		// 	})
 
 		for (var keey in cams) {
 			$("#cams tbody").append('<tr><td>'+
