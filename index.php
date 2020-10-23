@@ -36,7 +36,9 @@
 
 		//Если база данных вернула не пустой ответ - значит пара логин-пароль правильная
 		if (!empty($user)) {
+			//Имя сессии
 
+			//session_name($user['login']);
 			//Стартуем сессию:
 			session_start(); 
 
@@ -48,7 +50,7 @@
 	  $_SESSION['login'] = $user['login'];
 	  //$userjson=json_encode($user['skvjson'], JSON_UNESCAPED_UNICODE);
 	  $obj = json_decode($user['skvjson'], true);
-	  //print_r($obj['name']);
+	  print_r($obj['name']);
 	  $userrights = array ();
 	  $userrights[]=base64_encode($obj['name']);
 	  $userrights[]=base64_encode($obj['dolgnost']);
