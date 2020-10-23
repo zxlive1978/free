@@ -4,7 +4,7 @@ function exit(whatdo, table, us){
         $.ajax({
             type: "POST",
             url: 'js/exit.php',
-            data: {whatdo:whatdo, table: table, p000: p000, skvsjson:skvsjson },
+            data: {whatdo:whatdo, table: table, p000: p000},
             cache: false,
             async: false,
             success: function(data){
