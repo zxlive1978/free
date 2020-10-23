@@ -56,7 +56,9 @@
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		echo $result;}
 
-
+    //session out
+    session_unset(); 
+    session_destroy();
 	//echo json_encode($nu);
     mysqli_close($dbc);
 		

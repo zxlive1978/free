@@ -182,7 +182,7 @@ if (!$_SESSION['auth']) {
   </a>
   </div>
   
-  <div class="btn-group" aria-hidden="true" role="group" aria-label="Basic example" onClick=''> 
+  <div class="btn-group" aria-hidden="true" role="group" aria-label="Basic example" onClick='exit();'> 
 			<button type="button" class="btnbg-light bg-light btn-md">ВЫХОД</button>
 			</div>
 </nav>
