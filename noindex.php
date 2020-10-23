@@ -67,6 +67,7 @@ if (!$_SESSION['auth']) {
 <script type="text/javascript" src="js/pong.js"></script>
 <script type="text/javascript" src="js/sutki.js"></script>
 <script type="text/javascript" src="js/read_comment.js"></script>
+<script type="text/javascript" src="js/exit.js"></script>
 
 
 
@@ -181,7 +182,7 @@ if (!$_SESSION['auth']) {
   </a>
   </div>
   
-  <div class="btn-group" aria-hidden="true" role="group" aria-label="Basic example" onClick='location.href="index.html"'>
+  <div class="btn-group" aria-hidden="true" role="group" aria-label="Basic example" onClick=''> 
 			<button type="button" class="btnbg-light bg-light btn-md">ВЫХОД</button>
 			</div>
 </nav>
