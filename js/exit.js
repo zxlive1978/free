@@ -47,3 +47,6 @@ function check_session(whatdo, table, p000){
     });
 
 };
+
+
+check_session('check','active','check');
