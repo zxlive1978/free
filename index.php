@@ -32,7 +32,7 @@
     $user = mysqli_fetch_assoc($result); //преобразуем ответ из БД в нормальный массив PHP
     //echo $result;
     //echo $query;
-    mysqli_close($dbc);
+    
 
 		//Если база данных вернула не пустой ответ - значит пара логин-пароль правильная
 		if (!empty($user)) {
@@ -69,14 +69,17 @@
 	  $_SESSION['skvjson'] = json_encode($userrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT );
 
 	  //delete
-	  $query="DELETE  FROM  ".$name_base.".active WHERE username=".$user['login'].";";
+	  $query="DELETE  FROM  ".$name_base.".active WHERE username='".$user['login']."';";
+	  //echo $query;
 	  $result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 	  //insert
 	  $id_session = session_id();
 	  $curtime=time();
-	  $query="INSERT INTO ".$name_base.".".$table." VALUES ( NULL, '".$id_session."' , '".$user['login']."' , '".$curtime."' ); ";
+	  $query="INSERT INTO ".$name_base.".active VALUES ( NULL, '".$id_session."' , '".$user['login']."' , ".$curtime." ); ";
+	  //echo $query;
 	  $result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
-
+	  mysqli_close($dbc);
+	
       include './noindex.php';
       
       //include './noindex.php';
@@ -84,7 +87,7 @@
 	  //Пользователь неверно ввел логин или пароль, выполним какой-то код.
 	  //echo "<script>alert(\"Неверный пароль или логин\");</script>"; 
       //echo 'Неверный пароль или логин'.$_SESSION['login'];
-      
+      mysqli_close($dbc);
       header("Location: index.html");
     }
     
