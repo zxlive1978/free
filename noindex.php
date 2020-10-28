@@ -133,7 +133,7 @@ if (!$_SESSION['auth']) {
     title="0" byline="0" portrait="0"
     width="280" height="157"
     frameborder="0"
-     allow="autoplay"
+     <!-- allow="autoplay" -->
       src="//hydrofalll.ddns.net:5443/LiveApp/play.html?name=259399779848013677881662"> </iframe>
     
     </div>

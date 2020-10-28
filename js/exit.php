@@ -58,8 +58,12 @@
 
     //session out
     if ($table == 'exit' && $whatdo == 'exit'){
+		echo $table;
     session_unset(); 
-    session_destroy();}
+	session_destroy();
+	$retexit=1;
+	echo $retexit;
+	}
 	//echo json_encode($nu);
     mysqli_close($dbc);
 		

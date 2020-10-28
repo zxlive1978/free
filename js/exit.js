@@ -1,4 +1,4 @@
-function exit(whatdo, table, us){
+function exit(whatdo, table, p000){
         refresh = false;
         online = false;
         $.ajax({
@@ -8,11 +8,13 @@ function exit(whatdo, table, us){
             cache: false,
             async: false,
             success: function(data){
-                if (Number(data)!=1) {alert('нет связи')} else{
+                alert(data);
+            //     if (Number(data)!=1) {alert('нет связи')} else{
                 
             
-                location.href="index.html";
-            }
+                
+            // }
+            location.href="index.html";
 
             }
         });
