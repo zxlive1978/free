@@ -67,7 +67,8 @@
 	//session check
     if ($table == 'active' && $whatdo == 'check'){
 		//echo $table;
-		$query="SELECT * FROM ".$name_base.".".$table.";";
+		$query="SELECT * FROM ".$name_base.".".$table." WHERE sesion_id='".$_SESSION['id_session']."';";
+		echo $query;
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		$comment = array();
 		while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
@@ -76,9 +77,20 @@
 			//$cur_rec['Wkp'] = $row['Wkp'];
 			array_push($comment, $cur_rec);
 			}
+		$goodnogood = 0;
+		if (mysqli_num_rows($result)==0) { 
+			$goodnogood = 1;
+			echo $goodnogood;
+		
+		} else {
+			session_unset(); 
+			session_destroy();
+			echo $goodnogood;
+		}
+		
 		mysqli_free_result($result);
-    session_unset(); 
-	session_destroy();
+    // session_unset(); 
+	// session_destroy();
 	//header("Location: /index.html");
 	}
 	//echo json_encode($nu);

@@ -33,10 +33,10 @@ function check_session(whatdo, table, p000){
         async: false,
         success: function(data){
         alert(data);
-        //     if (Number(data)!=1) {alert('нет связи')} else{
-            
+        if (Number(data)!=1) {alert('нет связи')} else{
+        }    
         
-        setTimeout(function(){check_session('check','check','check');}, 3000);    
+        setTimeout(function(){check_session('check','active','check');}, 3000);    
         // }
        
 
