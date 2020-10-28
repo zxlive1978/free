@@ -67,6 +67,16 @@
 	  $userrights[]=base64_encode($obj['chat']);
 	  //print_r(json_encode($userrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT ));
 	  $_SESSION['skvjson'] = json_encode($userrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT );
+
+	  //delete
+	  $query="DELETE  FROM  ".$name_base.".active WHERE username=".$user['login'].";";
+	  $result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+	  //insert
+	  $id_session = session_id();
+	  $curtime=time();
+	  $query="INSERT INTO ".$name_base.".".$table." VALUES ( NULL, '".$id_session."' , '".$user['login']."' , '".$curtime."' ); ";
+	  $result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+
       include './noindex.php';
       
       //include './noindex.php';
