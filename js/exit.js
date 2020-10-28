@@ -8,13 +8,13 @@ function exit(whatdo, table, p000){
             cache: false,
             async: false,
             success: function(data){
-                alert(data);
+                //alert(data);
             //     if (Number(data)!=1) {alert('нет связи')} else{
                 
             
                 
             // }
-            location.href="index.html";
+            //location.href="index.html";
 
             }
         });
