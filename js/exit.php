@@ -59,9 +59,9 @@
     //session out
     if ($table == 'exit' && $whatdo == 'exit'){
 		//echo $table;
-    //session_unset(); 
-	//session_destroy();
-	header("Location: ../index.html");
+    session_unset(); 
+	session_destroy();
+	//header("Location: /index.html");
 	}
 	//echo json_encode($nu);
     mysqli_close($dbc);
