@@ -46,7 +46,7 @@
 			$_SESSION['auth'] = true; 
 
 			//Пишем в сессию логин и id пользователя (их мы берем из переменной $user!):
-			$_SESSION['id'] = $user['id']; 
+			//$_SESSION['id'] = $user['id']; 
 	  $_SESSION['login'] = $user['login'];
 	  //$userjson=json_encode($user['skvjson'], JSON_UNESCAPED_UNICODE);
 	  $obj = json_decode($user['skvjson'], true);
