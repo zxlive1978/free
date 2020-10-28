@@ -1,3 +1,4 @@
+//Выход
 function exit(whatdo, table, p000){
         refresh = false;
         online = false;
@@ -21,10 +22,9 @@ function exit(whatdo, table, p000){
     
 };
   
-
+//Проверка сессий
 function check_session(whatdo, table, p000){
-    refresh = false;
-    online = false;
+  
     $.ajax({
         type: "POST",
         url: 'js/exit.php',
@@ -32,15 +32,18 @@ function check_session(whatdo, table, p000){
         cache: false,
         async: false,
         success: function(data){
-            //alert(data);
+        alert(data);
         //     if (Number(data)!=1) {alert('нет связи')} else{
             
         
-            
+        setTimeout(function(){check_session('check','check','check');}, 3000);    
         // }
-        location.href="index.html";
+       
 
-        }
+        },
+        error: function(){
+            location.href="index.html";}
+
     });
 
 };
