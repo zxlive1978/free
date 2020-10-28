@@ -1308,8 +1308,8 @@ function vertical() {
 $(document).ready(function () {
 			//Чтение списка скважин
 			readskvstart('read','skvs', '','');
-		
-			
+			//Проверка сессий
+			check_session('check','active',_ud);
 			
 			
 			
