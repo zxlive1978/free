@@ -66,7 +66,7 @@
 
 	//session check
     if ($table == 'active' && $whatdo == 'check'){
-		//echo $table;
+		echo  session_id();
 		$id_session = session_id();
 		$query="SELECT * FROM ".$name_base.".".$table." WHERE session_id='".$id_session."';";
 		echo $query;
