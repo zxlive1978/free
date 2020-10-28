@@ -67,10 +67,9 @@
 	//session check
     if ($table == 'active' && $whatdo == 'check'){
 		
-		$id_session = session_id();
-		echo  $id_session;
+		$id_session=$_POST['p000'];
 		$query="SELECT * FROM ".$name_base.".".$table." WHERE session_id='".$id_session."';";
-		//echo $query;
+		echo $query;
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		//$comment = array();
 		// while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){

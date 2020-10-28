@@ -36,7 +36,7 @@ function check_session(whatdo, table, p000){
         if (Number(data)!='1') {alert('нет связи')} else{
         }    
         
-        setTimeout(function(){check_session('check','active','check');}, 5000);    
+        setTimeout(function(){check_session('check','active',_ud);}, 5000);    
         // }
        
 
@@ -49,4 +49,4 @@ function check_session(whatdo, table, p000){
 };
 
 
-check_session('check','active','check');
+check_session('check','active',_ud);
