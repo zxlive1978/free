@@ -69,7 +69,7 @@
 		
 		
 		$query="SELECT * FROM ".$name_base.".".$table." WHERE time='".$p000."';";
-		//echo $query;
+		echo $query;
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		//$comment = array();
 		// while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
