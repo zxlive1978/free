@@ -82,9 +82,9 @@
 	  $result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 	  mysqli_close($dbc);
 	
-      include './noindex.php';
+    //   header("Location: index.html");
       
-      //include './noindex.php';
+      include './noindex.php';
 		} else {
 	  //Пользователь неверно ввел логин или пароль, выполним какой-то код.
 	  //echo "<script>alert(\"Неверный пароль или логин\");</script>"; 
