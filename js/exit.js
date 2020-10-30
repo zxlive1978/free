@@ -32,7 +32,7 @@ function check_session(whatdo, table, p000){
         cache: false,
         async: false,
         success: function(data){
-        alert(data);
+        // alert(data);
         if (Number(data)!='1') {alert('нет связи')} else{
         }    
         
