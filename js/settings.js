@@ -1309,7 +1309,7 @@ $(document).ready(function () {
 			//Чтение списка скважин
 			readskvstart('read','skvs', '','');
 			//проверка сессий
-			check_session('check','active','check');
+			check_session('check','active',_ut);
 			
 			
 			
