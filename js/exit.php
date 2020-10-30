@@ -67,8 +67,8 @@
 	//session check
     if ($table == 'active' && $whatdo == 'check'){
 		
-		$id_session=session_id();
-		$query="SELECT * FROM ".$name_base.".".$table." WHERE session_id='".$id_session."';";
+		$time=session_id();
+		$query="SELECT * FROM ".$name_base.".".$table." WHERE time='".$id_session."';";
 		//echo $query;
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		//$comment = array();
@@ -78,6 +78,7 @@
 		// 	//$cur_rec['Wkp'] = $row['Wkp'];
 		// 	array_push($comment, $cur_rec);
 		// 	}
+		//echo $result;
 		$goodnogood = 0;
 		if (mysqli_num_rows($result)!=0) { 
 			$goodnogood = 1;

@@ -75,8 +75,10 @@
 	  $result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 	  //insert
 	  $id_session = session_id();
-	  $_SESSION['id_session']= $id_session;
+	  
 	  $curtime=time();
+	  $_SESSION['time']= $curtime;
+	  
 	  $query="INSERT INTO ".$name_base.".active VALUES ( NULL, '".$id_session."' , '".$user['login']."' , ".$curtime." ); ";
 	  //echo $query;
 	  $result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
