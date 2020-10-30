@@ -10,11 +10,11 @@ function exit(whatdo, table, p000){
             async: false,
             success: function(data){
                 //alert(data);
-            //     if (Number(data)!=1) {alert('нет связи')} else{
+                if (Number(data)!=1) {alert('нет связи')} else{
                 
             
                 
-            // }
+            }
             location.href="index.html";
 
             }

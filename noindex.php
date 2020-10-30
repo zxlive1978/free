@@ -1,5 +1,12 @@
 <?php
+<<<<<<< HEAD
 // session_start();
+=======
+//session_start();
+if (!isset($_SESSION)){
+  session_start();
+}
+>>>>>>> 974840b6d332ffa835c7ddb13e47f98688821bf3
 if (!$_SESSION['auth']) {
 	header("Location: index.html");
 	exit;
@@ -63,12 +70,13 @@ if (!$_SESSION['auth']) {
 
 <script type="text/javascript" src="js/loadsave.js"></script>
 <script type="text/javascript" src="js/writeskvs.js"></script>
+<script type="text/javascript" src="js/exit.js"></script>
+
 <script type="text/javascript" src="js/settings.js"></script>
 
 <script type="text/javascript" src="js/pong.js"></script>
 <script type="text/javascript" src="js/sutki.js"></script>
 <script type="text/javascript" src="js/read_comment.js"></script>
-<script type="text/javascript" src="js/exit.js"></script>
 
 
 

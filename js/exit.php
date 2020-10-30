@@ -79,7 +79,7 @@
 		// 	array_push($comment, $cur_rec);
 		// 	}
 		$goodnogood = 0;
-		if (mysqli_num_rows($result)==0) { 
+		if (mysqli_num_rows($result)!=0) { 
 			$goodnogood = 1;
 			echo $goodnogood;
 		
