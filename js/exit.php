@@ -67,8 +67,8 @@
 	//session check
     if ($table == 'active' && $whatdo == 'check'){
 		
-		$time=session_id();
-		$query="SELECT * FROM ".$name_base.".".$table." WHERE time='".$id_session."';";
+		
+		$query="SELECT * FROM ".$name_base.".".$table." WHERE time='".$p000."';";
 		//echo $query;
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		//$comment = array();
