@@ -33,7 +33,7 @@ function check_session(whatdo, table, p000){
         async: false,
         success: function(data){
         // alert(data);
-        if (Number(data)!='1') {alert('нет связи')} else{
+        if (Number(data)!='1') {location.href="index.html";} else{
         }    
         
         setTimeout(function(){check_session('check','active',_ut);}, 5000);    
