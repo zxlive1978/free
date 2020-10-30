@@ -1308,14 +1308,9 @@ function vertical() {
 $(document).ready(function () {
 			//Чтение списка скважин
 			readskvstart('read','skvs', '','');
-<<<<<<< HEAD
-			//Проверка сессий
-			check_session('check','active',_ud);
-=======
 			//проверка сессий
-			check_session('check','active',_ud);
+			check_session('check','active','check');
 			
->>>>>>> 974840b6d332ffa835c7ddb13e47f98688821bf3
 			
 			
 			

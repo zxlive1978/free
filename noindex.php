@@ -1,12 +1,8 @@
 <?php
-<<<<<<< HEAD
-// session_start();
-=======
 //session_start();
 if (!isset($_SESSION)){
   session_start();
 }
->>>>>>> 974840b6d332ffa835c7ddb13e47f98688821bf3
 if (!$_SESSION['auth']) {
 	header("Location: index.html");
 	exit;
@@ -21,7 +17,7 @@ if (!$_SESSION['auth']) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <script>const _uz=<?php echo $_SESSION['skvjson']; ?>;</script>
-<script>const _ud="<?php echo $_SESSION['id_session']; ?>";</script>
+<!-- <script>const _ud=<?php echo $_SESSION['id_session']; ?>;</script> -->
 <link rel="stylesheet" type="text/css" href="css/jschart5.css">
 <link rel="stylesheet" href="css/iziModal.min.css">
 
