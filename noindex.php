@@ -233,18 +233,18 @@ if (!$_SESSION['auth']) {
 <div id="tabs">
   <ul>
     <li><a href="#tabs-1"> <span id="tabsn-1" >     </span></a></li>
-    <li><a href="#tabs-2"> <span id="tabsn-2" >     </span></a></li>
+    <!-- <li><a href="#tabs-2"> <span id="tabsn-2" >     </span></a></li>
     <li><a href="#tabs-3"> <span id="tabsn-3" >     </span></a></li>
-    <li><a href="#tabs-4"> <span id="tabsn-4" >     </span></a></li>
+    <li><a href="#tabs-4"> <span id="tabsn-4" >     </span></a></li> -->
   </ul>
   <div id="tabs-1">
   </div>
-  <div id="tabs-2">
+  <!-- <div id="tabs-2">
   </div>
   <div id="tabs-3">
   </div>
   <div id="tabs-4">
-  </div>
+  </div> -->
 </div>
 
 

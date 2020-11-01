@@ -1535,18 +1535,18 @@ function adm (){
 	
 	onofadm = false;
 
-	$('#tabvideo').empty();
-	$('#tabvideo').show();
-	$('#tabvideo').html(
-		+'<div id="tabs">'
-		+'<ul><li><a href="#tabs-1">Роторный стол</a></li><li><a href="#tabs-2">Приемный мост</a></li><li><a href="#tabs-3">ПВО</a></li></ul>'
-		+'<div id="tabs-1"></div><div id="tabs-2"></div><div id="tabs-3"></div></div>'
-	);
-	$('#tabvideo').append('edrrr');
+	//$('#tabs').empty();
+	// $('#tabvideo').show();
+	// $('#tabvideo').html(
+	// 	+'<div id="tabs">'
+	// 	+'<ul><li><a href="#tabs-1">Роторный стол</a></li><li><a href="#tabs-2">Приемный мост</a></li><li><a href="#tabs-3">ПВО</a></li></ul>'
+	// 	+'<div id="tabs-1"></div><div id="tabs-2"></div><div id="tabs-3"></div></div>'
+	// );
+	// $('#tabvideo').append('edrrr');
 	// <span id="tabsn-1" ></span>
 	document.getElementById("tabsn-1").innerHTML="Роторный стол";
-	document.getElementById("tabsn-2").innerHTML="Приемный мост";
-	document.getElementById("tabsn-3").innerHTML="ПВО";
+	// document.getElementById("tabsn-2").innerHTML="Приемный мост";
+	// document.getElementById("tabsn-3").innerHTML="ПВО";
 	$('#tabs').show();
 
 // 	<!-- <div id="tabs">
