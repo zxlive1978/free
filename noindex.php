@@ -130,7 +130,7 @@ if (!$_SESSION['auth']) {
     
 	  
 	   
-		<li>
+		<!-- <li>
     <div id="dialogvideo" name="dialogvideo" title="Камера 2">
     <iframe width="100%" height="100%"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
@@ -138,14 +138,14 @@ if (!$_SESSION['auth']) {
     title="0" byline="0" portrait="0"
     width="280" height="157"
     frameborder="0"
-     <!-- allow="autoplay" -->
+      allow="autoplay"
       src="//hydrofalll.ddns.net:5443/LiveApp/play.html?name=259399779848013677881662"> </iframe>
     
     </div>
-		<div class="btn-group" role="group" aria-label="">
-		<!-- <button class="btn bg-light btn-lg " type="button" id="adm" name="adm" onclick='adm()'>
-    Админка</button>	
-		</div> -->
+		<div class="btn-group" role="group" aria-label=""> -->
+		<button class="btnbg-light bg-light btn-lg" type="button" id="adm" name="adm" onclick='adm()'>
+    Видео</button>	
+		</div>
   
     <!--</li>
     <button class="btn bg-light btn-lg " type="button" id="stop" name="stop" onclick='stopCam()'>
@@ -188,7 +188,7 @@ if (!$_SESSION['auth']) {
   </div>
   
   <div class="btn-group" aria-hidden="true" role="group" aria-label="Basic example" onClick="exit('exit','exit','exit');"> 
-			<button type="button" class="btnbg-light bg-light btn-md">ВЫХОД</button>
+			<button type="button" class="btnbg-light bg-light btn-lg">ВЫХОД</button>
 			</div>
 </nav>
 
