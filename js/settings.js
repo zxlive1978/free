@@ -1543,7 +1543,7 @@ function adm (){
 		+'<div id="tabs-1"></div><div id="tabs-2"></div><div id="tabs-3"></div></div>'
 	);
 	$('#tabvideo').append('edrrr');
-	<span id="tabsn-1" ></span>
+	// <span id="tabsn-1" ></span>
 	document.getElementById("tabsn-1").innerHTML="Роторный стол";
 	document.getElementById("tabsn-2").innerHTML="Приемный мост";
 	document.getElementById("tabsn-3").innerHTML="ПВО";
