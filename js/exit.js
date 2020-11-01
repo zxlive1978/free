@@ -32,11 +32,11 @@ function check_session(whatdo, table, p000){
         cache: false,
         async: false,
         success: function(data){
-        //alert(data);
-        if (Number(data)!='1') {alert('нет связи')} else{
+        // alert(data);
+        if (Number(data)!='1') {location.href="index.html";} else{
         }    
         
-        setTimeout(function(){check_session('check','active',_ud);}, 5000);    
+        setTimeout(function(){check_session('check','active',_ut);}, 5000);    
         // }
        
 
