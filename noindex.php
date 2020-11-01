@@ -159,7 +159,7 @@ if (!$_SESSION['auth']) {
     </li> -->
 
 
-		<!-- <li>
+		<li>
 		<button type="button" class="btnbg-light bg-light btn-lg" data-toggle="modal" data-target="#videoModal" data-theVideo="">В окне</button>
 		<div class="modal fade bd-example-modal-lg" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal" aria-hidden="true">
 			<div class="modal-dialog modal-lg">
@@ -173,7 +173,7 @@ if (!$_SESSION['auth']) {
 				</div>
 			</div>
 		</div>
-		</li> -->
+		</li>
 		
     </ul>
 	
