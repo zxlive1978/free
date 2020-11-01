@@ -1557,10 +1557,13 @@ function adm (){
 	frame.setAttribute("webkitAllowFullScreen", "true");
 	frame.setAttribute("mozallowfullscreen", "true");
 	frame.setAttribute("position", "absolute");
+	frame.setAttribute("align", "center");
 	frame.setAttribute("top", "0");
 	frame.setAttribute("left", "0");
+	frame.setAttribute("scaling", "fit");
+	//scaling: 'fit'
 	  
-	frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=309578086083277004990760");
+	frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=402550425406257962757843");
 	
 	
 	//frame.setAttribute("webkitAllowFullScreen mozallowfullscreen allowfullscreen");
