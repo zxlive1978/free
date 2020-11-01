@@ -1551,25 +1551,87 @@ function adm (){
 	$('#tabs-1').empty();
 	var frame = document.createElement("iframe");
 	frame.setAttribute("id", "camsf2");
+	// frame.setAttribute("width", "704");
+	// frame.setAttribute("height", "576");
 	frame.setAttribute("width", "100%");
 	frame.setAttribute("height", "100%");
 	frame.setAttribute("allowfullscreen", "true");
 	frame.setAttribute("webkitAllowFullScreen", "true");
 	frame.setAttribute("mozallowfullscreen", "true");
 	frame.setAttribute("position", "absolute");
-	frame.setAttribute("align", "center");
-	frame.setAttribute("top", "0");
-	frame.setAttribute("left", "0");
-	frame.setAttribute("scaling", "fit");
-	//scaling: 'fit'
-	  
-	frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=402550425406257962757843");
-	
-	
-	//frame.setAttribute("webkitAllowFullScreen mozallowfullscreen allowfullscreen");
-	document.body.appendChild(frame);
-	//Zem2Pyf4Buk5
+	frame.setAttribute("align", "middle");
+	// frame.setAttribute("top", "0");
+	// frame.setAttribute("left", "0");
+	frame.setAttribute("auto_orient", "true");
+	// frame.setAttribute("ratio", "16:10");
+	frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=989288934770850773631823");
+	// var tabb = document.getElementById("tabs-1")
+	// tabb.insertAdjacentHTML()
+	$('#tabs-1').append(frame);
 
+	// var frame = document.createElement("iframe");
+	// frame.setAttribute("id", "camsf2");
+	// // frame.setAttribute("width", "704");
+	// // frame.setAttribute("height", "576");
+	// frame.setAttribute("width", "100%");
+	// frame.setAttribute("height", "576");
+	// frame.setAttribute("allowfullscreen", "true");
+	// frame.setAttribute("webkitAllowFullScreen", "true");
+	// frame.setAttribute("mozallowfullscreen", "true");
+	// frame.setAttribute("position", "absolute");
+	// frame.setAttribute("align", "middle");
+	// // frame.setAttribute("top", "0");
+	// // frame.setAttribute("left", "0");
+	// frame.setAttribute("auto_orient", "true");
+	// // frame.setAttribute("ratio", "16:10");
+	// frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=402550425406257962757843");
+	// // var tabb = document.getElementById("tabs-1")
+	// // tabb.insertAdjacentHTML()
+	// $('#tabs-1').append(frame);
+
+	// var frame = document.createElement("iframe");
+	// frame.setAttribute("id", "camsf2");
+	// // frame.setAttribute("width", "704");
+	// // frame.setAttribute("height", "576");
+	// frame.setAttribute("width", "100%");
+	// frame.setAttribute("height", "576");
+	// frame.setAttribute("allowfullscreen", "true");
+	// frame.setAttribute("webkitAllowFullScreen", "true");
+	// frame.setAttribute("mozallowfullscreen", "true");
+	// frame.setAttribute("position", "absolute");
+	// frame.setAttribute("align", "middle");
+	// // frame.setAttribute("top", "0");
+	// // frame.setAttribute("left", "0");
+	// frame.setAttribute("auto_orient", "true");
+	// // frame.setAttribute("ratio", "16:10");
+	// frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=973843807862020830541916");
+	// // var tabb = document.getElementById("tabs-1")
+	// // tabb.insertAdjacentHTML()
+	// $('#tabs-1').append(frame);
+
+	// var frame = document.createElement("iframe");
+	// frame.setAttribute("id", "camsf2");
+	// // frame.setAttribute("width", "704");
+	// // frame.setAttribute("height", "576");
+	// frame.setAttribute("width", "100%");
+	// frame.setAttribute("height", "576");
+	// frame.setAttribute("allowfullscreen", "true");
+	// frame.setAttribute("webkitAllowFullScreen", "true");
+	// frame.setAttribute("mozallowfullscreen", "true");
+	// frame.setAttribute("position", "absolute");
+	// frame.setAttribute("align", "middle");
+	// // frame.setAttribute("top", "0");
+	// // frame.setAttribute("left", "0");
+	// frame.setAttribute("auto_orient", "true");
+	// // frame.setAttribute("ratio", "16:10");
+	// frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=739604144503658806859147");
+	// // var tabb = document.getElementById("tabs-1")
+	// // tabb.insertAdjacentHTML()
+	// $('#tabs-1').append(frame);
+	// //frame.setAttribute("webkitAllowFullScreen mozallowfullscreen allowfullscreen");
+	// //document.body.appendChild(frame);
+	// //Zem2Pyf4Buk5
+	
 	// $('#tabs-1').html(
 	// +'<iframe width="100%" height="100%"'
     // +'style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"'
@@ -1697,6 +1759,7 @@ function adm (){
 		$('#dialogvideo').dialog( "open" );// Для скрытия
 		$('#tabs').hide();
 		$('#camsf2').remove();
+		$('#tabs-1').empty();
 		//document.getElementById("camsf2").innerHTML="Роторный стол";
 		// $('#tabs').empty();
 		// $('#tabs').hide();
