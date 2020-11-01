@@ -1531,8 +1531,38 @@ function adm (){
 	
 	
 	$('#dialogvideo').dialog( "close" );// Для скрытия
-	$('#tabs').show();
+	
+	
 	onofadm = false;
+
+	$('#tabvideo').empty();
+	$('#tabvideo').show();
+	$('#tabvideo').html(
+		+'<div id="tabs">'
+		+'<ul><li><a href="#tabs-1">Роторный стол</a></li><li><a href="#tabs-2">Приемный мост</a></li><li><a href="#tabs-3">ПВО</a></li></ul>'
+		+'<div id="tabs-1"></div><div id="tabs-2"></div><div id="tabs-3"></div></div>'
+	);
+	$('#tabvideo').append('edrrr');
+	<span id="tabsn-1" ></span>
+	document.getElementById("tabsn-1").innerHTML="Роторный стол";
+	document.getElementById("tabsn-2").innerHTML="Приемный мост";
+	document.getElementById("tabsn-3").innerHTML="ПВО";
+	$('#tabs').show();
+
+// 	<!-- <div id="tabs">
+//   <ul>
+//     <li><a href="#tabs-1">Пользователи</a></li>
+//     <li><a href="#tabs-2">Скважины</a></li>
+//     <li><a href="#tabs-3">Камеры</a></li>
+//   </ul>
+//   <div id="tabs-1">
+//   </div>
+//   <div id="tabs-2">
+//   </div>
+//   <div id="tabs-3">
+//   </div>
+// </div> -->
+
 	$('#tabs-1').empty();
 	//e.preventDefault();
 	$('#tabs-1').html(' <p>'+row_str+'</p>');
@@ -1634,6 +1664,9 @@ function adm (){
 		$('#dialogvideo').dialog( "open" );// Для скрытия
 		$('#tabs').hide();
 		
+		$('#tabvideo').empty();
+		$('#tabvideo').hide();
+
 		$('#drawing').empty();
 		$('#drawing').show();
 		online = true;

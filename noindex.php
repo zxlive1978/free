@@ -230,11 +230,11 @@ if (!$_SESSION['auth']) {
 
 
 <!-- Табы -->
-<!-- <div id="tabs">
+<div id="tabs">
   <ul>
-    <li><a href="#tabs-1">Пользователи</a></li>
-    <li><a href="#tabs-2">Скважины</a></li>
-    <li><a href="#tabs-3">Камеры</a></li>
+    <li><a href="#tabs-1"> <span id="tabsn-1" ></span></a></li>
+    <li><a href="#tabs-2"> <span id="tabsn-2" ></span></a></li>
+    <li><a href="#tabs-3"> <span id="tabsn-3" ></span></a></li>
   </ul>
   <div id="tabs-1">
   </div>
@@ -242,10 +242,11 @@ if (!$_SESSION['auth']) {
   </div>
   <div id="tabs-3">
   </div>
-</div> -->
+</div>
 
 
 <div id="drawing"  ></div>
+<div id="tabvideo" width="100%" height="100%"  style = "background-color:khaki" ></div>
 <script type="text/javascript">
 function getStart() {
       //alert('ok');
