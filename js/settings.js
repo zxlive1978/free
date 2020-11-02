@@ -1558,9 +1558,16 @@ function adm (){
 	var div1 = document.createElement("div");
 	//div1.innerHTML = "<h1>Привет!</h1>";
 	div1.setAttribute("id", "divcams");
-	div1.style.position = 'stickly';
+	div1.style.position = 'relative';
 	div1.style.backgroundColor = 'green';
 	div1.style.width = '100%';
+	// div1.style.margin-left = 'auto';
+	// div1.style.margin-right = 'auto';
+	div1.style.margin =" 0 auto";
+	// text-align: center; 
+	div1.setAttribute("text-align", "center");
+
+	//style="margin-left:auto; margin-right:auto;"
 	//div1.setAttribute("class", "mh-100");
 	//class="mh-100"
 	div1.style.height =($(window).height()-2.9*($('#bigpan').height()));
@@ -1585,13 +1592,16 @@ function adm (){
 		frame.setAttribute("width", '100%');
 		frame.setAttribute("height", div1.style.height);	
 		}
+	frame.setAttribute("margin-left", "auto");
+	frame.setAttribute("margin-right", "auto");
 	frame.setAttribute("allowfullscreen", "true");
 	frame.setAttribute("webkitAllowFullScreen", "true");
 	frame.setAttribute("mozallowfullscreen", "true");
-	frame.setAttribute("position", "stickly");
+	frame.style.position = 'relative';
 	frame.setAttribute("align", "middle");
-	frame.setAttribute("top", "0");
-	frame.setAttribute("left", "0");
+	frame.setAttribute("text-align", "center");
+	// frame.setAttribute("top", "0");
+	// frame.setAttribute("left", "0");
 	frame.setAttribute("auto_orient", "true");
 	// frame.setAttribute("ratio", "16:10");
 	frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=989288934770850773631823");

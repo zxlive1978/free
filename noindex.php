@@ -230,9 +230,9 @@ if (!$_SESSION['auth']) {
 
 
 <!-- Табы -->
-<div id="tabs">
+<div id="tabs" >
   <ul>
-    <li><a href="#tabs-1"> <span id="tabsn-1" >     </span></a></li>
+    <li><a href="#tabs-1" > <span id="tabsn-1" >     </span></a></li>
     <!-- <li><a href="#tabs-2"> <span id="tabsn-2" >     </span></a></li>
     <li><a href="#tabs-3"> <span id="tabsn-3" >     </span></a></li>
     <li><a href="#tabs-4"> <span id="tabsn-4" >     </span></a></li> -->
