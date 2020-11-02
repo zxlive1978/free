@@ -1520,6 +1520,12 @@ writeskvs('create','skvs', String('par'+String((Object.keys(wells).length-1))),J
 readskvs('read','skvs', '','');
 }
 
+function resizeiframe(){
+	var div = document.getElementById("camsf2");
+      div.onload = function() {
+        div.style.height = div.contentWindow.document.body.scrollHeight + 'px';
+      }
+}
 //Админка
 function adm (){
 	if (onofadm){
@@ -1549,25 +1555,52 @@ function adm (){
 	// document.getElementById("tabsn-3").innerHTML="ПВО";
 	$('#tabs').show();
 	$('#tabs-1').empty();
+	var div1 = document.createElement("div");
+	//div1.innerHTML = "<h1>Привет!</h1>";
+	div1.setAttribute("id", "divcams");
+	div1.style.position = 'stickly';
+	div1.style.backgroundColor = 'green';
+	div1.style.width = '100%';
+	//div1.setAttribute("class", "mh-100");
+	//class="mh-100"
+	div1.style.height =($(window).height()-2.5*($('#bigpan').height()));
+	//div1.setAttribute("data-ratio", "1.33");
+	// div1.style.data-ratio ="0.417";
+	//console.log(div1.style.width,' b  ',div1.style.height, $('#div1').height());
+	
+	//div1.setAttribute("height", "200");
+
+	$('#tabs-1').append(div1);
+	console.log(div1.style.width,' b  ',div1.style.height, $('#div1').height());
+
 	var frame = document.createElement("iframe");
 	frame.setAttribute("id", "camsf2");
 	// frame.setAttribute("width", "704");
 	// frame.setAttribute("height", "576");
-	frame.setAttribute("width", "100%");
-	frame.setAttribute("height", "100%");
+	var dh=document.getElementById('divcams').offsetHeight;
+	var dw=document.getElementById('divcams').offsetWidth;
+	if (dh<dw){
+		frame.setAttribute("width",  String(Number((div1.style.height).slice(0, (div1.style.height).length-2))*1.55)+'px');
+		frame.setAttribute("height", '100%');} else {
+		frame.setAttribute("width", '100%');
+		frame.setAttribute("height", div1.style.height);	
+		}
 	frame.setAttribute("allowfullscreen", "true");
 	frame.setAttribute("webkitAllowFullScreen", "true");
 	frame.setAttribute("mozallowfullscreen", "true");
-	frame.setAttribute("position", "absolute");
+	frame.setAttribute("position", "stickly");
 	frame.setAttribute("align", "middle");
-	// frame.setAttribute("top", "0");
-	// frame.setAttribute("left", "0");
+	frame.setAttribute("top", "0");
+	frame.setAttribute("left", "0");
 	frame.setAttribute("auto_orient", "true");
 	// frame.setAttribute("ratio", "16:10");
 	frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=989288934770850773631823");
 	// var tabb = document.getElementById("tabs-1")
 	// tabb.insertAdjacentHTML()
-	$('#tabs-1').append(frame);
+	
+
+	$('#divcams').append(frame);
+	//resizeiframe();
 
 	// var frame = document.createElement("iframe");
 	// frame.setAttribute("id", "camsf2");
