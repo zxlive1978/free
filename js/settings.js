@@ -1563,7 +1563,7 @@ function adm (){
 	div1.style.width = '100%';
 	//div1.setAttribute("class", "mh-100");
 	//class="mh-100"
-	div1.style.height =($(window).height()-2.5*($('#bigpan').height()));
+	div1.style.height =($(window).height()-2.9*($('#bigpan').height()));
 	//div1.setAttribute("data-ratio", "1.33");
 	// div1.style.data-ratio ="0.417";
 	//console.log(div1.style.width,' b  ',div1.style.height, $('#div1').height());
@@ -1580,7 +1580,7 @@ function adm (){
 	var dh=document.getElementById('divcams').offsetHeight;
 	var dw=document.getElementById('divcams').offsetWidth;
 	if (dh<dw){
-		frame.setAttribute("width",  String(Number((div1.style.height).slice(0, (div1.style.height).length-2))*1.55)+'px');
+		frame.setAttribute("width",  String(Number((div1.style.height).slice(0, (div1.style.height).length-2))*1.8)+'px');
 		frame.setAttribute("height", '100%');} else {
 		frame.setAttribute("width", '100%');
 		frame.setAttribute("height", div1.style.height);	
