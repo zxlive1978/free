@@ -725,7 +725,7 @@ function colPan3 () {
     $('#kalendar').iziModal('open'); */
     
 	//bootstrap modal
-	document.getElementById('localdate1').valueAsDate = '2020-10-26';
+	//document.getElementById('localdate1').valueAsDate = '2020/10/26';
 	$("#myModal2").modal();
 	
 }
