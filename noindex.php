@@ -237,7 +237,7 @@ if (!$_SESSION['auth']) {
     <li><a href="#tabs-3"> <span id="tabsn-3" >     </span></a></li>
     <li><a href="#tabs-4"> <span id="tabsn-4" >     </span></a></li> -->
   </ul>
-  <div id="tabs-1" style="display: flex;"></div>
+  <div id="tabs-1" class="h-auto d-inline-block"></div>
   <!-- <div id="tabs-2">
   </div>
   <div id="tabs-3">

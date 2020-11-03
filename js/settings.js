@@ -1593,14 +1593,14 @@ function adm (){
 	// 	frame.setAttribute("height", div1.style.height);	
 	// 	}
 	frame.setAttribute("width", '100%');
-	frame.setAttribute("margin-left", "auto");
-	frame.setAttribute("margin-right", "auto");
+	//frame.setAttribute("margin-left", "auto");
+	//frame.setAttribute("margin-right", "auto");
 	frame.setAttribute("allowfullscreen", "true");
 	frame.setAttribute("webkitAllowFullScreen", "true");
 	frame.setAttribute("mozallowfullscreen", "true");
 	frame.style.position = 'relative';
 	frame.setAttribute("align", "middle");
-	frame.setAttribute("text-align", "center");
+	//frame.setAttribute("text-align", "center");
 	// frame.setAttribute("top", "0");
 	// frame.setAttribute("left", "0");
 	frame.setAttribute("auto_orient", "true");
