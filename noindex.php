@@ -410,6 +410,17 @@ window.onresize = function(event) {
         <div class="modal-body">
         <label for="hcolcolor">Выбор даты(<10 дней):</label>
 <input type='date' class="form-control input-lg" id='localdate1' name='date1' max=<?php echo date('Y-m-d');?> min=<?php $date = new DateTime(); $date->modify('-9 day'); echo $date->format('Y-m-d'); ?>>
+
+<label for="hcolcolor">Ширина интервала:</label>
+
+<select id="zooom1" class="form-control input-lg" name="zooom1" value="3">
+
+<option value="3">3 часа</option>
+ <option value="1">1 час</option>
+<option value="8">8 часов</option>
+<option value="24">1 день</option>
+</select>
+
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">

@@ -725,6 +725,7 @@ function colPan3 () {
     $('#kalendar').iziModal('open'); */
     
 	//bootstrap modal
+	document.getElementById('localdate1').valueAsDate = '2020-10-26';
 	$("#myModal2").modal();
 	
 }
@@ -740,8 +741,10 @@ function colOK3 () {
 	//alert(start_time);
 	//alert(end_time);
 	//var disp_time = d110d[d110d.length-1]["Vrema"] - d110d[0]["Vrema"];
-	
+	refresh = false; //navigation.js
+	Sheet.Kzoom = Number($("#zooom1").val()) ;
 	read_random();
+	//read_random();
 	/* $('#kalendar').iziModal('close'); */
 		
 }
@@ -761,9 +764,7 @@ function colPan4 () {
 function colOK4 () {
 /* 	PArmyDialog4.hide(); */
 	
-	refresh = false; //navigation.js
-	Sheet.Kzoom = Number($("#zooom1").val()) ;
-	read_random();
+
 	//$('#lupa').iziModal('close');
 }
 
