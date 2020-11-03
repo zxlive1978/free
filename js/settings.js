@@ -1555,43 +1555,44 @@ function adm (){
 	// document.getElementById("tabsn-3").innerHTML="ПВО";
 	$('#tabs').show();
 	$('#tabs-1').empty();
-	var div1 = document.createElement("div");
-	//div1.innerHTML = "<h1>Привет!</h1>";
-	div1.setAttribute("id", "divcams");
-	div1.style.position = 'relative';
-	div1.style.backgroundColor = 'green';
-	div1.style.width = '100%';
-	// div1.style.margin-left = 'auto';
-	// div1.style.margin-right = 'auto';
-	div1.style.margin =" 0 auto";
-	// text-align: center; 
-	div1.setAttribute("text-align", "center");
+	// var div1 = document.createElement("div");
+	// //div1.innerHTML = "<h1>Привет!</h1>";
+	// div1.setAttribute("id", "divcams");
+	// div1.style.position = 'relative';
+	// //div1.style.backgroundColor = 'green';
+	// div1.style.width = '100%';
+	// // div1.style.margin-left = 'auto';
+	// // div1.style.margin-right = 'auto';
+	// div1.style.margin =" 0 auto";
+	// // text-align: center; 
+	// div1.setAttribute("text-align", "center");
 
-	//style="margin-left:auto; margin-right:auto;"
-	//div1.setAttribute("class", "mh-100");
-	//class="mh-100"
-	div1.style.height =($(window).height()-2.9*($('#bigpan').height()));
-	//div1.setAttribute("data-ratio", "1.33");
-	// div1.style.data-ratio ="0.417";
-	//console.log(div1.style.width,' b  ',div1.style.height, $('#div1').height());
+	// //style="margin-left:auto; margin-right:auto;"
+	// div1.setAttribute("class", "container");//class="container"
+	// //class="mh-100"
+	// div1.style.height =($(window).height()-2.9*($('#bigpan').height()));
+	// div1.setAttribute("data-ratio", "0.5625"); //data-ratio="0.5625"
+	// // div1.style.data-ratio ="0.417";
+	// //console.log(div1.style.width,' b  ',div1.style.height, $('#div1').height());
 	
-	//div1.setAttribute("height", "200");
+	// //div1.setAttribute("height", "200");
 
-	$('#tabs-1').append(div1);
-	console.log(div1.style.width,' b  ',div1.style.height, $('#div1').height());
+	// $('#tabs-1').append(div1);
+	// console.log(div1.style.width,' b  ',div1.style.height, $('#div1').height());
 
 	var frame = document.createElement("iframe");
 	frame.setAttribute("id", "camsf2");
 	// frame.setAttribute("width", "704");
 	// frame.setAttribute("height", "576");
-	var dh=document.getElementById('divcams').offsetHeight;
-	var dw=document.getElementById('divcams').offsetWidth;
-	if (dh<dw){
-		frame.setAttribute("width",  String(Number((div1.style.height).slice(0, (div1.style.height).length-2))*1.8)+'px');
-		frame.setAttribute("height", '100%');} else {
-		frame.setAttribute("width", '100%');
-		frame.setAttribute("height", div1.style.height);	
-		}
+	// var dh=document.getElementById('divcams').offsetHeight;
+	// var dw=document.getElementById('divcams').offsetWidth;
+	// if (dh<dw){
+	// 	frame.setAttribute("width",  String(Number((div1.style.height).slice(0, (div1.style.height).length-2))*1.555)+'px');
+	// 	frame.setAttribute("height", '100%');} else {
+	// 	frame.setAttribute("width", '100%');
+	// 	frame.setAttribute("height", div1.style.height);	
+	// 	}
+	frame.setAttribute("width", '100%');
 	frame.setAttribute("margin-left", "auto");
 	frame.setAttribute("margin-right", "auto");
 	frame.setAttribute("allowfullscreen", "true");
@@ -1609,7 +1610,7 @@ function adm (){
 	// tabb.insertAdjacentHTML()
 	
 
-	$('#divcams').append(frame);
+	$('#tabs-1').append(frame);
 	//resizeiframe();
 
 	// var frame = document.createElement("iframe");
