@@ -1824,13 +1824,15 @@ function adm (){
 		//document.getElementById("camsf2").innerHTML="Роторный стол";
 		// $('#tabs').empty();
 		// $('#tabs').hide();
-
+		
 		$('#drawing').empty();
 		$('#drawing').show();
 		online = true;
 		refresh = true;
 		onofadm = true;
 		init();
+		colOK11();
+		read_now();
 
 	}
 
