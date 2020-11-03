@@ -1555,6 +1555,7 @@ function adm (){
 	// document.getElementById("tabsn-3").innerHTML="ПВО";
 	$('#tabs').show();
 	$('#tabs-1').empty();
+	$('#ul1').hide();
 	// var div1 = document.createElement("div");
 	// //div1.innerHTML = "<h1>Привет!</h1>";
 	// div1.setAttribute("id", "divcams");
@@ -1594,23 +1595,39 @@ function adm (){
 	// 	}
 	frame.setAttribute("width", '100%');
 	//frame.setAttribute("margin-left", "auto");
-	//frame.setAttribute("margin-right", "auto");
+	frame.setAttribute("scrolling", "yes");
+	frame.setAttribute("frameborder", "0");
 	frame.setAttribute("allowfullscreen", "true");
 	frame.setAttribute("webkitAllowFullScreen", "true");
 	frame.setAttribute("mozallowfullscreen", "true");
 	frame.style.position = 'relative';
-	frame.setAttribute("align", "middle");
+	frame.style.width = '0%';
+	frame.style.height = '0%';
+	frame.style.align = 'center';
+	//frame.setAttribute("align", "middle");
 	//frame.setAttribute("text-align", "center");
 	// frame.setAttribute("top", "0");
 	// frame.setAttribute("left", "0");
 	frame.setAttribute("auto_orient", "true");
-	// frame.setAttribute("ratio", "16:10");
+	frame.setAttribute("scaling", "fit");
 	frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=989288934770850773631823");
 	// var tabb = document.getElementById("tabs-1")
 	// tabb.insertAdjacentHTML()
 	
 
 	$('#tabs-1').append(frame);
+	//document.getElementById("camsf2").requestFullScreen();
+	let elem = document.querySelector("#camsf2");
+
+	if (!document.fullscreenElement) {
+	elem.requestFullscreen().catch(err => {
+		alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+	});
+	} else {
+	document.exitFullscreen();
+	}
+	//$('#camsf2').fullScreen();
+	
 	//resizeiframe();
 
 	// var frame = document.createElement("iframe");
