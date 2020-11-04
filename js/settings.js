@@ -754,7 +754,7 @@ function colOK3 () {
 //Кнопка лупа	
 function colPan4 () {
 	
-	refresh = false;
+	// refresh = false;
 
 	/* PArmyDialog4.show(); */
 	/* $("#lupa").css('background-color', Sheet.curcolorval);
