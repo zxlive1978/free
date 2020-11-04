@@ -758,16 +758,7 @@ function colPan4 () {
 	/* $("#lupa").css('background-color', Sheet.curcolorval);
 	$('#lupa').iziModal('open'); */
 	//bootstrap modal
-	$("#myModal3").modal();
 	
-}
-
-function colOK4 () {
-/* 	PArmyDialog4.hide(); */
-	
-
-	//$('#lupa').iziModal('close');
-
 	var frame = document.createElement("iframe");
 	frame.setAttribute("id", "camsf2");
 	// frame.setAttribute("width", "704");
@@ -803,6 +794,16 @@ function colOK4 () {
 	
 
 	$('#myModal3').append(frame);
+	$("#myModal3").modal();
+	
+}
+
+function colOK4 () {
+/* 	PArmyDialog4.hide(); */
+	
+
+	//$('#lupa').iziModal('close');
+
 	//document.getElementById("camsf2").requestFullScreen();
 	let elem = document.querySelector("#camsf2");
 
