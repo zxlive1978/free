@@ -767,6 +767,52 @@ function colOK4 () {
 	
 
 	//$('#lupa').iziModal('close');
+
+	var frame = document.createElement("iframe");
+	frame.setAttribute("id", "camsf2");
+	// frame.setAttribute("width", "704");
+	// frame.setAttribute("height", "576");
+	// var dh=document.getElementById('divcams').offsetHeight;
+	// var dw=document.getElementById('divcams').offsetWidth;
+	// if (dh<dw){
+	// 	frame.setAttribute("width",  String(Number((div1.style.height).slice(0, (div1.style.height).length-2))*1.555)+'px');
+	// 	frame.setAttribute("height", '100%');} else {
+	// 	frame.setAttribute("width", '100%');
+	// 	frame.setAttribute("height", div1.style.height);	
+	// 	}
+	frame.setAttribute("width", '100%');
+	//frame.setAttribute("margin-left", "auto");
+	frame.setAttribute("scrolling", "yes");
+	frame.setAttribute("frameborder", "0");
+	frame.setAttribute("allowfullscreen", "true");
+	frame.setAttribute("webkitAllowFullScreen", "true");
+	frame.setAttribute("mozallowfullscreen", "true");
+	frame.style.position = 'relative';
+	frame.style.width = '0%';
+	frame.style.height = '0%';
+	frame.style.align = 'center';
+	//frame.setAttribute("align", "middle");
+	//frame.setAttribute("text-align", "center");
+	// frame.setAttribute("top", "0");
+	// frame.setAttribute("left", "0");
+	frame.setAttribute("auto_orient", "true");
+	frame.setAttribute("scaling", "fit");
+	frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=989288934770850773631823");
+	// var tabb = document.getElementById("tabs-1")
+	// tabb.insertAdjacentHTML()
+	
+
+	$('#tabs-1').append(frame);
+	//document.getElementById("camsf2").requestFullScreen();
+	let elem = document.querySelector("#camsf2");
+
+	if (!document.fullscreenElement) {
+	elem.requestFullscreen().catch(err => {
+		alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+	});
+	} else {
+	document.exitFullscreen();
+	}
 }
 
 

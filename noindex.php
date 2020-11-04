@@ -438,26 +438,30 @@ window.onresize = function(event) {
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Ширина интервала</h4>
+          <h4 class="modal-title">Видеокамера</h4>
           <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
         
         <!-- Modal body -->
         <div class="modal-body">
-        <label for="hcolcolor">Ширина интервала:</label>
-
-  <select id="zooom1" class="form-control input-lg" name="zooom1" value="3">
-
-  <option value="3">3 часа</option>
-   <option value="1">1 час</option>
+<label for="hcolcolor" class="control-label">Скважина:</label><select id="zzooom1" class="form-control input-lg" name="zooom1" value="3">
+<option value="3">АГКМ9917</option>
+   <!-- <option value="1">1 час</option>
   <option value="8">8 часов</option>
-  <option value="24">1 день</option>
+  <option value="24">1 день</option> -->
+ </select>
+
+<label for="hcolcolor"class="control-label">Камера:</label><select id="zzяooom1" class="form-control input-lg" name="zooom1" value="3">
+<option value="3">Роторный стол</option>
+   <!-- <option value="1">1 час</option>
+  <option value="8">8 часов</option>
+  <option value="24">1 день</option> -->
  </select>
 
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
-			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK4()'>Применить</button>
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK4()'>Просмотр</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
         
