@@ -742,7 +742,7 @@ function colOK3 () {
 	//alert(start_time);
 	//alert(end_time);
 	//var disp_time = d110d[d110d.length-1]["Vrema"] - d110d[0]["Vrema"];
-	refresh = false; //navigation.js
+	
 	Sheet.Kzoom = Number($("#zooom1").val()) ;
 	read_random();
 	//read_random();
@@ -754,9 +754,8 @@ function colOK3 () {
 //Кнопка лупа	
 function colPan4 () {
 	
-		online = false;
-		refresh = false;
-		onofadm = false;
+	refresh = false;
+
 	/* PArmyDialog4.show(); */
 	/* $("#lupa").css('background-color', Sheet.curcolorval);
 	$('#lupa').iziModal('open'); */
@@ -816,7 +815,7 @@ var frame = document.createElement("iframe");
 	function exitHandler() {
 		if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
 			$('#camsf2').remove();
-			console.log('dsds');
+			// console.log('dsds');
 		}
 	}  
 	
