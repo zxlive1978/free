@@ -753,7 +753,10 @@ function colOK3 () {
 
 //Кнопка лупа	
 function colPan4 () {
-	refresh = false;
+	
+		online = false;
+		refresh = false;
+		onofadm = false;
 	/* PArmyDialog4.show(); */
 	/* $("#lupa").css('background-color', Sheet.curcolorval);
 	$('#lupa').iziModal('open'); */
@@ -794,6 +797,8 @@ function colPan4 () {
 	
 
 	$('#myModal3').append(frame);
+
+	
 	$("#myModal3").modal();
 	
 }
@@ -801,19 +806,19 @@ function colPan4 () {
 function colOK4 () {
 /* 	PArmyDialog4.hide(); */
 	
+//document.getElementById("camsf2").requestFullScreen();
+let elem = document.querySelector("#camsf2");
 
+if (!document.fullscreenElement) {
+elem.requestFullscreen().catch(err => {
+	alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+});
+} else {
+document.exitFullscreen();
+}
 	//$('#lupa').iziModal('close');
 
-	//document.getElementById("camsf2").requestFullScreen();
-	let elem = document.querySelector("#camsf2");
-
-	if (!document.fullscreenElement) {
-	elem.requestFullscreen().catch(err => {
-		alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-	});
-	} else {
-	document.exitFullscreen();
-	}
+	
 }
 
 
