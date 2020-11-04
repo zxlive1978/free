@@ -802,7 +802,7 @@ function colOK4 () {
 	// tabb.insertAdjacentHTML()
 	
 
-	$('#tabs-1').append(frame);
+	$('#myModal3').append(frame);
 	//document.getElementById("camsf2").requestFullScreen();
 	let elem = document.querySelector("#camsf2");
 
