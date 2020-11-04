@@ -768,6 +768,7 @@ function colPan4 () {
 	
 }
 
+
 function colOK4 () {
 /* 	PArmyDialog4.hide(); */
 var frame = document.createElement("iframe");
@@ -805,18 +806,31 @@ var frame = document.createElement("iframe");
 	
 
 	$('#tabvideo').append(frame);
-	
-//document.getElementById("camsf2").requestFullScreen();
-let elem = document.querySelector("#camsf2");
 
-if (!document.fullscreenElement) {
-	// $('#camsf2').remove();
-elem.requestFullscreen().catch(err => {
-	alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-});
-} else {
-document.exitFullscreen();
-}
+	//exit fullmode
+	document.addEventListener('fullscreenchange', exitHandler);
+	document.addEventListener('webkitfullscreenchange', exitHandler);
+	document.addEventListener('mozfullscreenchange', exitHandler);
+	document.addEventListener('MSFullscreenChange', exitHandler);
+
+	function exitHandler() {
+		if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+			$('#camsf2').remove();
+			console.log('dsds');
+		}
+	}  
+	
+	//go fullmode
+	let elem = document.querySelector("#camsf2");
+
+	if (!document.fullscreenElement) {
+		// $('#camsf2').remove();
+	elem.requestFullscreen().catch(err => {
+		alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+	});
+	} else {
+	document.exitFullscreen();
+	}
 	//$('#lupa').iziModal('close');
 
 	

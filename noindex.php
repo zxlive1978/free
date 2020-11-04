@@ -143,9 +143,9 @@ if (!$_SESSION['auth']) {
     
     </div>
 		<div class="btn-group" role="group" aria-label=""> -->
-		<button class="btnbg-light bg-light btn-lg" type="button" id="adm" name="adm" onclick='adm()'>
+		<!-- <button class="btnbg-light bg-light btn-lg" type="button" id="adm" name="adm" onclick='adm()'>
     Видео</button>	
-		</div>
+		</div> -->
   
     <!--</li>
     <button class="btn bg-light btn-lg " type="button" id="stop" name="stop" onclick='stopCam()'>
