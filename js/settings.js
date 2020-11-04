@@ -762,7 +762,15 @@ function colPan4 () {
 	$('#lupa').iziModal('open'); */
 	//bootstrap modal
 	
-	var frame = document.createElement("iframe");
+	
+	
+	$("#myModal3").modal();
+	
+}
+
+function colOK4 () {
+/* 	PArmyDialog4.hide(); */
+var frame = document.createElement("iframe");
 	frame.setAttribute("id", "camsf2");
 	// frame.setAttribute("width", "704");
 	// frame.setAttribute("height", "576");
@@ -796,20 +804,13 @@ function colPan4 () {
 	// tabb.insertAdjacentHTML()
 	
 
-	$('#myModal3').append(frame);
-
-	
-	$("#myModal3").modal();
-	
-}
-
-function colOK4 () {
-/* 	PArmyDialog4.hide(); */
+	$('#tabvideo').append(frame);
 	
 //document.getElementById("camsf2").requestFullScreen();
 let elem = document.querySelector("#camsf2");
 
 if (!document.fullscreenElement) {
+	// $('#camsf2').remove();
 elem.requestFullscreen().catch(err => {
 	alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
 });
