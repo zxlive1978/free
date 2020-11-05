@@ -129,7 +129,7 @@ if (!$_SESSION['auth']) {
 
     <li>
 	  <div class="dropdown">
-		<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		По времени
 		</button>
 		<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -202,7 +202,7 @@ if (!$_SESSION['auth']) {
   </div>
   
   <div class="btn-group" aria-hidden="true" role="group" aria-label="Basic example" onClick="exit('exit','exit','exit');"> 
-			<button type="button" class="btnbg-light bg-light btn-lg">ВЫХОД</button>
+			<button type="button" class="btnbg-light btn-default">Выход</button>
 			</div>
 </nav>
 
