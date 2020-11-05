@@ -127,7 +127,21 @@ if (!$_SESSION['auth']) {
 		</div>
 	  </li> -->
 
-    
+    <li>
+	  <div class="dropdown">
+		<button class="btn bg-light btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		По времени
+		</button>
+		<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+		<button class="dropdown-item btn-lg" type="button" onclick='adm()'>Просмотр/Редактирование экрана</button>
+		<button class="dropdown-item btn-lg" type="button" >Выбор скважины</button> 
+		<button class="dropdown-item btn-lg" type="button">Выбор даты</button>
+    <button class="dropdown-item btn-lg" type="button">Видеокамера</button>
+    <button class="dropdown-item btn-lg" type="button">Загрузить/Сохранить(Создать) форму</button>
+		</div>
+		</div>
+	  </li>
+
 	  
 	   
 		<!-- <li>
