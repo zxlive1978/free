@@ -26,7 +26,7 @@
 .login-block h1,.login-block h6,.login-block h4
 {
   font-family:Open Sans,sans-serif;
-  color:#96a2b2;
+  color:#000000;
   letter-spacing:1px
 }
 .login-block h1
@@ -66,7 +66,7 @@
 .login-block input:-webkit-autofill
 {
   -webkit-box-shadow:0 0 0 1000px #fff inset;
-  -webkit-text-fill-color:#818a91;
+  -webkit-text-fill-color:#000000;
   -webkit-transition:none;
   -o-transition:none;
   transition:none;
@@ -105,7 +105,7 @@
 {
   padding:15px 5px 0;
   font-size:13px;
-  color:#96a2b2
+  color:#000000
 }
 .login-links:after
 {
@@ -151,13 +151,13 @@
 {
   margin-right:15px;
   text-transform:uppercase;
-  color:#96a2b2;
+  color:#000000;
   font-weight:700;
   font-size:13px
 }
 .social-icons a{
   background-color:#eceeef;
-  color:#818a91;
+  color:#000000;
   font-size:16px;
   display:inline-block;
   line-height:44px;
