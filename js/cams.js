@@ -1,11 +1,11 @@
 //забор статистики по камерам
-function getstatcams(whatdo, table, p000){
+function getstatcams(){
         refresh = false;
         online = false;
         $.ajax({
             type: "POST",
             url: 'js/cams.php',
-            data: {whatdo:whatdo, table: table, p000: p000},
+            data: {},
             cache: false,
             async: false,
             success: function(data){
@@ -16,4 +16,22 @@ function getstatcams(whatdo, table, p000){
         });
     
 };
-  
+ 
+//забор статистики по камерам
+function installcams(whatdo, table, p000){
+    refresh = false;
+    online = false;
+    $.ajax({
+        type: "POST",
+        url: 'js/cams.php',
+        data: {whatdo:whatdo, table: table, p000: p000},
+        cache: false,
+        async: false,
+        success: function(data){
+            alert(data);
+
+
+        }
+    });
+
+};
