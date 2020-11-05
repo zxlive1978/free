@@ -9,9 +9,13 @@ function getstatcams(){
             cache: false,
             async: false,
             success: function(data){
+                livestatcams =null;
                 livestatcams = JSON.parse(data);
                 for (var keey in livestatcams) {
-                   console.log(livestatcams.streamId);
+                   console.log(livestatcams[keey].streamId);
+                   console.log(livestatcams[keey].status);
+                   console.log(livestatcams[keey].name);
+                   console.log(livestatcams[keey].hlsViewerCount);
                 }
             }
         });
