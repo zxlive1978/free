@@ -2086,7 +2086,7 @@ function init(){
 				})
 			}
 			
-			//Если нажата лупа	
+			//Если нажата камера	
 			if (kn==3){
 				group1.click(function() {
 					colPan4();
