@@ -196,7 +196,7 @@ if (!$_SESSION['auth']) {
   
   <div class="media-left" title="">
   <a class="navbar-brand" href="#">
-  <label for="hcolcolor"  class="label label-info"  id="ava" name="ava"></label>
+  <label for="hcolcolor"  class="label label-primary"  id="ava" name="ava"></label>
     <img src="css/img_avatar1.png" class="rounded-circle" style="width:50px">
    
   </a>
