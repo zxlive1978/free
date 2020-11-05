@@ -9,7 +9,9 @@ function getstatcams(){
             cache: false,
             async: false,
             success: function(data){
-                alert(data);
+                livestatcams = JSON.parse(data);
+                streamId
+                alert(livestatcams.);
 
 
             }

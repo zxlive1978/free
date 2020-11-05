@@ -30,6 +30,7 @@ var Shablontxtwell = {
 
 
 //Список камер
+var livestatcams ={};
 var cams = {
 
 	par0 :  {wellN: 's110', txt: 'АГКМ-99',
