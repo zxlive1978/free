@@ -10,10 +10,9 @@ function getstatcams(){
             async: false,
             success: function(data){
                 livestatcams = JSON.parse(data);
-                streamId
-                alert(livestatcams.);
-
-
+                for (var keey in livestatcams) {
+                   console.log(livestatcams.streamId);
+                }
             }
         });
     
