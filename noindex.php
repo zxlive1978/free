@@ -129,7 +129,7 @@ if (!$_SESSION['auth']) {
 
     <li>
 	  <div class="dropdown">
-		<button class="btn bg-light btn-lg dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		<button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		По времени
 		</button>
 		<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
