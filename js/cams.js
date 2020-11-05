@@ -12,10 +12,10 @@ function getstatcams(){
                 livestatcams =null;
                 livestatcams = JSON.parse(data);
                 for (var keey in livestatcams) {
-                   console.log(livestatcams[keey].streamId);
-                   console.log(livestatcams[keey].status);
+                   console.log(livestatcams[keey].streamId);//id
+                   console.log(livestatcams[keey].status);//broadcasting
                    console.log(livestatcams[keey].name);
-                   console.log(livestatcams[keey].hlsViewerCount);
+                   console.log(livestatcams[keey].hlsViewerCount);//0
                 }
             }
         });
