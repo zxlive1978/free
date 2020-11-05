@@ -67,6 +67,7 @@ if (!$_SESSION['auth']) {
 <script type="text/javascript" src="js/loadsave.js"></script>
 <script type="text/javascript" src="js/writeskvs.js"></script>
 <script type="text/javascript" src="js/exit.js"></script>
+<script type="text/javascript" src="js/cams.js"></script>
 
 <script type="text/javascript" src="js/settings.js"></script>
 
