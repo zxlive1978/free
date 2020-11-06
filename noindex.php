@@ -482,7 +482,7 @@ window.onresize = function(event) {
  </select>
 
  <div class="md-form">
- <label for="form7">Прогресс подключения</label>
+ <label for="form7">Прогресс подключения:</label>
   <textarea id="form7" class="md-textarea form-control" rows="4"></textarea>
   
   </div>
