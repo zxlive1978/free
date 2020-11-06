@@ -2,6 +2,8 @@
 function getstatcams(){
         refresh = false;
         online = false;
+        $('#form7').empty();
+        $('#form7').append('Проверка существующих потоков....');
         $.ajax({
             type: "POST",
             url: 'js/cams.php',
@@ -17,6 +19,7 @@ function getstatcams(){
                    console.log(livestatcams[keey].name);
                    console.log(livestatcams[keey].hlsViewerCount);//0
                 }
+                $('#form7').append('ОК');
             }
         });
     

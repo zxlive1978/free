@@ -770,6 +770,8 @@ function colPan4 () {
 
 
 function colOK4 () {
+	//Проверка подключения
+	getstatcams();
 /* 	PArmyDialog4.hide(); */
 var frame = document.createElement("iframe");
 	frame.setAttribute("id", "camsf2");

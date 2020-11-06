@@ -144,7 +144,7 @@ if (!$_SESSION['auth']) {
 		</div>
 	  </li>
 
-	  <button class="btn btn-outline-primary " type="button" id="stop" name="stop" onclick="getstatcams();">
+	  <!-- <button class="btn btn-outline-primary " type="button" id="stop" name="stop" onclick="getstatcams();"> -->
 	   
 		<!-- <li>
     <div id="dialogvideo" name="dialogvideo" title="Камера 2">
