@@ -762,15 +762,15 @@ function colPan4 () {
 	$('#lupa').iziModal('open'); */
 	//bootstrap modal
 	
-	
-	
+	//статус подключения
+	$('#form7').empty();
 	$("#myModal3").modal();
 	
 }
 
 
 function colOK4 () {
-	//Проверка подключения
+	//Проверка Проверка существующих потоков
 	getstatcams();
 /* 	PArmyDialog4.hide(); */
 var frame = document.createElement("iframe");
