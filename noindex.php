@@ -481,10 +481,15 @@ window.onresize = function(event) {
   <option value="24">1 день</option> -->
  </select>
 
+ <div class="md-form">
+  <textarea id="form7" class="md-textarea form-control" rows="4"></textarea>
+  <label for="form7">Состояние подключения</label>
+  </div>
+
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
-			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK4()'>Просмотр</button>
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK4()'>Подключить</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
         
