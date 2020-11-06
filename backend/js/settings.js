@@ -1623,7 +1623,7 @@ function adm (){
 
 		var colIndex = $(this).parent().children().index($(this));
 		var rowIndex = $(this).parent().parent().children().index($(this).parent());
-		alert('Row: ' + rowIndex + ', Column: ' + colIndex);
+		// alert('Row: ' + rowIndex + ', Column: ' + colIndex);
 
 
 		colPan17();

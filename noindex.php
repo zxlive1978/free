@@ -134,11 +134,12 @@ if (!$_SESSION['auth']) {
 		По времени
 		</button>
 		<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-		<button class="dropdown-item " type="button" onclick='colOK11()'>Просмотр/Редактирование экрана</button>
+		<button class="dropdown-item " type="button " onclick='colOK11()'>Просмотр/Редактирование экрана</button>
 		<button class="dropdown-item " type="button" onclick='colPan10()'>Выбор скважины</button> 
 		<button class="dropdown-item " type="button" onclick='colPan3()'>Выбор даты</button>
-    <button class="dropdown-item " type="button" onclick='colPan4()'>Видеокамера</button>
+    <button class="dropdown-item " type="button" onclick='colPan4()'>Просмотр видеокамер</button>
     <button class="dropdown-item " type="button" onclick='colPan9()'>Загрузить/Сохранить(Создать) форму</button>
+    <button class="dropdown-item " type="button" onclick='read_now()'>Старт приема текущих значений</button>
 		</div>
 		</div>
 	  </li>
