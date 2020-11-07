@@ -63,8 +63,10 @@ function getstatcams(whatdo, namecams){
                         } else {
                         document.exitFullscreen();
                         }
+                        return 0;
                     } else {
                         $('#form7').append('Не найден');
+                        return 0;
                     }
                 //    console.log(livestatcams[keey].streamId);//id
                 //    console.log(livestatcams[keey].status);//broadcasting
