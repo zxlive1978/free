@@ -461,17 +461,17 @@ window.onresize = function(event) {
         <!-- Modal body -->
         <div class="modal-body">
 <label for="hcolcolor" class="control-label">Скважина:</label><select id="zzooom1" class="form-control input-lg" name="zzooom1" value="3">
-<option value="3">АГКМ9917</option>
+<option value="3"></option>
    <!-- <option value="1">1 час</option>
   <option value="8">8 часов</option>
   <option value="24">1 день</option> -->
  </select>
 
 <label for="hcolcolor"class="control-label">Камера:</label><select id="zzzooom1" class="form-control input-lg" name="zzzooom1" value="3">
-<option value="3">Роторный стол</option>
-   <!-- <option value="1">1 час</option>
-  <option value="8">8 часов</option>
-  <option value="24">1 день</option> -->
+<option value="18">Стол ротора</option>
+   <option value="17">Приемный мост</option>
+  <option value="19">Шахта, ПВО</option>
+  <option value="20">Емкости бурового раствора</option>
  </select>
 
  <label for="hcolcolor"class="control-label">Тип потока:</label><select id="zzzzooom1" class="form-control input-lg" name="zzzzooom1" value="3">

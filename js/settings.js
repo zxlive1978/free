@@ -711,7 +711,15 @@ function colPan4 () {
 	/* $("#lupa").css('background-color', Sheet.curcolorval);
 	$('#lupa').iziModal('open'); */
 	//bootstrap modal
-	
+	$('#zzooom1').empty();
+	//добавление в список
+	for (var keey in cams) {
+		$('#zzooom1').append($('<option>',
+			{
+				value: cams[keey].txt,
+				text : cams[keey].txt
+				}));
+	}
 	//статус подключения
 	$('#form7').empty();
 	$("#myModal3").modal();
