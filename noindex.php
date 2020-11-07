@@ -18,6 +18,7 @@ if (!$_SESSION['auth']) {
 <meta charset="UTF-8">
 <script>const _uz=<?php echo $_SESSION['skvjson']; ?>;</script>
 <script>const _ut=<?php echo $_SESSION['time']; ?>;</script>
+<script>const _uc=<?php echo $_SESSION['skvjsoncams']; ?>;</script>
 <link rel="stylesheet" type="text/css" href="css/jschart5.css">
 <link rel="stylesheet" href="css/iziModal.min.css">
 
