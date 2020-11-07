@@ -65,15 +65,15 @@ function getstatcams(whatdo, namecams){
                         }
                         return 0;
                     } else {
-                        $('#form7').append('Не найден');
-                        console.log('Не найден');
-                        return 0;
+                      
+                        
                     }
-                //    console.log(livestatcams[keey].streamId);//id
-                //    console.log(livestatcams[keey].status);//broadcasting
-                //    console.log(livestatcams[keey].name);
-                //    console.log(livestatcams[keey].hlsViewerCount);//0
+                   console.log(livestatcams[keey].streamId);//id
+                   console.log(livestatcams[keey].status);//broadcasting
+                   console.log(livestatcams[keey].name);
+                   console.log(livestatcams[keey].hlsViewerCount);//0
                 }
+                $('#form7').append('Не найден');
                 // ..$('#form7').append('ОК');
             }
         });
