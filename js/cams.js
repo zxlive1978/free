@@ -82,8 +82,23 @@ function getstatcams(whatdo, namecams){
                     data: {whatdo:'create', namecams: namecams},
                     cache: false,
                     async: false,
-                    success: function(data){
-                        alert(data);
+                    success: function(response){
+                        
+                        
+                        var len = response.length;
+                        for(var i=0; i<len; i++){
+                            var p000 = response[i].p000;
+                            var skvjson = response[i].skvjson;
+                            //skvjson = JSON.parse(skvjson);
+                            console.log(response[i]);
+                            // for (var j=0; j<_uz.length; j++){
+                            //     let _uzdec =decodeURIComponent(escape(window.atob(_uz[5])))
+                            //     //console.log(_uzdec);
+                            //     wells[String(p000)] =  skvjson;
+                            // }
+
+                        }
+                        // alert(data);
 
                     }
 

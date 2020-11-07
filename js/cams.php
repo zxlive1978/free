@@ -31,7 +31,7 @@
         $result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc)); //ответ базы запишем в переменную $result. 
         $cams = mysqli_fetch_assoc($result); //преобразуем ответ из БД в нормальный массив PHP
         $obj = json_decode($cams['skvjson'], true);
-	    echo $obj;
+	    echo $cams;
 	    // $userrights = array ();
 	    // $userrights[]=base64_encode($obj['name']);
 	    // $userrights[]=base64_encode($obj['dolgnost']);
