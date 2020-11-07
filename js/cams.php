@@ -21,6 +21,26 @@
     }
 
     if ($whatdo == 'create'){
+        $dbc= mysqli_connect('127.0.0.1', 'goodman', 'NRywfHcXEmzenn7S') or die(mysqli_sqlstate($dbc));
+        $code_page="SET NAMES 'utf8';";
+        mysqli_query($dbc,$code_page) or die(mysqli_sqlstate($dbc));
+        $name_base="pozitron";
+        $table="cams";
+        $query = "SELECT * FROM ".$name_base.".".$table.";";
+
+        $result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc)); //ответ базы запишем в переменную $result. 
+        $cams = mysqli_fetch_assoc($result); //преобразуем ответ из БД в нормальный массив PHP
+        $obj = json_decode($cams['skvjson'], true);
+	    print_r($obj['name']);
+	    // $userrights = array ();
+	    // $userrights[]=base64_encode($obj['name']);
+	    // $userrights[]=base64_encode($obj['dolgnost']);
+	    // $userrights[]=base64_encode($obj['tel']);
+	    // $userrights[]=base64_encode($obj['email']);
+        
+        
+        
+        mysqli_close($dbc);
 
     }
     	

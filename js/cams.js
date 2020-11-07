@@ -74,6 +74,8 @@ function getstatcams(whatdo, namecams){
                 //    console.log(livestatcams[keey].hlsViewerCount);//0
                 }
                 $('#form7').append('Не найден');
+                //создаем поток
+                $('#form7').append("\nСоздаем поток...");
                 // ..$('#form7').append('ОК');
             }
         });
