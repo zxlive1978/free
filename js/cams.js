@@ -76,6 +76,19 @@ function getstatcams(whatdo, namecams){
                 $('#form7').append('Не найден');
                 //создаем поток
                 $('#form7').append("\nСоздаем поток...");
+                $.ajax({
+                    type: "POST",
+                    url: 'js/cams.php',
+                    data: {whatdo:'create', namecams: namecams},
+                    cache: false,
+                    async: false,
+                    success: function(data){
+                        alert(data);
+
+                    }
+
+                    });
+
                 // ..$('#form7').append('ОК');
             }
         });
