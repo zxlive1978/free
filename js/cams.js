@@ -1,5 +1,5 @@
 //забор статистики по камерам
-function getstatcams(namecams){
+function getstatcams(whatdo, namecams){
         refresh = false;
         online = false;
         $('#form7').empty();
@@ -7,7 +7,7 @@ function getstatcams(namecams){
         $.ajax({
             type: "POST",
             url: 'js/cams.php',
-            data: {},
+            data: {whatdo:whatdo, namecams: namecams},
             cache: false,
             async: false,
             success: function(data){
@@ -16,6 +16,7 @@ function getstatcams(namecams){
                 for (var keey in livestatcams) {
                     if (livestatcams[keey].name==namecams && livestatcams[keey].status=='broadcasting'){
                         $('#form7').append('Найден');
+                        $('#form7').append('<br>Создание iframe...');
                         var frame = document.createElement("iframe");
                         frame.setAttribute("id", "camsf2");
                         frame.setAttribute("width", '100%');
@@ -33,7 +34,7 @@ function getstatcams(namecams){
                         frame.setAttribute("auto_orient", "true");
                         frame.setAttribute("scaling", "fit");
                         frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name="+livestatcams[keey].streamId);
-                    
+                        $('#form7').append('ОК');
                     
                         $('#tabvideo').append(frame);
                     
@@ -45,6 +46,7 @@ function getstatcams(namecams){
                     
                         function exitHandler() {
                             if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+                                
                                 $('#camsf2').remove();
                                 // console.log('dsds');
                             }

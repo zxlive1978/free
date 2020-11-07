@@ -731,7 +731,7 @@ function colOK4 () {
 	//Проверка Проверка существующих потоков
 	namecams=$("#zzooom1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text() +'_'+$("#zzzzooom1 option:selected").text();
 	console.log(namecams);
-	getstatcams(namecams);
+	getstatcams('check',namecams);
 /* 	PArmyDialog4.hide(); */
 
 	//$('#lupa').iziModal('close');
