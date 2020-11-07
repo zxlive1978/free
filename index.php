@@ -31,7 +31,14 @@
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc)); //ответ базы запишем в переменную $result. 
     $user = mysqli_fetch_assoc($result); //преобразуем ответ из БД в нормальный массив PHP
     //echo $result;
+	//echo $query;
+	
+	$table="cams";
+    $query = "SELECT * FROM ".$name_base.".".$table."  WHERE login='".$login."' AND password='".$pass."';";
     //echo $query;
+    //echo $pass;
+		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc)); //ответ базы запишем в переменную $result. 
+    $cams = mysqli_fetch_assoc($result);
     
 
 		//Если база данных вернула не пустой ответ - значит пара логин-пароль правильная
@@ -50,6 +57,7 @@
 			//$_SESSION['id'] = $user['id']; 
 	  $_SESSION['login'] = $user['login'];
 	  //$userjson=json_encode($user['skvjson'], JSON_UNESCAPED_UNICODE);
+	  //user_right
 	  $obj = json_decode($user['skvjson'], true);
 	  //print_r($obj['name']);
 	  $userrights = array ();
@@ -68,6 +76,16 @@
 	  $userrights[]=base64_encode($obj['chat']);
 	  //print_r(json_encode($userrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT ));
 	  $_SESSION['skvjson'] = json_encode($userrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT );
+		
+	  //cams
+	  $obj = json_decode($cams['skvjson'], true);
+	  //print_r($obj['name']);
+	  $camsrights = array ();
+	  $camsrights[]=base64_encode($obj['name']);
+	  $camsrights[]=base64_encode($obj['txt']);
+	  
+	  //print_r(json_encode($userrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT ));
+	  $_SESSION['skvjsoncams'] = json_encode($camsrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT );
 
 	  //delete
 	  $query="DELETE  FROM  ".$name_base.".active WHERE username='".$user['login']."';";
