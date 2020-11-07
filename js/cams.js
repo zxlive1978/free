@@ -12,7 +12,7 @@ function getstatcams(whatdo, namecams){
             async: false,
             success: function(data){
                 livestatcams =null;
-                console.log(data);
+                //console.log(data);
                 livestatcams = JSON.parse(data);
                 for (var keey in livestatcams) {
                     if (livestatcams[keey].name==namecams && livestatcams[keey].status=='broadcasting'){

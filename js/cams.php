@@ -10,7 +10,7 @@
     // echo $output;
     $namecams=$_POST['namecams'];
 	$whatdo=$_POST['whatdo'];
-    if ($whatdo == 'ckeck'){
+    if ($whatdo == 'check'){
         $ch = curl_init('https://hydrofalll.ddns.net:5443/LiveApp/rest/broadcast/getList/0/50');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -21,7 +21,7 @@
     }
 
     if ($whatdo == 'create'){
-        
+
     }
     	
 ?>
