@@ -83,6 +83,7 @@
 	  $camsrights = array ();
 	  $camsrights[]=base64_encode($obj['name']);
 	  $camsrights[]=base64_encode($obj['txt']);
+	  $camsrights[]=base64_encode($obj['rtsp']);
 	  
 	  //print_r(json_encode($userrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT ));
 	  $_SESSION['skvjsoncams'] = json_encode($camsrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT );
