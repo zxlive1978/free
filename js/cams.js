@@ -66,6 +66,7 @@ function getstatcams(whatdo, namecams){
                         return 0;
                     } else {
                         $('#form7').append('Не найден');
+                        console.log('Не найден');
                         return 0;
                     }
                 //    console.log(livestatcams[keey].streamId);//id
