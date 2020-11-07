@@ -83,14 +83,30 @@ function getstatcams(whatdo, namecams){
                     cache: false,
                     async: false,
                     success: function(response){
-                        alert(JSON.parse(response)[0]['txt']);
-                        
-                        var len = response.length;
+                        let s =JSON.parse(response)
+                        //alert(s[0]['skvjson']);
+                        var len = s.length;
                         for(var i=0; i<len; i++){
-                            var p000 = response[i].p000;
-                            var skvjson = response[i].skvjson;
+                            
                             //skvjson = JSON.parse(skvjson);
-                            //alert(response[i]);
+                            let n = JSON.parse(s[i]['skvjson']);   
+                            console.log(n['txt']+'_'+n['name']);
+                            if (namecams==(n['txt']+'_'+n['name'])){
+                                console.log('gjuyfkb');
+                                $.ajax({
+                                    type: "POST",
+                                    url: 'js/cams.php',
+                                    data: {whatdo:'create2', namecams: namecams},
+                                    cache: false,
+                                    async: false,
+                                    success: function(response){
+
+
+                                    }
+                                });
+
+
+                            }
                             // for (var j=0; j<_uz.length; j++){
                             //     let _uzdec =decodeURIComponent(escape(window.atob(_uz[5])))
                             //     //console.log(_uzdec);

@@ -729,7 +729,7 @@ function colPan4 () {
 var namecams='';
 function colOK4 () {
 	//Проверка Проверка существующих потоков
-	namecams=$("#zzooom1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text() +'_'+$("#zzzzooom1 option:selected").text();
+	namecams=$("#zzooom1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
 	// console.log(namecams);
 	getstatcams('check',namecams);
 /* 	PArmyDialog4.hide(); */
