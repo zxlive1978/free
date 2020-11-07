@@ -475,10 +475,9 @@ window.onresize = function(event) {
  </select>
 
  <label for="hcolcolor"class="control-label">Тип потока:</label><select id="zzzzooom1" class="form-control input-lg" name="zzzzooom1" value="3">
-<option value="3">Основной</option>
-   <!-- <option value="1">1 час</option>
-  <option value="8">8 часов</option>
-  <option value="24">1 день</option> -->
+<option value="01">Основной</option>
+   <option value="1">Дополнительный</option>
+  
  </select>
 
  <div class="md-form">
