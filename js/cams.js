@@ -3,7 +3,7 @@ function getstatcams(whatdo, namecams){
         refresh = false;
         online = false;
         $('#form7').empty();
-        $('#form7').append('Проверка существующих потоков....');
+        $('#form7').append('Поиск в существующих потоках....');
         $.ajax({
             type: "POST",
             url: 'js/cams.php',
@@ -68,10 +68,10 @@ function getstatcams(whatdo, namecams){
                       
                         
                     }
-                   console.log(livestatcams[keey].streamId);//id
-                   console.log(livestatcams[keey].status);//broadcasting
-                   console.log(livestatcams[keey].name);
-                   console.log(livestatcams[keey].hlsViewerCount);//0
+                //    console.log(livestatcams[keey].streamId);//id
+                //    console.log(livestatcams[keey].status);//broadcasting
+                //    console.log(livestatcams[keey].name);
+                //    console.log(livestatcams[keey].hlsViewerCount);//0
                 }
                 $('#form7').append('Не найден');
                 // ..$('#form7').append('ОК');
