@@ -90,13 +90,13 @@ function getstatcams(whatdo, namecams){
                             
                             //skvjson = JSON.parse(skvjson);
                             let n = JSON.parse(s[i]['skvjson']);   
-                            console.log(n['txt']+'_'+n['name']);
+                            //console.log(n['txt']+'_'+n['name']);
                             if (namecams==(n['txt']+'_'+n['name'])){
-                                console.log('gjuyfkb');
+                                //console.log('gjuyfkb');
                                 $.ajax({
                                     type: "POST",
                                     url: 'js/cams.php',
-                                    data: {whatdo:'create2', namecams: namecams},
+                                    data: {whatdo:'create2', namecams: namecams, rtsp:rtsp},
                                     cache: false,
                                     async: false,
                                     success: function(response){
