@@ -72,23 +72,23 @@
 	  //print_r(json_encode($userrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT ));
 	  $_SESSION['skvjson'] = json_encode($userrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT );
 		
-	  //cams
-	  $table="cams";
-    $query = "SELECT * FROM ".$name_base.".".$table.";";//"  WHERE login='".$login."' AND password='".$pass."';";
-    //echo $query;
-    //echo $pass;
-		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc)); //ответ базы запишем в переменную $result. 
-	$cams = mysqli_fetch_assoc($result);
+	//   //cams
+	//   $table="cams";
+    // $query = "SELECT * FROM ".$name_base.".".$table.";";//"  WHERE login='".$login."' AND password='".$pass."';";
+    // //echo $query;
+    // //echo $pass;
+	// 	$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc)); //ответ базы запишем в переменную $result. 
+	// $cams = mysqli_fetch_assoc($result);
 	
-	  $obj1 = json_decode($cams['skvjson'], true);
-	  //print_r($obj['name']);
-	  $camsrights = array ();
-	  $camsrights[]=base64_encode($obj1['name']);
-	  $camsrights[]=base64_encode($obj1['txt']);
-	  $camsrights[]=base64_encode($obj1['rtsp']);
+	//   $obj1 = json_decode($cams['skvjson'], true);
+	//   //print_r($obj['name']);
+	//   $camsrights = array ();
+	//   $camsrights[]=base64_encode($obj1['name']);
+	//   $camsrights[]=base64_encode($obj1['txt']);
+	//   $camsrights[]=base64_encode($obj1['rtsp']);
 	  
-	  //print_r(json_encode($userrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT ));
-	  $_SESSION['skvjsoncams'] = json_encode($camsrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT );
+	//   //print_r(json_encode($userrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT ));
+	//   $_SESSION['skvjsoncams'] = json_encode($camsrights, JSON_UNESCAPED_UNICODE,  JSON_FORCE_OBJECT );
 
 	  //delete
 	  $query="DELETE  FROM  ".$name_base.".active WHERE username='".$user['login']."';";
