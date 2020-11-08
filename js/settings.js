@@ -706,7 +706,7 @@ function colOK3 () {
 function colPan4 () {
 	
 	// refresh = false;
-
+	$('#form7').empty();
 	/* PArmyDialog4.show(); */
 	/* $("#lupa").css('background-color', Sheet.curcolorval);
 	$('#lupa').iziModal('open'); */
