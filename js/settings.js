@@ -716,9 +716,10 @@ function colPan4 () {
 	for (var keey in cams) {
 		$('#zzooom1').append($('<option>',
 			{
-				value: cams[keey].txt,
+				value: cams[keey].wellN,
 				text : cams[keey].txt
 				}));
+				//console.log(cams[keey]);
 	}
 	//статус подключения
 	$('#form7').empty();
