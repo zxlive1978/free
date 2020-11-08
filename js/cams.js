@@ -83,7 +83,7 @@ function getstatcams(whatdo, namecams){
                             }
                         });
 
-                    }
+                    }}
                     // }else {
                     //     $('#form7').append('\Не готов...');
                         
