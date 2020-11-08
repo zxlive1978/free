@@ -77,6 +77,7 @@ function getstatcams(whatdo, namecams){
                             cache: false,
                             async: false,
                             success: function(data){
+                                $('#form7').append("\nУдален поток..."+livestatcams[keey].name);
                             }
                         });
 
