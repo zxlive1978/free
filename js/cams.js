@@ -113,10 +113,10 @@ function getstatcams(whatdo, namecams){
                                         streamId=s['message'];
                                         //$('#form7').append('\nСоздание iframe...');
                                         for(var j=0; j<10; j++){
-                                        setTimeout(() => {  getstatcams('check',namecams);
+                                        setTimeout(() => {  $( "#govideo" ).click();
                                             
                                             
-                                                }, 3000);
+                                                }, j*3000);
 
                                         }
                                     }
