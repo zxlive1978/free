@@ -734,7 +734,7 @@ function colOK4 () {
 	namecams=$("#zzooom1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
 	// console.log(namecams);
 	getstatcams('check',namecams);
-	frame = document.createElement("iframe");
+	var frame = document.createElement("iframe");
 	
 /* 	PArmyDialog4.hide(); */
 

@@ -103,10 +103,10 @@ function getstatcams(whatdo, namecams){
                                     success: function(response){
                                         
                                         let s =JSON.parse(response);
-                                        // console.log(s['message']);
-                                        // streamId=s['message'];
+                                        console.log(s['message']);
+                                        streamId=s['message'];
                                         //$('#form7').append('\nСоздание iframe...');
-                                        setTimeout(() => {  getstatcams('check',namecams); }, 5000);
+                                        setTimeout(() => {  getstatcams('check',namecams); }, 2000);
                                     }
                                 });
 
