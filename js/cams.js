@@ -25,6 +25,7 @@ function getstatcams(whatdo, namecams){
                         $('#form7').append('ОК');
                     
                         $('#tabvideo').append(frame);
+                        document.getElementById("#camsf2").requestFullScreen();
                     
                        
                         return 0;

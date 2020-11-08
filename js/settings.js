@@ -728,7 +728,7 @@ function colPan4 () {
 
 var namecams='';
 var streamId='';
-// var frame;
+var frame;
 // var elem1; = document.querySelector("#camsf2");
 function colOK4 () {
 	$('#form7').empty();
@@ -736,7 +736,7 @@ function colOK4 () {
 	namecams=$("#zzooom1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
 	// console.log(namecams);
 	getstatcams('check',namecams);
-	var frame = document.createElement("iframe");
+	frame = document.createElement("iframe");
 	frame.setAttribute("id", "camsf2");
 	frame.setAttribute("width", '100%');
 	frame.setAttribute("height", '100%');
@@ -755,30 +755,31 @@ function colOK4 () {
 	frame.setAttribute("scaling", "fit");
 	
 	
-	elem1 = document.querySelector("#camsf2");
-	if (!document.fullscreenElement) {
-		//$('#camsf2').remove();
-	elem1.requestFullscreen().catch(err => {
-		alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-	});
-	} else {
-	document.exitFullscreen();
-	}
+	
 	 //exit fullmode
-	 document.addEventListener('fullscreenchange', exitHandler);
-	 document.addEventListener('webkitfullscreenchange', exitHandler);
-	 document.addEventListener('mozfullscreenchange', exitHandler);
-	 document.addEventListener('MSFullscreenChange', exitHandler);
+	//  document.addEventListener('fullscreenchange', exitHandler);
+	//  document.addEventListener('webkitfullscreenchange', exitHandler);
+	//  document.addEventListener('mozfullscreenchange', exitHandler);
+	//  document.addEventListener('MSFullscreenChange', exitHandler);
  
-	//go fullmode
-	function exitHandler() {
-		if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+	// //go fullmode
+	// function exitHandler() {
+	// 	if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
 			
-			$('#camsf2').remove();
-			// console.log('dsds');
-		}
-	}  
+	// 		$('#camsf2').remove();
+	// 		// console.log('dsds');
+	// 	}
+	// }  
 
+	// elem1 = document.querySelector("#camsf2");
+	// if (!document.fullscreenElement) {
+	// 	//$('#camsf2').remove();
+	// elem1.requestFullscreen().catch(err => {
+	// 	alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+	// });
+	// } else {
+	// document.exitFullscreen();
+	// }
 	
 	
 /* 	PArmyDialog4.hide(); */
