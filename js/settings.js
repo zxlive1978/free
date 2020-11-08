@@ -735,7 +735,7 @@ function colOK4 () {
 	namecams=$("#zzooom1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
 	// console.log(namecams);
 	getstatcams('check',namecams);
-	var frame = document.createElement("iframe");
+	frame = document.createElement("iframe");
 	frame.setAttribute("id", "camsf2");
 	frame.setAttribute("width", '100%');
 
