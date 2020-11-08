@@ -728,23 +728,25 @@ function colPan4 () {
 
 var namecams='';
 var streamId='';
-var frame;
+// var frame;
+// var elem1; = document.querySelector("#camsf2");
 function colOK4 () {
 	$('#form7').empty();
 	//Проверка Проверка существующих потоков
 	namecams=$("#zzooom1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
 	// console.log(namecams);
 	getstatcams('check',namecams);
-	frame = document.createElement("iframe");
+	var frame = document.createElement("iframe");
 	frame.setAttribute("id", "camsf2");
 	frame.setAttribute("width", '100%');
+	frame.setAttribute("height", '100%');
 
 	frame.setAttribute("scrolling", "yes");
 	frame.setAttribute("frameborder", "0");
 	frame.setAttribute("allowfullscreen", "true");
 	frame.setAttribute("webkitAllowFullScreen", "true");
 	frame.setAttribute("mozallowfullscreen", "true");
-	frame.style.position = 'relative';
+	frame.style.position = 'absolute';
 	frame.style.width = '0%';
 	frame.style.height = '0%';
 	frame.style.align = 'center';
@@ -752,6 +754,23 @@ function colOK4 () {
 	frame.setAttribute("auto_orient", "true");
 	frame.setAttribute("scaling", "fit");
 	
+	
+	elem1 = document.querySelector("#camsf2");
+	if (!document.fullscreenElement) {
+		//$('#camsf2').remove();
+	elem1.requestFullscreen().catch(err => {
+		alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+	});
+	} else {
+	document.exitFullscreen();
+	}
+	 //exit fullmode
+	 document.addEventListener('fullscreenchange', exitHandler);
+	 document.addEventListener('webkitfullscreenchange', exitHandler);
+	 document.addEventListener('mozfullscreenchange', exitHandler);
+	 document.addEventListener('MSFullscreenChange', exitHandler);
+ 
+	//go fullmode
 	function exitHandler() {
 		if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
 			
@@ -760,23 +779,7 @@ function colOK4 () {
 		}
 	}  
 
-	 //exit fullmode
-	 document.addEventListener('fullscreenchange', exitHandler);
-	 document.addEventListener('webkitfullscreenchange', exitHandler);
-	 document.addEventListener('mozfullscreenchange', exitHandler);
-	 document.addEventListener('MSFullscreenChange', exitHandler);
- 
-	//go fullmode
-	var elem = document.querySelector("#camsf2");
-
-	if (!document.fullscreenElement) {
-		//$('#camsf2').remove();
-	elem.requestFullscreen().catch(err => {
-		alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-	});
-	} else {
-	document.exitFullscreen();
-	}
+	
 	
 /* 	PArmyDialog4.hide(); */
 
