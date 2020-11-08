@@ -104,8 +104,9 @@ function getstatcams(whatdo, namecams){
                                         
                                         let s =JSON.parse(response);
                                         streamId=s['streamId'];
-                                        $('#form7').append('<br>Создание iframe...');
-                                        frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name="+streamId);
+                                        $('#form7').append('\nСоздание iframe...');
+                                        $("#camsf2").attr("data-SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name="+streamId);
+                                        //frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name="+streamId);
                                         return 0;
 
 
