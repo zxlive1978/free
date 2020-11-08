@@ -3,7 +3,7 @@ function getstatcams(whatdo, namecams){
         // refresh = false;
         // online = false;
         $('#form7').empty();
-        $('#form7').append('Поиск в существующих потоках....');
+        $('#form7').append('Поиск в потоках....');
         $.ajax({
             type: "POST",
             url: 'js/cams.php',
