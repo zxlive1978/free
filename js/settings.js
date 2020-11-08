@@ -767,7 +767,7 @@ function colOK4 () {
 	 document.addEventListener('MSFullscreenChange', exitHandler);
  
 	//go fullmode
-	let elem = document.querySelector("#camsf2");
+	var elem = document.querySelector("#camsf2");
 
 	if (!document.fullscreenElement) {
 		//$('#camsf2').remove();
