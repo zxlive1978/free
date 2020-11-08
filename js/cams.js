@@ -19,7 +19,9 @@ function getstatcams(whatdo, namecams){
                         $('#form7').append('Найден');
                         $('#form7').append('\nСоздание iframe...');
                       
-                        frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name="+livestatcams[keey].streamId);
+                        ///frame.setAttribute("SRC", );
+                        
+                        $('#camsf2').prop('SRC', "//hydrofalll.ddns.net:5443/LiveApp/play.html?name="+livestatcams[keey].streamId);
                         $('#form7').append('ОК');
                     
                         $('#tabvideo').append(frame);
@@ -30,24 +32,6 @@ function getstatcams(whatdo, namecams){
                         document.addEventListener('mozfullscreenchange', exitHandler);
                         document.addEventListener('MSFullscreenChange', exitHandler);
                     
-                        function exitHandler() {
-                            if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
-                                
-                                $('#camsf2').remove();
-                                // console.log('dsds');
-                            }
-                        }  
-                        //go fullmode
-                        let elem = document.querySelector("#camsf2");
-                    
-                        if (!document.fullscreenElement) {
-                            //$('#camsf2').remove();
-                        elem.requestFullscreen().catch(err => {
-                            alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-                        });
-                        } else {
-                        document.exitFullscreen();
-                        }
                         return 0;
                     } else {
                       

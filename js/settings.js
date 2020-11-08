@@ -752,6 +752,25 @@ function colOK4 () {
 	frame.setAttribute("auto_orient", "true");
 	frame.setAttribute("scaling", "fit");
 	
+	function exitHandler() {
+		if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+			
+			$('#camsf2').remove();
+			// console.log('dsds');
+		}
+	}  
+	//go fullmode
+	let elem = document.querySelector("#camsf2");
+
+	if (!document.fullscreenElement) {
+		//$('#camsf2').remove();
+	elem.requestFullscreen().catch(err => {
+		alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+	});
+	} else {
+	document.exitFullscreen();
+	}
+	
 /* 	PArmyDialog4.hide(); */
 
 	//$('#lupa').iziModal('close');
