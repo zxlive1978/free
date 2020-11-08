@@ -83,7 +83,7 @@ function getstatcams(whatdo, namecams){
                     cache: false,
                     async: false,
                     success: function(response){
-                        let s =JSON.parse(response)
+                        let s =JSON.parse(response);
                         //alert(s[0]['skvjson']);
                         var len = s.length;
                         for(var i=0; i<len; i++){
@@ -93,6 +93,7 @@ function getstatcams(whatdo, namecams){
                             //console.log(n['txt']+'_'+n['name']);
                             if (namecams==(n['txt']+'_'+n['name'])){
                                 //console.log('gjuyfkb');
+                                let rtsp= n['rtsp'];
                                 $.ajax({
                                     type: "POST",
                                     url: 'js/cams.php',
@@ -100,6 +101,9 @@ function getstatcams(whatdo, namecams){
                                     cache: false,
                                     async: false,
                                     success: function(response){
+                                        
+                                        let s =JSON.parse(response);
+                                        alert(response[streamId]);
 
 
                                     }
