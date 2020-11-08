@@ -20,7 +20,7 @@ function getstatcams(whatdo, namecams){
                         $('#form7').append('\nСоздание iframe...');
                         if (livestatcams[keey].status=='broadcasting' ){
                             $('#form7').append('\Готов...');
-                       
+                       ('#govideo').click();
                         var frame = document.createElement("iframe");
                         frame.setAttribute("id", "camsf2");
                         frame.setAttribute("width", '100%');
@@ -60,14 +60,11 @@ function getstatcams(whatdo, namecams){
                         let elem = document.querySelector("#camsf2");
                     
                         if (!document.fullscreenElement) {
-                            //$('#camsf2').remove();
-                        elem.requestFullscreen().catch(err => {
-                            alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-                        });
+                            elem.requestFullscreen();
                         } else {
-                        document.exitFullscreen();
-                        }
-
+                          if (document.exitFullscreen) {
+                            document.exitFullscreen(); 
+                          }}
                         return 0;
                     }else {
                         $('#form7').append('\Не готов...');
@@ -112,13 +109,13 @@ function getstatcams(whatdo, namecams){
                                         //console.log(s['message']);
                                         streamId=s['message'];
                                         //$('#form7').append('\nСоздание iframe...');
-                                        for(var j=0; j<10; j++){
-                                        setTimeout(() => {  $( "#govideo" ).click();
+                                        //for(var j=0; j<10; j++){
+                                        setTimeout(() => {  getstatcams('check',namecams);
                                             
                                             
-                                                }, j*3000);
+                                                }, j*7000);
 
-                                        }
+                                        //}
                                     }
                                 });
 
