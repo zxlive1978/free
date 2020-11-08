@@ -21,7 +21,7 @@ function getstatcams(whatdo, namecams){
                         $('#form7').append('Найден');
                         $('#form7').append('\nСоздание iframe...');
                         //if (livestatcams[keey].status=='broadcasting' ){
-                            $('#form7').append('\Готов');
+                            //$('#form7').append('\Готов');
                        
                         var frame = document.createElement("iframe");
                         frame.setAttribute("id", "camsf2");
@@ -70,7 +70,8 @@ function getstatcams(whatdo, namecams){
                         return 0;
 
                     }else { 
-                        $('#form7').append("\nУдален поток..."+ livestatcams[keey].streamId);
+                        //удаление старых потоков
+                        if (Number(livestatcams[keey].hlsViewerCount)==0 ){
                         $.ajax({
                             type: "POST",
                             url: 'js/cams.php',
