@@ -2,7 +2,7 @@
 function getstatcams(whatdo, namecams){
         refresh = false;
         online = false;
-        $('#form7').empty();
+        
         $('#form7').append('Поиск в существующих потоках....');
         $.ajax({
             type: "POST",
