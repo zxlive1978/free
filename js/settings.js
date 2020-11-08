@@ -743,8 +743,8 @@ function colOK4 () {
 	frame.setAttribute("webkitAllowFullScreen", "true");
 	frame.setAttribute("mozallowfullscreen", "true");
 	frame.style.position = 'relative';
-	frame.style.width = '0%';
-	frame.style.height = '0%';
+	frame.style.width = '10%';
+	frame.style.height = '10%';
 	frame.style.align = 'center';
 
 	frame.setAttribute("auto_orient", "true");
@@ -771,7 +771,7 @@ function colOK4 () {
 	let elem = document.querySelector("#camsf2");
 
 	if (!document.fullscreenElement) {
-		$('#camsf2').remove();
+		//$('#camsf2').remove();
 	elem.requestFullscreen().catch(err => {
 		alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
 	});

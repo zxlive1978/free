@@ -17,7 +17,7 @@ function getstatcams(whatdo, namecams){
                 for (var keey in livestatcams) {
                     if (livestatcams[keey].name==namecams && livestatcams[keey].status=='broadcasting'){
                         $('#form7').append('Найден');
-                        $('#form7').append('<br>Создание iframe...');
+                        $('#form7').append('\nСоздание iframe...');
                         var frame = document.createElement("iframe");
                         frame.setAttribute("id", "camsf2");
                         frame.setAttribute("width", '100%');
@@ -56,7 +56,7 @@ function getstatcams(whatdo, namecams){
                         let elem = document.querySelector("#camsf2");
                     
                         if (!document.fullscreenElement) {
-                            $('#camsf2').remove();
+                            //$('#camsf2').remove();
                         elem.requestFullscreen().catch(err => {
                             alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
                         });
