@@ -18,6 +18,9 @@ function getstatcams(whatdo, namecams){
                     if (livestatcams[keey].name==namecams ){//&& livestatcams[keey].status=='broadcasting'){
                         $('#form7').append('Найден');
                         $('#form7').append('\nСоздание iframe...');
+                        if (livestatcams[keey].status=='broadcasting' ){
+                            $('#form7').append('\Готов...');
+                       
                         var frame = document.createElement("iframe");
                         frame.setAttribute("id", "camsf2");
                         frame.setAttribute("width", '100%');
@@ -51,7 +54,8 @@ function getstatcams(whatdo, namecams){
                                 $('#camsf2').remove();
                                 // console.log('dsds');
                             }
-                        }  
+                        }
+                          
                         //go fullmode
                         let elem = document.querySelector("#camsf2");
                     
@@ -63,16 +67,18 @@ function getstatcams(whatdo, namecams){
                         } else {
                         document.exitFullscreen();
                         }
+
                         return 0;
-                    } else {
-                      
+                    }else {
+                        $('#form7').append('\Не готов...');
                         
-                    }
+                        return 0;
+                    } 
                 //    console.log(livestatcams[keey].streamId);//id
                 //    console.log(livestatcams[keey].status);//broadcasting
                 //    console.log(livestatcams[keey].name);
                 //    console.log(livestatcams[keey].hlsViewerCount);//0
-                }
+                }}
                 $('#form7').append('Не найден');
                 //создаем поток
                 $('#form7').append("\nСоздаем поток...");
@@ -106,7 +112,13 @@ function getstatcams(whatdo, namecams){
                                         //console.log(s['message']);
                                         streamId=s['message'];
                                         //$('#form7').append('\nСоздание iframe...');
-                                        setTimeout(() => {  getstatcams('check',namecams); }, 3000);
+                                        for(var j=0; j<10; j++){
+                                        setTimeout(() => {  getstatcams('check',namecams);
+                                            
+                                            
+                                                }, 3000);
+
+                                        }
                                     }
                                 });
 
