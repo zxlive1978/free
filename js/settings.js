@@ -713,12 +713,14 @@ function colPan4 () {
 	//bootstrap modal
 	$('#zzooom1').empty();
 	//добавление в список
-	for (var keey in cams) {
-		$('#zzooom1').append($('<option>',
-			{
-				value: cams[keey].wellN,
-				text : cams[keey].txt
-				}));
+	for (var keey in wells) {
+		for (var keey in wells) {
+			$('#zzooom1').append($('<option>',
+				{
+					value: wells[keey].wellN,
+					text : wells[keey].txt
+					}));
+		}
 				//console.log(cams[keey]);
 	}
 	//статус подключения
