@@ -59,10 +59,11 @@
         $array = array(
             'type'  => 'streamSource',
             'name'   => $namecams,
+            
             'streamUrl' => $rtsp
         );		
          
-        $ch = curl_init('https://hydrofalll.ddns.net:5443/LiveApp/rest/broadcast/create');
+        $ch = curl_init('https://hydrofalll.ddns.net:5443/LiveApp/rest/streamSource/addStreamSource');
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS,  json_encode($array)); 
          
