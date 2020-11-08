@@ -26,12 +26,7 @@ function getstatcams(whatdo, namecams){
                     
                         $('#tabvideo').append(frame);
                     
-                        //exit fullmode
-                        document.addEventListener('fullscreenchange', exitHandler);
-                        document.addEventListener('webkitfullscreenchange', exitHandler);
-                        document.addEventListener('mozfullscreenchange', exitHandler);
-                        document.addEventListener('MSFullscreenChange', exitHandler);
-                    
+                       
                         return 0;
                     } else {
                       

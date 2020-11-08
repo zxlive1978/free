@@ -759,6 +759,13 @@ function colOK4 () {
 			// console.log('dsds');
 		}
 	}  
+
+	 //exit fullmode
+	 document.addEventListener('fullscreenchange', exitHandler);
+	 document.addEventListener('webkitfullscreenchange', exitHandler);
+	 document.addEventListener('mozfullscreenchange', exitHandler);
+	 document.addEventListener('MSFullscreenChange', exitHandler);
+ 
 	//go fullmode
 	let elem = document.querySelector("#camsf2");
 
