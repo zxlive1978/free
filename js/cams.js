@@ -18,22 +18,7 @@ function getstatcams(whatdo, namecams){
                     if (livestatcams[keey].name==namecams ){//&& livestatcams[keey].status=='broadcasting'){
                         $('#form7').append('Найден');
                         $('#form7').append('\nСоздание iframe...');
-                        var frame = document.createElement("iframe");
-                        frame.setAttribute("id", "camsf2");
-                        frame.setAttribute("width", '100%');
-                    
-                        frame.setAttribute("scrolling", "yes");
-                        frame.setAttribute("frameborder", "0");
-                        frame.setAttribute("allowfullscreen", "true");
-                        frame.setAttribute("webkitAllowFullScreen", "true");
-                        frame.setAttribute("mozallowfullscreen", "true");
-                        frame.style.position = 'relative';
-                        frame.style.width = '0%';
-                        frame.style.height = '0%';
-                        frame.style.align = 'center';
-                    
-                        frame.setAttribute("auto_orient", "true");
-                        frame.setAttribute("scaling", "fit");
+                      
                         frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name="+livestatcams[keey].streamId);
                         $('#form7').append('ОК');
                     
