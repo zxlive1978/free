@@ -78,5 +78,27 @@
          
         echo $html;
     }
-    	
+        
+    if ($whatdo == 'delete'){
+
+        $array = array(
+            'streamUrl' => $namecams
+        );		
+         
+        $ch = curl_init('https://hydrofalll.ddns.net:5443/LiveApp/rest/broadcast/delete');
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS,  json_encode($array)); 
+         
+        // https://hydrofalll.ddns.net:5443/LiveApp/rest/streamSource/addStreamSource
+        // curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($array, '', '&'));
+        curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+        curl_setopt($ch, CURLOPT_HEADER, false);
+        $html = curl_exec($ch);
+        curl_close($ch);	
+         
+        echo $html;
+        
+    }
 ?>

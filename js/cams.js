@@ -68,11 +68,24 @@ function getstatcams(whatdo, namecams){
                             document.exitFullscreen(); 
                           }}
                         return 0;
+
+                    }else { 
+                        $.ajax({
+                            type: "POST",
+                            url: 'js/cams.php',
+                            data: {whatdo:'delete', namecams: livestatcams[keey].streamId},
+                            cache: false,
+                            async: false,
+                            success: function(data){
+                            }
+                        });
+
+                    }
                     // }else {
                     //     $('#form7').append('\Не готов...');
                         
                     //     return 0;
-                    } 
+                     
                 //    console.log(livestatcams[keey].streamId);//id
                 //    console.log(livestatcams[keey].status);//broadcasting
                 //    console.log(livestatcams[keey].name);
