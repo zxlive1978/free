@@ -728,12 +728,13 @@ function colPan4 () {
 
 var namecams='';
 var streamId='';
+var frame;
 function colOK4 () {
 	//Проверка Проверка существующих потоков
 	namecams=$("#zzooom1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
 	// console.log(namecams);
 	getstatcams('check',namecams);
-	var frame = document.createElement("iframe");
+	frame = document.createElement("iframe");
 	
 /* 	PArmyDialog4.hide(); */
 
