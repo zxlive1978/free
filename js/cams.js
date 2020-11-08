@@ -3,7 +3,7 @@ function getstatcams(whatdo, namecams){
         // refresh = false;
         // online = false;
         //$('#form7').empty();
-        $('#form7').append('Поиск в потоках....');
+        $('#form7').append('\nПоиск в потоках....');
         $.ajax({
             type: "POST",
             url: 'js/cams.php',
@@ -96,7 +96,7 @@ function getstatcams(whatdo, namecams){
                 }
                 $('#form7').append('Не найден');
                 //создаем поток
-                $('#form7').append("\nСоздаем поток...");
+                $('#form7').append("\nСоздаем поток "+namecams+"...");
                 $.ajax({
                     type: "POST",
                     url: 'js/cams.php',
@@ -122,7 +122,7 @@ function getstatcams(whatdo, namecams){
                                     cache: false,
                                     async: false,
                                     success: function(response){
-                                        
+                                        $('#form7').append("ОК");
                                         let s =JSON.parse(response);
                                         //console.log(s['message']);
                                         streamId=s['message'];
