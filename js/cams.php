@@ -82,10 +82,10 @@
     if ($whatdo == 'delete'){
 
         $array = array(
-            'streamId' => $namecams
+            
         );		
          
-        $ch = curl_init('https://hydrofalll.ddns.net:5443/LiveApp/rest/broadcast/delete');
+        $ch = curl_init('https://hydrofalll.ddns.net:5443/LiveApp/rest/broadcast/delete/'.$namecams);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS,  json_encode($array)); 
          

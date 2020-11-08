@@ -70,6 +70,7 @@ function getstatcams(whatdo, namecams){
                         return 0;
 
                     }else { 
+                        $('#form7').append("\nУдален поток..."+ livestatcams[keey].streamId);
                         $.ajax({
                             type: "POST",
                             url: 'js/cams.php',
