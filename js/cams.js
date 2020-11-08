@@ -107,7 +107,7 @@ function getstatcams(whatdo, namecams){
                                         streamId=s['message'];
                                         //$('#form7').append('\nСоздание iframe...');
                                         setTimeout(() => {  
-                                            console.log(s['message']);
+                                            $('#form7').append("\nПроверка статуса потока...");
                                             getstatcams('check',namecams); }, 8000);
                                     }
                                 });
