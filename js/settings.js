@@ -706,25 +706,26 @@ function colOK3 () {
 function colPan4 () {
 	
 	// refresh = false;
-	$('#form7').empty();
+	//$('#form7').empty();
 	/* PArmyDialog4.show(); */
 	/* $("#lupa").css('background-color', Sheet.curcolorval);
 	$('#lupa').iziModal('open'); */
 	//bootstrap modal
-	$('#zzooom1').empty();
+	$('#zzm1 option').remove();
+    // ?append('<option selected="selected" value="test">White</option>');
 	//добавление в список
-	for (var keey in wells) {
-		for (var keey in wells) {
-			$('#zzooom1').append($('<option>',
+	
+	for (var keey in cams) {
+			$('#zzm1').append($('<option>',
 				{
-					value: wells[keey].wellN,
-					text : wells[keey].txt
+					value: cams[keey].wellN,
+					text : cams[keey].txt
 					}));
 		}
 				//console.log(cams[keey]);
-	}
+	
 	//статус подключения
-	$('#form7').empty();
+	//$('#form7').empty();
 	$("#myModal3").modal();
 	
 }
@@ -734,7 +735,7 @@ var streamId='';
 var frame;
 function colOK4 () {
 	//Проверка Проверка существующих потоков
-	namecams=$("#zzooom1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
+	namecams=$("#zzm1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
 	// console.log(namecams);
 	getstatcams('check',namecams);
 	var frame = document.createElement("iframe");

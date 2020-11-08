@@ -462,7 +462,7 @@ window.onresize = function(event) {
         
         <!-- Modal body -->
         <div class="modal-body">
-<label for="hcolcolor" class="control-label">Скважина:</label><select class="form-control input-lg" name="zzooom1" id="zzooom1"  size="1" ></select>
+<label for="hcolcolor" class="control-label">Скважина:</label><select class="form-control input-lg" name="zzm1" id="zzm1"  size="1" ></select>
 
 <label for="hcolcolor"class="control-label">Камера:</label><select id="zzzooom1" class="form-control input-lg" name="zzzooom1" value="3">
 <option value="18">Стол ротора</option>
