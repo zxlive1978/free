@@ -1623,7 +1623,7 @@ function adm (){
 
 		var colIndex = $(this).parent().children().index($(this));
 		var rowIndex = $(this).parent().parent().children().index($(this).parent());
-		alert('Row: ' + rowIndex + ', Column: ' + colIndex);
+		// alert('Row: ' + rowIndex + ', Column: ' + colIndex);
 
 
 		colPan17();
@@ -1882,6 +1882,15 @@ function colOK14 () {
 
 //Добавление  диалог камеры
 function colPan16 () {
+	
+	// var o=document.getElementById('oTable');
+    // var count=0;
+    // for (i=0; i < o.rows.length; i++) {
+    //     for (j=0; j < o.rows[i].cells.length; j++) {
+    //         o.rows[i].cells[j].innerHTML = count;
+    //         $('#myselect').append('<option value="'+newitemnum+'">'+newitemdesc+'</option>');
+    //     }
+    // }
 	$("#myModal16").modal();
 }
 
@@ -1929,6 +1938,8 @@ function colOK16 () {
 var selectcam='';
 //Изменить/ удалить  диалог камеру
 function colPan17 () {
+
+	
 	$("#myModal17").modal();
 	for (var keey in cams) {
 		if (cams[keey].name == String($("#colitems191").val())) {

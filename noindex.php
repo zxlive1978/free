@@ -65,10 +65,13 @@ if (!$_SESSION['auth']) {
 <script type="text/javascript" src="js/svg.draggable.min.js"></script>
 
 <script type="text/javascript" src="js/loadsave.js"></script>
+<script type="text/javascript" src="js/cams.js"></script>
 <script type="text/javascript" src="js/writeskvs.js"></script>
 <script type="text/javascript" src="js/exit.js"></script>
 
+
 <script type="text/javascript" src="js/settings.js"></script>
+
 
 <script type="text/javascript" src="js/pong.js"></script>
 <script type="text/javascript" src="js/sutki.js"></script>
@@ -127,10 +130,25 @@ if (!$_SESSION['auth']) {
 		</div>
 	  </li> -->
 
-    
-	  
+    <li>
+	  <div class="dropdown">
+		<button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		По времени
+		</button>
+		<div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+		<button class="dropdown-item " type="button " onclick='colOK11()'>Просмотр/Редактирование экрана</button>
+		<button class="dropdown-item " type="button" onclick='colPan10()'>Выбор скважины</button> 
+		<button class="dropdown-item " type="button" onclick='colPan3()'>Выбор даты</button>
+    <button class="dropdown-item " type="button" onclick='colPan4()'>Просмотр видеокамер</button>
+    <button class="dropdown-item " type="button" onclick='colPan9()'>Загрузить/Сохранить(Создать) форму</button>
+    <button class="dropdown-item " type="button" onclick='read_now()'>Старт приема текущих значений</button>
+		</div>
+		</div>
+	  </li>
+
+	  <!-- <button class="btn btn-outline-primary " type="button" id="stop" name="stop" onclick="getstatcams();"> -->
 	   
-		<li>
+		<!-- <li>
     <div id="dialogvideo" name="dialogvideo" title="Камера 2">
     <iframe width="100%" height="100%"
     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
@@ -138,13 +156,13 @@ if (!$_SESSION['auth']) {
     title="0" byline="0" portrait="0"
     width="280" height="157"
     frameborder="0"
-     <!-- allow="autoplay" -->
+      allow="autoplay"
       src="//hydrofalll.ddns.net:5443/LiveApp/play.html?name=259399779848013677881662"> </iframe>
     
     </div>
-		<div class="btn-group" role="group" aria-label="">
-		<!-- <button class="btn bg-light btn-lg " type="button" id="adm" name="adm" onclick='adm()'>
-    Админка</button>	
+		<div class="btn-group" role="group" aria-label=""> -->
+		<!-- <button class="btnbg-light bg-light btn-lg" type="button" id="adm" name="adm" onclick='adm()'>
+    Видео</button>	
 		</div> -->
   
     <!--</li>
@@ -181,14 +199,14 @@ if (!$_SESSION['auth']) {
   
   <div class="media-left" title="">
   <a class="navbar-brand" href="#">
-  <label for="hcolcolor"  id="ava" name="ava"></label>
+  <label for="hcolcolor"  class="label label-primary"  id="ava" name="ava"></label>
     <img src="css/img_avatar1.png" class="rounded-circle" style="width:50px">
    
   </a>
   </div>
   
   <div class="btn-group" aria-hidden="true" role="group" aria-label="Basic example" onClick="exit('exit','exit','exit');"> 
-			<button type="button" class="btnbg-light bg-light btn-md">ВЫХОД</button>
+			<button type="button" class="btn btn-outline-primary">Выход</button>
 			</div>
 </nav>
 
@@ -230,22 +248,25 @@ if (!$_SESSION['auth']) {
 
 
 <!-- Табы -->
-<!-- <div id="tabs">
-  <ul>
-    <li><a href="#tabs-1">Пользователи</a></li>
-    <li><a href="#tabs-2">Скважины</a></li>
-    <li><a href="#tabs-3">Камеры</a></li>
+<div id="tabs" >
+  <ul id="ul1">
+    <li><a href="#tabs-1" > <span id="tabsn-1" >     </span></a></li>
+    <!-- <li><a href="#tabs-2"> <span id="tabsn-2" >     </span></a></li>
+    <li><a href="#tabs-3"> <span id="tabsn-3" >     </span></a></li>
+    <li><a href="#tabs-4"> <span id="tabsn-4" >     </span></a></li> -->
   </ul>
-  <div id="tabs-1">
-  </div>
-  <div id="tabs-2">
+  <div id="tabs-1" style="display: block;  margin: 0 auto;"></div>
+  <!-- <div id="tabs-2">
   </div>
   <div id="tabs-3">
   </div>
-</div> -->
+  <div id="tabs-4">
+  </div> -->
+</div>
 
 
 <div id="drawing"  ></div>
+<div id="tabvideo" width="100%" height="100%"  style = "background-color:khaki" ></div>
 <script type="text/javascript">
 function getStart() {
       //alert('ok');
@@ -406,7 +427,18 @@ window.onresize = function(event) {
         <!-- Modal body -->
         <div class="modal-body">
         <label for="hcolcolor">Выбор даты(<10 дней):</label>
-<input type='date' class="form-control input-lg" id='localdate1' name='date1' max=<?php echo date('Y-m-d');?> min=<?php $date = new DateTime(); $date->modify('-9 day'); echo $date->format('Y-m-d'); ?>>
+<input type='date' class="form-control input-lg" id='localdate1' name='date1' value="<?php echo date('Y-m-d');?>" max=<?php echo date('Y-m-d');?> min=<?php $date = new DateTime(); $date->modify('-9 day'); echo $date->format('Y-m-d'); ?>>
+
+<label for="hcolcolor">Ширина интервала:</label>
+
+<select id="zooom1" class="form-control input-lg" name="zooom1" value="3">
+
+<option value="3">3 часа</option>
+ <option value="1">1 час</option>
+<option value="8">8 часов</option>
+<option value="24">1 день</option>
+</select>
+
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
@@ -424,26 +456,37 @@ window.onresize = function(event) {
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Ширина интервала</h4>
+          <h4 class="modal-title">Видеокамера</h4>
           <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
         
         <!-- Modal body -->
         <div class="modal-body">
-        <label for="hcolcolor">Ширина интервала:</label>
+<label for="hcolcolor" class="control-label">Скважина:</label><select class="form-control input-lg" name="zzm1" id="zzm1"  size="1" ></select>
 
-  <select id="zooom1" class="form-control input-lg" name="zooom1" value="3">
-
-  <option value="3">3 часа</option>
-   <option value="1">1 час</option>
-  <option value="8">8 часов</option>
-  <option value="24">1 день</option>
+<label for="hcolcolor"class="control-label">Камера:</label><select id="zzzooom1" class="form-control input-lg" name="zzzooom1" value="3">
+<option value="18">Стол ротора</option>
+   <option value="17">Приемный мост</option>
+  <option value="19">Шахта, ПВО</option>
+  <option value="20">Емкости бурового раствора</option>
  </select>
+
+ <label for="hcolcolor"class="control-label">Тип потока:</label><select id="zzzzooom1" class="form-control input-lg" name="zzzzooom1" value="3">
+<option value="01">Основной</option>
+   <option value="1">Дополнительный</option>
+  
+ </select>
+
+ <div class="md-form">
+ <label for="form7">Прогресс подключения:</label>
+  <textarea id="form7" class="md-textarea form-control" rows="4"></textarea>
+  
+  </div>
 
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
-			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK4()'>Применить</button>
+			<button type="button" class="btn btn-success" id ="govideo" onclick='colOK4()'>Подключить</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
         

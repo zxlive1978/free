@@ -30,57 +30,8 @@ var Shablontxtwell = {
 
 
 //Список камер
-var cams = {
-
-	par0 :  {wellN: 's110', txt: 'АГКМ-99',
-	rtsp1:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp2:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
-	rtsp3:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1902', rtsp4:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/2002',
-	liveapp1:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp2:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',
-	liveapp3:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp4:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=1503157987892256296791828',},
-	par1 :  {wellN: 's908', txt: 'АГКМ-609', 
-	rtsp1:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp2:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
-	rtsp3:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp4:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
-	liveapp1:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp2:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',
-	liveapp3:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp4:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',},
-	par2 :  {wellN: 's610', txt: 'АГКМ-260',
-	rtsp1:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp2:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
-	rtsp3:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp4:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
-	liveapp1:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp2:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',
-	liveapp3:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp4:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',},
-
-	par3 :  {wellN: 's630', txt: 'АГКМ-9917',
-	rtsp1:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp2:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
-	rtsp3:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp4:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
-	liveapp1:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp2:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',
-	liveapp3:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp4:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',},
-	//par4 :  {wellN: 's629', txt: 'АГКМ-629', type: 'Бурение', typeStn:'ИМС', nach:'Редискин Р.Р.', tel:'282222', email:'sobaka18@sobaka.com'},
-	par4 :  {wellN: 's627', txt: 'АГКМ-627',
-	rtsp1:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp2:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
-	rtsp3:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp4:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
-	liveapp1:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp2:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',
-	liveapp3:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp4:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',},
-	par5 :  {wellN: 's915', txt: 'АГКМ-934',
-	rtsp1:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp2:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
-	rtsp3:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp4:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
-	liveapp1:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp2:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',
-	liveapp3:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp4:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',},
-	par6 :  {wellN: 's224', txt: 'АГКМ-604',
-	rtsp1:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp2:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
-	rtsp3:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp4:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
-	liveapp1:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp2:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',
-	liveapp3:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp4:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',},
-	par7 :  {wellN: 's20', txt: 'АГКМ-938', 
-	rtsp1:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp2:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
-	rtsp3:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp4:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
-	liveapp1:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp2:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',
-	liveapp3:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp4:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',},
-	par8 :  {wellN: 's4450', txt: 'АГКМ-71', 
-	rtsp1:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp2:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
-	rtsp3:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1702', rtsp4:'rtsp://sngs:Son7Per7Ro9@37.29.8.121:554/Streaming/Channels/1802',
-	liveapp1:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp2:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',
-	liveapp3:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188', liveapp4:'//hydrofalll.ddns.net:5443/LiveApp/play.html?name=150315798789225629679188',},
-
-};
+var livestatcams ={};
+var cams = {};
 
 //Текущие параметры Справочник параметров графики обычные
 
@@ -287,20 +238,21 @@ var rawsvg2 = '<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3
 var rawsvg1 = '<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 280 280" style="enable-background:new 0 0 280 280;" xml:space="preserve"> <path d="M275.456,0H4.544C2.034,0,0,2.035,0,4.544v270.911C0,277.965,2.034,280,4.544,280h270.911c2.509,0,4.544-2.035,4.544-4.544 V4.544C280,2.035,277.965,0,275.456,0z M212.529,191.316l-21.213,21.213L140,161.213l-51.316,51.316l-21.213-21.213L118.787,140 L67.471,88.684l21.213-21.213L140,118.787l51.316-51.316l21.213,21.213L161.213,140L212.529,191.316z"/><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>';
 
 var butts ={
-	rawsvg0:{img:'<?xml version="1.0" encoding="iso-8859-1"?> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <g> 	<g> 		<path d="M406,242H106c-24.814,0-45,20.186-45,45v180c0,24.814,20.186,45,45,45h300c24.814,0,45-20.186,45-45V287 			C451,262.186,430.814,242,406,242z M271,389.246V437c0,8.291-6.709,15-15,15c-8.291,0-15-6.709-15-15v-47.754 			c-17.424-6.211-30-22.705-30-42.246c0-24.814,20.186-45,45-45c24.814,0,45,20.186,45,45C301,366.541,288.424,383.035,271,389.246z 			"/> 	</g> </g> <g> 	<g> 		<path d="M256,0C165.033,0,91,74.033,91,165v47h90v-47c0-41.367,33.633-75,75-75s75,33.633,75,75v47h90v-47 			C421,74.033,346.967,0,256,0z"/> 	</g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg> ',
+	rawsvg0:{img:'<?xml version="1.0" encoding="iso-8859-1"?> <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --> <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <g> <g> <path d="M421,211v-46C421,74.019,346.981,0,256,0S91,74.019,91,165v46H61v301h390V211H421z M121,165c0-74.439,60.561-135,135-135 s135,60.561,135,135v46h-30v-46c0-57.897-47.103-105-105-105c-57.897,0-105,47.103-105,105v46h-30V165z M331,165v46H181v-46 c0-41.355,33.645-75,75-75C297.355,90,331,123.645,331,165z M421,482H91v-30h330V482z M421,422H91V241c9.676,0,302.027,0,330,0 V422z"/> </g> </g> <g> <g> <path d="M256,271c-24.813,0-45,20.187-45,45c0,19.555,12.541,36.228,30,42.42V392h30v-33.58c17.459-6.192,30-22.865,30-42.42 C301,291.187,280.813,271,256,271z M256,331c-8.271,0-15-6.729-15-15s6.729-15,15-15s15,6.729,15,15S264.271,331,256,331z"/> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg> ',
 	color:'#ff0066'},
-	rawsvg1:{img:'<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M770.2,926.5"/><path d="M782.6,783.7v-57.4h-79.5L636.8,136h14.8V89.3H344.8V136H365l-66.3,590.3h-74.1v57.4h-41.3V990h633.4V783.7H782.6z M646.7,678L531.3,554.6l90.6-97L646.7,678z M609.5,346l-82.7-88.5l65-69.5L609.5,346z M513.7,136h72.1l0.3,3.1l-72.5,77.5L513.7,136L513.7,136z M513.7,298.6l96.8,103.6l-96.8,103.6V298.6z M513.7,603.4l114.8,122.9H513.7V603.4z M415.9,136h70.7v78.7l-71-76L415.9,136z M410.1,187.7l65.3,69.9l-83.1,88.9L410.1,187.7z M486.6,300.5v206.2l-96.4-103.1L486.6,300.5z M379.6,459.9l88.5,94.7L355.4,675.1L379.6,459.9z M486.6,602.4v123.9H370.8L486.6,602.4z M521.8,926.5c-19.4,0-35.3-15.9-35.3-35.3V772l26.4,0.1c0,0,0,80.5,0,107.7c0,16.5,20.8,17.4,20.8,17.4c19.7,2.6,147.6,0.9,147.6,0.9l0.6,28.4H521.8z"/><path d="M401.7,10h182.8v63.3H401.7V10z"/></g></svg>',
+	rawsvg1:{img:'<svg  viewBox="-37 1 511 511.99975"  xmlns="http://www.w3.org/2000/svg"><path d="m416.5 472h-20.546875l-44.535156-326h21.082031c11.046875 0 20-8.953125 20-20s-8.953125-20-20-20h-35.933594l-104.1875-100.402344c-7.746094-7.464844-20.011718-7.464844-27.757812 0l-104.1875 100.402344h-35.933594c-11.046875 0-20 8.953125-20 20s8.953125 20 20 20h21.082031l-44.535156 326h-20.546875c-11.046875 0-20 8.953125-20 20s8.953125 20 20 20h396c11.046875 0 20-8.953125 20-20s-8.953125-20-20-20zm-77.3125-120.011719-93.757812-103.988281 69.085937-76.621094zm-120.6875-304.214843 60.421875 58.226562h-120.84375zm65.039062 98.226562-65.039062 72.132812-65.039062-72.132812zm-161.054687 25.378906 69.085937 76.621094-93.757812 103.988281zm-41.066406 300.621094 12.121093-88.738281c.039063.042969.070313.089843.105469.132812l79.894531 88.605469zm54.011719-102 83.070312-92.132812 83.070312 92.132812-83.070312 92.132812zm128.03125 102 79.894531-88.605469c.035156-.042969.066406-.089843.105469-.132812l12.121093 88.738281zm0 0"/></svg> ',
 	color:Sheet.rawsvg0},
-	rawsvg2:{img:'<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 485.213 485.212" style="enable-background:new 0 0 485.213 485.212;" xml:space="preserve"> <g> <path d="M60.652,75.816V15.163C60.652,6.781,67.433,0,75.817,0c8.38,0,15.161,6.781,15.161,15.163v60.653 c0,8.38-6.781,15.161-15.161,15.161C67.433,90.978,60.652,84.196,60.652,75.816z M318.424,90.978 c8.378,0,15.163-6.781,15.163-15.161V15.163C333.587,6.781,326.802,0,318.424,0c-8.382,0-15.168,6.781-15.168,15.163v60.653 C303.256,84.196,310.042,90.978,318.424,90.978z M485.212,363.906c0,66.996-54.312,121.307-121.303,121.307 c-66.986,0-121.302-54.311-121.302-121.307c0-66.986,54.315-121.3,121.302-121.3C430.9,242.606,485.212,296.919,485.212,363.906z M454.89,363.906c0-50.161-40.81-90.976-90.98-90.976c-50.166,0-90.976,40.814-90.976,90.976c0,50.171,40.81,90.98,90.976,90.98 C414.08,454.886,454.89,414.077,454.89,363.906z M121.305,181.955H60.652v60.651h60.653V181.955z M60.652,333.584h60.653V272.93 H60.652V333.584z M151.629,242.606h60.654v-60.651h-60.654V242.606z M151.629,333.584h60.654V272.93h-60.654V333.584z M30.328,360.891V151.628h333.582v60.653h30.327V94c0-18.421-14.692-33.349-32.843-33.349h-12.647v15.166 c0,16.701-13.596,30.325-30.322,30.325c-16.731,0-30.326-13.624-30.326-30.325V60.651H106.14v15.166 c0,16.701-13.593,30.325-30.322,30.325c-16.733,0-30.327-13.624-30.327-30.325V60.651H32.859C14.707,60.651,0.001,75.579,0.001,94 v266.892c0,18.36,14.706,33.346,32.858,33.346h179.424v-30.331H32.859C31.485,363.906,30.328,362.487,30.328,360.891z M303.256,242.606v-60.651h-60.648v60.651H303.256z M409.399,363.906h-45.49v-45.49c0-8.377-6.781-15.158-15.163-15.158 s-15.159,6.781-15.159,15.158v60.658c0,8.378,6.777,15.163,15.159,15.163h60.653c8.382,0,15.163-6.785,15.163-15.163 C424.562,370.692,417.781,363.906,409.399,363.906z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>',
+	rawsvg3:{img:'<svg viewBox="0 -38 512.00025 512" xmlns="http://www.w3.org/2000/svg"><path d="m506.140625 314.15625c-7.808594-7.808594-20.472656-7.808594-28.28125 0l-25.457031-25.457031 28.285156-28.28125c7.804688-7.804688 7.808594-20.476563 0-28.285157l-226.277344-226.273437c-7.808594-7.8125-20.472656-7.8125-28.28125 0l-141.421875 141.421875c-7.804687 7.804688-7.808593 20.472656 0 28.28125l111.722657 111.726562-28.714844 28.710938h-51.714844v-60c0-11.046875-8.953125-20-20-20h-76c-11.046875 0-20 8.953125-20 20v160c0 11.046875 8.953125 20 20 20h76c11.046875 0 20-8.953125 20-20v-60h60c5.304688 0 10.390625-2.105469 14.140625-5.855469l34.574219-34.574219 86.265625 86.269532c7.808593 7.808594 20.472656 7.808594 28.285156 0l28.285156-28.285156 25.453125 25.453124c-7.808594 7.8125-7.808594 20.476563 0 28.285157 7.8125 7.808593 20.472656 7.8125 28.285156 0l84.851563-84.851563c7.8125-7.808594 7.8125-20.472656 0-28.285156zm-430.140625 81.84375h-36v-120h36zm249.121094-36.589844c-8.5625-8.5625-189.261719-189.265625-197.988282-197.988281l113.136719-113.136719 197.992188 197.988282zm98.996094-42.425781 25.457031 25.457031-28.285157 28.285156-25.453124-25.457031c6.628906-6.632812 21.640624-21.640625 28.28125-28.285156zm0 0"/></svg>',
+	//rawsvg3:{img:'<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 485.213 485.212" style="enable-background:new 0 0 485.213 485.212;" xml:space="preserve"> <g> <path d="M60.652,75.816V15.163C60.652,6.781,67.433,0,75.817,0c8.38,0,15.161,6.781,15.161,15.163v60.653 c0,8.38-6.781,15.161-15.161,15.161C67.433,90.978,60.652,84.196,60.652,75.816z M318.424,90.978 c8.378,0,15.163-6.781,15.163-15.161V15.163C333.587,6.781,326.802,0,318.424,0c-8.382,0-15.168,6.781-15.168,15.163v60.653 C303.256,84.196,310.042,90.978,318.424,90.978z M485.212,363.906c0,66.996-54.312,121.307-121.303,121.307 c-66.986,0-121.302-54.311-121.302-121.307c0-66.986,54.315-121.3,121.302-121.3C430.9,242.606,485.212,296.919,485.212,363.906z M454.89,363.906c0-50.161-40.81-90.976-90.98-90.976c-50.166,0-90.976,40.814-90.976,90.976c0,50.171,40.81,90.98,90.976,90.98 C414.08,454.886,454.89,414.077,454.89,363.906z M121.305,181.955H60.652v60.651h60.653V181.955z M60.652,333.584h60.653V272.93 H60.652V333.584z M151.629,242.606h60.654v-60.651h-60.654V242.606z M151.629,333.584h60.654V272.93h-60.654V333.584z M30.328,360.891V151.628h333.582v60.653h30.327V94c0-18.421-14.692-33.349-32.843-33.349h-12.647v15.166 c0,16.701-13.596,30.325-30.322,30.325c-16.731,0-30.326-13.624-30.326-30.325V60.651H106.14v15.166 c0,16.701-13.593,30.325-30.322,30.325c-16.733,0-30.327-13.624-30.327-30.325V60.651H32.859C14.707,60.651,0.001,75.579,0.001,94 v266.892c0,18.36,14.706,33.346,32.858,33.346h179.424v-30.331H32.859C31.485,363.906,30.328,362.487,30.328,360.891z M303.256,242.606v-60.651h-60.648v60.651H303.256z M409.399,363.906h-45.49v-45.49c0-8.377-6.781-15.158-15.163-15.158 s-15.159,6.781-15.159,15.158v60.658c0,8.378,6.777,15.163,15.159,15.163h60.653c8.382,0,15.163-6.785,15.163-15.163 C424.562,370.692,417.781,363.906,409.399,363.906z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>',
 	//rawsvg1:{img:'<?xml version="1.0" encoding="iso-8859-1"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><g><g><path d="M458.666,42.67h-53.33V32c0-17.645-14.356-32-32.002-32c-17.644,0-31.999,14.355-31.999,32v10.67H170.664V32 c0-17.645-14.354-32-31.999-32s-32,14.355-32,32v10.67H53.334c-5.892,0-10.667,4.776-10.667,10.667v447.995 c0,5.89,4.776,10.667,10.667,10.667h405.332c5.891,0,10.667-4.778,10.667-10.667V53.337 C469.333,47.446,464.557,42.67,458.666,42.67z M362.67,53.337V32c0-5.882,4.784-10.665,10.666-10.665 c5.881,0,10.665,4.783,10.665,10.665v21.337V74.67c0,0.735-0.075,1.452-0.218,2.146c-0.996,4.855-5.303,8.517-10.45,8.517 c-5.881,0-10.664-4.783-10.664-10.663V53.337z M128,53.337V32c0-5.882,4.783-10.665,10.667-10.665 c5.88,0,10.662,4.783,10.662,10.665v21.337V74.67c0,1.469-0.299,2.871-0.838,4.146c-1.621,3.825-5.415,6.517-9.826,6.517 C132.783,85.333,128,80.55,128,74.67V53.337z M64.001,64.005h42.663V74.67c0,2.756,0.35,5.434,1.009,7.988 c3.557,13.791,16.103,24.01,30.991,24.01h0.002c17.643,0,31.997-14.355,31.997-31.998V64.005h170.67V74.67 c0,17.643,14.355,31.998,32.001,31.998c17.645,0,32-14.355,32-31.998V64.005h42.662v63.994H64.001V64.005z M447.999,490.665 H64.001v0v-21.328h68.657c5.891,0,10.667-4.778,10.667-10.667c0-5.892-4.777-10.667-10.667-10.667H64.001V149.334h383.997 V490.665z"/><path d="M141.432,249.712c1.736,0,4.342-0.868,6.37-2.896l10.134-12.742v160.764c0,6.661,7.528,10.134,15.347,10.134 c7.531,0,15.349-3.473,15.349-10.134v-191.41c-0.001-6.371-7.24-10.134-13.612-10.134c-3.474,0-5.792,1.159-7.818,3.185 l-30.115,28.907c-3.765,2.608-6.08,7.53-6.08,11.874C131.007,243.34,135.349,249.712,141.432,249.712z"/><path d="M316.134,406.711c36.486,0,64.866-16.506,64.866-59.652v-3.475c-0.001-29.827-13.321-46.913-33.303-54.154 c16.216-6.082,27.221-20.556,27.221-45.174c0-37.065-24.904-50.962-58.784-50.962c-33.881,0-58.784,13.896-58.784,50.962 c0,24.618,11.005,39.092,26.931,45.174c-19.98,7.24-33.301,24.327-33.301,54.154v3.475 C250.98,390.206,279.647,406.711,316.134,406.711z M316.134,218.774c18.245,0,28.959,8.398,28.959,28.958 c0,20.85-10.714,29.248-28.959,29.248c-18.242,0-28.958-8.398-28.958-29.248C287.175,227.173,297.892,218.774,316.134,218.774z M281.674,338.66c0-24.904,13.032-36.197,34.46-36.197c21.428,0,34.17,11.293,34.17,36.197v5.213 c0,25.191-12.451,37.353-34.17,37.353c-21.139,0-34.46-11.58-34.46-37.353V338.66z"/><path d="M163.556,448.006h-0.254c-5.892,0-10.667,4.776-10.667,10.667c0,5.889,4.776,10.667,10.667,10.667h0.254 c5.892,0,10.667-4.778,10.667-10.667C174.224,452.781,169.448,448.006,163.556,448.006z"/></g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>',
 	color:Sheet.rawsvg1},
-	rawsvg3:{img:'<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 485.213 485.213" style="enable-background:new 0 0 485.213 485.213;" xml:space="preserve"><g><g><path d="M471.882,407.567L360.567,296.243c-16.586,25.795-38.536,47.734-64.331,64.321l111.324,111.324 c17.772,17.768,46.587,17.768,64.321,0C489.654,454.149,489.654,425.334,471.882,407.567z"/> <path d="M363.909,181.955C363.909,81.473,282.44,0,181.956,0C81.474,0,0.001,81.473,0.001,181.955s81.473,181.951,181.955,181.951 C282.44,363.906,363.909,282.437,363.909,181.955z M181.956,318.416c-75.252,0-136.465-61.208-136.465-136.46 c0-75.252,61.213-136.465,136.465-136.465c75.25,0,136.468,61.213,136.468,136.465 C318.424,257.208,257.206,318.416,181.956,318.416z"/> <path d="M75.817,181.955h30.322c0-41.803,34.014-75.814,75.816-75.814V75.816C123.438,75.816,75.817,123.437,75.817,181.955z"/> </g> </g> <g> </g> <g> </g> <g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>',
+	rawsvg2:{img:'<?xml version="1.0" encoding="iso-8859-1"?> <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 310.42 310.42" style="enable-background:new 0 0 310.42 310.42;" xml:space="preserve"> <g> <g> <path d="M273.587,214.965c49.11-49.111,49.109-129.021,0-178.132c-49.111-49.111-129.02-49.111-178.13,0 C53.793,78.497,47.483,140.462,76.51,188.85c0,0,2.085,3.498-0.731,6.312c-16.065,16.064-64.263,64.263-64.263,64.263 c-12.791,12.79-15.836,30.675-4.493,42.02l1.953,1.951c11.343,11.345,29.229,8.301,42.019-4.49c0,0,48.096-48.097,64.128-64.128 c2.951-2.951,6.448-0.866,6.448-0.866C169.958,262.938,231.923,256.629,273.587,214.965z M118.711,191.71 c-36.288-36.288-36.287-95.332,0.001-131.62c36.288-36.287,95.332-36.288,131.619,0c36.288,36.287,36.288,95.332,0,131.62 C214.043,227.996,155,227.996,118.711,191.71z"/> <g> <path d="M126.75,118.424c-1.689,0-3.406-0.332-5.061-1.031c-6.611-2.798-9.704-10.426-6.906-17.038 c17.586-41.559,65.703-61.062,107.261-43.476c6.611,2.798,9.704,10.426,6.906,17.038c-2.799,6.612-10.425,9.703-17.039,6.906 c-28.354-11.998-61.186,1.309-73.183,29.663C136.629,115.445,131.815,118.424,126.75,118.424z"/> </g> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg> ',
 	color:Sheet.rawsvg2},
 	//rawsvg3:{img:'<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 286.9 286.9" style="enable-background:new 0 0 286.9 286.9;" xml:space="preserve" > <g> <polygon points="248.65,76.5 181.65,76.5 210.35,0 95.65,0 38.25,153 86.05,153 38.25,286.9 	"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>' ,
-	rawsvg4:{img:'<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 64 64" enable-background="new 0 0 64 64" xml:space="preserve"><g><rect x="22" y="38" width="28" height="4"/><rect x="22" y="10" width="17" height="4"/><path d="M45.8,0H18c-2.2,0-4,1.8-4,4v2h-4c-2.2,0-4,1.8-4,4v50c0,2.2,1.8,4,4,4h38c2.2,0,4-1.8,4-4v-4h2c2.2,0,4-1.8,4-4V11.1L45.8,0z M47,6.5l3.8,3.5H47V6.5z M48,60H10V10h4v42c0,2.2,1.8,4,4,4h30V60z M18,52V4h25v10h11l0,38H18z"/><rect x="22" y="22" width="28" height="4"/><rect x="22" y="30" width="28" height="4"/></g></svg>' ,
+	rawsvg4:{img:'<?xml version="1.0" encoding="iso-8859-1"?> <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --> <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 334 334" style="enable-background:new 0 0 334 334;" xml:space="preserve"> <g> <g> <path d="M298.6,84.4c0.4-0.4,0.4-0.4,0-0.8c0-0.4-0.4-0.8-0.4-1.2c0-0.4-0.4-0.4-0.4-0.8c0-0.4-0.4-0.8-0.4-1.2 c0-0.4-0.4-0.4-0.4-0.8c-0.4-0.4-0.4-0.8-0.8-0.8l-76-76c-0.4-0.4-1.2-0.8-1.6-1.2c-0.4,0-0.4-0.4-0.8-0.4 c-0.4-0.4-0.8-0.4-1.2-0.4c-0.4,0-0.4,0-0.8-0.4c-0.4,0-0.8-0.4-1.2-0.4c-0.4,0-1.2,0-1.6,0h-0.4H73.8C63,0,53.4,4.4,46.2,11.6 C39,18.4,35,28.4,35,38.8v256c0,10.8,4.4,20.4,11.6,27.6c7.2,7.2,16.8,11.6,27.6,11.6h186.4c10.8,0,20.4-4.4,27.6-11.6 c6.8-7.2,10.8-17.2,10.8-27.6V86.4C299,85.6,299,84.8,298.6,84.4z M222.6,34.8L264.2,76h-22.8c-5.2,0-9.6-2-13.2-5.6 c-3.2-3.2-5.6-8-5.6-13.2V34.8z M278.6,294.8c0,5.2-2,9.6-5.6,13.2c-3.2,3.2-8,5.6-13.2,5.6h-186c-5.2,0-9.6-2-13.2-5.6 c-3.2-3.2-5.6-8-5.6-13.2v-256c0-5.2,2-9.6,5.6-13.2c3.2-3.2,8-5.6,13.2-5.6h128.4v37.2c0,10.8,4.4,20.4,11.6,27.6 s16.8,11.6,27.6,11.6h37.2V294.8z"/> </g> </g> <g> <g> <path d="M241,123.6H93c-5.6,0-10.4,4.4-10.4,10.4S87,144.4,93,144.4h148c5.6,0,10.4-4.4,10.4-10.4S247,123.6,241,123.6z"/> </g> </g> <g> <g> <path d="M241,189.2H93c-5.6,0-10.4,4.4-10.4,10.4c0,5.6,4.4,10.4,10.4,10.4h148c5.6,0,10.4-4.4,10.4-10.4 C251,194,246.6,189.2,241,189.2z"/> </g> </g> <g> <g> <path d="M241,254.8H93c-5.6,0-10.4,4.4-10.4,10.4c0,5.6,4.4,10.4,10.4,10.4h148c5.6,0,10.4-4.4,10.4-10.4 C251,259.6,246.6,254.8,241,254.8z"/> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg> ' ,
 	color:Sheet.rawsvg3},
 	//rawsvg4:{img:'<svg viewBox="-41 0 511 512" xmlns="http://www.w3.org/2000/svg"><path d="m73.460938 185.210938v72.316406c0 40.027344-14.441407 78.570312-39.789063 108.691406h363.113281c-25.347656-30.121094-39.789062-68.664062-39.789062-108.691406v-72.316406c0-78.171876-63.597656-141.769532-141.765625-141.769532-78.171875 0-141.769531 63.597656-141.769531 141.769532zm0 0"/><path d="m10.886719 445.113281h408.6875v-48.878906h-408.6875zm0 0"/><path d="m215.230469 512c20.476562 0 37.175781-16.476562 37.539062-36.867188h-75.078125c.359375 20.390626 17.0625 36.867188 37.539063 36.867188zm0 0"/><path d="m140.390625 27.4375-12.175781-27.4375c-77.582032 34.429688-127.714844 111.5-127.714844 196.351562h30.015625c0-72.992187 43.128906-139.296874 109.875-168.914062zm0 0"/><path d="m399.941406 196.351562h30.015625c0-84.851562-50.128906-161.921874-127.714843-196.351562l-12.175782 27.4375c66.746094 29.617188 109.875 95.921875 109.875 168.914062zm0 0"/></svg>',
-	rawsvg5:{img:'<?xml version="1.0" encoding="UTF-8"?><svg version="1.1" viewBox="0 0 236.63 299.95" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-317.72 -178.01)"><g transform="matrix(2.8428 1.4908 -1.4908 2.8428 85.009 -2057.1)"><g transform="matrix(.83109 -.84336 .84336 .83109 -425.72 478.53)" stroke-width="0"><path d="m443.65 563.57c-1.0519-0.0129-2.107 0.0598-3.1274 0.18048l0.06 2.7509c0.99036-0.12733 2.0099-0.19417 3.0337-0.18162 12.831 0.15709 23.11 11.577 22.939 25.533-2e-3 0.17643-1e-3 0.35569-7e-3 0.53121l2.5006-0.0319c4e-3 -0.15699 4e-3 -0.31113 6e-3 -0.46872 0.18944-15.473-11.18-28.139-25.405-28.313z"/><path d="m442.9 570.53c-0.79783-0.01-1.598 0.0454-2.372 0.13688l0.0455 2.5283c0.75111-0.0966 1.5244-0.14725 2.3008-0.13774 9.7311 0.11913 16.959 8.3382 16.83 18.923-2e-3 0.1338-1e-3 0.26976-5e-3 0.40289l2.4647-0.0242c3e-3 -0.11907 3e-3 -0.23598 4e-3 -0.35547 0.14368-11.735-8.4793-21.341-19.268-21.474z"/><path d="m442.21 576.89c-0.56577-7e-3 -1.1332 0.0322-1.6821 0.0971l0.0323 2.4266c0.53265-0.0685 1.081-0.10442 1.6316-0.0977 6.9008 0.46331 10.914 5.09 11.138 12.786-1e-3 0.0949-7.7e-4 0.19129-3e-3 0.28572l2.5445-0.0171c2e-3 -0.0845 2e-3 -0.16735 3e-3 -0.25208 0.10189-8.322-6.0131-15.134-13.664-15.228z"/></g><g transform="translate(4.3273)"><path d="m428.83 632.5c1.5174 8.3951 3.1884 16.704 3.2504 25.864 13.434-7.0701 16.246-8.6004 29.68-15.671-4.844-3.3768-9.5917-7.3935-13.563-11.229-6.1412 1.9817-12.377 2.6317-19.367 1.0358zm3.0356 3.5588 2.9005 0.34654c1.6573 7.6899 1.2443 15.12-0.19508 18.637-0.5999-6.1199-0.9108-10.445-2.7055-18.984z"/><path d="m398.12 602.82c5.464 15.304 20.054 26.266 37.241 26.321 17.188 0.0547 31.819-10.803 37.38-26.073l-74.621-0.24766zm6.1134 4.377 6.5596 0.18844c4.5202 8.2308 9.0556 11.778 15.41 16.825-9.1354-2.7564-16.947-7.8077-21.97-17.013z"/><g transform="translate(2.1997 2)" stroke-width="0"><rect x="431.59" y="594.76" width="3.283" height="8.0812"/><path d="m436.64 594.01c0 2.0921-1.5264 3.7881-3.4093 3.7881-1.8829 0-3.4093-1.696-3.4093-3.7881 0-2.0921 1.5264-3.7881 3.4093-3.7881 1.8829 0 3.4093 1.696 3.4093 3.7881z"/></g></g></g></g></svg>',
+	rawsvg5:{img:'<?xml version="1.0" encoding="UTF-8"?><svg id="Capa_1" enable-background="new 0 0 511.982 511.982" viewBox="0 0 511.982 511.982" xmlns="http://www.w3.org/2000/svg"><g><path d="m255.991 169.039c-30.327 0-55 24.673-55 55 0 25.127 16.943 46.356 40 52.904v171.096c0 8.284 6.716 15 15 15s15-6.716 15-15v-171.096c23.057-6.547 40-27.777 40-52.904 0-30.327-24.673-55-55-55zm0 80c-13.785 0-25-11.215-25-25s11.215-25 25-25 25 11.215 25 25-11.215 25-25 25z"/><path d="m186.597 143.845c-5.857-5.858-15.354-5.858-21.213 0-46.505 46.503-46.512 121.781 0 168.291 5.859 5.858 15.355 5.858 21.213 0 5.858-5.857 5.858-15.355 0-21.213-34.78-34.779-34.786-91.08 0-125.865 5.858-5.858 5.858-15.356 0-21.213z"/><path d="m346.597 143.845c-5.857-5.857-15.355-5.857-21.213 0s-5.858 15.355 0 21.213c34.701 34.701 34.701 91.164 0 125.865-5.858 5.857-5.858 15.355 0 21.213 5.859 5.858 15.355 5.858 21.213 0 46.399-46.397 46.399-121.894 0-168.291z"/><path d="m141.342 119.803c5.858-5.857 5.858-15.355 0-21.213-5.857-5.857-15.355-5.857-21.213 0-71.352 71.352-71.352 187.449 0 258.801 5.856 5.857 15.354 5.86 21.213 0 5.858-5.857 5.858-15.355 0-21.213-59.654-59.655-59.654-156.72 0-216.375z"/><path d="m391.852 98.59c-5.857-5.857-15.355-5.857-21.213 0s-5.858 15.355 0 21.213c59.654 59.655 59.654 156.72 0 216.375-5.858 5.857-5.858 15.355 0 21.213 5.859 5.858 15.355 5.858 21.213 0 71.352-71.352 71.352-187.449 0-258.801z"/><path d="m96.087 74.548c5.858-5.857 5.858-15.355 0-21.213-5.857-5.857-15.355-5.857-21.213 0-99.941 99.94-99.724 249.587 0 349.311 5.856 5.857 15.354 5.86 21.213 0 5.858-5.857 5.858-15.355 0-21.213-87.475-87.477-87.475-219.408 0-306.885z"/><path d="m437.107 53.335c-5.857-5.857-15.355-5.857-21.213 0s-5.858 15.355 0 21.213c87.477 87.477 87.477 219.408 0 306.885-5.858 5.857-5.858 15.355 0 21.213 5.859 5.858 15.355 5.858 21.213 0 99.94-99.939 99.725-249.587 0-349.311z"/></g></svg>',
 	color:'#ff0066'},
 	
 	
@@ -725,6 +677,7 @@ function colPan3 () {
     $('#kalendar').iziModal('open'); */
     
 	//bootstrap modal
+	//document.getElementById('localdate1').valueAsDate = '2020/10/26';
 	$("#myModal2").modal();
 	
 }
@@ -741,7 +694,9 @@ function colOK3 () {
 	//alert(end_time);
 	//var disp_time = d110d[d110d.length-1]["Vrema"] - d110d[0]["Vrema"];
 	
+	Sheet.Kzoom = Number($("#zooom1").val()) ;
 	read_random();
+	//read_random();
 	/* $('#kalendar').iziModal('close'); */
 		
 }
@@ -749,22 +704,62 @@ function colOK3 () {
 
 //Кнопка лупа	
 function colPan4 () {
-	refresh = false;
+	
+	// refresh = false;
+	$('#form7').empty();
 	/* PArmyDialog4.show(); */
 	/* $("#lupa").css('background-color', Sheet.curcolorval);
 	$('#lupa').iziModal('open'); */
 	//bootstrap modal
+	$('#zzm1 option').remove();
+    // ?append('<option selected="selected" value="test">White</option>');
+	//добавление в список
+	
+	for (var keey in cams) {
+			$('#zzm1').append($('<option>',
+				{
+					value: cams[keey].wellN,
+					text : cams[keey].txt
+					}));
+		}
+				//console.log(cams[keey]);
+	
+	//статус подключения
+	//$('#form7').empty();
 	$("#myModal3").modal();
 	
 }
 
+var namecams='';
+var streamId='';
+var frame;
 function colOK4 () {
-/* 	PArmyDialog4.hide(); */
+	//Проверка Проверка существующих потоков
+	namecams=$("#zzm1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
+	// console.log(namecams);
+	getstatcams('check',namecams);
+	var frame = document.createElement("iframe");
+	frame.setAttribute("id", "camsf2");
+	frame.setAttribute("width", '100%');
+
+	frame.setAttribute("scrolling", "yes");
+	frame.setAttribute("frameborder", "0");
+	frame.setAttribute("allowfullscreen", "true");
+	frame.setAttribute("webkitAllowFullScreen", "true");
+	frame.setAttribute("mozallowfullscreen", "true");
+	frame.style.position = 'relative';
+	frame.style.width = '0%';
+	frame.style.height = '0%';
+	frame.style.align = 'center';
+
+	frame.setAttribute("auto_orient", "true");
+	frame.setAttribute("scaling", "fit");
 	
-	refresh = false; //navigation.js
-	Sheet.Kzoom = Number($("#zooom1").val()) ;
-	read_random();
+/* 	PArmyDialog4.hide(); */
+
 	//$('#lupa').iziModal('close');
+
+	
 }
 
 
@@ -1520,6 +1515,12 @@ writeskvs('create','skvs', String('par'+String((Object.keys(wells).length-1))),J
 readskvs('read','skvs', '','');
 }
 
+function resizeiframe(){
+	var div = document.getElementById("camsf2");
+      div.onload = function() {
+        div.style.height = div.contentWindow.document.body.scrollHeight + 'px';
+      }
+}
 //Админка
 function adm (){
 	if (onofadm){
@@ -1531,101 +1532,281 @@ function adm (){
 	
 	
 	$('#dialogvideo').dialog( "close" );// Для скрытия
-	$('#tabs').show();
+	
+	
 	onofadm = false;
+
+	//$('#tabs').empty();
+	// $('#tabvideo').show();
+	// $('#tabvideo').html(
+	// 	+'<div id="tabs">'
+	// 	+'<ul><li><a href="#tabs-1">Роторный стол</a></li><li><a href="#tabs-2">Приемный мост</a></li><li><a href="#tabs-3">ПВО</a></li></ul>'
+	// 	+'<div id="tabs-1"></div><div id="tabs-2"></div><div id="tabs-3"></div></div>'
+	// );
+	// $('#tabvideo').append('edrrr');
+	// <span id="tabsn-1" ></span>
+	document.getElementById("tabsn-1").innerHTML="Роторный стол";
+	// document.getElementById("tabsn-2").innerHTML="Приемный мост";
+	// document.getElementById("tabsn-3").innerHTML="ПВО";
+	$('#tabs').show();
 	$('#tabs-1').empty();
-	//e.preventDefault();
-	$('#tabs-1').html(' <p>'+row_str+'</p>');
-	$('#tabs-1').append(' <p>'+row_str+'</p>');
+	$('#ul1').hide();
+	// var div1 = document.createElement("div");
+	// //div1.innerHTML = "<h1>Привет!</h1>";
+	// div1.setAttribute("id", "divcams");
+	// div1.style.position = 'relative';
+	// //div1.style.backgroundColor = 'green';
+	// div1.style.width = '100%';
+	// // div1.style.margin-left = 'auto';
+	// // div1.style.margin-right = 'auto';
+	// div1.style.margin =" 0 auto";
+	// // text-align: center; 
+	// div1.setAttribute("text-align", "center");
+
+	// //style="margin-left:auto; margin-right:auto;"
+	// div1.setAttribute("class", "container");//class="container"
+	// //class="mh-100"
+	// div1.style.height =($(window).height()-2.9*($('#bigpan').height()));
+	// div1.setAttribute("data-ratio", "0.5625"); //data-ratio="0.5625"
+	// // div1.style.data-ratio ="0.417";
+	// //console.log(div1.style.width,' b  ',div1.style.height, $('#div1').height());
 	
-	//Скважины
-	$('#tabs-2').empty();
-	$('#tabs-2').append('<button type="button" name="addskv" id="addskv" class="btn btn-success mb-1" data-dismiss="modal" >+</button>');
-	$('#tabs-2').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="skvs" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Тип работ</th><th>Тип станции</th><th>Фамилия начальника</th><th>Телефон</th><th>Эл.почта</th></tr></thead><tbody></tbody></table></div>');
-	//Камеры
-	$('#tabs-3').empty();
-	$('#tabs-3').append('<button type="button" class="btn btn-success mb-1" data-dismiss="modal">+</button>');
-	$('#tabs-3').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="cams" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Камера1-станция</th><th>Камера1-стрим'+
-	'</th><th>Камера2-станция</th><th>Камера2-стрим</th><th>Камера3-станция</th><th>Камера3-стрим'+
-	'</th><th>Камера4-станция</th><th>Камера4-стрим'+
-	'</th></tr></thead><tbody></tbody></table></div>');
-	
-	for (var keey in wells) {
-		$('#skvs tbody').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
-		//$('#tabs-2').append('</div>');	
-	}
+	// //div1.setAttribute("height", "200");
+
+	// $('#tabs-1').append(div1);
+	// console.log(div1.style.width,' b  ',div1.style.height, $('#div1').height());
+
+	var frame = document.createElement("iframe");
+	frame.setAttribute("id", "camsf2");
+	// frame.setAttribute("width", "704");
+	// frame.setAttribute("height", "576");
+	// var dh=document.getElementById('divcams').offsetHeight;
+	// var dw=document.getElementById('divcams').offsetWidth;
+	// if (dh<dw){
+	// 	frame.setAttribute("width",  String(Number((div1.style.height).slice(0, (div1.style.height).length-2))*1.555)+'px');
+	// 	frame.setAttribute("height", '100%');} else {
+	// 	frame.setAttribute("width", '100%');
+	// 	frame.setAttribute("height", div1.style.height);	
+	// 	}
+	frame.setAttribute("width", '100%');
+	//frame.setAttribute("margin-left", "auto");
+	frame.setAttribute("scrolling", "yes");
+	frame.setAttribute("frameborder", "0");
+	frame.setAttribute("allowfullscreen", "true");
+	frame.setAttribute("webkitAllowFullScreen", "true");
+	frame.setAttribute("mozallowfullscreen", "true");
+	frame.style.position = 'relative';
+	frame.style.width = '0%';
+	frame.style.height = '0%';
+	frame.style.align = 'center';
+	//frame.setAttribute("align", "middle");
+	//frame.setAttribute("text-align", "center");
+	// frame.setAttribute("top", "0");
+	// frame.setAttribute("left", "0");
+	frame.setAttribute("auto_orient", "true");
+	frame.setAttribute("scaling", "fit");
+	frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=989288934770850773631823");
+	// var tabb = document.getElementById("tabs-1")
+	// tabb.insertAdjacentHTML()
 	
 
-	for (var keey in cams) {
-		$('#cams tbody').append('<tr><td>'+cams[keey].txt+'</td><td>'+cams[keey].wellN+
-		'</td><td>'+cams[keey].rtsp1+'</td><td>'+cams[keey].liveapp1+'</td><td>'+cams[keey].rtsp2+'</td><td>'+cams[keey].liveapp2+
-		'</td><td>'+cams[keey].rtsp3+'</td><td>'+cams[keey].liveapp3+'</td><td>'+cams[keey].rtsp4+'</td><td>'+cams[keey].liveapp4+
-		 '</td></tr>');
-		//$('#tabs-2').append('</div>');	
-	}
-	
-	//Динамически добавить скрипт
-	// var newScript = document.createElement("script");
-	// var inlineScript = document.createTextNode("alert('Hello World!');");
-	// newScript.appendChild(inlineScript); 
-	// target.appendChild(newScript);
-	
+	$('#tabs-1').append(frame);
+	//document.getElementById("camsf2").requestFullScreen();
+	let elem = document.querySelector("#camsf2");
 
-	//Добавить скважину
-	$('#addskv').click(function() {
-		colPan12 ();		
+	if (!document.fullscreenElement) {
+	elem.requestFullscreen().catch(err => {
+		alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
 	});
+	} else {
+	document.exitFullscreen();
+	}
+	//$('#camsf2').fullScreen();
+	
+	//resizeiframe();
 
-	//Клик скважины
-	$("#skvs tbody").on("click", "tr", function(event){
-		var tableData = $(this).children("td").map(function() {
-			return $(this).text();
-		}).get();
-		$("#colitems131").val($.trim(tableData[0]));
-		$("#colitems132").val($.trim(tableData[1]));
-		$("#colitems133").val($.trim(tableData[2]));
-		$("#colitems134").val($.trim(tableData[3]));
-		$("#colitems135").val($.trim(tableData[4]));
-		$("#colitems136").val($.trim(tableData[5]));
-		$("#colitems137").val($.trim(tableData[6]));
-		colPan13();
+	// var frame = document.createElement("iframe");
+	// frame.setAttribute("id", "camsf2");
+	// // frame.setAttribute("width", "704");
+	// // frame.setAttribute("height", "576");
+	// frame.setAttribute("width", "100%");
+	// frame.setAttribute("height", "576");
+	// frame.setAttribute("allowfullscreen", "true");
+	// frame.setAttribute("webkitAllowFullScreen", "true");
+	// frame.setAttribute("mozallowfullscreen", "true");
+	// frame.setAttribute("position", "absolute");
+	// frame.setAttribute("align", "middle");
+	// // frame.setAttribute("top", "0");
+	// // frame.setAttribute("left", "0");
+	// frame.setAttribute("auto_orient", "true");
+	// // frame.setAttribute("ratio", "16:10");
+	// frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=402550425406257962757843");
+	// // var tabb = document.getElementById("tabs-1")
+	// // tabb.insertAdjacentHTML()
+	// $('#tabs-1').append(frame);
+
+	// var frame = document.createElement("iframe");
+	// frame.setAttribute("id", "camsf2");
+	// // frame.setAttribute("width", "704");
+	// // frame.setAttribute("height", "576");
+	// frame.setAttribute("width", "100%");
+	// frame.setAttribute("height", "576");
+	// frame.setAttribute("allowfullscreen", "true");
+	// frame.setAttribute("webkitAllowFullScreen", "true");
+	// frame.setAttribute("mozallowfullscreen", "true");
+	// frame.setAttribute("position", "absolute");
+	// frame.setAttribute("align", "middle");
+	// // frame.setAttribute("top", "0");
+	// // frame.setAttribute("left", "0");
+	// frame.setAttribute("auto_orient", "true");
+	// // frame.setAttribute("ratio", "16:10");
+	// frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=973843807862020830541916");
+	// // var tabb = document.getElementById("tabs-1")
+	// // tabb.insertAdjacentHTML()
+	// $('#tabs-1').append(frame);
+
+	// var frame = document.createElement("iframe");
+	// frame.setAttribute("id", "camsf2");
+	// // frame.setAttribute("width", "704");
+	// // frame.setAttribute("height", "576");
+	// frame.setAttribute("width", "100%");
+	// frame.setAttribute("height", "576");
+	// frame.setAttribute("allowfullscreen", "true");
+	// frame.setAttribute("webkitAllowFullScreen", "true");
+	// frame.setAttribute("mozallowfullscreen", "true");
+	// frame.setAttribute("position", "absolute");
+	// frame.setAttribute("align", "middle");
+	// // frame.setAttribute("top", "0");
+	// // frame.setAttribute("left", "0");
+	// frame.setAttribute("auto_orient", "true");
+	// // frame.setAttribute("ratio", "16:10");
+	// frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=739604144503658806859147");
+	// // var tabb = document.getElementById("tabs-1")
+	// // tabb.insertAdjacentHTML()
+	// $('#tabs-1').append(frame);
+	// //frame.setAttribute("webkitAllowFullScreen mozallowfullscreen allowfullscreen");
+	// //document.body.appendChild(frame);
+	// //Zem2Pyf4Buk5
+	
+	// $('#tabs-1').html(
+	// +'<iframe width="100%" height="100%"'
+    // +'style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"'
+    // +'webkitAllowFullScreen mozallowfullscreen allowfullscreen allow="autoplay"'
+    // +'title="0" byline="0" portrait="0"'
+    // +'width="280" height="157"'
+    // +'frameborder="0"'
+    // +' allow="autoplay"'
+    // +'src="//hydrofalll.ddns.net:5443/LiveApp/play.html?name=259399779848013677881662"> </iframe>'
+    
+	// );
+
+// 	<!-- <div id="tabs">
+//   <ul>
+//     <li><a href="#tabs-1">Пользователи</a></li>
+//     <li><a href="#tabs-2">Скважины</a></li>
+//     <li><a href="#tabs-3">Камеры</a></li>
+//   </ul>
+//   <div id="tabs-1">
+//   </div>
+//   <div id="tabs-2">
+//   </div>
+//   <div id="tabs-3">
+//   </div>
+// </div> -->
+
+	// $('#tabs-1').empty();
+	// //e.preventDefault();
+	// $('#tabs-1').html(' <p>'+row_str+'</p>');
+	// $('#tabs-1').append(' <p>'+row_str+'</p>');
+	
+	// //Скважины
+	// $('#tabs-2').empty();
+	// $('#tabs-2').append('<button type="button" name="addskv" id="addskv" class="btn btn-success mb-1" data-dismiss="modal" >+</button>');
+	// $('#tabs-2').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="skvs" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Тип работ</th><th>Тип станции</th><th>Фамилия начальника</th><th>Телефон</th><th>Эл.почта</th></tr></thead><tbody></tbody></table></div>');
+	// //Камеры
+	// $('#tabs-3').empty();
+	// $('#tabs-3').append('<button type="button" class="btn btn-success mb-1" data-dismiss="modal">+</button>');
+	// $('#tabs-3').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="cams" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Камера1-станция</th><th>Камера1-стрим'+
+	// '</th><th>Камера2-станция</th><th>Камера2-стрим</th><th>Камера3-станция</th><th>Камера3-стрим'+
+	// '</th><th>Камера4-станция</th><th>Камера4-стрим'+
+	// '</th></tr></thead><tbody></tbody></table></div>');
+	
+	// for (var keey in wells) {
+	// 	$('#skvs tbody').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
+	// 	//$('#tabs-2').append('</div>');	
+	// }
+	
+
+	// for (var keey in cams) {
+	// 	$('#cams tbody').append('<tr><td>'+cams[keey].txt+'</td><td>'+cams[keey].wellN+
+	// 	'</td><td>'+cams[keey].rtsp1+'</td><td>'+cams[keey].liveapp1+'</td><td>'+cams[keey].rtsp2+'</td><td>'+cams[keey].liveapp2+
+	// 	'</td><td>'+cams[keey].rtsp3+'</td><td>'+cams[keey].liveapp3+'</td><td>'+cams[keey].rtsp4+'</td><td>'+cams[keey].liveapp4+
+	// 	 '</td></tr>');
+	// 	//$('#tabs-2').append('</div>');	
+	// }
+	
+	// //Динамически добавить скрипт
+	// // var newScript = document.createElement("script");
+	// // var inlineScript = document.createTextNode("alert('Hello World!');");
+	// // newScript.appendChild(inlineScript); 
+	// // target.appendChild(newScript);
+	
+
+	// //Добавить скважину
+	// $('#addskv').click(function() {
+	// 	colPan12 ();		
+	// });
+
+	// //Клик скважины
+	// $("#skvs tbody").on("click", "tr", function(event){
+	// 	var tableData = $(this).children("td").map(function() {
+	// 		return $(this).text();
+	// 	}).get();
+	// 	$("#colitems131").val($.trim(tableData[0]));
+	// 	$("#colitems132").val($.trim(tableData[1]));
+	// 	$("#colitems133").val($.trim(tableData[2]));
+	// 	$("#colitems134").val($.trim(tableData[3]));
+	// 	$("#colitems135").val($.trim(tableData[4]));
+	// 	$("#colitems136").val($.trim(tableData[5]));
+	// 	$("#colitems137").val($.trim(tableData[6]));
+	// 	colPan13();
 		
 		//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
-	});
+	// });
 
 
-	//Клик Камеры
-	$("#cams tbody").on("click", "tr", function(event){
-		var tableData = $(this).children("td").map(function() {
-			return $(this).text();
-		}).get();
+	// //Клик Камеры
+	// $("#cams tbody").on("click", "tr", function(event){
+	// 	var tableData = $(this).children("td").map(function() {
+	// 		return $(this).text();
+	// 	}).get();
 	
-		alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
-	});
+	// 	alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
+	// });
 
 	
-	// $("#myButton").on('click',function(){
+	// // $("#myButton").on('click',function(){
  
-	// 	var arrData=[];
-	// 	// loop over each table row (tr)
-	// 	$("#myTable tr").each(function(){
-	// 		 var currentRow=$(this);
+	// // 	var arrData=[];
+	// // 	// loop over each table row (tr)
+	// // 	$("#myTable tr").each(function(){
+	// // 		 var currentRow=$(this);
 		 
-	// 		 var col1_value=currentRow.find("td:eq(0)").text();
-	// 		 var col2_value=currentRow.find("td:eq(1)").text();
-	// 		 var col3_value=currentRow.find("td:eq(2)").text();
+	// // 		 var col1_value=currentRow.find("td:eq(0)").text();
+	// // 		 var col2_value=currentRow.find("td:eq(1)").text();
+	// // 		 var col3_value=currentRow.find("td:eq(2)").text();
 	 
-	// 		  var obj={};
-	// 		 obj.col1=col1_value;
-	// 		 obj.col2=col2_value;
-	// 		 obj.col3=col3_value;
+	// // 		  var obj={};
+	// // 		 obj.col1=col1_value;
+	// // 		 obj.col2=col2_value;
+	// // 		 obj.col3=col3_value;
 	 
-	// 		 arrData.push(obj);
-	// 	});
-	// 	 alert(arrData);
-	// 	 console.log(arrData);
+	// // 		 arrData.push(obj);
+	// // 	});
+	// // 	 alert(arrData);
+	// // 	 console.log(arrData);
 	 
-	//  });
+	// //  });
 
 	} else {
 		
@@ -1633,6 +1814,11 @@ function adm (){
 		
 		$('#dialogvideo').dialog( "open" );// Для скрытия
 		$('#tabs').hide();
+		$('#camsf2').remove();
+		$('#tabs-1').empty();
+		//document.getElementById("camsf2").innerHTML="Роторный стол";
+		// $('#tabs').empty();
+		// $('#tabs').hide();
 		
 		$('#drawing').empty();
 		$('#drawing').show();
@@ -1640,6 +1826,8 @@ function adm (){
 		refresh = true;
 		onofadm = true;
 		init();
+		colOK11();
+		read_now();
 
 	}
 
