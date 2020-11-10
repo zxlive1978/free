@@ -1833,7 +1833,15 @@ function adm (){
 
 }
 
+//старт стоп прием
+function colok14(){
 
+	if(refresh){refresh=false; online=false;}
+					else{
+					if (loaddata == false){
+						read_now(); //pong.js
+						}}
+}
 
 //Очистка и рендеринг
 function repaint() {

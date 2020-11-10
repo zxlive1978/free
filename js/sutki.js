@@ -2070,11 +2070,7 @@ function init(){
 			if (kn==5){
 				group1.click(function() {
 					//this.attr('fill','#000');
-					if(refresh){refresh=false; online=false;}
-					else{
-					if (loaddata == false){
-						read_now(); //pong.js
-						}}
+					colok14();
 					this.attr('fill',Sheet['rawsvg'+String(this.attr('id'))]);
 				
 				})

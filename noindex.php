@@ -141,7 +141,7 @@ if (!$_SESSION['auth']) {
 		<button class="dropdown-item " type="button" onclick='colPan3()'>Выбор даты</button>
     <button class="dropdown-item " type="button" onclick='colPan4()'>Просмотр видеокамер</button>
     <button class="dropdown-item " type="button" onclick='colPan9()'>Загрузить/Сохранить(Создать) форму</button>
-    <button class="dropdown-item " type="button" onclick='read_now()'>Старт приема текущих значений</button>
+    <button class="dropdown-item " type="button" onclick='colok14()'>Старт/Cтоп приема текущих значений</button>
 		</div>
 		</div>
 	  </li>
