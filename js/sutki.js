@@ -2060,11 +2060,11 @@ function init(){
 			rec1.attr('opacity','0.0');
 			//rec1.attr('x',String(x2));
 			group1.mouseover(function() {
-			if (kn!=9){
+			if (kn!=5){
 			this.attr('fill', getRandomColor() );}
 			})
 			group1.mouseout(function() {
-			if (kn!=9){
+			if (kn!=5){
 			this.attr('fill',Sheet['rawsvg'+String(this.attr('id'))])}});
 			//Если нажата тарелка
 			if (kn==5){
