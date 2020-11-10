@@ -1890,13 +1890,15 @@ function init(){
 						// });
 						gfx_group
 						//.delay(5000)
-						.rotate(-180)
+						.rotate(-90)
+						// .move(1000,1000)
 						//.scale(0.1)
 						.opacity(0)
-						.animate(1400, 'quadInOut')
+						.animate(1500, 'expoOut')
 						// .scale(1.0)//.cy(h1*Sheet.height_value/2)
 						.opacity(1)
 						.rotate(0)
+						// .move(0,0)
 						//.reverse(true)
 						//.loop()
 						
