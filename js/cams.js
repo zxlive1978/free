@@ -35,7 +35,10 @@ function getstatcams(whatdo, namecams){
                         frame.style.position = 'relative';
                         frame.style.width = '0%';
                         frame.style.height = '0%';
-                        frame.style.align = 'center';
+                        frame.style.margin = '0 0 0 0';
+                        frame.style.top = '50%';
+                        frame.style.height = '0%';
+                        frame.style.align = 'middle';
                     
                         frame.setAttribute("auto_orient", "true");
                         frame.setAttribute("scaling", "fit");

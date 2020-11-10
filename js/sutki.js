@@ -2069,7 +2069,7 @@ function init(){
 			//Если нажата тарелка
 			if (kn==5){
 				group1.click(function() {
-					this.attr('fill','#000');
+					//this.attr('fill','#000');
 					if (loaddata == false){
 						read_now(); //pong.js
 						}
