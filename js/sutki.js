@@ -1889,11 +1889,12 @@ function init(){
 						// 	gfx_group.clear();
 						// });
 						gfx_group
-						.delay(5000)
-						.animate(3000).scale(0, 0).cy(h1*Sheet.height_value/2)
-						.reverse(true)
-						.loop()
 						
+						.animate(1000)
+						
+						.scale(0)
+						.reverse(true)
+
 					
 						//Удаление текущих значений
 						gfxr.click(function() { 
