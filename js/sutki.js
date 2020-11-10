@@ -1889,9 +1889,11 @@ function init(){
 						// 	gfx_group.clear();
 						// });
 						gfx_group
-						.animate(5000, "elastic").scale('20%', '20%')
+						.delay(5000)
+						.animate(3000).scale(0, 0).cy(h1*Sheet.height_value/2)
 						.reverse(true)
 						.loop()
+						
 					
 						//Удаление текущих значений
 						gfxr.click(function() { 
