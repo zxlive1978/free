@@ -1893,7 +1893,7 @@ function init(){
 							this.remove();
 							gfx_group.remove();
 							//Очистка холста и перерисовка
-							repaint();
+							//repaint();
 						})
 					})
 				}
