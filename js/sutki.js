@@ -1875,6 +1875,9 @@ function init(){
 						.opacity(0)
 						.stroke({ width: Sheet.width_gxf_line, dasharray: '2,3', color: Sheet.syscolor})
 						.id(this.attr('id'))
+						.animate(1000, '<>')
+						.plot('M10 80 C 40 150, 65 150, 95 80 S 150 10, 180 80')
+						.loop(true, true)
 
 						gfx_group.add(gfxr);
 						//console.log(gfxr.attr(id));
@@ -1885,6 +1888,8 @@ function init(){
 						// 	//mouseDwn = false;
 						// 	gfx_group.clear();
 						// });
+						
+					
 						//Удаление текущих значений
 						gfxr.click(function() { 
 							
