@@ -2060,20 +2060,23 @@ function init(){
 			rec1.attr('opacity','0.0');
 			//rec1.attr('x',String(x2));
 			group1.mouseover(function() {
-			if (kn!=5){
+			if (kn!=9){
 			this.attr('fill', getRandomColor() );}
 			})
 			group1.mouseout(function() {
-			if (kn!=5){
+			if (kn!=9){
 			this.attr('fill',Sheet['rawsvg'+String(this.attr('id'))])}});
 			//Если нажата тарелка
 			if (kn==5){
 				group1.click(function() {
 					//this.attr('fill','#000');
+					if(refresh){refresh=false; online=false;}
+					else{
 					if (loaddata == false){
 						read_now(); //pong.js
-						}
+						}}
 					this.attr('fill',Sheet['rawsvg'+String(this.attr('id'))]);
+				
 				})
 			}
 			
