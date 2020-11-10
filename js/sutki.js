@@ -1889,18 +1889,7 @@ function init(){
 						// 	gfx_group.clear();
 						// });
 						gfx_group
-						.animate(3000).move(100, 100).during(function(pos, morph, eased, situation) {
-							// numeric values
-							gfx_group.size(morph(100, 200), morph(100, 50))
-						  
-							// unit strings
-							gfx_group.attr('cx', morph('20%', '80%'))
-						  
-							// hex color strings
-							gfx_group.fill(morph('#333', '#ff0066'))
-						  })
-
-						//.move(200, 200).reverse(true).animate().dmove(50,50).size(300,400)
+						.animate(5000, "elastic").scale('20%', '20%')
 						.reverse(true)
 						.loop()
 					
