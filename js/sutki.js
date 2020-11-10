@@ -1867,6 +1867,7 @@ function init(){
 							}
 						}
 						var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
+						
 						//var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
 						//ширина поля со клик зачениями
 						// weight_colmn1 = w1*(Columns["col"+String(Number((txtPar[keey].poz.x)))].size.w)/2;
@@ -1875,9 +1876,8 @@ function init(){
 						.opacity(0)
 						.stroke({ width: Sheet.width_gxf_line, dasharray: '2,3', color: Sheet.syscolor})
 						.id(this.attr('id'))
-						.animate(1000, '<>')
-						.plot('M10 80 C 40 150, 65 150, 95 80 S 150 10, 180 80')
-						.loop(true, true)
+						
+						
 
 						gfx_group.add(gfxr);
 						//console.log(gfxr.attr(id));
@@ -1888,7 +1888,12 @@ function init(){
 						// 	//mouseDwn = false;
 						// 	gfx_group.clear();
 						// });
+						gfx_group
+						.animate()
 						
+						//.move(200, 200).reverse(true).animate().dmove(50,50).size(300,400)
+						.reverse(true)
+						.loop()
 					
 						//Удаление текущих значений
 						gfxr.click(function() { 

@@ -63,6 +63,7 @@ if (!$_SESSION['auth']) {
 
 <script type="text/javascript" src="js/svg.min.js"></script>
 <script type="text/javascript" src="js/svg.draggable.min.js"></script>
+<script type="text/javascript" src="js/svg.easing.min.js"></script>
 
 <script type="text/javascript" src="js/loadsave.js"></script>
 <script type="text/javascript" src="js/cams.js"></script>
