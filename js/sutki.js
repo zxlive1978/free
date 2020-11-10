@@ -1889,10 +1889,16 @@ function init(){
 						// 	gfx_group.clear();
 						// });
 						gfx_group
-						.delay(5000)
-						.animate(3000).scale(0, 0).cy(h1*Sheet.height_value/2)
-						.reverse(true)
-						.loop()
+						//.delay(5000)
+						.rotate(-180)
+						//.scale(0.1)
+						.opacity(0)
+						.animate(1400, 'quadInOut')
+						// .scale(1.0)//.cy(h1*Sheet.height_value/2)
+						.opacity(1)
+						.rotate(0)
+						//.reverse(true)
+						//.loop()
 						
 					
 						//Удаление текущих значений
