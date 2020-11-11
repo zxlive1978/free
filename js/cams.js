@@ -23,7 +23,7 @@ function getstatcams(whatdo, namecams){
 
                 for (var keey in livestatcams) {
                     // console.log(livestatcams[keey]);
-                    if (livestatcams[keey].name==namecams && livestatcams[keey].hlsViewerCount>0 && fundstream==false){
+                    if (livestatcams[keey].name==namecams && livestatcams[keey].status=='broadcasting' && fundstream==false){
                         //Найден ли Поток
                         fundstream= true;
                         //ID текущего потока
@@ -36,19 +36,19 @@ function getstatcams(whatdo, namecams){
                             //$('#form7').append('\Готов');
                         $('#gogo').prop('disabled', false);
                         
-                        //return 0;
+                        return 0;
 
                     }else { 
                         //удаление старых потоков
-                        if (Number(livestatcams[keey].hlsViewerCount)<1){
+                        if (Number(livestatcams[keey].hlsViewerCount)==0){
                         $.ajax({
                             type: "POST",
                             url: 'js/cams.php',
-                            data: {whatdo:'delete', namecams: livestatcams[curkey].streamId},
+                            data: {whatdo:'delete', namecams: livestatcams[keey].streamId},
                             cache: false,
                             async: false,
                             success: function(data){
-                                $('#form7').append("\nУдален поток..."+livestatcams[curkey].name);
+                                $('#form7').append("\nУдален поток..."+livestatcams[keey].name);
                             }
                         });
 
