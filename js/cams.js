@@ -20,7 +20,7 @@ function getstatcams(whatdo, namecams){
 
                 for (var keey in livestatcams) {
                     // console.log(livestatcams[keey]);
-                    if (livestatcams[keey].name==namecams ){//&& livestatcams[keey].status=='broadcasting'){
+                    if (livestatcams[keey].name==namecams && livestatcams[keey].hlsViewerCount>0){
                         //Найден ли Поток
                         fundstream= true;
                         //ID текущего потока
@@ -106,7 +106,7 @@ function getstatcams(whatdo, namecams){
 
                     }else { 
                         //удаление старых потоков
-                        if (Number(livestatcams[keey].hlsViewerCount)<2){
+                        if (Number(livestatcams[keey].hlsViewerCount)<=2){
                         $.ajax({
                             type: "POST",
                             url: 'js/cams.php',
@@ -164,9 +164,17 @@ function getstatcams(whatdo, namecams){
                                         streamId=s['message'];
                                         //$('#form7').append('\nСоздание iframe...');
                                         //for(var j=0; j<10; j++){
-                                        setTimeout(function() {
+                                        let j=10
+                                        let moto =setTimeout(function tiktak () {
+                                            j=j-1;
+                                        if (j==0){
+                                            clearTimeout(moto);
+                                            return 0;
+                                        }
                                         getstatcams('check',namecams);
-                                                }, 5000);
+                                        setTimeout(tiktak, 3000);
+
+                                                }, 3000);
 
                                         //}
                                     }
