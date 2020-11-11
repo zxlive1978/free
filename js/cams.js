@@ -4,6 +4,8 @@ function getstatcams(whatdo, namecams){
         // online = false;
         //$('#form7').empty();
         let fundstream = false;
+        let curstramID ="";
+        let curkey;
         $('#form7').append('\nПоиск в потоках....');
         $.ajax({
             type: "POST",
@@ -19,7 +21,12 @@ function getstatcams(whatdo, namecams){
                 for (var keey in livestatcams) {
                     // console.log(livestatcams[keey]);
                     if (livestatcams[keey].name==namecams ){//&& livestatcams[keey].status=='broadcasting'){
+                        //Найден ли Поток
                         fundstream= true;
+                        //ID текущего потока
+                        curstramID=livestatcams[keey].streamId;
+                        //Текущий key
+                        curkey=keey;
                         $('#form7').append('Найден');
                         $('#form7').append('\nСоздание iframe...');
                         //if (livestatcams[keey].status=='broadcasting' ){
@@ -57,6 +64,16 @@ function getstatcams(whatdo, namecams){
                     
                         function exitHandler() {
                             if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+                                $.ajax({
+                                    type: "POST",
+                                    url: 'js/cams.php',
+                                    data: {whatdo:'delete', namecams: livestatcams[curkey].streamId},
+                                    cache: false,
+                                    async: false,
+                                    success: function(data){
+                                        $('#form7').append("\nУдален поток..."+livestatcams[curkey].name);
+                                    }
+                                });
                                 
                                 $('#camsf2').remove();
                                 // console.log('dsds');
@@ -89,15 +106,15 @@ function getstatcams(whatdo, namecams){
 
                     }else { 
                         //удаление старых потоков
-                        if (Number(livestatcams[keey].hlsViewerCount)==0 ){
+                        if (Number(livestatcams[keey].hlsViewerCount)<2){
                         $.ajax({
                             type: "POST",
                             url: 'js/cams.php',
-                            data: {whatdo:'delete', namecams: livestatcams[keey].streamId},
+                            data: {whatdo:'delete', namecams: curstramID},
                             cache: false,
                             async: false,
                             success: function(data){
-                                $('#form7').append("\nУдален поток..."+livestatcams[keey].name);
+                                $('#form7').append("\nУдален поток..."+curstramID);
                             }
                         });
 
