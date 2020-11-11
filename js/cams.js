@@ -88,14 +88,47 @@ function getstatcams(whatdo, namecams){
                                         streamId=s['message'];
                                         //$('#form7').append('\nСоздание iframe...');
                                         //for(var j=0; j<10; j++){
-                                       
+                                        let moto =setTimeout(function tiktak () {
                                             if (jumpjump==0 || fundstream == true){
                                                 // clearTimeout(moto);
                                                 return 0;
                                             } else{
+                                                $.ajax({
+                                                    type: "POST",
+                                                    url: 'js/cams.php',
+                                                    data: {whatdo:'check', namecams: namecams},
+                                                    cache: false,
+                                                    async: false,
+                                                    success: function(data){
+                                                        livestatcams =null;
+                                                        //console.log(data);
+                                                        livestatcams = JSON.parse(data);
+                                        
+                                                        for (var keey in livestatcams) {
+                                                            // console.log(livestatcams[keey]);
+                                                            if (livestatcams[keey].name==namecams  && fundstream==false && livestatcams[keey].status=='broadcasting'){
+                                                                //Найден ли Поток
+                                                                fundstream= true;
+                                                                //ID текущего потока
+                                                                curstramID=livestatcams[keey].streamId;
+                                                                //Текущий key
+                                                                curkey=keey;
+                                                                $('#form7').append('Найден');
+                                                                $('#form7').append('\nСоздание iframe...');
+                                                                //if (livestatcams[keey].status=='broadcasting' ){
+                                                                    //$('#form7').append('\Готов');
+                                                                $('#gogo').prop('disabled', false);
+                                                                
+                                                                return 0;
+                                        
+                                                            }}}})
                                             jumpjump=jumpjump+1;
                                             //getstatcams('check',namecams);
-                                            setTimeout(getstatcams('check',namecams), jumpjump*3000);}
+                                            setTimeout(tiktak, 3000);
+                                        
+                                        
+                                        
+                                        }})
                                     
                                             
                                         
