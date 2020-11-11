@@ -7,6 +7,9 @@ function getstatcams(whatdo, namecams, search){
         // refresh = false;
         // online = false;
         //$('#form7').empty();
+        let moto =setTimeout(function tiktak () {
+            console.log(jumpjump);
+           
         let fundstream = false;
       
         $('#form7').append('\nПоиск в потоках....');
@@ -87,18 +90,8 @@ function getstatcams(whatdo, namecams, search){
                                         //$('#form7').append('\nСоздание iframe...');
                                         //for(var j=0; j<10; j++){
                                        
-                                        let moto =setTimeout(function tiktak () {
-                                            console.log(jumpjump);
-                                           
-                                        if (jumpjump==0 || fundstream == true){
-                                            clearTimeout(moto);
-                                            return 0;
-                                        } else{
-                                        getstatcams('check',namecams);
-                                        setTimeout(tiktak, 3000);}
-
-                                        jumpjump=jumpjump-1;}
-                                                , 3000);
+                                       
+                                        
 
                                         //}
                                     }
@@ -122,7 +115,16 @@ function getstatcams(whatdo, namecams, search){
                 // ..$('#form7').append('ОК');
             }}
         });
-    
+
+        if (jumpjump==0 || fundstream == true){
+            clearTimeout(moto);
+            return 0;
+        } else{
+        //getstatcams('check',namecams);
+        setTimeout(tiktak, 3000);}
+
+        jumpjump=jumpjump-1;}
+                , 3000);
 };
  
 //старт отображения камеры
