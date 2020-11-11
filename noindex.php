@@ -487,7 +487,7 @@ window.onload = getStart;
 
 </div>        
         <!-- Modal footer -->
-        <div class="modal-footer">
+        <div class="modal-footer"> <button type="button" class="btn btn-success" id ="gogo" onclick='gocams()' disabled >Просмотр</button>
 			<button type="button" class="btn btn-success" id ="govideo" onclick='colOK4()'>Подключить</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>

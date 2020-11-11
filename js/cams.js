@@ -1,11 +1,14 @@
+
+
+  var curstramID ="";
+  var curkey;
 //забор статистики по камерам
 function getstatcams(whatdo, namecams){
         // refresh = false;
         // online = false;
         //$('#form7').empty();
         let fundstream = false;
-        var curstramID ="";
-        var curkey;
+      
         $('#form7').append('\nПоиск в потоках....');
         $.ajax({
             type: "POST",
@@ -31,7 +34,7 @@ function getstatcams(whatdo, namecams){
                         $('#form7').append('\nСоздание iframe...');
                         //if (livestatcams[keey].status=='broadcasting' ){
                             //$('#form7').append('\Готов');
-                       
+                        $('#gogo').prop('disabled', false);
                         
                         //return 0;
 
@@ -134,6 +137,7 @@ function getstatcams(whatdo, namecams){
  
 //старт отображения камеры
 function gocams(){
+    $('#gogo').prop('disabled', true);
                         var frame = document.createElement("iframe");
                         frame.setAttribute("id", "camsf2");
                         frame.setAttribute("width", '100%');
@@ -153,7 +157,7 @@ function gocams(){
                     
                         frame.setAttribute("auto_orient", "true");
                         frame.setAttribute("scaling", "fit");
-                        frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name="+livestatcams[keey].streamId);
+                        frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name="+livestatcams[curkey].streamId);
                         $('#form7').append('ОК');
                     
                         $('#tabvideo').append(frame);
@@ -166,7 +170,7 @@ function gocams(){
                     
                         function exitHandler() {
                             if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
-                                if (livestatcams[keey].hlsViewerCount<=1){
+                                if (livestatcams[curkey].hlsViewerCount<=1){
                                 $.ajax({
                                     type: "POST",
                                     url: 'js/cams.php',
