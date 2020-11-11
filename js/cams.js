@@ -16,7 +16,7 @@ function getstatcams(whatdo, namecams){
                 livestatcams = JSON.parse(data);
 
                 for (var keey in livestatcams) {
-                    console.log(livestatcams[keey]);
+                    // console.log(livestatcams[keey]);
                     if (livestatcams[keey].name==namecams ){//&& livestatcams[keey].status=='broadcasting'){
                         $('#form7').append('Найден');
                         $('#form7').append('\nСоздание iframe...');

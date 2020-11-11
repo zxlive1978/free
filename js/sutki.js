@@ -1889,20 +1889,33 @@ function init(){
 						// 	gfx_group.clear();
 						// });
 						gfx_group
+						//.delay(5000)
+						.rotate(-90)
+						// .move(1000,1000)
+						//.scale(0.1)
+						.opacity(0)
+						.animate(1500, 'expoOut')
+						// .scale(1.0)//.cy(h1*Sheet.height_value/2)
+						.opacity(1)
+						.rotate(0)
+						// .move(0,0)
+						//.reverse(true)
+						//.loop()
 						
-						.animate(1000)
-						
-						.scale(0)
-						.reverse(true)
-
 					
 						//Удаление текущих значений
 						gfxr.click(function() { 
 							
-							// gfx_group.clear();
+							gfx_group.clear();
 							/* if (online == true){refresh = true;} */
-							this.remove();
-							gfx_group.remove();
+							
+							
+							
+							// this.remove();
+							// gfx_group.remove();
+							
+							
+							
 							//Очистка холста и перерисовка
 							//repaint();
 						})
@@ -1962,7 +1975,7 @@ function init(){
 		
 		cir4.draggable(
 		
-		).on('dragstart', function(e){
+		).on('touchstart', function(e){
 			exs = e.detail.p.x;
 			eys = e.detail.p.y;
 			})
@@ -1970,7 +1983,7 @@ function init(){
 			
 		cir4.draggable(
 		
-		).on('dragmove', function(e){
+		).on('touchmove', function(e){
 			ex = e.detail.p.x;
 			ey = e.detail.p.y;
 			})
@@ -1981,7 +1994,7 @@ function init(){
 			, minY: -Columns.col0.size.h*h1
 			, maxX: Columns.col0.size.w*w1/1.1
 			, maxY: 100*h1}
-		).on('dragend', function(e){
+		).on('touchend', function(e){
 				//console.log(ey, eys);
 				if (ey> eys){
 					if (loaddata == false){
@@ -1991,6 +2004,40 @@ function init(){
 					read_up()};//см .navigation.js 
 				}
 				})
+
+				cir4.draggable(
+		
+					).on('dragstart', function(e){
+						exs = e.detail.p.x;
+						eys = e.detail.p.y;
+						})
+						
+						
+					cir4.draggable(
+					
+					).on('dragmove', function(e){
+						ex = e.detail.p.x;
+						ey = e.detail.p.y;
+						})
+					
+			
+					cir4.draggable(
+					{minX: 0
+						, minY: -Columns.col0.size.h*h1
+						, maxX: Columns.col0.size.w*w1/1.1
+						, maxY: 100*h1}
+					).on('dragend', function(e){
+							//console.log(ey, eys);
+							if (ey> eys){
+								if (loaddata == false){
+								read_down();}//см .navigation.js 
+							} else {
+								if (loaddata == false){
+								read_up()};//см .navigation.js 
+							}
+							})
+
+		
 		
 		//Шапка Угловой квадрат
 		var colmn0 = draw.polygon('0,0 '+w1*Columns.col0.size.w+',0 ' + w1*Columns.col0.size.w + ',' + h1*Columns.col0.size.h + ' 0,' + h1*Columns.col0.size.h)
