@@ -732,28 +732,28 @@ function colPan4 () {
 
 var namecams='';
 var streamId='';
-var frame;
+// var frame;
 function colOK4 () {
 	//Проверка Проверка существующих потоков
 	namecams=$("#zzm1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
 	// console.log(namecams);
 	getstatcams('check',namecams);
-	var frame = document.createElement("iframe");
-	frame.setAttribute("id", "camsf2");
-	frame.setAttribute("width", '100%');
+	// var frame = document.createElement("iframe");
+	// frame.setAttribute("id", "camsf2");
+	// frame.setAttribute("width", '100%');
 
-	frame.setAttribute("scrolling", "yes");
-	frame.setAttribute("frameborder", "0");
-	frame.setAttribute("allowfullscreen", "true");
-	frame.setAttribute("webkitAllowFullScreen", "true");
-	frame.setAttribute("mozallowfullscreen", "true");
-	frame.style.position = 'relative';
-	frame.style.width = '0%';
-	frame.style.height = '0%';
-	frame.style.align = 'center';
+	// frame.setAttribute("scrolling", "yes");
+	// frame.setAttribute("frameborder", "0");
+	// frame.setAttribute("allowfullscreen", "true");
+	// frame.setAttribute("webkitAllowFullScreen", "true");
+	// frame.setAttribute("mozallowfullscreen", "true");
+	// frame.style.position = 'relative';
+	// frame.style.width = '0%';
+	// frame.style.height = '0%';
+	// frame.style.align = 'center';
 
-	frame.setAttribute("auto_orient", "true");
-	frame.setAttribute("scaling", "fit");
+	// frame.setAttribute("auto_orient", "true");
+	// frame.setAttribute("scaling", "fit");
 	
 /* 	PArmyDialog4.hide(); */
 
