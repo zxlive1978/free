@@ -3,6 +3,7 @@ function getstatcams(whatdo, namecams){
         // refresh = false;
         // online = false;
         //$('#form7').empty();
+        let fundstream = false;
         $('#form7').append('\nПоиск в потоках....');
         $.ajax({
             type: "POST",
@@ -18,6 +19,7 @@ function getstatcams(whatdo, namecams){
                 for (var keey in livestatcams) {
                     // console.log(livestatcams[keey]);
                     if (livestatcams[keey].name==namecams ){//&& livestatcams[keey].status=='broadcasting'){
+                        fundstream= true;
                         $('#form7').append('Найден');
                         $('#form7').append('\nСоздание iframe...');
                         //if (livestatcams[keey].status=='broadcasting' ){
@@ -83,7 +85,7 @@ function getstatcams(whatdo, namecams){
                           if (document.exitFullscreen) {
                             document.exitFullscreen(); 
                           }}
-                        return 0;
+                        //return 0;
 
                     }else { 
                         //удаление старых потоков
@@ -110,6 +112,7 @@ function getstatcams(whatdo, namecams){
                 //    console.log(livestatcams[keey].name);
                 //    console.log(livestatcams[keey].hlsViewerCount);//0
                 }
+                if (!fundstream){
                 $('#form7').append('Не найден');
                 //создаем поток
                 $('#form7').append("\nСоздаем поток "+namecams+"...");
@@ -168,7 +171,7 @@ function getstatcams(whatdo, namecams){
                     });
 
                 // ..$('#form7').append('ОК');
-            }
+            }}
         });
     
 };
