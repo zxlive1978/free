@@ -1385,7 +1385,7 @@ for (var keey in wells) {
 		wells[keey].tel = String($("#colitems136").val());
 		wells[keey].email = String($("#colitems137").val());
 		//Обновить скважину в mysql в таблицу skvs
-		update('update','skvs',  keey.slice(3 , ),JSON.stringify(Object.assign({}, wells[keey])));
+		update('update','skvs',  keey.slice(3 , keey.length-1),JSON.stringify(Object.assign({}, wells[keey])));
 	}
 }
 
@@ -1404,7 +1404,7 @@ function colOK131 () {
 	for (var keey in wells) {
 		//console.log( keey);
 		if (wells[keey].wellN == String($("#colitems132").val())) {
-			deleteskvs('delete','skvs', keey.slice(3 , ));
+			deleteskvs('delete','skvs', keey.slice(3 ,  keey.length-1));
 			//console.log( keey, keey.slice(3 , ));
 			delete (wells[keey]);
 		}

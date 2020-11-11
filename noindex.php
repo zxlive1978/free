@@ -283,15 +283,16 @@ function getStart() {
 	  $("#nastrtxtpar").iziModal();
 	  $("#nastrtxtlabel").iziModal();
 	  $("#openfile").iziModal();
-	  $("#savefile").iziModal(); */
+    $("#savefile").iziModal(); */
+    window.onresize = function(event) {
+    repaint();
+    //console.log('ресайз');
+    };
 	  
 	  
 }
 window.onload = getStart;
-window.onresize = function(event) {
-    repaint();
-    //console.log('ресайз');
-};
+
 </script>
 
 
