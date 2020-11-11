@@ -26,7 +26,7 @@ function getstatcams(whatdo, namecams){
 
                 for (var keey in livestatcams) {
                     // console.log(livestatcams[keey]);
-                    if (livestatcams[keey].name==namecams  && fundstream==false && livestatcams[keey].status=='broadcasting'){
+                    if (livestatcams[keey].name==namecams  && fundstream==false){
                         //Найден ли Поток
                         fundstream= true;
                         //ID текущего потока
