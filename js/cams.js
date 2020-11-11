@@ -23,7 +23,7 @@ function getstatcams(whatdo, namecams, search){
 
                 for (var keey in livestatcams) {
                     // console.log(livestatcams[keey]);
-                    if (livestatcams[keey].name==namecams  && fundstream==false){
+                    if (livestatcams[keey].name==namecams  && fundstream==false && livestatcams[keey].status=='broadcasting'){
                         //Найден ли Поток
                         fundstream= true;
                         //ID текущего потока
@@ -39,20 +39,8 @@ function getstatcams(whatdo, namecams, search){
                         return 0;
 
                     }else { 
-                        //удаление старых потоков
-                        if (Number(livestatcams[keey].hlsViewerCount)==0){
-                        $.ajax({
-                            type: "POST",
-                            url: 'js/cams.php',
-                            data: {whatdo:'delete', namecams: livestatcams[keey].streamId},
-                            cache: false,
-                            async: false,
-                            success: function(data){
-                                $('#form7').append("\nУдален поток..."+livestatcams[keey].name);
-                            }
-                        });
+                       }
 
-                    }}
                     // }else {
                     //     $('#form7').append('\Не готов...');
                         
@@ -98,18 +86,18 @@ function getstatcams(whatdo, namecams, search){
                                         streamId=s['message'];
                                         //$('#form7').append('\nСоздание iframe...');
                                         //for(var j=0; j<10; j++){
-                                        let j=1;
+                                       
                                         let moto =setTimeout(function tiktak () {
-                                            console.log(j);
+                                            console.log(jumpjump);
                                            
-                                        if (j==0 || fundstream == true){
+                                        if (jumpjump==0 || fundstream == true){
                                             clearTimeout(moto);
                                             return 0;
                                         } else{
                                         getstatcams('check',namecams);
                                         setTimeout(tiktak, 3000);}
 
-                                        j=j-1;}
+                                        jumpjump=jumpjump-1;}
                                                 , 3000);
 
                                         //}
@@ -172,18 +160,41 @@ function gocams(){
                     
                         function exitHandler() {
                             if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
-                                if (livestatcams[curkey].hlsViewerCount<=1){
                                 $.ajax({
                                     type: "POST",
                                     url: 'js/cams.php',
-                                    data: {whatdo:'delete', namecams: curstramID },
+                                    data: {whatdo:'check', namecams: namecams},
                                     cache: false,
                                     async: false,
                                     success: function(data){
-                                        $('#form7').append("\nУдален поток..."+livestatcams[curkey].name);
-                                    }
-                                });
-                            }
+                                        livestatcams =null;
+                                        //console.log(data);
+                                        livestatcams = JSON.parse(data);
+                                        //удаление старых потоков
+                                        for (var keey in livestatcams) {
+                                        if (Number(livestatcams[keey].hlsViewerCount)==0){
+                                        $.ajax({
+                                            type: "POST",
+                                            url: 'js/cams.php',
+                                            data: {whatdo:'delete', namecams: livestatcams[keey].streamId},
+                                            cache: false,
+                                            async: false,
+                                            success: function(data){
+                                                if (livestatcams[curkey].hlsViewerCount<=1){
+                                                    $.ajax({
+                                                        type: "POST",
+                                                        url: 'js/cams.php',
+                                                        data: {whatdo:'delete', namecams: curstramID },
+                                                        cache: false,
+                                                        async: false,
+                                                        success: function(data){
+                                                            $('#form7').append("\nУдален поток..."+livestatcams[curkey].name);
+                                                        }
+                                                    });
+                                                    }
+                                                //$('#form7').append("\nУдален поток..."+livestatcams[keey].name);
+                                            }})}}}})
+                                
                                 $('#camsf2').remove();
                                 // console.log('dsds');
                             }
