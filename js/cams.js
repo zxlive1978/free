@@ -89,8 +89,8 @@ function getstatcams(whatdo, namecams){
                                         //$('#form7').append('\nСоздание iframe...');
                                         //for(var j=0; j<10; j++){
                                         let moto =setTimeout(function tiktak () {
-                                            if (jumpjump==0 || fundstream == true){
-                                                // clearTimeout(moto);
+                                            if (jumpjump==3 || fundstream == true){
+                                                clearTimeout(moto);
                                                 return 0;
                                             } else{
                                                 $.ajax({
