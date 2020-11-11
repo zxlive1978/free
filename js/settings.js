@@ -1615,7 +1615,7 @@ function adm (){
 	let elem = document.querySelector("#camsf2");
 
 	if (!document.fullscreenElement) {
-	elem.requestFullscreen().catch(err => {
+	elem.requestFullscreen().catch(function() {
 		alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
 	});
 	} else {
