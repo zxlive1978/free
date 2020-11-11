@@ -3,7 +3,7 @@
   var curstramID ="";
   var curkey;
 //забор статистики по камерам
-function getstatcams(whatdo, namecams){
+function getstatcams(whatdo, namecams, search){
         // refresh = false;
         // online = false;
         //$('#form7').empty();
@@ -23,7 +23,7 @@ function getstatcams(whatdo, namecams){
 
                 for (var keey in livestatcams) {
                     // console.log(livestatcams[keey]);
-                    if (livestatcams[keey].name==namecams && livestatcams[keey].status=='broadcasting' && fundstream==false){
+                    if (livestatcams[keey].name==namecams  && fundstream==false){
                         //Найден ли Поток
                         fundstream= true;
                         //ID текущего потока
@@ -98,17 +98,19 @@ function getstatcams(whatdo, namecams){
                                         streamId=s['message'];
                                         //$('#form7').append('\nСоздание iframe...');
                                         //for(var j=0; j<10; j++){
-                                        let j=10
+                                        let j=1;
                                         let moto =setTimeout(function tiktak () {
-                                            j=j-1;
-                                        if (j==0){
+                                            console.log(j);
+                                           
+                                        if (j==0 || fundstream == true){
                                             clearTimeout(moto);
                                             return 0;
-                                        }
+                                        } else{
                                         getstatcams('check',namecams);
-                                        setTimeout(tiktak, 3000);
+                                        setTimeout(tiktak, 3000);}
 
-                                                }, 3000);
+                                        j=j-1;}
+                                                , 3000);
 
                                         //}
                                     }
