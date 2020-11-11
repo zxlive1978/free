@@ -48,6 +48,7 @@ var formname = "Под телефон";
 if (!isMobile){formname="Цветная";}
 
 //Сохранение и чтение настроей из локального хранилища
+//IE Права icacls %userprofile%\Appdata\LocalLow /t /setintegritylevel (OI)(CI)L
 function readsavestartstorage(){
 if(!window.localStorage.getItem(_uz[0])) {
 	//for(keey in wells){}

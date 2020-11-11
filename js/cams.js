@@ -65,7 +65,20 @@ function getstatcams(whatdo, namecams){
                         let elem = document.querySelector("#camsf2");
                     
                         if (!document.fullscreenElement) {
-                            elem.requestFullscreen();
+                            if (elem.requestFullscreen) {
+                                elem.requestFullscreen();
+                              }
+                              else if (elem.msRequestFullscreen) {
+                                elem.msRequestFullscreen();
+                              }
+                              else if (elem.mozRequestFullScreen) {
+                                elem.mozRequestFullScreen();
+                              }
+                              else if (elem.webkitRequestFullscreen) {
+                                elem.webkitRequestFullscreen();
+                              } else {
+                                console.log("Fullscreen API is not supported");
+                              } 
                         } else {
                           if (document.exitFullscreen) {
                             document.exitFullscreen(); 
