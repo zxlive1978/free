@@ -1175,48 +1175,6 @@ function init(){
 		.stroke({  width: Sheet.width_line_p , color: Sheet.syscolor });
 		
 		
-		try {
-		//
-			//Комментарии
-			//Ширина текущего столбца
-			weight_colmn1 = Columns["col0"].size.w;
-			//Отступ Столбца
-			xcolmn1Poz = Columns["col0"].poz.x;
-			ycolmn1Poz = Columns["col0"].poz.y;
-			
-			//Шапка отступ Столбца № по Х
-			var colmn11_x0 = w1*xcolmn1Poz;
-			var colmn11_x1 = w1*xcolmn1Poz+w1*weight_colmn1;
-			var colmn11_y0 = h1*disp_up;
-			
-			for (let j=0; j< comment.length;j++){
-					var ncolcmt = colmn11_x0+(w1*100-w1* Columns["col0"].size.w)/8;
-					var left = comment[j]["left_txt"];
-					if (left>50){ncolcmt =(w1*100-w1* Columns["col0"].size.w)/4*1+(w1*100-w1* Columns["col0"].size.w)/8 +w1* Columns["col0"].size.w;}
-					if (left>100){ncolcmt = (w1*100-w1* Columns["col0"].size.w)/4*2+(w1*100-w1* Columns["col0"].size.w)/8 +w1* Columns["col0"].size.w;}
-					if (left>140){ncolcmt = (w1*100-w1* Columns["col0"].size.w)/4*3+(w1*100-w1* Columns["col0"].size.w)/8 +w1* Columns["col0"].size.w;}
-					var cury = colmn11_y0 + (comment[j]["Vrema"]-start_time)*cur_value_y_step;
-					var name_p3 = ''+ comment[j]["Comment"]; //d110d[d110d.length-1]["Npot"];
-					//Если попадает в окно
-					if (cury>colmn11_y0){
-						name_p3 =name_p3.match(/.{1,32}/g);
-						//console.log(name_p3);
-						var cur_comm =""
-						for (let i=0; i< name_p3.length;i++){ 
-							name_p3[i]=name_p3[i] + '\n'
-							cur_comm = cur_comm + name_p3[i]
-						}
-						var text_name_p3 = draw.text(cur_comm)
-							.font({ family: Sheet.fnt, size: Sheet.cmtsize  })
-							.move(ncolcmt, cury)
-							.center(ncolcmt, cury)
-							.fill(Sheet.cmtcolor)
-						
-					}
-					//console.log(cur_comm);
-			}	
-		
-		}catch(e){}
 		
 		
 
@@ -2044,7 +2002,49 @@ function init(){
 		.fill({ color: '#fff' })
 		.stroke({ width: Sheet.width_line_p , color: Sheet.syscolor })
 		
-		
+		try {
+			//
+				//Комментарии
+				//Ширина текущего столбца
+				weight_colmn1 = Columns["col0"].size.w;
+				//Отступ Столбца
+				xcolmn1Poz = Columns["col0"].poz.x;
+				ycolmn1Poz = Columns["col0"].poz.y;
+				
+				//Шапка отступ Столбца № по Х
+				var colmn11_x0 = w1*xcolmn1Poz;
+				var colmn11_x1 = w1*xcolmn1Poz+w1*weight_colmn1;
+				var colmn11_y0 = h1*disp_up;
+				
+				for (let j=0; j< comment.length;j++){
+						var ncolcmt = colmn11_x0+(w1*100-w1* Columns["col0"].size.w)/8;
+						var left = comment[j]["left_txt"];
+						if (left>50){ncolcmt =(w1*100-w1* Columns["col0"].size.w)/4*1+(w1*100-w1* Columns["col0"].size.w)/8 +w1* Columns["col0"].size.w;}
+						if (left>100){ncolcmt = (w1*100-w1* Columns["col0"].size.w)/4*2+(w1*100-w1* Columns["col0"].size.w)/8 +w1* Columns["col0"].size.w;}
+						if (left>140){ncolcmt = (w1*100-w1* Columns["col0"].size.w)/4*3+(w1*100-w1* Columns["col0"].size.w)/8 +w1* Columns["col0"].size.w;}
+						var cury = colmn11_y0 + (comment[j]["Vrema"]-start_time)*cur_value_y_step;
+						var name_p3 = ''+ comment[j]["Comment"]; //d110d[d110d.length-1]["Npot"];
+						//Если попадает в окно
+						if (cury>colmn11_y0){
+							name_p3 =name_p3.match(/.{1,32}/g);
+							//console.log(name_p3);
+							var cur_comm =""
+							for (let i=0; i< name_p3.length;i++){ 
+								name_p3[i]=name_p3[i] + '\n'
+								cur_comm = cur_comm + name_p3[i]
+							}
+							var text_name_p3 = draw.text(cur_comm)
+								.font({ family: Sheet.fnt, size: Sheet.cmtsize  })
+								.move(ncolcmt, cury)
+								.center(ncolcmt, cury)
+								.fill(Sheet.cmtcolor)
+							
+						}
+						//console.log(cur_comm);
+				}	
+			
+			}catch(e){}
+			
 		
 		//Кнопки управления, число кнопок
 		//Кнопка "Сейчас" "Масштаб" "Интервал"
