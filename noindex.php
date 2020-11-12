@@ -100,8 +100,14 @@ if (!$_SESSION['auth']) {
     
 </nav> -->
 
-<nav class="navbar navbar-default bg-dark py-0 navbar-fixed-top">
-<button type="button" class="btn btn-secondary btn-sm">Меню</button>
+<nav class="navbar navbar-default bg-dark py-0 navbar-fixed-top" id="bigpan">
+<a class='btn btn-primary' href='#'><img src='css/menu.png'><ul class="nav navbar-nav nav-justified">
+            <li><a href="#">Center 1</a></li>
+            <li><a href="#">Center 2</a></li>
+            <li><a href="#">Center 3</a></li>
+        </ul></a>
+ 
+
 </nav>
 
 <!-- Табы -->

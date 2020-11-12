@@ -1250,15 +1250,16 @@ function colOK10 () {
 function onoffpan(){
 	// console.log(Sheet.editscrn);
 	if (Sheet.editscrn){
-		$("#bigpan").attr("style", "display:yes");
+		// $("#bigpan").attr("style", "display:yes");
 		//Sheet.icosize=String($("#icosize").val());
 		// Sheet.icosizem=String($("#icosizem").val());
 		$('#drawing').height($(window).height()-$('#bigpan').height())
 	}else {
-		$("#bigpan").attr("style", "display:none");
+		// $("#bigpan").attr("style", "display:none");
 		// Sheet.icosize=0;
 		// Sheet.icosizem=0;
-		$('#drawing').height($(window).height());
+		// $('#drawing').height($(window).height());
+		$('#drawing').height($(window).height()-$('#bigpan').height())
 		}
 	
 		
