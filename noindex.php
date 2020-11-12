@@ -100,9 +100,9 @@ if (!$_SESSION['auth']) {
     
 </nav> -->
 
-<nav class="navbar navbar-default bg-info py-0 navbar-fixed-top" id="bigpan">
-<a class='btn btn-outline-dark' href='#'><img src='css/menu.png'  width="20" height="20"></a><button type="button" class="btn btn-link text-dark " id="skvnamelab" >АГКМ222-1</button>
-<button type="button" class="btn btn-outline-dark">Выход</button>
+<nav class="navbar navbar-primary bg-dark py-0 navbar-fixed-top" id="bigpan">
+<a class='btn btn-outline-light' href='#'><img src='css/menu.png'  width="20" height="20"></a><button type="button" class="btn btn-sm text-light " id="skvnamelab" ><h5>АГКМ222-1</h5></button>
+<button type="button" class="btn btn-outline-light" onClick="exit('exit','exit','exit');">Выход</button>
 
 </nav>
 
