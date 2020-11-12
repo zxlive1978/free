@@ -9,9 +9,34 @@ function getstatcams(whatdo, namecams){
         // online = false;
         //$('#form7').empty();
         // let moto =setTimeout(function tiktak () {
-        checkstream = true;    
+       
            
         let fundstream = false;
+        //Удаление старых видео потоков
+        if (checkstream==false){        
+            $.ajax({
+                type: "POST",
+                url: 'js/cams.php',
+                data: {whatdo:'check', namecams: namecams},
+                cache: false,
+                async: false,
+                success: function(data){
+                    livestatcams =null;
+                    //console.log(data);
+                    livestatcams = JSON.parse(data);
+                    //удаление старых потоков
+                    for (var keey in livestatcams) {
+                    if (Number(livestatcams[keey].hlsViewerCount)==0){
+                    $.ajax({
+                        type: "POST",
+                        url: 'js/cams.php',
+                        data: {whatdo:'delete', namecams: livestatcams[keey].streamId},
+                        cache: false,
+                        async: false,
+                        success: function(data){
+            
+                        
+                       
       
         $('#form7').append('\nПоиск в потоках....');
         $.ajax({
@@ -160,7 +185,7 @@ function getstatcams(whatdo, namecams){
             }}
         });
 
-       
+    }})}}}})}       
                
 };
  

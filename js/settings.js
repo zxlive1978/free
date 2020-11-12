@@ -727,6 +727,7 @@ function colPan4 () {
 	//статус подключения
 	//$('#form7').empty();
 	$("#myModal3").modal();
+
 	
 }
 
@@ -738,12 +739,16 @@ var jumpjump=0;
 var checkstream = false;
 // var frame;
 function colOK4 () {
+	$("#myModal3").on("hidden.bs.modal", function () {
+		checkstream = false;
+	});
 	//Проверка Проверка существующих потоков
 	namecams=$("#zzm1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
 	// console.log(namecams);
 	jumpjump=0;
-	var checkstream = false;
+	checkstream = true;
 	getstatcams('check',namecams);
+	
 	// var frame = document.createElement("iframe");
 	// frame.setAttribute("id", "camsf2");
 	// frame.setAttribute("width", '100%');
