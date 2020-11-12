@@ -217,7 +217,7 @@ function gocams(){
                                             success: function(data){
 
                                                 for (var keex in livestatcams) {
-                                               
+                                               console.log(curstramID);
                                                 if (livestatcams[keex].hlsViewerCount<=1 && livestatcams[keex].streamId==curstramID){
                                                     $.ajax({
                                                         type: "POST",
