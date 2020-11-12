@@ -1251,7 +1251,7 @@ function onoffpan(){
 	// console.log(Sheet.editscrn);
 	if (Sheet.editscrn){
 		$("#bigpan").attr("style", "display:yes");
-		// Sheet.icosize=String($("#icosize").val());
+		//Sheet.icosize=String($("#icosize").val());
 		// Sheet.icosizem=String($("#icosizem").val());
 		$('#drawing').height($(window).height()-$('#bigpan').height())
 	}else {
@@ -1270,7 +1270,7 @@ function colOK11 () {
 	if (Sheet.editscrn){
 		Sheet.editscrn= false;}
 	else{Sheet.editscrn=true;}
-	//onoffpan();
+	onoffpan();
 	
 	// console.log(Sheet.editscrn,Sheet.icosize);
 	
