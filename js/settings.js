@@ -1270,7 +1270,7 @@ function colOK11 () {
 	if (Sheet.editscrn){
 		Sheet.editscrn= false;}
 	else{Sheet.editscrn=true;}
-	onoffpan();
+	//onoffpan();
 	
 	// console.log(Sheet.editscrn,Sheet.icosize);
 	
