@@ -100,8 +100,8 @@ if (!$_SESSION['auth']) {
     
 </nav> -->
 
-<nav class="navbar navbar-default bg-dark py-0 navbar-fixed-top" id="bigpan">
-<a class='btn btn-primary' href='#'><img src='css/menu.png'  width="30" height="30"></a>
+<nav class="navbar navbar-inverse bg-dark py-0 navbar-fixed-top" id="bigpan">
+<a class='btn btn-primary' href='#'><img src='css/menu.png'  width="20" height="20"></a><span> Скважина АГКМ222-1</span>
  
 
 </nav>
