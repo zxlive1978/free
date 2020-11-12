@@ -14,14 +14,20 @@ if (!$_SESSION['auth']) {
 </title>
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-<!-- Подключаем Bootstrap CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css" >
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
 <script>const _uz=<?php echo $_SESSION['skvjson']; ?>;</script>
 <script>const _ut=<?php echo $_SESSION['time']; ?>;</script>
+<link rel="stylesheet" type="text/css" href="css/jschart5.css">
+<link rel="stylesheet" href="css/iziModal.min.css">
 
+<!-- Bootstrap -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Jquery -->
+<link rel="stylesheet" href="css/jquery-ui.min.css">
+<!-- <link rel="stylesheet" href="css/style.css"> -->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 
 
     
@@ -52,9 +58,6 @@ if (!$_SESSION['auth']) {
 
 <!-- Bootstrap --> 
 <script src="js/popper.min.js"></script>
- <!-- Подключаем jQuery -->
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Подключаем Bootstrap JS -->    
 <script src="js/bootstrap.min.js"></script>
 
 
@@ -97,14 +100,8 @@ if (!$_SESSION['auth']) {
     
 </nav> -->
 
-<nav class="navbar navbar-default py-0 navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-    <button type="button" class="btn btn-default" aria-label="Left Align">
-  <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
-  </button>
-    </div>
-  </div>
+<nav class="navbar navbar-default bg-dark py-0 navbar-fixed-top">
+<button type="button" class="btn btn-secondary btn-sm">Меню</button>
 </nav>
 
 <!-- Табы -->
