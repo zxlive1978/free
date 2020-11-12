@@ -101,7 +101,7 @@ function getstatcams(whatdo, namecams){
                                                     async: false,
                                                     success: function(data){
                                                         livestatcams =null;
-                                                        //console.log(data);
+                                                        
                                                         livestatcams = JSON.parse(data);
                                         
                                                         for (var keey in livestatcams) {
@@ -215,6 +215,7 @@ function gocams(){
                                             cache: false,
                                             async: false,
                                             success: function(data){
+                                                console.log(curkey, livestatcams[curkey].hlsViewerCount);
                                                 if (livestatcams[curkey].hlsViewerCount<=1){
                                                     $.ajax({
                                                         type: "POST",
@@ -227,7 +228,7 @@ function gocams(){
                                                         }
                                                     });
                                                     }
-                                                //$('#form7').append("\nУдален поток..."+livestatcams[keey].name);
+                                                $('#form7').append("\nУдален поток..."+livestatcams[keey].name);
                                             }})}}}})
                                 
                                 $('#camsf2').remove();
