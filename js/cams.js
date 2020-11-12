@@ -215,8 +215,10 @@ function gocams(){
                                             cache: false,
                                             async: false,
                                             success: function(data){
-                                                console.log(curkey, livestatcams[curkey].hlsViewerCount);
-                                                if (livestatcams[curkey].hlsViewerCount<=1){
+
+                                                for (var keex in livestatcams) {
+                                               
+                                                if (livestatcams[keex].hlsViewerCount<=1 && livestatcams[keex].streamId==curstramID){
                                                     $.ajax({
                                                         type: "POST",
                                                         url: 'js/cams.php',
@@ -224,11 +226,17 @@ function gocams(){
                                                         cache: false,
                                                         async: false,
                                                         success: function(data){
-                                                            $('#form7').append("\nУдален поток..."+livestatcams[curkey].name);
+                                                            //console.log(curkey, livestatcams[curkey].hlsViewerCount);
+                                                            $('#form7').append("\nУдален поток..."+livestatcams[keex].name);
                                                         }
                                                     });
-                                                    }
+                                                    } 
+                                                }
                                                 $('#form7').append("\nУдален поток..."+livestatcams[keey].name);
+                                            
+                                               
+                                            
+                                            
                                             }})}}}})
                                 
                                 $('#camsf2').remove();
