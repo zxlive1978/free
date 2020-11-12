@@ -207,7 +207,7 @@ function gocams(){
                                         livestatcams = JSON.parse(data);
                                         //удаление старых потоков
                                         for (var keey in livestatcams) {
-                                        if (Number(livestatcams[keey].hlsViewerCount)==0){
+                                        if ((Number(livestatcams[keey].hlsViewerCount)==0 )|| (Number(livestatcams[keex].hlsViewerCount)<=1 && livestatcams[keex].streamId==curstramID)){
                                         $.ajax({
                                             type: "POST",
                                             url: 'js/cams.php',
@@ -216,22 +216,23 @@ function gocams(){
                                             async: false,
                                             success: function(data){
 
-                                                for (var keex in livestatcams) {
-                                               console.log(curstramID);
-                                                if (livestatcams[keex].hlsViewerCount<=1 && livestatcams[keex].streamId==curstramID){
-                                                    $.ajax({
-                                                        type: "POST",
-                                                        url: 'js/cams.php',
-                                                        data: {whatdo:'delete', namecams: curstramID },
-                                                        cache: false,
-                                                        async: false,
-                                                        success: function(data){
-                                                            //console.log(curkey, livestatcams[curkey].hlsViewerCount);
-                                                            $('#form7').append("\nУдален поток..."+livestatcams[keex].name);
-                                                        }
-                                                    });
-                                                    } 
-                                                }
+                                                // for (var keex in livestatcams) {
+                                                // console.log(curstramID, livestatcams[keex].hlsViewerCount);
+                                                // if (){
+                                                //     console.log(curstramID, livestatcams[keex].hlsViewerCount);
+                                                //     $.ajax({
+                                                //         type: "POST",
+                                                //         url: 'js/cams.php',
+                                                //         data: {whatdo:'delete', namecams: curstramID },
+                                                //         cache: false,
+                                                //         async: false,
+                                                //         success: function(data){
+                                                //             //console.log(curkey, livestatcams[curkey].hlsViewerCount);
+                                                //             $('#form7').append("\nУдален поток..."+livestatcams[keex].name);
+                                                //         }
+                                                //     });
+                                                //     } 
+                                                // }
                                                 $('#form7').append("\nУдален поток..."+livestatcams[keey].name);
                                             
                                                
