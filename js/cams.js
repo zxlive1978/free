@@ -13,7 +13,6 @@ function getstatcams(whatdo, namecams){
            
         let fundstream = false;
         //Удаление старых видео потоков
-        if (checkstream==false){        
             $.ajax({
                 type: "POST",
                 url: 'js/cams.php',
