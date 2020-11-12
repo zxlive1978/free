@@ -2,13 +2,14 @@
 
   var curstramID ="";
   var curkey;
+
 //забор статистики по камерам
 function getstatcams(whatdo, namecams){
         // refresh = false;
         // online = false;
         //$('#form7').empty();
         // let moto =setTimeout(function tiktak () {
-            
+        checkstream = true;    
            
         let fundstream = false;
       
@@ -33,8 +34,8 @@ function getstatcams(whatdo, namecams){
                         curstramID=livestatcams[keey].streamId;
                         //Текущий key
                         curkey=keey;
-                        $('#form7').append('Найден');
-                        $('#form7').append('\nСоздание iframe...');
+                        //$('#form7').append('Найден');
+                        $('#form7').append('\nПроверка потока...OK');
                         //if (livestatcams[keey].status=='broadcasting' ){
                             //$('#form7').append('\Готов');
                         $('#gogo').prop('disabled', false);
@@ -88,8 +89,10 @@ function getstatcams(whatdo, namecams){
                                         streamId=s['message'];
                                         //$('#form7').append('\nСоздание iframe...');
                                         //for(var j=0; j<10; j++){
+                                        $('#form7').append('\nПроверка потока...');
                                         let moto =setTimeout(function tiktak () {
                                             if (jumpjump==10 || fundstream == true){
+                                                //$('#form7').append('BAD');
                                                 clearTimeout(moto);
                                                 return 0;
                                             } else{
@@ -113,8 +116,9 @@ function getstatcams(whatdo, namecams){
                                                                 curstramID=livestatcams[keey].streamId;
                                                                 //Текущий key
                                                                 curkey=keey;
-                                                                $('#form7').append('Найден');
-                                                                $('#form7').append('\nСоздание iframe...');
+                                                                //$('#form7').append('Найден');
+                                                               
+                                                                $('#form7').append('ОК');
                                                                 //if (livestatcams[keey].status=='broadcasting' ){
                                                                     //$('#form7').append('\Готов');
                                                                 $('#gogo').prop('disabled', false);
@@ -183,7 +187,7 @@ function gocams(){
                         frame.setAttribute("auto_orient", "true");
                         frame.setAttribute("scaling", "fit");
                         frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name="+livestatcams[curkey].streamId);
-                        $('#form7').append('ОК');
+                       
                     
                         $('#tabvideo').append(frame);
                     
@@ -207,7 +211,7 @@ function gocams(){
                                         livestatcams = JSON.parse(data);
                                         //удаление старых потоков
                                         for (var keey in livestatcams) {
-                                        if ((Number(livestatcams[keey].hlsViewerCount)==0 )|| (Number(livestatcams[keex].hlsViewerCount)<=1 && livestatcams[keex].streamId==curstramID)){
+                                        if ((Number(livestatcams[keey].hlsViewerCount)==0 )|| (Number(livestatcams[keey].hlsViewerCount)<=1 && livestatcams[keey].streamId==curstramID)){
                                         $.ajax({
                                             type: "POST",
                                             url: 'js/cams.php',

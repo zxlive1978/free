@@ -734,12 +734,15 @@ var namecams='';
 var streamId='';
 //Количество попыток
 var jumpjump=0;
+//Проверка стрима
+var checkstream = false;
 // var frame;
 function colOK4 () {
 	//Проверка Проверка существующих потоков
 	namecams=$("#zzm1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
 	// console.log(namecams);
 	jumpjump=0;
+	var checkstream = false;
 	getstatcams('check',namecams);
 	// var frame = document.createElement("iframe");
 	// frame.setAttribute("id", "camsf2");
