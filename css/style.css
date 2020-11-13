@@ -66,7 +66,7 @@
 .login-block input:-webkit-autofill
 {
   -webkit-box-shadow:0 0 0 1000px #1b262c inset;
-  -webkit-text-fill-color:#000000;
+  -webkit-text-fill-color:#1b262c;
   -webkit-transition:none;
   -o-transition:none;
   transition:none;
