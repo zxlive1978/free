@@ -1930,7 +1930,7 @@ function init(){
 		var ey=0;
 		var exs=0;
 		var eys=0;
-		
+		if (isMobile){
 		cir4.draggable(
 		
 		).on('touchstart', function(e){
@@ -1962,7 +1962,7 @@ function init(){
 					read_up()};//см .navigation.js 
 				}
 				})
-
+			} else {
 				cir4.draggable(
 		
 					).on('dragstart', function(e){
@@ -1995,7 +1995,7 @@ function init(){
 							}
 							})
 
-		
+						}
 		
 		//Шапка Угловой квадрат
 		var colmn0 = draw.polygon('0,0 '+w1*Columns.col0.size.w+',0 ' + w1*Columns.col0.size.w + ',' + h1*Columns.col0.size.h + ' 0,' + h1*Columns.col0.size.h)
