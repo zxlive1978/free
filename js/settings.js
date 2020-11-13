@@ -1551,6 +1551,18 @@ function adm (){
 	onofadm = false;
 	
 
+
+	$('#tabs').show();
+	$('#taabs-1').empty();
+	$('#ul1').hide();
+	$('#taabs-1').append('edrrr');
+	$('#taabs-1').html('<div class="jumbotron">'+
+  	'<h1>Привет, мир!</h1>'+
+  	'<	p>...</p>'+
+  	'<p><a class="btn btn-primary btn-lg" role="button">Узнать больше</a></p>'+
+	'</div>');
+
+
 // 	//$('#tabs').empty();
 // 	// $('#tabvideo').show();
 // 	// $('#tabvideo').html(
@@ -1563,10 +1575,6 @@ function adm (){
 // 	document.getElementById("tabsn-1").innerHTML="Роторный стол";
 // 	// document.getElementById("tabsn-2").innerHTML="Приемный мост";
 // 	// document.getElementById("tabsn-3").innerHTML="ПВО";
-	$('#tabs').show();
-	$('#taabs-1').empty();
-	$('#ul1').hide();
-	$('#taabs-1').append('edrrr');
 // 	// var div1 = document.createElement("div");
 // 	// //div1.innerHTML = "<h1>Привет!</h1>";
 // 	// div1.setAttribute("id", "divcams");

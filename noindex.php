@@ -111,7 +111,7 @@ if (!$_SESSION['auth']) {
 
 <!-- Табы -->
 <div id="tabs" >
-  <ul id="ul1" class="nav nav-tabs">
+  <ul id="ul1" class="nav nav-tabs bg-dark">
     <li><a href="#tabs-1" > <span id="tabsn-1" >     </span></a></li>
     <!-- <li><a href="#tabs-2"> <span id="tabsn-2" >     </span></a></li>
     <li><a href="#tabs-3"> <span id="tabsn-3" >     </span></a></li>
