@@ -102,8 +102,8 @@ if (!$_SESSION['auth']) {
 
 <nav class="navbar navbar-primary bg-dark py-0 navbar-fixed-top" id="bigpan">
 <a class='btn btn-outline-light' href='#'><img src='css/menu.png'  width="20" height="20"></a>
-<button type="button" class="btn btn-sm text-light " id="skvnamelab" >
-  <h5>АГКМ222-1</h5>
+<button type="button" class="btn btn-sm text-light "  >
+  <span id="skvnamelab" style="font-weight: bold;">АГКМ222-1</span>
 </button>
 <button type="button" class="btn btn-outline-light" onClick="exit('exit','exit','exit');">Выход</button>
 
