@@ -1557,57 +1557,59 @@ function adm (){
 	$('#ul1').hide();
 	//$('#taabs-1').append('<div class="row">');
 	
-	$('#taabs-1').html('<div class="container"><div class="row">'+
-	'<div class="col-sm-6 col-md-4">'+
-		'<div class="thumbnail">'+
-		'<img src="css/cam.jpg" alt="...">'+
-		'<div class="caption">'+
-			'<h3>Заголовок...</h3>'+
-			'<p>Контент...</p>'+
-			'<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>'+
+	$('#taabs-1').html('<div class="container"><div class="row text-justify">'+
+	'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
+		'<div class="thumbnail bg-dark text-light  text-center">'+
+		'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
+		'<div class="caption text-center">'+
+			'<h5>Камера АГКМ666-1</h5>'+
+			'<p>Статус:</p>'+
+			'<p><a href="#" class="btn btn-primary" role="button">Подключение</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
 		'</div>'+
 		'</div>'+
 	'</div>'+
-	'<div class="col-sm-6 col-md-4">'+
+	'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
 		'<div class="thumbnail">'+
-		'<img src="css/cam.jpg" alt="...">'+
+		'<img src="css/cam.jpg" class="img-fluid" alt="...">'+
 		'<div class="caption">'+
-			'<h3>Заголовок...</h3>'+
-			'<p>Контент...</p>'+
-			'<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>'+
+			'<h3>Камера АГКМ666-1</h3>'+
+			'<p>Статус:</p>'+
+			'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
 		'</div>'+
 		'</div>'+
 	'</div>'+
-	'<div class="col-sm-6 col-md-4">'+
+	'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
 		'<div class="thumbnail">'+
-		'<img src="css/cam.jpg" alt="...">'+
+		'<img src="css/cam.jpg" class="img-fluid" alt="...">'+
 		'<div class="caption">'+
-			'<h3>Заголовок...</h3>'+
-			'<p>Контент...</p>'+
-			'<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>'+
+			'<h3>Камера АГКМ666-1</h3>'+
+			'<p>Статус:</p>'+
+			'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
 		'</div>'+
 		'</div>'+
 	'</div>'+
-	'<div class="col-sm-6 col-md-4">'+
+	'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
 		'<div class="thumbnail">'+
 		'<img src="css/cam.jpg" alt="...">'+
 		'<div class="caption">'+
-			'<h3>Заголовок...</h3>'+
-			'<p>Контент...</p>'+
-			'<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>'+
+			'<h3>Камера АГКМ666-1</h3>'+
+			'<p>Статус:</p>'+
+			'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
 		'</div>'+
 		'</div>'+
 	'</div>'+
-	'<div class="col-sm-6 col-md-4">'+
+	'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
 		'<div class="thumbnail">'+
 		'<img src="css/cam.jpg" alt="...">'+
 		'<div class="caption">'+
-			'<h3>Заголовок...</h3>'+
-			'<p>Контент...</p>'+
-			'<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>'+
+			'<h3>Камера АГКМ666-1</h3>'+
+			'<p>Статус:</p>'+
+			'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
 		'</div>'+
 		'</div>'+
-	'</div></div</div>');
+	'</div>'+
+	'</div</div>');
+	
 	
 // 	//$('#tabs').empty();
 // 	// $('#tabvideo').show();
