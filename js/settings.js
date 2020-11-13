@@ -313,7 +313,7 @@ function parPan (name_select) {
 	if (refresh){refresh = false; online = true;}
 	/* $("#nastrgraf").css('background-color', Sheet.curcolorval);
 	$('#nastrgraf').iziModal('open'); */
-	$("#myModal7").modal();
+	$("#myModal7").modal('show');
 	
 	}
 //Кнопка OK для окна параметра
@@ -457,7 +457,7 @@ function colPan (name_select) {
 	$('#nastrstolb').iziModal('open'); */
 	 
 	 //bootstrap modal
-	$("#myModal6").modal();
+	$("#myModal6").modal('show');
 	
 	}
 	
@@ -548,7 +548,7 @@ function colPan1 (name_select) {
 	 $('#addgraf').iziModal('open'); */
 	 
 	 //bootstrap modal
-	$("#myModal5").modal();
+	$("#myModal5").modal('show');
 	
 }
 
@@ -678,7 +678,7 @@ function colPan3 () {
     
 	//bootstrap modal
 	//document.getElementById('localdate1').valueAsDate = '2020/10/26';
-	$("#myModal2").modal();
+	$("#myModal2").modal('show');
 	
 }
 
@@ -726,7 +726,7 @@ function colPan4 () {
 	
 	//статус подключения
 	//$('#form7').empty();
-	$("#myModal3").modal();
+	$("#myModal3").modal('show');
 
 	
 }
@@ -874,7 +874,7 @@ function colPan5 () {
 	//$('#modal').iziModal('open');
 	
 	//bootstrap modal
-	$("#myModal1").modal();
+	$("#myModal1").modal({show:true});
 	
 	//$("#width_line_p").attr("value", 500);
 }
@@ -942,7 +942,7 @@ function colPan6 (name_select) {
 	/* PArmyDialog6.show(); */
 	/* $("#nastrtxtlabel").css('background-color', Sheet.curcolorval);
 	$('#nastrtxtlabel').iziModal('open'); */
-	$("#myModal9").modal();
+	$("#myModal9").modal('show');
 	
 }
 
@@ -999,7 +999,7 @@ function colPan7 (name_select) {
 	/* PArmyDialog7.show(); */
 	/* $("#nastrtxtpar").css('background-color', Sheet.curcolorval);
 	$('#nastrtxtpar').iziModal('open'); */
-	$("#myModal8").modal();
+	$("#myModal8").modal('show');
 	
 }
 
@@ -1040,7 +1040,7 @@ function colOK7 () {
 	}
 	/* $('#nastrtxtpar').iziModal('close'); */
 	/*console.log("тут");
-	 $("#myModal8").modal(); */
+	 $("#myModal8").modal('show'); */
 	repaint();
 }
 
@@ -1068,7 +1068,7 @@ function colPan8 (name_select) {
 	/* PArmyDialog8.show(); */
 	/* $("#openfile").css('background-color', Sheet.curcolorval);
 	$('#openfile').iziModal('open'); */
-	$("#myModal8").modal();
+	$("#myModal8").modal('show');
 	
 }
 //Загрузить форму файл при старте
@@ -1139,7 +1139,7 @@ function colPan9 (name_select) {
 	
 	/* $("#savefile").css('background-color', Sheet.curcolorval);
 	$('#savefile').iziModal('open'); */
-	$("#myModal10").modal();
+	$("#myModal10").modal('show');
 	
 }
 
@@ -1227,7 +1227,7 @@ function colPan10 (name_select) {
 	/* $("#wells").css('background-color', Sheet.curcolorval);
 	$("#wells").css('font-size', 40);
 	$('#wells').iziModal('open'); */
-	$("#myModal4").modal();
+	$("#myModal4").modal('show');
 }
 
 function colOK10 () {
@@ -1322,7 +1322,7 @@ $(document).ready(function () {
 			
 			
 			//ВИДЕО
-			//autoPlayYouTubeModal();
+			//autoPlayYouTubemodal('show');
  });
  // ресайз окна
  $(window).resize(function (){
@@ -1354,7 +1354,7 @@ $(document).ready(function () {
 };
 
 //FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
-//  function autoPlayYouTubeModal() {
+//  function autoPlayYouTubemodal('show') {
 //       var trigger = $("body").find('[data-toggle="modal"]');
 //       trigger.click(function () {
 //           var theModal = $(this).data("target"),
@@ -1376,7 +1376,7 @@ $(document).ready(function () {
 var selectkeey='';
 //Изменить/ удалить  диалог по скважине
 function colPan13 () {
-	$("#myModal13").modal();
+	$("#myModal13").modal('show');
 	for (var keey in wells) {
 		if (wells[keey].wellN == String($("#colitems132").val())) {
 			selectkeey=keey;
@@ -1477,7 +1477,7 @@ function colOK131 () {
 
 //Добавление  диалог записи по скважине
 function colPan12 () {
-	$("#myModal12").modal();
+	$("#myModal12").modal('show');
 	
 	//console.log('fdsf');
 }
@@ -1547,6 +1547,7 @@ function adm (){
 	
 	
 	onofadm = false;
+	
 
 // 	//$('#tabs').empty();
 // 	// $('#tabvideo').show();
@@ -1560,9 +1561,10 @@ function adm (){
 // 	document.getElementById("tabsn-1").innerHTML="Роторный стол";
 // 	// document.getElementById("tabsn-2").innerHTML="Приемный мост";
 // 	// document.getElementById("tabsn-3").innerHTML="ПВО";
-// 	$('#tabs').show();
-// 	$('#tabs-1').empty();
-// 	$('#ul1').hide();
+	$('#tabs').show();
+	$('#taabs-1').empty();
+	$('#ul1').hide();
+	$('#taabs-1').append('edrrr');
 // 	// var div1 = document.createElement("div");
 // 	// //div1.innerHTML = "<h1>Привет!</h1>";
 // 	// div1.setAttribute("id", "divcams");

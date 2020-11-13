@@ -101,7 +101,7 @@ if (!$_SESSION['auth']) {
 </nav> -->
 
 <nav class="navbar navbar-primary bg-dark py-0 navbar-fixed-top" id="bigpan">
-<a class='btn btn-outline-light' href='#'><img src='css/menu.png'  width="20" height="20"></a>
+<a class='btn btn-outline-light'  onClick="adm ();"><img src='css/menu.png'  width="20" height="20"></a>
 <button type="button" class="btn btn-sm text-light "  >
   <span id="skvnamelab" style="font-weight: bold; font-size: 22px;">АГКМ222-1</span>
 </button>
@@ -111,13 +111,15 @@ if (!$_SESSION['auth']) {
 
 <!-- Табы -->
 <div id="tabs" >
-  <ul id="ul1">
+  <ul id="ul1" class="nav nav-tabs">
     <li><a href="#tabs-1" > <span id="tabsn-1" >     </span></a></li>
     <!-- <li><a href="#tabs-2"> <span id="tabsn-2" >     </span></a></li>
     <li><a href="#tabs-3"> <span id="tabsn-3" >     </span></a></li>
     <li><a href="#tabs-4"> <span id="tabsn-4" >     </span></a></li> -->
   </ul>
-  <div id="tabs-1" style="display: block;  margin: 0 auto;"></div>
+  <div id="taabs-1" style="display: block;  margin: 0 auto;"></div>
+  
+  
   <!-- <div id="tabs-2">
   </div>
   <div id="tabs-3">
@@ -157,7 +159,7 @@ window.onload = getStart;
 </script>
 
 
-<div class="modal fade" id="myModal1">
+<div class="modal fade modal-fullscreen modal-dark" id="myModal1">
     <div class="modal-dialog modal-dialog-scrollable-dark">
       <div class="modal-content">
       

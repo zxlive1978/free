@@ -55,9 +55,10 @@
 }
 .login-block .form-control,.login-block .form-control:focus,.login-block .input-group-addon,.login-block .input-group-addon:focus
 {
+  color:#ffffff;
   background-color:transparent;
   border:none;
-  color:#ffffff;
+  
 }
 .login-block .form-control
 {

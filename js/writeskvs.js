@@ -150,6 +150,7 @@ function readskvstart(whatdo, table, p000, skvsjson){
 					//Загрузка формы при старте
 					colOK8start(formname);
 					//Старт!!!
+					
 					read_now();
 					//read_next();
 					//Список скважин
