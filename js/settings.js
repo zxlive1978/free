@@ -1555,14 +1555,60 @@ function adm (){
 	$('#tabs').show();
 	$('#taabs-1').empty();
 	$('#ul1').hide();
-	$('#taabs-1').append('edrrr');
-	$('#taabs-1').html('<div class="jumbotron">'+
-  	'<h1>Привет, мир!</h1>'+
-  	'<	p>...</p>'+
-  	'<p><a class="btn btn-primary btn-lg" role="button">Узнать больше</a></p>'+
-	'</div>');
-
-
+	//$('#taabs-1').append('<div class="row">');
+	
+	$('#taabs-1').html('<div class="container"><div class="row">'+
+	'<div class="col-sm-6 col-md-4">'+
+		'<div class="thumbnail">'+
+		'<img src="css/cam.jpg" alt="...">'+
+		'<div class="caption">'+
+			'<h3>Заголовок...</h3>'+
+			'<p>Контент...</p>'+
+			'<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>'+
+		'</div>'+
+		'</div>'+
+	'</div>'+
+	'<div class="col-sm-6 col-md-4">'+
+		'<div class="thumbnail">'+
+		'<img src="css/cam.jpg" alt="...">'+
+		'<div class="caption">'+
+			'<h3>Заголовок...</h3>'+
+			'<p>Контент...</p>'+
+			'<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>'+
+		'</div>'+
+		'</div>'+
+	'</div>'+
+	'<div class="col-sm-6 col-md-4">'+
+		'<div class="thumbnail">'+
+		'<img src="css/cam.jpg" alt="...">'+
+		'<div class="caption">'+
+			'<h3>Заголовок...</h3>'+
+			'<p>Контент...</p>'+
+			'<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>'+
+		'</div>'+
+		'</div>'+
+	'</div>'+
+	'<div class="col-sm-6 col-md-4">'+
+		'<div class="thumbnail">'+
+		'<img src="css/cam.jpg" alt="...">'+
+		'<div class="caption">'+
+			'<h3>Заголовок...</h3>'+
+			'<p>Контент...</p>'+
+			'<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>'+
+		'</div>'+
+		'</div>'+
+	'</div>'+
+	'<div class="col-sm-6 col-md-4">'+
+		'<div class="thumbnail">'+
+		'<img src="css/cam.jpg" alt="...">'+
+		'<div class="caption">'+
+			'<h3>Заголовок...</h3>'+
+			'<p>Контент...</p>'+
+			'<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>'+
+		'</div>'+
+		'</div>'+
+	'</div></div</div>');
+	
 // 	//$('#tabs').empty();
 // 	// $('#tabvideo').show();
 // 	// $('#tabvideo').html(
