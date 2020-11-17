@@ -1556,59 +1556,77 @@ function adm (){
 	$('#taabs-1').empty();
 	$('#ul1').hide();
 	//$('#taabs-1').append('<div class="row">');
-	
-	$('#taabs-1').html('<div class="container"><div class="row text-justify">'+
-	'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
+	var bigelem='<div class="container"><div class="row text-justify">';
+	for (var keey in cams) {
+		bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
 		'<div class="thumbnail bg-dark text-light  text-center">'+
 		'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
 		'<div class="caption text-center">'+
-			'<h5>Камера АГКМ666-1</h5>'+
+			'<h5>'+cams[keey].wellN+'_'+cams[keey].txt+'</h5>'+
 			'<p>Статус:</p>'+
 			'<p><a href="#" class="btn btn-primary" role="button">Подключение</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
 		'</div>'+
 		'</div>'+
-	'</div>'+
-	'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
-		'<div class="thumbnail">'+
-		'<img src="css/cam.jpg" class="img-fluid" alt="...">'+
-		'<div class="caption">'+
-			'<h3>Камера АГКМ666-1</h3>'+
-			'<p>Статус:</p>'+
-			'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
-		'</div>'+
-		'</div>'+
-	'</div>'+
-	'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
-		'<div class="thumbnail">'+
-		'<img src="css/cam.jpg" class="img-fluid" alt="...">'+
-		'<div class="caption">'+
-			'<h3>Камера АГКМ666-1</h3>'+
-			'<p>Статус:</p>'+
-			'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
-		'</div>'+
-		'</div>'+
-	'</div>'+
-	'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
-		'<div class="thumbnail">'+
-		'<img src="css/cam.jpg" alt="...">'+
-		'<div class="caption">'+
-			'<h3>Камера АГКМ666-1</h3>'+
-			'<p>Статус:</p>'+
-			'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
-		'</div>'+
-		'</div>'+
-	'</div>'+
-	'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
-		'<div class="thumbnail">'+
-		'<img src="css/cam.jpg" alt="...">'+
-		'<div class="caption">'+
-			'<h3>Камера АГКМ666-1</h3>'+
-			'<p>Статус:</p>'+
-			'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
-		'</div>'+
-		'</div>'+
-	'</div>'+
-	'</div</div>');
+	'</div>';	
+				value: cams[keey].wellN,
+				text : cams[keey].txt
+
+	}
+	bigelem=bigelem+'</div>';
+	$('#taabs-1').html(bigelem);
+
+	// $('#taabs-1').html('<div class="container"><div class="row text-justify">'+
+	// '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
+	// 	'<div class="thumbnail bg-dark text-light  text-center">'+
+	// 	'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
+	// 	'<div class="caption text-center">'+
+	// 		'<h5>Камера АГКМ666-1</h5>'+
+	// 		'<p>Статус:</p>'+
+	// 		'<p><a href="#" class="btn btn-primary" role="button">Подключение</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
+	// 	'</div>'+
+	// 	'</div>'+
+	// '</div>'+
+	// '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
+	// 	'<div class="thumbnail">'+
+	// 	'<img src="css/cam.jpg" class="img-fluid" alt="...">'+
+	// 	'<div class="caption">'+
+	// 		'<h3>Камера АГКМ666-1</h3>'+
+	// 		'<p>Статус:</p>'+
+	// 		'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
+	// 	'</div>'+
+	// 	'</div>'+
+	// '</div>'+
+	// '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
+	// 	'<div class="thumbnail">'+
+	// 	'<img src="css/cam.jpg" class="img-fluid" alt="...">'+
+	// 	'<div class="caption">'+
+	// 		'<h3>Камера АГКМ666-1</h3>'+
+	// 		'<p>Статус:</p>'+
+	// 		'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
+	// 	'</div>'+
+	// 	'</div>'+
+	// '</div>'+
+	// '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
+	// 	'<div class="thumbnail">'+
+	// 	'<img src="css/cam.jpg" alt="...">'+
+	// 	'<div class="caption">'+
+	// 		'<h3>Камера АГКМ666-1</h3>'+
+	// 		'<p>Статус:</p>'+
+	// 		'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
+	// 	'</div>'+
+	// 	'</div>'+
+	// '</div>'+
+	// '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
+	// 	'<div class="thumbnail">'+
+	// 	'<img src="css/cam.jpg" alt="...">'+
+	// 	'<div class="caption">'+
+	// 		'<h3>Камера АГКМ666-1</h3>'+
+	// 		'<p>Статус:</p>'+
+	// 		'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
+	// 	'</div>'+
+	// 	'</div>'+
+	// '</div>'+
+	// '</div</div>');
 	
 	
 // 	//$('#tabs').empty();
