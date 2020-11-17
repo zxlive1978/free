@@ -739,6 +739,22 @@ var jumpjump=0;
 //Проверка стрима
 var checkstream = false;
 // var frame;
+
+function colOK4cams (namecams) {
+	// $("#myModal3").on("hidden.bs.modal", function () {
+	// 	checkstream = false;
+	// });
+	//Проверка Проверка существующих потоков
+	// namecams=$("#zzm1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
+	// console.log(namecams);
+	jumpjump=0;
+	checkstream = true;
+	getstatcamscams('check',namecams);
+}
+
+
+
+
 function colOK4 () {
 	$("#myModal3").on("hidden.bs.modal", function () {
 		checkstream = false;
@@ -1559,13 +1575,14 @@ function adm (){
 	//$('#taabs-1').append('<div class="row">');
 	var bigelem='<div class="container"><div class="row text-justify">';
 	for (var keey in camswell) {
+		namecams=camswell[keey].txt+'_'+camswell[keey].name;
 		bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
 		'<div class="thumbnail bg-dark text-light  text-center">'+
 		'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
 		'<div class="caption text-center">'+
-			'<h7>'+camswell[keey].txt+'_'+camswell[keey].name+'</h7>'+
+			'<h7>'+namecams+'</h7>'+
 			'<p>Статус:</p>'+
-			'<p><a href="#" class="btn btn-primary" role="button">Подключение</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
+			'<p><a href="#" class="btn btn-primary" role="button" onclick="colOK4cams('+namecams+')">Подключение</a> <a href="#" class="btn btn-default" id="gogogo" role="button" onclick()="gogocams('+namecams+')">Просмотр</a></p>'+
 		'</div>'+
 		'</div>'+
 	'</div>';	
