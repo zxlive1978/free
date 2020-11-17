@@ -746,10 +746,10 @@ function colOK4cams (namecams) {
 	// });
 	//Проверка Проверка существующих потоков
 	// namecams=$("#zzm1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
-	// console.log(namecams);
+	console.log(namecams);
 	jumpjump=0;
 	checkstream = true;
-	getstatcamscams('check',namecams);
+	//getstatcamscams('check',namecams);
 }
 
 
@@ -1582,7 +1582,7 @@ function adm (){
 		'<div class="caption text-center">'+
 			'<h7>'+namecams+'</h7>'+
 			'<p>Статус:</p>'+
-			'<p><a href="#" class="btn btn-primary" role="button" onclick="colOK4cams('+namecams+')">Подключение</a> <a href="#" class="btn btn-default" id="gogogo" role="button" onclick()="gogocams('+namecams+')">Просмотр</a></p>'+
+			'<p><a href="#" class="btn btn-primary" role="button" '+'id='+namecams+'">Подключение</a> <a href="#" class="btn btn-default" id="gogogo" role="button" onclick()="gogocams('+namecams+');">Просмотр</a></p>'+
 		'</div>'+
 		'</div>'+
 	'</div>';	
@@ -1592,7 +1592,13 @@ function adm (){
 
 	}
 	bigelem=bigelem+'</div>';
+
 	$('#taabs-1').html(bigelem);
+
+	for (var keey in camswell) {
+	namecams=camswell[keey].txt+'_'+camswell[keey].name;
+	$("#namecams").bind("click", colOK4cams(namecams), false);
+	}
 
 	// $('#taabs-1').html('<div class="container"><div class="row text-justify">'+
 	// '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
