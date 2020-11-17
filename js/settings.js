@@ -1573,9 +1573,10 @@ function adm (){
 	$('#taabs-1').empty();
 	$('#ul1').hide();
 	//$('#taabs-1').append('<div class="row">');
+	var i=0
 	var bigelem='<div class="container"><div class="row text-justify">';
 	for (var keey in camswell) {
-		namecams=camswell[keey].rtsp+keey;
+		namecams='cam'+i; i++;
 		bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
 		'<div class="thumbnail bg-dark text-light  text-center">'+
 		'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
@@ -1594,11 +1595,10 @@ function adm (){
 	bigelem=bigelem+'</div>';
 
 	$('#taabs-1').html(bigelem);
-
+	i=0;
 	for (var keey in camswell) {
-	namecams='';
-	namecams=camswell[keey].rtsp+keey;
-	$('#'+String(namecams)).click(function() {
+		namecams='cam'+i; i++;
+	$('#'+namecams).click(function() {
 		colOK4cams(namecams);
 		//defaultpro
 	});
