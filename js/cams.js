@@ -307,33 +307,48 @@ $.ajax({
         camswell =[];
         let s =JSON.parse(response);
         //alert(s[0]['skvjson']);
+        cams = {};
         var len = s.length;
+        var okok1=decodeURIComponent(escape(window.atob(_uz[6])));
+        okok1 = okok1.split(',');
+       
+        for (var j=0; j<okok1.length; j++){
+        
         for(var i=0; i<len; i++){
             
             //skvjson = JSON.parse(skvjson);
             var n = JSON.parse(s[i]['skvjson']); 
             //camswell =n;  
-            //console.log(n['txt']+'_'+n['name']);
+            console.log(n['txt']+'_'+n['name']) ;
+            console.log(okok1[j]) ;
             
-            var okok=decodeURIComponent(escape(window.atob(_uz[6])));
-            if (skv==(n['txt']) && okok=='ALL'){
+            // var okok=decodeURIComponent(escape(window.atob(_uz[6])));
+            //if (skv==(n['txt']) && okok=='ALL'){
+               // camswell.push(n);
+            if ((okok1=='ALL') || (okok1[j]==n['txt']) ){
                 camswell.push(n);
                 //console.log(cams);
 
-            }}
+            }
+        
+        }
             //cams = {};
-            var okok1=decodeURIComponent(escape(window.atob(_uz[6])));
-            okok1 = okok1.split(',');
-            for (var j=0; j<okok1.length; j++){
-              
-                // if (skv==(n['txt']) && okok1==skv){
-                //     camswell.push(n);
-                    console.log(okok1[j]);
+           
+                // console.log(okok1[j], skv, n['txt']);
+                // if (okok1[j]==n['txt']){
+                //     camswell.push(n);}
+                //     //console.log(okok1[j], skv, n['txt']);
+
+                //     // if (skv==(n['txt']) && okok1[j]==(n['txt'])){
+                //     //     camswell.push(n);
+                //     //     //console.log(cams);
+        
+                //     // }
     
-                // }
+                // // }
                 
             }
-
+            //console.log(camswell);
             for (keeys in camswell){
                 
                 console.log(camswell[keeys]);
