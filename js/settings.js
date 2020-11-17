@@ -1598,26 +1598,20 @@ function adm (){
 	for (var keey in camswell) {
 	namecams='';
 	namecams=camswell[keey].txt+'_'+camswell[keey].name;
-	$('#'+namecams).on('click',function() {
+	$('#'+String(namecams)).click(function() {
 		colOK4cams(namecams);
 		//defaultpro
 	});
+	}
 	//console.log($('#'+namecams+' id').val());
-	$('#'+namecams).each(function() {
-		$.each(this.attributes, function() {
-		  // this.attributes is not a plain object, but an array
-		  // of attribute nodes, which contain both the name and value
-		  if(this.specified) {
-			console.log(this.name, this.value);
-		  }
-		});
-	  });
 	
+		// 	// 	colPan12 ();		
+		// 	// });
 	//$("#namecams").bind("click", colOK4cams(namecams), false);
 	// document.getElementById('#'+namecams).addEventListener("click", function() {
 	// 	colOK4cams(namecams);
 	//   }); 
-	}
+
 
 	// $('#taabs-1').html('<div class="container"><div class="row text-justify">'+
 	// '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
