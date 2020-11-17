@@ -312,7 +312,7 @@ $.ajax({
             //skvjson = JSON.parse(skvjson);
             let n = JSON.parse(s[i]['skvjson']);   
             //console.log(n['txt']+'_'+n['name']);
-            console.log(n['txt']);
+            console.log(n['txt'],n['rtsp'],n['name']);
             if (namecams==(n['txt']+'_'+n['name'])){
 
             }}

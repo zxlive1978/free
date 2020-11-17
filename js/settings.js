@@ -32,6 +32,7 @@ var Shablontxtwell = {
 //Список камер
 var livestatcams ={};
 var cams = {};
+var camswell = {};
 
 //Текущие параметры Справочник параметров графики обычные
 
