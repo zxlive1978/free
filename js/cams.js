@@ -311,20 +311,37 @@ $.ajax({
         for(var i=0; i<len; i++){
             
             //skvjson = JSON.parse(skvjson);
-            let n = JSON.parse(s[i]['skvjson']); 
+            var n = JSON.parse(s[i]['skvjson']); 
             //camswell =n;  
             //console.log(n['txt']+'_'+n['name']);
             
-            
-            if (skv==(n['txt']) &&){
+            var okok=decodeURIComponent(escape(window.atob(_uz[6])));
+            if (skv==(n['txt']) && okok=='ALL'){
                 camswell.push(n);
-                //console.log(n['txt'],n['rtsp'],n['name']);
+                //console.log(cams);
 
             }}
+            //cams = {};
+            var okok1=decodeURIComponent(escape(window.atob(_uz[6])));
+            okok1 = okok1.split(',');
+            for (var j=0; j<okok1.length; j++){
+              
+                // if (skv==(n['txt']) && okok1==skv){
+                //     camswell.push(n);
+                    console.log(okok1[j]);
+    
+                // }
+                
+            }
+
             for (keeys in camswell){
                 
                 console.log(camswell[keeys]);
-    }
+            }
+            // for (keeys in cams){
+            
+            //     console.log(cams[keeys]);
+            // }
         
         
         }
