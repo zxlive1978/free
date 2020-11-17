@@ -740,13 +740,13 @@ var jumpjump=0;
 var checkstream = false;
 // var frame;
 
-function colOK4cams (namecams) {
+function colOK4cams (nnamecams) {
 	// $("#myModal3").on("hidden.bs.modal", function () {
 	// 	checkstream = false;
 	// });
 	//Проверка Проверка существующих потоков
 	// namecams=$("#zzm1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
-	console.log(namecams);
+	console.log(nnamecams);
 	jumpjump=0;
 	checkstream = true;
 	//getstatcamscams('check',namecams);
@@ -1596,7 +1596,9 @@ function adm (){
 	$('#taabs-1').empty();
 	$('#ul1').hide();
 	//$('#taabs-1').append('<div class="row">');
-	var i=0
+	for (var keey in camswell) {
+		console.log(camswell[keey].txt+'_'+camswell[keey].name);
+	}
 	var bigelem='<div class="container"><div class="row text-justify">';
 	for (var keey in camswell) {
 		
@@ -1623,18 +1625,23 @@ function adm (){
 	bigelem=bigelem+'</div>';
 
 	$('#taabs-1').html(bigelem);
-	i=0;
-	for (var keey in camswell) {
-		namecams=camswell[keey].txt+'_'+camswell[keey].name;
+	// i=0;
+	// for (var keey in camswell) {
+	// 	namecams=camswell[keey].txt+'_'+camswell[keey].name;
 	
-		namecams=transliterate(namecams);
-		namecams=namecams.replace(new RegExp(" ",'g'),"suck");
-		namecams=namecams.replace(new RegExp(",",'g'),"sack");
-	$('#'+namecams).click(function() {
-		colOK4cams(camswell[keey].txt+'_'+camswell[keey].name);
-		//defaultpro
-	});
-	}
+	// 	namecams=transliterate(namecams);
+	// 	namecams=namecams.replace(new RegExp(" ",'g'),"suck");
+	// 	namecams=namecams.replace(new RegExp(",",'g'),"sack");
+	// $('#'+namecams).click(function() {
+	// 	var idss= $(this).attr('id');
+	// 	idss=idss.replace(new RegExp("suck",'g')," ");
+	// 	idss=idss.replace(new RegExp("sack",'g'),",");
+	// 	idss=transliterate(idss, true);
+	// 	console.log( idss);
+	// 	colOK4cams(idss);
+
+	// });
+	// }
 	//console.log($('#'+namecams+' id').val());
 	
 		// 	// 	colPan12 ();		
