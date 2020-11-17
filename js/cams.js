@@ -294,3 +294,32 @@ function installcams(whatdo, table, p000){
     });
 
 };
+
+// Список камер для буровой
+function getcamswell(){
+$.ajax({
+    type: "POST",
+    url: 'js/cams.php',
+    data: {whatdo:'create', namecams: skv},
+    cache: false,
+    async: false,
+    success: function(response){
+        let s =JSON.parse(response);
+        //alert(s[0]['skvjson']);
+        var len = s.length;
+        for(var i=0; i<len; i++){
+            
+            //skvjson = JSON.parse(skvjson);
+            let n = JSON.parse(s[i]['skvjson']);   
+            //console.log(n['txt']+'_'+n['name']);
+            console.log(n['txt']);
+            if (namecams==(n['txt']+'_'+n['name'])){
+
+            }}
+        
+        
+        
+        }
+        });
+
+    }

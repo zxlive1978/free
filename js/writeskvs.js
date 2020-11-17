@@ -126,7 +126,7 @@ function readskvstart(whatdo, table, p000, skvsjson){
 					
 				}
 			}
-			cams = {};
+			var cams = {};
 			var len = response.length;
             for(var i=0; i<len; i++){
                 var p000 = response[i].p000;
@@ -142,7 +142,9 @@ function readskvstart(whatdo, table, p000, skvsjson){
 						cams[String(p000)] =  skvjson;}
 					
 				}
+				//console.log(cams)
 			}
+			//console.log(cams);
 					//Имя
 					$("#ava").text(decodeURIComponent(escape(window.atob(_uz[0]))));
 					//Сохранение и чтение настроей из локального хранилища
