@@ -1550,7 +1550,7 @@ function adm (){
 	
 	onofadm = false;
 	
-
+	getcamswell();
 
 	$('#tabs').show();
 	$('#taabs-1').empty();
