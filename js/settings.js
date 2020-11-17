@@ -1582,7 +1582,7 @@ function adm (){
 		'<div class="caption text-center">'+
 			'<h7>'+namecams+'</h7>'+
 			'<p>Статус:</p>'+
-			'<p><a href="#" class="btn btn-primary" role="button" '+'id='+namecams+'">Подключение</a> <a href="#" class="btn btn-default" id="gogogo" role="button" onclick()="gogocams('+namecams+');">Просмотр</a></p>'+
+			'<p><a href="#" class="btn btn-primary" role="button" id="'+namecams+'" >Подключение</a> <a href="#" class="btn btn-default" id="gogogo" role="button" ">Просмотр</a></p>'+
 		'</div>'+
 		'</div>'+
 	'</div>';	
@@ -1596,8 +1596,15 @@ function adm (){
 	$('#taabs-1').html(bigelem);
 
 	for (var keey in camswell) {
+	namecams='';
 	namecams=camswell[keey].txt+'_'+camswell[keey].name;
-	$("#namecams").bind("click", colOK4cams(namecams), false);
+	$('#namecams').on('click', function() {event.stopPropagation();
+		colOK4cams(namecams);
+	});
+	//$("#namecams").bind("click", colOK4cams(namecams), false);
+	// document.getElementById('#'+namecams).addEventListener("click", function() {
+	// 	colOK4cams(namecams);
+	//   }); 
 	}
 
 	// $('#taabs-1').html('<div class="container"><div class="row text-justify">'+
