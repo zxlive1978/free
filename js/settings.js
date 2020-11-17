@@ -1575,7 +1575,7 @@ function adm (){
 	//$('#taabs-1').append('<div class="row">');
 	var bigelem='<div class="container"><div class="row text-justify">';
 	for (var keey in camswell) {
-		namecams=camswell[keey].txt+'_'+camswell[keey].name;
+		namecams=camswell[keey].rtsp+keey;
 		bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
 		'<div class="thumbnail bg-dark text-light  text-center">'+
 		'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
@@ -1597,7 +1597,7 @@ function adm (){
 
 	for (var keey in camswell) {
 	namecams='';
-	namecams=camswell[keey].txt+'_'+camswell[keey].name;
+	namecams=camswell[keey].rtsp+keey;
 	$('#'+String(namecams)).click(function() {
 		colOK4cams(namecams);
 		//defaultpro
