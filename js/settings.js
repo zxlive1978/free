@@ -1598,9 +1598,21 @@ function adm (){
 	for (var keey in camswell) {
 	namecams='';
 	namecams=camswell[keey].txt+'_'+camswell[keey].name;
-	$('#namecams').on('click', function() {event.stopPropagation();
+	$('#'+namecams).on('click',function() {
 		colOK4cams(namecams);
+		//defaultpro
 	});
+	//console.log($('#'+namecams+' id').val());
+	$('#'+namecams).each(function() {
+		$.each(this.attributes, function() {
+		  // this.attributes is not a plain object, but an array
+		  // of attribute nodes, which contain both the name and value
+		  if(this.specified) {
+			console.log(this.name, this.value);
+		  }
+		});
+	  });
+	
 	//$("#namecams").bind("click", colOK4cams(namecams), false);
 	// document.getElementById('#'+namecams).addEventListener("click", function() {
 	// 	colOK4cams(namecams);
