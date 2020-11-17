@@ -304,6 +304,7 @@ $.ajax({
     cache: false,
     async: false,
     success: function(response){
+        camswell ={};
         let s =JSON.parse(response);
         //alert(s[0]['skvjson']);
         var len = s.length;
@@ -312,11 +313,16 @@ $.ajax({
             //skvjson = JSON.parse(skvjson);
             let n = JSON.parse(s[i]['skvjson']);   
             //console.log(n['txt']+'_'+n['name']);
-            console.log(n['txt'],n['rtsp'],n['name']);
-            if (namecams==(n['txt']+'_'+n['name'])){
+            
+            
+            if (namecams==(n['txt'])){
+                camswell=n;
+                console.log(n['txt'],n['rtsp'],n['name']);
 
             }}
-        
+            for (keeys in camswell){
+                console.log(camswell[keeys]);
+    }
         
         
         }
