@@ -1604,6 +1604,7 @@ function adm (){
 		
 		namecams=transliterate(namecams);
 		namecams=namecams.replace(new RegExp(" ",'g'),"suck");
+		namecams=namecams.replace(new RegExp(",",'g'),"sack");
 		bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
 		'<div class="thumbnail bg-dark text-light  text-center">'+
 		'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
@@ -1625,8 +1626,10 @@ function adm (){
 	i=0;
 	for (var keey in camswell) {
 		namecams=camswell[keey].txt+'_'+camswell[keey].name;
-		namecams.replace(new RegExp(" ",'g'),"suck");
+	
 		namecams=transliterate(namecams);
+		namecams=namecams.replace(new RegExp(" ",'g'),"suck");
+		namecams=namecams.replace(new RegExp(",",'g'),"sack");
 	$('#'+namecams).click(function() {
 		colOK4cams(camswell[keey].txt+'_'+camswell[keey].name);
 		//defaultpro
