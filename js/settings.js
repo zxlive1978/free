@@ -32,7 +32,7 @@ var Shablontxtwell = {
 //Список камер
 var livestatcams ={};
 var cams = {};
-var camswell = {};
+var camswell = [];
 
 //Текущие параметры Справочник параметров графики обычные
 
@@ -1558,20 +1558,20 @@ function adm (){
 	$('#ul1').hide();
 	//$('#taabs-1').append('<div class="row">');
 	var bigelem='<div class="container"><div class="row text-justify">';
-	for (var keey in namecams) {
-	// 	bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
-	// 	'<div class="thumbnail bg-dark text-light  text-center">'+
-	// 	'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
-	// 	'<div class="caption text-center">'+
-	// 		'<h5>'+cams[keey].wellN+'_'+cams[keey].txt+'</h5>'+
-	// 		'<p>Статус:</p>'+
-	// 		'<p><a href="#" class="btn btn-primary" role="button">Подключение</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
-	// 	'</div>'+
-	// 	'</div>'+
-	// '</div>';	
+	for (var keey in camswell) {
+		bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
+		'<div class="thumbnail bg-dark text-light  text-center">'+
+		'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
+		'<div class="caption text-center">'+
+			'<h5>'+camswell[keey].name+'</h5>'+
+			'<p>Статус:</p>'+
+			'<p><a href="#" class="btn btn-primary" role="button">Подключение</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
+		'</div>'+
+		'</div>'+
+	'</div>';	
 				// value: cams[keey].wellN,
 				// text : cams[keey].txt
-				console.log(namecams[keey]);
+				//console.log(namecams[keey]);
 
 	}
 	bigelem=bigelem+'</div>';

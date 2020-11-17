@@ -304,23 +304,25 @@ $.ajax({
     cache: false,
     async: false,
     success: function(response){
-        camswell ={};
+        camswell =[];
         let s =JSON.parse(response);
         //alert(s[0]['skvjson']);
         var len = s.length;
         for(var i=0; i<len; i++){
             
             //skvjson = JSON.parse(skvjson);
-            let n = JSON.parse(s[i]['skvjson']);   
+            let n = JSON.parse(s[i]['skvjson']); 
+            //camswell =n;  
             //console.log(n['txt']+'_'+n['name']);
             
             
-            if (namecams==(n['txt'])){
-                camswell=n;
-                console.log(n['txt'],n['rtsp'],n['name']);
+            if (skv==(n['txt']) &&){
+                camswell.push(n);
+                //console.log(n['txt'],n['rtsp'],n['name']);
 
             }}
             for (keeys in camswell){
+                
                 console.log(camswell[keeys]);
     }
         
