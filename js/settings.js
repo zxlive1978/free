@@ -1552,6 +1552,29 @@ function resizeiframe(){
         div.style.height = div.contentWindow.document.body.scrollHeight + 'px';
       }
 }
+
+// function ()
+//Если с английского на русский, то передаём вторым параметром true.
+transliterate = (
+	function() {
+		var
+			rus = "щ   ш  ч  ц  ю  я  ё  ж  ъ  ы  э  а б в г д е з и й к л м н о п р с т у ф х ь".split(/ +/g),
+			eng = "shh sh ch cz yu ya yo zh eee iii ee a b v g d e z i j k l m n o p r s t u f x ooo".split(/ +/g)
+		;
+		return function(text, engToRus) {
+			var x;
+			for(x = 0; x < rus.length; x++) {
+				text = text.split(engToRus ? eng[x] : rus[x]).join(engToRus ? rus[x] : eng[x]);
+				text = text.split(engToRus ? eng[x].toUpperCase() : rus[x].toUpperCase()).join(engToRus ? rus[x].toUpperCase() : eng[x].toUpperCase());	
+			}
+			return text;
+		}
+	}
+)();
+// var txt = "Съешь ещё этих мягких французских булок, да выпей же чаю!";
+// alert(transliterate(txt));
+// alert(transliterate(transliterate(txt), true));
+
 //Админка
 function adm (){
 	if (onofadm){
@@ -1576,7 +1599,11 @@ function adm (){
 	var i=0
 	var bigelem='<div class="container"><div class="row text-justify">';
 	for (var keey in camswell) {
-		namecams='cam'+i; i++;
+		
+		namecams=camswell[keey].txt+'_'+camswell[keey].name;
+		
+		namecams=transliterate(namecams);
+		namecams=namecams.replace(new RegExp(" ",'g'),"suck");
 		bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
 		'<div class="thumbnail bg-dark text-light  text-center">'+
 		'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
@@ -1597,9 +1624,11 @@ function adm (){
 	$('#taabs-1').html(bigelem);
 	i=0;
 	for (var keey in camswell) {
-		namecams='cam'+i; i++;
+		namecams=camswell[keey].txt+'_'+camswell[keey].name;
+		namecams.replace(new RegExp(" ",'g'),"suck");
+		namecams=transliterate(namecams);
 	$('#'+namecams).click(function() {
-		colOK4cams(namecams);
+		colOK4cams(camswell[keey].txt+'_'+camswell[keey].name);
 		//defaultpro
 	});
 	}
