@@ -1568,8 +1568,8 @@ function adm (){
 		'</div>'+
 		'</div>'+
 	'</div>';	
-				value: cams[keey].wellN,
-				text : cams[keey].txt
+				// value: cams[keey].wellN,
+				// text : cams[keey].txt
 
 	}
 	bigelem=bigelem+'</div>';
