@@ -1563,7 +1563,7 @@ function adm (){
 		'<div class="thumbnail bg-dark text-light  text-center">'+
 		'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
 		'<div class="caption text-center">'+
-			'<h5>'+camswell[keey].name+'</h5>'+
+			'<h7>'+camswell[keey].txt+'_'+camswell[keey].name+'</h7>'+
 			'<p>Статус:</p>'+
 			'<p><a href="#" class="btn btn-primary" role="button">Подключение</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
 		'</div>'+

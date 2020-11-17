@@ -311,16 +311,16 @@ $.ajax({
         var len = s.length;
         var okok1=decodeURIComponent(escape(window.atob(_uz[6])));
         okok1 = okok1.split(',');
-       
+        console.log(okok1);
         for (var j=0; j<okok1.length; j++){
-        
+            okok1[j]=okok1[j].trim();
         for(var i=0; i<len; i++){
             
             //skvjson = JSON.parse(skvjson);
             var n = JSON.parse(s[i]['skvjson']); 
             //camswell =n;  
-            console.log(n['txt']+'_'+n['name']) ;
-            console.log(okok1[j]) ;
+            if ((okok1[j]==n['txt']) ){
+                camswell.push(n);}
             
             // var okok=decodeURIComponent(escape(window.atob(_uz[6])));
             //if (skv==(n['txt']) && okok=='ALL'){
@@ -332,6 +332,10 @@ $.ajax({
             }
         
         }
+    }
+
+}
+
             //cams = {};
            
                 // console.log(okok1[j], skv, n['txt']);
@@ -347,19 +351,19 @@ $.ajax({
     
                 // // }
                 
-            }
+        
             //console.log(camswell);
-            for (keeys in camswell){
+            // for (keeys in camswell){
                 
-                console.log(camswell[keeys]);
-            }
+            //     console.log(camswell[keeys]);
+            // }
             // for (keeys in cams){
             
             //     console.log(cams[keeys]);
             // }
         
         
-        }
+     
         });
 
     }
