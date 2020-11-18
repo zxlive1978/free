@@ -1983,7 +1983,8 @@ function adm (){
 	} else {
 		
 		//удаление старых потоков
-		deleteoldcams();
+		timeoutID = window.setTimeout(deleteoldcams(), 15000);
+		
 		$('#dialogvideo').dialog( "open" );// Для скрытия
 		$('#tabs').hide();
 		$('#camsf2').remove();
