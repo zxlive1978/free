@@ -573,70 +573,34 @@ function getcamswell(){
 $.ajax({
     type: "POST",
     url: 'js/cams.php',
-    data: {whatdo:'create', namecams: skv},
+    data: {whatdo:'createforcamsdb', namecams: skv},
     cache: false,
     async: false,
     success: function(response){
         camswell =[];
-        let s =JSON.parse(response);
-        //alert(s[0]['skvjson']);
-        //cams = {};
-        var len = s.length;
+        var s ={};
+        s=JSON.parse(response);
+
         var okok1=decodeURIComponent(escape(window.atob(_uz[6])));
-        okok1 = okok1.split(',');
-        console.log(okok1);
-        for (var j=0; j<okok1.length; j++){
-            okok1[j]=okok1[j].trim();
-        for(var i=0; i<len; i++){
-            
-            //skvjson = JSON.parse(skvjson);
-            var n = JSON.parse(s[i]['skvjson']); 
-            //camswell =n;  
-            if ((okok1[j]==n['txt']) ){
-                camswell.push(n);}
-            
-            // var okok=decodeURIComponent(escape(window.atob(_uz[6])));
-            //if (skv==(n['txt']) && okok=='ALL'){
-               // camswell.push(n);
-            if ((okok1=='ALL') || (okok1[j]==n['txt']) ){
-                camswell.push(n);
-                //console.log(cams);
-
-            }
-        
+        var okok11 =okok1.split(',');
+        // for (var j=0; j<okok11.length; j++){
+        // //console.log(okok11[j].trim());}
+        for (var j=0; j<okok11.length; j++){
+            //  console.log(okok11[j].trim());
+                for(var i=0; i<s.length; i++){
+                    var n = JSON.parse(s[i]['skvjson']);
+                    n['id']=s[i]['id'];
+                    //var n = JSON.parse(s[i]);
+                    // console.log(n['txt']);
+                   
+                        if ((okok11[j].trim()==n['txt']) || (okok11[j].trim()=='ALL') ){
+                            camswell.push(n);
+                                                   }
+                
+                }
         }
-    }
-
-}
-
-            //cams = {};
-           
-                // console.log(okok1[j], skv, n['txt']);
-                // if (okok1[j]==n['txt']){
-                //     camswell.push(n);}
-                //     //console.log(okok1[j], skv, n['txt']);
-
-                //     // if (skv==(n['txt']) && okok1[j]==(n['txt'])){
-                //     //     camswell.push(n);
-                //     //     //console.log(cams);
-        
-                //     // }
-    
-                // // }
-                
-        
-            //console.log(camswell);
-            // for (keeys in camswell){
-                
+            // for (keeys in camswell){   
             //     console.log(camswell[keeys]);
             // }
-            // for (keeys in cams){
-            
-            //     console.log(cams[keeys]);
-            // }
-        
-        
-     
-        });
-
-    }
+        }
+        });}

@@ -747,10 +747,10 @@ function colOK4cams (nnamecams) {
 	// });
 	//Проверка Проверка существующих потоков
 	// namecams=$("#zzm1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
-	console.log(nnamecams);
+	//console.log(nnamecams);
 	jumpjump=0;
 	checkstream = true;
-	//getstatcamscams('check',namecams);
+	//getstatcamscams('check',nnamecams);
 }
 
 
@@ -1597,24 +1597,21 @@ function adm (){
 	$('#taabs-1').empty();
 	$('#ul1').hide();
 	//$('#taabs-1').append('<div class="row">');
-	for (var keey in camswell) {
-		console.log(camswell[keey].txt+'_'+camswell[keey].name);
-	}
+	// for (var keey in camswell) {
+	// 	console.log(camswell[keey].txt+'_'+camswell[keey].name);
+	// }
 	var bigelem='<div class="container"><div class="row text-justify">';
 	for (var keey in camswell) {
 		
 		namecams=camswell[keey].txt+'_'+camswell[keey].name;
 		
-		namecams=transliterate(namecams);
-		namecams=namecams.replace(new RegExp(" ",'g'),"suck");
-		namecams=namecams.replace(new RegExp(",",'g'),"sack");
 		bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
 		'<div class="thumbnail bg-dark text-light  text-center">'+
 		'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
 		'<div class="caption text-center">'+
 			'<h7>'+namecams+'</h7>'+
 			'<p>Статус:</p>'+
-			'<p><a href="#" class="btn btn-primary" role="button" id="'+namecams+'" >Подключение</a> <a href="#" class="btn btn-default" id="gogogo" role="button" ">Просмотр</a></p>'+
+			'<p><a href="#" class="btn btn-primary" role="button" id="'+camswell[keey].id+'" >Подключение</a> <a href="#" class="btn btn-default" id="gogogo" role="button" ">Просмотр</a></p>'+
 		'</div>'+
 		'</div>'+
 	'</div>';
@@ -1624,17 +1621,11 @@ function adm (){
 	$('#taabs-1').html(bigelem);
 	// i=0;
 	for (var keey in camswell) {
-		namecams=camswell[keey].txt+'_'+camswell[keey].name;
-	
-		namecams=transliterate(namecams);
-		namecams=namecams.replace(new RegExp(" ",'g'),"suck");
-		namecams=namecams.replace(new RegExp(",",'g'),"sack");
-	$('#'+namecams).click(function() {
+		
+	$('#'+camswell[keey].id).click(function() {
 		var idss= $(this).attr('id');
-		idss=idss.replace(new RegExp("suck",'g')," ");
-		idss=idss.replace(new RegExp("sack",'g'),",");
-		idss=transliterate(idss, true);
-		console.log( idss);
+		
+		//console.log( idss);
 		colOK4cams(idss);
 
 	});
