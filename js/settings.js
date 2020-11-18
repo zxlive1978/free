@@ -1586,6 +1586,7 @@ function adm (){
 	refresh = false;
 	$('#drawing').empty();
 	$('#drawing').hide();
+	$('#skvnamelab').hide();
 	
 	
 	$('#dialogvideo').dialog( "close" );// Для скрытия
@@ -1997,6 +1998,7 @@ function adm (){
 		
 		$('#drawing').empty();
 		$('#drawing').show();
+		$('#skvnamelab').show();
 		online = true;
 		refresh = true;
 		onofadm = true;
