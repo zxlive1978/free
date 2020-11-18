@@ -1600,7 +1600,7 @@ function adm (){
 	// for (var keey in camswell) {
 	// 	console.log(camswell[keey].txt+'_'+camswell[keey].name);
 	// }
-	var bigelem='<div class="container"><div class="row text-justify">';
+	var bigelem='<div class="container bg-dark"><div class="row text-justify">';
 	for (var keey in camswell) {
 		
 		namecams=camswell[keey].txt+'_'+camswell[keey].name;

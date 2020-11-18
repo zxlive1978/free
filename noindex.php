@@ -157,8 +157,7 @@ function getStart() {
 window.onload = getStart;
 
 </script>
-
-
+<!-- //Модальный iframe -->
 <div class="modal fade modal-fullscreen modal-dark" id="myModal1">
     <div class="modal-dialog modal-dialog-scrollable-dark">
       <div class="modal-content">
