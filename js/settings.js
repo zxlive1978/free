@@ -1600,17 +1600,20 @@ function adm (){
 	// for (var keey in camswell) {
 	// 	console.log(camswell[keey].txt+'_'+camswell[keey].name);
 	// }
-	var bigelem='<div class="container bg-dark"><div class="row text-justify">';
+	var bigelem='<div class="container-fluid"><div class=" row text-justify">';
 	for (var keey in camswell) {
 		
 		namecams=camswell[keey].txt+'_'+camswell[keey].name;
 		
 		bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
-		'<div class="thumbnail bg-dark text-light  text-center">'+
-		'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
+		'<div class="thumbnail bg-info text-light  text-center">'+
+		//'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
+		'<div class="embed-responsive embed-responsive-16by9">'+
+  		'<iframe id="iframeemb'+camswell[keey].id + '" class="embed-responsive-item" src="" allowfullscreen></iframe></div>'+
 		'<div class="caption text-center">'+
-			'<h7>'+namecams+'</h7>'+
-			'<p>Статус:</p>'+
+			'<h6>'+namecams+'</h6>'+
+			'<div class="progress">'+
+    		'<div id="progress'+camswell[keey].id + '" class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 10%" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100"></div></div>'+
 			'<p><a href="#" class="btn btn-primary" role="button" id="'+camswell[keey].id+'" >Подключение</a> <a href="#" class="btn btn-default" id="gogogo" role="button" ">Просмотр</a></p>'+
 		'</div>'+
 		'</div>'+

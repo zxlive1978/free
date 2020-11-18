@@ -82,7 +82,7 @@ if (!$_SESSION['auth']) {
 
 
 </head>
-<body>
+<body  class=" bg-dark">
 
 <!-- Brand -->
 <!-- 	<a class="navbar-brand align-middle" href="#">
@@ -117,7 +117,7 @@ if (!$_SESSION['auth']) {
     <li><a href="#tabs-3"> <span id="tabsn-3" >     </span></a></li>
     <li><a href="#tabs-4"> <span id="tabsn-4" >     </span></a></li> -->
   </ul>
-  <div id="taabs-1" style="display: block;  margin: 0 auto;"></div>
+  <div id="taabs-1" class="bg-dark" style="display: block;  margin: 0 auto; background-color:black;"></div>
   
   
   <!-- <div id="tabs-2">
@@ -129,8 +129,8 @@ if (!$_SESSION['auth']) {
 </div>
 
 
-<div id="drawing"  ></div>
-<div id="tabvideo" width="100%" height="100%"  style = "background-color:khaki" ></div>
+<div id="drawing" class="bg-dark"  ></div>
+<div id="tabvideo" width="100%" height="100%"  class="bg-dark" style = "background-color:black;" ></div>
 <script type="text/javascript">
 function getStart() {
       //alert('ok');
