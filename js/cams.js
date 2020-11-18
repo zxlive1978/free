@@ -41,7 +41,7 @@ function getstatcamscams(whatdo, namecams){
                     //if (livestatcams[keey].status=='broadcasting' ){
                         //$('#form7').append('\Готов');
                     $('#gogogo'+namecams).prop('disabled', false);
-                    
+                    gogocams();
                     return 0;
 
                 }}
@@ -97,6 +97,7 @@ function getstatcamscams(whatdo, namecams){
                                         if (jumpjump==10 || fundstream == true){
                                             //$('#form7').append('BAD');
                                             clearTimeout(moto);
+                                            gogocams();
                                             return 0;
                                         } else{
                                             $.ajax({
@@ -126,6 +127,7 @@ function getstatcamscams(whatdo, namecams){
                                                                 //$('#form7').append('\Готов');
                                                             $('#gogogo'+namecams).prop('disabled', false);
                                                             $('#iframeemb'+namecams).prop('scr', curstramID);
+                                                            gogocams();
                                                             return 0;
                                     
                                                         }}}})
@@ -467,7 +469,7 @@ function deleteoldcams(){
                             success: function(data){
 
                                  for (var keex in livestatcams) {
-                                console.log(curstramID, livestatcams[keex].hlsViewerCount);
+                                //console.log(curstramID, livestatcams[keex].hlsViewerCount);
                                 // if (){
                                 //     console.log(curstramID, livestatcams[keex].hlsViewerCount);
                                 //     $.ajax({
