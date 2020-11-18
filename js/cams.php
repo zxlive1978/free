@@ -38,9 +38,10 @@
             //$cur_rec['Wkp'] = $row['Wkp'];
             array_push($xy_value110d, $cur_rec);
             }
-        mysqli_free_result($result);
+      
         
         echo json_encode($xy_value110d);
+        mysqli_free_result($result);
 	    // $userrights = array ();
 	    // $userrights[]=base64_encode($obj['name']);
 	    // $userrights[]=base64_encode($obj['dolgnost']);
