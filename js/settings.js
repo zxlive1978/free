@@ -1610,13 +1610,13 @@ function adm (){
 		bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
 		'<div class="thumbnail bg-info text-light  text-center">'+
 		//'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
-		'<div class="embed-responsive embed-responsive-16by9">'+
-  		'<iframe id="iframeemb'+camswell[keey].id + '" class="embed-responsive-item" src="" allowfullscreen></iframe></div>'+
+		'<div id="iframeemb'+camswell[keey].id + '" class="embed-responsive embed-responsive-16by9">'+
+  		'</div>'+
 		'<div class="caption text-center">'+
 			'<h6>'+namecams+'</h6>'+
 			'<div class="progress">'+
     		'<div id="progress'+camswell[keey].id + '" class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 10%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>'+
-			'<p><a href="#" class="btn btn-primary" role="button" id="con'+camswell[keey].id+'" >Подключение</a> <a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
+			'<p><a href="#" class="btn btn-primary" role="button" id="con'+camswell[keey].id+'" >Подключение</a> <button type="button" disabled class="btn btn-success" id="gogogo'+camswell[keey].id+'">Просмотр</button>'+//<a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
 		'</div>'+
 		'</div>'+
 	'</div>';

@@ -125,7 +125,7 @@ function getstatcamscams(whatdo, namecams){
                                                             //if (livestatcams[keey].status=='broadcasting' ){
                                                                 //$('#form7').append('\Готов');
                                                             $('#gogogo'+namecams).prop('disabled', false);
-                                                            
+                                                            $('#iframeemb'+namecams).prop('scr', curstramID);
                                                             return 0;
                                     
                                                         }}}})
@@ -335,6 +335,8 @@ function getstatcams(whatdo, namecams){
 function gogocams(){
     $('#gogogo'+namecams).prop('disabled', true);
                         var frame = document.createElement("iframe");
+                       
+                        // document.getElementById("iframeemb"+namecams);
                         frame.setAttribute("id", "camsf2");
                         frame.setAttribute("width", '100%');
                     
@@ -356,7 +358,7 @@ function gogocams(){
                         frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name="+livestatcams[curkey].streamId);
                        
                     
-                        $('#tabvideo').append(frame);
+                        $('#iframeemb'+namecams).append(frame);
                     
                         //exit fullmode
                         document.addEventListener('fullscreenchange', exitHandler);
