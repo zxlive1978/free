@@ -1340,7 +1340,10 @@ $(document).ready(function () {
 			//проверка сессий
 			check_session('check','active',_ut);
 			
-			
+			$(window).bind("beforeunload", function() { 
+				//удаление старых потоков
+				deleteoldcams(); 
+			});
 			
 			
 			//ВИДЕО

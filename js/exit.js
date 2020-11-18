@@ -15,6 +15,7 @@ function exit(whatdo, table, p000){
             
                 
         //     }
+        
             location.href="index.html";
 
             }
@@ -43,6 +44,8 @@ function check_session(whatdo, table, p000){
 
         },
         error: function(){
+            //удаление старых потоков
+		    deleteoldcams();
             location.href="index.html";}
 
     });
