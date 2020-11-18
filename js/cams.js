@@ -466,8 +466,8 @@ function deleteoldcams(){
                             async: false,
                             success: function(data){
 
-                                // for (var keex in livestatcams) {
-                                // console.log(curstramID, livestatcams[keex].hlsViewerCount);
+                                 for (var keex in livestatcams) {
+                                console.log(curstramID, livestatcams[keex].hlsViewerCount);
                                 // if (){
                                 //     console.log(curstramID, livestatcams[keex].hlsViewerCount);
                                 //     $.ajax({
@@ -482,7 +482,7 @@ function deleteoldcams(){
                                 //         }
                                 //     });
                                 //     } 
-                                // }
+                                }
                                 $('#form7').append("\nУдален поток..."+livestatcams[keey].name);
                             
                                
