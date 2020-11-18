@@ -337,28 +337,26 @@ function gogocams(){
                     var frame = document.createElement("iframe");
                     
                     // document.getElementById("iframeemb"+namecams);
-                    frame.setAttribute("id", "camsf2");
-                    frame.setAttribute("width", '100%');
+                    frame.setAttribute("id", "camsf2"+namecams);
                 
                     frame.setAttribute("scrolling", "yes");
                     frame.setAttribute("frameborder", "0");
                     frame.setAttribute("allowfullscreen", "true");
                     frame.setAttribute("webkitAllowFullScreen", "true");
                     frame.setAttribute("mozallowfullscreen", "true");
-                    frame.style.position = 'relative';
+ 
                     frame.style.width = '100%';
                     frame.style.height = '100%';
-                    frame.style.margin = '0 0 0 0';
-                    frame.style.top = '50%';
-                    frame.style.height = '0%';
-                    frame.style.align = 'middle';
+
                 
-                    frame.setAttribute("auto_orient", "true");
-                    frame.setAttribute("scaling", "fit");
+
                     frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name="+livestatcams[curkey].streamId);
                     
-                
-                    $('#iframeemb'+namecams).append(frame);
+                    var newDiv =  document.createElement("div");
+                    newDiv.innerHTML = "<h1>Привет!</h1>";
+                    let element = document.querySelector('#iframeemb'+namecams);
+                    element.appendChild(frame);
+                    //$('#iframeemb'+namecams).append(frame);
 }
                     
                         //exit fullmode
