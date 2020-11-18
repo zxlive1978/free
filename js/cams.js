@@ -9,7 +9,8 @@ function getstatcamscams(whatdo, namecams){
     // online = false;
     //$('#form7').empty();
     // let moto =setTimeout(function tiktak () {
-   
+//    namecams=namecams.slice(3);
+//    console.log(namecams);
        
     let fundstream = false;
     
@@ -67,14 +68,15 @@ function getstatcamscams(whatdo, namecams){
                 async: false,
                 success: function(response){
                     let s =JSON.parse(response);
-                    //alert(s[0]['skvjson']);
+                    //console.log(s);
                     var len = s.length;
                     for(var i=0; i<len; i++){
                         
                         //skvjson = JSON.parse(skvjson);
-                        let n = JSON.parse(s[i]['skvjson']);   
-                        //console.log(n['txt']+'_'+n['name']);
-                        if (namecams==(n['txt']+'_'+n['name'])){
+                        let n = JSON.parse(s[i]['skvjson']);
+                        n['id']=s[i]['id'];   
+                        //console.log(n,n['id']);
+                        if (namecams==(s[i]['id'])){
                             
                             let rtsp= n['rtsp'];
                             $.ajax({
@@ -86,7 +88,7 @@ function getstatcamscams(whatdo, namecams){
                                 success: function(response){
                                     $('#form7').append("ОК");
                                     let s =JSON.parse(response);
-                                    //console.log(s['message']);
+                                    console.log(s);
                                     streamId=s['message'];
                                     //$('#form7').append('\nСоздание iframe...');
                                     //for(var j=0; j<10; j++){

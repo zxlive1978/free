@@ -747,10 +747,12 @@ function colOK4cams (nnamecams) {
 	// });
 	//Проверка Проверка существующих потоков
 	// namecams=$("#zzm1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
-	console.log(nnamecams);
+	//console.log(nnamecams);
 	jumpjump=0;
 	checkstream = true;
-	//getstatcamscams('check',nnamecams);
+	namecams=nnamecams.slice(3);
+	//console.log(namecams);
+	getstatcamscams('check',namecams);
 }
 
 
@@ -1613,7 +1615,7 @@ function adm (){
 		'<div class="caption text-center">'+
 			'<h6>'+namecams+'</h6>'+
 			'<div class="progress">'+
-    		'<div id="progress'+camswell[keey].id + '" class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 10%" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100"></div></div>'+
+    		'<div id="progress'+camswell[keey].id + '" class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 10%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>'+
 			'<p><a href="#" class="btn btn-primary" role="button" id="con'+camswell[keey].id+'" >Подключение</a> <a href="#" class="btn btn-default" id="gogogo" role="button" ">Просмотр</a></p>'+
 		'</div>'+
 		'</div>'+

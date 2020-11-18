@@ -29,12 +29,12 @@
         $query = "SELECT * FROM ".$name_base.".".$table.";";
 
         $result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc)); //ответ базы запишем в переменную $result. 
-        $cams = mysqli_fetch_assoc($result); //преобразуем ответ из БД в нормальный массив PHP
-        $obj = json_decode($cams['skvjson'], true);
+        //$cams = mysqli_fetch_assoc($result); //преобразуем ответ из БД в нормальный массив PHP
+        // $obj = json_decode($cams['skvjson'], true);
         $xy_value110d = array();
         while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
             //echo $row[$x_id]." - ".$row[$y_id]."<br />";
-            $cur_rec= array('skvjson' => $row['skvjson']);
+            $cur_rec= array('id' => $row['id'],'skvjson' => $row['skvjson']);
             //$cur_rec['Wkp'] = $row['Wkp'];
             array_push($xy_value110d, $cur_rec);
             }
