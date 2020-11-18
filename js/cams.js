@@ -36,7 +36,7 @@ function getstatcamscams(whatdo, namecams){
                     curstramID=livestatcams[keey].streamId;
                     //Текущий key
                     curkey=keey;
-                    //$('#form7').append('Найден');
+                    $('#form7').append('Найден');
                     //$('#form7').append('\nПроверка потока...OK');
                     //if (livestatcams[keey].status=='broadcasting' ){
                         //$('#form7').append('\Готов');
@@ -88,7 +88,7 @@ function getstatcamscams(whatdo, namecams){
                                 success: function(response){
                                     $('#form7').append("ОК");
                                     let s =JSON.parse(response);
-                                    console.log(s);
+                                    //console.log(s);
                                     streamId=s['message'];
                                     //$('#form7').append('\nСоздание iframe...');
                                     //for(var j=0; j<10; j++){
@@ -334,10 +334,10 @@ function getstatcams(whatdo, namecams){
 //старт отображения камеры
 function gogocams(){
     $('#gogogo'+namecams).prop('disabled', true);
-                    var frame = document.createElement("iframe");
-                    
+                    //var frame = document.createElement("iframe");
+                    var frame = document.querySelector('#iframeemb'+namecams);
                     // document.getElementById("iframeemb"+namecams);
-                    frame.setAttribute("id", "camsf2"+namecams);
+                    //frame.setAttribute("id", "camsf2"+namecams);
                 
                     frame.setAttribute("scrolling", "yes");
                     frame.setAttribute("frameborder", "0");
@@ -354,8 +354,9 @@ function gogocams(){
                     
                     var newDiv =  document.createElement("div");
                     newDiv.innerHTML = "<h1>Привет!</h1>";
-                    let element = document.querySelector('#iframeemb'+namecams);
-                    element.appendChild(frame);
+                    // let element = document.querySelector('#iframeemb'+namecams);
+                    // element.appendChild(frame);
+                    
                     //$('#iframeemb'+namecams).append(frame);
 }
                     
@@ -440,6 +441,56 @@ function gogocams(){
                         //     document.exitFullscreen(); 
                         //   }}
                         // }
+
+//удаление старых потоков
+function deleteoldcams(){
+
+    $.ajax({
+                    type: "POST",
+                    url: 'js/cams.php',
+                    data: {whatdo:'check', namecams: namecams},
+                    cache: false,
+                    async: false,
+                    success: function(data){
+                        livestatcams =null;
+                        //console.log(data);
+                        livestatcams = JSON.parse(data);
+                        //удаление старых потоков
+                        for (var keey in livestatcams) {
+                        if ((Number(livestatcams[keey].hlsViewerCount)==0 )|| (Number(livestatcams[keey].hlsViewerCount)<=1 && livestatcams[keey].streamId==curstramID)){
+                        $.ajax({
+                            type: "POST",
+                            url: 'js/cams.php',
+                            data: {whatdo:'delete', namecams: livestatcams[keey].streamId},
+                            cache: false,
+                            async: false,
+                            success: function(data){
+
+                                // for (var keex in livestatcams) {
+                                // console.log(curstramID, livestatcams[keex].hlsViewerCount);
+                                // if (){
+                                //     console.log(curstramID, livestatcams[keex].hlsViewerCount);
+                                //     $.ajax({
+                                //         type: "POST",
+                                //         url: 'js/cams.php',
+                                //         data: {whatdo:'delete', namecams: curstramID },
+                                //         cache: false,
+                                //         async: false,
+                                //         success: function(data){
+                                //             //console.log(curkey, livestatcams[curkey].hlsViewerCount);
+                                //             $('#form7').append("\nУдален поток..."+livestatcams[keex].name);
+                                //         }
+                                //     });
+                                //     } 
+                                // }
+                                $('#form7').append("\nУдален поток..."+livestatcams[keey].name);
+                            
+                               
+                            
+                            
+                            }})}}}})
+            
+}
 
 //старт отображения камеры
 function gocams(){
