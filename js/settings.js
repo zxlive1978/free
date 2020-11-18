@@ -1616,7 +1616,7 @@ function adm (){
 			'<h6>'+namecams+'</h6>'+
 			'<div class="progress">'+
     		'<div id="progress'+camswell[keey].id + '" class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 10%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>'+
-			'<p><a href="#" class="btn btn-primary" role="button" id="con'+camswell[keey].id+'" >Подключение</a> <a href="#" class="btn btn-default" id="gogogo" role="button" ">Просмотр</a></p>'+
+			'<p><a href="#" class="btn btn-primary" role="button" id="con'+camswell[keey].id+'" >Подключение</a> <a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
 		'</div>'+
 		'</div>'+
 	'</div>';
@@ -1624,14 +1624,24 @@ function adm (){
 	bigelem=bigelem+'</div>';
 
 	$('#taabs-1').html(bigelem);
-	// i=0;
-	for (var keey in camswell) {
 	//Повесить событие клик на подключение
+	for (var keey in camswell) {
 	$('#con'+camswell[keey].id).click(function() {
 		var idss= $(this).attr('id');
 		
 		//console.log( idss);
 		colOK4cams(idss);
+
+	});
+	}
+
+	//Повесить событие клик на подключение
+	for (var keey in camswell) {
+	$('#gogogo'+camswell[keey].id).click(function() {
+		var idss= $(this).attr('id');
+		
+		//console.log( idss);
+		gogocams();
 
 	});
 	}

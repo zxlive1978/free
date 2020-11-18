@@ -40,7 +40,7 @@ function getstatcamscams(whatdo, namecams){
                     //$('#form7').append('\nПроверка потока...OK');
                     //if (livestatcams[keey].status=='broadcasting' ){
                         //$('#form7').append('\Готов');
-                    $('#gogogo').prop('disabled', false);
+                    $('#gogogo'+namecams).prop('disabled', false);
                     
                     return 0;
 
@@ -124,7 +124,7 @@ function getstatcamscams(whatdo, namecams){
                                                             //$('#form7').append('ОК');
                                                             //if (livestatcams[keey].status=='broadcasting' ){
                                                                 //$('#form7').append('\Готов');
-                                                            $('#gogogo').prop('disabled', false);
+                                                            $('#gogogo'+namecams).prop('disabled', false);
                                                             
                                                             return 0;
                                     
@@ -332,8 +332,8 @@ function getstatcams(whatdo, namecams){
  
 
 //старт отображения камеры
-function gogocams(path){
-    $('#gogogo').prop('disabled', true);
+function gogocams(){
+    $('#gogogo'+namecams).prop('disabled', true);
                         var frame = document.createElement("iframe");
                         frame.setAttribute("id", "camsf2");
                         frame.setAttribute("width", '100%');
