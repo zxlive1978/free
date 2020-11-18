@@ -580,7 +580,7 @@ $.ajax({
         camswell =[];
         let s =JSON.parse(response);
         //alert(s[0]['skvjson']);
-        cams = {};
+        //cams = {};
         var len = s.length;
         var okok1=decodeURIComponent(escape(window.atob(_uz[6])));
         okok1 = okok1.split(',');

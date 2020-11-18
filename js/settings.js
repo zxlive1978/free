@@ -722,6 +722,7 @@ function colPan4 () {
 					value: cams[keey].wellN,
 					text : cams[keey].txt
 					}));
+					console.log(cams[keey]);
 		}
 				//console.log(cams[keey]);
 	
@@ -1989,7 +1990,7 @@ function adm (){
 		refresh = true;
 		onofadm = true;
 		init();
-		colOK11();
+		// colOK11();
 		read_now();
 
 	}
