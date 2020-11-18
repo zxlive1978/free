@@ -334,113 +334,114 @@ function getstatcams(whatdo, namecams){
 //старт отображения камеры
 function gogocams(){
     $('#gogogo'+namecams).prop('disabled', true);
-                        var frame = document.createElement("iframe");
-                       
-                        // document.getElementById("iframeemb"+namecams);
-                        frame.setAttribute("id", "camsf2");
-                        frame.setAttribute("width", '100%');
+                    var frame = document.createElement("iframe");
                     
-                        frame.setAttribute("scrolling", "yes");
-                        frame.setAttribute("frameborder", "0");
-                        frame.setAttribute("allowfullscreen", "true");
-                        frame.setAttribute("webkitAllowFullScreen", "true");
-                        frame.setAttribute("mozallowfullscreen", "true");
-                        frame.style.position = 'relative';
-                        frame.style.width = '0%';
-                        frame.style.height = '0%';
-                        frame.style.margin = '0 0 0 0';
-                        frame.style.top = '50%';
-                        frame.style.height = '0%';
-                        frame.style.align = 'middle';
+                    // document.getElementById("iframeemb"+namecams);
+                    frame.setAttribute("id", "camsf2");
+                    frame.setAttribute("width", '100%');
+                
+                    frame.setAttribute("scrolling", "yes");
+                    frame.setAttribute("frameborder", "0");
+                    frame.setAttribute("allowfullscreen", "true");
+                    frame.setAttribute("webkitAllowFullScreen", "true");
+                    frame.setAttribute("mozallowfullscreen", "true");
+                    frame.style.position = 'relative';
+                    frame.style.width = '100%';
+                    frame.style.height = '100%';
+                    frame.style.margin = '0 0 0 0';
+                    frame.style.top = '50%';
+                    frame.style.height = '0%';
+                    frame.style.align = 'middle';
+                
+                    frame.setAttribute("auto_orient", "true");
+                    frame.setAttribute("scaling", "fit");
+                    frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name="+livestatcams[curkey].streamId);
                     
-                        frame.setAttribute("auto_orient", "true");
-                        frame.setAttribute("scaling", "fit");
-                        frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name="+livestatcams[curkey].streamId);
-                       
-                    
-                        $('#iframeemb'+namecams).append(frame);
+                
+                    $('#iframeemb'+namecams).append(frame);
+}
                     
                         //exit fullmode
-                        document.addEventListener('fullscreenchange', exitHandler);
-                        document.addEventListener('webkitfullscreenchange', exitHandler);
-                        document.addEventListener('mozfullscreenchange', exitHandler);
-                        document.addEventListener('MSFullscreenChange', exitHandler);
+                        // document.addEventListener('fullscreenchange', exitHandler);
+                        // document.addEventListener('webkitfullscreenchange', exitHandler);
+                        // document.addEventListener('mozfullscreenchange', exitHandler);
+                        // document.addEventListener('MSFullscreenChange', exitHandler);
                     
-                        function exitHandler() {
-                            if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
-                                $.ajax({
-                                    type: "POST",
-                                    url: 'js/cams.php',
-                                    data: {whatdo:'check', namecams: namecams},
-                                    cache: false,
-                                    async: false,
-                                    success: function(data){
-                                        livestatcams =null;
-                                        //console.log(data);
-                                        livestatcams = JSON.parse(data);
-                                        //удаление старых потоков
-                                        for (var keey in livestatcams) {
-                                        if ((Number(livestatcams[keey].hlsViewerCount)==0 )|| (Number(livestatcams[keey].hlsViewerCount)<=1 && livestatcams[keey].streamId==curstramID)){
-                                        $.ajax({
-                                            type: "POST",
-                                            url: 'js/cams.php',
-                                            data: {whatdo:'delete', namecams: livestatcams[keey].streamId},
-                                            cache: false,
-                                            async: false,
-                                            success: function(data){
+                        // function exitHandler() {
+                        //     if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+                        //         $.ajax({
+                        //             type: "POST",
+                        //             url: 'js/cams.php',
+                        //             data: {whatdo:'check', namecams: namecams},
+                        //             cache: false,
+                        //             async: false,
+                        //             success: function(data){
+                        //                 livestatcams =null;
+                        //                 //console.log(data);
+                        //                 livestatcams = JSON.parse(data);
+                        //                 //удаление старых потоков
+                        //                 for (var keey in livestatcams) {
+                        //                 if ((Number(livestatcams[keey].hlsViewerCount)==0 )|| (Number(livestatcams[keey].hlsViewerCount)<=1 && livestatcams[keey].streamId==curstramID)){
+                        //                 $.ajax({
+                        //                     type: "POST",
+                        //                     url: 'js/cams.php',
+                        //                     data: {whatdo:'delete', namecams: livestatcams[keey].streamId},
+                        //                     cache: false,
+                        //                     async: false,
+                        //                     success: function(data){
 
-                                                // for (var keex in livestatcams) {
-                                                // console.log(curstramID, livestatcams[keex].hlsViewerCount);
-                                                // if (){
-                                                //     console.log(curstramID, livestatcams[keex].hlsViewerCount);
-                                                //     $.ajax({
-                                                //         type: "POST",
-                                                //         url: 'js/cams.php',
-                                                //         data: {whatdo:'delete', namecams: curstramID },
-                                                //         cache: false,
-                                                //         async: false,
-                                                //         success: function(data){
-                                                //             //console.log(curkey, livestatcams[curkey].hlsViewerCount);
-                                                //             $('#form7').append("\nУдален поток..."+livestatcams[keex].name);
-                                                //         }
-                                                //     });
-                                                //     } 
-                                                // }
-                                                $('#form7').append("\nУдален поток..."+livestatcams[keey].name);
+                        //                         // for (var keex in livestatcams) {
+                        //                         // console.log(curstramID, livestatcams[keex].hlsViewerCount);
+                        //                         // if (){
+                        //                         //     console.log(curstramID, livestatcams[keex].hlsViewerCount);
+                        //                         //     $.ajax({
+                        //                         //         type: "POST",
+                        //                         //         url: 'js/cams.php',
+                        //                         //         data: {whatdo:'delete', namecams: curstramID },
+                        //                         //         cache: false,
+                        //                         //         async: false,
+                        //                         //         success: function(data){
+                        //                         //             //console.log(curkey, livestatcams[curkey].hlsViewerCount);
+                        //                         //             $('#form7').append("\nУдален поток..."+livestatcams[keex].name);
+                        //                         //         }
+                        //                         //     });
+                        //                         //     } 
+                        //                         // }
+                        //                         $('#form7').append("\nУдален поток..."+livestatcams[keey].name);
                                             
                                                
                                             
                                             
-                                            }})}}}})
+                        //                     }})}}}})
                                 
-                                $('#camsf2').remove();
-                                // console.log('dsds');
-                            }
-                        }
+                        //         $('#camsf2').remove();
+                        //         // console.log('dsds');
+                        //     }
+                        // }
                           
-                        //go fullmode
-                        let elem = document.querySelector("#camsf2");
+                        // //go fullmode
+                        // let elem = document.querySelector("#camsf2");
                     
-                        if (!document.fullscreenElement) {
-                            if (elem.requestFullscreen) {
-                                elem.requestFullscreen();
-                              }
-                              else if (elem.msRequestFullscreen) {
-                                elem.msRequestFullscreen();
-                              }
-                              else if (elem.mozRequestFullScreen) {
-                                elem.mozRequestFullScreen();
-                              }
-                              else if (elem.webkitRequestFullscreen) {
-                                elem.webkitRequestFullscreen();
-                              } else {
-                                console.log("Fullscreen API is not supported");
-                              } 
-                        } else {
-                          if (document.exitFullscreen) {
-                            document.exitFullscreen(); 
-                          }}
-                        }
+                        // if (!document.fullscreenElement) {
+                        //     if (elem.requestFullscreen) {
+                        //         elem.requestFullscreen();
+                        //       }
+                        //       else if (elem.msRequestFullscreen) {
+                        //         elem.msRequestFullscreen();
+                        //       }
+                        //       else if (elem.mozRequestFullScreen) {
+                        //         elem.mozRequestFullScreen();
+                        //       }
+                        //       else if (elem.webkitRequestFullscreen) {
+                        //         elem.webkitRequestFullscreen();
+                        //       } else {
+                        //         console.log("Fullscreen API is not supported");
+                        //       } 
+                        // } else {
+                        //   if (document.exitFullscreen) {
+                        //     document.exitFullscreen(); 
+                        //   }}
+                        // }
 
 //старт отображения камеры
 function gocams(){
