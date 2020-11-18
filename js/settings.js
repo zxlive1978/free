@@ -747,7 +747,7 @@ function colOK4cams (nnamecams) {
 	// });
 	//Проверка Проверка существующих потоков
 	// namecams=$("#zzm1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
-	//console.log(nnamecams);
+	console.log(nnamecams);
 	jumpjump=0;
 	checkstream = true;
 	//getstatcamscams('check',nnamecams);
@@ -1624,7 +1624,7 @@ function adm (){
 	$('#taabs-1').html(bigelem);
 	// i=0;
 	for (var keey in camswell) {
-		
+	//Повесить событие клик на подключение
 	$('#'+camswell[keey].id).click(function() {
 		var idss= $(this).attr('id');
 		
