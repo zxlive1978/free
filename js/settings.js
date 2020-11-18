@@ -1614,7 +1614,7 @@ function adm (){
 			'<h6>'+namecams+'</h6>'+
 			'<div class="progress">'+
     		'<div id="progress'+camswell[keey].id + '" class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 10%" aria-valuenow="14" aria-valuemin="0" aria-valuemax="100"></div></div>'+
-			'<p><a href="#" class="btn btn-primary" role="button" id="'+camswell[keey].id+'" >Подключение</a> <a href="#" class="btn btn-default" id="gogogo" role="button" ">Просмотр</a></p>'+
+			'<p><a href="#" class="btn btn-primary" role="button" id="con'+camswell[keey].id+'" >Подключение</a> <a href="#" class="btn btn-default" id="gogogo" role="button" ">Просмотр</a></p>'+
 		'</div>'+
 		'</div>'+
 	'</div>';
@@ -1625,7 +1625,7 @@ function adm (){
 	// i=0;
 	for (var keey in camswell) {
 	//Повесить событие клик на подключение
-	$('#'+camswell[keey].id).click(function() {
+	$('#con'+camswell[keey].id).click(function() {
 		var idss= $(this).attr('id');
 		
 		//console.log( idss);
