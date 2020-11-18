@@ -584,7 +584,7 @@ $.ajax({
         var len = s.length;
         var okok1=decodeURIComponent(escape(window.atob(_uz[6])));
         okok1 = okok1.split(',');
-        //console.log(okok1);
+        console.log(okok1);
         for (var j=0; j<okok1.length; j++){
             okok1[j]=okok1[j].trim();
         for(var i=0; i<len; i++){
