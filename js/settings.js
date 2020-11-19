@@ -1621,7 +1621,7 @@ function adm (){
 		'</div>'+
 		'<div class="caption text-center">'+
 			'<h6>'+camswell[keey].txt+' '+camswell[keey].name+'</h6>'+
-			'<div class="progress"  style="height:5px;">'+
+			'<div class="progress" >'+
 
     		'<div class="progress-bar progress-bar progress-bar-striped progress-bar-animated bg-success" id="progress'+camswell[keey].id + '" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>'+
 			'<p><button type="button"  class="btn btn-success" id="con'+camswell[keey].id+'" >Подключение</button>'+// <button type="button" disabled class="btn btn-success" id="gogogo'+camswell[keey].id+'">Просмотр</button>'+//<a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
@@ -1636,8 +1636,11 @@ function adm (){
 	for (var keey in camswell) {
 	$('#con'+camswell[keey].id).click(function() {
 		var idss= $(this).attr('id');
-		$('#progress'+camswell[keey].id).css('width', '50%').attr('aria-valuenow', '50'); 
-		//console.log( idss);
+	
+		document.getElementsByName ('#progress'+camswell[keey].id).item(0).setAttribute('aria-valuenow','50');
+		document.getElementsByName ('#progress'+camswell[keey].id).item(0).setAttribute('style','width:'+'50%');
+		//$('#progress'+camswell[keey].id).css('width', '50%').attr('aria-valuenow', '50'); 
+		console.log( '#progress'+camswell[keey].id);
 		//colOK4cams(idss);
 
 	});
