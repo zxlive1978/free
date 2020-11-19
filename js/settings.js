@@ -1621,9 +1621,9 @@ function adm (){
 		'</div>'+
 		'<div class="caption text-center">'+
 			'<h6>'+camswell[keey].txt+' '+camswell[keey].name+'</h6>'+
-			'<div class="progress">'+
+			'<div class="progress"  style="height:5px;">'+
 
-    		'<div id="progress'+camswell[keey].id + '" class="progress-bar progress-bar-striped bg-success"  role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div></div>'+
+    		'<div class="progress-bar progress-bar progress-bar-striped progress-bar-animated bg-success" id="progress'+camswell[keey].id + '" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>'+
 			'<p><button type="button"  class="btn btn-success" id="con'+camswell[keey].id+'" >Подключение</button>'+// <button type="button" disabled class="btn btn-success" id="gogogo'+camswell[keey].id+'">Просмотр</button>'+//<a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
 			'</div>'+
 		'</div>'+
