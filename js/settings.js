@@ -33,6 +33,7 @@ var Shablontxtwell = {
 var livestatcams ={};
 var cams = {};
 var camswell = [];
+var workstream ={};
 
 //Текущие параметры Справочник параметров графики обычные
 
@@ -1611,6 +1612,7 @@ function adm (){
 	// for (var keey in camswell) {
 	// 	console.log(camswell[keey].txt+'_'+camswell[keey].name);
 	// }
+	var workstream={};
 	var bigelem='<div class="container-fluid"><div class=" row text-justify">';
 	for (var keey in camswell) {
 		
