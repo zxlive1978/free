@@ -748,6 +748,8 @@ function colOK4cams (nnamecams) {
 	//Проверка Проверка существующих потоков
 	// namecams=$("#zzm1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
 	//console.log(nnamecams);
+	//$('#progress'+namecams).prop('width','50%');
+	$('#progress'+namecams).css("width", "50%");; 
 	jumpjump=0;
 	checkstream = true;
 	namecams=nnamecams.slice(3);
@@ -1620,10 +1622,10 @@ function adm (){
 		'<div class="caption text-center">'+
 			'<h6>'+camswell[keey].txt+' '+camswell[keey].name+'</h6>'+
 			'<div class="progress">'+
-			'</div>'+
-    		'<div id="progress'+camswell[keey].id + '" class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 10%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>'+
+
+    		'<div id="progress'+camswell[keey].id + '" class="progress-bar progress-bar-striped bg-success active"  role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div></div>'+
 			'<p><button type="button"  class="btn btn-success" id="con'+camswell[keey].id+'" >Подключение</button>'+// <button type="button" disabled class="btn btn-success" id="gogogo'+camswell[keey].id+'">Просмотр</button>'+//<a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
-		
+			'</div>'+
 		'</div>'+
 	'</div>';
 	}

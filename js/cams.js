@@ -36,7 +36,8 @@ function getstatcamscams(whatdo, namecams){
                     curstramID=livestatcams[keey].streamId;
                     //Текущий key
                     curkey=keey;
-                    $('#form7').append('Найден');
+                    //$('#form7').append('Найден');
+                    $('#progress'+namecams).prop('aria-valuenow','50');
                     //$('#form7').append('\nПроверка потока...OK');
                     //if (livestatcams[keey].status=='broadcasting' ){
                         //$('#form7').append('\Готов');
@@ -60,6 +61,7 @@ function getstatcamscams(whatdo, namecams){
             //$('#form7').append('Не найден');
             //создаем поток
             //$('#form7').append("\nСоздаем поток "+namecams+"...");
+            $('#progress'+namecams).prop('aria-valuenow','25');
             $.ajax({
                 type: "POST",
                 url: 'js/cams.php',
@@ -93,6 +95,7 @@ function getstatcamscams(whatdo, namecams){
                                     //$('#form7').append('\nСоздание iframe...');
                                     //for(var j=0; j<10; j++){
                                    // $('#form7').append('\nПроверка потока...');
+                                   $('#progress'+namecams).prop('aria-valuenow','50');
                                     let moto =setTimeout(function tiktak () {
                                         if (jumpjump==10 || fundstream == true){
                                             //$('#form7').append('BAD');
@@ -120,6 +123,7 @@ function getstatcamscams(whatdo, namecams){
                                                             curstramID=livestatcams[keey].streamId;
                                                             //Текущий key
                                                             curkey=keey;
+                                                            $('#progress'+namecams).prop('aria-valuenow','75');
                                                             //$('#form7').append('Найден');
                                                            
                                                             //$('#form7').append('ОК');
@@ -356,6 +360,7 @@ function gogocams(){
                     
                     var newDiv =  document.createElement("div");
                     newDiv.innerHTML = "<h1>Привет!</h1>";
+                    $('#progress'+namecams).prop('aria-valuenow','100');
                     // let element = document.querySelector('#iframeemb'+namecams);
                     // element.appendChild(frame);
                     
