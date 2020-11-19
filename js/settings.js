@@ -749,10 +749,13 @@ function colOK4cams (nnamecams) {
 	// namecams=$("#zzm1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
 	//console.log(nnamecams);
 	//$('#progress'+namecams).prop('width','50%');
-	$('#progress'+namecams).css("width", "50%");; 
+	
 	jumpjump=0;
 	checkstream = true;
 	namecams=nnamecams.slice(3);
+	let pgg = document.querySelector('#progress'+namecams);
+	pgg.setAttribute('aria-valuenow','0');
+	pgg.setAttribute('style','width:'+'0%') 
 	//console.log(namecams);
 	getstatcamscams('check',namecams);
 }
@@ -1636,12 +1639,12 @@ function adm (){
 	for (var keey in camswell) {
 	$('#con'+camswell[keey].id).click(function() {
 		var idss= $(this).attr('id');
-	
-		document.getElementsByName ('#progress'+camswell[keey].id).item(0).setAttribute('aria-valuenow','50');
-		document.getElementsByName ('#progress'+camswell[keey].id).item(0).setAttribute('style','width:'+'50%');
+		
+		// document.getElementsByName ('#progress'+camswell[keey].id).item(0).setAttribute('aria-valuenow','50');
+		// document.getElementsByName ('#progress'+camswell[keey].id).item(0).setAttribute('style','width:'+'50%');
 		//$('#progress'+camswell[keey].id).css('width', '50%').attr('aria-valuenow', '50'); 
-		console.log( '#progress'+camswell[keey].id);
-		//colOK4cams(idss);
+		
+		colOK4cams(idss);
 
 	});
 	}
