@@ -1610,10 +1610,7 @@ function adm (){
 	$('#tabs').show();
 	$('#taabs-1').empty();
 	$('#ul1').hide();
-	//$('#taabs-1').append('<div class="row">');
-	// for (var keey in camswell) {
-	// 	console.log(camswell[keey].txt+'_'+camswell[keey].name);
-	// }
+
 	workstream={};
 	var bigelem='<div class="container-fluid"><div class=" row text-justify">';
 	for (var keey in camswell) {
@@ -1644,10 +1641,7 @@ function adm (){
 	$('#con'+camswell[keey].id).click(function() {
 		var idss= $(this).attr('id');
 		
-		// document.getElementsByName ('#progress'+camswell[keey].id).item(0).setAttribute('aria-valuenow','50');
-		// document.getElementsByName ('#progress'+camswell[keey].id).item(0).setAttribute('style','width:'+'50%');
-		//$('#progress'+camswell[keey].id).css('width', '50%').attr('aria-valuenow', '50'); 
-		if (camscreate){ camscreate=false;
+	if (camscreate){ camscreate=false;
 		colOK4cams(idss);}
 
 	});
@@ -1664,338 +1658,109 @@ function adm (){
 
 	});
 	}
-	//console.log($('#'+namecams+' id').val());
-	
-		// 	// 	colPan12 ();		
-		// 	// });
-	//$("#namecams").bind("click", colOK4cams(namecams), false);
-	// document.getElementById('#'+namecams).addEventListener("click", function() {
-	// 	colOK4cams(namecams);
-	//   }); 
 
 
-	// $('#taabs-1').html('<div class="container"><div class="row text-justify">'+
-	// '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
-	// 	'<div class="thumbnail bg-dark text-light  text-center">'+
-	// 	'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
-	// 	'<div class="caption text-center">'+
-	// 		'<h5>Камера АГКМ666-1</h5>'+
-	// 		'<p>Статус:</p>'+
-	// 		'<p><a href="#" class="btn btn-primary" role="button">Подключение</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
-	// 	'</div>'+
-	// 	'</div>'+
-	// '</div>'+
-	// '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
-	// 	'<div class="thumbnail">'+
-	// 	'<img src="css/cam.jpg" class="img-fluid" alt="...">'+
-	// 	'<div class="caption">'+
-	// 		'<h3>Камера АГКМ666-1</h3>'+
-	// 		'<p>Статус:</p>'+
-	// 		'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
-	// 	'</div>'+
-	// 	'</div>'+
-	// '</div>'+
-	// '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
-	// 	'<div class="thumbnail">'+
-	// 	'<img src="css/cam.jpg" class="img-fluid" alt="...">'+
-	// 	'<div class="caption">'+
-	// 		'<h3>Камера АГКМ666-1</h3>'+
-	// 		'<p>Статус:</p>'+
-	// 		'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
-	// 	'</div>'+
-	// 	'</div>'+
-	// '</div>'+
-	// '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
-	// 	'<div class="thumbnail">'+
-	// 	'<img src="css/cam.jpg" alt="...">'+
-	// 	'<div class="caption">'+
-	// 		'<h3>Камера АГКМ666-1</h3>'+
-	// 		'<p>Статус:</p>'+
-	// 		'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
-	// 	'</div>'+
-	// 	'</div>'+
-	// '</div>'+
-	// '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
-	// 	'<div class="thumbnail">'+
-	// 	'<img src="css/cam.jpg" alt="...">'+
-	// 	'<div class="caption">'+
-	// 		'<h3>Камера АГКМ666-1</h3>'+
-	// 		'<p>Статус:</p>'+
-	// 		'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
-	// 	'</div>'+
-	// 	'</div>'+
-	// '</div>'+
-	// '</div</div>');
-	
-	
-// 	//$('#tabs').empty();
-// 	// $('#tabvideo').show();
-// 	// $('#tabvideo').html(
-// 	// 	+'<div id="tabs">'
-// 	// 	+'<ul><li><a href="#tabs-1">Роторный стол</a></li><li><a href="#tabs-2">Приемный мост</a></li><li><a href="#tabs-3">ПВО</a></li></ul>'
-// 	// 	+'<div id="tabs-1"></div><div id="tabs-2"></div><div id="tabs-3"></div></div>'
-// 	// );
-// 	// $('#tabvideo').append('edrrr');
-// 	// <span id="tabsn-1" ></span>
-// 	document.getElementById("tabsn-1").innerHTML="Роторный стол";
-// 	// document.getElementById("tabsn-2").innerHTML="Приемный мост";
-// 	// document.getElementById("tabsn-3").innerHTML="ПВО";
-// 	// var div1 = document.createElement("div");
-// 	// //div1.innerHTML = "<h1>Привет!</h1>";
-// 	// div1.setAttribute("id", "divcams");
-// 	// div1.style.position = 'relative';
-// 	// //div1.style.backgroundColor = 'green';
-// 	// div1.style.width = '100%';
-// 	// // div1.style.margin-left = 'auto';
-// 	// // div1.style.margin-right = 'auto';
-// 	// div1.style.margin =" 0 auto";
-// 	// // text-align: center; 
-// 	// div1.setAttribute("text-align", "center");
-
-// 	// //style="margin-left:auto; margin-right:auto;"
-// 	// div1.setAttribute("class", "container");//class="container"
-// 	// //class="mh-100"
-// 	// div1.style.height =($(window).height()-2.9*($('#bigpan').height()));
-// 	// div1.setAttribute("data-ratio", "0.5625"); //data-ratio="0.5625"
-// 	// // div1.style.data-ratio ="0.417";
-// 	// //console.log(div1.style.width,' b  ',div1.style.height, $('#div1').height());
-	
-// 	// //div1.setAttribute("height", "200");
-
-// 	// $('#tabs-1').append(div1);
-// 	// console.log(div1.style.width,' b  ',div1.style.height, $('#div1').height());
-
-// 	var frame = document.createElement("iframe");
-// 	frame.setAttribute("id", "camsf2");
-// 	// frame.setAttribute("width", "704");
-// 	// frame.setAttribute("height", "576");
-// 	// var dh=document.getElementById('divcams').offsetHeight;
-// 	// var dw=document.getElementById('divcams').offsetWidth;
-// 	// if (dh<dw){
-// 	// 	frame.setAttribute("width",  String(Number((div1.style.height).slice(0, (div1.style.height).length-2))*1.555)+'px');
-// 	// 	frame.setAttribute("height", '100%');} else {
-// 	// 	frame.setAttribute("width", '100%');
-// 	// 	frame.setAttribute("height", div1.style.height);	
-// 	// 	}
-// 	frame.setAttribute("width", '100%');
-// 	//frame.setAttribute("margin-left", "auto");
-// 	frame.setAttribute("scrolling", "yes");
-// 	frame.setAttribute("frameborder", "0");
-// 	frame.setAttribute("allowfullscreen", "true");
-// 	frame.setAttribute("webkitAllowFullScreen", "true");
-// 	frame.setAttribute("mozallowfullscreen", "true");
-// 	frame.style.position = 'relative';
-// 	frame.style.width = '0%';
-// 	frame.style.height = '0%';
-// 	frame.style.align = 'center';
-// 	//frame.setAttribute("align", "middle");
-// 	//frame.setAttribute("text-align", "center");
-// 	// frame.setAttribute("top", "0");
-// 	// frame.setAttribute("left", "0");
-// 	frame.setAttribute("auto_orient", "true");
-// 	frame.setAttribute("scaling", "fit");
-// 	frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=989288934770850773631823");
-// 	// var tabb = document.getElementById("tabs-1")
-// 	// tabb.insertAdjacentHTML()
-	
-
-// 	$('#tabs-1').append(frame);
-// 	//document.getElementById("camsf2").requestFullScreen();
-// 	let elem = document.querySelector("#camsf2");
-
-// 	if (!document.fullscreenElement) {
-// 	elem.requestFullscreen().catch(function() {
-// 		alert('Error attempting to enable full-screen mode: ${err.message} (${err.name})');
-// 	});
-// 	} else {
-// 	document.exitFullscreen();
-// 	}
-// 	//$('#camsf2').fullScreen();
-	
-// 	//resizeiframe();
-
-// 	// var frame = document.createElement("iframe");
-// 	// frame.setAttribute("id", "camsf2");
-// 	// // frame.setAttribute("width", "704");
-// 	// // frame.setAttribute("height", "576");
-// 	// frame.setAttribute("width", "100%");
-// 	// frame.setAttribute("height", "576");
-// 	// frame.setAttribute("allowfullscreen", "true");
-// 	// frame.setAttribute("webkitAllowFullScreen", "true");
-// 	// frame.setAttribute("mozallowfullscreen", "true");
-// 	// frame.setAttribute("position", "absolute");
-// 	// frame.setAttribute("align", "middle");
-// 	// // frame.setAttribute("top", "0");
-// 	// // frame.setAttribute("left", "0");
-// 	// frame.setAttribute("auto_orient", "true");
-// 	// // frame.setAttribute("ratio", "16:10");
-// 	// frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=402550425406257962757843");
-// 	// // var tabb = document.getElementById("tabs-1")
-// 	// // tabb.insertAdjacentHTML()
-// 	// $('#tabs-1').append(frame);
-
-// 	// var frame = document.createElement("iframe");
-// 	// frame.setAttribute("id", "camsf2");
-// 	// // frame.setAttribute("width", "704");
-// 	// // frame.setAttribute("height", "576");
-// 	// frame.setAttribute("width", "100%");
-// 	// frame.setAttribute("height", "576");
-// 	// frame.setAttribute("allowfullscreen", "true");
-// 	// frame.setAttribute("webkitAllowFullScreen", "true");
-// 	// frame.setAttribute("mozallowfullscreen", "true");
-// 	// frame.setAttribute("position", "absolute");
-// 	// frame.setAttribute("align", "middle");
-// 	// // frame.setAttribute("top", "0");
-// 	// // frame.setAttribute("left", "0");
-// 	// frame.setAttribute("auto_orient", "true");
-// 	// // frame.setAttribute("ratio", "16:10");
-// 	// frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=973843807862020830541916");
-// 	// // var tabb = document.getElementById("tabs-1")
-// 	// // tabb.insertAdjacentHTML()
-// 	// $('#tabs-1').append(frame);
-
-// 	// var frame = document.createElement("iframe");
-// 	// frame.setAttribute("id", "camsf2");
-// 	// // frame.setAttribute("width", "704");
-// 	// // frame.setAttribute("height", "576");
-// 	// frame.setAttribute("width", "100%");
-// 	// frame.setAttribute("height", "576");
-// 	// frame.setAttribute("allowfullscreen", "true");
-// 	// frame.setAttribute("webkitAllowFullScreen", "true");
-// 	// frame.setAttribute("mozallowfullscreen", "true");
-// 	// frame.setAttribute("position", "absolute");
-// 	// frame.setAttribute("align", "middle");
-// 	// // frame.setAttribute("top", "0");
-// 	// // frame.setAttribute("left", "0");
-// 	// frame.setAttribute("auto_orient", "true");
-// 	// // frame.setAttribute("ratio", "16:10");
-// 	// frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=739604144503658806859147");
-// 	// // var tabb = document.getElementById("tabs-1")
-// 	// // tabb.insertAdjacentHTML()
-// 	// $('#tabs-1').append(frame);
-// 	// //frame.setAttribute("webkitAllowFullScreen mozallowfullscreen allowfullscreen");
-// 	// //document.body.appendChild(frame);
-// 	// //Zem2Pyf4Buk5
-	
-// 	// $('#tabs-1').html(
-// 	// +'<iframe width="100%" height="100%"'
-//     // +'style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"'
-//     // +'webkitAllowFullScreen mozallowfullscreen allowfullscreen allow="autoplay"'
-//     // +'title="0" byline="0" portrait="0"'
-//     // +'width="280" height="157"'
-//     // +'frameborder="0"'
-//     // +' allow="autoplay"'
-//     // +'src="//hydrofalll.ddns.net:5443/LiveApp/play.html?name=259399779848013677881662"> </iframe>'
-    
-// 	// );
-
-// // 	<!-- <div id="tabs">
-// //   <ul>
-// //     <li><a href="#tabs-1">Пользователи</a></li>
-// //     <li><a href="#tabs-2">Скважины</a></li>
-// //     <li><a href="#tabs-3">Камеры</a></li>
-// //   </ul>
-// //   <div id="tabs-1">
-// //   </div>
-// //   <div id="tabs-2">
-// //   </div>
-// //   <div id="tabs-3">
-// //   </div>
-// // </div> -->
-
-// 	// $('#tabs-1').empty();
-// 	// //e.preventDefault();
-// 	// $('#tabs-1').html(' <p>'+row_str+'</p>');
-// 	// $('#tabs-1').append(' <p>'+row_str+'</p>');
-	
-// 	// //Скважины
-// 	// $('#tabs-2').empty();
-// 	// $('#tabs-2').append('<button type="button" name="addskv" id="addskv" class="btn btn-success mb-1" data-dismiss="modal" >+</button>');
-// 	// $('#tabs-2').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="skvs" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Тип работ</th><th>Тип станции</th><th>Фамилия начальника</th><th>Телефон</th><th>Эл.почта</th></tr></thead><tbody></tbody></table></div>');
-// 	// //Камеры
-// 	// $('#tabs-3').empty();
-// 	// $('#tabs-3').append('<button type="button" class="btn btn-success mb-1" data-dismiss="modal">+</button>');
-// 	// $('#tabs-3').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="cams" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Камера1-станция</th><th>Камера1-стрим'+
-// 	// '</th><th>Камера2-станция</th><th>Камера2-стрим</th><th>Камера3-станция</th><th>Камера3-стрим'+
-// 	// '</th><th>Камера4-станция</th><th>Камера4-стрим'+
-// 	// '</th></tr></thead><tbody></tbody></table></div>');
-	
-// 	// for (var keey in wells) {
-// 	// 	$('#skvs tbody').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
-// 	// 	//$('#tabs-2').append('</div>');	
-// 	// }
-	
-
-// 	// for (var keey in cams) {
-// 	// 	$('#cams tbody').append('<tr><td>'+cams[keey].txt+'</td><td>'+cams[keey].wellN+
-// 	// 	'</td><td>'+cams[keey].rtsp1+'</td><td>'+cams[keey].liveapp1+'</td><td>'+cams[keey].rtsp2+'</td><td>'+cams[keey].liveapp2+
-// 	// 	'</td><td>'+cams[keey].rtsp3+'</td><td>'+cams[keey].liveapp3+'</td><td>'+cams[keey].rtsp4+'</td><td>'+cams[keey].liveapp4+
-// 	// 	 '</td></tr>');
-// 	// 	//$('#tabs-2').append('</div>');	
-// 	// }
-	
-// 	// //Динамически добавить скрипт
-// 	// // var newScript = document.createElement("script");
-// 	// // var inlineScript = document.createTextNode("alert('Hello World!');");
-// 	// // newScript.appendChild(inlineScript); 
-// 	// // target.appendChild(newScript);
-	
-
-// 	// //Добавить скважину
-// 	// $('#addskv').click(function() {
-// 	// 	colPan12 ();		
-// 	// });
-
-// 	// //Клик скважины
-// 	// $("#skvs tbody").on("click", "tr", function(event){
-// 	// 	var tableData = $(this).children("td").map(function() {
-// 	// 		return $(this).text();
-// 	// 	}).get();
-// 	// 	$("#colitems131").val($.trim(tableData[0]));
-// 	// 	$("#colitems132").val($.trim(tableData[1]));
-// 	// 	$("#colitems133").val($.trim(tableData[2]));
-// 	// 	$("#colitems134").val($.trim(tableData[3]));
-// 	// 	$("#colitems135").val($.trim(tableData[4]));
-// 	// 	$("#colitems136").val($.trim(tableData[5]));
-// 	// 	$("#colitems137").val($.trim(tableData[6]));
-// 	// 	colPan13();
+	} else {
 		
-// 		//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
-// 	// });
+		//удаление старых потоков
+		deleteoldcams();
+		setTimeout(function(){deleteoldcams();}
+		, 30000);
+		
+		$('#dialogvideo').dialog( "open" );// Для скрытия
+		$('#tabs').hide();
+		$('#camsf2').remove();
+		$('#taabs-1').empty();
+		//document.getElementById("camsf2").innerHTML="Роторный стол";
+		// $('#tabs').empty();
+		// $('#tabs').hide();
+		
+		$('#drawing').empty();
+		$('#drawing').show();
+		$('#skvnamelab').show();
+		online = true;
+		refresh = true;
+		onofadm = true;
+		init();
+		// colOK11();
+		read_now();
+
+	}
+
+}
 
 
-// 	// //Клик Камеры
-// 	// $("#cams tbody").on("click", "tr", function(event){
-// 	// 	var tableData = $(this).children("td").map(function() {
-// 	// 		return $(this).text();
-// 	// 	}).get();
+
+//вкладка настройки
+function adm2 (){
+	if (onofadm){
 	
-// 	// 	alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
-// 	// });
-
+	online = false;
+	refresh = false;
+	$('#drawing').empty();
+	$('#drawing').hide();
+	$('#skvnamelab').hide();
 	
-// 	// // $("#myButton").on('click',function(){
- 
-// 	// // 	var arrData=[];
-// 	// // 	// loop over each table row (tr)
-// 	// // 	$("#myTable tr").each(function(){
-// 	// // 		 var currentRow=$(this);
-		 
-// 	// // 		 var col1_value=currentRow.find("td:eq(0)").text();
-// 	// // 		 var col2_value=currentRow.find("td:eq(1)").text();
-// 	// // 		 var col3_value=currentRow.find("td:eq(2)").text();
-	 
-// 	// // 		  var obj={};
-// 	// // 		 obj.col1=col1_value;
-// 	// // 		 obj.col2=col2_value;
-// 	// // 		 obj.col3=col3_value;
-	 
-// 	// // 		 arrData.push(obj);
-// 	// // 	});
-// 	// // 	 alert(arrData);
-// 	// // 	 console.log(arrData);
-	 
-// 	// //  });
+	
+	$('#dialogvideo').dialog( "close" );// Для скрытия
+	
+	
+	onofadm = false;
+	
+	getcamswell();
+
+	$('#tabs').show();
+	$('#taabs-1').empty();
+	$('#ul1').hide();
+
+	workstream={};
+	var bigelem='<div class="container-fluid"><div class=" row text-justify">';
+	for (var keey in camswell) {
+		
+		namecams=camswell[keey].txt+'_'+camswell[keey].name;
+		
+		bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
+		'<p><div class="thumbnail bg-info text-light  text-center">'+
+		//'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
+		'<div id="iframeembdiv'+camswell[keey].id + '" class="embed-responsive embed-responsive-16by9">'+
+		'<iframe id="iframeemb'+camswell[keey].id + '" class="embed-responsive-item" src="" allowfullscreen ></iframe>'+  
+		'</div>'+
+		'<div class="caption text-center">'+
+			'<h6>'+camswell[keey].txt+' '+camswell[keey].name+'</h6>'+
+			'<div class="progress" >'+
+
+    		'<div class="progress-bar progress-bar progress-bar-striped progress-bar-animated bg-success" id="progress'+camswell[keey].id + '" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>'+
+			'<p><button type="button"  class="btn btn-success" id="con'+camswell[keey].id+'" >Подключение</button>'+// <button type="button" disabled class="btn btn-success" id="gogogo'+camswell[keey].id+'">Просмотр</button>'+//<a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
+			'</div>'+
+		'</div>'+
+	'</div>';
+	}
+	bigelem=bigelem+'</div>';
+
+	$('#taabs-1').html(bigelem);
+	//Повесить событие клик на подключение
+	for (var keey in camswell) {
+	$('#con'+camswell[keey].id).click(function() {
+		var idss= $(this).attr('id');
+		
+	if (camscreate){ camscreate=false;
+		colOK4cams(idss);}
+
+	});
+	}
+
+	//Повесить событие клик на воспроизведение
+	for (var keey in camswell) {
+	$('#gogogo'+camswell[keey].id).click(function() {
+		var idss= $(this).attr('id');
+		
+		//console.log( idss);
+		
+		gogocams();
+
+	});
+	}
+
 
 	} else {
 		
