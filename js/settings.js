@@ -1690,7 +1690,7 @@ function adm2 (){
 	$('#ul1').hide();
 	$('#tabs').show();
 
-	var bigelem2='<div class="container h-auto d-inline-block" >';//<div class=" row text-justify">';
+	var bigelem2='<div class="loader text-center"><div class=" row text-justify w-75 text-center">';
 	
 		bigelem2=bigelem2+'<button type="button"  id="datatab"  class="btn btn-outline-light btn-block" onClick="adm3();">Данные "По времени"</button>'+
 		'<button type="button"  id="vidotab"  class="btn btn-outline-light btn-block" onClick="adm();">Видеокамеры</button>'+
@@ -1705,9 +1705,9 @@ function adm2 (){
 
     	// 	'<div class="progress-bar progress-bar progress-bar-striped progress-bar-animated bg-success" id="progress'+camswell[keey].id + '" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>'+
 		// 	'<p><button type="button"  class="btn btn-success" id="con'+camswell[keey].id+'" >Подключение</button>'+// <button type="button" disabled class="btn btn-success" id="gogogo'+camswell[keey].id+'">Просмотр</button>'+//<a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
-			'</div>'+
-			'</div>'+
-		// '</div>'+
+			// '</div>'+
+			// '</div>'+
+		'</div>'+
 	'</div>';
 	
 
