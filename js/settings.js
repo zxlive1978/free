@@ -1695,10 +1695,7 @@ function adm (){
 function adm2 (){
 	
 	var bigelem='<div class="container-fluid"><div class=" row text-justify">';
-	for (var keey in camswell) {
-		
-		namecams=camswell[keey].txt+'_'+camswell[keey].name;
-		
+	
 		bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
 		'<p><div class="thumbnail bg-info text-light  text-center">'+
 		//'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
@@ -1714,34 +1711,16 @@ function adm2 (){
 			'</div>'+
 		'</div>'+
 	'</div>';
-	}
-	bigelem=bigelem+'</div>';
+	
 
 	$('#taabs-1').html(bigelem);
 	//Повесить событие клик на подключение
-	for (var keey in camswell) {
+	
 	$('#con'+camswell[keey].id).click(function() {
 		var idss= $(this).attr('id');
-		
-	if (camscreate){ camscreate=false;
-		colOK4cams(idss);}
-
-	});
-	}
-
-	//Повесить событие клик на воспроизведение
-	for (var keey in camswell) {
-	$('#gogogo'+camswell[keey].id).click(function() {
-		var idss= $(this).attr('id');
-		
-		//console.log( idss);
-		
-		gogocams();
-
-	});
-	}
-
-
+	
+	
+	})
 
 }
 
