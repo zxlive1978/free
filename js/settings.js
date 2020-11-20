@@ -1588,6 +1588,8 @@ transliterate = (
 // alert(transliterate(transliterate(txt), true));
 
 //Админка
+//камеры
+var camscreate = true;
 function adm (){
 	if (onofadm){
 	
@@ -1645,8 +1647,8 @@ function adm (){
 		// document.getElementsByName ('#progress'+camswell[keey].id).item(0).setAttribute('aria-valuenow','50');
 		// document.getElementsByName ('#progress'+camswell[keey].id).item(0).setAttribute('style','width:'+'50%');
 		//$('#progress'+camswell[keey].id).css('width', '50%').attr('aria-valuenow', '50'); 
-		
-		colOK4cams(idss);
+		if (camscreate){ camscreate=false;
+		colOK4cams(idss);}
 
 	});
 	}
@@ -1657,6 +1659,7 @@ function adm (){
 		var idss= $(this).attr('id');
 		
 		//console.log( idss);
+		
 		gogocams();
 
 	});
