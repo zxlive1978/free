@@ -1590,9 +1590,7 @@ transliterate = (
 
 //вкладка камеры
 var camscreate = true;
-function adm (){
-	if (onofadm){
-	
+function adm (){	
 	online = false;
 	refresh = false;
 	$('#drawing').empty();
@@ -1600,16 +1598,18 @@ function adm (){
 	$('#skvnamelab').hide();
 	
 	
-	$('#dialogvideo').dialog( "close" );// Для скрытия
+	
 	
 	
 	onofadm = false;
 	
 	getcamswell();
 
+	$('#taabs-2').hide();
 	$('#tabs').show();
 	$('#taabs-1').empty();
 	$('#ul1').hide();
+	$('#taabs-1').show();
 	camscreate=true;
 	workstream={};
 	var bigelem='<div class="container-fluid"><div class=" row text-justify">';
@@ -1659,19 +1659,16 @@ function adm (){
 	});
 	}
 
-
-	} else {
-		
-		
-
-	}
-
 }
 
 
 
 //вкладка настройки
 function adm2 (){
+	//удаление старых потоков
+	deleteoldcams();
+	setTimeout(function(){deleteoldcams();}
+	, 30000);
 	online = false;
 	refresh = false;
 	$('#drawing').empty();
@@ -1692,12 +1689,11 @@ function adm2 (){
 	$('#taabs-2').show();
 	$('#ul1').hide();
 	$('#tabs').show();
+
+	var bigelem2='<div class="container h-auto d-inline-block" >';//<div class=" row text-justify">';
 	
-	var bigelem2='<div class="container-fluid"><div class=" row text-justify">';
-	
-		bigelem2=bigelem2+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
-		'button type="button"  id="datatab"  class="btn btn-outline-light btn-block" onClick="adm3();">Данные "По времени"</button>'+
-		'button type="button"  id="vidotab"  class="btn btn-outline-light btn-block" onClick="adm();">Видеокамеры</button>'+
+		bigelem2=bigelem2+'<button type="button"  id="datatab"  class="btn btn-outline-light btn-block" onClick="adm3();">Данные "По времени"</button>'+
+		'<button type="button"  id="vidotab"  class="btn btn-outline-light btn-block" onClick="adm();">Видеокамеры</button>'+
 		// '<p><div class="thumbnail bg-info text-light  text-center">'+
 		// //'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
 		// '<div id="iframeembdiv'+camswell[keey].id + '" class="embed-responsive embed-responsive-16by9">'+
@@ -1711,7 +1707,7 @@ function adm2 (){
 		// 	'<p><button type="button"  class="btn btn-success" id="con'+camswell[keey].id+'" >Подключение</button>'+// <button type="button" disabled class="btn btn-success" id="gogogo'+camswell[keey].id+'">Просмотр</button>'+//<a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
 			'</div>'+
 			'</div>'+
-		'</div>'+
+		// '</div>'+
 	'</div>';
 	
 
