@@ -371,7 +371,11 @@ function gogocams(){
                     let pgg = document.querySelector('#progress'+namecams);
                     pgg.setAttribute('aria-valuenow','100');
                     pgg.setAttribute('style','width:'+'100%')
-                    workstream['p'+String(workstream.length)]=streamId;
+                    workstream['p'+String(Object.keys(workstream).length)]=livestatcams[curkey].streamId;
+                    // for(okeey in workstream){
+                    //     console.log(workstream[okeey]);
+
+                    // }
                     // let element = document.querySelector('#iframeemb'+namecams);
                     // element.appendChild(frame);
                     
@@ -497,14 +501,15 @@ function deleteoldcams(){
                                         //удаление старых потоков
                                         for (var keey in livestatcams) {
                                             for (var okeey in workstream){
-                                        if ((Number(livestatcams[keey].hlsViewerCount)==0 )|| (Number(livestatcams[keey].hlsViewerCount)<=1 && livestatcams[keey].streamId==workstream[okeey])){
-                                        $.ajax({
-                                            type: "POST",
-                                            url: 'js/cams.php',
-                                            data: {whatdo:'delete', namecams: livestatcams[keey].streamId},
-                                            cache: false,
-                                            async: false,
-                                            success: function(data){
+                                                // console.log(livestatcams[keey].streamId,workstream[okeey]);
+                                            if ((Number(livestatcams[keey].hlsViewerCount)==0 )|| (Number(livestatcams[keey].hlsViewerCount)<=1 && livestatcams[keey].streamId==workstream[okeey])){
+                                            $.ajax({
+                                                type: "POST",
+                                                url: 'js/cams.php',
+                                                data: {whatdo:'delete', namecams: livestatcams[keey].streamId},
+                                                cache: false,
+                                                async: false,
+                                                success: function(data){
                 
                                                 
                                             
