@@ -372,6 +372,7 @@ function gogocams(){
                     pgg.setAttribute('aria-valuenow','100');
                     pgg.setAttribute('style','width:'+'100%')
                     workstream['p'+String(Object.keys(workstream).length)]=livestatcams[curkey].streamId;
+                    camscreate=true;
                     // for(okeey in workstream){
                     //     console.log(workstream[okeey]);
 
