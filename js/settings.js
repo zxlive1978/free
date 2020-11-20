@@ -1587,8 +1587,8 @@ transliterate = (
 // alert(transliterate(txt));
 // alert(transliterate(transliterate(txt), true));
 
-//Админка
-//камеры
+
+//вкладка камеры
 var camscreate = true;
 function adm (){
 	if (onofadm){
