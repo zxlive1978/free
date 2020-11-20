@@ -1693,27 +1693,7 @@ function adm (){
 
 //вкладка настройки
 function adm2 (){
-	if (onofadm){
 	
-	online = false;
-	refresh = false;
-	$('#drawing').empty();
-	$('#drawing').hide();
-	$('#skvnamelab').hide();
-	
-	
-	$('#dialogvideo').dialog( "close" );// Для скрытия
-	
-	
-	onofadm = false;
-	
-	getcamswell();
-
-	$('#tabs').show();
-	$('#taabs-1').empty();
-	$('#ul1').hide();
-
-	workstream={};
 	var bigelem='<div class="container-fluid"><div class=" row text-justify">';
 	for (var keey in camswell) {
 		
@@ -1762,32 +1742,6 @@ function adm2 (){
 	}
 
 
-	} else {
-		
-		//удаление старых потоков
-		deleteoldcams();
-		setTimeout(function(){deleteoldcams();}
-		, 30000);
-		
-		$('#dialogvideo').dialog( "open" );// Для скрытия
-		$('#tabs').hide();
-		$('#camsf2').remove();
-		$('#taabs-1').empty();
-		//document.getElementById("camsf2").innerHTML="Роторный стол";
-		// $('#tabs').empty();
-		// $('#tabs').hide();
-		
-		$('#drawing').empty();
-		$('#drawing').show();
-		$('#skvnamelab').show();
-		online = true;
-		refresh = true;
-		onofadm = true;
-		init();
-		// colOK11();
-		read_now();
-
-	}
 
 }
 
