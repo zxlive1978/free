@@ -1667,8 +1667,8 @@ function adm (){
 function adm2 (){
 	//удаление старых потоков
 	deleteoldcams();
-	setTimeout(function(){deleteoldcams();}
-	, 30000);
+	// setTimeout(function(){deleteoldcams();}
+	// , 30000);
 	online = false;
 	refresh = false;
 	$('#drawing').empty();
@@ -1690,10 +1690,9 @@ function adm2 (){
 	$('#ul1').hide();
 	$('#tabs').show();
 
-	var bigelem2='<div class="loader text-center"><div class=" row text-justify w-75 text-center">';
-	
+	var bigelem2='<div class="container-fluid text-center parent bg-dark"<div class="child">';
 		bigelem2=bigelem2+'<button type="button"  id="datatab"  class="btn btn-outline-light btn-block" onClick="adm3();">Данные "По времени"</button>'+
-		'<button type="button"  id="vidotab"  class="btn btn-outline-light btn-block" onClick="adm();">Видеокамеры</button>'+
+		'<button type="button"  id="vidotab"  class="btn btn-outline-light btn-block " onClick="adm();">Видеокамеры</button>'+
 		// '<p><div class="thumbnail bg-info text-light  text-center">'+
 		// //'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
 		// '<div id="iframeembdiv'+camswell[keey].id + '" class="embed-responsive embed-responsive-16by9">'+
@@ -1727,8 +1726,8 @@ function adm3 (){
 	
 	//удаление старых потоков
 	deleteoldcams();
-	setTimeout(function(){deleteoldcams();}
-	, 30000);
+	// setTimeout(function(){deleteoldcams();}
+	// , 30000);
 	
 	//$('#dialogvideo').dialog( "open" );// Для скрытия
 	$('#tabs').hide();

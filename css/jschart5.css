@@ -26,7 +26,12 @@ html, body, .container {
       /*all CSS goes here*/
     }
 	
-  
+ 
+.vcenter {
+      display: inline-block;
+      vertical-align: middle;
+      float: none;
+  }   
 #skvs tr:hover{cursor:pointer;}
 #cams tr:hover{cursor:pointer;} 
 
