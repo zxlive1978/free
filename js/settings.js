@@ -1662,28 +1662,7 @@ function adm (){
 
 	} else {
 		
-		//удаление старых потоков
-		deleteoldcams();
-		setTimeout(function(){deleteoldcams();}
-		, 30000);
 		
-		$('#dialogvideo').dialog( "open" );// Для скрытия
-		$('#tabs').hide();
-		$('#camsf2').remove();
-		$('#taabs-1').empty();
-		//document.getElementById("camsf2").innerHTML="Роторный стол";
-		// $('#tabs').empty();
-		// $('#tabs').hide();
-		
-		$('#drawing').empty();
-		$('#drawing').show();
-		$('#skvnamelab').show();
-		online = true;
-		refresh = true;
-		onofadm = true;
-		init();
-		// colOK11();
-		read_now();
 
 	}
 
@@ -1693,34 +1672,84 @@ function adm (){
 
 //вкладка настройки
 function adm2 (){
+	online = false;
+	refresh = false;
+	$('#drawing').empty();
+	$('#drawing').hide();
+	$('#skvnamelab').hide();
 	
-	var bigelem='<div class="container-fluid"><div class=" row text-justify">';
 	
-		bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
-		'<p><div class="thumbnail bg-info text-light  text-center">'+
-		//'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
-		'<div id="iframeembdiv'+camswell[keey].id + '" class="embed-responsive embed-responsive-16by9">'+
-		'<iframe id="iframeemb'+camswell[keey].id + '" class="embed-responsive-item" src="" allowfullscreen ></iframe>'+  
-		'</div>'+
-		'<div class="caption text-center">'+
-			'<h6>'+camswell[keey].txt+' '+camswell[keey].name+'</h6>'+
-			'<div class="progress" >'+
+	$('#dialogvideo').dialog( "close" );// Для скрытия
+	
+	
+	onofadm = false;
+	
+	getcamswell();
 
-    		'<div class="progress-bar progress-bar progress-bar-striped progress-bar-animated bg-success" id="progress'+camswell[keey].id + '" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>'+
-			'<p><button type="button"  class="btn btn-success" id="con'+camswell[keey].id+'" >Подключение</button>'+// <button type="button" disabled class="btn btn-success" id="gogogo'+camswell[keey].id+'">Просмотр</button>'+//<a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
+	$('#tabs').show();
+	$('#taabs-2').empty();
+	$('#taabs-2').show();
+	$('#ul1').hide();
+	
+	var bigelem2='<div class="container-fluid"><div class=" row text-justify">';
+	
+		bigelem2=bigelem2+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
+		'button type="button"  id="datatab"  class="btn btn-outline-light btn-block" onClick="adm3();">Данные "По времени"</button>'+
+		'button type="button"  id="vidotab"  class="btn btn-outline-light btn-block" onClick="adm();">Видеокамеры</button>'+
+		// '<p><div class="thumbnail bg-info text-light  text-center">'+
+		// //'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
+		// '<div id="iframeembdiv'+camswell[keey].id + '" class="embed-responsive embed-responsive-16by9">'+
+		// '<iframe id="iframeemb'+camswell[keey].id + '" class="embed-responsive-item" src="" allowfullscreen ></iframe>'+  
+		// '</div>'+
+		// '<div class="caption text-center">'+
+		// 	'<h6>'+camswell[keey].txt+' '+camswell[keey].name+'</h6>'+
+		// 	'<div class="progress" >'+
+
+    	// 	'<div class="progress-bar progress-bar progress-bar-striped progress-bar-animated bg-success" id="progress'+camswell[keey].id + '" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>'+
+		// 	'<p><button type="button"  class="btn btn-success" id="con'+camswell[keey].id+'" >Подключение</button>'+// <button type="button" disabled class="btn btn-success" id="gogogo'+camswell[keey].id+'">Просмотр</button>'+//<a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
+			'</div>'+
 			'</div>'+
 		'</div>'+
 	'</div>';
 	
 
-	$('#taabs-1').html(bigelem);
+	$('#taabs-2').html(bigelem2);
 	//Повесить событие клик на подключение
 	
-	$('#con'+camswell[keey].id).click(function() {
-		var idss= $(this).attr('id');
+	// $('#con'+camswell[keey].id).click(function() {
+	// 	var idss= $(this).attr('id');
 	
 	
-	})
+	// })
+
+}
+
+//вкладка По времени
+function adm3 (){
+	
+	//удаление старых потоков
+	deleteoldcams();
+	setTimeout(function(){deleteoldcams();}
+	, 30000);
+	
+	//$('#dialogvideo').dialog( "open" );// Для скрытия
+	$('#tabs').hide();
+	$('#camsf2').remove();
+	$('#taabs-1').empty();
+	$('#taabs-2').empty();
+	//document.getElementById("camsf2").innerHTML="Роторный стол";
+	// $('#tabs').empty();
+	// $('#tabs').hide();
+	
+	$('#drawing').empty();
+	$('#drawing').show();
+	$('#skvnamelab').show();
+	online = true;
+	refresh = true;
+	onofadm = true;
+	init();
+	// colOK11();
+	read_now();
 
 }
 
