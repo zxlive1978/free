@@ -1686,10 +1686,12 @@ function adm2 (){
 	
 	getcamswell();
 
-	$('#tabs').show();
+	
+	$('#taabs-1').hide();
 	$('#taabs-2').empty();
 	$('#taabs-2').show();
 	$('#ul1').hide();
+	$('#tabs').show();
 	
 	var bigelem2='<div class="container-fluid"><div class=" row text-justify">';
 	
