@@ -1610,7 +1610,7 @@ function adm (){
 	$('#tabs').show();
 	$('#taabs-1').empty();
 	$('#ul1').hide();
-
+	camscreate=true;
 	workstream={};
 	var bigelem='<div class="container-fluid"><div class=" row text-justify">';
 	for (var keey in camswell) {
