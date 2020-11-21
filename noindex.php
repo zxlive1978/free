@@ -101,12 +101,12 @@ if (!$_SESSION['auth']) {
 </nav> -->
 
 <nav class="navbar navbar-primary bg-dark py-0 navbar-fixed-top" id="bigpan">
-<a class='btn btn-outline-light'  onClick="adm2 ();"><img src='css/menu.png'  width="20" height="20"></a>
+<a class='btn btn-outline-light bg-secondary'  onClick="adm2 ();"><img src='css/menu.png'  width="20" height="20"></a>
 <!-- <button type="button" class="btn btn-sm text-light "  >
   <span id="skvnamelab" style="font-weight: bold; font-size: 22px;" onClick="colPan10()" >Скважина</span>
 </button> -->
-<button type="button"  id="skvnamelab"  class="btn btn-outline-light" onClick="colPan10();">Скважина ?</button>
-<button type="button" class="btn btn-outline-light" onClick="exit('exit','exit','exit');">Выход</button>
+<button type="button"  id="skvnamelab"  class="btn btn-outline-light bg-secondary" onClick="colPan10();">Скважина ?</button>
+<button type="button" class="btn btn-outline-light bg-secondary" onClick="exit('exit','exit','exit');">Выход</button>
 
 </nav>
 

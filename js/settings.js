@@ -1618,10 +1618,10 @@ function adm (){
 		namecams=camswell[keey].txt+'_'+camswell[keey].name;
 		
 		bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
-		'<p><div class="thumbnail border border-white text-light  text-center">'+
+		'<p><div class="thumbnail border border-white bg-secondary text-light  text-center">'+
 		//'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
-		'<div id="iframeembdiv'+camswell[keey].id + '" class="embed-responsive embed-responsive-16by9">'+
-		'<iframe id="iframeemb'+camswell[keey].id + '" class="embed-responsive-item" src="" allowfullscreen ></iframe>'+  
+		'<div id="iframeembdiv'+camswell[keey].id + '" class="embed-responsive embed-responsive-16by9 ">'+
+		'<iframe id="iframeemb'+camswell[keey].id + '" class="embed-responsive-item bg-dark" src="" allowfullscreen ></iframe>'+  
 		'</div>'+
 		'<div class="caption text-center">'+
 			'<h6>'+camswell[keey].txt+' '+camswell[keey].name+'</h6>'+
@@ -1690,9 +1690,9 @@ function adm2 (){
 	$('#ul1').hide();
 	$('#tabs').show();
 
-	var bigelem2='<div class="container-fluid text-center parent bg-dark"<div class="child">';
-		bigelem2=bigelem2+'<button type="button"  id="datatab"  class="btn btn-outline-light btn-block" onClick="adm3();">Данные "По времени"</button>'+
-		'<button type="button"  id="vidotab"  class="btn btn-outline-light btn-block " onClick="adm();">Видеокамеры</button>'+
+	var bigelem2='<div class="container container-fluid h-75 text-center bg-dark"  >';
+		bigelem2=bigelem2+'<br><br><br><button type="button"  id="datatab"  class="btn btn-outline-light btn-block bg-secondary" style="width: 75%;margin: 5px auto;" onClick="adm3();">Данные "По времени"</button>'+
+		'<button type="button"  id="vidotab"  class="btn btn-outline-light btn-block bg-secondary "  style="width: 75%;margin: 5px auto;" onClick="adm();">Видеокамеры</button>'+
 		// '<p><div class="thumbnail bg-info text-light  text-center">'+
 		// //'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
 		// '<div id="iframeembdiv'+camswell[keey].id + '" class="embed-responsive embed-responsive-16by9">'+
@@ -1706,7 +1706,7 @@ function adm2 (){
 		// 	'<p><button type="button"  class="btn btn-success" id="con'+camswell[keey].id+'" >Подключение</button>'+// <button type="button" disabled class="btn btn-success" id="gogogo'+camswell[keey].id+'">Просмотр</button>'+//<a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
 			// '</div>'+
 			// '</div>'+
-		'</div>'+
+		// '</div>'+
 	'</div>';
 	
 
