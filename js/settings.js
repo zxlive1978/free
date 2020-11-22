@@ -1691,8 +1691,8 @@ function adm2 (){
 	$('#tabs').show();
 
 	var bigelem2='<div class="container container-fluid h-75 text-center bg-dark"  >';
-		bigelem2=bigelem2+'<br><br><br><button type="button"  id="datatab"  class="btn btn-outline-light btn-block bg-secondary" style="width: 75%;margin: 5px auto;" onClick="adm3();">Данные "По времени"</button>'+
-		'<button type="button"  id="vidotab"  class="btn btn-outline-light btn-block bg-secondary "  style="width: 75%;margin: 5px auto;" onClick="adm();">Видеокамеры</button>'+
+		bigelem2=bigelem2+'<br><br><br><button type="button"  id="datatab"  class="btn btn-outline-light btn-block bg-secondary" style="width: 75%; margin: 5px auto;  font-weight: bold; font-size: 23px;" onClick="adm3();">Данные "По времени"</button>'+
+		'<button type="button"  id="vidotab"  class="btn btn-outline-light btn-block bg-secondary "  style="width: 75%; margin: 5px auto; font-weight: bold; font-size: 23px;" onClick="adm();">Видеокамеры</button>'+
 		// '<p><div class="thumbnail bg-info text-light  text-center">'+
 		// //'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
 		// '<div id="iframeembdiv'+camswell[keey].id + '" class="embed-responsive embed-responsive-16by9">'+
