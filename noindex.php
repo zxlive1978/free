@@ -106,7 +106,7 @@ if (!$_SESSION['auth']) {
   <span id="skvnamelab" style="font-weight: bold; font-size: 22px;" onClick="colPan10()" >Скважина</span>
 </button> -->
 <button type="button"  id="skvnamelab"  class="btn btn-outline-light bg-secondary" style="font-weight: bold; padding-top:0; padding-bottom:0; font-size: 23px;" onClick="colPan10();">Скважина ?</button>
-<button type="button" class="btn btn-outline-light bg-secondary" style=" padding-top:3; padding-bottom:3; font-size: 18px;" onClick="exit('exit','exit','exit');"><img src='css/exit.png'  width="20" height="20"></button>
+<button type="button" class="btn btn-outline-light bg-secondary" style=" padding-top:3; padding-bottom:3; font-size: 18px;" onClick="exit('exit','exit','exit');"><img src='css/exit.png'  width="25" height="25"></button>
 
 </nav>
 
