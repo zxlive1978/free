@@ -1624,7 +1624,7 @@ function adm (){
 		'<iframe id="iframeemb'+camswell[keey].id + '" class="embed-responsive-item bg-dark" src="" allowfullscreen ></iframe>'+  
 		'</div>'+
 		'<div class="caption text-center   ">'+
-			'<h6 >'+camswell[keey].txt+' '+camswell[keey].name+'</h6>'+
+			'<h6 style="font-weight: bold;" >'+camswell[keey].txt+' '+camswell[keey].name+'</h6>'+
 			'<div class="progress m-1" style="height:10px" >'+
 
     		'<div class="progress-bar  progress-bar-info progress-bar-striped progress-bar-animated bg-success" id="progress'+camswell[keey].id + '" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>'+
