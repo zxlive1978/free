@@ -1623,7 +1623,7 @@ function adm (){
 		'<div id="iframeembdiv'+camswell[keey].id + '" class="embed-responsive embed-responsive-16by9 ">'+
 		'<iframe id="iframeemb'+camswell[keey].id + '" class="embed-responsive-item bg-dark" src="" allowfullscreen ></iframe>'+  
 		'</div>'+
-		'<div class="caption text-center">'+
+		'<div class="caption text-center border-white   ">'+
 			'<h6>'+camswell[keey].txt+' '+camswell[keey].name+'</h6>'+
 			'<div class="progress m-1" style="height:10px" >'+
 
