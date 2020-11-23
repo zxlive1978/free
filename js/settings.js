@@ -1673,7 +1673,7 @@ function adm2 (){
 	refresh = false;
 	$('#drawing').empty();
 	$('#drawing').hide();
-	$('#skvnamelab').hide();
+	// $('#skvnamelab').hide();
 	
 	
 	$('#dialogvideo').dialog( "close" );// Для скрытия
