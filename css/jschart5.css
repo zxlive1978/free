@@ -15,7 +15,9 @@ html, body, .container {
 }
 
 
-
+.modal {
+  background-color:black;
+}
 
 
 .my-styling-class{
