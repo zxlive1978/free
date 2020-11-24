@@ -252,16 +252,16 @@ window.onload = getStart;
   <label for="hcolcolor">Редактирование экрана:</label><input class="form-control input-lg"type="checkbox" id="editscrn" name="editscrn"/>
   
   
-  <label for="hcolcolor">Кнопка "Скважина":</label><input class="form-control input-lg"type="color" id="rawsvg1" name="rawsvg1" value="#e66465"/>
+  <label for="hcolcolor">Кнопка "Лупа":</label><input class="form-control input-lg"type="color" id="rawsvg1" name="rawsvg1" value="#e66465"/>
   
   
-  <label for="hcolcolor">Кнопка "Календарь":</label><input class="form-control input-lg"type="color" id="rawsvg2" name="rawsvg2" value="#e66465"/>
-  
-   
-  <label for="hcolcolor">Кнопка "Лупа":</label><input class="form-control input-lg"type="color" id="rawsvg3" name="rawsvg3" value="#e66465"/>
+  <label for="hcolcolor">Кнопка "Форма":</label><input class="form-control input-lg"type="color" id="rawsvg2" name="rawsvg2" value="#e66465"/>
   
    
-  <label for="hcolcolor">Кнопка "Форма":</label><input class="form-control input-lg"type="color" id="rawsvg4" name="rawsvg4" value="#e66465"/>
+  <label for="hcolcolor">Кнопка "Прием данных":</label><input class="form-control input-lg"type="color" id="rawsvg3" name="rawsvg3" value="#e66465"/>
+  
+   
+  <label class="d-none" for="hcolcolor">Кнопка "Форма":</label><input class="d-none form-control input-lg"type="color" id="rawsvg4" name="rawsvg4" value="#e66465"/>
   
   
   <label for="hcolcolor">Фон кнопок (белый/ черный):</label><input class="form-control input-lg"type="checkbox" id="fonbut" name="fonbut"/>
