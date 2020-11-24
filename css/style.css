@@ -67,15 +67,15 @@
 }
 .login-block input:-webkit-autofill
 {
-  -webkit-box-shadow:0 0 0 1000px #9e9a9a inset;
-  -webkit-text-fill-color:#9e9a9a;
+  -webkit-box-shadow:0 0 0 1000px #1b262c inset;
+  -webkit-text-fill-color:#1b262c;
   -webkit-transition:none;
   -o-transition:none;
   transition:none;
 }
 .login-block .input-group-addon
 {
-  color:#9e9a9a;
+  color:#1b262c;
   font-size:19px;
   /* opacity:.8 */
 }
@@ -83,8 +83,8 @@
 {
   margin-top:30px;
   padding:10px;
-  background:#9e9a9a;
-  border-color:#9e9a9a;
+  background:#1b262c;
+  border-color:#1b262c;
 }
 .login-block .hr-xs
 {
@@ -117,7 +117,7 @@
 }
 .login-links a
 {
-  color:#9e9a9a;
+  color:#1b262c;
   opacity:.9
 }
 .login-links a:hover
