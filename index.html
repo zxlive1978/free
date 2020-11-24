@@ -14,17 +14,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body style="background-color: #1b262c;">
 
   
     <main>
-      <div class=" col-md-4 bg-dark  border border-white " style="display: inline-block;
+      <div class="container bg-dark  text-center border border-white " style="display: inline-block;
       border-radius: 10px;
       background-color: #1b262c;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
       position: absolute;
       left: 50%;
       top: 50%;
+      max-width: 400px;
 
       transform: translate(-50%, -50%);">
         <!-- <img src="css/ava.png" class="rounded-circle" style="width:100px"> -->
@@ -34,7 +35,7 @@
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-user ti-user"></i></span>
-              <input type="text" class="form-control" placeholder="Ваш логин" name="login">
+              <input type="text" class="form-control" placeholder="логин" name="login">
             </div>
           </div>
           
@@ -43,11 +44,11 @@
           <div class="form-group">
             <div class="input-group">
               <span class="input-group-addon"><i class="fa fa-lock ti-unlock"></i></span>
-              <input type="password" placeholder="Ваш пароль" name="password">
+              <input type="password" class="form-control" placeholder="пароль" name="password">
             </div>
           </div>
           <button class="btn btn-dark btn-block border border-white" type="submit">Вход</button>
-
+          <br>
         </form>
       </div>
 
