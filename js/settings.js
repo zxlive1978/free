@@ -33,6 +33,7 @@ var Shablontxtwell = {
 var livestatcams ={};
 var cams = {};
 var camswell = [];
+var workstream ={};
 
 //Текущие параметры Справочник параметров графики обычные
 
@@ -241,19 +242,19 @@ var rawsvg1 = '<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE svg PUBLIC "
 var butts ={
 	rawsvg0:{img:'<?xml version="1.0" encoding="iso-8859-1"?> <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --> <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <g> <g> <path d="M421,211v-46C421,74.019,346.981,0,256,0S91,74.019,91,165v46H61v301h390V211H421z M121,165c0-74.439,60.561-135,135-135 s135,60.561,135,135v46h-30v-46c0-57.897-47.103-105-105-105c-57.897,0-105,47.103-105,105v46h-30V165z M331,165v46H181v-46 c0-41.355,33.645-75,75-75C297.355,90,331,123.645,331,165z M421,482H91v-30h330V482z M421,422H91V241c9.676,0,302.027,0,330,0 V422z"/> </g> </g> <g> <g> <path d="M256,271c-24.813,0-45,20.187-45,45c0,19.555,12.541,36.228,30,42.42V392h30v-33.58c17.459-6.192,30-22.865,30-42.42 C301,291.187,280.813,271,256,271z M256,331c-8.271,0-15-6.729-15-15s6.729-15,15-15s15,6.729,15,15S264.271,331,256,331z"/> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg> ',
 	color:'#ff0066'},
-	rawsvg1:{img:'<svg  viewBox="-37 1 511 511.99975"  xmlns="http://www.w3.org/2000/svg"><path d="m416.5 472h-20.546875l-44.535156-326h21.082031c11.046875 0 20-8.953125 20-20s-8.953125-20-20-20h-35.933594l-104.1875-100.402344c-7.746094-7.464844-20.011718-7.464844-27.757812 0l-104.1875 100.402344h-35.933594c-11.046875 0-20 8.953125-20 20s8.953125 20 20 20h21.082031l-44.535156 326h-20.546875c-11.046875 0-20 8.953125-20 20s8.953125 20 20 20h396c11.046875 0 20-8.953125 20-20s-8.953125-20-20-20zm-77.3125-120.011719-93.757812-103.988281 69.085937-76.621094zm-120.6875-304.214843 60.421875 58.226562h-120.84375zm65.039062 98.226562-65.039062 72.132812-65.039062-72.132812zm-161.054687 25.378906 69.085937 76.621094-93.757812 103.988281zm-41.066406 300.621094 12.121093-88.738281c.039063.042969.070313.089843.105469.132812l79.894531 88.605469zm54.011719-102 83.070312-92.132812 83.070312 92.132812-83.070312 92.132812zm128.03125 102 79.894531-88.605469c.035156-.042969.066406-.089843.105469-.132812l12.121093 88.738281zm0 0"/></svg> ',
-	color:Sheet.rawsvg0},
-	rawsvg3:{img:'<svg viewBox="0 -38 512.00025 512" xmlns="http://www.w3.org/2000/svg"><path d="m506.140625 314.15625c-7.808594-7.808594-20.472656-7.808594-28.28125 0l-25.457031-25.457031 28.285156-28.28125c7.804688-7.804688 7.808594-20.476563 0-28.285157l-226.277344-226.273437c-7.808594-7.8125-20.472656-7.8125-28.28125 0l-141.421875 141.421875c-7.804687 7.804688-7.808593 20.472656 0 28.28125l111.722657 111.726562-28.714844 28.710938h-51.714844v-60c0-11.046875-8.953125-20-20-20h-76c-11.046875 0-20 8.953125-20 20v160c0 11.046875 8.953125 20 20 20h76c11.046875 0 20-8.953125 20-20v-60h60c5.304688 0 10.390625-2.105469 14.140625-5.855469l34.574219-34.574219 86.265625 86.269532c7.808593 7.808594 20.472656 7.808594 28.285156 0l28.285156-28.285156 25.453125 25.453124c-7.808594 7.8125-7.808594 20.476563 0 28.285157 7.8125 7.808593 20.472656 7.8125 28.285156 0l84.851563-84.851563c7.8125-7.808594 7.8125-20.472656 0-28.285156zm-430.140625 81.84375h-36v-120h36zm249.121094-36.589844c-8.5625-8.5625-189.261719-189.265625-197.988282-197.988281l113.136719-113.136719 197.992188 197.988282zm98.996094-42.425781 25.457031 25.457031-28.285157 28.285156-25.453124-25.457031c6.628906-6.632812 21.640624-21.640625 28.28125-28.285156zm0 0"/></svg>',
+	// rawsvg1:{img:'<svg  viewBox="-37 1 511 511.99975"  xmlns="http://www.w3.org/2000/svg"><path d="m416.5 472h-20.546875l-44.535156-326h21.082031c11.046875 0 20-8.953125 20-20s-8.953125-20-20-20h-35.933594l-104.1875-100.402344c-7.746094-7.464844-20.011718-7.464844-27.757812 0l-104.1875 100.402344h-35.933594c-11.046875 0-20 8.953125-20 20s8.953125 20 20 20h21.082031l-44.535156 326h-20.546875c-11.046875 0-20 8.953125-20 20s8.953125 20 20 20h396c11.046875 0 20-8.953125 20-20s-8.953125-20-20-20zm-77.3125-120.011719-93.757812-103.988281 69.085937-76.621094zm-120.6875-304.214843 60.421875 58.226562h-120.84375zm65.039062 98.226562-65.039062 72.132812-65.039062-72.132812zm-161.054687 25.378906 69.085937 76.621094-93.757812 103.988281zm-41.066406 300.621094 12.121093-88.738281c.039063.042969.070313.089843.105469.132812l79.894531 88.605469zm54.011719-102 83.070312-92.132812 83.070312 92.132812-83.070312 92.132812zm128.03125 102 79.894531-88.605469c.035156-.042969.066406-.089843.105469-.132812l12.121093 88.738281zm0 0"/></svg> ',
+	// color:Sheet.rawsvg0},
 	//rawsvg3:{img:'<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 485.213 485.212" style="enable-background:new 0 0 485.213 485.212;" xml:space="preserve"> <g> <path d="M60.652,75.816V15.163C60.652,6.781,67.433,0,75.817,0c8.38,0,15.161,6.781,15.161,15.163v60.653 c0,8.38-6.781,15.161-15.161,15.161C67.433,90.978,60.652,84.196,60.652,75.816z M318.424,90.978 c8.378,0,15.163-6.781,15.163-15.161V15.163C333.587,6.781,326.802,0,318.424,0c-8.382,0-15.168,6.781-15.168,15.163v60.653 C303.256,84.196,310.042,90.978,318.424,90.978z M485.212,363.906c0,66.996-54.312,121.307-121.303,121.307 c-66.986,0-121.302-54.311-121.302-121.307c0-66.986,54.315-121.3,121.302-121.3C430.9,242.606,485.212,296.919,485.212,363.906z M454.89,363.906c0-50.161-40.81-90.976-90.98-90.976c-50.166,0-90.976,40.814-90.976,90.976c0,50.171,40.81,90.98,90.976,90.98 C414.08,454.886,454.89,414.077,454.89,363.906z M121.305,181.955H60.652v60.651h60.653V181.955z M60.652,333.584h60.653V272.93 H60.652V333.584z M151.629,242.606h60.654v-60.651h-60.654V242.606z M151.629,333.584h60.654V272.93h-60.654V333.584z M30.328,360.891V151.628h333.582v60.653h30.327V94c0-18.421-14.692-33.349-32.843-33.349h-12.647v15.166 c0,16.701-13.596,30.325-30.322,30.325c-16.731,0-30.326-13.624-30.326-30.325V60.651H106.14v15.166 c0,16.701-13.593,30.325-30.322,30.325c-16.733,0-30.327-13.624-30.327-30.325V60.651H32.859C14.707,60.651,0.001,75.579,0.001,94 v266.892c0,18.36,14.706,33.346,32.858,33.346h179.424v-30.331H32.859C31.485,363.906,30.328,362.487,30.328,360.891z M303.256,242.606v-60.651h-60.648v60.651H303.256z M409.399,363.906h-45.49v-45.49c0-8.377-6.781-15.158-15.163-15.158 s-15.159,6.781-15.159,15.158v60.658c0,8.378,6.777,15.163,15.159,15.163h60.653c8.382,0,15.163-6.785,15.163-15.163 C424.562,370.692,417.781,363.906,409.399,363.906z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>',
 	//rawsvg1:{img:'<?xml version="1.0" encoding="iso-8859-1"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"><g><g><g><path d="M458.666,42.67h-53.33V32c0-17.645-14.356-32-32.002-32c-17.644,0-31.999,14.355-31.999,32v10.67H170.664V32 c0-17.645-14.354-32-31.999-32s-32,14.355-32,32v10.67H53.334c-5.892,0-10.667,4.776-10.667,10.667v447.995 c0,5.89,4.776,10.667,10.667,10.667h405.332c5.891,0,10.667-4.778,10.667-10.667V53.337 C469.333,47.446,464.557,42.67,458.666,42.67z M362.67,53.337V32c0-5.882,4.784-10.665,10.666-10.665 c5.881,0,10.665,4.783,10.665,10.665v21.337V74.67c0,0.735-0.075,1.452-0.218,2.146c-0.996,4.855-5.303,8.517-10.45,8.517 c-5.881,0-10.664-4.783-10.664-10.663V53.337z M128,53.337V32c0-5.882,4.783-10.665,10.667-10.665 c5.88,0,10.662,4.783,10.662,10.665v21.337V74.67c0,1.469-0.299,2.871-0.838,4.146c-1.621,3.825-5.415,6.517-9.826,6.517 C132.783,85.333,128,80.55,128,74.67V53.337z M64.001,64.005h42.663V74.67c0,2.756,0.35,5.434,1.009,7.988 c3.557,13.791,16.103,24.01,30.991,24.01h0.002c17.643,0,31.997-14.355,31.997-31.998V64.005h170.67V74.67 c0,17.643,14.355,31.998,32.001,31.998c17.645,0,32-14.355,32-31.998V64.005h42.662v63.994H64.001V64.005z M447.999,490.665 H64.001v0v-21.328h68.657c5.891,0,10.667-4.778,10.667-10.667c0-5.892-4.777-10.667-10.667-10.667H64.001V149.334h383.997 V490.665z"/><path d="M141.432,249.712c1.736,0,4.342-0.868,6.37-2.896l10.134-12.742v160.764c0,6.661,7.528,10.134,15.347,10.134 c7.531,0,15.349-3.473,15.349-10.134v-191.41c-0.001-6.371-7.24-10.134-13.612-10.134c-3.474,0-5.792,1.159-7.818,3.185 l-30.115,28.907c-3.765,2.608-6.08,7.53-6.08,11.874C131.007,243.34,135.349,249.712,141.432,249.712z"/><path d="M316.134,406.711c36.486,0,64.866-16.506,64.866-59.652v-3.475c-0.001-29.827-13.321-46.913-33.303-54.154 c16.216-6.082,27.221-20.556,27.221-45.174c0-37.065-24.904-50.962-58.784-50.962c-33.881,0-58.784,13.896-58.784,50.962 c0,24.618,11.005,39.092,26.931,45.174c-19.98,7.24-33.301,24.327-33.301,54.154v3.475 C250.98,390.206,279.647,406.711,316.134,406.711z M316.134,218.774c18.245,0,28.959,8.398,28.959,28.958 c0,20.85-10.714,29.248-28.959,29.248c-18.242,0-28.958-8.398-28.958-29.248C287.175,227.173,297.892,218.774,316.134,218.774z M281.674,338.66c0-24.904,13.032-36.197,34.46-36.197c21.428,0,34.17,11.293,34.17,36.197v5.213 c0,25.191-12.451,37.353-34.17,37.353c-21.139,0-34.46-11.58-34.46-37.353V338.66z"/><path d="M163.556,448.006h-0.254c-5.892,0-10.667,4.776-10.667,10.667c0,5.889,4.776,10.667,10.667,10.667h0.254 c5.892,0,10.667-4.778,10.667-10.667C174.224,452.781,169.448,448.006,163.556,448.006z"/></g></g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>',
-	color:Sheet.rawsvg1},
-	rawsvg2:{img:'<?xml version="1.0" encoding="iso-8859-1"?> <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 310.42 310.42" style="enable-background:new 0 0 310.42 310.42;" xml:space="preserve"> <g> <g> <path d="M273.587,214.965c49.11-49.111,49.109-129.021,0-178.132c-49.111-49.111-129.02-49.111-178.13,0 C53.793,78.497,47.483,140.462,76.51,188.85c0,0,2.085,3.498-0.731,6.312c-16.065,16.064-64.263,64.263-64.263,64.263 c-12.791,12.79-15.836,30.675-4.493,42.02l1.953,1.951c11.343,11.345,29.229,8.301,42.019-4.49c0,0,48.096-48.097,64.128-64.128 c2.951-2.951,6.448-0.866,6.448-0.866C169.958,262.938,231.923,256.629,273.587,214.965z M118.711,191.71 c-36.288-36.288-36.287-95.332,0.001-131.62c36.288-36.287,95.332-36.288,131.619,0c36.288,36.287,36.288,95.332,0,131.62 C214.043,227.996,155,227.996,118.711,191.71z"/> <g> <path d="M126.75,118.424c-1.689,0-3.406-0.332-5.061-1.031c-6.611-2.798-9.704-10.426-6.906-17.038 c17.586-41.559,65.703-61.062,107.261-43.476c6.611,2.798,9.704,10.426,6.906,17.038c-2.799,6.612-10.425,9.703-17.039,6.906 c-28.354-11.998-61.186,1.309-73.183,29.663C136.629,115.445,131.815,118.424,126.75,118.424z"/> </g> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg> ',
+	// rawsvg2:{img:'<svg viewBox="0 -38 512.00025 512" xmlns="http://www.w3.org/2000/svg"><path d="m506.140625 314.15625c-7.808594-7.808594-20.472656-7.808594-28.28125 0l-25.457031-25.457031 28.285156-28.28125c7.804688-7.804688 7.808594-20.476563 0-28.285157l-226.277344-226.273437c-7.808594-7.8125-20.472656-7.8125-28.28125 0l-141.421875 141.421875c-7.804687 7.804688-7.808593 20.472656 0 28.28125l111.722657 111.726562-28.714844 28.710938h-51.714844v-60c0-11.046875-8.953125-20-20-20h-76c-11.046875 0-20 8.953125-20 20v160c0 11.046875 8.953125 20 20 20h76c11.046875 0 20-8.953125 20-20v-60h60c5.304688 0 10.390625-2.105469 14.140625-5.855469l34.574219-34.574219 86.265625 86.269532c7.808593 7.808594 20.472656 7.808594 28.285156 0l28.285156-28.285156 25.453125 25.453124c-7.808594 7.8125-7.808594 20.476563 0 28.285157 7.8125 7.808593 20.472656 7.8125 28.285156 0l84.851563-84.851563c7.8125-7.808594 7.8125-20.472656 0-28.285156zm-430.140625 81.84375h-36v-120h36zm249.121094-36.589844c-8.5625-8.5625-189.261719-189.265625-197.988282-197.988281l113.136719-113.136719 197.992188 197.988282zm98.996094-42.425781 25.457031 25.457031-28.285157 28.285156-25.453124-25.457031c6.628906-6.632812 21.640624-21.640625 28.28125-28.285156zm0 0"/></svg>',
+	// color:Sheet.rawsvg1},
+	rawsvg1:{img:'<?xml version="1.0" encoding="iso-8859-1"?> <!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 310.42 310.42" style="enable-background:new 0 0 310.42 310.42;" xml:space="preserve"> <g> <g> <path d="M273.587,214.965c49.11-49.111,49.109-129.021,0-178.132c-49.111-49.111-129.02-49.111-178.13,0 C53.793,78.497,47.483,140.462,76.51,188.85c0,0,2.085,3.498-0.731,6.312c-16.065,16.064-64.263,64.263-64.263,64.263 c-12.791,12.79-15.836,30.675-4.493,42.02l1.953,1.951c11.343,11.345,29.229,8.301,42.019-4.49c0,0,48.096-48.097,64.128-64.128 c2.951-2.951,6.448-0.866,6.448-0.866C169.958,262.938,231.923,256.629,273.587,214.965z M118.711,191.71 c-36.288-36.288-36.287-95.332,0.001-131.62c36.288-36.287,95.332-36.288,131.619,0c36.288,36.287,36.288,95.332,0,131.62 C214.043,227.996,155,227.996,118.711,191.71z"/> <g> <path d="M126.75,118.424c-1.689,0-3.406-0.332-5.061-1.031c-6.611-2.798-9.704-10.426-6.906-17.038 c17.586-41.559,65.703-61.062,107.261-43.476c6.611,2.798,9.704,10.426,6.906,17.038c-2.799,6.612-10.425,9.703-17.039,6.906 c-28.354-11.998-61.186,1.309-73.183,29.663C136.629,115.445,131.815,118.424,126.75,118.424z"/> </g> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg> ',
 	color:Sheet.rawsvg2},
 	//rawsvg3:{img:'<?xml version="1.0" encoding="iso-8859-1"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 286.9 286.9" style="enable-background:new 0 0 286.9 286.9;" xml:space="preserve" > <g> <polygon points="248.65,76.5 181.65,76.5 210.35,0 95.65,0 38.25,153 86.05,153 38.25,286.9 	"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>' ,
-	rawsvg4:{img:'<?xml version="1.0" encoding="iso-8859-1"?> <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --> <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 334 334" style="enable-background:new 0 0 334 334;" xml:space="preserve"> <g> <g> <path d="M298.6,84.4c0.4-0.4,0.4-0.4,0-0.8c0-0.4-0.4-0.8-0.4-1.2c0-0.4-0.4-0.4-0.4-0.8c0-0.4-0.4-0.8-0.4-1.2 c0-0.4-0.4-0.4-0.4-0.8c-0.4-0.4-0.4-0.8-0.8-0.8l-76-76c-0.4-0.4-1.2-0.8-1.6-1.2c-0.4,0-0.4-0.4-0.8-0.4 c-0.4-0.4-0.8-0.4-1.2-0.4c-0.4,0-0.4,0-0.8-0.4c-0.4,0-0.8-0.4-1.2-0.4c-0.4,0-1.2,0-1.6,0h-0.4H73.8C63,0,53.4,4.4,46.2,11.6 C39,18.4,35,28.4,35,38.8v256c0,10.8,4.4,20.4,11.6,27.6c7.2,7.2,16.8,11.6,27.6,11.6h186.4c10.8,0,20.4-4.4,27.6-11.6 c6.8-7.2,10.8-17.2,10.8-27.6V86.4C299,85.6,299,84.8,298.6,84.4z M222.6,34.8L264.2,76h-22.8c-5.2,0-9.6-2-13.2-5.6 c-3.2-3.2-5.6-8-5.6-13.2V34.8z M278.6,294.8c0,5.2-2,9.6-5.6,13.2c-3.2,3.2-8,5.6-13.2,5.6h-186c-5.2,0-9.6-2-13.2-5.6 c-3.2-3.2-5.6-8-5.6-13.2v-256c0-5.2,2-9.6,5.6-13.2c3.2-3.2,8-5.6,13.2-5.6h128.4v37.2c0,10.8,4.4,20.4,11.6,27.6 s16.8,11.6,27.6,11.6h37.2V294.8z"/> </g> </g> <g> <g> <path d="M241,123.6H93c-5.6,0-10.4,4.4-10.4,10.4S87,144.4,93,144.4h148c5.6,0,10.4-4.4,10.4-10.4S247,123.6,241,123.6z"/> </g> </g> <g> <g> <path d="M241,189.2H93c-5.6,0-10.4,4.4-10.4,10.4c0,5.6,4.4,10.4,10.4,10.4h148c5.6,0,10.4-4.4,10.4-10.4 C251,194,246.6,189.2,241,189.2z"/> </g> </g> <g> <g> <path d="M241,254.8H93c-5.6,0-10.4,4.4-10.4,10.4c0,5.6,4.4,10.4,10.4,10.4h148c5.6,0,10.4-4.4,10.4-10.4 C251,259.6,246.6,254.8,241,254.8z"/> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg> ' ,
+	rawsvg2:{img:'<?xml version="1.0" encoding="iso-8859-1"?> <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --> <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 334 334" style="enable-background:new 0 0 334 334;" xml:space="preserve"> <g> <g> <path d="M298.6,84.4c0.4-0.4,0.4-0.4,0-0.8c0-0.4-0.4-0.8-0.4-1.2c0-0.4-0.4-0.4-0.4-0.8c0-0.4-0.4-0.8-0.4-1.2 c0-0.4-0.4-0.4-0.4-0.8c-0.4-0.4-0.4-0.8-0.8-0.8l-76-76c-0.4-0.4-1.2-0.8-1.6-1.2c-0.4,0-0.4-0.4-0.8-0.4 c-0.4-0.4-0.8-0.4-1.2-0.4c-0.4,0-0.4,0-0.8-0.4c-0.4,0-0.8-0.4-1.2-0.4c-0.4,0-1.2,0-1.6,0h-0.4H73.8C63,0,53.4,4.4,46.2,11.6 C39,18.4,35,28.4,35,38.8v256c0,10.8,4.4,20.4,11.6,27.6c7.2,7.2,16.8,11.6,27.6,11.6h186.4c10.8,0,20.4-4.4,27.6-11.6 c6.8-7.2,10.8-17.2,10.8-27.6V86.4C299,85.6,299,84.8,298.6,84.4z M222.6,34.8L264.2,76h-22.8c-5.2,0-9.6-2-13.2-5.6 c-3.2-3.2-5.6-8-5.6-13.2V34.8z M278.6,294.8c0,5.2-2,9.6-5.6,13.2c-3.2,3.2-8,5.6-13.2,5.6h-186c-5.2,0-9.6-2-13.2-5.6 c-3.2-3.2-5.6-8-5.6-13.2v-256c0-5.2,2-9.6,5.6-13.2c3.2-3.2,8-5.6,13.2-5.6h128.4v37.2c0,10.8,4.4,20.4,11.6,27.6 s16.8,11.6,27.6,11.6h37.2V294.8z"/> </g> </g> <g> <g> <path d="M241,123.6H93c-5.6,0-10.4,4.4-10.4,10.4S87,144.4,93,144.4h148c5.6,0,10.4-4.4,10.4-10.4S247,123.6,241,123.6z"/> </g> </g> <g> <g> <path d="M241,189.2H93c-5.6,0-10.4,4.4-10.4,10.4c0,5.6,4.4,10.4,10.4,10.4h148c5.6,0,10.4-4.4,10.4-10.4 C251,194,246.6,189.2,241,189.2z"/> </g> </g> <g> <g> <path d="M241,254.8H93c-5.6,0-10.4,4.4-10.4,10.4c0,5.6,4.4,10.4,10.4,10.4h148c5.6,0,10.4-4.4,10.4-10.4 C251,259.6,246.6,254.8,241,254.8z"/> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg> ' ,
 	color:Sheet.rawsvg3},
 	//rawsvg4:{img:'<svg viewBox="-41 0 511 512" xmlns="http://www.w3.org/2000/svg"><path d="m73.460938 185.210938v72.316406c0 40.027344-14.441407 78.570312-39.789063 108.691406h363.113281c-25.347656-30.121094-39.789062-68.664062-39.789062-108.691406v-72.316406c0-78.171876-63.597656-141.769532-141.765625-141.769532-78.171875 0-141.769531 63.597656-141.769531 141.769532zm0 0"/><path d="m10.886719 445.113281h408.6875v-48.878906h-408.6875zm0 0"/><path d="m215.230469 512c20.476562 0 37.175781-16.476562 37.539062-36.867188h-75.078125c.359375 20.390626 17.0625 36.867188 37.539063 36.867188zm0 0"/><path d="m140.390625 27.4375-12.175781-27.4375c-77.582032 34.429688-127.714844 111.5-127.714844 196.351562h30.015625c0-72.992187 43.128906-139.296874 109.875-168.914062zm0 0"/><path d="m399.941406 196.351562h30.015625c0-84.851562-50.128906-161.921874-127.714843-196.351562l-12.175782 27.4375c66.746094 29.617188 109.875 95.921875 109.875 168.914062zm0 0"/></svg>',
-	rawsvg5:{img:'<?xml version="1.0" encoding="UTF-8"?><svg id="Capa_1" enable-background="new 0 0 511.982 511.982" viewBox="0 0 511.982 511.982" xmlns="http://www.w3.org/2000/svg"><g><path d="m255.991 169.039c-30.327 0-55 24.673-55 55 0 25.127 16.943 46.356 40 52.904v171.096c0 8.284 6.716 15 15 15s15-6.716 15-15v-171.096c23.057-6.547 40-27.777 40-52.904 0-30.327-24.673-55-55-55zm0 80c-13.785 0-25-11.215-25-25s11.215-25 25-25 25 11.215 25 25-11.215 25-25 25z"/><path d="m186.597 143.845c-5.857-5.858-15.354-5.858-21.213 0-46.505 46.503-46.512 121.781 0 168.291 5.859 5.858 15.355 5.858 21.213 0 5.858-5.857 5.858-15.355 0-21.213-34.78-34.779-34.786-91.08 0-125.865 5.858-5.858 5.858-15.356 0-21.213z"/><path d="m346.597 143.845c-5.857-5.857-15.355-5.857-21.213 0s-5.858 15.355 0 21.213c34.701 34.701 34.701 91.164 0 125.865-5.858 5.857-5.858 15.355 0 21.213 5.859 5.858 15.355 5.858 21.213 0 46.399-46.397 46.399-121.894 0-168.291z"/><path d="m141.342 119.803c5.858-5.857 5.858-15.355 0-21.213-5.857-5.857-15.355-5.857-21.213 0-71.352 71.352-71.352 187.449 0 258.801 5.856 5.857 15.354 5.86 21.213 0 5.858-5.857 5.858-15.355 0-21.213-59.654-59.655-59.654-156.72 0-216.375z"/><path d="m391.852 98.59c-5.857-5.857-15.355-5.857-21.213 0s-5.858 15.355 0 21.213c59.654 59.655 59.654 156.72 0 216.375-5.858 5.857-5.858 15.355 0 21.213 5.859 5.858 15.355 5.858 21.213 0 71.352-71.352 71.352-187.449 0-258.801z"/><path d="m96.087 74.548c5.858-5.857 5.858-15.355 0-21.213-5.857-5.857-15.355-5.857-21.213 0-99.941 99.94-99.724 249.587 0 349.311 5.856 5.857 15.354 5.86 21.213 0 5.858-5.857 5.858-15.355 0-21.213-87.475-87.477-87.475-219.408 0-306.885z"/><path d="m437.107 53.335c-5.857-5.857-15.355-5.857-21.213 0s-5.858 15.355 0 21.213c87.477 87.477 87.477 219.408 0 306.885-5.858 5.857-5.858 15.355 0 21.213 5.859 5.858 15.355 5.858 21.213 0 99.94-99.939 99.725-249.587 0-349.311z"/></g></svg>',
+	rawsvg3:{img:'<?xml version="1.0" encoding="UTF-8"?><svg id="Capa_1" enable-background="new 0 0 511.982 511.982" viewBox="0 0 511.982 511.982" xmlns="http://www.w3.org/2000/svg"><g><path d="m255.991 169.039c-30.327 0-55 24.673-55 55 0 25.127 16.943 46.356 40 52.904v171.096c0 8.284 6.716 15 15 15s15-6.716 15-15v-171.096c23.057-6.547 40-27.777 40-52.904 0-30.327-24.673-55-55-55zm0 80c-13.785 0-25-11.215-25-25s11.215-25 25-25 25 11.215 25 25-11.215 25-25 25z"/><path d="m186.597 143.845c-5.857-5.858-15.354-5.858-21.213 0-46.505 46.503-46.512 121.781 0 168.291 5.859 5.858 15.355 5.858 21.213 0 5.858-5.857 5.858-15.355 0-21.213-34.78-34.779-34.786-91.08 0-125.865 5.858-5.858 5.858-15.356 0-21.213z"/><path d="m346.597 143.845c-5.857-5.857-15.355-5.857-21.213 0s-5.858 15.355 0 21.213c34.701 34.701 34.701 91.164 0 125.865-5.858 5.857-5.858 15.355 0 21.213 5.859 5.858 15.355 5.858 21.213 0 46.399-46.397 46.399-121.894 0-168.291z"/><path d="m141.342 119.803c5.858-5.857 5.858-15.355 0-21.213-5.857-5.857-15.355-5.857-21.213 0-71.352 71.352-71.352 187.449 0 258.801 5.856 5.857 15.354 5.86 21.213 0 5.858-5.857 5.858-15.355 0-21.213-59.654-59.655-59.654-156.72 0-216.375z"/><path d="m391.852 98.59c-5.857-5.857-15.355-5.857-21.213 0s-5.858 15.355 0 21.213c59.654 59.655 59.654 156.72 0 216.375-5.858 5.857-5.858 15.355 0 21.213 5.859 5.858 15.355 5.858 21.213 0 71.352-71.352 71.352-187.449 0-258.801z"/><path d="m96.087 74.548c5.858-5.857 5.858-15.355 0-21.213-5.857-5.857-15.355-5.857-21.213 0-99.941 99.94-99.724 249.587 0 349.311 5.856 5.857 15.354 5.86 21.213 0 5.858-5.857 5.858-15.355 0-21.213-87.475-87.477-87.475-219.408 0-306.885z"/><path d="m437.107 53.335c-5.857-5.857-15.355-5.857-21.213 0s-5.858 15.355 0 21.213c87.477 87.477 87.477 219.408 0 306.885-5.858 5.857-5.858 15.355 0 21.213 5.859 5.858 15.355 5.858 21.213 0 99.94-99.939 99.725-249.587 0-349.311z"/></g></svg>',
 	color:'#ff0066'},
 	
 	
@@ -722,6 +723,7 @@ function colPan4 () {
 					value: cams[keey].wellN,
 					text : cams[keey].txt
 					}));
+					console.log(cams[keey]);
 		}
 				//console.log(cams[keey]);
 	
@@ -740,16 +742,23 @@ var jumpjump=0;
 var checkstream = false;
 // var frame;
 
-function colOK4cams (namecams) {
+function colOK4cams (nnamecams) {
 	// $("#myModal3").on("hidden.bs.modal", function () {
 	// 	checkstream = false;
 	// });
 	//Проверка Проверка существующих потоков
 	// namecams=$("#zzm1 option:selected").text() +'_'+$("#zzzooom1 option:selected").text();// +'_'+$("#zzzzooom1 option:selected").text();
-	console.log(namecams);
+	//console.log(nnamecams);
+	//$('#progress'+namecams).prop('width','50%');
+	
 	jumpjump=0;
 	checkstream = true;
-	//getstatcamscams('check',namecams);
+	namecams=nnamecams.slice(3);
+	let pgg = document.querySelector('#progress'+namecams);
+	pgg.setAttribute('aria-valuenow','0');
+	pgg.setAttribute('style','width:'+'0%') 
+	//console.log(namecams);
+	getstatcamscams('check',namecams);
 }
 
 
@@ -1337,7 +1346,10 @@ $(document).ready(function () {
 			//проверка сессий
 			check_session('check','active',_ut);
 			
-			
+			$(window).bind("beforeunload", function() { 
+				//удаление старых потоков
+				deleteoldcams(); 
+			});
 			
 			
 			//ВИДЕО
@@ -1552,14 +1564,116 @@ function resizeiframe(){
         div.style.height = div.contentWindow.document.body.scrollHeight + 'px';
       }
 }
-//Админка
-function adm (){
-	if (onofadm){
-	
+
+// function ()
+//Если с английского на русский, то передаём вторым параметром true.
+transliterate = (
+	function() {
+		var
+			rus = "щ   ш  ч  ц  ю  я  ё  ж  ъ  ы  э  а б в г д е з и й к л м н о п р с т у ф х ь".split(/ +/g),
+			eng = "shh sh ch cz yu ya yo zh eee iii ee a b v g d e z i j k l m n o p r s t u f x ooo".split(/ +/g)
+		;
+		return function(text, engToRus) {
+			var x;
+			for(x = 0; x < rus.length; x++) {
+				text = text.split(engToRus ? eng[x] : rus[x]).join(engToRus ? rus[x] : eng[x]);
+				text = text.split(engToRus ? eng[x].toUpperCase() : rus[x].toUpperCase()).join(engToRus ? rus[x].toUpperCase() : eng[x].toUpperCase());	
+			}
+			return text;
+		}
+	}
+)();
+// var txt = "Съешь ещё этих мягких французских булок, да выпей же чаю!";
+// alert(transliterate(txt));
+// alert(transliterate(transliterate(txt), true));
+
+
+//вкладка камеры
+var camscreate = true;
+function adm (){	
 	online = false;
 	refresh = false;
 	$('#drawing').empty();
 	$('#drawing').hide();
+	//$('#skvnamelab').hide();
+	
+	
+	
+	
+	
+	onofadm = false;
+	
+	getcamswell();
+
+	$('#taabs-2').hide();
+	$('#tabs').show();
+	$('#taabs-1').empty();
+	$('#ul1').hide();
+	$('#taabs-1').show();
+	camscreate=true;
+	workstream={};
+	var bigelem='<div class="container-fluid"><div class=" row text-justify">';
+	for (var keey in camswell) {
+		
+		namecams=camswell[keey].txt+'_'+camswell[keey].name;
+		
+		bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
+		'<p><div class="thumbnail border border-white  text-light  text-center">'+
+		//'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
+		'<div id="iframeembdiv'+camswell[keey].id + '" class="embed-responsive embed-responsive-16by9 border border-white ">'+
+		'<iframe id="iframeemb'+camswell[keey].id + '" class="embed-responsive-item bg-dark" src="css/logo1.jpg" allowfullscreen ></iframe>'+  
+		'</div>'+
+		'<div class="caption text-center   ">'+
+			'<h6 style="font-weight: bold;" >'+camswell[keey].txt+' '+camswell[keey].name+'</h6>'+
+			'<div class="progress m-1" style="height:10px" >'+
+
+    		'<div class="progress-bar  progress-bar-info progress-bar-striped progress-bar-animated bg-success" id="progress'+camswell[keey].id + '" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>'+
+			'<button type="button"  class=" m-1 btn btn-outline-light " id="con'+camswell[keey].id+'" >Подключение</button>'+// <button type="button" disabled class="btn btn-success" id="gogogo'+camswell[keey].id+'">Просмотр</button>'+//<a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
+			'</div>'+
+		'</div>'+
+	'</div>';
+	}
+	bigelem=bigelem+'</div>';
+
+	$('#taabs-1').html(bigelem);
+	//Повесить событие клик на подключение
+	for (var keey in camswell) {
+	$('#con'+camswell[keey].id).click(function() {
+		var idss= $(this).attr('id');
+		
+	if (camscreate){ camscreate=false;
+		colOK4cams(idss);}
+
+	});
+	}
+
+	//Повесить событие клик на воспроизведение
+	for (var keey in camswell) {
+	$('#gogogo'+camswell[keey].id).click(function() {
+		var idss= $(this).attr('id');
+		
+		//console.log( idss);
+		
+		gogocams();
+
+	});
+	}
+
+}
+
+
+
+//вкладка настройки
+function adm2 (){
+	//удаление старых потоков
+	deleteoldcams();
+	// setTimeout(function(){deleteoldcams();}
+	// , 30000);
+	online = false;
+	refresh = false;
+	$('#drawing').empty();
+	$('#drawing').hide();
+	// $('#skvnamelab').hide();
 	
 	
 	$('#dialogvideo').dialog( "close" );// Для скрытия
@@ -1569,384 +1683,70 @@ function adm (){
 	
 	getcamswell();
 
-	$('#tabs').show();
-	$('#taabs-1').empty();
+	
+	$('#taabs-1').hide();
+	$('#taabs-2').empty();
+	$('#taabs-2').show();
 	$('#ul1').hide();
-	//$('#taabs-1').append('<div class="row">');
-	var bigelem='<div class="container"><div class="row text-justify">';
-	for (var keey in camswell) {
-		namecams=camswell[keey].txt+'_'+camswell[keey].name;
-		bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
-		'<div class="thumbnail bg-dark text-light  text-center">'+
-		'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
-		'<div class="caption text-center">'+
-			'<h7>'+namecams+'</h7>'+
-			'<p>Статус:</p>'+
-			'<p><a href="#" class="btn btn-primary" role="button" id="'+namecams+'" >Подключение</a> <a href="#" class="btn btn-default" id="gogogo" role="button" ">Просмотр</a></p>'+
-		'</div>'+
-		'</div>'+
-	'</div>';	
-				// value: cams[keey].wellN,
-				// text : cams[keey].txt
-				//console.log(namecams[keey]);
+	$('#tabs').show();
 
-	}
-	bigelem=bigelem+'</div>';
+	var bigelem2='<div class="container container-fluid h-75 text-center bg-dark"  >';
+		bigelem2=bigelem2+'<br><br><button type="button"  id="datatab"  class="btn btn-outline-light btn-block " style="width: 75%; margin: 5px auto;  font-weight: bold; font-size: 23px;" onClick="adm3();">Данные "По времени"</button>'+
+		'<button type="button"  id="vidotab"  class="btn btn-outline-light btn-block  "  style="width: 75%; margin: 5px auto; font-weight: bold; font-size: 23px;" onClick="adm();">Видеокамеры</button>'+
+		// '<p><div class="thumbnail bg-info text-light  text-center">'+
+		// //'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
+		// '<div id="iframeembdiv'+camswell[keey].id + '" class="embed-responsive embed-responsive-16by9">'+
+		// '<iframe id="iframeemb'+camswell[keey].id + '" class="embed-responsive-item" src="" allowfullscreen ></iframe>'+  
+		// '</div>'+
+		// '<div class="caption text-center">'+
+		// 	'<h6>'+camswell[keey].txt+' '+camswell[keey].name+'</h6>'+
+		// 	'<div class="progress" >'+
 
-	$('#taabs-1').html(bigelem);
-
-	for (var keey in camswell) {
-	namecams='';
-	namecams=camswell[keey].txt+'_'+camswell[keey].name;
-	$('#namecams').on('click', colOK4cams(namecams));
-	//$("#namecams").bind("click", colOK4cams(namecams), false);
-	}
-
-	// $('#taabs-1').html('<div class="container"><div class="row text-justify">'+
-	// '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
-	// 	'<div class="thumbnail bg-dark text-light  text-center">'+
-	// 	'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
-	// 	'<div class="caption text-center">'+
-	// 		'<h5>Камера АГКМ666-1</h5>'+
-	// 		'<p>Статус:</p>'+
-	// 		'<p><a href="#" class="btn btn-primary" role="button">Подключение</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
-	// 	'</div>'+
-	// 	'</div>'+
-	// '</div>'+
-	// '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
-	// 	'<div class="thumbnail">'+
-	// 	'<img src="css/cam.jpg" class="img-fluid" alt="...">'+
-	// 	'<div class="caption">'+
-	// 		'<h3>Камера АГКМ666-1</h3>'+
-	// 		'<p>Статус:</p>'+
-	// 		'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
-	// 	'</div>'+
-	// 	'</div>'+
-	// '</div>'+
-	// '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
-	// 	'<div class="thumbnail">'+
-	// 	'<img src="css/cam.jpg" class="img-fluid" alt="...">'+
-	// 	'<div class="caption">'+
-	// 		'<h3>Камера АГКМ666-1</h3>'+
-	// 		'<p>Статус:</p>'+
-	// 		'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
-	// 	'</div>'+
-	// 	'</div>'+
-	// '</div>'+
-	// '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
-	// 	'<div class="thumbnail">'+
-	// 	'<img src="css/cam.jpg" alt="...">'+
-	// 	'<div class="caption">'+
-	// 		'<h3>Камера АГКМ666-1</h3>'+
-	// 		'<p>Статус:</p>'+
-	// 		'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
-	// 	'</div>'+
-	// 	'</div>'+
-	// '</div>'+
-	// '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">'+
-	// 	'<div class="thumbnail">'+
-	// 	'<img src="css/cam.jpg" alt="...">'+
-	// 	'<div class="caption">'+
-	// 		'<h3>Камера АГКМ666-1</h3>'+
-	// 		'<p>Статус:</p>'+
-	// 		'<p><a href="#" class="btn btn-primary" role="button">Проверка</a> <a href="#" class="btn btn-default" role="button">Просмотр</a></p>'+
-	// 	'</div>'+
-	// 	'</div>'+
-	// '</div>'+
-	// '</div</div>');
-	
-	
-// 	//$('#tabs').empty();
-// 	// $('#tabvideo').show();
-// 	// $('#tabvideo').html(
-// 	// 	+'<div id="tabs">'
-// 	// 	+'<ul><li><a href="#tabs-1">Роторный стол</a></li><li><a href="#tabs-2">Приемный мост</a></li><li><a href="#tabs-3">ПВО</a></li></ul>'
-// 	// 	+'<div id="tabs-1"></div><div id="tabs-2"></div><div id="tabs-3"></div></div>'
-// 	// );
-// 	// $('#tabvideo').append('edrrr');
-// 	// <span id="tabsn-1" ></span>
-// 	document.getElementById("tabsn-1").innerHTML="Роторный стол";
-// 	// document.getElementById("tabsn-2").innerHTML="Приемный мост";
-// 	// document.getElementById("tabsn-3").innerHTML="ПВО";
-// 	// var div1 = document.createElement("div");
-// 	// //div1.innerHTML = "<h1>Привет!</h1>";
-// 	// div1.setAttribute("id", "divcams");
-// 	// div1.style.position = 'relative';
-// 	// //div1.style.backgroundColor = 'green';
-// 	// div1.style.width = '100%';
-// 	// // div1.style.margin-left = 'auto';
-// 	// // div1.style.margin-right = 'auto';
-// 	// div1.style.margin =" 0 auto";
-// 	// // text-align: center; 
-// 	// div1.setAttribute("text-align", "center");
-
-// 	// //style="margin-left:auto; margin-right:auto;"
-// 	// div1.setAttribute("class", "container");//class="container"
-// 	// //class="mh-100"
-// 	// div1.style.height =($(window).height()-2.9*($('#bigpan').height()));
-// 	// div1.setAttribute("data-ratio", "0.5625"); //data-ratio="0.5625"
-// 	// // div1.style.data-ratio ="0.417";
-// 	// //console.log(div1.style.width,' b  ',div1.style.height, $('#div1').height());
-	
-// 	// //div1.setAttribute("height", "200");
-
-// 	// $('#tabs-1').append(div1);
-// 	// console.log(div1.style.width,' b  ',div1.style.height, $('#div1').height());
-
-// 	var frame = document.createElement("iframe");
-// 	frame.setAttribute("id", "camsf2");
-// 	// frame.setAttribute("width", "704");
-// 	// frame.setAttribute("height", "576");
-// 	// var dh=document.getElementById('divcams').offsetHeight;
-// 	// var dw=document.getElementById('divcams').offsetWidth;
-// 	// if (dh<dw){
-// 	// 	frame.setAttribute("width",  String(Number((div1.style.height).slice(0, (div1.style.height).length-2))*1.555)+'px');
-// 	// 	frame.setAttribute("height", '100%');} else {
-// 	// 	frame.setAttribute("width", '100%');
-// 	// 	frame.setAttribute("height", div1.style.height);	
-// 	// 	}
-// 	frame.setAttribute("width", '100%');
-// 	//frame.setAttribute("margin-left", "auto");
-// 	frame.setAttribute("scrolling", "yes");
-// 	frame.setAttribute("frameborder", "0");
-// 	frame.setAttribute("allowfullscreen", "true");
-// 	frame.setAttribute("webkitAllowFullScreen", "true");
-// 	frame.setAttribute("mozallowfullscreen", "true");
-// 	frame.style.position = 'relative';
-// 	frame.style.width = '0%';
-// 	frame.style.height = '0%';
-// 	frame.style.align = 'center';
-// 	//frame.setAttribute("align", "middle");
-// 	//frame.setAttribute("text-align", "center");
-// 	// frame.setAttribute("top", "0");
-// 	// frame.setAttribute("left", "0");
-// 	frame.setAttribute("auto_orient", "true");
-// 	frame.setAttribute("scaling", "fit");
-// 	frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=989288934770850773631823");
-// 	// var tabb = document.getElementById("tabs-1")
-// 	// tabb.insertAdjacentHTML()
+    	// 	'<div class="progress-bar progress-bar progress-bar-striped progress-bar-animated bg-success" id="progress'+camswell[keey].id + '" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>'+
+		// 	'<p><button type="button"  class="btn btn-success" id="con'+camswell[keey].id+'" >Подключение</button>'+// <button type="button" disabled class="btn btn-success" id="gogogo'+camswell[keey].id+'">Просмотр</button>'+//<a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
+			// '</div>'+
+			// '</div>'+
+		// '</div>'+
+	'</div>';
 	
 
-// 	$('#tabs-1').append(frame);
-// 	//document.getElementById("camsf2").requestFullScreen();
-// 	let elem = document.querySelector("#camsf2");
-
-// 	if (!document.fullscreenElement) {
-// 	elem.requestFullscreen().catch(function() {
-// 		alert('Error attempting to enable full-screen mode: ${err.message} (${err.name})');
-// 	});
-// 	} else {
-// 	document.exitFullscreen();
-// 	}
-// 	//$('#camsf2').fullScreen();
+	$('#taabs-2').html(bigelem2);
+	//Повесить событие клик на подключение
 	
-// 	//resizeiframe();
-
-// 	// var frame = document.createElement("iframe");
-// 	// frame.setAttribute("id", "camsf2");
-// 	// // frame.setAttribute("width", "704");
-// 	// // frame.setAttribute("height", "576");
-// 	// frame.setAttribute("width", "100%");
-// 	// frame.setAttribute("height", "576");
-// 	// frame.setAttribute("allowfullscreen", "true");
-// 	// frame.setAttribute("webkitAllowFullScreen", "true");
-// 	// frame.setAttribute("mozallowfullscreen", "true");
-// 	// frame.setAttribute("position", "absolute");
-// 	// frame.setAttribute("align", "middle");
-// 	// // frame.setAttribute("top", "0");
-// 	// // frame.setAttribute("left", "0");
-// 	// frame.setAttribute("auto_orient", "true");
-// 	// // frame.setAttribute("ratio", "16:10");
-// 	// frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=402550425406257962757843");
-// 	// // var tabb = document.getElementById("tabs-1")
-// 	// // tabb.insertAdjacentHTML()
-// 	// $('#tabs-1').append(frame);
-
-// 	// var frame = document.createElement("iframe");
-// 	// frame.setAttribute("id", "camsf2");
-// 	// // frame.setAttribute("width", "704");
-// 	// // frame.setAttribute("height", "576");
-// 	// frame.setAttribute("width", "100%");
-// 	// frame.setAttribute("height", "576");
-// 	// frame.setAttribute("allowfullscreen", "true");
-// 	// frame.setAttribute("webkitAllowFullScreen", "true");
-// 	// frame.setAttribute("mozallowfullscreen", "true");
-// 	// frame.setAttribute("position", "absolute");
-// 	// frame.setAttribute("align", "middle");
-// 	// // frame.setAttribute("top", "0");
-// 	// // frame.setAttribute("left", "0");
-// 	// frame.setAttribute("auto_orient", "true");
-// 	// // frame.setAttribute("ratio", "16:10");
-// 	// frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=973843807862020830541916");
-// 	// // var tabb = document.getElementById("tabs-1")
-// 	// // tabb.insertAdjacentHTML()
-// 	// $('#tabs-1').append(frame);
-
-// 	// var frame = document.createElement("iframe");
-// 	// frame.setAttribute("id", "camsf2");
-// 	// // frame.setAttribute("width", "704");
-// 	// // frame.setAttribute("height", "576");
-// 	// frame.setAttribute("width", "100%");
-// 	// frame.setAttribute("height", "576");
-// 	// frame.setAttribute("allowfullscreen", "true");
-// 	// frame.setAttribute("webkitAllowFullScreen", "true");
-// 	// frame.setAttribute("mozallowfullscreen", "true");
-// 	// frame.setAttribute("position", "absolute");
-// 	// frame.setAttribute("align", "middle");
-// 	// // frame.setAttribute("top", "0");
-// 	// // frame.setAttribute("left", "0");
-// 	// frame.setAttribute("auto_orient", "true");
-// 	// // frame.setAttribute("ratio", "16:10");
-// 	// frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=739604144503658806859147");
-// 	// // var tabb = document.getElementById("tabs-1")
-// 	// // tabb.insertAdjacentHTML()
-// 	// $('#tabs-1').append(frame);
-// 	// //frame.setAttribute("webkitAllowFullScreen mozallowfullscreen allowfullscreen");
-// 	// //document.body.appendChild(frame);
-// 	// //Zem2Pyf4Buk5
+	// $('#con'+camswell[keey].id).click(function() {
+	// 	var idss= $(this).attr('id');
 	
-// 	// $('#tabs-1').html(
-// 	// +'<iframe width="100%" height="100%"'
-//     // +'style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"'
-//     // +'webkitAllowFullScreen mozallowfullscreen allowfullscreen allow="autoplay"'
-//     // +'title="0" byline="0" portrait="0"'
-//     // +'width="280" height="157"'
-//     // +'frameborder="0"'
-//     // +' allow="autoplay"'
-//     // +'src="//hydrofalll.ddns.net:5443/LiveApp/play.html?name=259399779848013677881662"> </iframe>'
-    
-// 	// );
-
-// // 	<!-- <div id="tabs">
-// //   <ul>
-// //     <li><a href="#tabs-1">Пользователи</a></li>
-// //     <li><a href="#tabs-2">Скважины</a></li>
-// //     <li><a href="#tabs-3">Камеры</a></li>
-// //   </ul>
-// //   <div id="tabs-1">
-// //   </div>
-// //   <div id="tabs-2">
-// //   </div>
-// //   <div id="tabs-3">
-// //   </div>
-// // </div> -->
-
-// 	// $('#tabs-1').empty();
-// 	// //e.preventDefault();
-// 	// $('#tabs-1').html(' <p>'+row_str+'</p>');
-// 	// $('#tabs-1').append(' <p>'+row_str+'</p>');
 	
-// 	// //Скважины
-// 	// $('#tabs-2').empty();
-// 	// $('#tabs-2').append('<button type="button" name="addskv" id="addskv" class="btn btn-success mb-1" data-dismiss="modal" >+</button>');
-// 	// $('#tabs-2').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="skvs" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Тип работ</th><th>Тип станции</th><th>Фамилия начальника</th><th>Телефон</th><th>Эл.почта</th></tr></thead><tbody></tbody></table></div>');
-// 	// //Камеры
-// 	// $('#tabs-3').empty();
-// 	// $('#tabs-3').append('<button type="button" class="btn btn-success mb-1" data-dismiss="modal">+</button>');
-// 	// $('#tabs-3').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="cams" class="table table-bordered table-striped "><thead><tr><th>Скважина</th><th>База</th><th>Камера1-станция</th><th>Камера1-стрим'+
-// 	// '</th><th>Камера2-станция</th><th>Камера2-стрим</th><th>Камера3-станция</th><th>Камера3-стрим'+
-// 	// '</th><th>Камера4-станция</th><th>Камера4-стрим'+
-// 	// '</th></tr></thead><tbody></tbody></table></div>');
+	// })
+
+}
+
+//вкладка По времени
+function adm3 (){
 	
-// 	// for (var keey in wells) {
-// 	// 	$('#skvs tbody').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
-// 	// 	//$('#tabs-2').append('</div>');	
-// 	// }
+	//удаление старых потоков
+	deleteoldcams();
+	// setTimeout(function(){deleteoldcams();}
+	// , 30000);
 	
-
-// 	// for (var keey in cams) {
-// 	// 	$('#cams tbody').append('<tr><td>'+cams[keey].txt+'</td><td>'+cams[keey].wellN+
-// 	// 	'</td><td>'+cams[keey].rtsp1+'</td><td>'+cams[keey].liveapp1+'</td><td>'+cams[keey].rtsp2+'</td><td>'+cams[keey].liveapp2+
-// 	// 	'</td><td>'+cams[keey].rtsp3+'</td><td>'+cams[keey].liveapp3+'</td><td>'+cams[keey].rtsp4+'</td><td>'+cams[keey].liveapp4+
-// 	// 	 '</td></tr>');
-// 	// 	//$('#tabs-2').append('</div>');	
-// 	// }
+	//$('#dialogvideo').dialog( "open" );// Для скрытия
+	$('#tabs').hide();
+	$('#camsf2').remove();
+	$('#taabs-1').empty();
+	$('#taabs-2').empty();
+	//document.getElementById("camsf2").innerHTML="Роторный стол";
+	// $('#tabs').empty();
+	// $('#tabs').hide();
 	
-// 	// //Динамически добавить скрипт
-// 	// // var newScript = document.createElement("script");
-// 	// // var inlineScript = document.createTextNode("alert('Hello World!');");
-// 	// // newScript.appendChild(inlineScript); 
-// 	// // target.appendChild(newScript);
-	
-
-// 	// //Добавить скважину
-// 	// $('#addskv').click(function() {
-// 	// 	colPan12 ();		
-// 	// });
-
-// 	// //Клик скважины
-// 	// $("#skvs tbody").on("click", "tr", function(event){
-// 	// 	var tableData = $(this).children("td").map(function() {
-// 	// 		return $(this).text();
-// 	// 	}).get();
-// 	// 	$("#colitems131").val($.trim(tableData[0]));
-// 	// 	$("#colitems132").val($.trim(tableData[1]));
-// 	// 	$("#colitems133").val($.trim(tableData[2]));
-// 	// 	$("#colitems134").val($.trim(tableData[3]));
-// 	// 	$("#colitems135").val($.trim(tableData[4]));
-// 	// 	$("#colitems136").val($.trim(tableData[5]));
-// 	// 	$("#colitems137").val($.trim(tableData[6]));
-// 	// 	colPan13();
-		
-// 		//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
-// 	// });
-
-
-// 	// //Клик Камеры
-// 	// $("#cams tbody").on("click", "tr", function(event){
-// 	// 	var tableData = $(this).children("td").map(function() {
-// 	// 		return $(this).text();
-// 	// 	}).get();
-	
-// 	// 	alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
-// 	// });
-
-	
-// 	// // $("#myButton").on('click',function(){
- 
-// 	// // 	var arrData=[];
-// 	// // 	// loop over each table row (tr)
-// 	// // 	$("#myTable tr").each(function(){
-// 	// // 		 var currentRow=$(this);
-		 
-// 	// // 		 var col1_value=currentRow.find("td:eq(0)").text();
-// 	// // 		 var col2_value=currentRow.find("td:eq(1)").text();
-// 	// // 		 var col3_value=currentRow.find("td:eq(2)").text();
-	 
-// 	// // 		  var obj={};
-// 	// // 		 obj.col1=col1_value;
-// 	// // 		 obj.col2=col2_value;
-// 	// // 		 obj.col3=col3_value;
-	 
-// 	// // 		 arrData.push(obj);
-// 	// // 	});
-// 	// // 	 alert(arrData);
-// 	// // 	 console.log(arrData);
-	 
-// 	// //  });
-
-	} else {
-		
-		
-		
-		$('#dialogvideo').dialog( "open" );// Для скрытия
-		$('#tabs').hide();
-		$('#camsf2').remove();
-		$('#tabs-1').empty();
-		//document.getElementById("camsf2").innerHTML="Роторный стол";
-		// $('#tabs').empty();
-		// $('#tabs').hide();
-		
-		$('#drawing').empty();
-		$('#drawing').show();
-		online = true;
-		refresh = true;
-		onofadm = true;
-		init();
-		colOK11();
-		read_now();
-
-	}
+	$('#drawing').empty();
+	$('#drawing').show();
+	$('#skvnamelab').show();
+	online = true;
+	refresh = true;
+	onofadm = true;
+	init();
+	// colOK11();
+	read_now();
 
 }
 

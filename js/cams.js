@@ -9,7 +9,8 @@ function getstatcamscams(whatdo, namecams){
     // online = false;
     //$('#form7').empty();
     // let moto =setTimeout(function tiktak () {
-   
+//    namecams=namecams.slice(3);
+//    console.log(namecams);
        
     let fundstream = false;
     
@@ -36,11 +37,14 @@ function getstatcamscams(whatdo, namecams){
                     //Текущий key
                     curkey=keey;
                     //$('#form7').append('Найден');
+                    let pgg = document.querySelector('#progress'+namecams);
+                    pgg.setAttribute('aria-valuenow','50');
+                    pgg.setAttribute('style','width:'+'50%') 
                     //$('#form7').append('\nПроверка потока...OK');
                     //if (livestatcams[keey].status=='broadcasting' ){
                         //$('#form7').append('\Готов');
-                    $('#gogogo').prop('disabled', false);
-                    
+                    $('#gogogo'+namecams).prop('disabled', false);
+                    gogocams();
                     return 0;
 
                 }}
@@ -59,6 +63,9 @@ function getstatcamscams(whatdo, namecams){
             //$('#form7').append('Не найден');
             //создаем поток
             //$('#form7').append("\nСоздаем поток "+namecams+"...");
+            let pgg = document.querySelector('#progress'+namecams);
+        	pgg.setAttribute('aria-valuenow','25');
+        	pgg.setAttribute('style','width:'+'25%') 
             $.ajax({
                 type: "POST",
                 url: 'js/cams.php',
@@ -67,14 +74,15 @@ function getstatcamscams(whatdo, namecams){
                 async: false,
                 success: function(response){
                     let s =JSON.parse(response);
-                    //alert(s[0]['skvjson']);
+                    //console.log(s);
                     var len = s.length;
                     for(var i=0; i<len; i++){
                         
                         //skvjson = JSON.parse(skvjson);
-                        let n = JSON.parse(s[i]['skvjson']);   
-                        //console.log(n['txt']+'_'+n['name']);
-                        if (namecams==(n['txt']+'_'+n['name'])){
+                        let n = JSON.parse(s[i]['skvjson']);
+                        n['id']=s[i]['id'];   
+                        //console.log(n,n['id']);
+                        if (namecams==(s[i]['id'])){
                             
                             let rtsp= n['rtsp'];
                             $.ajax({
@@ -86,15 +94,19 @@ function getstatcamscams(whatdo, namecams){
                                 success: function(response){
                                     $('#form7').append("ОК");
                                     let s =JSON.parse(response);
-                                    //console.log(s['message']);
+                                    //console.log(s);
                                     streamId=s['message'];
                                     //$('#form7').append('\nСоздание iframe...');
                                     //for(var j=0; j<10; j++){
                                    // $('#form7').append('\nПроверка потока...');
+                                   let pgg = document.querySelector('#progress'+namecams);
+                                   pgg.setAttribute('aria-valuenow','50');
+                                   pgg.setAttribute('style','width:'+'50%') 
                                     let moto =setTimeout(function tiktak () {
                                         if (jumpjump==10 || fundstream == true){
                                             //$('#form7').append('BAD');
                                             clearTimeout(moto);
+                                            gogocams();
                                             return 0;
                                         } else{
                                             $.ajax({
@@ -117,19 +129,23 @@ function getstatcamscams(whatdo, namecams){
                                                             curstramID=livestatcams[keey].streamId;
                                                             //Текущий key
                                                             curkey=keey;
+                                                            let pgg = document.querySelector('#progress'+namecams);
+                                                            pgg.setAttribute('aria-valuenow','75');
+                                                            pgg.setAttribute('style','width:'+'75%')
                                                             //$('#form7').append('Найден');
                                                            
                                                             //$('#form7').append('ОК');
                                                             //if (livestatcams[keey].status=='broadcasting' ){
                                                                 //$('#form7').append('\Готов');
-                                                            $('#gogogo').prop('disabled', false);
-                                                            
+                                                            $('#gogogo'+namecams).prop('disabled', false);
+                                                            $('#iframeemb'+namecams).prop('scr', curstramID);
+                                                            gogocams();
                                                             return 0;
                                     
                                                         }}}})
                                         jumpjump=jumpjump+1;
                                         //getstatcams('check',namecams);
-                                        setTimeout(tiktak, 3000);
+                                        setTimeout(tiktak, 4000);
                                     
                                     
                                     
@@ -330,113 +346,158 @@ function getstatcams(whatdo, namecams){
  
 
 //старт отображения камеры
-function gogocams(path){
-    $('#gogogo').prop('disabled', true);
-                        var frame = document.createElement("iframe");
-                        frame.setAttribute("id", "camsf2");
-                        frame.setAttribute("width", '100%');
+function gogocams(){
+    $('#gogogo'+namecams).prop('disabled', true);
+                    //var frame = document.createElement("iframe");
+                    var frame = document.querySelector('#iframeemb'+namecams);
+                    // document.getElementById("iframeemb"+namecams);
+                    //frame.setAttribute("id", "camsf2"+namecams);
+                
+                    frame.setAttribute("scrolling", "yes");
+                    frame.setAttribute("frameborder", "0");
+                    frame.setAttribute("allowfullscreen", "true");
+                    frame.setAttribute("webkitAllowFullScreen", "true");
+                    frame.setAttribute("mozallowfullscreen", "true");
+ 
+                    frame.style.width = '100%';
+                    frame.style.height = '100%';
+
+                
+
+                    frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name="+livestatcams[curkey].streamId);
                     
-                        frame.setAttribute("scrolling", "yes");
-                        frame.setAttribute("frameborder", "0");
-                        frame.setAttribute("allowfullscreen", "true");
-                        frame.setAttribute("webkitAllowFullScreen", "true");
-                        frame.setAttribute("mozallowfullscreen", "true");
-                        frame.style.position = 'relative';
-                        frame.style.width = '0%';
-                        frame.style.height = '0%';
-                        frame.style.margin = '0 0 0 0';
-                        frame.style.top = '50%';
-                        frame.style.height = '0%';
-                        frame.style.align = 'middle';
+                    var newDiv =  document.createElement("div");
+                    newDiv.innerHTML = "<h1>Привет!</h1>";
+                    let pgg = document.querySelector('#progress'+namecams);
+                    pgg.setAttribute('aria-valuenow','100');
+                    pgg.setAttribute('style','width:'+'100%')
+                    workstream['p'+String(Object.keys(workstream).length)]=livestatcams[curkey].streamId;
+                    camscreate=true;
+                    // for(okeey in workstream){
+                    //     console.log(workstream[okeey]);
+
+                    // }
+                    // let element = document.querySelector('#iframeemb'+namecams);
+                    // element.appendChild(frame);
                     
-                        frame.setAttribute("auto_orient", "true");
-                        frame.setAttribute("scaling", "fit");
-                        frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name="+livestatcams[curkey].streamId);
-                       
-                    
-                        $('#tabvideo').append(frame);
+                    //$('#iframeemb'+namecams).append(frame);
+}
                     
                         //exit fullmode
-                        document.addEventListener('fullscreenchange', exitHandler);
-                        document.addEventListener('webkitfullscreenchange', exitHandler);
-                        document.addEventListener('mozfullscreenchange', exitHandler);
-                        document.addEventListener('MSFullscreenChange', exitHandler);
+                        // document.addEventListener('fullscreenchange', exitHandler);
+                        // document.addEventListener('webkitfullscreenchange', exitHandler);
+                        // document.addEventListener('mozfullscreenchange', exitHandler);
+                        // document.addEventListener('MSFullscreenChange', exitHandler);
                     
-                        function exitHandler() {
-                            if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
-                                $.ajax({
-                                    type: "POST",
-                                    url: 'js/cams.php',
-                                    data: {whatdo:'check', namecams: namecams},
-                                    cache: false,
-                                    async: false,
-                                    success: function(data){
-                                        livestatcams =null;
-                                        //console.log(data);
-                                        livestatcams = JSON.parse(data);
-                                        //удаление старых потоков
-                                        for (var keey in livestatcams) {
-                                        if ((Number(livestatcams[keey].hlsViewerCount)==0 )|| (Number(livestatcams[keey].hlsViewerCount)<=1 && livestatcams[keey].streamId==curstramID)){
-                                        $.ajax({
-                                            type: "POST",
-                                            url: 'js/cams.php',
-                                            data: {whatdo:'delete', namecams: livestatcams[keey].streamId},
-                                            cache: false,
-                                            async: false,
-                                            success: function(data){
+                        // function exitHandler() {
+                        //     if (!document.fullscreenElement && !document.webkitIsFullScreen && !document.mozFullScreen && !document.msFullscreenElement) {
+                        //         $.ajax({
+                        //             type: "POST",
+                        //             url: 'js/cams.php',
+                        //             data: {whatdo:'check', namecams: namecams},
+                        //             cache: false,
+                        //             async: false,
+                        //             success: function(data){
+                        //                 livestatcams =null;
+                        //                 //console.log(data);
+                        //                 livestatcams = JSON.parse(data);
+                        //                 //удаление старых потоков
+                        //                 for (var keey in livestatcams) {
+                        //                 if ((Number(livestatcams[keey].hlsViewerCount)==0 )|| (Number(livestatcams[keey].hlsViewerCount)<=1 && livestatcams[keey].streamId==curstramID)){
+                        //                 $.ajax({
+                        //                     type: "POST",
+                        //                     url: 'js/cams.php',
+                        //                     data: {whatdo:'delete', namecams: livestatcams[keey].streamId},
+                        //                     cache: false,
+                        //                     async: false,
+                        //                     success: function(data){
 
-                                                // for (var keex in livestatcams) {
-                                                // console.log(curstramID, livestatcams[keex].hlsViewerCount);
-                                                // if (){
-                                                //     console.log(curstramID, livestatcams[keex].hlsViewerCount);
-                                                //     $.ajax({
-                                                //         type: "POST",
-                                                //         url: 'js/cams.php',
-                                                //         data: {whatdo:'delete', namecams: curstramID },
-                                                //         cache: false,
-                                                //         async: false,
-                                                //         success: function(data){
-                                                //             //console.log(curkey, livestatcams[curkey].hlsViewerCount);
-                                                //             $('#form7').append("\nУдален поток..."+livestatcams[keex].name);
-                                                //         }
-                                                //     });
-                                                //     } 
-                                                // }
-                                                $('#form7').append("\nУдален поток..."+livestatcams[keey].name);
+                        //                         // for (var keex in livestatcams) {
+                        //                         // console.log(curstramID, livestatcams[keex].hlsViewerCount);
+                        //                         // if (){
+                        //                         //     console.log(curstramID, livestatcams[keex].hlsViewerCount);
+                        //                         //     $.ajax({
+                        //                         //         type: "POST",
+                        //                         //         url: 'js/cams.php',
+                        //                         //         data: {whatdo:'delete', namecams: curstramID },
+                        //                         //         cache: false,
+                        //                         //         async: false,
+                        //                         //         success: function(data){
+                        //                         //             //console.log(curkey, livestatcams[curkey].hlsViewerCount);
+                        //                         //             $('#form7').append("\nУдален поток..."+livestatcams[keex].name);
+                        //                         //         }
+                        //                         //     });
+                        //                         //     } 
+                        //                         // }
+                        //                         $('#form7').append("\nУдален поток..."+livestatcams[keey].name);
                                             
                                                
                                             
                                             
-                                            }})}}}})
+                        //                     }})}}}})
                                 
-                                $('#camsf2').remove();
-                                // console.log('dsds');
-                            }
-                        }
+                        //         $('#camsf2').remove();
+                        //         // console.log('dsds');
+                        //     }
+                        // }
                           
-                        //go fullmode
-                        let elem = document.querySelector("#camsf2");
+                        // //go fullmode
+                        // let elem = document.querySelector("#camsf2");
                     
-                        if (!document.fullscreenElement) {
-                            if (elem.requestFullscreen) {
-                                elem.requestFullscreen();
-                              }
-                              else if (elem.msRequestFullscreen) {
-                                elem.msRequestFullscreen();
-                              }
-                              else if (elem.mozRequestFullScreen) {
-                                elem.mozRequestFullScreen();
-                              }
-                              else if (elem.webkitRequestFullscreen) {
-                                elem.webkitRequestFullscreen();
-                              } else {
-                                console.log("Fullscreen API is not supported");
-                              } 
-                        } else {
-                          if (document.exitFullscreen) {
-                            document.exitFullscreen(); 
-                          }}
-                        }
+                        // if (!document.fullscreenElement) {
+                        //     if (elem.requestFullscreen) {
+                        //         elem.requestFullscreen();
+                        //       }
+                        //       else if (elem.msRequestFullscreen) {
+                        //         elem.msRequestFullscreen();
+                        //       }
+                        //       else if (elem.mozRequestFullScreen) {
+                        //         elem.mozRequestFullScreen();
+                        //       }
+                        //       else if (elem.webkitRequestFullscreen) {
+                        //         elem.webkitRequestFullscreen();
+                        //       } else {
+                        //         console.log("Fullscreen API is not supported");
+                        //       } 
+                        // } else {
+                        //   if (document.exitFullscreen) {
+                        //     document.exitFullscreen(); 
+                        //   }}
+                        // }
+
+//удаление старых потоков
+function deleteoldcams(){
+
+    $.ajax({
+        type: "POST",
+        url: 'js/cams.php',
+        data: {whatdo:'check', namecams: namecams},
+        cache: false,
+        async: false,
+        success: function(data){
+            livestatcams =null;
+            //console.log(data);
+            livestatcams = JSON.parse(data);
+            //удаление старых потоков
+            for (var keey in livestatcams) {
+                for (var okeey in workstream){
+                    // console.log(livestatcams[keey].streamId,workstream[okeey]);
+                if ((Number(livestatcams[keey].hlsViewerCount)==0 )|| (Number(livestatcams[keey].hlsViewerCount)<=1 && livestatcams[keey].streamId==workstream[okeey])){
+                $.ajax({
+                    type: "POST",
+                    url: 'js/cams.php',
+                    data: {whatdo:'delete', namecams: livestatcams[keey].streamId},
+                    cache: false,
+                    async: false,
+                    success: function(data){
+
+                    
+                
+                
+                }})}}}}})
+                          
+            
+}
 
 //старт отображения камеры
 function gocams(){
@@ -573,70 +634,34 @@ function getcamswell(){
 $.ajax({
     type: "POST",
     url: 'js/cams.php',
-    data: {whatdo:'create', namecams: skv},
+    data: {whatdo:'createforcamsdb', namecams: skv},
     cache: false,
     async: false,
     success: function(response){
         camswell =[];
-        let s =JSON.parse(response);
-        //alert(s[0]['skvjson']);
-        cams = {};
-        var len = s.length;
+        var s ={};
+        s=JSON.parse(response);
+
         var okok1=decodeURIComponent(escape(window.atob(_uz[6])));
-        okok1 = okok1.split(',');
-        //console.log(okok1);
-        for (var j=0; j<okok1.length; j++){
-            okok1[j]=okok1[j].trim();
-        for(var i=0; i<len; i++){
-            
-            //skvjson = JSON.parse(skvjson);
-            var n = JSON.parse(s[i]['skvjson']); 
-            //camswell =n;  
-            if ((okok1[j]==n['txt']) ){
-                camswell.push(n);}
-            
-            // var okok=decodeURIComponent(escape(window.atob(_uz[6])));
-            //if (skv==(n['txt']) && okok=='ALL'){
-               // camswell.push(n);
-            if ((okok1=='ALL') || (okok1[j]==n['txt']) ){
-                camswell.push(n);
-                //console.log(cams);
-
-            }
-        
+        var okok11 =okok1.split(',');
+        // for (var j=0; j<okok11.length; j++){
+        // //console.log(okok11[j].trim());}
+        for (var j=0; j<okok11.length; j++){
+            //  console.log(okok11[j].trim());
+                for(var i=0; i<s.length; i++){
+                    var n = JSON.parse(s[i]['skvjson']);
+                    n['id']=s[i]['id'];
+                    //var n = JSON.parse(s[i]);
+                    // console.log(n['txt']);
+                   
+                        if ((okok11[j].trim()==n['txt']) || (okok11[j].trim()=='ALL') ){
+                            camswell.push(n);
+                                                   }
+                
+                }
         }
-    }
-
-}
-
-            //cams = {};
-           
-                // console.log(okok1[j], skv, n['txt']);
-                // if (okok1[j]==n['txt']){
-                //     camswell.push(n);}
-                //     //console.log(okok1[j], skv, n['txt']);
-
-                //     // if (skv==(n['txt']) && okok1[j]==(n['txt'])){
-                //     //     camswell.push(n);
-                //     //     //console.log(cams);
-        
-                //     // }
-    
-                // // }
-                
-        
-            //console.log(camswell);
-            // for (keeys in camswell){
-                
+            // for (keeys in camswell){   
             //     console.log(camswell[keeys]);
             // }
-            // for (keeys in cams){
-            
-            //     console.log(cams[keeys]);
-            // }
-        
-        
-     
-        });
-
-    }
+        }
+        });}

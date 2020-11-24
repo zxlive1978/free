@@ -2112,20 +2112,20 @@ function init(){
 			group1.attr('fill', Sheet['rawsvg'+String(kn)]);
 			//Если колокольчик то случ. цвет
 			var randcol=getRandomColor();
-			if (kn==5){group1.attr('fill', randcol)}
+			if (kn==3){group1.attr('fill', randcol)}
 			//Прозрачный квадрат для катания по кнопке
 			var rec1 = group1.rect(curicosize,curicosize);
 			rec1.attr('opacity','0.0');
 			//rec1.attr('x',String(x2));
 			group1.mouseover(function() {
-			if (kn!=5){
+			if (kn!=3){
 			this.attr('fill', getRandomColor() );}
 			})
 			group1.mouseout(function() {
-			if (kn!=5){
+			if (kn!=3){
 			this.attr('fill',Sheet['rawsvg'+String(this.attr('id'))])}});
 			//Если нажата тарелка
-			if (kn==5){
+			if (kn==3){
 				group1.click(function() {
 					//this.attr('fill','#000');
 					colok14();
@@ -2143,15 +2143,15 @@ function init(){
 				})
 			}
 			
-			//Если нажата камера	
-			if (kn==3){
-				group1.click(function() {
-					colPan4();
-				})
+			// //Если нажата камера	
+			// if (kn==3){
+			// 	group1.click(function() {
+			// 		colPan4();
+			// 	})
 				
-			}
+			// }
 			//Если нажата календарь
-			if (kn==2){
+			if (kn==1){
 				group1.click(function() {
 					
 					colPan3();
@@ -2159,16 +2159,16 @@ function init(){
 			}
 			
 			//Если нажата скважина
-			if (kn==1){
-				group1.click(function() {
-					colPan10();
+			// if (kn==1){
+			// 	group1.click(function() {
+			// 		colPan10();
 					
-				})
+			// 	})
 				
-			}
+			// }
 			
 				//Если нажата открыть сохранить
-			if (kn==4){
+			if (kn==2){
 				group1.click(function() {
 					colPan9();
 					

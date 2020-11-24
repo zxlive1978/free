@@ -82,7 +82,7 @@ if (!$_SESSION['auth']) {
 
 
 </head>
-<body>
+<body  class=" bg-dark">
 
 <!-- Brand -->
 <!-- 	<a class="navbar-brand align-middle" href="#">
@@ -101,24 +101,25 @@ if (!$_SESSION['auth']) {
 </nav> -->
 
 <nav class="navbar navbar-primary bg-dark py-0 navbar-fixed-top" id="bigpan">
-<a class='btn btn-outline-light'  onClick="adm ();"><img src='css/menu.png'  width="20" height="20"></a>
-<button type="button" class="btn btn-sm text-light "  >
-  <span id="skvnamelab" style="font-weight: bold; font-size: 22px;"></span>
-</button>
-<button type="button" class="btn btn-outline-light" onClick="exit('exit','exit','exit');">Выход</button>
+<a class='btn btn-outline-light '  onClick="adm2 ();"><img src='css/menu.png'  width="20" height="20"></a>
+<!-- <button type="button" class="btn btn-sm text-light "  >
+  <span id="skvnamelab" style="font-weight: bold; font-size: 22px;" onClick="colPan10()" >Скважина</span>
+</button> -->
+<button type="button"  id="skvnamelab"  class="btn btn-outline-light " style="font-weight: bold; padding-top:0; padding-bottom:0; font-size: 23px;" onClick="colPan10();">Скважина ?</button>
+<a class='btn btn-outline-light ' style=" padding-top:3; padding-bottom:3; font-size: 18px;" onClick="exit('exit','exit','exit');"><img src='css/exit.png'  width="24" height="25"></a>
 
 </nav>
 
 <!-- Табы -->
-<div id="tabs" >
+<div id="tabs" style="margin-bottom: 0;" >
   <ul id="ul1" class="nav nav-tabs bg-dark">
     <li><a href="#tabs-1" > <span id="tabsn-1" >     </span></a></li>
-    <!-- <li><a href="#tabs-2"> <span id="tabsn-2" >     </span></a></li>
-    <li><a href="#tabs-3"> <span id="tabsn-3" >     </span></a></li>
+    <li><a href="#tabs-2"> <span id="tabsn-2" >     </span></a></li>
+    <!-- <li><a href="#tabs-3"> <span id="tabsn-3" >     </span></a></li>
     <li><a href="#tabs-4"> <span id="tabsn-4" >     </span></a></li> -->
   </ul>
-  <div id="taabs-1" style="display: block;  margin: 0 auto;"></div>
-  
+  <div id="taabs-1" class="bg-dark" style="display: block;  margin: 0 auto; background-color:black;"></div>
+  <div id="taabs-2" class="bg-dark" style="display: block;  margin: 0 auto; background-color:black;"></div>
   
   <!-- <div id="tabs-2">
   </div>
@@ -129,8 +130,8 @@ if (!$_SESSION['auth']) {
 </div>
 
 
-<div id="drawing"  ></div>
-<div id="tabvideo" width="100%" height="100%"  style = "background-color:khaki" ></div>
+<div id="drawing" class="bg-dark"  ></div>
+<div id="tabvideo" width="100%" height="100%"  class="bg-dark" style = "background-color:black;" ></div>
 <script type="text/javascript">
 function getStart() {
       //alert('ok');
@@ -157,8 +158,7 @@ function getStart() {
 window.onload = getStart;
 
 </script>
-
-
+<!-- //Модальный iframe -->
 <div class="modal fade modal-fullscreen modal-dark" id="myModal1">
     <div class="modal-dialog modal-dialog-scrollable-dark">
       <div class="modal-content">

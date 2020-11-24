@@ -15,6 +15,7 @@ function exit(whatdo, table, p000){
             
                 
         //     }
+        
             location.href="index.html";
 
             }
@@ -43,7 +44,76 @@ function check_session(whatdo, table, p000){
 
         },
         error: function(){
-            location.href="index.html";}
+            //удаление старых потоков
+            $.ajax({
+                type: "POST",
+                url: 'js/cams.php',
+                data: {whatdo:'check', namecams: namecams},
+                cache: false,
+                async: false,
+                success: function(data){
+                    livestatcams =null;
+                    //console.log(data);
+                    livestatcams = JSON.parse(data);
+                    //удаление старых потоков
+                    for (var keey in livestatcams) {
+                    if ((Number(livestatcams[keey].hlsViewerCount)==0 )|| (Number(livestatcams[keey].hlsViewerCount)<=1 && livestatcams[keey].streamId==curstramID)){
+                    $.ajax({
+                        type: "POST",
+                        url: 'js/cams.php',
+                        data: {whatdo:'delete', namecams: livestatcams[keey].streamId},
+                        cache: false,
+                        async: false,
+                        success: function(data){
+
+                            $.ajax({
+                                type: "POST",
+                                url: 'js/cams.php',
+                                data: {whatdo:'check', namecams: namecams},
+                                cache: false,
+                                async: false,
+                                success: function(data){
+                                    livestatcams =null;
+                                    //console.log(data);
+                                    livestatcams = JSON.parse(data);
+                                    //удаление старых потоков
+                                    for (var keey in livestatcams) {
+                                        for (var okeey in workstream){
+                                            // console.log(livestatcams[keey].streamId,workstream[okeey]);
+                                        if ((Number(livestatcams[keey].hlsViewerCount)==0 )|| (Number(livestatcams[keey].hlsViewerCount)<=1 && livestatcams[keey].streamId==workstream[okeey])){
+                                        $.ajax({
+                                            type: "POST",
+                                            url: 'js/cams.php',
+                                            data: {whatdo:'delete', namecams: livestatcams[keey].streamId},
+                                            cache: false,
+                                            async: false,
+                                            success: function(data){
+            
+                                                location.href="index.html";
+                                        
+                                        
+                                        },error: function(){
+                                            location.href="index.html";
+                                          }
+
+                                    })}}}},error: function(){
+                                        location.href="index.html";
+                                      }
+                                
+                                })
+                        
+                           
+                        
+                        
+                        } ,error: function(){
+                            location.href="index.html";
+                          }
+                    })}}},error: function(){
+                        location.href="index.html";
+                      }
+                })
+
+            }
 
     });
 

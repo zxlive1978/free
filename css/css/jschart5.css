@@ -14,10 +14,6 @@ html, body, .container {
 
 }
 
-
-
-
-
 .my-styling-class{
       background-color:#e0e0e0;
       color:black;
@@ -26,12 +22,7 @@ html, body, .container {
       /*all CSS goes here*/
     }
 	
- 
-.vcenter {
-      display: inline-block;
-      vertical-align: middle;
-      float: none;
-  }   
+  
 #skvs tr:hover{cursor:pointer;}
 #cams tr:hover{cursor:pointer;} 
 
