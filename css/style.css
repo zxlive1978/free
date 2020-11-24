@@ -18,6 +18,7 @@
   -webkit-box-shadow:0 3px 50px 0 rgba(0,0,0,.1);
   box-shadow:0 3px 50px 0 rgba(0,0,0,.1);
   text-align:center;
+  border:1px;
   border-radius:5px;
   width:100%;
   max-width:460px;
@@ -84,7 +85,7 @@
   margin-top:30px;
   padding:10px;
   background:#1b262c;
-  border-color:#1b262c;
+  border-color:#ffffff;
 }
 .login-block .hr-xs
 {
