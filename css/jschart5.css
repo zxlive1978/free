@@ -15,8 +15,8 @@ html, body, .container {
 }
 
 
-.modal {
-  background-color:black;
+.modal-backdrop {
+  background-color: #0000ff;
 }
 
 
