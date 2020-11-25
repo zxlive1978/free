@@ -101,12 +101,12 @@ if (!$_SESSION['auth']) {
 </nav> -->
 
 <nav class="navbar navbar-primary bg-dark py-0 navbar-fixed-top" id="bigpan">
-<a class='btn btn-outline-light '  onClick="adm2 ();"><img src='css/menu.png'  width="20" height="20"></a>
+<a class='btn btn-outline-light '  data-toggle="tooltip" data-placement="bottom" title="Основное меню регистрируемых данных станции ЭГТИ" onClick="$('#myModal11').modal('show');"><img src='css/menu.png'  width="20" height="20"></a>
 <!-- <button type="button" class="btn btn-sm text-light "  >
   <span id="skvnamelab" style="font-weight: bold; font-size: 22px;" onClick="colPan10()" >Скважина</span>
 </button> -->
-<button type="button"  id="skvnamelab"  class="btn btn-outline-light " style="font-weight: bold; padding-top:0; padding-bottom:0; font-size: 23px;" onClick="colPan10();">Скважина ?</button>
-<a class='btn btn-outline-light ' style=" padding-top:3; padding-bottom:3; font-size: 18px;" onClick="exit('exit','exit','exit');"><img src='css/exit.png'  width="24" height="25"></a>
+<button type="button"  id="skvnamelab"  data-toggle="tooltip" data-placement="bottom" title="Выбор текущей скважины" class="btn btn-outline-light " style="font-weight: bold; padding-top:0; padding-bottom:0; font-size: 23px;" onClick="colPan10();">Скважина ?</button>
+<a class='btn btn-outline-light ' data-toggle="tooltip" data-placement="bottom" title="Выход из приложения" style=" padding-top:3; padding-bottom:3; font-size: 18px;" onClick="exit('exit','exit','exit');"><img src='css/exit.png'  width="24" height="25"></a>
 
 </nav>
 
@@ -574,7 +574,36 @@ window.onload = getStart;
   </div>
 
 
+  <div class="modal fade" id="myModal11">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Меню</h4>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+<!-- <label class="control-label" for="hcolcolor">Каталог форм:   </label><select class="form-control input-lg bg-dark text-light" name="colitems9" id="colitems9"  size="5" ></select>
+<label class="control-label" for="hcolcolor">Имя формы:      </label><input class="form-control input-lg bg-dark text-light" type="text" id="colitems99" name="colitems99" value=""/> -->
 
+<br><br><button type="button"  id="datatab"  class="  btn btn-outline-light btn-block text-center bg-dark text-light"  onClick="adm3();" data-toggle="tooltip" data-placement="bottom" title="Отображение регистрируемых параметров по ключевому параметру время">Данные "По времени"</button><br>
+<button type="button"  id="vidotab"  class=" btn btn-outline-light btn-block  text-center bg-dark text-light"   onClick="adm();" data-toggle="tooltip" data-placement="bottom" title="Просмотр онлайн видеоданных с буровой">Видеокамеры</button><br><br><br>
+
+</div>
+        <!-- Modal footer -->
+        <!-- <div class="modal-footer">
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK8()'>Загрузить</button>
+			<button type="button" class="btn btn-warning" data-dismiss="modal" onclick='colOK9()'>Сохранить</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+        </div>
+         -->
+      </div>
+    </div>
+  </div>
+  </div>
 
  
 
