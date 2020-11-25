@@ -1324,10 +1324,7 @@ function vertical() {
 
 //Выбор скважины Bootstrap navi
 $(document).ready(function () {
-			var popup = document.createElement('div');
-			popup.setAttribute('id','popup1');
-			popup.innerHTML ='ХУЙ';
-			$('#popup1').hide();
+		
   
 			//Чтение списка скважин
 			readskvstart('read','skvs', '','');

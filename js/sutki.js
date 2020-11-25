@@ -2139,7 +2139,7 @@ function init(){
 				group1.click(function() {
 					
 					//colPan3();
-					$('#popup1').show();
+					
 					colOK11();
 				})
 			}
