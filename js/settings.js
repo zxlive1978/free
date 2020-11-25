@@ -1571,8 +1571,8 @@ transliterate = (
 //вкладка камеры
 var camscreate = true;
 function adm (){
-	$('#myModal11').modal('hide');
-	$('.modal-backdrop').hide();	
+	
+	$("#myModal11").attr("style", "display:none");	
 
 
 	online = false;
@@ -1708,7 +1708,7 @@ function adm2 (){
 //вкладка По времени
 function adm3 (){
 	//style="display: none;"
-	$('#myModal11').attr('display', 'none');
+	$("#myModal11").attr("style", "display:none");	
 	//$('.modal-backdrop').hide();
 	//удаление старых потоков
 	deleteoldcams();
