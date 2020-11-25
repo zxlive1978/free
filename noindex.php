@@ -100,7 +100,7 @@ if (!$_SESSION['auth']) {
     
 </nav> -->
 
-<nav class="navbar navbar-primary bg-dark py-0 navbar-fixed-top" id="bigpan">
+<nav class="navbar  navbar-primary bg-dark py-0 navbar-fixed-top" id="bigpan">
 <a class='btn btn-outline-light '  data-toggle="tooltip" data-placement="bottom" title="Основное меню регистрируемых данных станции ЭГТИ" onClick="$('#myModal11').modal('show');"><img src='css/menu.png'  width="20" height="20"></a>
 <!-- <button type="button" class="btn btn-sm text-light "  >
   <span id="skvnamelab" style="font-weight: bold; font-size: 22px;" onClick="colPan10()" >Скважина</span>
@@ -606,7 +606,31 @@ window.onload = getStart;
   </div>
 
  
-
+  <div class="modal fade" id="myModal12">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Выбор скважины</h4>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <label for="hcolcolor">Название скважины:</label><select class="form-control input-lg bg-dark text-light" name="videoN" id="videoN"  size="1" ></select>
+  
+  
+</div>        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK10()'>Применить</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
 
 
 </main>

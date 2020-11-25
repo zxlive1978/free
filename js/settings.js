@@ -1178,6 +1178,7 @@ function colPan10 (name_select) {
 	refresh = false;
 	
 	$('#wellN').empty();
+	if (curtemp=='time'){
 	//добавление в список
 	for (var keey in wells) {
 		$('#wellN').append($('<option>',
@@ -1232,11 +1233,17 @@ function colPan10 (name_select) {
 	
 		
 	});
+
+	
+
 	
 	/* $("#wells").css('background-color', Sheet.curcolorval);
 	$("#wells").css('font-size', 40);
 	$('#wells').iziModal('open'); */
-	$("#myModal4").modal('show');
+	$("#myModal4").modal('show');	};
+	if (curtemp='video'){
+
+	}
 }
 
 function colOK10 () {
@@ -1576,7 +1583,7 @@ transliterate = (
 //вкладка камеры
 var camscreate = true;
 function adm (){
-	
+	curtemp='video';
 	$("#myModal11").modal('hide');
 	//$('.modal-backdrop').hide();
 
@@ -1713,7 +1720,7 @@ function adm2 (){
 //вкладка По времени
 function adm3 (){
 	
-	
+	curtemp='time';
 	$("#myModal11").modal('hide');
 	
 	//$('.modal-backdrop').hide();
