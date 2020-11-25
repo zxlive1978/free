@@ -2,6 +2,9 @@
 //Выполняется ли загрузка
 var loaddata = false;
 
+//Текущий режим "По времени"
+var curtemp='time';
+
 //Открыть закрыть админку
 var onofadm= true;
 var row_str = '<tr><td><select name="auser" id="auser"  size="5" style="height: auto; width: 300px;"></tr>';
@@ -1321,6 +1324,11 @@ function vertical() {
 
 //Выбор скважины Bootstrap navi
 $(document).ready(function () {
+			var popup = document.createElement('div');
+			popup.setAttribute('id','popup1');
+			popup.innerHTML ='ХУЙ';
+			$('#popup1').hide();
+  
 			//Чтение списка скважин
 			readskvstart('read','skvs', '','');
 			//проверка сессий

@@ -608,12 +608,6 @@ window.onload = getStart;
  
 
 
-  <div id="popup1">
-     Popper.js Tutorial!
-</div>
-<script>
-  $('#popup1').hide();
-</script>
 
 </main>
 </body>
