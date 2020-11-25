@@ -1597,7 +1597,7 @@ function adm (){
 		
 		namecams=camswell[keey].txt+'_'+camswell[keey].name;
 		
-		bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 " >'+
+		bigelem=bigelem+'<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >'+
 		'<p><div class="thumbnail border border-white  text-light  text-center">'+
 		//'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
 		'<div id="iframeembdiv'+camswell[keey].id + '" class="embed-responsive embed-responsive-16by9 border border-white ">'+
