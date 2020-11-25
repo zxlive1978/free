@@ -1572,7 +1572,7 @@ transliterate = (
 var camscreate = true;
 function adm (){
 	
-	$("#myModal11").attr("style", "display:none");	
+	$("#myModal11").modal('hide');
 	$('.modal-backdrop').hide();
 
 	online = false;
@@ -1709,6 +1709,7 @@ function adm2 (){
 function adm3 (){
 	//style="display: none;"
 	$("#myModal11").attr("style", "display:none");
+	$("#myModal11").modal('hide');
 	//$("#myModal11").attr("style", "display:none");
 	$('.modal-backdrop').hide();
 	//$('.modal-backdrop').hide();
