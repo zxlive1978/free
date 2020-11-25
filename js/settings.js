@@ -1242,7 +1242,15 @@ function colPan10 (name_select) {
 	$('#wells').iziModal('open'); */
 	$("#myModal4").modal('show');	};
 	if (curtemp='video'){
-
+		$('#videoN').empty();
+		for (var keey in camswell) {
+			$('#videoN').append($('<option>',
+				{
+					value: camswell[keey].wellN,
+					text : camswell[keey].txt
+					}));
+		}
+		$("#myModal12").modal('show');
 	}
 }
 
