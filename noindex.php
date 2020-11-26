@@ -592,7 +592,7 @@ window.onload = getStart;
 <br><br><button type="button"  id="datatab"  class="  btn btn-outline-light btn-block text-center bg-dark text-light"  onClick="adm3();" data-toggle="tooltip" data-placement="bottom" title="Отображение регистрируемых параметров по ключевому параметру время">Данные "По времени"</button><br>
 <button type="button"  id="vidotab"  class=" btn btn-outline-light btn-block  text-center bg-dark text-light"   onClick="adm();" data-toggle="tooltip" data-placement="bottom" title="Просмотр онлайн видеоданных с буровой">Видеокамеры</button><br><br><br>
 
-</div>
+<!-- </div> -->
         <!-- Modal footer -->
         <!-- <div class="modal-footer">
 			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK8()'>Загрузить</button>

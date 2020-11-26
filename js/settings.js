@@ -1592,8 +1592,8 @@ transliterate = (
 var camscreate = true;
 function adm (){
 	curtemp='video';
-	$("#myModal11").modal('hide');
-	//$('.modal-backdrop').hide();
+	// $("#myModal11").modal('hide');
+
 
 	online = false;
 	refresh = false;
@@ -1729,7 +1729,7 @@ function adm2 (){
 function adm3 (){
 	
 	curtemp='time';
-	$("#myModal11").modal('hide');
+	
 	
 	//$('.modal-backdrop').hide();
 	
