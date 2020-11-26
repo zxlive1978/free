@@ -1296,13 +1296,15 @@ function colPan10 (name_select) {
 		for (var keey in camswell) {
 			let no= true;
 			let len=document.getElementById("videoN").length
-			
-			for (i=0;i++;i<len){
+			//console.log(len);
+			for (var i=0;i<len;i++){
 				let curtxt=document.getElementById("videoN").options[i].text;
-				console.log(curtxt);
-				if (curtxt==cams[keey].txt){
+				//console.log(i);
+				if (curtxt==camswell[keey].txt){
 					no= false;
-				}}
+				}
+			
+			}
 			if (no){
 				$('#videoN').append($('<option>',
 					{
@@ -1312,13 +1314,15 @@ function colPan10 (name_select) {
 				}
 			
 		}
-	
-	}
 		$("#myModal12").modal('show');
+	}
+		
 }
 
 
 function colOK10 () {
+
+	if (curtemp=='time'){
 	refresh = false; //pong.js
 	//$('#wells').iziModal('close');
 	skv =wellSelectName;
@@ -1332,6 +1336,13 @@ function colOK10 () {
 	read_next();
 	/* repaint(); */
 	/* namecmt=wellSelectBase + "kr"; */
+	}
+	if (curtemp=='video'){
+		let n = document.getElementById("videoN").options.selectedIndex;
+		let txt = document.getElementById("videoN").options[n].text;
+		$('#skvnamelab').text(txt);
+		adm();
+	}
 	
 }
 
