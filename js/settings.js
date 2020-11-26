@@ -4,6 +4,8 @@ var loaddata = false;
 
 //Текущий режим "По времени"
 var curtemp='time';
+//
+var curcams='Камера ?'
 
 //Открыть закрыть админку
 var onofadm= true;
@@ -1241,7 +1243,7 @@ function colPan10 (name_select) {
 	$("#wells").css('font-size', 40);
 	$('#wells').iziModal('open'); */
 	$("#myModal4").modal('show');	};
-	if (curtemp='video'){
+	if (curtemp=='video'){
 		$('#videoN').empty();
 		for (var keey in camswell) {
 			$('#videoN').append($('<option>',
@@ -1592,8 +1594,8 @@ transliterate = (
 var camscreate = true;
 function adm (){
 	curtemp='video';
-	// $("#myModal11").modal('hide');
-
+	$("#myModal11").modal('hide');
+	//$('.modal-backdrop').hide();
 
 	online = false;
 	refresh = false;
@@ -1729,7 +1731,7 @@ function adm2 (){
 function adm3 (){
 	
 	curtemp='time';
-	
+	$("#myModal11").modal('hide');
 	
 	//$('.modal-backdrop').hide();
 	
