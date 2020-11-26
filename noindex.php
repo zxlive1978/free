@@ -598,7 +598,7 @@ window.onload = getStart;
       
         <!-- Modal Header -->
         <div class="modal-header">
-          <h4 class="modal-title">Меню</h4>
+          <h4 class="modal-title">Основное меню</h4>
           <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
         
