@@ -1835,6 +1835,7 @@ function adm3 (){
 	online = true;
 	refresh = true;
 	onofadm = true;
+	$('#skvnamelab').text(skv);
 	init();
 	// colOK11();
 	read_now();
