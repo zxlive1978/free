@@ -102,11 +102,12 @@ if (!$_SESSION['auth']) {
 
 <nav class="navbar  navbar-primary bg-dark py-0 navbar-fixed-top" id="bigpan">
 <a class='btn btn-outline-light '  data-toggle="tooltip" data-placement="bottom" title="Основное меню регистрируемых данных станции ЭГТИ" onClick="$('#myModal11').modal('show');"><img src='css/menu.png'  width="20" height="20"></a>
+<a class='btn btn-outline-light text-left'  data-toggle="tooltip" data-placement="bottom" title="Инструменты" ><img src='css/tools.png'  width="20" height="20"></a>
 <!-- <button type="button" class="btn btn-sm text-light "  >
   <span id="skvnamelab" style="font-weight: bold; font-size: 22px;" onClick="colPan10()" >Скважина</span>
 </button> -->
-<button type="button"  id="skvnamelab"  data-toggle="tooltip" data-placement="bottom" title="Выбор текущей скважины" class="btn btn-outline-light " style="font-weight: bold; padding-top:0; padding-bottom:0; font-size: 23px;" onClick="colPan10();">Скважина ?</button>
-<a class='btn btn-outline-light ' data-toggle="tooltip" data-placement="bottom" title="Выход из приложения" style=" padding-top:3; padding-bottom:3; font-size: 18px;" onClick="exit('exit','exit','exit');"><img src='css/exit.png'  width="24" height="25"></a>
+<button type="button"  id="skvnamelab"  data-toggle="tooltip" data-placement="bottom" title="Выбор текущей скважины" class="btn btn-outline-light text-center" style="font-weight: bold; padding-top:0; padding-bottom:0; font-size: 23px;" onClick="colPan10();">Скважина ?</button>
+<a class='btn btn-outline-light text-right' data-toggle="tooltip" data-placement="bottom" title="Выход из приложения" style=" padding-top:3; padding-bottom:3; font-size: 18px;" onClick="exit('exit','exit','exit');"><img src='css/exit.png'  width="24" height="25"></a>
 
 </nav>
 
