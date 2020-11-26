@@ -1286,21 +1286,37 @@ function colPan10 (name_select) {
 	/* $("#wells").css('background-color', Sheet.curcolorval);
 	$("#wells").css('font-size', 40);
 	$('#wells').iziModal('open'); */
-	$("#myModal4").modal('show');	};
+	$("#myModal4").modal('show'); };
+	
 	if (curtemp=='video'){
 		$('#videoN').empty();
-	
-
+		
+		//let cams={};
+		
 		for (var keey in camswell) {
-			$('#videoN').append($('<option>',
-				{
+			let no= true;
+			let len=document.getElementById("videoN").length
+			
+			for (i=0;i++;i<len){
+				let curtxt=document.getElementById("videoN").options[i].text;
+				console.log(curtxt);
+				if (curtxt==cams[keey].txt){
+					no= false;
+				}}
+			if (no){
+				$('#videoN').append($('<option>',
+					{
 					value: camswell[keey].wellN,
 					text : camswell[keey].txt
 					}));
+				}
+			
 		}
-		$("#myModal12").modal('show');
+	
 	}
+		$("#myModal12").modal('show');
 }
+
 
 function colOK10 () {
 	refresh = false; //pong.js
