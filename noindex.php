@@ -107,7 +107,7 @@ if (!$_SESSION['auth']) {
 <a class='btn btn-outline-light '  data-toggle="tooltip" data-placement="bottom" title="Основное меню регистрируемых данных станции ЭГТИ" onClick="$('#myModal11').modal('show');"><img src='css/menu.png'  width="20" height="20"></a>
 <button class='btn btn-outline-light dropdown-toggle'  id='dropdownMenu1' data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Инструменты" ><img src='css/tools.png'  width="20" height="20"></button>
 <ul class="dropdown-menu bg-dark" aria-labelledby="dropdownMenu1">
-    <li><img src='css/lupa.svg'  width="20" height="20" style="fill: red;"><a href="#">Действие 1</a></li>
+    <li><img src='css/lupa.svg'  width="20" height="20"><a href="#">Действие 1</a></li>
     <li><img src='css/menu.png'  width="20" height="20"><a href="#">Действие 2</a></li>
     <li><img src='css/menu.png'  width="20" height="20"><a href="#">Действие 3</a></li>
     <li role="separator" class="divider"></li>
