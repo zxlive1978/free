@@ -1222,6 +1222,8 @@ var wellSelectBase ='';
 var wellSelectName = '';
 function colPan10 (name_select) {
 	refresh = false;
+	//удаление старых потоков
+	deleteoldcams();
 	
 	$('#wellN').empty();
 	if (curtemp=='time'){
