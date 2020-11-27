@@ -9,6 +9,7 @@ var curcams='Камера ?'
 
 //свернуть открыть шапку
 var toponof = true;
+hback=0;
 
 //Открыть закрыть админку
 var onofadm= true;
@@ -1863,9 +1864,12 @@ function colOK15(){
 
 	if(toponof){
 		toponof=false;
+		hback= Columns.col0.h;
+		Columns.col0.h=0;
 	}
 	else{
 		toponof=true;
+		Columns.col0.h=hback;
 		}
 		repaint();
 }
