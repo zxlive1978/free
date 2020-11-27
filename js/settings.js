@@ -7,6 +7,9 @@ var curtemp='time';
 //
 var curcams='Камера ?'
 
+//свернуть открыть шапку
+var toponof = true;
+
 //Открыть закрыть админку
 var onofadm= true;
 var row_str = '<tr><td><select name="auser" id="auser"  size="5" style="height: auto; width: 300px;"></tr>';
@@ -1846,6 +1849,17 @@ function adm3 (){
 
 //старт стоп прием
 function colok14(){
+
+	if(refresh){refresh=false; online=false;}
+					else{
+					if (loaddata == false){
+						read_now(); //pong.js
+						}}
+}
+
+
+//свернуть открыть шапку
+function colok15(){
 
 	if(refresh){refresh=false; online=false;}
 					else{

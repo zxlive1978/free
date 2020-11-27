@@ -113,7 +113,7 @@ if (!$_SESSION['auth']) {
     <button class='btn  btn-dark btn-block text-left'  onClick="colok14();" ><img src='css/wave.svg'  width="30" height="30">  Старт/Стоп прием данных</button>
     <div class="dropdown-divider"></div>
     <button class='btn btn-dark  btn-block text-left '  onClick="colOK11();"  ><img src='css/lock.svg'  width="30" height="30">  Редактирование формы</button>
-    <button class='btn btn-dark  btn-block text-left '  onClick="colOK11();"  ><img src='css/roll.svg'  width="30" height="30">  Свернуть/Развернуть шапку</button>
+    <button class='btn btn-dark  btn-block text-left '  onClick="colOK15();"  ><img src='css/roll.svg'  width="30" height="30">  Свернуть/Развернуть шапку</button>
     
   </div>
   </div>
