@@ -1859,7 +1859,7 @@ function colok14(){
 
 
 //свернуть открыть шапку
-function colok15(){
+function colOK15(){
 
 	if(toponof){
 		toponof=false;
