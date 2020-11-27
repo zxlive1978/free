@@ -1861,11 +1861,13 @@ function colok14(){
 //свернуть открыть шапку
 function colok15(){
 
-	if(refresh){refresh=false; online=false;}
-					else{
-					if (loaddata == false){
-						read_now(); //pong.js
-						}}
+	if(toponof){
+		toponof=false;
+	}
+	else{
+		toponof=true;
+		}
+		repaint();
 }
 
 //Очистка и рендеринг
