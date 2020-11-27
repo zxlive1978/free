@@ -109,7 +109,7 @@ if (!$_SESSION['auth']) {
 <div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu1" style=" width: 300px !important;">
     <button class='btn btn-dark  btn-block text-left '  onClick="colOK11();"  ><img src='css/lock.svg'  width="30" height="30">  Редактирование формы</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="colPan3();" ><img src='css/lupa.svg'  width="30" height="30">  Выбор даты</button>
-    <button class='btn  btn-dark btn-block text-left'  onClick="colPan9();" ><img src='css/lupa.svg'  width="30" height="30">  Загрузить/Сохранить(Создать) форму</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="colPan9();" ><img src='css/form.svg'  width="30" height="30">  Загрузить/Сохранить(Создать) форму</button>
     
     
   </div>
