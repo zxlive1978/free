@@ -107,10 +107,13 @@ if (!$_SESSION['auth']) {
 <a class='btn btn-outline-light '  data-toggle="tooltip" data-placement="bottom" title="Основное меню регистрируемых данных станции ЭГТИ" onClick="$('#myModal11').modal('show');"><img src='css/menu.png'  width="20" height="20"></a>
 <button class='btn btn-outline-light  dropdown-toggle'  id='dropdownMenu1' data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Инструменты" ><img src='css/tools.png'  width="20" height="20"></button>
 <div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu1" style=" width: 300px !important;">
-    <button class='btn btn-dark  btn-block text-left '  onClick="colOK11();"  ><img src='css/lock.svg'  width="30" height="30">  Редактирование формы</button>
-    <button class='btn  btn-dark btn-block text-left'  onClick="colPan3();" ><img src='css/lupa.svg'  width="30" height="30">  Выбор даты</button>
-    <button class='btn  btn-dark btn-block text-left tex-light'  onClick="colPan9();" ><img src='css/form.svg'  width="30" height="30">  Загрузить/Сохранить(Создать) форму</button>
     
+    <button class='btn  btn-dark btn-block text-left'  onClick="colPan3();" ><img src='css/lupa.svg'  width="30" height="30">  Выбор даты и интервала</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="colPan9();" ><img src='css/form.svg'  width="30" height="30">  Загр./Сохр.(Создать) форму</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="colok14();" ><img src='css/wave.svg'  width="30" height="30">  Старт/Стоп прием данных</button>
+    <div class="dropdown-divider"></div>
+    <button class='btn btn-dark  btn-block text-left '  onClick="colOK11();"  ><img src='css/lock.svg'  width="30" height="30">  Редактирование формы</button>
+    <button class='btn btn-dark  btn-block text-left '  onClick="colOK11();"  ><img src='css/roll.svg'  width="30" height="30">  Свернуть/Развернуть шапку</button>
     
   </div>
   </div>
@@ -121,7 +124,7 @@ if (!$_SESSION['auth']) {
   <span id="skvnamelab" style="font-weight: bold; font-size: 22px;" onClick="colPan10()" >Скважина</span>
 </button> -->
 <div class="text-center">
-<button type="button"  id="skvnamelab"  data-toggle="tooltip" data-placement="bottom" title="Выбор текущей скважины" class="btn btn-outline-light " style="font-weight: bold; padding-top:0; padding-bottom:0; font-size: 23px;" onClick="colPan10();">Скважина ?</button>
+<button type="button"  id="skvnamelab"  data-toggle="tooltip" data-placement="bottom" title="Выбор текущей скважины" class="btn btn-outline-light " style="font-weight: bold; padding-top:0; padding-bottom:0; font-size: 22px;" onClick="colPan10();">Скважина ?</button>
 </div>
 <div class="text-right">
 <a class='btn btn-outline-light' data-toggle="tooltip" data-placement="bottom" title="Выход из приложения" style=" padding-top:3; padding-bottom:3; font-size: 18px;" onClick="exit('exit','exit','exit');"><img src='css/exit.png'  width="24" height="25"></a>
