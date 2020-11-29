@@ -10,6 +10,7 @@ var curcams = 'Камера ?'
 //свернуть открыть шапку
 var toponof = true;
 
+
 //Открыть закрыть админку
 var onofadm = true;
 var row_str = '<tr><td><select name="auser" id="auser"  size="5" style="height: auto; width: 300px;"></tr>';
