@@ -1792,6 +1792,7 @@ function adm2() {
 
 
 	$('#taabs-1').hide();
+	$('#dropdownMenu1').hide();
 	$('#taabs-2').empty();
 	$('#taabs-2').show();
 	$('#ul1').hide();
@@ -1833,6 +1834,7 @@ function adm3() {
 
 	curtemp = 'time';
 	$("#myModal11").modal('hide');
+	$('#dropdownMenu1').show();
 
 	//$('.modal-backdrop').hide();
 
