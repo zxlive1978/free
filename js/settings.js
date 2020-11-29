@@ -1099,6 +1099,7 @@ function colOK8start(name_start) {
 	onoffpan();
 
 
+
 }
 
 //Загрузить файл
