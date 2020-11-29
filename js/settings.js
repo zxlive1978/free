@@ -1884,9 +1884,16 @@ function colOK15() {
 
 	if (toponof) {
 		toponof = false;
+		for (var curcol in Columns){
+			backcolh= Columns[curcol].size.h;
+			Columns[curcol].size.h=0;
+		}
 	}
 	else {
 		toponof = true;
+		for (var curcol in Columns){
+			Columns[curcol].size.h=backcolh;
+		}
 	}
 	repaint();
 }
