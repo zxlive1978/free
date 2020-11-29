@@ -1094,8 +1094,10 @@ function colPan8(name_select) {
 function colOK8start(name_start) {
 	// console.log(Sheet.editscrn);
 	var name = name_start;
+	toponof = true;
 	loadddata(name);
 	onoffpan();
+
 
 }
 
@@ -1103,6 +1105,7 @@ function colOK8start(name_start) {
 function colOK8() {
 	/* PArmyDialog8.hide(); */
 	refresh = false; //navigation.js
+	toponof = true;
 	if (($("#colitems9")[0].selectedIndex) > -1) {
 		loadddata(filesss[$("#colitems9")[0].selectedIndex]);
 
