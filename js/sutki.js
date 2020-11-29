@@ -2089,7 +2089,7 @@ function init() {
 			if (left > 100) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 2 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
 			if (left > 140) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 3 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
 			//если отступ меньше начала колонки
-			if (ncolcmt < weight_colmn1) { ncolcmt = weight_colmn1 };
+			if (ncolcmt < w1 * xcolmn1Poz) { ncolcmt = w1 * xcolmn1Poz; };
 			var cury = colmn11_y0 + (comment[j]["Vrema"] - start_time) * cur_value_y_step;
 			var name_p3 = '' + comment[j]["Comment"]; //d110d[d110d.length-1]["Npot"];
 			//Если попадает в окно
