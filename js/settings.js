@@ -1683,6 +1683,9 @@ var camscreate = true;
 function adm() {
 	curtemp = 'video';
 	$("#myModal11").modal('hide');
+	$('#dropdownMenu1').hide();
+
+	
 	//$('.modal-backdrop').hide();
 
 	online = false;
