@@ -9,6 +9,7 @@ var curcams = 'Камера ?'
 
 //свернуть открыть шапку
 var toponof = true;
+var backcolh= 0;
 
 
 //Открыть закрыть админку
