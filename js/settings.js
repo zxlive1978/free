@@ -1164,12 +1164,14 @@ function colPan9(name_select) {
 function colOK9() {
 	/* PArmyDialog9.hide(); */
 	//Восстановление размера шапки
-	if (onoffpan){
+	if (!onoffpan){
 		for (var curcol in Columns){
 			Columns[curcol].size.h=backcolh;
 		}
 		Sheet.disp_up= backsheetdisp;
+
 	}
+	Sheet.editscrn = false;
 	refresh = false; //navigation.js
 	if (($("#colitems99").val()) != "") {
 		savedata($("#colitems99").val());
