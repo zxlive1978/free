@@ -10,6 +10,7 @@ var curcams = 'Камера ?'
 //свернуть открыть шапку
 var toponof = true;
 var backcolh= 0;
+var backsheetdisp=0;
 
 
 //Открыть закрыть админку
@@ -1162,6 +1163,13 @@ function colPan9(name_select) {
 
 function colOK9() {
 	/* PArmyDialog9.hide(); */
+	//Восстановление размера шапки
+	if (onoffpan){
+		for (var curcol in Columns){
+			Columns[curcol].size.h=backcolh;
+		}
+		Sheet.disp_up= backsheetdisp;
+	}
 	refresh = false; //navigation.js
 	if (($("#colitems99").val()) != "") {
 		savedata($("#colitems99").val());
@@ -1888,12 +1896,15 @@ function colOK15() {
 			backcolh= Columns[curcol].size.h;
 			Columns[curcol].size.h=0;
 		}
+		backsheetdisp= Sheet.disp_up;
+		Sheet.disp_up=0;
 	}
 	else {
 		toponof = true;
 		for (var curcol in Columns){
 			Columns[curcol].size.h=backcolh;
 		}
+		Sheet.disp_up= backsheetdisp;
 	}
 	repaint();
 }
