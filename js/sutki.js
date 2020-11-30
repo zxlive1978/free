@@ -1993,7 +1993,7 @@ function init() {
 
 		).on('touchstart', function (e) {
 			exs = e.detail.p.x;
-			eys = e.detail.p.y;
+			eys = this.attr('y');
 		})
 
 
@@ -2008,13 +2008,14 @@ function init() {
 		cir4.draggable(
 			{
 				minX: 0
-				, minY: -Columns.col0.size.h * h1
+				// , minY: -Columns.col0.size.h * h1
+				, minY: -50 * h1
 				, maxX: Columns.col0.size.w * w1 / 1.1
 				, maxY: 100 * h1
 			}
 		).on('touchend', function (e) {
 			//console.log(ey, eys);
-			if (ey > eys) {
+			if (this.attr('y') > eys) {
 				if (loaddata == false) {
 					read_down();
 				}//см .navigation.js 
