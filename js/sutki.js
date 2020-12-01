@@ -1977,7 +1977,7 @@ function init() {
 
 
 
-	var cir4 = draw.group()
+	var cir4 = draw.nested()
 		.style({ cursor: 'pointer' });
 	cir4.add(cir1);
 	cir4.add(cir2);
@@ -1996,6 +1996,7 @@ function init() {
 			// var touchobj1 = e.changedTouches[0] // первая точка прикосновения
 			// exs = e.detail.p.x;
 			// eys = parseInt(touchobj1.pageY);
+			// alert('dddd'+eys+ ', ' + exs);
 			
 		})
 
@@ -2003,6 +2004,7 @@ function init() {
 		cir4.draggable(
 
 		).on('touchmove', function (e) {
+			// e.preventDefault();
 			// ex = e.detail.p.x;
 			// ey = e.detail.p.y;
 			
@@ -2021,10 +2023,7 @@ function init() {
 				, maxY: 100 * h1
 			}
 		).on('touchend', function (e) {
-			var touchobj2 = e.changedTouches[0] // первая точка прикосновения
-			ey = parseInt(touchobj2.pageY);
-			//alert('d'+ey+ ', ' + 100 * h1);
-			if (ey >  (Columns.col0.size.h * h1+100 * h1/2)) {
+			if (cir4.attr('y') >  0) {
 				if (loaddata == false) {
 					read_down();
 				}//см .navigation.js 
