@@ -150,8 +150,8 @@ if (!$_SESSION['auth']) {
   </div> -->
 </div>
 
-
-<div id="drawing" class="bg-dark"  ></div>
+<!-- style="touch-action: none;" -->
+<div id="drawing" class="bg-dark"  ></div> 
 <div id="tabvideo" width="100%" height="100%"  class="bg-dark" style = "background-color:black;" ></div>
 <script type="text/javascript">
 function getStart() {

@@ -1992,8 +1992,10 @@ function init() {
 		cir4.draggable(
 
 		).on('touchstart', function (e) {
+			
+			var touchobj = e.changedTouches[0] // первая точка прикосновения
 			exs = e.detail.p.x;
-			eys = this.attr('y');
+			eys = parseInt(touchobj.p.y);
 		})
 
 
@@ -2014,7 +2016,9 @@ function init() {
 				, maxY: 100 * h1
 			}
 		).on('touchend', function (e) {
-			//console.log(ey, eys);
+			var touchobj = e.changedTouches[0] // первая точка прикосновения
+			ey = parseInt(touchobj.clientY);
+			alert(ey+ ', ' + eys);
 			if (this.attr('y') > eys) {
 				if (loaddata == false) {
 					read_down();
