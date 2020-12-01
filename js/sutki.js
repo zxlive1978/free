@@ -1977,17 +1977,24 @@ function init() {
 
 
 
-	var cir4 = draw.nested()
-		.style({ cursor: 'pointer' });
+	var cir4 = draw.group()
+	.style({ cursor: 'pointer' });
 	cir4.add(cir1);
 	cir4.add(cir2);
 	cir4.front();
-
+	if (isMobile) {
+	var cir4 = draw.nested()
+	.style({ cursor: 'pointer' });
+	cir4.add(cir1);
+	cir4.add(cir2);
+	cir4.front();} 
 
 	var ex = 0;
 	var ey = 0;
 	var exs = 0;
 	var eys = 0;
+
+
 	if (isMobile) {
 		cir4.draggable(
 
@@ -1995,6 +2002,7 @@ function init() {
 			
 			// var touchobj1 = e.changedTouches[0] // первая точка прикосновения
 			// exs = e.detail.p.x;
+			// eys = e.detail.p.y;
 			// eys = parseInt(touchobj1.pageY);
 			// alert('dddd'+eys+ ', ' + exs);
 			
@@ -2053,12 +2061,13 @@ function init() {
 		cir4.draggable(
 			{
 				minX: 0
-				, minY: -50 * h1
+				, minY: -50*h1
 				, maxX: Columns.col0.size.w * w1 / 1.1
-				, maxY: 100 * h1
+				, maxY: 100*h1
 			}
 		).on('dragend', function (e) {
 			//console.log(ey, eys);
+
 			if (ey > eys) {
 				if (loaddata == false) {
 					read_down();
