@@ -1993,17 +1993,22 @@ function init() {
 
 		).on('touchstart', function (e) {
 			
-			var touchobj = e.changedTouches[0] // первая точка прикосновения
-			exs = e.detail.p.x;
-			eys = parseInt(touchobj.p.y);
+			// var touchobj1 = e.changedTouches[0] // первая точка прикосновения
+			// exs = e.detail.p.x;
+			// eys = parseInt(touchobj1.pageY);
+			
 		})
 
 
 		cir4.draggable(
 
 		).on('touchmove', function (e) {
-			ex = e.detail.p.x;
-			ey = e.detail.p.y;
+			// ex = e.detail.p.x;
+			// ey = e.detail.p.y;
+			
+			// var touchobj1 = e.changedTouches[0] // первая точка прикосновения
+			// exs = e.detail.p.x;
+			// eys = parseInt(touchobj1.pageY);
 		})
 
 
@@ -2016,10 +2021,10 @@ function init() {
 				, maxY: 100 * h1
 			}
 		).on('touchend', function (e) {
-			var touchobj = e.changedTouches[0] // первая точка прикосновения
-			ey = parseInt(touchobj.clientY);
-			alert(ey+ ', ' + eys);
-			if (this.attr('y') > eys) {
+			var touchobj2 = e.changedTouches[0] // первая точка прикосновения
+			ey = parseInt(touchobj2.pageY);
+			//alert('d'+ey+ ', ' + 100 * h1);
+			if (ey >  (Columns.col0.size.h * h1+100 * h1/2)) {
 				if (loaddata == false) {
 					read_down();
 				}//см .navigation.js 
@@ -2049,7 +2054,7 @@ function init() {
 		cir4.draggable(
 			{
 				minX: 0
-				, minY: -Columns.col0.size.h * h1
+				, minY: -50 * h1
 				, maxX: Columns.col0.size.w * w1 / 1.1
 				, maxY: 100 * h1
 			}
