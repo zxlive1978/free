@@ -1697,6 +1697,8 @@ transliterate = (
 //вкладка камеры
 var camscreate = true;
 function adm() {
+	
+
 	curtemp = 'video';
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu1').hide();
@@ -1741,7 +1743,7 @@ function adm() {
 				'<p><div class="thumbnail border border-white  text-light  text-center">' +
 				//'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
 				'<div id="iframeembdiv' + camswell[keey].id + '" class="embed-responsive embed-responsive-16by9 border border-white ">' +
-				'<iframe id="iframeemb' + camswell[keey].id + '" class="embed-responsive-item bg-dark" src="css/cam.jpg" allowfullscreen ></iframe>' +
+				'<iframe id="iframeemb' + camswell[keey].id + '" class="embed-responsive-item bg-success rounded mx-auto d-block" src="css/form.svg" allowfullscreen ></iframe>' +
 				'</div>' +
 				'<div class="caption text-center   ">' +
 				'<h6 style="font-weight: bold;" >' + camswell[keey].txt + ' ' + camswell[keey].name + '</h6>' +
@@ -1763,6 +1765,7 @@ function adm() {
 			var idss = $(this).attr('id');
 
 			if (camscreate) {
+				
 				camscreate = false;
 				colOK4cams(idss);
 			}
