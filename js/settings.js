@@ -103,14 +103,15 @@ var ShablontxtOknOPar = {
 
 //Список шрифтов
 var fonts = {
-	0: { name: "Arial" },
-	1: { name: "Arial Black" },
+	0: { name: "Arial Black" },
+	1: { name: "Verdana" },
 	2: { name: "Comic Sans MS" },
 	3: { name: "Courier New" },
 	4: { name: "Georgia" },
 	5: { name: "Impact" },
 	6: { name: "Times New Roman" },
 	7: { name: "Trebuchet MS" },
+	7: { name: "Helvetica" },
 };
 
 var Sheet = {
@@ -854,9 +855,13 @@ function colPan5() {
 	// $('#select option:contains("виноград")').prop('selected', true);
 	//var option_val = $("#my_val").val(); //store the dynamic value of select option
 	// $( "#font" ).find( 'option[value="' + Sheet.fnt + '"]' ).prop( "selected", true );
-	$('#font option:contains("' + Sheet.fnt + '")').prop("selected", true);
+	
+	//$('#font option[text='+ Sheet.fnt +']').prop('selected', true);
+	//$('#font').find('option[text="' + Sheet.fnt + '"]').prop("selected",true);
+	$('#font option:contains("' + Sheet.fnt + '")').prop('selected', true);
+	
 	//$("#font > select > option[value=" + Sheet.fnt + "]").prop("selected",true);
-	//console.log($('#font option:selected').text());
+	// console.log(Sheet.fnt+'  '+$('#font option:selected').text());
 
 	$("#K_size_txt").val(Sheet.K_size_txt);
 	$("#K_size_txt_mobile").val(Sheet.K_size_txt_mobile);
