@@ -201,10 +201,10 @@ window.onload = getStart;
 
   <label for="hcolcolor">Шрифт:</label><select id="font"  class="form-control input-lg bg-dark text-light" name="font" /></select>
 
-  <label for="hcolcolor">Коэфф. размера шрифта:</label><input class="form-control input-lg bg-dark text-light" type="text" id="K_size_txt" name="K_size_txt" value="0"/>
+  <label for="hcolcolor">Обратный коэфф. максимального размера шрифта:</label><input class="form-control input-lg bg-dark text-light" type="text" id="K_size_txt" name="K_size_txt" value="0"/>
   
   
-  <label for="hcolcolor">Коэфф. размера шрифта(моб):</label><input class="form-control input-lg  bg-dark text-light"type="text" id="K_size_txt_mobile" name="K_size_txt_mobile" value="0"/>
+  <label for="hcolcolor">Обратный коэфф. максимального размера шрифта(моб):</label><input class="form-control input-lg  bg-dark text-light"type="text" id="K_size_txt_mobile" name="K_size_txt_mobile" value="0"/>
   
   
   <label for="hcolcolor">Радиус круга полож. столбца:</label><input class="form-control input-lg  bg-dark text-light"type="text" id="markheight" name="markheight" value="0"/>
