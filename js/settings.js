@@ -1360,7 +1360,7 @@ function colOK10() {
 		wellName = wellSelectBase;
 		namecmt = wellName + "kr";
 		//Сменить название в шапке
-		$('#skvnamelab').text('<img src="css/well.svg"  width="30" height="30">'+skv);
+		$('#skvnamelab').text(skv);
 		//Сохранить в локальное хранилище
 		colPan9save(wellName, skv, namecmt, formname);
 		refresh = true;
