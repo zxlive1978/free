@@ -153,7 +153,7 @@ function readskvstart(whatdo, table, p000, skvsjson){
 					colOK8start(formname);
 					//Старт!!!
 					if (skv ==""){} else{
-					$('#skvnamelab').text(skv);}
+					$('#skvnamelabt').text(skv);}
 					
 					read_now();
 					//read_next();
