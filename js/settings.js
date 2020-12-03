@@ -1707,6 +1707,7 @@ function adm() {
 	curtemp = 'video';
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu1').hide();
+	$('#dropdownMenu2').show();
 
 	
 	//$('.modal-backdrop').hide();
@@ -1724,7 +1725,8 @@ function adm() {
 	onofadm = false;
 
 	getcamswell();
-
+	
+	
 	$('#taabs-2').hide();
 	$('#tabs').show();
 	$('#taabs-1').empty();
