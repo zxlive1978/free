@@ -238,10 +238,10 @@ window.onload = getStart;
   <label for="hcolcolor">Цвет комментариев:</label><input class="form-control input-lg bg-dark text-light"type="color" id="cmtcolor" name="cmtcolor" value="#e66465"/>
   
   
-  <label for="hcolcolor">Высота панели инструментов:</label><input class="form-control input-lg bg-dark text-light"type="text" id="icosize" name="icosize" value="0"/>
+  <label for="hcolcolor">Макс. высота панели инструментов:</label><input class="form-control input-lg bg-dark text-light"type="text" id="icosize" name="icosize" value="0"/>
   
    
-  <label for="hcolcolor">Высота панели инструментов (моб):</label><input class="form-control input-lg bg-dark text-light"type="text" id="icosizem" name="icosizem" value="0"/>
+  <label for="hcolcolor">Макс. высота панели инструментов (моб):</label><input class="form-control input-lg bg-dark text-light"type="text" id="icosizem" name="icosizem" value="0"/>
   
   
   <label for="hcolcolor">Цвет 1 панели инструментов:</label><input class="form-control input-lg bg-dark text-light"type="color" id="grcol1" name="grcol1" value="#e66465"/>
