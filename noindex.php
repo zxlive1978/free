@@ -104,14 +104,17 @@ if (!$_SESSION['auth']) {
 <div class="text-left">
 
 <div class="dropdown">
-<a class='btn btn-outline-light '  data-toggle="tooltip" data-placement="bottom" title="Основное меню регистрируемых данных станции ЭГТИ" onClick="$('#myModal11').modal('show');"><img src='css/menu.png'  width="20" height="20"></a>
+<!-- <a class='btn btn-outline-light '  data-toggle="tooltip" data-placement="bottom" title="Основное меню регистрируемых данных станции ЭГТИ" onClick="$('#myModal11').modal('show');"><img src='css/menu.png'  width="20" height="20"></a> -->
 <button class='btn btn-outline-light  dropdown-toggle'  id='dropdownMenu1' data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Инструменты" ><img src='css/tools.png'  width="20" height="20"></button>
 <div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu1" style=" width: 300px !important;">
-    
+
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/lupa.svg'  width="30" height="30">  Данные "По времени"</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/lupa.svg'  width="30" height="30">  Видеокамеры</button>
+    <div class="dropdown-divider"></div>
     <button class='btn  btn-dark btn-block text-left'  onClick="colPan3();" ><img src='css/lupa.svg'  width="30" height="30">  Выбор даты и интервала</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="colPan9();" ><img src='css/form.svg'  width="30" height="30">  Загр./Сохр.(Создать) форму</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="colok14();" ><img src='css/wave.svg'  width="30" height="30">  Старт/Стоп прием данных</button>
-    <div class="dropdown-divider"></div>
+    
     <button class='btn btn-dark  btn-block text-left '  onClick="colOK11();"  ><img src='css/lock.svg'  width="30" height="30">  Редактирование формы</button>
     <button class='btn btn-dark  btn-block text-left '  onClick="colOK15();"  ><img src='css/roll.svg'  width="30" height="30">  Свернуть/Развернуть шапку</button>
     
