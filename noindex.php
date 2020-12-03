@@ -38,6 +38,8 @@ if (!$_SESSION['auth']) {
     $('#tabs').hide();
   } );
   $('#tabs').hide();
+  $('#dropdownMenu2').hide();
+  //dropdownMenu2
   </script>
   <script>
 //Окно видео
@@ -117,6 +119,16 @@ if (!$_SESSION['auth']) {
     
     <button class='btn btn-dark  btn-block text-left '  onClick="colOK11();"  ><img src='css/lock.svg'  width="30" height="30">  Редактирование формы</button>
     <button class='btn btn-dark  btn-block text-left '  onClick="colOK15();"  ><img src='css/roll.svg'  width="30" height="30">  Свернуть/Развернуть шапку</button>
+    
+  </div>
+  </div>
+  <div class="dropdown">
+<!-- <a class='btn btn-outline-light '  data-toggle="tooltip" data-placement="bottom" title="Основное меню регистрируемых данных станции ЭГТИ" onClick="$('#myModal11').modal('show');"><img src='css/menu.png'  width="20" height="20"></a> -->
+<button class='btn btn-outline-light  dropdown-toggle'  id='dropdownMenu2' data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" padding-top:3; padding-bottom:3; font-size: 18px;" ><img src='css/burg.svg'  width="27" height="27"></button>
+<div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu2" style=" width: 300px !important;">
+
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg'  width="30" height="30">  Данные "По времени"</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg'  width="30" height="30">  Видеокамеры</button>
     
   </div>
   </div>
