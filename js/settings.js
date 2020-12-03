@@ -1707,6 +1707,7 @@ function adm() {
 	curtemp = 'video';
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu1').hide();
+	$("#dropdownMenu2").attr("style", "display:yes");
 	$('#dropdownMenu2').show();
 
 	
