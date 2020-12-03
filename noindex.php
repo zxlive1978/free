@@ -38,7 +38,7 @@ if (!$_SESSION['auth']) {
     $('#tabs').hide();
   } );
   $('#tabs').hide();
-  $('#dropdownMenu2').hide();
+ 
   //dropdownMenu2
   </script>
   <script>
@@ -170,6 +170,7 @@ if (!$_SESSION['auth']) {
 <div id="tabvideo" width="100%" height="100%"  class="bg-dark" style = "background-color:black;" ></div>
 <script type="text/javascript">
 function getStart() {
+  $('#dropdownMenu2').hide();
       //alert('ok');
 	  pongpong();
 	 /*  $("#wells").iziModal();

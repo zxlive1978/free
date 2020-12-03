@@ -1860,6 +1860,7 @@ function adm3() {
 
 	curtemp = 'time';
 	$("#myModal11").modal('hide');
+	$('#dropdownMenu2').hide();
 	$('#dropdownMenu1').show();
 
 	//$('.modal-backdrop').hide();
