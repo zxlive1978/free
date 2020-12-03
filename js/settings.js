@@ -1360,7 +1360,7 @@ function colOK10() {
 		wellName = wellSelectBase;
 		namecmt = wellName + "kr";
 		//Сменить название в шапке
-		$('#skvnamelab').text(skv);
+		$('#skvnamelabt').text(skv);
 		//Сохранить в локальное хранилище
 		colPan9save(wellName, skv, namecmt, formname);
 		refresh = true;
@@ -1371,7 +1371,7 @@ function colOK10() {
 	if (curtemp == 'video') {
 		let n = document.getElementById("videoN").options.selectedIndex;
 		let txt = document.getElementById("videoN").options[n].text;
-		$('#skvnamelab').text(txt);
+		$('#skvnamelabt').text(txt);
 		adm();
 	}
 
@@ -1735,7 +1735,7 @@ function adm() {
 	workstream = {};
 
 	//Текущая скважина
-	let cam = $('#skvnamelab').text();
+	let cam = $('#skvnamelabt').text();
 	//console.log(cam);
 
 	var bigelem = '<div class="container-fluid"><div class=" row text-justify">';
@@ -1882,7 +1882,7 @@ function adm3() {
 	online = true;
 	refresh = true;
 	onofadm = true;
-	$('#skvnamelab').text(skv);
+	$('#skvnamelabt').text(skv);
 	init();
 	// colOK11();
 	read_now();
