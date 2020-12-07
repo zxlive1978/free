@@ -1801,6 +1801,7 @@ function adm() {
 function adm2() {
 	//удаление старых потоков
 	deleteoldcams();
+
 	// setTimeout(function(){deleteoldcams();}
 	// , 30000);
 	online = false;
@@ -1887,7 +1888,7 @@ function adm3() {
 	refresh = true;
 	onofadm = true;
 	$('#skvnamelabt').text(skv);
-	init();
+	// init();
 	// colOK11();
 	read_now();
 
