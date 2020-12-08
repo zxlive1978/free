@@ -102,7 +102,7 @@ if (!$_SESSION['auth']) {
     
 </nav> -->
 
-<nav class="navbar  navbar-primary bg-dark py-0 navbar-fixed-top" id="bigpan">
+<nav class="navbar  navbar-primary bg-secondary py-0 navbar-fixed-top" id="bigpan">
 <div class="text-left">
 
 <div class="dropdown">
@@ -135,6 +135,8 @@ if (!$_SESSION['auth']) {
     <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg'  width="30" height="30">  Данные "По времени"</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg'  width="30" height="30">  Видеокамеры</button>
     <div class="dropdown-divider"></div>
+    <button class='btn  btn-dark btn-block text-left'  onClick="colPan10();" ><img src='css/well.svg'  width="30" height="30">  Выбор текущей скважины</button>
+    <div class="dropdown-divider"></div>
     <button class='btn btn-dark  btn-block text-left '  onClick="exit('exit','exit','exit');"  ><img src='css/exit.svg'  width="30" height="30">  Выход из приложения</button>
     
   </div>
@@ -146,7 +148,7 @@ if (!$_SESSION['auth']) {
   <span id="skvnamelab" style="font-weight: bold; font-size: 22px;" onClick="colPan10()" >Скважина</span>
 </button> -->
 <div class="text-center">
-<button type="button"  id="skvnamelab"  data-toggle="tooltip" data-placement="bottom" title="Выбор текущей скважины" class="btn  bg-dark" style="font-weight: bold; padding-top:0; padding-bottom:0; font-size: 22px;" onClick="colPan10();"><img src='css/well.svg'  width="30" height="30" style="font-weight: bold; padding-top:0; padding-bottom:3px; font-size: 22px;"><a id="skvnamelabt" style="color:white;">Скважина ?</a></button>
+<button type="button"  id="skvnamelab"  data-toggle="tooltip" data-placement="bottom" title="Выбор текущей скважины" class="btn  bg-secondary" style="font-weight: bold; padding-top:0; padding-bottom:0; font-size: 22px;" onClick="colPan10();"><img src='css/well.svg'  width="30" height="30" style="font-weight: bold; padding-top:0; padding-bottom:3px; font-size: 22px;"><a id="skvnamelabt" style="color:white;">Скважина ?</a></button>
 </div>
 <div class="text-right">
 <!-- <a class='btn ' data-toggle="tooltip" data-placement="bottom" title="Выход из приложения" style=" padding-top:3; padding-bottom:3; font-size: 18px;" onClick="exit('exit','exit','exit');"><img src='css/exit.svg'  width="27" height="27"></a> -->
