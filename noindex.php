@@ -292,7 +292,7 @@ window.onload = getStart;
   <label for="hcolcolor">Кнопка "Добавить":</label><input class="form-control input-lg bg-dark text-light"type="color" id="pluscol" name="pluscol" value="#e66465"/>
   
   
-  <label for="hcolcolor">Цвет угла в шапке:</label><input class="form-control input-lg bg-dark text-light"type="color" id="rawsvg0" name="rawsvg0" value="#e66465"/>
+  <label for="hcolcolor">Цвет области выше ключевой колонки:</label><input class="form-control input-lg bg-dark text-light"type="color" id="rawsvg0" name="rawsvg0" value="#e66465"/>
   
   
   <label for="hcolcolor">Редактирование экрана:</label><input class="form-control input-lg bg-dark text-light"type="checkbox" id="editscrn" name="editscrn"/>
