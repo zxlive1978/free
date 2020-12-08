@@ -102,7 +102,7 @@ if (!$_SESSION['auth']) {
     
 </nav> -->
 
-<nav class="navbar  navbar-primary bg-info py-0 navbar-fixed-top" id="bigpan">
+<nav class="navbar  navbar-primary bg-secondary py-0 navbar-fixed-top" id="bigpan">
 <div class="text-left">
 
 <div class="dropdown">
