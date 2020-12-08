@@ -119,6 +119,9 @@ if (!$_SESSION['auth']) {
     
     <button class='btn btn-dark  btn-block text-left '  onClick="colOK11();"  ><img src='css/lock.svg'  width="30" height="30">  Редактирование формы</button>
     <button class='btn btn-dark  btn-block text-left '  onClick="colOK15();"  ><img src='css/roll.svg'  width="30" height="30">  Свернуть/Развернуть шапку</button>
+    <div class="dropdown-divider"></div>
+    <a class='btn ' data-toggle="tooltip" data-placement="bottom" title="Выход из приложения" style=" padding-top:3; padding-bottom:3; font-size: 18px;" onClick="exit('exit','exit','exit');"><img src='css/exit.svg'  width="27" height="27"></a>
+
     
   </div>
   </div>
