@@ -2137,141 +2137,141 @@ function init() {
 	
 
 
-	//Кнопки управления, число кнопок
-	//Кнопка "Сейчас" "Масштаб" "Интервал"
-	//Градиент
-	var curicosizem = 0;
-	if (Sheet.icosize * w1 < height_colmn1_p1) {
-		curicosizem = Sheet.icosize * w1;
-	} else { curicosizem = height_colmn1_p1; }
-	//Сколько иконок
-	var howbutts = Number(Object.keys(butts).length);
-	var height_but = (Columns[key].size.h * h1 - curicosizem) / howbutts; //Высота одной из 4-ех кнопок
-	for (let kn = 0; kn < howbutts; kn++) {
-		var gradient = draw.gradient('linear', function (stop) {
-			stop.at(0, '#000')
-			stop.at(1, Columns[key].fill)
-		})
-		gradient.from(0, 0).to(0, 1);
+	// //Кнопки управления, число кнопок
+	// //Кнопка "Сейчас" "Масштаб" "Интервал"
+	// //Градиент
+	// var curicosizem = 0;
+	// if (Sheet.icosize * w1 < height_colmn1_p1) {
+	// 	curicosizem = Sheet.icosize * w1;
+	// } else { curicosizem = height_colmn1_p1; }
+	// //Сколько иконок
+	// var howbutts = Number(Object.keys(butts).length);
+	// var height_but = (Columns[key].size.h * h1 - curicosizem) / howbutts; //Высота одной из 4-ех кнопок
+	// for (let kn = 0; kn < howbutts; kn++) {
+	// 	var gradient = draw.gradient('linear', function (stop) {
+	// 		stop.at(0, '#000')
+	// 		stop.at(1, Columns[key].fill)
+	// 	})
+	// 	gradient.from(0, 0).to(0, 1);
 
-		//Коррекция размера
-		var key = 'col0';
-		var curicosize = 0;
-		if (Sheet.icosize * w1 < height_colmn1_p1) {
-			curicosize = Sheet.icosize * w1;
-		} else { curicosize = height_colmn1_p1; }
+	// 	//Коррекция размера
+	// 	var key = 'col0';
+	// 	var curicosize = 0;
+	// 	if (Sheet.icosize * w1 < height_colmn1_p1) {
+	// 		curicosize = Sheet.icosize * w1;
+	// 	} else { curicosize = height_colmn1_p1; }
 
-		var kurfon = '#000000';
-		var kuropaci = 0.5;
-		if (Sheet.fonbut) {
-			kurfon = '#ffffff';
-			kuropaci = 0.1;
-		} else {
-			kurfon = '#000000'
-		}
+	// 	var kurfon = '#000000';
+	// 	var kuropaci = 0.5;
+	// 	if (Sheet.fonbut) {
+	// 		kurfon = '#ffffff';
+	// 		kuropaci = 0.1;
+	// 	} else {
+	// 		kurfon = '#000000'
+	// 	}
 
-		var colmn1 = draw.polygon(Number(Columns[key].poz.x) * w1 + ',' + (Number(Columns[key].poz.y) * h1 + curicosizem + height_but * kn) + ' ' + (Number(Columns[key].poz.x) * w1 + Number(Columns[key].size.w) * w1) + ',' + (Number(Columns[key].poz.y) * h1 + curicosizem + height_but * kn) + ' ' + (Number(Columns[key].poz.x) * w1 + Number(Columns[key].size.w) * w1) + ',' + (Number(Columns[key].poz.y) * h1 + curicosizem + height_but * (kn + 1)) + ' ' + Number(Columns[key].poz.x) * w1 + ',' + (Number(Columns[key].poz.y) * h1 + curicosizem + height_but * (kn + 1)))
-			//.fill({ color: gradient})
-			.fill({ color: kurfon })
+	// 	var colmn1 = draw.polygon(Number(Columns[key].poz.x) * w1 + ',' + (Number(Columns[key].poz.y) * h1 + curicosizem + height_but * kn) + ' ' + (Number(Columns[key].poz.x) * w1 + Number(Columns[key].size.w) * w1) + ',' + (Number(Columns[key].poz.y) * h1 + curicosizem + height_but * kn) + ' ' + (Number(Columns[key].poz.x) * w1 + Number(Columns[key].size.w) * w1) + ',' + (Number(Columns[key].poz.y) * h1 + curicosizem + height_but * (kn + 1)) + ' ' + Number(Columns[key].poz.x) * w1 + ',' + (Number(Columns[key].poz.y) * h1 + curicosizem + height_but * (kn + 1)))
+	// 		//.fill({ color: gradient})
+	// 		.fill({ color: kurfon })
 
 
 
-		var colmn1 = draw.polygon(Number(Columns[key].poz.x) * w1 + ',' + (Number(Columns[key].poz.y) * h1 + curicosizem + height_but * kn) + ' ' + (Number(Columns[key].poz.x) * w1 + Number(Columns[key].size.w) * w1) + ',' + (Number(Columns[key].poz.y) * h1 + curicosizem + height_but * kn) + ' ' + (Number(Columns[key].poz.x) * w1 + Number(Columns[key].size.w) * w1) + ',' + (Number(Columns[key].poz.y) * h1 + curicosizem + height_but * (kn + 1)) + ' ' + Number(Columns[key].poz.x) * w1 + ',' + (Number(Columns[key].poz.y) * h1 + curicosizem + height_but * (kn + 1)))
-			//.fill({ color: gradient})
-			.fill({ color: Sheet['rawsvg' + String(kn)] })
-			.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor })
-			.opacity(kuropaci);
+	// 	var colmn1 = draw.polygon(Number(Columns[key].poz.x) * w1 + ',' + (Number(Columns[key].poz.y) * h1 + curicosizem + height_but * kn) + ' ' + (Number(Columns[key].poz.x) * w1 + Number(Columns[key].size.w) * w1) + ',' + (Number(Columns[key].poz.y) * h1 + curicosizem + height_but * kn) + ' ' + (Number(Columns[key].poz.x) * w1 + Number(Columns[key].size.w) * w1) + ',' + (Number(Columns[key].poz.y) * h1 + curicosizem + height_but * (kn + 1)) + ' ' + Number(Columns[key].poz.x) * w1 + ',' + (Number(Columns[key].poz.y) * h1 + curicosizem + height_but * (kn + 1)))
+	// 		//.fill({ color: gradient})
+	// 		.fill({ color: Sheet['rawsvg' + String(kn)] })
+	// 		.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor })
+	// 		.opacity(kuropaci);
 
-		var group1 = draw.nested();
-		group1.svg(butts['rawsvg' + String(kn)].img);
-		group1.id(kn)
-		group1.style({ cursor: 'pointer' });
+	// 	var group1 = draw.nested();
+	// 	group1.svg(butts['rawsvg' + String(kn)].img);
+	// 	group1.id(kn)
+	// 	group1.style({ cursor: 'pointer' });
 
-		//Коррекция размера
-		var curicosize = 0;
-		if ((Columns[key].size.w) * w1 < height_but) {
-			curicosize = Columns[key].size.w * w1;
-		} else {
-			curicosize = height_but;
-		}
-		group1.size(curicosize, curicosize);
-		var x2 = Columns[key].poz.x * w1 + Columns[key].size.w * w1 / 2 - curicosize / 2;
-		var y2 = (Number(Columns[key].poz.y) * h1 + curicosizem + height_but * kn);
-		group1.attr('x', String(x2));
-		group1.attr('cx', String(x2));
-		group1.attr('y', String(y2));
-		group1.attr('cy', String(y2));
-		group1.attr('fill', Sheet['rawsvg' + String(kn)]);
-		//Если колокольчик то случ. цвет
-		var randcol = getRandomColor();
-		if (kn == 3) { group1.attr('fill', randcol) }
-		//Прозрачный квадрат для катания по кнопке
-		var rec1 = group1.rect(curicosize, curicosize);
-		rec1.attr('opacity', '0.0');
-		//rec1.attr('x',String(x2));
-		group1.mouseover(function () {
-			if (kn != 3) {
-				this.attr('fill', getRandomColor());
-			}
-		})
-		group1.mouseout(function () {
-			if (kn != 3) {
-				this.attr('fill', Sheet['rawsvg' + String(this.attr('id'))])
-			}
-		});
-		//Если нажата тарелка
-		if (kn == 3) {
-			group1.click(function () {
-				//this.attr('fill','#000');
-				colok14();
-				this.attr('fill', Sheet['rawsvg' + String(this.attr('id'))]);
+	// 	//Коррекция размера
+	// 	var curicosize = 0;
+	// 	if ((Columns[key].size.w) * w1 < height_but) {
+	// 		curicosize = Columns[key].size.w * w1;
+	// 	} else {
+	// 		curicosize = height_but;
+	// 	}
+	// 	group1.size(curicosize, curicosize);
+	// 	var x2 = Columns[key].poz.x * w1 + Columns[key].size.w * w1 / 2 - curicosize / 2;
+	// 	var y2 = (Number(Columns[key].poz.y) * h1 + curicosizem + height_but * kn);
+	// 	group1.attr('x', String(x2));
+	// 	group1.attr('cx', String(x2));
+	// 	group1.attr('y', String(y2));
+	// 	group1.attr('cy', String(y2));
+	// 	group1.attr('fill', Sheet['rawsvg' + String(kn)]);
+	// 	//Если колокольчик то случ. цвет
+	// 	var randcol = getRandomColor();
+	// 	if (kn == 3) { group1.attr('fill', randcol) }
+	// 	//Прозрачный квадрат для катания по кнопке
+	// 	var rec1 = group1.rect(curicosize, curicosize);
+	// 	rec1.attr('opacity', '0.0');
+	// 	//rec1.attr('x',String(x2));
+	// 	group1.mouseover(function () {
+	// 		if (kn != 3) {
+	// 			this.attr('fill', getRandomColor());
+	// 		}
+	// 	})
+	// 	group1.mouseout(function () {
+	// 		if (kn != 3) {
+	// 			this.attr('fill', Sheet['rawsvg' + String(this.attr('id'))])
+	// 		}
+	// 	});
+	// 	//Если нажата тарелка
+	// 	if (kn == 3) {
+	// 		group1.click(function () {
+	// 			//this.attr('fill','#000');
+	// 			colok14();
+	// 			this.attr('fill', Sheet['rawsvg' + String(this.attr('id'))]);
 
-			})
-		}
+	// 		})
+	// 	}
 
-		//Если нажата редактировать экран
-		if (kn == 0) {
-			group1.click(function () {
+	// 	//Если нажата редактировать экран
+	// 	if (kn == 0) {
+	// 		group1.click(function () {
 
-				//colPan3();
+	// 			//colPan3();
 
-				colOK11();
-			})
-		}
+	// 			colOK11();
+	// 		})
+	// 	}
 
-		// //Если нажата камера	
-		// if (kn==3){
-		// 	group1.click(function() {
-		// 		colPan4();
-		// 	})
+	// 	// //Если нажата камера	
+	// 	// if (kn==3){
+	// 	// 	group1.click(function() {
+	// 	// 		colPan4();
+	// 	// 	})
 
-		// }
-		//Если нажата календарь
-		if (kn == 1) {
-			group1.click(function () {
+	// 	// }
+	// 	//Если нажата календарь
+	// 	if (kn == 1) {
+	// 		group1.click(function () {
 
-				colPan3();
-			})
-		}
+	// 			colPan3();
+	// 		})
+	// 	}
 
-		//Если нажата скважина
-		// if (kn==1){
-		// 	group1.click(function() {
-		// 		colPan10();
+	// 	//Если нажата скважина
+	// 	// if (kn==1){
+	// 	// 	group1.click(function() {
+	// 	// 		colPan10();
 
-		// 	})
+	// 	// 	})
 
-		// }
+	// 	// }
 
-		//Если нажата открыть сохранить
-		if (kn == 2) {
-			group1.click(function () {
-				colPan9();
+	// 	//Если нажата открыть сохранить
+	// 	if (kn == 2) {
+	// 		group1.click(function () {
+	// 			colPan9();
 
-			})
+	// 		})
 
-		}
-	}
+	// 	}
+	// }
 
 	//Управляшки
 	if (Sheet.editscrn) {
