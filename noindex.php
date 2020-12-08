@@ -106,8 +106,8 @@ if (!$_SESSION['auth']) {
 <div class="text-left">
 
 <div class="dropdown">
-<!-- <a class='btn btn-outline-light '  data-toggle="tooltip" data-placement="bottom" title="Основное меню регистрируемых данных станции ЭГТИ" onClick="$('#myModal11').modal('show');"><img src='css/menu.png'  width="20" height="20"></a> -->
-<button class='btn btn-outline-light  dropdown-toggle'  id='dropdownMenu1' data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" padding-top:3; padding-bottom:3; " ><img src='css/burg.svg'  width="27" height="27"></button>
+<!-- <a class='btn  '  data-toggle="tooltip" data-placement="bottom" title="Основное меню регистрируемых данных станции ЭГТИ" onClick="$('#myModal11').modal('show');"><img src='css/menu.png'  width="20" height="20"></a> -->
+<button class='btn   dropdown-toggle'  id='dropdownMenu1' data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" padding-top:3; padding-bottom:3; " ><img src='css/burg.svg'  width="27" height="27"></button>
 <div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu1" style=" width: 300px !important;">
 
     <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg'  width="30" height="30">  Данные "По времени"</button>
@@ -123,8 +123,8 @@ if (!$_SESSION['auth']) {
   </div>
   </div>
   <div class="dropdown">
-<!-- <a class='btn btn-outline-light '  data-toggle="tooltip" data-placement="bottom" title="Основное меню регистрируемых данных станции ЭГТИ" onClick="$('#myModal11').modal('show');"><img src='css/menu.png'  width="20" height="20"></a> -->
-<button class='btn btn-outline-light  dropdown-toggle'  id='dropdownMenu2'  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" display:none; padding-top:3; padding-bottom:3;" ><img src='css/burg.svg'  width="27" height="27"></button>
+<!-- <a class='btn  '  data-toggle="tooltip" data-placement="bottom" title="Основное меню регистрируемых данных станции ЭГТИ" onClick="$('#myModal11').modal('show');"><img src='css/menu.png'  width="20" height="20"></a> -->
+<button class='btn   dropdown-toggle'  id='dropdownMenu2'  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" display:none; padding-top:3; padding-bottom:3;" ><img src='css/burg.svg'  width="27" height="27"></button>
 <div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu2" style=" width: 300px !important;">
 
     <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg'  width="30" height="30">  Данные "По времени"</button>
@@ -139,10 +139,10 @@ if (!$_SESSION['auth']) {
   <span id="skvnamelab" style="font-weight: bold; font-size: 22px;" onClick="colPan10()" >Скважина</span>
 </button> -->
 <div class="text-center">
-<button type="button"  id="skvnamelab"  data-toggle="tooltip" data-placement="bottom" title="Выбор текущей скважины" class="btn btn-outline-light " style="font-weight: bold; padding-top:0; padding-bottom:0; font-size: 22px;" onClick="colPan10();"><img src='css/well.svg'  width="30" height="30" style="font-weight: bold; padding-top:0; padding-bottom:3px; font-size: 22px;"><a id="skvnamelabt">Скважина ?</a></button>
+<button type="button"  id="skvnamelab"  data-toggle="tooltip" data-placement="bottom" title="Выбор текущей скважины" class="btn  " style="font-weight: bold; padding-top:0; padding-bottom:0; font-size: 22px;" onClick="colPan10();"><img src='css/well.svg'  width="30" height="30" style="font-weight: bold; padding-top:0; padding-bottom:3px; font-size: 22px;"><a id="skvnamelabt">Скважина ?</a></button>
 </div>
 <div class="text-right">
-<a class='btn btn-outline-light' data-toggle="tooltip" data-placement="bottom" title="Выход из приложения" style=" padding-top:3; padding-bottom:3; font-size: 18px;" onClick="exit('exit','exit','exit');"><img src='css/exit.svg'  width="27" height="27"></a>
+<a class='btn ' data-toggle="tooltip" data-placement="bottom" title="Выход из приложения" style=" padding-top:3; padding-bottom:3; font-size: 18px;" onClick="exit('exit','exit','exit');"><img src='css/exit.svg'  width="27" height="27"></a>
 </div>
 </nav>
 
@@ -626,8 +626,8 @@ window.onload = getStart;
 <!-- <label class="control-label" for="hcolcolor">Каталог форм:   </label><select class="form-control input-lg bg-dark text-light" name="colitems9" id="colitems9"  size="5" ></select>
 <label class="control-label" for="hcolcolor">Имя формы:      </label><input class="form-control input-lg bg-dark text-light" type="text" id="colitems99" name="colitems99" value=""/> -->
 
-<br><br><button type="button"  id="datatab"  class="  btn btn-outline-light btn-block text-center bg-dark text-light"  onClick="adm3();" data-toggle="tooltip" data-placement="bottom" title="Отображение регистрируемых параметров по ключевому параметру время">Данные "По времени"</button>
-<button type="button"  id="vidotab"  class=" btn btn-outline-light btn-block  text-center bg-dark text-light"   onClick="adm();" data-toggle="tooltip" data-placement="bottom" title="Просмотр онлайн видеоданных с буровой">Видеокамеры</button><br><br><br>
+<br><br><button type="button"  id="datatab"  class="  btn  btn-block text-center bg-dark text-light"  onClick="adm3();" data-toggle="tooltip" data-placement="bottom" title="Отображение регистрируемых параметров по ключевому параметру время">Данные "По времени"</button>
+<button type="button"  id="vidotab"  class=" btn  btn-block  text-center bg-dark text-light"   onClick="adm();" data-toggle="tooltip" data-placement="bottom" title="Просмотр онлайн видеоданных с буровой">Видеокамеры</button><br><br><br>
 
 <!-- </div> -->
         <!-- Modal footer -->
