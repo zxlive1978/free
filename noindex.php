@@ -102,7 +102,7 @@ if (!$_SESSION['auth']) {
     
 </nav> -->
 
-<nav class="navbar  navbar-primary bg-secondary py-0 navbar-fixed-top" id="bigpan">
+<nav class="navbar  navbar-primary bg-dark py-0 navbar-fixed-top" id="bigpan">
 <div class="text-left">
 
 <div class="dropdown">
@@ -113,6 +113,7 @@ if (!$_SESSION['auth']) {
     <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg'  width="30" height="30">  Данные "По времени"</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg'  width="30" height="30">  Видеокамеры</button>
     <div class="dropdown-divider"></div>
+    <button class='btn  btn-dark btn-block text-left'  onClick="colPan10();" ><img src='css/well.svg'  width="30" height="30">  Выбор текущей скважины</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="colPan3();" ><img src='css/lupa.svg'  width="30" height="30">  Выбор даты и интервала</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="colPan9();" ><img src='css/form.svg'  width="30" height="30">  Загр./Сохр.(Создать) форму</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="colok14();" ><img src='css/wave.svg'  width="30" height="30">  Старт/Стоп прием данных</button>
