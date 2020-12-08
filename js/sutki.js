@@ -1227,8 +1227,10 @@ function init() {
 	})*/
 	//var group_time_rul = draw.nested();
 	var time1 = draw.polygon('0,' + h1 * disp_up + ' ' + w1 * time_w + ',' + h1 * disp_up + ' ' + w1 * time_w + ',' + h1 * 100 + ' 0,' + h1 * 100)
-		.fill({ color: Columns.col0.fill })
-		.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
+	.fill({ color: Columns.col0.fill })
+	.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
+	// var time1 = draw.polygon('0,0' + ' ' + w1 * time_w + ',0' + ' ' + w1 * time_w + ',' + h1 * 100 + ' 0,' + h1 * 100)
+
 
 
 
@@ -2131,7 +2133,7 @@ function init() {
 
 	//Шапка Угловой квадрат
 	var colmn0 = draw.polygon('0,0 ' + w1 * Columns.col0.size.w + ',0 ' + w1 * Columns.col0.size.w + ',' + h1 * Columns.col0.size.h + ' 0,' + h1 * Columns.col0.size.h)
-		.fill({ color: '#fff' })
+		.fill({ color: Sheet.rawsvg0 })
 		.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor })
 
 	

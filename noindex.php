@@ -292,25 +292,25 @@ window.onload = getStart;
   <label for="hcolcolor">Кнопка "Добавить":</label><input class="form-control input-lg bg-dark text-light"type="color" id="pluscol" name="pluscol" value="#e66465"/>
   
   
-  <label for="hcolcolor">Кнопка "Замок":</label><input class="form-control input-lg bg-dark text-light"type="color" id="rawsvg0" name="rawsvg0" value="#e66465"/>
+  <label for="hcolcolor">Цвет угла в шапке:</label><input class="form-control input-lg bg-dark text-light"type="color" id="rawsvg0" name="rawsvg0" value="#e66465"/>
   
   
   <label for="hcolcolor">Редактирование экрана:</label><input class="form-control input-lg bg-dark text-light"type="checkbox" id="editscrn" name="editscrn"/>
   
   
-  <label for="hcolcolor">Кнопка "Лупа":</label><input class="form-control input-lg bg-dark text-light"type="color" id="rawsvg1" name="rawsvg1" value="#e66465"/>
+  <!-- <label class="invisible" for="hcolcolor">Кнопка "Лупа":</label><input class="invisible form-control input-lg bg-dark text-light"type="color" id="rawsvg1" name="rawsvg1" value="#e66465"/>
   
   
-  <label for="hcolcolor">Кнопка "Форма":</label><input class="form-control input-lg bg-dark text-light"type="color" id="rawsvg2" name="rawsvg2" value="#e66465"/>
-  
-   
-  <label for="hcolcolor">Кнопка "Прием данных":</label><input class="form-control input-lg bg-dark text-light"type="color" id="rawsvg3" name="rawsvg3" value="#e66465"/>
+  <label class="invisible" for="hcolcolor">Кнопка "Форма":</label><input class="invisible form-control input-lg bg-dark text-light"type="color" id="rawsvg2" name="rawsvg2" value="#e66465"/>
   
    
-  <label class="d-none" for="hcolcolor">Кнопка "Форма":</label><input class="d-none form-control input-lg bg-dark text-light"type="color" id="rawsvg4" name="rawsvg4" value="#e66465"/>
+  <label class="invisible" for="hcolcolor">Кнопка "Прием данных":</label><input class="invisible form-control input-lg bg-dark text-light"type="color" id="rawsvg3" name="rawsvg3" value="#e66465"/>
+  
+   
+  <label class="d-none invisible" for="hcolcolor">Кнопка "Форма":</label><input class="invisible d-none form-control input-lg bg-dark text-light"type="color" id="rawsvg4" name="rawsvg4" value="#e66465"/>
   
   
-  <label for="hcolcolor">Фон кнопок (белый/ черный):</label><input class="form-control input-lg bg-dark text-light"type="checkbox" id="fonbut" name="fonbut"/>
+  <label  class="invisible" for="hcolcolor">Фон кнопок (белый/ черный):</label><input class="form-control input-lg bg-dark text-light invisible"type="checkbox" id="fonbut" name="fonbut"/> -->
          </div>
         
         <!-- Modal footer -->
