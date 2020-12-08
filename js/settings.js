@@ -1869,7 +1869,7 @@ function adm3() {
 	//$('.modal-backdrop').hide();
 
 	//удаление старых потоков
-	deleteoldcams();
+	//deleteoldcams();
 	// setTimeout(function(){deleteoldcams();}
 	// , 30000);
 
