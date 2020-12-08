@@ -102,12 +102,12 @@ if (!$_SESSION['auth']) {
     
 </nav> -->
 
-<nav class="navbar  navbar-primary bg-dark py-0 navbar-fixed-top" id="bigpan">
+<nav class="navbar  navbar-primary bg-info py-0 navbar-fixed-top" id="bigpan">
 <div class="text-left">
 
 <div class="dropdown">
 <!-- <a class='btn  '  data-toggle="tooltip" data-placement="bottom" title="Основное меню регистрируемых данных станции ЭГТИ" onClick="$('#myModal11').modal('show');"><img src='css/menu.png'  width="20" height="20"></a> -->
-<button class='btn   dropdown-toggle'  id='dropdownMenu1' data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" padding-top:3; padding-bottom:3; " ><img src='css/burg.svg'  width="27" height="27"></button>
+<button class='btn   bg-dark '  id='dropdownMenu1' data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" padding-top:3; padding-bottom:3; " ><img src='css/burg.svg'  width="27" height="27"></button>
 <div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu1" style=" width: 300px !important;">
 
     <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg'  width="30" height="30">  Данные "По времени"</button>
@@ -120,7 +120,8 @@ if (!$_SESSION['auth']) {
     <button class='btn btn-dark  btn-block text-left '  onClick="colOK11();"  ><img src='css/lock.svg'  width="30" height="30">  Редактирование формы</button>
     <button class='btn btn-dark  btn-block text-left '  onClick="colOK15();"  ><img src='css/roll.svg'  width="30" height="30">  Свернуть/Развернуть шапку</button>
     <div class="dropdown-divider"></div>
-    <a class='btn ' data-toggle="tooltip" data-placement="bottom" title="Выход из приложения" style=" padding-top:3; padding-bottom:3; font-size: 18px;" onClick="exit('exit','exit','exit');"><img src='css/exit.svg'  width="27" height="27"></a>
+    <button class='btn btn-dark  btn-block text-left '  onClick="exit('exit','exit','exit');"  ><img src='css/exit.svg'  width="30" height="30">  Выход из приложения</button>
+    <!-- <a class='btn ' data-toggle="tooltip" data-placement="bottom" title="Выход из приложения" style=" padding-top:3; padding-bottom:3; font-size: 18px;" onClick="exit('exit','exit','exit');"><img src='css/exit.svg'  width="27" height="27"></a> -->
 
     
   </div>
@@ -132,6 +133,8 @@ if (!$_SESSION['auth']) {
 
     <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg'  width="30" height="30">  Данные "По времени"</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg'  width="30" height="30">  Видеокамеры</button>
+    <div class="dropdown-divider"></div>
+    <button class='btn btn-dark  btn-block text-left '  onClick="exit('exit','exit','exit');"  ><img src='css/exit.svg'  width="30" height="30">  Выход из приложения</button>
     
   </div>
   </div>
