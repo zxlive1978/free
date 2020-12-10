@@ -149,7 +149,7 @@ function getstatcamscams(whatdo, namecams) {
                                                 })
                                                 jumpjump = jumpjump + 1;
                                                 //getstatcams('check',namecams);
-                                                setTimeout(tiktak, 2000);
+                                                setTimeout(tiktak, 4000);
 
 
 
