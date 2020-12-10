@@ -104,7 +104,7 @@ function getstatcamscams(whatdo, namecams) {
                                         pgg.setAttribute('aria-valuenow', '50');
                                         pgg.setAttribute('style', 'width:' + '50%')
                                         let moto = setTimeout(function tiktak() {
-                                            if (jumpjump == 10 || fundstream == true) {
+                                            if (jumpjump == 30 || fundstream == true) {
                                                 //$('#form7').append('BAD');
                                                 clearTimeout(moto);
                                                 gogocams();
@@ -149,7 +149,7 @@ function getstatcamscams(whatdo, namecams) {
                                                 })
                                                 jumpjump = jumpjump + 1;
                                                 //getstatcams('check',namecams);
-                                                setTimeout(tiktak, 4000);
+                                                setTimeout(tiktak, 2000);
 
 
 
