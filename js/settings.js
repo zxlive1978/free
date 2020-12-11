@@ -630,6 +630,8 @@ function colOK2() {
 
 		curPar.par = bigPar[String($("#colitems2").val())].par;
 		curPar.txt = bigPar[String($("#colitems2").val())].txt;
+		curPar.unit= bigPar[String($("#colitems2").val())].unit;
+		//curPar.color= bigPar[String($("#colitems2").val())].unit;
 		curPar.poz.y = curXpoz + 1;
 		curPar.poz.x = Number(ParSelect.substr(3));
 		//console.log(curPar);
