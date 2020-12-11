@@ -109,6 +109,7 @@ function loadddata(name) {
 				basePar = plan[2];
 				txtPar = plan[3];
 				txtOknOPar = plan[4];
+				read_now();
 				//Перерисовка
 				try {
 				$("#drawing").find("*").not("rect, g").remove();
@@ -116,6 +117,7 @@ function loadddata(name) {
 				catch(e){ }
 				onoffpan();
 				init();
+				
 				
 				
 			}

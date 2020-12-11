@@ -16,7 +16,7 @@ var width = window.innerWidth, height = window.innerHeight, widthbak = width, he
 //<?php echo 'var timetime = '.json_encode($timeshift);?>;
 var end;
 //Обновление
-var refresh = true;
+var refresh = false;
 //Онлайн
 var online = true;
 //Ширина участка данных
@@ -45,7 +45,7 @@ var skv ="";
 var namecmt = wellName + "kr";
 var formname = "Под телефон";
 
-if (!isMobile){formname="Цветная";}
+if (!isMobile){formname="Под планшет(ПК) светлая";}
 
 //Сохранение и чтение настроей из локального хранилища
 //IE Права icacls %userprofile%\Appdata\LocalLow /t /setintegritylevel (OI)(CI)L
