@@ -16,7 +16,7 @@ var width = window.innerWidth, height = window.innerHeight, widthbak = width, he
 //<?php echo 'var timetime = '.json_encode($timeshift);?>;
 var end;
 //Обновление
-var refresh = true;
+var refresh = false;
 //Онлайн
 var online = true;
 //Ширина участка данных
