@@ -155,7 +155,7 @@ function readskvstart(whatdo, table, p000, skvsjson){
 					if (skv ==""){} else{
 					$('#skvnamelabt').text(skv);}
 					
-					read_now();
+					
 					//read_next();
 					//Список скважин
 					$('[id^="par"]').click(function (){
