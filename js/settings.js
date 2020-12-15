@@ -1373,8 +1373,8 @@ function colOK10() {
 	}
 	if (curtemp == 'video') {
 		let real=$('input[id="real1"]:checked').val();
-		//radio
-		if (real=='on'){
+		//если выбран архив
+		if (real!='on'){
 		console.log(real);}
 		let n = document.getElementById("videoN").options.selectedIndex;
 		let txt = document.getElementById("videoN").options[n].text;
