@@ -671,8 +671,9 @@ window.onload = getStart;
         <!-- Modal body -->
         <div class="modal-body">
         <label for="hcolcolor">Название скважины:</label><select class="form-control input-lg bg-dark text-light" name="videoN" id="videoN"  size="1" ></select>
-        <label class="radio-inline"><input type="radio" name="optradio1" checked>В реальном времени</label>
-        <label class="radio-inline"><input type="radio" name="optradio2">Архив</label>
+        <br>
+        <label class="radio-inline"><input type="radio" name="optradio" checked>В реальном времени</label>
+        <label class="radio-inline"><input type="radio" name="optradio">Архив</label><br>
 
         <label for="hcolcolor"class="control-label">Начало:</label>
         <input type='date' class="form-control  bg-dark text-light" id='startdate1' name='startdate1' value="<?php echo date('Y-m-d');?>"><input type="time" id="starttime1" name="starttime1" class="form-control  bg-dark text-light" value="00:00" min="00:00" max="24:00" required>
