@@ -672,16 +672,17 @@ window.onload = getStart;
         <div class="modal-body">
         <label for="hcolcolor">Название скважины:</label><select class="form-control input-lg bg-dark text-light" name="videoN" id="videoN"  size="1" ></select>
         <br>
-        <label for="hcolcolor">Тип просмотра:</label>
+        <label for="hcolcolor">Тип просмотра:</label><br>
         <label class="radio-inline"><input type="radio" id="real1" name="optradio" checked>   В реальном времени</label>
         <label class="radio-inline"><input type="radio" id="real2" name="optradio">     Архив</label><br>
 
+        <div class="input-group" disabled>
         <label for="hcolcolor"class="control-label">Начало:</label>
-        <input type='date' class="form-control  bg-dark text-light" id='startdate1' name='startdate1' value="<?php echo date('Y-m-d');?>"><input type="time"  class="form-control bg-dark text-light" id="starttime1" name="starttime1" class="form-control  bg-dark text-light" value="00:00" min="00:00" max="24:00" required hide>
+        <input type='date' class="form-control  bg-dark text-light" id='startdate1' name='startdate1' value="<?php echo date('Y-m-d');?>"><input type="time"  class="form-control bg-dark text-light" id="starttime1" name="starttime1" class="form-control  bg-dark text-light " value="00:00" min="00:00" max="24:00" required >
 
         <label for="hcolcolor"class="control-label">Конец:</label>
-        <input type='date' class="form-control  bg-dark text-light" id='startdate2' name='startdate2' value="<?php echo date('Y-m-d');?>"><input type="time" class="form-control bg-dark text-light" id="starttime2" name="starttime2" class="form-control  bg-dark text-light" value="00:01" min="00:00" max="24:00" required hide>
-        
+        <input type='date' class="form-control  bg-dark text-light " id='startdate2' name='startdate2' value="<?php echo date('Y-m-d');?> "><input type="time" class="form-control bg-dark text-light" id="starttime2" name="starttime2" class="form-control  bg-dark text-light" value="00:01" min="00:00" max="24:00" required >
+        </div>
 
         
         <!-- <label for="hcolcolor"class="control-label">Тип потока:</label><select id="zzzzooom1" class="form-control input-lg bg-dark text-light" name="zzzzooom1" value="3">
