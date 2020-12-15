@@ -665,9 +665,9 @@ window.onload = getStart;
         <!-- Modal body -->
         <div class="modal-body">
         <label for="hcolcolor">Название скважины:</label><select class="form-control input-lg bg-dark text-light" name="videoN" id="videoN"  size="1" ></select>
-        <!-- <label for="hcolcolor"class="control-label">Тип потока:</label><select id="zzzzooom1" class="form-control input-lg bg-dark text-light" name="zzzzooom1" value="3">
+        <label for="hcolcolor"class="control-label">Тип потока:</label><select id="zzzzooom1" class="form-control input-lg bg-dark text-light" name="zzzzooom1" value="3">
       <option value="01">Основной</option>
-      <option value="02">Дополнительный</option> </select> -->
+      <option value="02">Дополнительный</option> </select>
   
 </div>        
         <!-- Modal footer -->
