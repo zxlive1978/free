@@ -1938,7 +1938,7 @@ function colOK15() {
 }
 
 //выбор для вкладки видео, реалтайм или архив
-//rtsp://admin:Video$69@31.173.139.133:554/Streaming/tracks/1901?starttime=20201214t063812z&endtime=20201214t064816z
+//Streaming/tracks/1901?starttime=20201214t063812z&endtime=20201214t064816z
 function colOK161() {
 	$('input[name="menu"]:checked').val();
 
