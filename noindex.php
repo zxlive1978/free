@@ -23,6 +23,8 @@ if (!$_SESSION['auth']) {
 
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- 2. Подключить CSS-файл библиотеки Bootstrap 3 DateTimePicker -->  
+<!-- <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css" /> -->
 <!-- Jquery -->
 <link rel="stylesheet" href="css/jquery-ui.min.css">
 <!-- <link rel="stylesheet" href="css/style.css"> -->
@@ -59,8 +61,12 @@ if (!$_SESSION['auth']) {
 
 
 <!-- Bootstrap --> 
+<!-- 4. Подключить библиотеку moment -->
+<!-- <script src="js/moment-with-locales.min.js"></script> -->
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<!-- 6. Подключить js-файл библиотеки Bootstrap 3 DateTimePicker -->
+<!-- <script src="js/bootstrap-datetimepicker.min.js"></script> -->
 
 
 <script type="text/javascript" src="js/svg.min.js"></script>
@@ -666,7 +672,14 @@ window.onload = getStart;
         <div class="modal-body">
         <label for="hcolcolor">Название скважины:</label><select class="form-control input-lg bg-dark text-light" name="videoN" id="videoN"  size="1" ></select>
 
-        <label for="hcolcolor"class="control-label">Начало:</label><input type='date' class="form-control input-lg bg-dark text-light" id='startdate1' name='startdate1' value="<?php echo date('Y-m-d');?>">
+        <label for="hcolcolor"class="control-label">Начало:</label>
+        <input type='date' class="form-control  bg-dark text-light" id='startdate1' name='startdate1' value="<?php echo date('Y-m-d');?>"><input type="time" id="starttime1" name="starttime1" class="form-control  bg-dark text-light" value="00:00" min="00:00" max="24:00" required>
+
+        <label for="hcolcolor"class="control-label">Конец:</label>
+        <input type='date' class="form-control  bg-dark text-light" id='startdate1' name='startdate1' value="<?php echo date('Y-m-d');?>"><input type="time" id="starttime1" name="starttime1" class="form-control  bg-dark text-light" value="00:00" min="00:00" max="24:00" required>
+        <input type="datetime">
+
+        
         <!-- <label for="hcolcolor"class="control-label">Тип потока:</label><select id="zzzzooom1" class="form-control input-lg bg-dark text-light" name="zzzzooom1" value="3">
       <option value="01">Основной</option>
       <option value="02">Дополнительный</option> </select> -->
