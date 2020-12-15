@@ -1372,6 +1372,8 @@ function colOK10() {
 		/* namecmt=wellSelectBase + "kr"; */
 	}
 	if (curtemp == 'video') {
+		let real=$('input[name="real1"]:checked').val();
+		console.log(real);
 		let n = document.getElementById("videoN").options.selectedIndex;
 		let txt = document.getElementById("videoN").options[n].text;
 		$('#skvnamelabt').text(txt);
