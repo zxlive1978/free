@@ -674,7 +674,7 @@ window.onload = getStart;
         <br>
         <label for="hcolcolor">Тип просмотра:</label><br>
         <label class="radio-inline"><input type="radio" id="real1" name="optradio" checked>   В реальном времени</label>
-        <label class="radio-inline"><input type="radio" id="real2" name="optradio">     Архив</label><br>
+        <label class="radio-inline"><input type="radio" id="real2" name="optradio" onclick>     Архив</label><br>
 
         
         <label for="hcolcolor"class="control-label">Начало:</label>
