@@ -673,8 +673,8 @@ window.onload = getStart;
         <label for="hcolcolor">Название скважины:</label><select class="form-control input-lg bg-dark text-light" name="videoN" id="videoN"  size="1" ></select>
         <br>
         <label for="hcolcolor">Тип просмотра:</label><br>
-        <label class="radio-inline"> <input type="radio" id="real1" name="optradio" checked>   В реальном времени</label>
-        <label class="radio-inline"> <input type="radio" id="real2" name="optradio" >     Архив</label><br>
+        <label class="radio-inline"><input type="radio" id="real1" name="optradio" checked>   В реальном времени</label>
+        <label class="radio-inline"><input type="radio" id="real2" name="optradio" >     Архив</label><br>
 
         
         <label for="hcolcolor"class="control-label">Начало:</label>
