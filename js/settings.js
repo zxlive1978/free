@@ -1377,7 +1377,13 @@ function colOK10() {
 		if (real!='on'){
 			let strd1=$('input[name="startdate1"]').val();
 			let strt1=$('input[name="starttime1"]').val();
-			console.log(strd1+'  '+strt1);
+			let strd2=$('input[name="startdate2"]').val();
+			let strt2=$('input[name="starttime2"]').val();
+			//Streaming/tracks/1901?starttime=20201214t063812z&endtime=20201214t064816z
+			//2020-12-21  01:00   2020-12-21  01:01
+			///Streaming/Channels/1701
+			let backfuture='?starttime='+strd1.split
+			console.log(strd1+'  '+strt1+'   '+strd2+'  '+strt2+' = '+backfuture);
 		}
 		let n = document.getElementById("videoN").options.selectedIndex;
 		let txt = document.getElementById("videoN").options[n].text;
