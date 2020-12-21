@@ -1375,7 +1375,9 @@ function colOK10() {
 		let real=$('input[id="real1"]:checked').val();
 		//если выбран архив
 		if (real!='on'){
-		console.log(real);}
+			let str1=$('#startdate1').val();
+			console.log(str1);
+		}
 		let n = document.getElementById("videoN").options.selectedIndex;
 		let txt = document.getElementById("videoN").options[n].text;
 		$('#skvnamelabt').text(txt);
