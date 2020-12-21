@@ -678,10 +678,10 @@ window.onload = getStart;
 
         
         <label for="hcolcolor"class="control-label">Начало:</label>
-        <input type='date' class="form-control  bg-dark text-light" id='startdate1' name='startdate1' value="<?php echo date('Y-m-d');?>"><input type="time"  class="form-control bg-dark text-light" id="starttime1" name="starttime1" class="form-control  bg-dark text-light " value="00:00" min="00:00" max="24:00" required >
+        <input type='date' class="form-control  bg-dark text-light" id='startdate1' name='startdate1' value="<?php echo date('Y-m-d');?>"><input type="time"  class="form-control bg-dark text-light" id="starttime1" name="starttime1" class="form-control  bg-dark text-light " value="01:00" min="00:00" max="24:00" required >
 
         <label for="hcolcolor"class="control-label">Конец:</label>
-        <input type='date' class="form-control  bg-dark text-light" id='startdate2' name='startdate2' value="<?php echo date('Y-m-d');?>"><input type="time" class="form-control bg-dark text-light" id="starttime2" name="starttime2" class="form-control  bg-dark text-light" value="00:00" min="00:00" max="24:00" required >
+        <input type='date' class="form-control  bg-dark text-light" id='startdate2' name='startdate2' value="<?php echo date('Y-m-d');?>"><input type="time" class="form-control bg-dark text-light" id="starttime2" name="starttime2" class="form-control  bg-dark text-light" value="01:01" min="00:00" max="24:00" required >
         
 
         
