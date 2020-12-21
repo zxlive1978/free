@@ -1375,7 +1375,7 @@ function colOK10() {
 		let real=$('input[id="real1"]:checked').val();
 		//если выбран архив
 		if (real!='on'){
-			let str1=$('#startdate1').text();
+			let str1=$('input[name="startdate1"]').val();
 			console.log(str1);
 		}
 		let n = document.getElementById("videoN").options.selectedIndex;
