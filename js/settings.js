@@ -1382,6 +1382,7 @@ function colOK10() {
 			//Streaming/tracks/1901?starttime=20201214t063812z&endtime=20201214t064816z
 			//2020-12-21  01:00   2020-12-21  01:01
 			///Streaming/Channels/1701
+			//?starttime=20201222t010000z&endtime=20201222t010100z
 			var backfuture='?starttime='+strd1.replaceAll('-', '')+'t'+strt1.replaceAll(':', '')+'00z'+
 			'&endtime='+strd2.replaceAll('-', '')+'t'+strt2.replaceAll(':', '')+'00z';
 			console.log(strd1+'  '+strt1+'   '+strd2+'  '+strt2+' = '+backfuture);
