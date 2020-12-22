@@ -12,8 +12,9 @@ var toponof = true;
 var backcolh= 0;
 var backsheetdisp=0;
 
-//Режим просмотра видео
+//Режим просмотра видео Реалтайм или Архив
 var real='on';
+var backfuture='';
 
 
 //Открыть закрыть админку
@@ -1386,7 +1387,7 @@ function colOK10() {
 			//2020-12-21  01:00   2020-12-21  01:01
 			///Streaming/Channels/1701
 			//?starttime=20201222t010000z&endtime=20201222t010100z
-			var backfuture='?starttime='+strd1.replaceAll('-', '')+'t'+strt1.replaceAll(':', '')+'00z'+
+			backfuture='?starttime='+strd1.replaceAll('-', '')+'t'+strt1.replaceAll(':', '')+'00z'+
 			'&endtime='+strd2.replaceAll('-', '')+'t'+strt2.replaceAll(':', '')+'00z';
 			
 		}
