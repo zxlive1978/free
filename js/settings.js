@@ -1375,7 +1375,7 @@ function colOK10() {
 		/* namecmt=wellSelectBase + "kr"; */
 	}
 	if (curtemp == 'video') {
-		var real=$('input[id="real1"]:checked').val();
+		real=$('input[id="real1"]:checked').val();
 		//если выбран архив
 		if (real!='on'){
 			let strd1=$('input[name="startdate1"]').val();
