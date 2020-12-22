@@ -1385,7 +1385,7 @@ function colOK10() {
 			//?starttime=20201222t010000z&endtime=20201222t010100z
 			var backfuture='?starttime='+strd1.replaceAll('-', '')+'t'+strt1.replaceAll(':', '')+'00z'+
 			'&endtime='+strd2.replaceAll('-', '')+'t'+strt2.replaceAll(':', '')+'00z';
-			console.log(strd1+'  '+strt1+'   '+strd2+'  '+strt2+' = '+backfuture);
+			
 		}
 		let n = document.getElementById("videoN").options.selectedIndex;
 		let txt = document.getElementById("videoN").options[n].text;

@@ -84,8 +84,13 @@ function getstatcamscams(whatdo, namecams) {
                             n['id'] = s[i]['id'];
                             //console.log(n,n['id']);
                             if (namecams == (s[i]['id'])) {
-
+                                
                                 let rtsp = n['rtsp'];
+                                //Если воспроизведение из архива
+                                if (real!='on'){
+                                    rtsp = rtsp.replaceAll('Channels', 'tracks')+backfuture;
+                                    console.log(rtsp);
+                                }
                                 $.ajax({
                                     type: "POST",
                                     url: 'js/cams.php',
