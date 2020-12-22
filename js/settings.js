@@ -12,6 +12,9 @@ var toponof = true;
 var backcolh= 0;
 var backsheetdisp=0;
 
+//Режим просмотра видео
+var real='on';
+
 
 //Открыть закрыть админку
 var onofadm = true;
