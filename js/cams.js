@@ -89,7 +89,8 @@ function getstatcamscams(whatdo, namecams) {
                                 //Если воспроизведение из архива
                                 if (real!='on'){
                                     rtsp = rtsp.replaceAll('Channels', 'tracks')+backfuture;
-                                    console.log(rtsp);
+                                    //console.log(rtsp);
+                                    
                                 }
                                 $.ajax({
                                     type: "POST",
