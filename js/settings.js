@@ -1883,8 +1883,10 @@ function adm2() {
 
 //вкладка По времени
 function adm3() {
-	deleteoldcams();
-	
+	if (curtemp='video'){
+		//удаление старых потоков
+		deleteoldcams();
+	}
 	curtemp = 'time';
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu2').hide();
