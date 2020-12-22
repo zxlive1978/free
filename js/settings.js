@@ -1724,10 +1724,9 @@ transliterate = (
 //вкладка камеры
 var camscreate = true;
 function adm() {
-	if (curtemp='video'){
-		//удаление старых потоков
-		deleteoldcams();
-	}
+	
+	//удаление старых потоков
+	deleteoldcams();
 
 	curtemp = 'video';
 	$("#myModal11").modal('hide');
@@ -1884,10 +1883,8 @@ function adm2() {
 
 //вкладка По времени
 function adm3() {
-	if (curtemp='video'){
-		//удаление старых потоков
-		deleteoldcams();
-	}
+	deleteoldcams();
+	
 	curtemp = 'time';
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu2').hide();
