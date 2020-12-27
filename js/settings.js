@@ -1886,6 +1886,7 @@ function adm3() {
 	if (curtemp='video'){
 		//удаление старых потоков
 		deleteoldcams();
+		
 	}
 	curtemp = 'time';
 	$("#myModal11").modal('hide');
