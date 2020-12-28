@@ -119,7 +119,7 @@ function read_cycle (){
 //Чтение последних значений
 function read_next(){
 	
-	if (curtemp='time'){
+	if (curtemp=='time'){
 	if (refresh==true &&  wellName!='' ){
 		online = true;
 		refresh=false;
@@ -183,7 +183,7 @@ function read_next(){
 	
 	}}
 
-	if (curtemp='depth'){
+	if (curtemp=='depth'){
 
 		if (refresh==true &&  wellName!='' ){
 		refresh = false;
@@ -283,12 +283,12 @@ function read_random(){
 
 //Запуск текущего состояния
 function read_now(){
-	if (curtemp='time'){
+	if (curtemp=='time'){
 	refresh = true;
 	read_next();}
-
-	if (curtemp='depth'){
-		refresh = true;
+console.log(curtemp);
+	if (curtemp=='depth'){
+		//refresh = true;
 		read_next();}
 }
 //Чтение вверх
