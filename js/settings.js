@@ -1883,7 +1883,7 @@ function adm2() {
 
 //вкладка По времени
 function adm3() {
-	if (curtemp='video'){
+	if (curtemp=='video'){
 		//удаление старых потоков
 		deleteoldcams();
 	}
@@ -1922,7 +1922,7 @@ function adm3() {
 
 //вкладка По Глубине
 function adm4() {
-	if (curtemp='video'){
+	if (curtemp=='video'){
 		//удаление старых потоков
 		deleteoldcams();
 	}
