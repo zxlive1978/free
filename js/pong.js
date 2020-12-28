@@ -265,8 +265,13 @@ function read_random(){
 
 //Запуск текущего состояния
 function read_now(){
+	if (curtemp='time'){
 	refresh = true;
-	read_next();
+	read_next();}
+
+	if (curtemp='depth'){
+		refresh = true;
+		read_next();}
 }
 //Чтение вверх
 function read_up(){
