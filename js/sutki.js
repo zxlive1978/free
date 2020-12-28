@@ -1613,6 +1613,7 @@ function init() {
 }
 
 
+
 //Если ШКАЛА ГЛУБИН А
 if (curtemp=='depth'){
 
@@ -1631,7 +1632,7 @@ if (curtemp=='depth'){
 
 	stepMin = Sheet.Kzoom * 2 * 4;
 
-	var last_time2 = start_time / 1 + Sheet.Kzoom * 60 * 60;
+	var last_time2 = start_time / 1 + Sheet.Kzoom * 100 * 100;
 	var day = new Date(last_time2 * 1000);
 	var last_hour = day.getHours();
 	var last_minutes = day.getMinutes();
@@ -1645,13 +1646,13 @@ if (curtemp=='depth'){
 	var beg_plats = h1 * disp_up //Отступ от шапки
 
 	//Сколько целых минут?
-	var minut_round = (last_time2 - beg_time2) / 60;
+	var minut_round = (last_time2 - beg_time2) / 100;
 
 	// Сколько 10 минуток ?
 	var ten_minuts = minut_round / stepMin;
 
 	//Дата для первой 10 минутки в секундах от начала
-	var ten = beg_time2 + stepMin * 60;//+10 минут
+	var ten = beg_time2 + stepMin * 100;//+10 минут
 	var day = new Date(ten * 1000);
 	var next_ten = Math.floor(day.getMinutes() / stepMin) * stepMin;//удалили минуты от 1..9
 	var ten_date = new Date(day.getFullYear(), day.getMonth(), day.getDate(), day.getHours(), next_ten, 0, 0); // Дата 10 минут 0 сек 0 мсек
@@ -1694,7 +1695,7 @@ if (curtemp=='depth'){
 
 		//Цифровые значения шкалы
 		if (big_teth) {
-			var day = new Date(Math.floor(startTime.getTime() + i * stepMin * 60 * 1000));
+			var day = new Date(Math.floor(startTime.getTime() + i * stepMin * 100 * 1000));
 			var date = day.getDate();
 			var hour = day.getHours();
 			var minutes = day.getMinutes();
@@ -1726,8 +1727,8 @@ if (curtemp=='depth'){
 			}
 
 
-			if (Number(text_name_p1.attr('font-size')) > K_rul * stepMin * 60 * h1 / 7.7) {
-				let resizeV = K_rul * stepMin * 60 * h1 / 7.7;
+			if (Number(text_name_p1.attr('font-size')) > K_rul * stepMin * 100 * h1 / 7.7) {
+				let resizeV = K_rul * stepMin * 100 * h1 / 7.7;
 				//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
 				text_name_p1.clear();
 				delete (text_name_p1);
@@ -1753,16 +1754,16 @@ if (curtemp=='depth'){
 						var colmn1_y0 = h1 * ycolmn1Poz;
 						//console.log(i, step_txt_numb_rec,keey,Math.ceil(i*step_txt_numb_rec));
 
-						//БУМ ШОКО var name_p1= String(d110d[Math.ceil(i*step_txt_numb_rec)]['Vrema'])+" - " + String ((startTime.getTime() + i* stepMin* 60 *1000)/1000);
+						//БУМ ШОКО var name_p1= String(d110d[Math.ceil(i*step_txt_numb_rec)]['Zaboj'])+" - " + String ((startTime.getTime() + i* stepMin* 100 *1000)/1000);
 						//var name_p1 =d110d[Math.ceil(i*step_txt_numb_rec)][keey];
 						//Точное время
-						//String ((startTime.getTime() + i* stepMin* 60 *1000)/1000)
-						var ttime = (startTime.getTime() + i * stepMin * 60 * 1000) / 1000;
+						//String ((startTime.getTime() + i* stepMin* 100 *1000)/1000)
+						var ttime = (startTime.getTime() + i * stepMin * 100 * 1000) / 1000;
 						name_p1 = "NaN";
 						//Разница между временем
 						var sub;
 						for (var tmark in d110d) {
-							sub = Number(d110d[tmark]['Vrema']) - ttime;
+							sub = Number(d110d[tmark]['Zaboj']) - ttime;
 							if (sub < 20 && sub > -20) {
 								name_p1 = d110d[tmark][txtPar[String(keey)].par];
 								break;
@@ -1793,8 +1794,8 @@ if (curtemp=='depth'){
 
 						}
 
-						if (Number(text_name_p1.attr('font-size')) > K_rul * stepMin * 60 * h1 / 7.7) {
-							let resizeV = K_rul * stepMin * 60 * h1 / 7.7;
+						if (Number(text_name_p1.attr('font-size')) > K_rul * stepMin * 100 * h1 / 7.7) {
+							let resizeV = K_rul * stepMin * 100 * h1 / 7.7;
 							//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
 							text_name_p1.clear();
 							delete (text_name_p1);
@@ -1813,13 +1814,13 @@ if (curtemp=='depth'){
 
 
 		}
-		beg_plats = beg_plats + K_rul * stepMin * 60; //Следующие 10 минут		
+		beg_plats = beg_plats + K_rul * stepMin * 100; //Следующие 10 минут		
 	}
 
 	//МАЛЕНЬКИЕ НАСЕЧКИ 
 	stepMin = Sheet.Kzoom * 1.0;
 
-	var last_time2 = start_time / 1 + Sheet.Kzoom * 60 * 60;
+	var last_time2 = start_time / 1 + Sheet.Kzoom * 100 * 100;
 	var day = new Date(last_time2 * 1000);
 	var last_hour = day.getHours();
 	var last_minutes = day.getMinutes();
@@ -1841,7 +1842,7 @@ if (curtemp=='depth'){
 	var beg_plats = h1 * disp_up //Отступ от шапки
 
 	//Сколько целых минут?
-	var minut_round = (last_time2 - beg_time2) / 60;
+	var minut_round = (last_time2 - beg_time2) / 100;
 	/*if (beg_sec !== 0){
 		minut_round = minut_round - 1;
 	}
@@ -1850,7 +1851,7 @@ if (curtemp=='depth'){
 	var ten_minuts = minut_round / stepMin;
 
 	//Дата для первой 10 минутки в секундах от начала
-	var ten = beg_time2 + stepMin * 60;//+10 минут
+	var ten = beg_time2 + stepMin * 100;//+10 минут
 	var day = new Date(ten * 1000);
 	var next_ten = Math.floor(day.getMinutes() / stepMin) * stepMin;//удалили минуты от 1..9
 	var ten_date = new Date(day.getFullYear(), day.getMonth(), day.getDate(), day.getHours(), next_ten, 0, 0); // Дата 10 минут 0 сек 0 мсек
@@ -1875,7 +1876,7 @@ if (curtemp=='depth'){
 		//group_time_rul.add(line_new);
 		var line_new = draw.line(w1 * time_w - w1 * length, beg_plats, w1 * time_w, beg_plats);
 		line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
-		beg_plats = beg_plats + K_rul * stepMin * 60; //Следующие 10 минут
+		beg_plats = beg_plats + K_rul * stepMin * 100; //Следующие 10 минут
 
 	}
 
@@ -1888,13 +1889,13 @@ if (curtemp=='depth'){
 
 
 		for (let j = 0; j < d110d.length - 2; j++) {
-			if (d110d[j + 1]["Vrema"] - d110d[j]["Vrema"] > 120) {
+			if (d110d[j + 1]["Zaboj"] - d110d[j]["Zaboj"] > 120) {
 				hole += j + ", " + (j + 1) + ", ";
 			}
-			if (end_time - d110d[j]["Vrema"] > 120 && online != true && j == d110d.length - 3) {
+			if (end_time - d110d[j]["Zaboj"] > 120 && online != true && j == d110d.length - 3) {
 				hole += j + ", " + (j + 1) + ", ";
 			}
-			if (d110d[j]["Vrema"] - start_time > 120 && j == 0) {
+			if (d110d[j]["Zaboj"] - start_time > 120 && j == 0) {
 				hole += j + ", " + (j + 1) + ", ";
 			}
 		}
@@ -1916,14 +1917,14 @@ if (curtemp=='depth'){
 			var holl1 = Number(holearr[j]);
 			var holl2 = Number(holearr[j + 1]);
 			/* console.log(holl1,holl2,j,d110d.length-1,holearr[j]); */
-			var y1_hole = colmn11_y0 + (d110d[holl1]["Vrema"] - start_time) * cur_value_y_step;
-			var y2_hole = colmn11_y0 + (d110d[holl2]["Vrema"] - start_time) * cur_value_y_step;
+			var y1_hole = colmn11_y0 + (d110d[holl1]["Zaboj"] - start_time) * cur_value_y_step;
+			var y2_hole = colmn11_y0 + (d110d[holl2]["Zaboj"] - start_time) * cur_value_y_step;
 			if (holearr[j] == 0) {
 				y1_hole = colmn11_y0;
-				y2_hole = colmn11_y0 + (d110d[holl2]["Vrema"] - start_time) * cur_value_y_step;
+				y2_hole = colmn11_y0 + (d110d[holl2]["Zaboj"] - start_time) * cur_value_y_step;
 			}
 			if ((holearr[j] == d110d.length - 3) && refresh != true) {
-				y1_hole = colmn11_y0 + (d110d[holl1]["Vrema"] - start_time) * cur_value_y_step;
+				y1_hole = colmn11_y0 + (d110d[holl1]["Zaboj"] - start_time) * cur_value_y_step;
 				y2_hole = colmn11_y0 + h1 * 100;
 			}
 			//var hol1 = draw.polygon(5+',0' +' '+18+',0'+' '+18+','+w1*100+5+','+w1*100, {'fill-opacity': 0.6})
@@ -1960,7 +1961,7 @@ if (curtemp=='depth'){
 			if (ncolcmt < w1 * weight_colmn1) { ncolcmt = w1 * weight_colmn1; };
 			//если мобильный, то по середине
 			if(isMobile){ncolcmt =50*w1;}
-			var cury = colmn11_y0 + (comment[j]["Vrema"] - start_time) * cur_value_y_step;
+			var cury = colmn11_y0 + (comment[j]["Zaboj"] - start_time) * cur_value_y_step;
 			var name_p3 = '' + comment[j]["Comment"]; //d110d[d110d.length-1]["Npot"];
 			//Если попадает в окно
 			if (cury > colmn11_y0) {
@@ -1984,6 +1985,7 @@ if (curtemp=='depth'){
 	} catch (e) { }
 
 }
+
 
 	//Невидимые столбцы для клика
 	//Параметры шапки для объектов
