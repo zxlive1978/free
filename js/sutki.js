@@ -1704,7 +1704,7 @@ if (curtemp=='depth'){
 
 			weight_colmn1 = Columns["col0"].size.w;
 			//var text_time = draw.text(String(date)+' '+String(hour)+':'+String(minutes))
-			var name_p1 = String(Math.floor(start_time + i * stepMin*100));
+			var name_p1 = String(Math.floor(Number(start_time/1 + stepMin *i)));
 			var text_name_p1 = draw.text(name_p1)
 				.font({ family: Sheet.fnt, size: size_text_p, color: Columns.col0.color })
 				.move(w1 * time_w / 2, beg_plats)
@@ -1889,13 +1889,13 @@ if (curtemp=='depth'){
 
 
 		for (let j = 0; j < d110d.length - 2; j++) {
-			if (d110d[j + 1]["Zaboj"] - d110d[j]["Zaboj"] > 120) {
+			if (d110d[j + 1]["Zaboj"] - d110d[j]["Zaboj"] > 1) {
 				hole += j + ", " + (j + 1) + ", ";
 			}
-			if (end_time - d110d[j]["Zaboj"] > 120 && online != true && j == d110d.length - 3) {
+			if (end_time - d110d[j]["Zaboj"] > 1 && online != true && j == d110d.length - 3) {
 				hole += j + ", " + (j + 1) + ", ";
 			}
-			if (d110d[j]["Zaboj"] - start_time > 120 && j == 0) {
+			if (d110d[j]["Zaboj"] - start_time > 1 && j == 0) {
 				hole += j + ", " + (j + 1) + ", ";
 			}
 		}
