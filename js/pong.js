@@ -185,7 +185,7 @@ function read_next(){
 
 	if (curtemp=='depth'){
 
-		if (refresh==true &&  wellName!='' ){
+		// if (refresh==true &&  wellName!='' ){
 		refresh = false;
 		online = false;
 		$.ajax({
@@ -230,7 +230,7 @@ function read_next(){
 		});
 	}
 	
-}	
+// }	
 	/* back_start_time = start_time;
 	back_end_time = end_time; */
 };
