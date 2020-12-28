@@ -190,7 +190,7 @@ function read_next(){
 		online = false;
 		$.ajax({
 			type: "POST",
-			url: 'js/writeskvs.php',
+			url: 'js/read_depth.php',
 			data: {whatdo:whatdo, table: table, p000: p000, skvsjson:skvsjson },
 			cache: false,
 			async: false,
