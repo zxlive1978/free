@@ -1613,7 +1613,7 @@ function init() {
 }
 
 
-//Если ШКАЛА ГЛУБИНА
+//Если ШКАЛА ГЛУБИН А
 if (curtemp=='depth'){
 
 	var length = 1.5;
