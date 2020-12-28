@@ -1242,6 +1242,7 @@ function init() {
 	//
 	//Большие насечки
 	//Длина насечки
+	if (curtemp=='time'){
 	var length = 1.5;
 	var width_line = 2;
 	//Шаг основынх насечек
@@ -1608,6 +1609,390 @@ function init() {
 		}
 
 	} catch (e) { }
+
+}
+
+
+//Если ШКАЛА ГЛУБИНА
+if (curtemp=='depth'){
+
+	var length = 1.5;
+	var width_line = 2;
+	//Шаг основынх насечек
+	var big_teth_step = 1;
+	if (isMobile) {
+		big_teth_step = 1;
+	}
+	//Шаг значения 10 минут
+	var stepMin = 10;
+	//Основная насечка
+	var big_teth = true;
+	//Коэффициент зума и разряживание
+
+	stepMin = Sheet.Kzoom * 2 * 4;
+
+	var last_time2 = start_time / 1 + Sheet.Kzoom * 60 * 60;
+	var day = new Date(last_time2 * 1000);
+	var last_hour = day.getHours();
+	var last_minutes = day.getMinutes();
+	//Начало и конец
+	var beg_time2 = start_time / 1;
+	var cur_time2 = beg_time2;
+	var day = new Date(cur_time2 * 1000);
+	var plats = height - h1 * disp_up; //Ширина всего поля в единицах экрана
+	var plats_data = last_time2 - beg_time2; //Ширина всего поля в единицах данных (диапазон в сек)
+	var K_rul = plats / plats_data; //Коэф Ширина одной секунды в % колонки
+	var beg_plats = h1 * disp_up //Отступ от шапки
+
+	//Сколько целых минут?
+	var minut_round = (last_time2 - beg_time2) / 60;
+
+	// Сколько 10 минуток ?
+	var ten_minuts = minut_round / stepMin;
+
+	//Дата для первой 10 минутки в секундах от начала
+	var ten = beg_time2 + stepMin * 60;//+10 минут
+	var day = new Date(ten * 1000);
+	var next_ten = Math.floor(day.getMinutes() / stepMin) * stepMin;//удалили минуты от 1..9
+	var ten_date = new Date(day.getFullYear(), day.getMonth(), day.getDate(), day.getHours(), next_ten, 0, 0); // Дата 10 минут 0 сек 0 мсек
+	var startTime = new Date(ten_date.getTime()); //Время старта в милисекундах первой 10ти минутки
+	// Сколько секунд в начале надо отступить до круглой первой 10 минуты?
+	var disp_sec_ten = startTime / 1000 - beg_time2;
+
+	//Сколько надо отступить от начала планшета до первой 10 минуты
+	beg_plats = beg_plats + K_rul * disp_sec_ten;
+
+	//Шаг записей для текстовой глубины долота  и суммы объемов
+	var step_txt_numb_rec = d110d.length / ten_minuts;
+
+	for (let i = 0; i < ten_minuts; i++) {
+		//Проверка на большую или малую засечку
+		if ((i % big_teth_step) == 0) {
+			big_teth = true;
+			//big_teth_step = i+big_teth_step;
+			length = Columns["col0"].size.w * 0.2;
+			width_line = 2;
+		} else {
+			big_teth = false;
+			length = Columns["col0"].size.w * 0.1;
+			width_line = 1;
+		}
+
+		//Большие насечки и малые насечки
+		var line_new = draw.line(0, beg_plats, w1 * length, beg_plats);
+		line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
+		//group_time_rul.add(line_new);
+		var line_new = draw.line(w1 * time_w - w1 * length, beg_plats, w1 * time_w, beg_plats);
+		line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
+		//group_time_rul.add(line_new);
+
+		//Маленькие насечки пунктир на все графики
+		//Линия пунктирная
+
+		var line = draw.line(w1 * time_w, beg_plats, w1 * 100, beg_plats);
+		line.stroke({ width: Sheet.width_line_p, color: Sheet.dashcol1, dasharray: Sheet.dasharray });
+
+		//Цифровые значения шкалы
+		if (big_teth) {
+			var day = new Date(Math.floor(startTime.getTime() + i * stepMin * 60 * 1000));
+			var date = day.getDate();
+			var hour = day.getHours();
+			var minutes = day.getMinutes();
+			if (hour < 10) { hour = "0" + hour }
+			if (minutes < 10) { minutes = "0" + minutes }
+
+			weight_colmn1 = Columns["col0"].size.w;
+			//var text_time = draw.text(String(date)+' '+String(hour)+':'+String(minutes))
+			var name_p1 = String(hour) + ':' + String(minutes);
+			var text_name_p1 = draw.text(name_p1)
+				.font({ family: Sheet.fnt, size: size_text_p, color: Columns.col0.color })
+				.move(w1 * time_w / 2, beg_plats)
+				.center(w1 * time_w / 2, beg_plats)
+				.fill(Sheet.syscolor)
+
+			//Ресайз текста если не влезает!
+			if (text_name_p1.length() > weight_colmn1 * w1 * 0.5) {
+				var coef = text_name_p1.length() / text_name_p1.attr('font-size')
+				text_name_p1.clear();
+				delete (text_name_p1);
+
+				var text_name_p1 = draw.text(name_p1)
+					.font({ family: Sheet.fnt, size: weight_colmn1 * w1 / coef * 0.5 })
+					.move(w1 * time_w / 2, beg_plats)
+					.center(w1 * time_w / 2, beg_plats)
+					.fill(Sheet.syscolor)
+
+
+			}
+
+
+			if (Number(text_name_p1.attr('font-size')) > K_rul * stepMin * 60 * h1 / 7.7) {
+				let resizeV = K_rul * stepMin * 60 * h1 / 7.7;
+				//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
+				text_name_p1.clear();
+				delete (text_name_p1);
+				var text_name_p1 = draw.text(name_p1)
+					.font({ family: Sheet.fnt, size: resizeV })
+					.move(w1 * time_w / 2, beg_plats)
+					.center(w1 * time_w / 2, beg_plats)
+					.fill(Sheet.syscolor)
+			}
+
+			//Текстовые значения на КолонкаХ забой глубина суммарный объем и тд.
+			try {
+				if (d110d.length > 0) {
+					for (var keey in txtPar) {
+						weight_colmn1 = Columns["col" + String(Number((txtPar[keey].poz.x)))].size.w;
+						//Отступ Столбца
+						xcolmn1Poz = Columns["col" + String(Number((txtPar[keey].poz.x)))].poz.x;
+						ycolmn1Poz = Columns["col" + String(Number((txtPar[keey].poz.x)))].poz.y;
+
+						//Шапка отступ Столбца № по Х
+						var colmn11_x0 = w1 * xcolmn1Poz;
+						var colmn11_x1 = w1 * xcolmn1Poz + w1 * weight_colmn1;
+						var colmn1_y0 = h1 * ycolmn1Poz;
+						//console.log(i, step_txt_numb_rec,keey,Math.ceil(i*step_txt_numb_rec));
+
+						//БУМ ШОКО var name_p1= String(d110d[Math.ceil(i*step_txt_numb_rec)]['Vrema'])+" - " + String ((startTime.getTime() + i* stepMin* 60 *1000)/1000);
+						//var name_p1 =d110d[Math.ceil(i*step_txt_numb_rec)][keey];
+						//Точное время
+						//String ((startTime.getTime() + i* stepMin* 60 *1000)/1000)
+						var ttime = (startTime.getTime() + i * stepMin * 60 * 1000) / 1000;
+						name_p1 = "NaN";
+						//Разница между временем
+						var sub;
+						for (var tmark in d110d) {
+							sub = Number(d110d[tmark]['Vrema']) - ttime;
+							if (sub < 20 && sub > -20) {
+								name_p1 = d110d[tmark][txtPar[String(keey)].par];
+								break;
+							}
+
+						}
+
+
+						var text_name_p1 = draw.text(name_p1)
+							.font({ family: Sheet.fnt, size: size_text_p })
+							.move(colmn11_x0 + txtPar[keey].step * w1 * weight_colmn1, beg_plats)
+							.center(colmn11_x0 + txtPar[keey].step * w1 * weight_colmn1, beg_plats)
+							.fill(txtPar[keey].color)
+							.id(keey);
+						text_name_p1.backward();
+						//Ресайз текста если не влезает!
+						if (text_name_p1.length() > weight_colmn1 * w1 * 0.3) {
+							var coef = text_name_p1.length() / text_name_p1.attr('font-size')
+							text_name_p1.clear();
+							delete (text_name_p1);
+
+							var text_name_p1 = draw.text(name_p1)
+								.font({ family: Sheet.fnt, size: weight_colmn1 * w1 / coef * 0.3 })
+								.move(colmn11_x0 + txtPar[keey].step * w1 * weight_colmn1, beg_plats)
+								.center(colmn11_x0 + txtPar[keey].step * w1 * weight_colmn1, beg_plats)
+								.fill(txtPar[keey].color)
+								.id(keey)
+
+						}
+
+						if (Number(text_name_p1.attr('font-size')) > K_rul * stepMin * 60 * h1 / 7.7) {
+							let resizeV = K_rul * stepMin * 60 * h1 / 7.7;
+							//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
+							text_name_p1.clear();
+							delete (text_name_p1);
+							var text_name_p1 = draw.text(name_p1)
+								.font({ family: Sheet.fnt, size: resizeV })
+								.move(colmn11_x0 + txtPar[keey].step * w1 * weight_colmn1, beg_plats)
+								.center(colmn11_x0 + txtPar[keey].step * w1 * weight_colmn1, beg_plats)
+								.fill(txtPar[keey].color)
+								.id(keey)
+						}
+
+
+					}
+				}
+			} catch (e) { }
+
+
+		}
+		beg_plats = beg_plats + K_rul * stepMin * 60; //Следующие 10 минут		
+	}
+
+	//МАЛЕНЬКИЕ НАСЕЧКИ 
+	stepMin = Sheet.Kzoom * 1.0;
+
+	var last_time2 = start_time / 1 + Sheet.Kzoom * 60 * 60;
+	var day = new Date(last_time2 * 1000);
+	var last_hour = day.getHours();
+	var last_minutes = day.getMinutes();
+	//Начало и конец
+	var beg_time2 = start_time / 1;
+	var cur_time2 = beg_time2;
+	var day = new Date(cur_time2 * 1000);
+	/* var beg_year = day.getFullYear();
+	var beg_month = day.getMonth();
+	var beg_date = day.getDate();
+	var beg_hour = day.getHours();
+	var beg_minutes = day.getMinutes();
+	var beg_sec = day.getSeconds();
+	var beg_msec = day.getMilliseconds(); */
+
+	var plats = height - h1 * disp_up; //Ширина всего поля в единицах экрана
+	var plats_data = last_time2 - beg_time2; //Ширина всего поля в единицах данных (диапазон в сек)
+	var K_rul = plats / plats_data; //Коэф Ширина одной секунды в % колонки
+	var beg_plats = h1 * disp_up //Отступ от шапки
+
+	//Сколько целых минут?
+	var minut_round = (last_time2 - beg_time2) / 60;
+	/*if (beg_sec !== 0){
+		minut_round = minut_round - 1;
+	}
+	*/
+	// Сколько 10 минуток ?
+	var ten_minuts = minut_round / stepMin;
+
+	//Дата для первой 10 минутки в секундах от начала
+	var ten = beg_time2 + stepMin * 60;//+10 минут
+	var day = new Date(ten * 1000);
+	var next_ten = Math.floor(day.getMinutes() / stepMin) * stepMin;//удалили минуты от 1..9
+	var ten_date = new Date(day.getFullYear(), day.getMonth(), day.getDate(), day.getHours(), next_ten, 0, 0); // Дата 10 минут 0 сек 0 мсек
+	var startTime = new Date(ten_date.getTime()); //Время старта в милисекундах первой 10ти минутки
+	// Сколько секунд в начале надо отступить до круглой первой 10 минуты?
+	var disp_sec_ten = startTime / 1000 - beg_time2;
+
+	//Сколько надо отступить от начала планшета до первой 10 минуты
+	beg_plats = beg_plats + K_rul * disp_sec_ten;
+
+	//Шаг записей для текстовой глубины долота  и суммы объемов
+	var step_txt_numb_rec = d110d.length / ten_minuts;
+
+	for (let i = 0; i < ten_minuts; i++) {
+		//Проверка на большую или малую засечку
+
+		length = Columns["col0"].size.w * 0.1;
+		width_line = 1;
+		//Большие насечки и малые насечки
+		var line_new = draw.line(0, beg_plats, w1 * length, beg_plats);
+		line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
+		//group_time_rul.add(line_new);
+		var line_new = draw.line(w1 * time_w - w1 * length, beg_plats, w1 * time_w, beg_plats);
+		line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
+		beg_plats = beg_plats + K_rul * stepMin * 60; //Следующие 10 минут
+
+	}
+
+
+	try {
+		//
+		//Пропуск материала
+		//Поиск дырки
+		var hole = "";
+
+
+		for (let j = 0; j < d110d.length - 2; j++) {
+			if (d110d[j + 1]["Vrema"] - d110d[j]["Vrema"] > 120) {
+				hole += j + ", " + (j + 1) + ", ";
+			}
+			if (end_time - d110d[j]["Vrema"] > 120 && online != true && j == d110d.length - 3) {
+				hole += j + ", " + (j + 1) + ", ";
+			}
+			if (d110d[j]["Vrema"] - start_time > 120 && j == 0) {
+				hole += j + ", " + (j + 1) + ", ";
+			}
+		}
+
+		function unique(arr) {
+			var obj = {};
+
+			for (let i = 0; i < arr.length; i++) {
+				var str = arr[i];
+				obj[str] = true; // запомнить строку в виде свойства объекта
+			}
+
+			return Object.keys(obj); // или собрать ключи перебором для IE8-
+		}
+		var colmn11_y0 = h1 * disp_up;
+		var holearr = hole.split(',');
+		/* console.log(d110d.length,holearr); */
+		for (let j = 0; j < (holearr.length) - 1; j += 2) {
+			var holl1 = Number(holearr[j]);
+			var holl2 = Number(holearr[j + 1]);
+			/* console.log(holl1,holl2,j,d110d.length-1,holearr[j]); */
+			var y1_hole = colmn11_y0 + (d110d[holl1]["Vrema"] - start_time) * cur_value_y_step;
+			var y2_hole = colmn11_y0 + (d110d[holl2]["Vrema"] - start_time) * cur_value_y_step;
+			if (holearr[j] == 0) {
+				y1_hole = colmn11_y0;
+				y2_hole = colmn11_y0 + (d110d[holl2]["Vrema"] - start_time) * cur_value_y_step;
+			}
+			if ((holearr[j] == d110d.length - 3) && refresh != true) {
+				y1_hole = colmn11_y0 + (d110d[holl1]["Vrema"] - start_time) * cur_value_y_step;
+				y2_hole = colmn11_y0 + h1 * 100;
+			}
+			//var hol1 = draw.polygon(5+',0' +' '+18+',0'+' '+18+','+w1*100+5+','+w1*100, {'fill-opacity': 0.6})
+			var hol1 = draw.polygon('0,' + y1_hole + ' ' + '0,' + y2_hole + ' ' + w1 * 100 + ',' + y2_hole + ' ' + w1 * 100 + ',' + y1_hole)
+				//var hol1 = draw.polygon('0, '+ y1_hole +'0, '+y2_hole+' '+w1*100+','+y1_hole +' '+w1*100+','+y2_hole)
+				.fill({ color: Sheet.holcol });
+			hol1.attr({ 'fill-opacity': Sheet.holhide });
+
+		}
+	} catch (e) { }
+
+	try {
+		//
+		//Комментарии
+		//Ширина текущего столбца
+		weight_colmn1 = Columns["col0"].size.w;
+		//Отступ Столбца
+		xcolmn1Poz = Columns["col0"].poz.x;
+		ycolmn1Poz = Columns["col0"].poz.y;
+
+		//Шапка отступ Столбца № по Х
+		var colmn11_x0 = w1 * xcolmn1Poz;
+		var colmn11_x1 = w1 * xcolmn1Poz + w1 * weight_colmn1;
+		var colmn11_y0 = h1 * disp_up;
+
+		for (let j = 0; j < comment.length; j++) {
+			var ncolcmt = colmn11_x0 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8;
+			var left = comment[j]["left_txt"];
+			
+			if (left > 50) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 1 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
+			if (left > 100) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 2 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
+			if (left > 140) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 3 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
+			//если отступ меньше начала колонки
+			if (ncolcmt < w1 * weight_colmn1) { ncolcmt = w1 * weight_colmn1; };
+			//если мобильный, то по середине
+			if(isMobile){ncolcmt =50*w1;}
+			var cury = colmn11_y0 + (comment[j]["Vrema"] - start_time) * cur_value_y_step;
+			var name_p3 = '' + comment[j]["Comment"]; //d110d[d110d.length-1]["Npot"];
+			//Если попадает в окно
+			if (cury > colmn11_y0) {
+				name_p3 = name_p3.match(/.{1,32}/g);
+				//console.log(name_p3);
+				var cur_comm = ""
+				for (let i = 0; i < name_p3.length; i++) {
+					name_p3[i] = name_p3[i] + '\n'
+					cur_comm = cur_comm + name_p3[i]
+				}
+				var text_name_p3 = draw.text(cur_comm)
+					.font({ family: Sheet.fnt, size: Sheet.cmtsize })
+					.move(ncolcmt, cury)
+					.center(ncolcmt, cury)
+					.fill(Sheet.cmtcolor)
+
+			}
+			//console.log(cur_comm);
+		}
+
+	} catch (e) { }
+
+
+
+
+
+
+
+
+
+
+}
 
 	//Невидимые столбцы для клика
 	//Параметры шапки для объектов
