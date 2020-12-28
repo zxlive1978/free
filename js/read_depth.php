@@ -27,7 +27,7 @@
 	// 	echo $result;}
 	
 	//read all
-	if ($table == 'skvs' && $whatdo == 'read'){
+	if ( $whatdo == 'read'){
 		$query="SELECT * FROM ".$name_base.".".$table.";";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		$comment = array();
