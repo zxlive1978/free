@@ -186,7 +186,7 @@ function read_next(){
 	if (curtemp='depth'){
 
 		if (refresh==true &&  wellName!='' ){
-			refresh = false;
+		refresh = false;
 		online = false;
 		$.ajax({
 			type: "POST",
