@@ -119,9 +119,7 @@ function read_cycle (){
 //Чтение последних значений
 function read_next(){
 	
-	//refresh = false;
-	//alert(wellName);
-	//console.log(Kzoom);
+	if (curtemp='time'){
 	if (refresh==true &&  wellName!='' ){
 		online = true;
 		refresh=false;
@@ -183,6 +181,74 @@ function read_next(){
 		}
 		});
 	
+	}}
+
+	if (curtemp='depth'){
+
+		if (refresh==true &&  wellName!='' ){
+			online = true;
+			refresh=false;
+			let data = null;
+			$.ajax({
+				type: "GET",
+				url: 'js/read_next.php',
+				data: {name: 'Wayne',well_Name: wellName, Kzoom: Sheet.Kzoom},
+				cache: false,
+				success: function(data){
+					//var jsonn = JSON.encode(data);
+					/* console.log(data); */
+					//<?php echo ' d110d = '.json_encode(data).';' ?>;
+					//console.log(json["Vrema"]);
+					//alert(json["Vrema"]);
+					
+					/* var mass = eval(data); */
+					//var mass = data;
+					
+					/* alert(mass); */
+					/* d110d.length = null;
+					d110d.length = 0; */
+					d110d = null;
+					d110d = JSON.parse(data);
+					/* d110d = eval(data); */
+					data = null;
+					//numbs110d = null;
+					var numbs110d = null;
+					numbs110d = d110d.length;
+					start_time = null;
+					start_time = d110d[0]["Vrema"];
+					end_time = null;
+					end_time = d110d[d110d.length-1]["Vrema"];
+					
+					/* console.log(d110d.length); */
+					/* console.log(d110d); */
+				
+					//А ЭТО АХУЕННО ИНТЕРЕСНО!
+					//Если нет данных
+					/* if (d110d.length == 0){
+						drawGraf = false ;
+						d110d = beg_rec.slice();
+						numbs110d = d110d.length;
+						d110d[0]["Vrema"] = start_time;
+						d110d[d110d.length-1]["Vrema"] = end_time;
+					
+						} else {drawGraf = true ;} */
+					var back_start_time = null;
+					back_start_time = start_time;
+					back_end_time = null;
+					back_end_time = end_time;
+					repaint();
+					refresh=true;
+					setTimeout(function(){read_next();}, 3000);
+				},
+				error: function(){
+				refresh=true;
+				setTimeout(function(){read_next();}, 3000);
+			}
+			});
+		
+		}
+
+
 	}
 	
 	/* back_start_time = start_time;
