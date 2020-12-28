@@ -195,8 +195,36 @@ function read_next(){
 			cache: false,
 			async: false,
 			success: function(data){
-				if (Number(data)!=1) {alert('нет связи')};
-				alert(data);
+				d110d = null;
+				d110d = JSON.parse(data);
+				/* d110d = eval(data); */
+				data = null;
+				//numbs110d = null;
+				var numbs110d = null;
+				numbs110d = d110d.length;
+				start_time = null;
+				start_time = d110d[0]["Zaboj"];
+				end_time = null;
+				end_time = d110d[d110d.length-1]["Zaboj"];
+				
+				/* console.log(d110d.length); */
+				/* console.log(d110d); */
+			
+				//А ЭТО АХУЕННО ИНТЕРЕСНО!
+				//Если нет данных
+				/* if (d110d.length == 0){
+					drawGraf = false ;
+					d110d = beg_rec.slice();
+					numbs110d = d110d.length;
+					d110d[0]["Vrema"] = start_time;
+					d110d[d110d.length-1]["Vrema"] = end_time;
+				
+					} else {drawGraf = true ;} */
+				var back_start_time = null;
+				back_start_time = start_time;
+				back_end_time = null;
+				back_end_time = end_time;
+				repaint();
 				
 			}
 		});
