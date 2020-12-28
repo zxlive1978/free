@@ -16,15 +16,15 @@
 	
 	$table=$_POST['table'];
 	$whatdo=$_POST['whatdo'];
-	$p000 = $_POST['p000'];
-	$skvjson = $_POST['skvsjson'];
+	// $p000 = $_POST['p000'];
+	// $skvjson = $_POST['skvsjson'];
 	$nu = "ok";
 	
-	//create
-	if ($table == 'skvs' && $whatdo == 'create'){
-		$query="INSERT INTO ".$name_base.".".$table." VALUES ( NULL, '".$p000."' , '".$skvjson."' ); ";
-		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
-		echo $result;}
+	// //create
+	// if ($table == 'skvs' && $whatdo == 'create'){
+	// 	$query="INSERT INTO ".$name_base.".".$table." VALUES ( NULL, '".$p000."' , '".$skvjson."' ); ";
+	// 	$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+	// 	echo $result;}
 	
 	//read all
 	if ($table == 'skvs' && $whatdo == 'read'){
@@ -41,17 +41,17 @@
 		
 		echo json_encode($comment);}
 
-	//update
-	if ($table == 'skvs' && $whatdo == 'update'){
-		$query="UPDATE ".$name_base.".".$table." SET skvjson='".$skvjson."' WHERE id=".$p000.";";
-		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
-		echo $result;}
+	// //update
+	// if ($table == 'skvs' && $whatdo == 'update'){
+	// 	$query="UPDATE ".$name_base.".".$table." SET skvjson='".$skvjson."' WHERE id=".$p000.";";
+	// 	$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+	// 	echo $result;}
 	
-	//delete 
-	if ($table == 'skvs' && $whatdo == 'delete'){
-		$query="DELETE  FROM  ".$name_base.".".$table." WHERE id=".$p000.";";
-		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
-		echo $result;}
+	// //delete 
+	// if ($table == 'skvs' && $whatdo == 'delete'){
+	// 	$query="DELETE  FROM  ".$name_base.".".$table." WHERE id=".$p000.";";
+	// 	$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+	// 	echo $result;}
 	
 	//echo json_encode($nu);
     mysqli_close($dbc);

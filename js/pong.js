@@ -191,7 +191,7 @@ function read_next(){
 		$.ajax({
 			type: "POST",
 			url: 'js/read_depth.php',
-			data: {whatdo:whatdo, table: table, p000: p000, skvsjson:skvsjson },
+			data: {whatdo:'read', table: table, p000: p000, skvsjson:skvsjson },
 			cache: false,
 			async: false,
 			success: function(data){
