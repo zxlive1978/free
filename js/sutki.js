@@ -1124,7 +1124,7 @@ function init() {
 
 
 			//Графики рисуем полилинию
-			try {
+			try { if (curtemp=="time"){
 				if (drawGraf == true && d110d.length > 0) {
 					var K_x1 = (w1 * weight_colmn1) / ((Number(basePar[key].max)) - (Number(basePar[key].min)));
 					var value = '';
@@ -1195,7 +1195,79 @@ function init() {
 					grafgroup.after(headgroup);
 
 				}
-			} catch (e) { }
+			}
+			if (curtemp=="depth"){
+				if (drawGraf == true && d110d.length > 0) {
+					var K_x1 = (w1 * weight_colmn1) / ((Number(basePar[key].max)) - (Number(basePar[key].min)));
+					var value = '';
+					var cur_value_x = colmn11_x0;
+					var cur_value_y = height_colmn1_p1 * h1;
+					//var cur_value_y_step = (h1*100 - h1*disp_up)/(end_time-start_time);
+					var cur_value_y_step = (h1 * 100 - h1 * disp_up) / (Sheet.Kzoom * 60 * 60);
+				
+					//Если есть хоть одна запись, то рисуем начало и конец линий(первая и последняя запись) чтобы не было дырок
+					//Первая запись если меньше 10 сек то полоса
+					if (d110d.length > 1) {
+						if (d110d[0]["Zaboj"] - start_time > 60) {
+							//cur_value_y = h1*disp_up;
+							cur_value_y = h1 * disp_up + (d110d[0]["Zaboj"] - start_time) * cur_value_y_step;
+						}
+						else {
+							cur_value_y = h1 * disp_up;
+						}
+				
+						cur_value_x = colmn11_x0 + (d110d[0][basePar[key].par]) * K_x1 - (Number(basePar[key].min)) * K_x1;
+						if (cur_value_x <= colmn11_x0) { cur_value_x = colmn11_x0 }
+						if (cur_value_x > colmn11_x1) { cur_value_x = colmn11_x1 }
+						if (cur_value_x >= 0) {
+							value = value + cur_value_x;
+							value = value + ',' + cur_value_y + ' ';
+						}
+					}
+				
+					//Последующие записи
+					for (let j = 1; j < d110d.length - 1; j++) {
+						cur_value_x = colmn11_x0 + (d110d[j][basePar[key].par]) * K_x1 - (Number(basePar[key].min)) * K_x1;
+						cur_value_y = h1 * disp_up + (d110d[j]["Zaboj"] - start_time) * cur_value_y_step;
+						//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+						/* cur_value_y =  (d110d[j]["Zaboj"]-start_time)*cur_value_y_step; */
+						if (cur_value_x <= colmn11_x0) { cur_value_x = colmn11_x0 }
+						if (cur_value_x > colmn11_x1) { cur_value_x = colmn11_x1 }
+						if (cur_value_x >= 0) {
+							value = value + cur_value_x;
+							value = value + ',' + cur_value_y + ' ';
+						}
+					}
+				
+					//Последняя запись если меньше 10 сек то полоса
+					if (d110d.length > 1) {
+						cur_value_x = colmn11_x0 + (d110d[d110d.length - 1][basePar[key].par]) * K_x1 - (Number(basePar[key].min)) * K_x1;
+						if (d110d[d110d.length - 1]["Zaboj"] - end_time > 60) {
+							cur_value_y = h1 * 100;
+						}
+						else {
+							//cur_value_y = h1*100;
+							cur_value_y = h1 * disp_up + (d110d[d110d.length - 1]["Zaboj"] - start_time) * cur_value_y_step;
+						}
+						cur_value_x = colmn11_x0 + (d110d[d110d.length - 1][basePar[key].par]) * K_x1 - (Number(basePar[key].min)) * K_x1;
+						if (cur_value_x <= colmn11_x0) { cur_value_x = colmn11_x0 }
+						if (cur_value_x > colmn11_x1) { cur_value_x = colmn11_x1 }
+						if (cur_value_x >= 0) {
+							value = value + cur_value_x;
+							value = value + ',' + cur_value_y + ' ';
+						}
+					}
+				
+					var polyline = draw.polyline(value).fill('none').stroke({ width: Sheet.width_gxf_line, color: basePar[key].color });
+					//polyline.back();
+					grafgroup.add(polyline);
+					//Все тела назад
+					bodygroup.back();
+					//Кривые после шапок
+					grafgroup.after(headgroup);
+
+				}}
+		} catch (e) { }
 
 		}
 	}
