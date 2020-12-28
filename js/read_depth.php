@@ -35,6 +35,13 @@
 			//echo $row[$x_id]." - ".$row[$y_id]."<br />";
 			$cur_rec= array('p000'=>'par'.$row['id'], 'skvjson'=> $row['skvjson']);
 			//$cur_rec['Wkp'] = $row['Wkp'];
+
+			$cur_rec= array('Vrema' => $row['Vrema'],'Wkp' => $row['Wkp'],'Wdol' => $row['Wdol'],'Mpot' => $row['Mpot'],
+			'Npot' => $row['Npot'],'Pbx' => $row['Pbx'],'Qbx' => $row['Qbx'],'Talblok' => $row['Talblok'],
+			'Zaboj' => $row['Zaboj'],'Instr' => $row['Instr'],'C1C5' => $row['C1C5'],'C1' => $row['C1'],
+			'Xn1' => $row['Xn1'],'Xn2' => $row['Xn2'],'Potok' => $row['Potok'],'Tbix' => $row['Tbix'],
+			'V1' => $row['V1'],'V2' => $row['V2'],'V3' => $row['V3'],'V4' => $row['V4'],
+			'Vdol' => $row['Vdol'],'Vobj' => $row['Vobj'],'Vinstr' => $row['Vinstr']);
 			array_push($comment, $cur_rec);
 			}
 		mysqli_free_result($result);
