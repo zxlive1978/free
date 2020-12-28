@@ -1704,7 +1704,7 @@ if (curtemp=='depth'){
 
 			weight_colmn1 = Columns["col0"].size.w;
 			//var text_time = draw.text(String(date)+' '+String(hour)+':'+String(minutes))
-			var name_p1 = String(ten);
+			var name_p1 = String(start_time + i * stepMin);
 			var text_name_p1 = draw.text(name_p1)
 				.font({ family: Sheet.fnt, size: size_text_p, color: Columns.col0.color })
 				.move(w1 * time_w / 2, beg_plats)
