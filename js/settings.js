@@ -1920,6 +1920,46 @@ function adm3() {
 
 }
 
+//вкладка По Глубине
+function adm4() {
+	if (curtemp='video'){
+		//удаление старых потоков
+		deleteoldcams();
+	}
+	curtemp = 'depth';
+	$("#myModal11").modal('hide');
+	$('#dropdownMenu2').hide();
+	$('#dropdownMenu1').show();
+
+	//$('.modal-backdrop').hide();
+
+	
+	// setTimeout(function(){deleteoldcams();}
+	// , 30000);
+
+	//$('#dialogvideo').dialog( "open" );// Для скрытия
+	$('#tabs').hide();
+	$('#camsf2').remove();
+	$('#taabs-1').empty();
+	$('#taabs-2').empty();
+	//document.getElementById("camsf2").innerHTML="Роторный стол";
+	// $('#tabs').empty();
+	// $('#tabs').hide();
+
+	$('#drawing').empty();
+	$('#drawing').show();
+	$('#skvnamelab').show();
+	online = true;
+	refresh = true;
+	onofadm = true;
+	$('#skvnamelabt').text(skv);
+	// init();
+	// colOK11();
+	read_now();
+
+}
+
+
 //старт стоп прием
 function colok14() {
 

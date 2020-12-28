@@ -117,6 +117,7 @@ if (!$_SESSION['auth']) {
 <div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu1" style=" width: 300px !important;">
 
     <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg'  width="30" height="30">  Данные "По времени"</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/time.svg'  width="30" height="30">  Данные "По глубине"</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg'  width="30" height="30">  Видеокамеры</button>
     <div class="dropdown-divider"></div>
     <button class='btn  btn-dark btn-block text-left'  onClick="colPan10();" ><img src='css/well.svg'  width="30" height="30">  Выбор текущей скважины</button>
