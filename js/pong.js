@@ -191,12 +191,12 @@ function read_next(){
 		$.ajax({
 			type: "POST",
 			url: 'js/read_depth.php',
-			data: {whatdo:'read', table: table, p000: p000, skvsjson:skvsjson },
+			data: {whatdo:'read', table:'s20depth_all'},
 			cache: false,
 			async: false,
 			success: function(data){
 				if (Number(data)!=1) {alert('нет связи')};
-				//alert(data);
+				alert(data);
 				
 			}
 		});
