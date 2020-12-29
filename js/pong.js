@@ -314,7 +314,7 @@ function read_now(){
 	if (curtemp=='time'){
 	refresh = true;
 	read_next();}
-console.log(curtemp);
+// console.log(curtemp);
 	if (curtemp=='depth'){
 		//refresh = true;
 		read_next();}
