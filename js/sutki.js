@@ -2649,7 +2649,7 @@ if (curtemp=='depth'){
 					for (keey in txtOknOPar) {
 						if (txtOknOPar[keey].poz.x == strN) {
 	
-							if (txtOknOPar[keey].par == "Zaboj") {
+							if (txtOknOPar[keey].par == "Vrema") {
 								var cur_val = -2147480;
 								if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtOknOPar[keey].par]) };
 								if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
