@@ -1203,7 +1203,7 @@ function init() {
 					var cur_value_x = colmn11_x0;
 					var cur_value_y = height_colmn1_p1 * h1;
 					//var cur_value_y_step = (h1*100 - h1*disp_up)/(end_time-start_time);
-					var cur_value_y_step = (h1 * 100 - h1 * disp_up) / (Sheet.Kzoom*100);
+					var cur_value_y_step = (h1 * 100 - h1 * disp_up) / (Sheet.Kzoom* 60 * 60);
 				
 					//Если есть хоть одна запись, то рисуем начало и конец линий(первая и последняя запись) чтобы не было дырок
 					//Первая запись если меньше 10 сек то полоса
@@ -2063,7 +2063,7 @@ if (curtemp=='depth'){
 	//////////////////////
 	//Табличка со значениями ВРЕМЯ
 	///////////////////////	
-	if (curtemp='time'){
+	if (curtemp=='time'){
 	for (key in Columns) {
 		if (key != 'col0') {
 			// var inv_col = draw.group();
@@ -2366,7 +2366,7 @@ if (curtemp=='depth'){
 								//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
 								text_value.clear();
 								delete (text_value);
-								var text_value = draw.text(txtOknOPar[keey].txt + " " + cur_val + " (" + txtOknOPar[keey].unit + ")")
+								var text_value = draw.text(txtOknOPar[keey].txt + " " + time_viz1 + " (" + txtOknOPar[keey].unit + ")")
 									.font({ family: Sheet.fnt, size: resizeV })
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
@@ -2440,7 +2440,7 @@ if (curtemp=='depth'){
 	//////////////////////
 	//Табличка со значениями ГЛУБИНА
 	///////////////////////
-	if (curtemp='depth'){
+	if (curtemp=='depth'){
 		for (key in Columns) {
 			if (key != 'col0') {
 				// var inv_col = draw.group();
@@ -2649,7 +2649,7 @@ if (curtemp=='depth'){
 					for (keey in txtOknOPar) {
 						if (txtOknOPar[keey].poz.x == strN) {
 	
-							if (txtOknOPar[keey].par == "Vrema") {
+							if (txtOknOPar[keey].par == "Zaboj") {
 								var cur_val = -2147480;
 								if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtOknOPar[keey].par]) };
 								if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
@@ -2664,7 +2664,7 @@ if (curtemp=='depth'){
 								var month = day.getMonth() + 1;
 								if (month < 10) { month = "0" + month; }
 								var time_viz1 = ' ' + last_hour + ":" + minutes + " " + dates + "." + month + (2000 - yearr);
-								var text_value = draw.text(txtOknOPar[keey].txt + " " + time_viz1 + " (" + txtOknOPar[keey].unit + ")")
+								var text_value = draw.text(txtOknOPar[keey].txt + " " + cur_val + " (" + txtOknOPar[keey].unit + ")")
 									.font({ family: Sheet.fnt, size: text_size_value })
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
@@ -2678,7 +2678,7 @@ if (curtemp=='depth'){
 									var coef = text_value.length() / text_value.attr('font-size')
 									text_value.clear();
 									delete (text_value);
-									var text_value = draw.text(txtOknOPar[keey].txt + " " + time_viz1 + " (" + txtOknOPar[keey].unit + ")")
+									var text_value = draw.text(txtOknOPar[keey].txt + " " + cur_val + " (" + txtOknOPar[keey].unit + ")")
 										.font({ family: Sheet.fnt, size: Sheet.width_value * w1 / (coef * 1.1) })
 										// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 										.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
