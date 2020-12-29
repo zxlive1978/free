@@ -1203,7 +1203,7 @@ function init() {
 					var cur_value_x = colmn11_x0;
 					var cur_value_y = height_colmn1_p1 * h1;
 					//var cur_value_y_step = (h1*100 - h1*disp_up)/(end_time-start_time);
-					var cur_value_y_step = (h1 * 100 - h1 * disp_up) / (Sheet.Kzoomdepth);
+					var cur_value_y_step = (h1 * 100 - h1 * disp_up) / (Sheet.Kzoomdepth*60*60);
 				
 					//Если есть хоть одна запись, то рисуем начало и конец линий(первая и последняя запись) чтобы не было дырок
 					//Первая запись если меньше 10 сек то полоса
@@ -1777,7 +1777,7 @@ if (curtemp=='depth'){
 			weight_colmn1 = Columns["col0"].size.w;
 			//var text_time = draw.text(String(date)+' '+String(hour)+':'+String(minutes))
 			//var name_p1 = String(Math.floor(Number(start_time/1 +(h1 * 100 - h1 * disp_up) / (Sheet.Kzoom*100)+ cur_value_y_step *i)));
-			var name_p1 = String((h1 * disp_up + (d110d[0]["Zaboj"] - start_time) * cur_value_y_step)+ i * stepMin*10);
+			var name_p1 = String((h1 * disp_up + (start_time) * cur_value_y_step)+ i * stepMin*10);
 			var text_name_p1 = draw.text(name_p1)
 				.font({ family: Sheet.fnt, size: size_text_p, color: Columns.col0.color })
 				.move(w1 * time_w / 2, beg_plats)
