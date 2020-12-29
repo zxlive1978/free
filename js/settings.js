@@ -188,8 +188,9 @@ var Sheet = {
 	K_mobule_not_mobile: 1,
 	K_A4: 1,
 
-	//Маcштаб (час)
+	//Маcштаб (час) время
 	Kzoom: 3,
+	Kzoomdepth: 50,
 
 	// Прозрачность окна мгновенных значений
 	faderr: 0.6, //
