@@ -1203,7 +1203,7 @@ function init() {
 					var cur_value_x = colmn11_x0;
 					var cur_value_y = height_colmn1_p1 * h1;
 					//var cur_value_y_step = (h1*100 - h1*disp_up)/(end_time-start_time);
-					var cur_value_y_step = (h1 * 100 - h1 * disp_up) / (Sheet.Kzoom* 10);
+					var cur_value_y_step = (h1 * 100 - h1 * disp_up) / (Sheet.Kzoom* 100);
 				
 					//Если есть хоть одна запись, то рисуем начало и конец линий(первая и последняя запись) чтобы не было дырок
 					//Первая запись если меньше 10 сек то полоса
@@ -1702,7 +1702,7 @@ if (curtemp=='depth'){
 	var big_teth = true;
 	//Коэффициент зума и разряживание
 
-	stepMin = Sheet.Kzoom * 10;
+	stepMin = Sheet.Kzoom ;
 
 	var plats = height - h1 * disp_up; //Ширина всего поля в единицах экрана
 	var plats_data =Sheet.Kzoom * 10; //Ширина всего поля в единицах данных (диапазон в сек)
@@ -1710,7 +1710,7 @@ if (curtemp=='depth'){
 	var beg_plats = h1 * disp_up //Отступ от шапки
 
 	//Сколько целых минут?
-	var minut_round = Sheet.Kzoom * 10;
+	var minut_round = Sheet.Kzoom*100;
 
 	// Сколько 10 минуток ?
 	var ten_minuts = minut_round / stepMin;
@@ -1719,7 +1719,7 @@ if (curtemp=='depth'){
 	var ten = start_time / 1 + stepMin * 10;//+10 минут
 
 	// Сколько секунд в начале надо отступить до круглой первой 10 минуты?
-	var disp_sec_ten = ten / 1000 - start_time / 1;
+	var disp_sec_ten = ten / 1 - start_time / 1;
 
 	//Сколько надо отступить от начала планшета до первой 10 минуты
 	beg_plats = beg_plats + K_rul * disp_sec_ten;
@@ -1760,7 +1760,7 @@ if (curtemp=='depth'){
 			weight_colmn1 = Columns["col0"].size.w;
 			//var text_time = draw.text(String(date)+' '+String(hour)+':'+String(minutes))
 			//var name_p1 = String(Math.floor(Number(start_time/1 +(h1 * 100 - h1 * disp_up) / (Sheet.Kzoom*100)+ cur_value_y_step *i)));
-			var name_p1 = String(Number(start_time)+ i *stepMin);
+			var name_p1 = String(Number(start_time)+ i* stepMin * 100);
 			var text_name_p1 = draw.text(name_p1)
 				.font({ family: Sheet.fnt, size: size_text_p, color: Columns.col0.color })
 				.move(w1 * time_w / 2, beg_plats)
