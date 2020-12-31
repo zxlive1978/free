@@ -231,8 +231,10 @@ function init() {
 	//console.log (Number(Sheet.Sheet.height_risk));
 	//var idx = 1;
 	//console.log (Columns["col"+String(idx)].size.h);
+
 	//Маcштаб (час)
-	end_time = start_time / 1 + Sheet.Kzoom * 60 * 60;
+	if (curtemp=='time'){
+	end_time = start_time / 1 + Sheet.Kzoom * 60 * 60;}
 	//Ширина шапки времени в %
 	var time_w = Number(Columns.col0.size.w);
 	//Высота шапки по высоте в %
@@ -1741,9 +1743,11 @@ if (curtemp=='depth'){
 	
 
 	for (let i = 0; i < ten_minuts; i++) {
+		console.log(i);
 		//Проверка на большую или малую засечку
 		if ((i % big_teth_step) == 0) {
 			big_teth = true;
+			console.log(i);
 			//big_teth_step = i+big_teth_step;
 			length = Columns["col0"].size.w * 0.2;
 			width_line = 2;
