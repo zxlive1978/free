@@ -1718,13 +1718,13 @@ if (curtemp=='depth'){
 	var beg_plats = h1 * disp_up //Отступ от шапки
 
 	//Сколько целых минут?
-	var minut_round = (last_time2 - beg_time2) / 60;
+	var minut_round = (last_time2 - beg_time2) / 100;
 
 	// Сколько 10 минуток ?
 	var ten_minuts = minut_round / stepMin;
 
 	//Дата для первой 10 минутки в секундах от начала
-	var ten = beg_time2 + stepMin * 60;//+10 минут
+	var ten = beg_time2;//+10 минут
 	var day = new Date(ten * 1000);
 	var next_ten = Math.floor(day.getMinutes() / stepMin) * stepMin;//удалили минуты от 1..9
 	var ten_date = new Date(day.getFullYear(), day.getMonth(), day.getDate(), day.getHours(), next_ten, 0, 0); // Дата 10 минут 0 сек 0 мсек
