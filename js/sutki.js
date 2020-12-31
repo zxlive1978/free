@@ -1887,68 +1887,7 @@ if (curtemp=='depth'){
 		beg_plats = beg_plats + K_rul * stepMin * 100; //Следующие 10 минут		
 	}
 
-	//МАЛЕНЬКИЕ НАСЕЧКИ 
-	stepMin = Sheet.Kzoom * 1.0;
-
-	var last_time2 = start_time / 1 + Sheet.Kzoom * 100 * 100;
-	var day = new Date(last_time2 * 1000);
-	var last_hour = day.getHours();
-	var last_minutes = day.getMinutes();
-	//Начало и конец
-	var beg_time2 = start_time / 1;
-	var cur_time2 = beg_time2;
-	var day = new Date(cur_time2 * 1000);
-	/* var beg_year = day.getFullYear();
-	var beg_month = day.getMonth();
-	var beg_date = day.getDate();
-	var beg_hour = day.getHours();
-	var beg_minutes = day.getMinutes();
-	var beg_sec = day.getSeconds();
-	var beg_msec = day.getMilliseconds(); */
-
-	var plats = height - h1 * disp_up; //Ширина всего поля в единицах экрана
-	var plats_data = last_time2 - beg_time2; //Ширина всего поля в единицах данных (диапазон в сек)
-	var K_rul = plats / plats_data; //Коэф Ширина одной секунды в % колонки
-	var beg_plats = h1 * disp_up //Отступ от шапки
-
-	//Сколько целых минут?
-	var minut_round = (last_time2 - beg_time2) / 100;
-	/*if (beg_sec !== 0){
-		minut_round = minut_round - 1;
-	}
-	*/
-	// Сколько 10 минуток ?
-	var ten_minuts = minut_round / stepMin;
-
-	//Дата для первой 10 минутки в секундах от начала
-	var ten = beg_time2 + stepMin * 100;//+10 минут
-	var day = new Date(ten * 1000);
-	var next_ten = Math.floor(day.getMinutes() / stepMin) * stepMin;//удалили минуты от 1..9
-	var ten_date = new Date(day.getFullYear(), day.getMonth(), day.getDate(), day.getHours(), next_ten, 0, 0); // Дата 10 минут 0 сек 0 мсек
-	var startTime = new Date(ten_date.getTime()); //Время старта в милисекундах первой 10ти минутки
-	// Сколько секунд в начале надо отступить до круглой первой 10 минуты?
-	var disp_sec_ten = startTime / 1000 - beg_time2;
-
-	//Сколько надо отступить от начала планшета до первой 10 минуты
-	beg_plats = beg_plats + K_rul * disp_sec_ten;
-
-	//Шаг записей для текстовой глубины долота  и суммы объемов
-	var step_txt_numb_rec = d110d.length / ten_minuts;
-
-	for (let i = 0; i < ten_minuts; i++) {
-		//Проверка на большую или малую засечку
-
-		length = Columns["col0"].size.w * 0.1;
-		width_line = 1;
-		//Большие насечки и малые насечки
-		var line_new = draw.line(0, beg_plats, w1 * length, beg_plats);
-		line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
-		//group_time_rul.add(line_new);
-		var line_new = draw.line(w1 * time_w - w1 * length, beg_plats, w1 * time_w, beg_plats);
-		line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
-		beg_plats = beg_plats + K_rul * stepMin * 100; //Следующие 10 минут
-
-	}
+	
 
 
 	try {
