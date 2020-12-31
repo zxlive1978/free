@@ -1696,33 +1696,47 @@ if (curtemp=='depth'){
 	if (isMobile) {
 		big_teth_step = 1;
 	}
-	//Шаг значения 10 м
+	//Шаг значения 10 минут
 	var stepMin = 10;
 	//Основная насечка
 	var big_teth = true;
 	//Коэффициент зума и разряживание
 
-	stepMin = Sheet.Kzoom ;
+	stepMin = Sheet.Kzoom * 2 * 4;
 
+	var last_time2 = start_time / 1 + Sheet.Kzoom * 60 * 60;
+	var day = new Date(last_time2 * 1000);
+	var last_hour = day.getHours();
+	var last_minutes = day.getMinutes();
+	//Начало и конец
+	var beg_time2 = start_time / 1;
+	var cur_time2 = beg_time2;
+	var day = new Date(cur_time2 * 1000);
 	var plats = height - h1 * disp_up; //Ширина всего поля в единицах экрана
-	var plats_data =Sheet.Kzoom * 10; //Ширина всего поля в единицах данных (диапазон в сек)
+	var plats_data = last_time2 - beg_time2; //Ширина всего поля в единицах данных (диапазон в сек)
 	var K_rul = plats / plats_data; //Коэф Ширина одной секунды в % колонки
 	var beg_plats = h1 * disp_up //Отступ от шапки
 
 	//Сколько целых минут?
-	var minut_round = Sheet.Kzoom*100;
+	var minut_round = (last_time2 - beg_time2) / 60;
 
 	// Сколько 10 минуток ?
 	var ten_minuts = minut_round / stepMin;
 
 	//Дата для первой 10 минутки в секундах от начала
-	var ten = start_time / 1 + stepMin * 10;//+10 минут
-
+	var ten = beg_time2 + stepMin * 60;//+10 минут
+	var day = new Date(ten * 1000);
+	var next_ten = Math.floor(day.getMinutes() / stepMin) * stepMin;//удалили минуты от 1..9
+	var ten_date = new Date(day.getFullYear(), day.getMonth(), day.getDate(), day.getHours(), next_ten, 0, 0); // Дата 10 минут 0 сек 0 мсек
+	var startTime = new Date(ten_date.getTime()); //Время старта в милисекундах первой 10ти минутки
 	// Сколько секунд в начале надо отступить до круглой первой 10 минуты?
-	var disp_sec_ten = ten / 1 - start_time / 1;
+	var disp_sec_ten = startTime / 1000 - beg_time2;
 
 	//Сколько надо отступить от начала планшета до первой 10 минуты
 	beg_plats = beg_plats + K_rul * disp_sec_ten;
+
+	//Шаг записей для текстовой глубины долота  и суммы объемов
+	var step_txt_numb_rec = d110d.length / ten_minuts;
 
 	
 
