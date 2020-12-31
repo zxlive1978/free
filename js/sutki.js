@@ -1701,7 +1701,7 @@ if (curtemp=='depth'){
 	//Основная насечка
 	var big_teth = true;
 	//Коэффициент зума и разряживание
-
+	console.log(start_time+'dd'+end_time);
 	stepMin = Sheet.Kzoom * 2 * 4;
 
 	var last_time2 = start_time / 1 + Sheet.Kzoom * 60 * 60;
