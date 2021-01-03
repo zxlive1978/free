@@ -1201,7 +1201,7 @@ function init() {
 			if (curtemp=="depth"){
 				if (drawGraf == true && d110d.length > 0) {
 					var K_x1 = (w1 * weight_colmn1) / ((Number(basePar[key].max)) - (Number(basePar[key].min)));
-					var value = '';
+					var value = ''; 
 					var cur_value_x = colmn11_x0;
 					var cur_value_y = height_colmn1_p1 * h1;
 					//var cur_value_y_step = (h1*100 - h1*disp_up)/(end_time-start_time);
