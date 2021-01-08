@@ -1720,7 +1720,7 @@ if (curtemp=='depth'){
 	var beg_plats = h1 * disp_up //Отступ от шапки
 
 	//Сколько целых минут?
-	var minut_round = (last_time2 - beg_time2) / 100;
+	var minut_round = (last_time2 - beg_time2) / 10000;
 
 	// Сколько 10 минуток ?
 	var ten_minuts = minut_round / stepMin;
