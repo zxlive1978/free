@@ -1746,7 +1746,7 @@ if (curtemp=='depth'){
 		//Проверка на большую или малую засечку
 		if ((i % big_teth_step) == 0) {
 			big_teth = true;
-			console.log(i);
+			// console.log(i);
 			//big_teth_step = i+big_teth_step;
 			length = Columns["col0"].size.w * 0.2;
 			width_line = 2;
