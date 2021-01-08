@@ -1720,7 +1720,7 @@ if (curtemp=='depth'){
 	var beg_plats = h1 * disp_up //Отступ от шапки
 
 	//Сколько целых минут?
-	var minut_round = (last_time2 - beg_time2) / 10000;
+	var minut_round = (last_time2 - beg_time2) / 10;
 
 	// Сколько 10 минуток ?
 	var ten_minuts = minut_round / stepMin;
@@ -1732,7 +1732,7 @@ if (curtemp=='depth'){
 	var ten_date = new Date(day.getFullYear(), day.getMonth(), day.getDate(), day.getHours(), next_ten, 0, 0); // Дата 10 минут 0 сек 0 мсек
 	var startTime =beg_time2; //Время старта в милисекундах первой 10ти минутки
 	// Сколько секунд в начале надо отступить до круглой первой 10 минуты?
-	var disp_sec_ten = startTime / 1000 - beg_time2;
+	var disp_sec_ten = 1;
 
 	//Сколько надо отступить от начала планшета до первой 10 минуты
 	beg_plats = beg_plats + K_rul * disp_sec_ten;
