@@ -1740,7 +1740,7 @@ if (curtemp=='depth'){
 	
 
 	
-
+	console.log(ten_minuts);
 	for (let i = 0; i < ten_minuts; i++) {
 		// console.log(i);
 		//Проверка на большую или малую засечку
