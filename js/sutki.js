@@ -1704,11 +1704,11 @@ if (curtemp=='depth'){
 	var big_teth = true;
 	//Коэффициент зума и разряживание
 	console.log(start_time+'ddv'+end_time);
-	stepMin = 1;
+	
 
-	var last_time2 = start_time / 1 + end_time;
-	var day = new Date(last_time2 * 1000);
-	var last_hour = day.getHours();
+	var last_time2 = end_time;
+	
+	
 	
 	//Начало и конец
 	var beg_time2 = start_time / 1;
