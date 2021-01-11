@@ -1199,7 +1199,7 @@ function init() {
 			if (curtemp=="depth"){
 				if (drawGraf == true && d110d.length > 0) {
 					var K_x1 = (w1 * weight_colmn1) / ((Number(basePar[key].max)) - (Number(basePar[key].min)));
-					var value = '';
+					var value = ''; 
 					var cur_value_x = colmn11_x0;
 					var cur_value_y = height_colmn1_p1 * h1;
 					//var cur_value_y_step = (h1*100 - h1*disp_up)/(end_time-start_time);
@@ -1701,24 +1701,24 @@ if (curtemp=='depth'){
 	//Основная насечка
 	var big_teth = true;
 	//Коэффициент зума и разряживание
-	console.log(start_time+'dd'+end_time);
-	stepMin = Sheet.Kzoom * 2 * 4;
+	console.log(start_time+'ddv'+end_time);
+	
 
-	var last_time2 = start_time / 1 + Sheet.Kzoom * 60 * 60;
-	var day = new Date(last_time2 * 1000);
-	var last_hour = day.getHours();
-	var last_minutes = day.getMinutes();
+	var last_time2 = end_time;
+	
+	
+	
 	//Начало и конец
 	var beg_time2 = start_time / 1;
 	var cur_time2 = beg_time2;
-	var day = new Date(cur_time2 * 1000);
+	var day = cur_time2;
 	var plats = height - h1 * disp_up; //Ширина всего поля в единицах экрана
 	var plats_data = last_time2 - beg_time2; //Ширина всего поля в единицах данных (диапазон в сек)
 	var K_rul = plats / plats_data; //Коэф Ширина одной секунды в % колонки
 	var beg_plats = h1 * disp_up //Отступ от шапки
 
 	//Сколько целых минут?
-	var minut_round = (last_time2 - beg_time2) / 100;
+	var minut_round = (last_time2 - beg_time2) / 10;
 
 	// Сколько 10 минуток ?
 	var ten_minuts = minut_round / stepMin;
@@ -1728,24 +1728,23 @@ if (curtemp=='depth'){
 	var day = new Date(ten * 1000);
 	var next_ten = Math.floor(day.getMinutes() / stepMin) * stepMin;//удалили минуты от 1..9
 	var ten_date = new Date(day.getFullYear(), day.getMonth(), day.getDate(), day.getHours(), next_ten, 0, 0); // Дата 10 минут 0 сек 0 мсек
-	var startTime = new Date(ten_date.getTime()); //Время старта в милисекундах первой 10ти минутки
+	var startTime =beg_time2; //Время старта в милисекундах первой 10ти минутки
 	// Сколько секунд в начале надо отступить до круглой первой 10 минуты?
-	var disp_sec_ten = startTime / 1000 - beg_time2;
+	var disp_sec_ten = 1;
 
 	//Сколько надо отступить от начала планшета до первой 10 минуты
 	beg_plats = beg_plats + K_rul * disp_sec_ten;
 
-	//Шаг записей для текстовой глубины долота  и суммы объемов
-	var step_txt_numb_rec = d110d.length / ten_minuts;
-
 	
 
+	
+	console.log(ten_minuts);
 	for (let i = 0; i < ten_minuts; i++) {
-		console.log(i);
+		// console.log(i);
 		//Проверка на большую или малую засечку
 		if ((i % big_teth_step) == 0) {
 			big_teth = true;
-			console.log(i);
+			// console.log(i);
 			//big_teth_step = i+big_teth_step;
 			length = Columns["col0"].size.w * 0.2;
 			width_line = 2;
