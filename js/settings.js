@@ -248,6 +248,8 @@ var Columns = {
 
 //Маcштаб (час)
 var Kzoom = Sheet.Kzoom;
+//Маcштаб (час)
+var Kzoomdepth = Sheet.Kzoomdepth;
 
 //Плюс
 var rawsvg3 = '<?xml version="1.0" encoding="utf-8"?><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"viewBox="0 0 280 280" style="enable-background:new 0 0 280 280;" xml:space="preserve"><path d="M138.3-54.8l-193,190.1c-1.8,1.8-1.8,4.6,0,6.4l190.1,193c1.8,1.8,4.6,1.8,6.4,0l193-190.1c1.8-1.8,1.8-4.6,0-6.4	l-190.1-193C142.9-56.5,140.1-56.6,138.3-54.8z M227.7,125.7l-0.2,30l-72.6-0.6l-0.6,72.6l-30-0.2l0.6-72.6l-72.6-0.6l0.2-30 l72.6,0.6l0.6-72.6l30,0.2l-0.6,72.6L227.7,125.7z"/> </svg>';
