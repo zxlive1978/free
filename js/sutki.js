@@ -1701,10 +1701,12 @@ if (curtemp=='depth'){
 	//Основная насечка
 	var big_teth = true;
 	//Коэффициент зума и разряживание
-	console.log(start_time+'ddv'+end_time);
+	console.log(start_time);
 	
-
-	var last_time2 = start_time+Kzoom;
+	// 10 Значений
+	var ten_minuts = minut_round / stepMin;
+	var ten_minuts = 10;
+	var last_time2 = start_time+Kzoomdepth*ten_minuts;
 	
 	
 	
@@ -1720,21 +1722,19 @@ if (curtemp=='depth'){
 	//Сколько целых минут?
 	var minut_round = (last_time2 - beg_time2) / 10;
 
-	// Сколько 10 минуток ?
-	var ten_minuts = minut_round / stepMin;
-	var ten_minuts = 10;
+	
 
-	//Дата для первой 10 минутки в секундах от начала
-	var ten = beg_time2;//+10 минут
-	var day = new Date(ten * 1000);
-	var next_ten = Math.floor(day.getMinutes() / stepMin) * stepMin;//удалили минуты от 1..9
-	var ten_date = new Date(day.getFullYear(), day.getMonth(), day.getDate(), day.getHours(), next_ten, 0, 0); // Дата 10 минут 0 сек 0 мсек
-	var startTime =beg_time2; //Время старта в милисекундах первой 10ти минутки
-	// Сколько секунд в начале надо отступить до круглой первой 10 минуты?
-	var disp_sec_ten = 0;
+	// //Дата для первой 10 минутки в секундах от начала
+	// var ten = beg_time2;//+10 минут
+	// var day = new Date(ten * 1000);
+	// var next_ten = Math.floor(day.getMinutes() / stepMin) * stepMin;//удалили минуты от 1..9
+	// var ten_date = new Date(day.getFullYear(), day.getMonth(), day.getDate(), day.getHours(), next_ten, 0, 0); // Дата 10 минут 0 сек 0 мсек
+	// var startTime =beg_time2; //Время старта в милисекундах первой 10ти минутки
+	// // Сколько секунд в начале надо отступить до круглой первой 10 минуты?
+	// var disp_sec_ten = 0;
 
-	//Сколько надо отступить от начала планшета до первой 10 минуты
-	beg_plats = beg_plats + K_rul * disp_sec_ten;
+	// //Сколько надо отступить от начала планшета до первой 10 минуты
+	// beg_plats = beg_plats + K_rul * disp_sec_ten;
 
 	
 
@@ -1886,7 +1886,7 @@ if (curtemp=='depth'){
 
 
 		}
-		beg_plats = beg_plats + K_rul * stepMin * 100; //Следующие 10 минут		
+		beg_plats = beg_plats + K_rul*ten_minuts; //Следующие 10 минут		
 	}
 
 	
