@@ -1696,7 +1696,7 @@ if (curtemp=='depth'){
 	if (isMobile) {
 		big_teth_step = 1;
 	}
-	//Шаг значения 10 минут
+	//Шаг значения 10 метров
 	var stepMin = 10;
 	//Основная насечка
 	var big_teth = true;
