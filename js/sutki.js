@@ -1704,7 +1704,7 @@ if (curtemp=='depth'){
 	console.log(start_time+'ddv'+end_time);
 	
 
-	var last_time2 = start_time;
+	var last_time2 = start_time+Kzoom;
 	
 	
 	
@@ -1722,6 +1722,7 @@ if (curtemp=='depth'){
 
 	// Сколько 10 минуток ?
 	var ten_minuts = minut_round / stepMin;
+	var ten_minuts = 10;
 
 	//Дата для первой 10 минутки в секундах от начала
 	var ten = beg_time2;//+10 минут
