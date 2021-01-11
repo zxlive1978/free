@@ -1704,7 +1704,7 @@ if (curtemp=='depth'){
 	console.log(start_time+'ddv'+end_time);
 	
 
-	var last_time2 = end_time;
+	var last_time2 = start_time;
 	
 	
 	
