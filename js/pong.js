@@ -321,6 +321,8 @@ function read_now(){
 }
 //Чтение вверх
 function read_up(){
+	//если по времени
+	if (curtemp=='time'){
 	refresh = false;
 	online = false;
 	disp_time = Sheet.Kzoom*60*60;
@@ -330,11 +332,22 @@ function read_up(){
 	//alert (d110d[d110d.length-1]["Vrema"]);
 	//read_comment();
 	//create_fake_data();
-	read_random();
+	read_random();}
+	//если глубинка
+	if (curtemp=='depth'){
+		refresh = false;
+		online = false;
+		
+		start_time = start_time-Kzoomdepth*ten_minuts/4;
+		repaint();
+
+	}
 	
 }
 //Чтение вниз
 function read_down(){
+	//если по времени
+	if (curtemp=='time'){
 	refresh = false;
 	online = false;
 	disp_time = Sheet.Kzoom*60*60;
@@ -347,5 +360,14 @@ function read_down(){
 	//alert (d110d[d110d.length-1]["Vrema"]);
 	//read_comment();
 	//create_fake_data();
-	read_random();
+	read_random();}
+	//если глубинка
+	if (curtemp=='depth'){
+		refresh = false;
+		online = false;
+		
+		start_time = start_time+Kzoomdepth*ten_minuts/4;
+		repaint();
+
+	}
 }
