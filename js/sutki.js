@@ -1706,6 +1706,7 @@ if (curtemp=='depth'){
 	// 10 Значений
 	//var ten_minuts = minut_round / stepMin;
 	var ten_minuts = 10;
+	var ten_minuts_small = ten_minuts*10;
 	var last_time2 = start_time+Kzoomdepth*ten_minuts;
 	
 	
@@ -1741,17 +1742,17 @@ if (curtemp=='depth'){
 	
 	console.log(ten_minuts);
 	for (let i = 0; i < ten_minuts; i++) {
-		// console.log(i);
-		if ((i % big_teth_step) == 0) {
-			big_teth = true;
-			//big_teth_step = i+big_teth_step;
-			length = Columns["col0"].size.w * 0.2;
-			width_line = 2;
-		} else {
-			big_teth = false;
-			length = Columns["col0"].size.w * 0.1;
-			width_line = 1;
-		}
+		// // console.log(i);
+		// if ((i % big_teth_step) == 0) {
+		// 	big_teth = true;
+		// 	//big_teth_step = i+big_teth_step;
+		// 	length = Columns["col0"].size.w * 0.2;
+		// 	width_line = 2;
+		// } else {
+		// 	big_teth = false;
+		// 	length = Columns["col0"].size.w * 0.1;
+		// 	width_line = 1;
+		// }
 		//Большие насечки и малые насечки
 		var line_new = draw.line(0, beg_plats, w1 * length, beg_plats);
 		line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
@@ -1883,6 +1884,11 @@ if (curtemp=='depth'){
 
 
 		} else{  }
+		
+		for (let j = 0; j < ten_minuts_small; j++) {
+			var line_new = draw.line(0, beg_plats+ K_rul*j, w1 * Columns["col0"].size.w * 0.1, beg_plats+ K_rul*j);
+			line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
+		}
 		beg_plats = beg_plats + K_rul; //Следующие 10 минут		
 	}
 
