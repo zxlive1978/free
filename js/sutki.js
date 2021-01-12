@@ -59,10 +59,12 @@ function init() {
 	catch (e) { }
 
 
-	//Чтение комментариев
+	//Чтение комментариев по времени
+	if (curtemp=='time'){
 	try {
 		$(read_comment());//см. read_comment.js
 	} catch (e) { }
+		}
 	//Наш div
 	let pos = getElementPosition("drawing");
 	var widthdiv = $('#drawing').width();
