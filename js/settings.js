@@ -190,7 +190,7 @@ var Sheet = {
 
 	//Маcштаб (час) время
 	Kzoom: 3,
-	Kzoomdepth: 100,
+	Kzoomdepth: 1,
 
 	// Прозрачность окна мгновенных значений
 	faderr: 0.6, //
