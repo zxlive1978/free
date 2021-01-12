@@ -1828,13 +1828,13 @@ if (curtemp=='depth'){
 						//var name_p1 =d110d[Math.ceil(i*step_txt_numb_rec)][keey];
 						//Точное время
 						//String ((startTime.getTime() + i* stepMin* 100 *1000)/1000)
-						var ttime = (startTime.getTime() + i * stepMin * 100 * 1000) / 1000;
+						var ttime = Number(start_time)+ i* stepMin;
 						name_p1 = "NaN";
 						//Разница между временем
 						var sub;
 						for (var tmark in d110d) {
 							sub = Number(d110d[tmark]['Zaboj']) - ttime;
-							if (sub < 20 && sub > -20) {
+							if (sub < 0.2 && sub > -0.2) {
 								name_p1 = d110d[tmark][txtPar[String(keey)].par];
 								break;
 							}
