@@ -1706,7 +1706,7 @@ if (curtemp=='depth'){
 	// 10 Значений
 	//var ten_minuts = minut_round / stepMin;
 	var ten_minuts = 10;
-	var ten_minuts_small = ten_minuts*10;
+	var ten_minuts_small = 10;
 	var last_time2 = start_time+Kzoomdepth*ten_minuts;
 	
 	
@@ -1883,10 +1883,11 @@ if (curtemp=='depth'){
 			} catch (e) { }
 
 
-		} else{  }
+		}
 		
 		for (let j = 0; j < ten_minuts_small; j++) {
-			var line_new = draw.line(0, beg_plats+ 2+K_rul*j, w1 * Columns["col0"].size.w * 0.1, beg_plats+ K_rul*j);
+			
+			var line_new = draw.line(0, beg_plats+(K_rul*j)/ten_minuts_small, w1 * Columns["col0"].size.w * 0.1, beg_plats+(K_rul*j)/ten_minuts_small);
 			line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
 		}
 		beg_plats = beg_plats + K_rul; //Следующие 10 минут		
