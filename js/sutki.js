@@ -1697,7 +1697,7 @@ if (curtemp=='depth'){
 		big_teth_step = 1;
 	}
 	//Шаг значения 10 метров
-	var stepMin = 10;
+	var stepMin = 5;
 	//Основная насечка
 	var big_teth = true;
 	//Коэффициент зума и разряживание
@@ -1716,7 +1716,7 @@ if (curtemp=='depth'){
 	var day = cur_time2;
 	var plats = height - h1 * disp_up; //Ширина всего поля в единицах экрана
 	var plats_data = last_time2 - beg_time2; //Ширина всего поля в единицах данных (диапазон в сек)
-	var K_rul = plats / plats_data; //Коэф Ширина одной секунды в % колонки
+	var K_rul = plats / stepMin; //Коэф Ширина одной секунды в % колонки
 	var beg_plats = h1 * disp_up //Отступ от шапки
 
 	//Сколько целых минут?
@@ -1742,7 +1742,16 @@ if (curtemp=='depth'){
 	console.log(ten_minuts);
 	for (let i = 0; i < ten_minuts; i++) {
 		// console.log(i);
-		
+		if ((i % big_teth_step) == 0) {
+			big_teth = true;
+			//big_teth_step = i+big_teth_step;
+			length = Columns["col0"].size.w * 0.2;
+			width_line = 2;
+		} else {
+			big_teth = false;
+			length = Columns["col0"].size.w * 0.1;
+			width_line = 1;
+		}
 		//Большие насечки и малые насечки
 		var line_new = draw.line(0, beg_plats, w1 * length, beg_plats);
 		line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
@@ -1873,8 +1882,8 @@ if (curtemp=='depth'){
 			} catch (e) { }
 
 
-		}
-		beg_plats = beg_plats + K_rul*i; //Следующие 10 минут		
+		} else{  }
+		beg_plats = beg_plats + K_rul; //Следующие 10 минут		
 	}
 
 	
