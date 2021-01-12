@@ -1886,7 +1886,7 @@ if (curtemp=='depth'){
 		} else{  }
 		
 		for (let j = 0; j < ten_minuts_small; j++) {
-			var line_new = draw.line(0, beg_plats+ K_rul*j, w1 * Columns["col0"].size.w * 0.1, beg_plats+ K_rul*j);
+			var line_new = draw.line(0, beg_plats+ 2+K_rul*j, w1 * Columns["col0"].size.w * 0.1, beg_plats+ K_rul*j);
 			line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
 		}
 		beg_plats = beg_plats + K_rul; //Следующие 10 минут		
