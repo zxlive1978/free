@@ -1697,7 +1697,7 @@ if (curtemp=='depth'){
 		big_teth_step = 1;
 	}
 	//Шаг значения 10 метров
-	var stepMin = 5;
+	var stepMin = 10;
 	//Основная насечка
 	var big_teth = true;
 	//Коэффициент зума и разряживание
