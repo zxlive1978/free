@@ -2450,7 +2450,7 @@ if (curtemp=='depth'){
 					// Последняя запись индекс
 					var lidx = -1;
 					console.log(start_time);
-					console.log((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h)));
+					console.log((Y_cur_mouse_click +"  "+Number(Columns[this.attr('id')].size.h)));
 
 					for (let tmark in d110d) {
 	
