@@ -2439,7 +2439,7 @@ if (curtemp=='depth'){
 					//var name_p1 =d110d[Math.ceil(i*step_txt_numb_rec)][keey];
 					//Точное время
 					//String ((startTime.getTime() + i* stepMin* 60 *1000)/1000)
-					var cur_value_y_step_val = (h1 * 100 - (Number(Columns[this.attr('id')].size.h) * h1)) / (Sheet.Kzoom * 60 * 60);
+					var cur_value_y_step_val = (h1 * 100 - (Number(Columns[this.attr('id')].size.h) * h1)) / (Sheet.Kzoomdepth *10);
 					// var ttime =start_time/1 + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h)*h1)/cur_value_y_step_val);
 					var ttime = start_time / 1 + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h) * h1) / cur_value_y_step_val);
 					//Индекс искомой записи -1 не найдена
@@ -2452,7 +2452,7 @@ if (curtemp=='depth'){
 					var lidx = -1;
 					for (let tmark in d110d) {
 	
-						sub = (d110d[tmark]['Vrema']) - ttime;
+						sub = (d110d[tmark]['Zaboj']) - ttime;
 						/* console.log (Number (d110d[tmark]['Vrema']) ,'-',ttime,'-' ,sub); */
 						if (sub < 60 && sub > -60) {
 							if (fidx == -1) {
