@@ -2449,7 +2449,7 @@ if (curtemp=='depth'){
 					var fidx = -1;
 					// Последняя запись индекс
 					var lidx = -1;
-					console.log(start_time+' + '+ttime+' + '+ (Y_cur_mouse_click -h1*Number(Columns[this.attr('id')].size.h)));
+					console.log(start_time+' + '+ttime+' + '+ ((Y_cur_mouse_click -h1*Number(Columns[this.attr('id')].size.h)))*K_rul);
 					// console.log((Y_cur_mouse_click +"  "+((Y_cur_mouse_click) -Number(Columns[this.attr('id')].size.h)* h1))*K_rul);
 
 					for (let tmark in d110d) {
