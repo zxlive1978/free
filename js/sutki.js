@@ -1779,7 +1779,7 @@ if (curtemp=='depth'){
 			weight_colmn1 = Columns["col0"].size.w;
 			//var text_time = draw.text(String(date)+' '+String(hour)+':'+String(minutes))
 			//var name_p1 = String(Math.floor(Number(start_time/1 +(h1 * 100 - h1 * disp_up) / (Sheet.Kzoom*100)+ cur_value_y_step *i)));
-			var name_p1 = String(Number(start_time)+ i* stepMin );
+			var name_p1 = String(start_time+ i* stepMin );
 			var text_name_p1 = draw.text(name_p1)
 				.font({ family: Sheet.fnt, size: size_text_p, color: Columns.col0.color })
 				.move(w1 * time_w / 2, beg_plats)
@@ -1833,7 +1833,7 @@ if (curtemp=='depth'){
 						//var name_p1 =d110d[Math.ceil(i*step_txt_numb_rec)][keey];
 						//Точное время
 						//String ((startTime.getTime() + i* stepMin* 100 *1000)/1000)
-						var ttime = Number(start_time)+ i* stepMin;
+						var ttime = start_time+ i* stepMin;
 						name_p1 = "NaN";
 						//Разница между временем
 						var sub;
