@@ -2451,7 +2451,7 @@ if (curtemp=='depth'){
 					for (let tmark in d110d) {
 	
 						sub = (d110d[tmark]['Zaboj']) - ttime;
-						console.log (Number (d110d[tmark]['Zaboj']) ,'-',ttime,'-' ,sub);
+						//console.log (Number (d110d[tmark]['Zaboj']) ,'-',ttime,'-' ,sub);
 						if (sub < 0.2 && sub > -0.2) {
 							if (fidx == -1) {
 								fidx = tmark;
@@ -2611,6 +2611,7 @@ if (curtemp=='depth'){
 								var month = day.getMonth() + 1;
 								if (month < 10) { month = "0" + month; }
 								var time_viz1 = ' ' + last_hour + ":" + minutes + " " + dates + "." + month + (2000 - yearr);
+								console.log(time_viz1);
 								var text_value = draw.text(txtOknOPar[keey].txt + " " + cur_val + " (" + txtOknOPar[keey].unit + ")")
 									.font({ family: Sheet.fnt, size: text_size_value })
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
