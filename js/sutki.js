@@ -2454,7 +2454,7 @@ if (curtemp=='depth'){
 	
 						sub = (d110d[tmark]['Zaboj']) - ttime;
 						/* console.log (Number (d110d[tmark]['Vrema']) ,'-',ttime,'-' ,sub); */
-						if (sub < 60 && sub > -60) {
+						if (sub < 0.2 && sub > -0.2) {
 							if (fidx == -1) {
 								fidx = tmark;
 							}
