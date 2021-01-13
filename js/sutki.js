@@ -64,7 +64,9 @@ function init() {
 	try {
 		$(read_comment());//см. read_comment.js
 	} catch (e) { }
-		}
+		} else{
+			//пока что нет комментариев по глубине
+			comment=null;}
 	//Наш div
 	let pos = getElementPosition("drawing");
 	var widthdiv = $('#drawing').width();
@@ -1703,13 +1705,13 @@ if (curtemp=='depth'){
 	//Основная насечка
 	var big_teth = true;
 	//Коэффициент зума и разряживание
-	console.log(start_time);
+	// console.log(start_time);
 	
 	// 10 Значений
 	//var ten_minuts = minut_round / stepMin;
 	var ten_minuts = 10;
 	var ten_minuts_small = 10;
-	var last_time2 = start_time+Kzoomdepth*ten_minuts;
+	var last_time2 = Number(start_time/1)+Kzoomdepth*ten_minuts;
 	
 	
 	

@@ -338,7 +338,7 @@ function read_up(){
 		refresh = false;
 		online = false;
 		
-		start_time = start_time-Kzoomdepth*10/4;
+		start_time = Number(start_time/1)-Kzoomdepth*10/4;
 		repaint();
 
 	}
@@ -366,7 +366,7 @@ function read_down(){
 		refresh = false;
 		online = false;
 		
-		start_time = start_time+Kzoomdepth*10/4;
+		start_time = Number(start_time/1)+Kzoomdepth*10/4;
 		repaint();
 
 	}
