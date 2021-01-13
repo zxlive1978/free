@@ -2440,7 +2440,7 @@ if (curtemp=='depth'){
 					// var cur_value_y_step_val = (h1 * 100 - (Number(Columns[this.attr('id')].size.h) * h1)) / (Kzoomdepth);
 					var cur_value_y_step_val = K_rul;
 					// var ttime =start_time/1 + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h)*h1)/cur_value_y_step_val);
-					var ttime = start_time / 1 + (Y_cur_mouse_click -Number(Columns[this.attr('id')].size.h)* h1)/K_rul;
+					var ttime = start_time / 1 + (Y_cur_mouse_click -Number(Columns[this.attr('id')].size.h))*K_rul;
 					//Индекс искомой записи -1 не найдена
 					var disp_val1 = -1;
 					//Разница между значение записи и клика
