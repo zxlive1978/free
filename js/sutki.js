@@ -1890,14 +1890,14 @@ if (curtemp=='depth'){
 
 		}
 		//Маленькте насечки
-		// length = Columns["col0"].size.w * 0.1;
-		// for (let j = 0; j < ten_minuts_small; j++) {
-		// 	let step1=beg_plats+(K_rul*j)/ten_minuts_small;
-		// 	var line_new = draw.line(0, step1, w1 * length, step1);
-		// 	line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
-		// 	var line_new = draw.line(w1 * time_w - w1 * length, step1, w1 * time_w, step1);
-		// 	line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
-		// }
+		length = Columns["col0"].size.w * 0.1;
+		for (let j = 0; j < ten_minuts_small; j++) {
+			let step1=beg_plats+(K_rul*j)/ten_minuts_small;
+			var line_new = draw.line(0, step1, w1 * length, step1);
+			line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
+			var line_new = draw.line(w1 * time_w - w1 * length, step1, w1 * time_w, step1);
+			line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
+		}
 		beg_plats = beg_plats + K_rul; //Следующие 10 минут		
 	}
 
@@ -1908,11 +1908,11 @@ if (curtemp=='depth'){
 		var hole = "";
 
 
-		for (let j = 0; j < d110d.length - 2; j++) {
+		for (let j = 0; j < d110d.length - 1; j++) {
 			if (d110d[j + 1]["Zaboj"] - d110d[j]["Zaboj"] > 1) {
 				hole += j + ", " + (j + 1) + ", ";
 			}
-			if (end_time - d110d[j]["Zaboj"] > 1 && online != true && j == d110d.length - 3) {
+			if (start_time+ +Kzoomdepth*ten_minuts- d110d[j]["Zaboj"] > 1 && online != true && j == d110d.length - 3) {
 				hole += j + ", " + (j + 1) + ", ";
 			}
 			if (d110d[j]["Zaboj"] - start_time > 1 && j == 0) {
@@ -2437,7 +2437,7 @@ if (curtemp=='depth'){
 					//var name_p1 =d110d[Math.ceil(i*step_txt_numb_rec)][keey];
 					//Точное время
 					//String ((startTime.getTime() + i* stepMin* 60 *1000)/1000)
-					var cur_value_y_step_val = (h1 * 100 - (Number(Columns[this.attr('id')].size.h) * h1)) / (Sheet.Kzoomdepth *10);
+					var cur_value_y_step_val = (h1 * 100 - (Number(Columns[this.attr('id')].size.h) * h1)) / (Kzoomdepth);
 					// var ttime =start_time/1 + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h)*h1)/cur_value_y_step_val);
 					var ttime = start_time / 1 + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h) * h1) / cur_value_y_step_val);
 					//Индекс искомой записи -1 не найдена
