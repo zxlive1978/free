@@ -1912,7 +1912,7 @@ if (curtemp=='depth'){
 			if (d110d[j + 1]["Zaboj"] - d110d[j]["Zaboj"] > 1) {
 				hole += j + ", " + (j + 1) + ", ";
 			}
-			if (start_time+ +Kzoomdepth*ten_minuts- d110d[j]["Zaboj"] > 1 && online != true && j == d110d.length - 3) {
+			if (start_time +Kzoomdepth*ten_minuts- d110d[j]["Zaboj"] > 1 && online != true && j == d110d.length - 3) {
 				hole += j + ", " + (j + 1) + ", ";
 			}
 			if (d110d[j]["Zaboj"] - start_time > 1 && j == 0) {
@@ -2449,7 +2449,9 @@ if (curtemp=='depth'){
 					var fidx = -1;
 					// Последняя запись индекс
 					var lidx = -1;
-					console.log(ttime);
+					console.log(start_time);
+					console.log((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h) * h1));
+
 					for (let tmark in d110d) {
 	
 						sub = (d110d[tmark]['Zaboj']) - ttime;
