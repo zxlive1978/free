@@ -236,7 +236,7 @@ function init() {
 	//var idx = 1;
 	//console.log (Columns["col"+String(idx)].size.h);
 	//Маcштаб (час)
-	end_time = start_time / 1 + Sheet.Kzoom * 60 * 60;
+	end_time = start_time + Sheet.Kzoom * 60 * 60;
 	//Ширина шапки времени в %
 	var time_w = Number(Columns.col0.size.w);
 	//Высота шапки по высоте в %
@@ -1334,12 +1334,12 @@ function init() {
 
 	stepMin = Sheet.Kzoom * 2 * 4;
 
-	var last_time2 = start_time / 1 + Sheet.Kzoom * 60 * 60;
+	var last_time2 = start_time + Sheet.Kzoom * 60 * 60;
 	var day = new Date(last_time2 * 1000);
 	var last_hour = day.getHours();
 	var last_minutes = day.getMinutes();
 	//Начало и конец
-	var beg_time2 = start_time / 1;
+	var beg_time2 = start_time;
 	var cur_time2 = beg_time2;
 	var day = new Date(cur_time2 * 1000);
 	var plats = height - h1 * disp_up; //Ширина всего поля в единицах экрана
@@ -1522,12 +1522,12 @@ function init() {
 	//МАЛЕНЬКИЕ НАСЕЧКИ 
 	stepMin = Sheet.Kzoom * 1.0;
 
-	var last_time2 = start_time / 1 + Sheet.Kzoom * 60 * 60;
+	var last_time2 = start_time + Sheet.Kzoom * 60 * 60;
 	var day = new Date(last_time2 * 1000);
 	var last_hour = day.getHours();
 	var last_minutes = day.getMinutes();
 	//Начало и конец
-	var beg_time2 = start_time / 1;
+	var beg_time2 = start_time;
 	var cur_time2 = beg_time2;
 	var day = new Date(cur_time2 * 1000);
 	/* var beg_year = day.getFullYear();
@@ -1716,7 +1716,7 @@ if (curtemp=='depth'){
 	
 	
 	//Начало и конец
-	var beg_time2 = start_time / 1;
+	var beg_time2 = start_time;
 	var cur_time2 = beg_time2;
 	var day = cur_time2;
 	var plats = height - h1 * disp_up; //Ширина всего поля в единицах экрана
@@ -2103,7 +2103,7 @@ if (curtemp=='depth'){
 				//String ((startTime.getTime() + i* stepMin* 60 *1000)/1000)
 				var cur_value_y_step_val = (h1 * 100 - (Number(Columns[this.attr('id')].size.h) * h1)) / (Sheet.Kzoom * 60 * 60);
 				// var ttime =start_time/1 + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h)*h1)/cur_value_y_step_val);
-				var ttime = start_time / 1 + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h) * h1) / cur_value_y_step_val);
+				var ttime = start_time + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h) * h1) / cur_value_y_step_val);
 				//Индекс искомой записи -1 не найдена
 				var disp_val1 = -1;
 				//Разница между значение записи и клика
@@ -2440,7 +2440,7 @@ if (curtemp=='depth'){
 					// var cur_value_y_step_val = (h1 * 100 - (Number(Columns[this.attr('id')].size.h) * h1)) / (Kzoomdepth);
 					var cur_value_y_step_val = K_rul;
 					// var ttime =start_time/1 + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h)*h1)/cur_value_y_step_val);
-					var ttime = start_time / 1 + (Y_cur_mouse_click -Number(Columns[this.attr('id')].size.h))/Kzoomdepth;
+					var ttime = start_time + (Y_cur_mouse_click -Number(Columns[this.attr('id')].size.h))/Kzoomdepth;
 					//Индекс искомой записи -1 не найдена
 					var disp_val1 = -1;
 					//Разница между значение записи и клика

@@ -110,8 +110,8 @@ function read_cycle (){
 		}
 		/* console.log(d110d[idx]['Vrema']); */
 	}
-	start_time = d110d[0]["Vrema"];
-	end_time = d110d[d110d.length-1]["Vrema"];
+	start_time =Number(d110d[0]["Vrema"]);
+	end_time = Number(d110d[d110d.length-1]["Vrema"]);
 	repaint();
 	setTimeout(read_cycle, 500);
 }
@@ -150,9 +150,9 @@ function read_next(){
 				var numbs110d = null;
 				numbs110d = d110d.length;
 				start_time = null;
-				start_time = d110d[0]["Vrema"];
+				start_time = Number(d110d[0]["Vrema"]);
 				end_time = null;
-				end_time = d110d[d110d.length-1]["Vrema"];
+				end_time = Number(d110d[d110d.length-1]["Vrema"]);
 				
 				/* console.log(d110d.length); */
 				/* console.log(d110d); */
@@ -203,9 +203,9 @@ function read_next(){
 				var numbs110d = null;
 				numbs110d = d110d.length;
 				start_time = null;
-				start_time = d110d[0]["Zaboj"];
+				start_time = Number(d110d[0]["Zaboj"]);
 				end_time = null;
-				end_time = d110d[d110d.length-1]["Zaboj"];
+				end_time = Number(d110d[d110d.length-1]["Zaboj"]);
 				
 				// console.log(end_time);
 				/* console.log(d110d); */
