@@ -1757,6 +1757,7 @@ if (curtemp=='depth'){
 		// 	length = Columns["col0"].size.w * 0.1;
 		// 	width_line = 1;
 		// }
+		length=Columns["col0"].size.w * 0.2;
 		//Большие насечки и малые насечки
 		var line_new = draw.line(0, beg_plats, w1 * length, beg_plats);
 		line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
