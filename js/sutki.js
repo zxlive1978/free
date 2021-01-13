@@ -1889,12 +1889,12 @@ if (curtemp=='depth'){
 
 
 		}
-		
+		length = Columns["col0"].size.w * 0.1;
 		for (let j = 0; j < ten_minuts_small; j++) {
 			let step1=beg_plats+(K_rul*j)/ten_minuts_small;
-			var line_new = draw.line(0, step1, w1 * Columns["col0"].size.w * 0.1, step1);
+			var line_new = draw.line(0, step1, w1 * length, step1);
 			line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
-			var line_new = draw.line(w1 * time_w - w1 * Columns["col0"].size.w * 0.1, step1, w1 * time_w, step1);
+			var line_new = draw.line(w1 * time_w - w1 * length, step1, w1 * time_w, step1);
 			line_new.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
 		}
 		beg_plats = beg_plats + K_rul; //Следующие 10 минут		
