@@ -57,6 +57,11 @@
 		'Zaboj' => $row['Zaboj'],'Instr' => $row['Instr'],'C1C5' => $row['C1C5'],'C1' => $row['C1'],
 		'Xn1' => $row['Xn1'],'Xn2' => $row['Xn2'],'Potok' => $row['Potok'],'Tbix' => $row['Tbix'],
 		'V1' => $row['V1'],'V2' => $row['V2'],'V3' => $row['V3'],'V4' => $row['V4'],
+		'Dmk' => $row['Dmk'],'Vbur' => $row['Vbur'],'Xn3' => $row['Xn3'],'V5' => $row['V5'],
+		'V6' => $row['V6'],'C2' => $row['C2'],'C3' => $row['C3'],'C4' => $row['C4'],
+		'C5' => $row['C5'],'Kalcid' => $row['Kalcid'],'Dolomit' => $row['Dolomit'],'C1sh' => $row['C1sh'],
+		'C2sh' => $row['C2sh'],'C3sh' => $row['C3sh'],'C4sh' => $row['C4sh'],'C5sh' => $row['C5sh'],
+		'C1C5sh' => $row['C1C5sh'],'Minbx' => $row['Minbx'],'Minbix' => $row['Minbix'],
 		'Vdol' => $row['Vdol'],'Vobj' => $row['Vobj'],'Vinstr' => $row['Vinstr']);
 		//$cur_rec['Wkp'] = $row['Wkp'];
 		array_push($xy_value110d, $cur_rec);
