@@ -66,9 +66,14 @@ var bigPar = {
 	par5: { par: 'Talblok', txt: 'Пол. тальблока', min: 0, max: 45, color: '#006eea', poz: { x: 2, y: 3 }, unit: 'м', log: false },
 	par6: { par: 'Qbx', txt: 'Расход на входе', min: 0, max: 70, color: '#006400', poz: { x: 2, y: 4 }, unit: 'л/сек', log: false },
 	par7: { par: 'C1', txt: 'С1', min: 0, max: 0.5, color: '#f21890', poz: { x: 2, y: 5 }, unit: '%', log: false },
+	par7: { par: 'C2', txt: 'С2', min: 0, max: 0.5, color: '#ff0066', poz: { x: 2, y: 5 }, unit: '%', log: false },
+	par7: { par: 'C3', txt: 'С3', min: 0, max: 0.5, color: '#a92ab8', poz: { x: 2, y: 5 }, unit: '%', log: false },
+	par7: { par: 'C4', txt: 'С4', min: 0, max: 0.5, color: '#006eea', poz: { x: 2, y: 5 }, unit: '%', log: false },
+	par7: { par: 'C5', txt: 'С5', min: 0, max: 0.5, color: '#006400', poz: { x: 2, y: 5 }, unit: '%', log: false },
 	par8: { par: 'C1C5', txt: 'Сумма газов', min: 0, max: 5, color: '#855f30', poz: { x: 2, y: 6 }, unit: '%', log: false },
 	par9: { par: 'Xn1', txt: 'Ходы 1 насоса', min: 0, max: 150, color: '#f40503', poz: { x: 3, y: 2 }, unit: '1/мин', log: false },
 	par10: { par: 'Xn2', txt: 'Ходы 2 насоса', min: 0, max: 150, color: '#006eea', poz: { x: 3, y: 3 }, unit: '1/мин', log: false },
+	par10: { par: 'Xn3', txt: 'Ходы 3 насоса', min: 0, max: 150, color: '#006eea', poz: { x: 3, y: 3 }, unit: '1/мин', log: false },
 	par11: { par: 'Tbix', txt: 'Темп. на выходе', min: 0, max: 70, color: '#f21890', poz: { x: 3, y: 4 }, unit: 'град', log: false },
 	par12: { par: 'Potok', txt: 'Поток на выходе', min: 0, max: 70, color: '#006400', poz: { x: 3, y: 5 }, unit: 'у.е', log: false },
 	par13: { par: 'Vinstr', txt: 'Скор. тальблока', min: -5, max: 5, color: '#a92ab8', poz: { x: 3, y: 6 }, unit: 'м/сек', log: false },
@@ -80,7 +85,42 @@ var bigPar = {
 	par19: { par: 'Vdol', txt: 'Объем дол.емк.', min: 0, max: 30, color: '#a92ab8', poz: { x: 4, y: 6 }, unit: 'м3', log: false },
 	par20: { par: 'Zaboj', txt: 'Глубина Забоя', min: 0, max: 4000, color: '#ff0066', poz: { x: 1, y: 6 }, show: true, step: 0.75, unit: 'м', log: false },
 	par21: { par: 'Instr', txt: 'Пол.долота', min: 0, max: 100, color: '#ff0066', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
+	par22: { par: 'Dmk', txt: 'ДМК', min: 0, max: 100, color: '#ff0066', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
+	par23: { par: 'Vbur', txt: 'Скорость бурения', min: 0, max: 100, color: '#ff0066', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
+	par24: { par: 'Instr', txt: 'Пол.долота', min: 0, max: 100, color: '#ff0066', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
+	par25: { par: 'Instr', txt: 'Пол.долота', min: 0, max: 100, color: '#ff0066', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
+	par26: { par: 'Instr', txt: 'Пол.долота', min: 0, max: 100, color: '#ff0066', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
+	par27: { par: 'Instr', txt: 'Пол.долота', min: 0, max: 100, color: '#ff0066', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
+	par28: { par: 'Instr', txt: 'Пол.долота', min: 0, max: 100, color: '#ff0066', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
+	par29: { par: 'Instr', txt: 'Пол.долота', min: 0, max: 100, color: '#ff0066', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
+	par30: { par: 'Instr', txt: 'Пол.долота', min: 0, max: 100, color: '#ff0066', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
+	par31: { par: 'Instr', txt: 'Пол.долота', min: 0, max: 100, color: '#ff0066', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
+	par32: { par: 'Instr', txt: 'Пол.долота', min: 0, max: 100, color: '#ff0066', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
+	par33: { par: 'Instr', txt: 'Пол.долота', min: 0, max: 100, color: '#ff0066', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
+	par34: { par: 'Instr', txt: 'Пол.долота', min: 0, max: 100, color: '#ff0066', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
+	par35: { par: 'Instr', txt: 'Пол.долота', min: 0, max: 100, color: '#ff0066', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
+	par36: { par: 'Instr', txt: 'Пол.долота', min: 0, max: 100, color: '#ff0066', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
 };
+
+# 23; 'ДМК' Dmk
+# 22; 'Скорость бурения' Vbur
+# 135; 'Ходов насоса 3' Xn3
+# 48; 'Объем емкости 5' V5
+# 236; 'Объем емкости 6' V6
+# 17; 'С2' C2
+# 18; 'С3' C3
+# 20; 'С4' C4
+# 21; 'С5' C5
+# 176; 'Кальцит' Kalcid
+# 196; 'Доломит' Dolomit
+# 216; 'С1 по шламу' C1sh
+# 217; 'С2 по шламу' C2sh
+# 218; 'С3 по шламу' C3sh
+# 219; 'С4 по шламу' C4sh
+# 220; 'С5 по шламу' C5sh
+# 222; 'Сумма шламу С1...С6' C1C5sh
+# 155; 'Минерализация на вх' Minbx
+# 156; 'Минерализация на вых' Minbix
 
 //Справочник параметры графики цифровой параметры
 var txtPar = {
