@@ -1439,14 +1439,14 @@ function colOK10() {
 		refresh = false; //pong.js
 	
 		skv = wellSelectName;
-		wellName = wellSelectBase;
+		wellName = wellSelectBase+'depth_all';
 		namecmt = wellName + "kr";
 		//Сменить название в шапке
 		$('#skvnamelabt').text(skv);
 		//Сохранить в локальное хранилище
 		// !!!colPan9save(wellName, skv, namecmt, formname);
 		refresh = true;
-		read_next();
+		read_now();
 	}
 	if (curtemp == 'video') {
 		real=$('input[id="real1"]:checked').val();
@@ -2031,6 +2031,7 @@ function adm4() {
 	$('#skvnamelabt').text(skv);
 	// init();
 	// colOK11();
+	wellName=wellName+'depth_all';
 	read_now();
 
 }

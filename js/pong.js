@@ -191,7 +191,7 @@ function read_next(){
 		$.ajax({
 			type: "POST",
 			url: 'js/read_depth.php',
-			data: {whatdo:'read', table:'s20depth_all'},
+			data: {whatdo:'read', table:wellName},
 			cache: false,
 			async: false,
 			success: function(data){
