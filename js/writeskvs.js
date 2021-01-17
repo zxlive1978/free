@@ -145,7 +145,7 @@ function readskvstart(whatdo, table, p000, skvsjson){
 				//console.log(cams)
 			}
 
-			var welldepth = {};
+			var wellsdepth = {};
 			var len = response.length;
             for(var i=0; i<len; i++){
                 var p000 = response[i].p000;
@@ -155,10 +155,10 @@ function readskvstart(whatdo, table, p000, skvsjson){
 				let result = _uzdec.split(",");
 				for (var j=0; j<result.length; j++){
 					if (($.trim(result[j]))=='ALL'){
-						welldepth[String(p000)] =  skvjson;
+						wellsdepth[String(p000)] =  skvjson;
 					break;}
 					if (($.trim(result[j]))==skvjson.txt){
-						welldepth[String(p000)] =  skvjson;}
+						wellsdepth[String(p000)] =  skvjson;}
 					
 				}
 				//console.log(cams)

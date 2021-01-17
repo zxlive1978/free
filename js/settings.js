@@ -1314,7 +1314,39 @@ function colPan10(name_select) {
 			}
 		}
 
-
+		if (curtemp == 'depth') {
+			//добавление в список
+			for (var keey in wellsdepth) {
+				$('#wellN').append($('<option>',
+					{
+						value: wellsdepth[keey].wellN,
+						text: wellsdepth[keey].txt
+					}));
+			}
+			//Восстановление выбора
+			$('#wellN').val(wellName);
+	
+			// /* var selIdx=$("#wellN").prop('selectedIndex');
+			// wellidx = selIdx; */
+			// if (Object.keys(wells).length-1<wellidx){
+			// 	wellidx=0;
+			// }
+	
+			if ((Object.keys(wells).length > 0)) {
+				for (var keey in wells) {
+					// console.log(keey);
+					// console.log(wells[keey].txt);
+					// console.log(skv);
+					// console.log(name_select);
+					if (wells[keey].txt == skv) {
+						$("#wellNwork1").text(wells[keey].type);
+						$("#wellNwork2").text(wells[keey].typeStn);
+						$("#wellNwork3").text(wells[keey].nach);
+						$("#wellNwork4").text(wells[keey].tel);
+						$("#wellNwork5").text(wells[keey].email);
+					}
+				}
+			}
 
 
 		//Выбранная скважина
