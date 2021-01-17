@@ -1369,7 +1369,7 @@ function colPan10(name_select) {
 			//bootstrap modal
 
 
-		});}
+		});
 
 
 
@@ -1378,7 +1378,7 @@ function colPan10(name_select) {
 		$("#wells").css('font-size', 40);
 		$('#wells').iziModal('open'); */
 		$("#myModal4").modal('show');
-	};
+	};}
 
 	if (curtemp == 'video') {
 		//удаление старых потоков
