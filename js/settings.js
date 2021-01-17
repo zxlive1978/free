@@ -1369,7 +1369,7 @@ function colPan10(name_select) {
 			//bootstrap modal
 
 
-		});
+		});}
 
 
 
