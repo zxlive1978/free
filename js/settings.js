@@ -1313,7 +1313,8 @@ function colPan10(name_select) {
 				}
 			}
 		}
-
+		$("#myModal4").modal('show');
+	};
 		if (curtemp == 'depth') {
 			//добавление в список
 			for (var keey in wellsdepth) {
@@ -1378,7 +1379,7 @@ function colPan10(name_select) {
 		$("#wells").css('font-size', 40);
 		$('#wells').iziModal('open'); */
 		$("#myModal4").modal('show');
-	};}
+	};
 
 	if (curtemp == 'video') {
 		//удаление старых потоков
