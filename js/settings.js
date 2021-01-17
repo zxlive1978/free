@@ -1755,6 +1755,7 @@ function adm() {
 	curtemp = 'video';
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu1').hide();
+	$('#dropdownMenu3').hide();
 	$("#dropdownMenu2").attr("style", "display:yes; padding-top:3; padding-bottom:3;");
 	$('#dropdownMenu2').show();
 
@@ -1914,6 +1915,7 @@ function adm3() {
 	curtemp = 'time';
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu2').hide();
+	$('#dropdownMenu3').hide();
 	$('#dropdownMenu1').show();
 
 	//$('.modal-backdrop').hide();
@@ -1952,8 +1954,9 @@ function adm4() {
 	}
 	curtemp = 'depth';
 	$("#myModal11").modal('hide');
+	$('#dropdownMenu1').hide();
 	$('#dropdownMenu2').hide();
-	$('#dropdownMenu1').show();
+	$('#dropdownMenu3').show();
 
 	//$('.modal-backdrop').hide();
 
@@ -1973,9 +1976,9 @@ function adm4() {
 	$('#drawing').empty();
 	$('#drawing').show();
 	$('#skvnamelab').show();
-	online = true;
-	refresh = true;
-	onofadm = true;
+	online = false;
+	refresh = false;
+	onofadm = false;
 	$('#skvnamelabt').text(skv);
 	// init();
 	// colOK11();

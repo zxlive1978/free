@@ -140,6 +140,23 @@ if (!$_SESSION['auth']) {
 <div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu2" style=" width: 300px !important;">
 
     <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg'  width="30" height="30">  Данные "По времени"</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/time.svg'  width="30" height="30">  Данные "По глубине"</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg'  width="30" height="30">  Видеокамеры</button>
+    <div class="dropdown-divider"></div>
+    <button class='btn  btn-dark btn-block text-left'  onClick="colPan10();" ><img src='css/well.svg'  width="30" height="30">  Выбор текущей скважины</button>
+    <div class="dropdown-divider"></div>
+    <button class='btn btn-dark  btn-block text-left '  onClick="exit('exit','exit','exit');"  ><img src='css/exit.svg'  width="30" height="30">  Выход из приложения</button>
+    
+  </div>
+  </div>
+
+  <div class="dropdown">
+<!-- <a class='btn  '  data-toggle="tooltip" data-placement="bottom" title="Основное меню регистрируемых данных станции ЭГТИ" onClick="$('#myModal11').modal('show');"><img src='css/menu.png'  width="20" height="20"></a> -->
+<button class='btn   bg-secondary'  id='dropdownMenu3'  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" display:none; padding-top:3; padding-bottom:3;" ><img src='css/burg.svg'  width="27" height="27"></button>
+<div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu2" style=" width: 300px !important;">
+
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg'  width="30" height="30">  Данные "По времени"</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/time.svg'  width="30" height="30">  Данные "По глубине"</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg'  width="30" height="30">  Видеокамеры</button>
     <div class="dropdown-divider"></div>
     <button class='btn  btn-dark btn-block text-left'  onClick="colPan10();" ><img src='css/well.svg'  width="30" height="30">  Выбор текущей скважины</button>
