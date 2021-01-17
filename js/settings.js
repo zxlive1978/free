@@ -1435,6 +1435,19 @@ function colOK10() {
 		/* repaint(); */
 		/* namecmt=wellSelectBase + "kr"; */
 	}
+	if (curtemp == 'depth') {
+		refresh = false; //pong.js
+	
+		skv = wellSelectName;
+		wellName = wellSelectBase;
+		namecmt = wellName + "kr";
+		//Сменить название в шапке
+		$('#skvnamelabt').text(skv);
+		//Сохранить в локальное хранилище
+		// !!!colPan9save(wellName, skv, namecmt, formname);
+		refresh = true;
+		read_next();
+	}
 	if (curtemp == 'video') {
 		real=$('input[id="real1"]:checked').val();
 		//если выбран архив
