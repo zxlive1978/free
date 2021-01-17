@@ -145,7 +145,7 @@ function readskvstart(whatdo, table, p000, skvsjson){
 				//console.log(cams)
 			}
 
-			var wellsdepth = {};
+			wellsdepth = {};
 			var len = response.length;
             for(var i=0; i<len; i++){
                 var p000 = response[i].p000;

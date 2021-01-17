@@ -50,6 +50,9 @@ var cams = {};
 var camswell = [];
 var workstream = {};
 
+//Список скважин по глубине
+var wellsdepth = {};
+
 //Текущие параметры Справочник параметров графики обычные
 
 var basePar = {
