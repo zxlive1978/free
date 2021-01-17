@@ -184,6 +184,7 @@ function read_next(){
 	}}
 
 	if (curtemp=='depth'){
+		console.log(wellName);
 
 		// if (refresh==true &&  wellName!='' ){
 		refresh = false;
