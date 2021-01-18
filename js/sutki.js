@@ -1231,7 +1231,6 @@ function init() {
 				
 					//Последующие записи
 					for (let j = 1; j < d110d.length - 1; j++) {
-						// if (d110d[j]["Zaboj"]>=start_time && d110d[j]["Zaboj"]<=last_time2 ){
 						cur_value_x = colmn11_x0 + (d110d[j][basePar[key].par]) * K_x1 - (Number(basePar[key].min)) * K_x1;
 						cur_value_y = h1 * disp_up + (d110d[j]["Zaboj"] - start_time) * cur_value_y_step;
 						//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -1242,7 +1241,6 @@ function init() {
 							value = value + cur_value_x;
 							value = value + ',' + cur_value_y + ' ';
 						}
-						// }
 					}
 				
 					//Последняя запись если меньше 10 сек то полоса
