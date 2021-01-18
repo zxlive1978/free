@@ -16,6 +16,9 @@
 	
 	$table=$_POST['table'];
 	$whatdo=$_POST['whatdo'];
+	$start_time=$_POST['start_time'];
+	$end_time=$_POST['end_time'];
+	$x_id="Zaboj";
 	// $p000 = $_POST['p000'];
 	// $skvjson = $_POST['skvsjson'];
 	$nu = "ok";
@@ -28,7 +31,7 @@
 	
 	//read all
 	if ( $whatdo == 'read'){
-		$query="SELECT * FROM ".$name_base.".".$table.";";
+		$query="SELECT * FROM ".$name_base.".".$table." WHERE ".$x_id.">".(int)$start_time." AND ".$x_id."<".(int)$end_time.";";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		$comment = array();
 		while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
