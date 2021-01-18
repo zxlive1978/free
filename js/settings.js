@@ -2031,6 +2031,7 @@ function adm4() {
 	$('#skvnamelabt').text(skv);
 	// init();
 	// colOK11();
+	start_time =0;
 	wellName=wellName+'depth_all';
 	read_now();
 
