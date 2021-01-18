@@ -192,7 +192,7 @@ function read_next(){
 		$.ajax({
 			type: "POST",
 			url: 'js/read_depth.php',
-			data: {whatdo:'read', table:wellName},
+			data: {whatdo:'read', table:wellName , Kzoomdepth: Sheet.Kzoomdepth},
 			cache: false,
 			async: false,
 			success: function(data){
