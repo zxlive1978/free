@@ -50,9 +50,6 @@ var cams = {};
 var camswell = [];
 var workstream = {};
 
-//Список скважин по глубине
-var wellsdepth = {};
-
 //Текущие параметры Справочник параметров графики обычные
 
 var basePar = {
@@ -1316,41 +1313,8 @@ function colPan10(name_select) {
 				}
 			}
 		}
-		$("#myModal4").modal('show');
-	};
-		if (curtemp == 'depth') {
-			//добавление в список
-			for (var keey in wellsdepth) {
-				$('#wellN').append($('<option>',
-					{
-						value: wellsdepth[keey].wellN,
-						text: wellsdepth[keey].txt
-					}));
-			}
-			//Восстановление выбора
-			$('#wellN').val(wellName);
-	
-			// /* var selIdx=$("#wellN").prop('selectedIndex');
-			// wellidx = selIdx; */
-			// if (Object.keys(wells).length-1<wellidx){
-			// 	wellidx=0;
-			// }
-	
-			if ((Object.keys(wells).length > 0)) {
-				for (var keey in wells) {
-					// console.log(keey);
-					// console.log(wells[keey].txt);
-					// console.log(skv);
-					// console.log(name_select);
-					if (wells[keey].txt == skv) {
-						$("#wellNwork1").text(wells[keey].type);
-						$("#wellNwork2").text(wells[keey].typeStn);
-						$("#wellNwork3").text(wells[keey].nach);
-						$("#wellNwork4").text(wells[keey].tel);
-						$("#wellNwork5").text(wells[keey].email);
-					}
-				}
-			}
+
+
 
 
 		//Выбранная скважина
@@ -1434,19 +1398,6 @@ function colOK10() {
 		read_next();
 		/* repaint(); */
 		/* namecmt=wellSelectBase + "kr"; */
-	}
-	if (curtemp == 'depth') {
-		refresh = false; //pong.js
-	
-		skv = wellSelectName;
-		wellName = wellSelectBase+'depth_all';
-		namecmt = wellName + "kr";
-		//Сменить название в шапке
-		$('#skvnamelabt').text(skv);
-		//Сохранить в локальное хранилище
-		// !!!colPan9save(wellName, skv, namecmt, formname);
-		refresh = true;
-		read_now();
 	}
 	if (curtemp == 'video') {
 		real=$('input[id="real1"]:checked').val();
@@ -1804,7 +1755,6 @@ function adm() {
 	curtemp = 'video';
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu1').hide();
-	$('#dropdownMenu3').hide();
 	$("#dropdownMenu2").attr("style", "display:yes; padding-top:3; padding-bottom:3;");
 	$('#dropdownMenu2').show();
 
@@ -1964,7 +1914,6 @@ function adm3() {
 	curtemp = 'time';
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu2').hide();
-	$('#dropdownMenu3').hide();
 	$('#dropdownMenu1').show();
 
 	//$('.modal-backdrop').hide();
@@ -2003,9 +1952,8 @@ function adm4() {
 	}
 	curtemp = 'depth';
 	$("#myModal11").modal('hide');
-	$('#dropdownMenu1').hide();
 	$('#dropdownMenu2').hide();
-	$('#dropdownMenu3').show();
+	$('#dropdownMenu1').show();
 
 	//$('.modal-backdrop').hide();
 
@@ -2025,14 +1973,12 @@ function adm4() {
 	$('#drawing').empty();
 	$('#drawing').show();
 	$('#skvnamelab').show();
-	online = false;
-	refresh = false;
-	onofadm = false;
+	online = true;
+	refresh = true;
+	onofadm = true;
 	$('#skvnamelabt').text(skv);
 	// init();
 	// colOK11();
-	start_time =0;
-	wellName=wellName+'depth_all';
 	read_now();
 
 }
