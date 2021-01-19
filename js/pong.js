@@ -207,19 +207,24 @@ function read_next(){
 			cache: false,
 			async: false,
 			success: function(data){
-				d110d = null;
-				d110d = JSON.parse(data);
-				/* d110d = eval(data); */
-				data = null;
-				//numbs110d = null;
-				var numbs110d = null;
-				numbs110d = d110d.length;
-				start_time = null;
-				end_time = null;
+				
 				try {
+					d110d = null;
+					d110d = JSON.parse(data);
+					/* d110d = eval(data); */
+					data = null;
+					//numbs110d = null;
+					var numbs110d = null;
+					numbs110d = d110d.length;
+					start_time = null;
+					end_time = null;
 					start_time = Number(d110d[0]["Zaboj"]);
 				
 					end_time = Number(d110d[d110d.length-1]["Zaboj"]);
+					var back_start_time = null;
+					back_start_time = start_time;
+					back_end_time = null;
+					back_end_time = end_time;
 				}
 				catch (e) { }
 				
@@ -237,10 +242,7 @@ function read_next(){
 					d110d[d110d.length-1]["Vrema"] = end_time;
 				
 					} else {drawGraf = true ;} */
-				var back_start_time = null;
-				back_start_time = start_time;
-				back_end_time = null;
-				back_end_time = end_time;
+				
 				repaint();
 				
 			}
