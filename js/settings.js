@@ -1980,6 +1980,7 @@ function adm4() {
 	// init();
 	// colOK11();
 	start_time=Number(0);
+	console.log('глубинка');
 	read_now();
 
 }
