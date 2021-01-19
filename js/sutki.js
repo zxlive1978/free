@@ -189,54 +189,11 @@ function init() {
 		}
 
 	}, false);
-	//ТЕСТ
-	//Бакграунт
-	/*
-	var background = draw.rect(width, height).fill('#dde3e1')
 	
-	//Текст
-	draw.text('Вес на крюке')
-	.move(w1*50, 1)
-	.font({ family: Sheet.fnt, size: 16 })
-	.fill('#ff0066')
-	
-	//Линия
-	var line10 = draw.line(0, 0, w1*50, h1*50)
-	line10.stroke({ width: 2, color: '#f0f'});
-	//Клик
-	line10.click(function() {
-	this.fill({ color: '#f06' });
-	alert('ta-da!');
-	})
-	
-	//Линия пунктирная
-	var line = draw.line(width/2, 0, width/2, height);
-	line.stroke({ width: 5, color: '#fff', dasharray: '5,5' });
-	
-	*/
 
-	//Столбец
-
-	/* for (var i = 1; i < Number(Sheet.numbs_colmns); i++){
-		var Column = {
-		numb:i
-		leftup:0,rightup:0,
-		leftdown:0,rightdown:0,
-		widht:2,
-		color:'#fff'};
-		Columns.push(Column:Column);
-		
-	}; */
-	//console.log(Columns);
-	/* var element = {}, cart = [];
-	element.id = id;
-	element.quantity = quantity;
-	cart.push({element: element}); */
-	//console.log (Number(Sheet.Sheet.height_risk));
-	//var idx = 1;
-	//console.log (Columns["col"+String(idx)].size.h);
 	//Маcштаб (час)
-	end_time = start_time + Sheet.Kzoom * 60 * 60;
+	// end_time = start_time + Sheet.Kzoom * 60 * 60;
+	
 	//Ширина шапки времени в %
 	var time_w = Number(Columns.col0.size.w);
 	//Высота шапки по высоте в %
