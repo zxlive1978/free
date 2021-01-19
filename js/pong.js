@@ -358,7 +358,7 @@ function read_up(){
 		online = false;
 		
 		start_time = Number(start_time/1)-Kzoomdepth*10/4;
-		repaint();
+		read_now();
 
 	}
 	

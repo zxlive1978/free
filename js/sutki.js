@@ -1796,7 +1796,7 @@ if (curtemp=='depth'){
 						var sub;
 						for (var tmark in d110d) {
 							sub = Number(d110d[tmark]['Zaboj']) - ttime;
-							if (sub < 0.2 && sub > -0.2) {
+							if (sub < 0.5 && sub > -0.5) {
 								name_p1 = d110d[tmark][txtPar[String(keey)].par];
 								break;
 							}
@@ -2413,7 +2413,7 @@ if (curtemp=='depth'){
 	
 						sub = (d110d[tmark]['Zaboj']) - ttime;
 						// console.log (Number (d110d[tmark]['Zaboj']) ,'-',ttime,'-' ,sub);
-						if (sub < 0.2 && sub > -0.2) {
+						if (sub < 0.5 && sub > -0.5) {
 							if (fidx == -1) {
 								fidx = tmark;
 							}
