@@ -1979,6 +1979,7 @@ function adm4() {
 	$('#skvnamelabt').text(skv);
 	// init();
 	// colOK11();
+	start_time=Number(0);
 	read_now();
 
 }
