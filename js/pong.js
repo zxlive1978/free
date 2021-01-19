@@ -206,9 +206,14 @@ function read_next(){
 				var numbs110d = null;
 				numbs110d = d110d.length;
 				start_time = null;
-				start_time = Number(d110d[0]["Zaboj"]);
 				end_time = null;
-				end_time = Number(d110d[d110d.length-1]["Zaboj"]);
+				try {
+					start_time = Number(d110d[0]["Zaboj"]);
+				
+					end_time = Number(d110d[d110d.length-1]["Zaboj"]);
+				}
+				catch (e) { }
+				
 				
 				// console.log(end_time);
 				/* console.log(d110d); */
