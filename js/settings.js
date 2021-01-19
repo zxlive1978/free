@@ -1979,7 +1979,7 @@ function adm4() {
 	$('#skvnamelabt').text(skv);
 	// init();
 	// colOK11();
-	start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10/2);
+	start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
 	
 	read_now();
 
