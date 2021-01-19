@@ -43,6 +43,7 @@ let d110d =function (){
 var wellName ="";
 var skv ="";
 var namecmt = wellName + "kr";
+var wellNamedepth ="" +"depth_all";
 var formname = "Под телефон";
 
 if (!isMobile){formname="Под планшет(ПК) светлая";}
