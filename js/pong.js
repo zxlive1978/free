@@ -191,10 +191,10 @@ function read_next(){
 	if (curtemp=='depth'){
 		
 		end_time=start_time + Kzoomdepth*10;
-		console.log(start_time);
-		console.log(end_time);
+		// console.log(start_time);
+		// console.log(end_time);
 		wellNamedepth =wellName +"depth_all";
-		console.log(wellName +' '+ wellNamedepth);
+		// console.log(wellName +' '+ wellNamedepth);
 
 		// if (refresh==true &&  wellName!='' ){
 		refresh = false;
@@ -216,11 +216,6 @@ function read_next(){
 					//numbs110d = null;
 					var numbs110d = null;
 					numbs110d = d110d.length;
-					start_time = null;
-					end_time = null;
-					start_time = Number(d110d[0]["Zaboj"]);
-				
-					end_time = Number(d110d[d110d.length-1]["Zaboj"]);
 					var back_start_time = null;
 					back_start_time = start_time;
 					back_end_time = null;
