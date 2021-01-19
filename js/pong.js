@@ -193,6 +193,7 @@ function read_next(){
 		end_time=start_time + Kzoomdepth*10;
 		console.log(start_time);
 		console.log(end_time);
+		wellNamedepth =wellName +"depth_all";
 
 		// if (refresh==true &&  wellName!='' ){
 		refresh = false;
@@ -201,7 +202,7 @@ function read_next(){
 		$.ajax({
 			type: "POST",
 			url: 'js/read_depth.php',
-			data: {whatdo:'read', table:wellName+'depth_all' ,start_time: start_time, end_time:end_time },
+			data: {whatdo:'read', table:wellNamedepth ,start_time: start_time, end_time:end_time },
 			cache: false,
 			async: false,
 			success: function(data){
