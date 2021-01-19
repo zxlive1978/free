@@ -45,8 +45,12 @@ var skv ="";
 var namecmt = wellName + "kr";
 var wellNamedepth ="" +"depth_all";
 var formname = "Под телефон";
+var formnamedepth = "depth\Под телефон";
 
-if (!isMobile){formname="Под планшет(ПК) светлая";}
+if (!isMobile){
+	formname="Под планшет(ПК) светлая";
+	var formnamedepth = "depth\Под планшет(ПК) светлая";
+}
 
 //Сохранение и чтение настроей из локального хранилища
 //IE Права icacls %userprofile%\Appdata\LocalLow /t /setintegritylevel (OI)(CI)L
