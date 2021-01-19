@@ -185,12 +185,14 @@ function read_next(){
 
 	if (curtemp=='depth'){
 		console.log(wellName);
+		end_time=start_time + Kzoomdepth*10;
 		console.log(start_time);
+		console.log(end_time);
 
 		// if (refresh==true &&  wellName!='' ){
 		refresh = false;
 		online = false;
-		end_time=start_time + Kzoomdepth*10;
+		
 		$.ajax({
 			type: "POST",
 			url: 'js/read_depth.php',
