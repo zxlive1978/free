@@ -1956,7 +1956,7 @@ if (curtemp=='depth'){
 					.fill(Sheet.cmtcolor)
 
 			}
-			//console.log(cur_comm);
+			
 		}
 
 	} catch (e) { }
