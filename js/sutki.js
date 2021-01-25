@@ -1970,8 +1970,7 @@ if (curtemp=='depth'){
 	if (curtemp=='time'){
 	for (key in Columns) {
 		if (key != 'col0') {
-			// var inv_col = draw.group();
-			// inv_col.clear();
+			
 
 			//Столбец
 			var colmn2 = draw.polygon(Number(Columns[key].poz.x) * w1 + ',' + (Number(Columns[key].poz.y) * h1 + Number(Columns[key].size.h) * h1) + ' ' + (Number(Columns[key].poz.x) * w1 + Number(Columns[key].size.w) * w1) + ',' + (Number(Columns[key].poz.y) * h1 + Number(Columns[key].size.h) * h1) + ' ' + (Number(Columns[key].poz.x) * w1 + Number(Columns[key].size.w) * w1) + ',' + 100 * h1 + ' ' + Number(Columns[key].poz.x) * w1 + ',' + 100 * h1)
