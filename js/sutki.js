@@ -1943,7 +1943,6 @@ if (curtemp=='depth'){
 			//Если попадает в окно
 			if (cury > colmn11_y0) {
 				name_p3 = name_p3.match(/.{1,32}/g);
-				//console.log(name_p3);
 				var cur_comm = ""
 				for (let i = 0; i < name_p3.length; i++) {
 					name_p3[i] = name_p3[i] + '\n'
