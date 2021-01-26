@@ -1278,8 +1278,9 @@ var wellSelectName = '';
 function colPan10(name_select) {
 	refresh = false;
 	
-
+	
 	$('#wellN').empty();
+	$('#wellNdepth').empty();
 	if (curtemp == 'time') {
 		//добавление в список
 		for (var keey in wells) {
@@ -1329,46 +1330,46 @@ function colPan10(name_select) {
 	if (curtemp == 'depth') {
 		//добавление в список
 		for (var keey in wells) {
-			$('#wellN').append($('<option>',
+			$('#wellNdepth').append($('<option>',
 				{
 					value: wells[keey].wellN,
 					text: wells[keey].txt
 				}));
 		}
 		//Восстановление выбора
-		$('#wellN').val(wellName);
+		$('#wellNdepth').val(wellName);
 
 
 		if ((Object.keys(wells).length > 0)) {
 			for (var keey in wells) {
 				if (wells[keey].txt == skv) {
-					$("#wellNwork1").text(wells[keey].type);
-					$("#wellNwork2").text(wells[keey].typeStn);
-					$("#wellNwork3").text(wells[keey].nach);
-					$("#wellNwork4").text(wells[keey].tel);
-					$("#wellNwork5").text(wells[keey].email);
+					$("#wellNwork1depth").text(wells[keey].type);
+					$("#wellNwork2depth").text(wells[keey].typeStn);
+					$("#wellNwork3depth").text(wells[keey].nach);
+					$("#wellNwork4depth").text(wells[keey].tel);
+					$("#wellNwork5depth").text(wells[keey].email);
 				}
 			}
 		}
 
 		//Выбранная скважина
-		$('#wellN').on('change', function () {
-			wellSelectBase = $("#wellN").prop('value');
-			wellSelectName = $("#wellN option:selected").text();
+		$('#wellNdepth').on('change', function () {
+			wellSelectBase = $("#wellNdepth").prop('value');
+			wellSelectName = $("#wellNdepth option:selected").text();
 
 			for (var keey in wells) {
 				if (wells[keey].txt == wellSelectName) {
-					$("#wellNwork1").text(wells[keey].type);
-					$("#wellNwork2").text(wells[keey].typeStn);
-					$("#wellNwork3").text(wells[keey].nach);
-					$("#wellNwork4").text(wells[keey].tel);
-					$("#wellNwork5").text(wells[keey].email);
+					$("#wellNwork1depth").text(wells[keey].type);
+					$("#wellNwork2depth").text(wells[keey].typeStn);
+					$("#wellNwork3depth").text(wells[keey].nach);
+					$("#wellNwork4depth").text(wells[keey].tel);
+					$("#wellNwork5depth").text(wells[keey].email);
 				}
 			}
 		
 		});
 
-		$("#myModal4").modal('show');
+		$("#myModal13").modal('show');
 	};
 
 
