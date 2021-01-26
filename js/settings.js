@@ -1442,6 +1442,22 @@ function colOK10() {
 		adm();
 	}
 
+	if (curtemp == 'depth') {
+		refresh = false; //pong.js
+		//$('#wells').iziModal('close');
+		skv = wellSelectName;
+		wellName = wellSelectBase;
+		namecmt = wellName + "kr";
+		//Сменить название в шапке
+		$('#skvnamelabt').text(skv);
+		//Сохранить в локальное хранилище
+		colPan9save(wellName, skv, namecmt, formname);
+		refresh = true;
+		read_next();
+		/* repaint(); */
+		/* namecmt=wellSelectBase + "kr"; */
+	}
+
 }
 
 
