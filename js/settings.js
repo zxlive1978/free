@@ -1292,18 +1292,9 @@ function colPan10(name_select) {
 		//Восстановление выбора
 		$('#wellN').val(wellName);
 
-		// /* var selIdx=$("#wellN").prop('selectedIndex');
-		// wellidx = selIdx; */
-		// if (Object.keys(wells).length-1<wellidx){
-		// 	wellidx=0;
-		// }
 
 		if ((Object.keys(wells).length > 0)) {
 			for (var keey in wells) {
-				// console.log(keey);
-				// console.log(wells[keey].txt);
-				// console.log(skv);
-				// console.log(name_select);
 				if (wells[keey].txt == skv) {
 					$("#wellNwork1").text(wells[keey].type);
 					$("#wellNwork2").text(wells[keey].typeStn);
@@ -1314,15 +1305,11 @@ function colPan10(name_select) {
 			}
 		}
 
-
-
-
 		//Выбранная скважина
 		$('#wellN').on('change', function () {
 			wellSelectBase = $("#wellN").prop('value');
 			wellSelectName = $("#wellN option:selected").text();
 
-			/* wellidx = selIdx; */
 			for (var keey in wells) {
 				if (wells[keey].txt == wellSelectName) {
 					$("#wellNwork1").text(wells[keey].type);
@@ -1332,21 +1319,58 @@ function colPan10(name_select) {
 					$("#wellNwork5").text(wells[keey].email);
 				}
 			}
-			/*  $('[name=wellN] option').filter(function() { 
-			return ($(this).text() == 'Blue');}).prop('selected', true); */
-			//bootstrap modal
-
-
+		
 		});
 
-
-
-
-		/* $("#wells").css('background-color', Sheet.curcolorval);
-		$("#wells").css('font-size', 40);
-		$('#wells').iziModal('open'); */
 		$("#myModal4").modal('show');
 	};
+
+
+	if (curtemp == 'time') {
+		//добавление в список
+		for (var keey in wells) {
+			$('#wellN').append($('<option>',
+				{
+					value: wells[keey].wellN,
+					text: wells[keey].txt
+				}));
+		}
+		//Восстановление выбора
+		$('#wellN').val(wellName);
+
+
+		if ((Object.keys(wells).length > 0)) {
+			for (var keey in wells) {
+				if (wells[keey].txt == skv) {
+					$("#wellNwork1").text(wells[keey].type);
+					$("#wellNwork2").text(wells[keey].typeStn);
+					$("#wellNwork3").text(wells[keey].nach);
+					$("#wellNwork4").text(wells[keey].tel);
+					$("#wellNwork5").text(wells[keey].email);
+				}
+			}
+		}
+
+		//Выбранная скважина
+		$('#wellN').on('change', function () {
+			wellSelectBase = $("#wellN").prop('value');
+			wellSelectName = $("#wellN option:selected").text();
+
+			for (var keey in wells) {
+				if (wells[keey].txt == wellSelectName) {
+					$("#wellNwork1").text(wells[keey].type);
+					$("#wellNwork2").text(wells[keey].typeStn);
+					$("#wellNwork3").text(wells[keey].nach);
+					$("#wellNwork4").text(wells[keey].tel);
+					$("#wellNwork5").text(wells[keey].email);
+				}
+			}
+		
+		});
+
+		$("#myModal4").modal('show');
+	};
+
 
 	if (curtemp == 'video') {
 		//удаление старых потоков
