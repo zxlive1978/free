@@ -1431,10 +1431,7 @@ function colOK10() {
 			let strt1=$('input[name="starttime1"]').val();
 			let strd2=$('input[name="startdate2"]').val();
 			let strt2=$('input[name="starttime2"]').val();
-			//Streaming/tracks/1901?starttime=20201214t063812z&endtime=20201214t064816z
-			//2020-12-21  01:00   2020-12-21  01:01
-			///Streaming/Channels/1701
-			//?starttime=20201222t010000z&endtime=20201222t010100z
+		
 			backfuture='?starttime='+strd1.replaceAll('-', '')+'t'+strt1.replaceAll(':', '')+'00z'+
 			'&endtime='+strd2.replaceAll('-', '')+'t'+strt2.replaceAll(':', '')+'00z';
 			
