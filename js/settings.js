@@ -1453,10 +1453,8 @@ function colOK10() {
 		$('#skvnamelabt').text(skv);
 		//Сохранить в локальное хранилище
 		colPan9save(wellName, skv, namecmt, formname);
-		refresh = true;
-		read_next();
-		/* repaint(); */
-		/* namecmt=wellSelectBase + "kr"; */
+		start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
+		read_now();
 	}
 
 }
