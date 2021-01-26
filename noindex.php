@@ -444,22 +444,11 @@ window.onload = getStart;
         <!-- Modal body -->
         <div class="modal-body">
         <label for="hcolcolor">Название скважины:</label><select class="form-control input-lg bg-dark text-light" name="wellN" id="wellN"  size="1" ></select>
-  
-  
   <label for="hcolcolor" class="control-label">Тип работ:</label><label class="form-control bg-dark text-light" for="namePar" name="wellNwork1" id="wellNwork1"></label>
-  
-  
   <label for="hcolcolor" class="control-label">Тип станции:</label><label class="form-control bg-dark text-light" for="namePar" name="wellNwork2" id="wellNwork2"></label>
-  
-  
   <label for="hcolcolor" class="control-label">Нач. партии:</label><label class="form-control bg-dark text-light" for="namePar" name="wellNwork3" id="wellNwork3"></label>
-  
-  
   <label for="hcolcolor" class="control-label">Телефон:</label><label class="form-control bg-dark text-light" for="namePar" name="wellNwork4" id="wellNwork4"></label>
-  
-  
   <label for="hcolcolor" class="control-label">E-mail:</label><label class="form-control bg-dark text-light" for="namePar" name="wellNwork5" id="wellNwork5"></label>
-  
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
@@ -470,6 +459,37 @@ window.onload = getStart;
       </div>
     </div>
   </div>
+
+
+  <div class="modal fade" id="myModal13">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Выбор скважины</h4>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <label for="hcolcolor">Название скважины:</label><select class="form-control input-lg bg-dark text-light" name="wellN" id="wellNdepth"  size="1" ></select>
+  <label for="hcolcolor" class="control-label">Тип работ:</label><label class="form-control bg-dark text-light" for="namePar" name="wellNwork1" id="wellNwork1depth"></label>
+  <label for="hcolcolor" class="control-label">Тип станции:</label><label class="form-control bg-dark text-light" for="namePar" name="wellNwork2" id="wellNwork2depth"></label>
+  <label for="hcolcolor" class="control-label">Нач. партии:</label><label class="form-control bg-dark text-light" for="namePar" name="wellNwork3" id="wellNwork3depth"></label>
+  <label for="hcolcolor" class="control-label">Телефон:</label><label class="form-control bg-dark text-light" for="namePar" name="wellNwork4" id="wellNwork4depth"></label>
+  <label for="hcolcolor" class="control-label">E-mail:</label><label class="form-control bg-dark text-light" for="namePar" name="wellNwork5" id="wellNwork5depth"></label>
+</div>        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK10()'>Применить</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
 
 <div class="modal fade" id="myModal5">
     <div class="modal-dialog modal-dialog-scrollable">
