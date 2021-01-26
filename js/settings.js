@@ -1326,7 +1326,7 @@ function colPan10(name_select) {
 	};
 
 
-	if (curtemp == 'time') {
+	if (curtemp == 'depth') {
 		//добавление в список
 		for (var keey in wells) {
 			$('#wellN').append($('<option>',
