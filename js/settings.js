@@ -1564,26 +1564,7 @@ function stopCam(event) {
 	// alert(data);});
 };
 
-//FUNCTION TO GET AND AUTO PLAY YOUTUBE VIDEO FROM DATATAG
-//  function autoPlayYouTubemodal('show') {
-//       var trigger = $("body").find('[data-toggle="modal"]');
-//       trigger.click(function () {
-//           var theModal = $(this).data("target"),
-//               videoSRC = $(this).attr("data-theVideo"),
-//               videoSRCauto = videoSRC + "?autoplay=1";
-// 		  $(theModal + ' iframe').attr('src', videoSRCauto);
-// 		  $('#modal').modal('handleUpdate')
-//           $(theModal + ' button.close').click(function () {
-// 			  $(theModal + ' iframe').attr('src', videoSRC);
 
-
-//           });
-//       });
-//   }
-
-
-//<iframe width="560" height="315" src="//hydrofalll.ddns.net:5080/WebRTCApp/play.html?name=983687349095562644239572" frameborder="0" allowfullscreen></iframe>
-//
 var selectkeey = '';
 //Изменить/ удалить  диалог по скважине
 function colPan13() {
