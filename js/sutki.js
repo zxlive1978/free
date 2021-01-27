@@ -1869,7 +1869,7 @@ if (curtemp=='depth'){
 			if (d110d[j + 1]["Zaboj"] - d110d[j]["Zaboj"] > 1) {
 				hole += j + ", " + (j + 1) + ", ";
 			}
-			if (start_time +Kzoomdepth*ten_minuts- d110d[j]["Zaboj"] > 1 && online != true && j == d110d.length - 3) {
+			if (start_time +Kzoomdepth*ten_minuts- d110d[j]["Zaboj"] > 1 && online != true && j == d110d.length - 1) {
 				hole += j + ", " + (j + 1) + ", ";
 			}
 			if (d110d[j]["Zaboj"] - start_time > 1 && j == 0) {
