@@ -190,7 +190,7 @@ function read_next(){
 
 	if (curtemp=='depth'){
 		
-		end_time=start_time + Kzoomdepth*10;//+(start_time + Kzoomdepth*10)/10;
+		end_time=start_time + Kzoomdepth*10+Kzoomdepth/10;
 		// console.log(start_time);
 		// console.log(end_time);
 		wellNamedepth =wellName +"depth_all";
