@@ -1187,7 +1187,7 @@ function init() {
 					}
 				
 					//Последующие записи
-					for (let j = 1; j < d110d.length - 1; j++) {
+					for (let j = 1; j <= d110d.length -1; j++) {
 						cur_value_x = colmn11_x0 + (d110d[j][basePar[key].par]) * K_x1 - (Number(basePar[key].min)) * K_x1;
 						cur_value_y = h1 * disp_up + (d110d[j]["Zaboj"] - start_time) * cur_value_y_step;
 						//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
