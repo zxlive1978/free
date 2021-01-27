@@ -1203,7 +1203,7 @@ function init() {
 					//Последняя запись если меньше 10 сек то полоса
 					if (d110d.length > 1) {
 						cur_value_x = colmn11_x0 + (d110d[d110d.length - 1][basePar[key].par]) * K_x1 - (Number(basePar[key].min)) * K_x1;
-						if (d110d[d110d.length - 1]["Zaboj"] - end_time > 60) {
+						if (d110d[d110d.length - 1]["Zaboj"] - end_time > 0.1) {
 							cur_value_y = h1 * 100;
 						}
 						else {
