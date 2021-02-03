@@ -189,7 +189,7 @@ function read_next(){
 			url: 'js/read_next.php',
 			data: {name: 'Wayne',well_Name: wellName, Kzoom: Sheet.Kzoom},
 			cache: false,
-			success: function(data){
+			success: function(data) {
 				//var jsonn = JSON.encode(data);
 				/* console.log(data); */
 				//<?php echo ' d110d = '.json_encode(data).';' ?>;
