@@ -1454,7 +1454,7 @@ function colOK10() {
 		//Сохранить в локальное хранилище
 		colPan9save(wellName, skv, namecmt, formname);
 		
-		// read_now();
+		read_now();
 		start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
 		read_now_depth();
 	}
