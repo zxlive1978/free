@@ -2003,7 +2003,7 @@ function adm4() {
 	// init();
 	// colOK11();
 	start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
-	
+	//console.log('first read');
 	read_now_depth();
 
 }
