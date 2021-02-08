@@ -324,14 +324,27 @@ function read_random(){
 	//}
 };
 
-//Запуск текущего состояния
+//Запуск текущего состояния по времeни
+function read_now_depth(){
+	
+	// console.log(curtemp);
+		if (curtemp=='depth'){
+			//refresh = true;
+			read_next();}
+		if (curtemp=='time'){
+			refresh = true;
+			read_next();}
+	}
+
+//Запуск текущего состояния по времeни
 function read_now(){
-	if (curtemp=='time'){
-	refresh = true;
-	read_next();}
+	
 // console.log(curtemp);
 	if (curtemp=='depth'){
 		//refresh = true;
+		read_next();}
+	if (curtemp=='time'){
+		refresh = true;
 		read_next();}
 }
 //Чтение вверх

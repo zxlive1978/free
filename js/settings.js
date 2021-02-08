@@ -2004,7 +2004,7 @@ function adm4() {
 	// colOK11();
 	start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
 	
-	read_now();
+	read_now_depth();
 
 }
 
