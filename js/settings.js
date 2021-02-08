@@ -1443,21 +1443,21 @@ function colOK10() {
 		adm();
 	}
 
-	if (curtemp == 'depth') {
-		refresh = false; //pong.js
-		//$('#wells').iziModal('close');
-		skv = wellSelectName;
-		wellName = wellSelectBase;
-		namecmt = wellName + "kr";
-		//Сменить название в шапке
-		$('#skvnamelabt').text(skv);
-		//Сохранить в локальное хранилище
-		colPan9save(wellName, skv, namecmt, formname);
+	// if (curtemp == 'depth') {
+	// 	refresh = false; //pong.js
+	// 	//$('#wells').iziModal('close');
+	// 	skv = wellSelectName;
+	// 	wellName = wellSelectBase;
+	// 	namecmt = wellName + "kr";
+	// 	//Сменить название в шапке
+	// 	$('#skvnamelabt').text(skv);
+	// 	//Сохранить в локальное хранилище
+	// 	colPan9save(wellName, skv, namecmt, formname);
 		
-		// read_now();
-		start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
-		read_now_depth();
-	}
+	// 	// read_now();
+	// 	start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
+	// 	read_now_depth();
+	// }
 
 }
 
