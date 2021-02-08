@@ -1456,7 +1456,7 @@ function colOK10() {
 		
 		read_now();
 		start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
-		read_now_depth();
+		read_now();
 	}
 
 }
