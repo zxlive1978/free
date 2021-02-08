@@ -1996,9 +1996,8 @@ function adm4() {
 	$('#drawing').empty();
 	$('#drawing').show();
 	$('#skvnamelab').show();
-	online = true;
-	refresh = true;
-	onofadm = true;
+	refresh = false; 
+	online = false;
 	$('#skvnamelabt').text(skv);
 	// init();
 	// colOK11();
