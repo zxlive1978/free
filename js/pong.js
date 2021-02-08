@@ -268,7 +268,7 @@ function read_next_depth(){
 		$.ajax({
 			type: "POST",
 			url: 'js/read_depth.php',
-			data: {whatdo:'read', table:wellNamedepth ,start_time: start_time, end_time:end_time },
+			data: {whatdo:'read_last', table:wellNamedepth ,start_time: start_time, end_time:end_time },
 			cache: false,
 			async: false,
 			success: function(data){
