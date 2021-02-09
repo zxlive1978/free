@@ -121,9 +121,12 @@ function read_cycle (){
 	setTimeout(read_cycle, 500);
 }
 
+
+var timer;
 //Чтение последних значений
 function read_next(){
 	if (curtemp=='depth'){
+		clearTimeout(timer);
 		
 		end_time=start_time + Kzoomdepth*10+Kzoomdepth/10;
 		// console.log(start_time);
@@ -233,11 +236,11 @@ function read_next(){
 				back_end_time = end_time;
 				repaint();
 				refresh=true;
-				setTimeout(function(){read_next();}, 3000);
+				timer=setTimeout(function(){read_next();}, 3000);
 			},
 			error: function(){
 			refresh=true;
-			setTimeout(function(){read_next();}, 3000);
+			timer=setTimeout(function(){read_next();}, 3000);
 		}
 		});
 	
