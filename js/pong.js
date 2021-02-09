@@ -156,6 +156,7 @@ function read_depth_last(){
 			back_end_time = null;
 			back_end_time = end_time;
 			curtemp = 'depth';
+			console.log(d110d.length);
 			if (d110d.length>0){
 			start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);} 
 			else {start_time=0;}
