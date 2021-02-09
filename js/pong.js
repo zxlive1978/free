@@ -136,7 +136,7 @@ function read_depth_last(){
 	$.ajax({
 		type: "GET",
 		url: 'js/read_next.php',
-		data: {name: 'Wayne',well_Name: wellName, Kzoom: Sheet.Kzoom},
+		data: {name: 'Wayne',well_Name: wellName, Kzoom: 0.5},
 		cache: false,
 		success: function(data) {
 			// if (curtemp=='time'){
