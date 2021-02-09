@@ -167,6 +167,9 @@ function read_depth_last(){
 		},
 		error: function(){
 		refresh=true;
+		curtemp = 'depth';
+		start_time=0;
+		read_now();
 		// timer=setTimeout(function(){read_next();}, 3000);
 	}
 	});
