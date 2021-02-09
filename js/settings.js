@@ -1445,6 +1445,7 @@ function colOK10() {
 
 	if (curtemp == 'depth') {
 		refresh = false; //pong.js
+		online = false;
 		//$('#wells').iziModal('close');
 		skv = wellSelectName;
 		wellName = wellSelectBase;
