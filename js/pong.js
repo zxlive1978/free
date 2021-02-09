@@ -133,7 +133,41 @@ function read_cycle (){
 // });
 //Узнаем последнюю глубину
 function read_depth_last(){
-
+	$.ajax({
+		type: "GET",
+		url: 'js/read_next.php',
+		data: {name: 'Wayne',well_Name: wellName, Kzoom: Sheet.Kzoom},
+		cache: false,
+		success: function(data) {
+			// if (curtemp=='time'){
+		
+			d110d = null;
+			d110d = JSON.parse(data);
+			data = null;
+			var numbs110d = null;
+			numbs110d = d110d.length;
+			start_time = null;
+			start_time = Number(d110d[0]["Vrema"]);
+			end_time = null;
+			end_time = Number(d110d[d110d.length-1]["Vrema"]);
+			
+			var back_start_time = null;
+			back_start_time = start_time;
+			back_end_time = null;
+			back_end_time = end_time;
+			curtemp = 'depth';
+			start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
+	//console.log('first read');
+			read_now();
+			// refresh=true;
+			// timer=setTimeout(function(){read_next();}, 3000);
+		// }
+		},
+		error: function(){
+		refresh=true;
+		// timer=setTimeout(function(){read_next();}, 3000);
+	}
+	});
 
 }
 
