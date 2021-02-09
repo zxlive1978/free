@@ -126,7 +126,11 @@ var timer;
 //Чтение последних значений
 function read_next(){
 	if (curtemp=='depth'){
+		refresh = false;
+		online = false;
 		clearTimeout(timer);
+		refresh = false;
+		online = false;
 		
 		end_time=start_time + Kzoomdepth*10+Kzoomdepth/10;
 		// console.log(start_time);
@@ -135,8 +139,7 @@ function read_next(){
 		// console.log(wellName +' '+ wellNamedepth);
 
 		// if (refresh==true &&  wellName!='' ){
-		refresh = false;
-		online = false;
+		
 		
 		$.ajax({
 			type: "POST",
