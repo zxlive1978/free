@@ -2008,10 +2008,8 @@ function adm4() {
 	// init();
 	// colOK11();
 	// read_now();
-	curtemp = 'depth';
-	start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
-	//console.log('first read');
-	read_now();
+	read_depth_last();
+	
 
 }
 
