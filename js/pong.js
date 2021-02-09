@@ -156,8 +156,9 @@ function read_depth_last(){
 			back_end_time = null;
 			back_end_time = end_time;
 			curtemp = 'depth';
-			start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
-	//console.log('first read');
+			if (d110d.length>0){
+			start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);} 
+			else {start_time=0;}
 			read_now();
 			// refresh=true;
 			// timer=setTimeout(function(){read_next();}, 3000);
