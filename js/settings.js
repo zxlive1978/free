@@ -95,8 +95,8 @@ var bigPar = {
 	par34: { par: 'C4sh', txt: 'С4 по шламу', min: 0, max: 0.5, color: '#855f30', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
 	par35: { par: 'C5sh', txt: 'С5 по шламу', min: 0, max: 0.5, color: '#f21890', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
 	par36: { par: 'C1C5sh', txt: 'Сумма шламу С1...С5', min: 0, max: 5, color: '#000000', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
-	par37: { par: 'Minbx', txt: 'Минерализация на вх', min: 0, max: 100, color: '#855f30', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
-	par38: { par: 'Minbix', txt: 'Минерализация на вых', min: 0, max: 100, color: '#f21890', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'м', log: false },
+	par37: { par: 'Minbx', txt: 'Минерализация на вх', min: 0, max: 100, color: '#855f30', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: '%', log: false },
+	par38: { par: 'Minbix', txt: 'Минерализация на вых', min: 0, max: 100, color: '#f21890', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: '%', log: false },
 	
 	
 };
