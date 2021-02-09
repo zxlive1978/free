@@ -268,66 +268,6 @@ function read_next(){
 
 
 
-function read_next_depth(){
-	if (curtemp=='depth'){
-		
-		end_time=start_time + Kzoomdepth*10+Kzoomdepth/10;
-		// console.log(start_time);
-		// console.log(end_time);
-		wellNamedepth =wellName +"depth_all";
-		// console.log(wellName +' '+ wellNamedepth);
-
-		// if (refresh==true &&  wellName!='' ){
-		refresh = false;
-		online = false;
-		
-		$.ajax({
-			type: "POST",
-			url: 'js/read_depth.php',
-			data: {whatdo:'read_last', table:wellNamedepth ,start_time: start_time, end_time:end_time },
-			cache: false,
-			async: false,
-			success: function(data){
-				
-				try {
-					d110d = null;
-					d110d = JSON.parse(data);
-					/* d110d = eval(data); */
-					data = null;
-					//numbs110d = null;
-					var numbs110d = null;
-					numbs110d = d110d.length;
-					var back_start_time = null;
-					back_start_time = start_time;
-					back_end_time = null;
-					back_end_time = end_time;
-				}
-				catch (e) { }
-				
-				
-				// console.log(end_time);
-				/* console.log(d110d); */
-			
-				//А ЭТО АХУЕННО ИНТЕРЕСНО!
-				//Если нет данных
-				/* if (d110d.length == 0){
-					drawGraf = false ;
-					d110d = beg_rec.slice();
-					numbs110d = d110d.length;
-					d110d[0]["Vrema"] = start_time;
-					d110d[d110d.length-1]["Vrema"] = end_time;
-				
-					} else {drawGraf = true ;} */
-				
-				repaint();
-				
-			}
-		});
-	}
-	
-	
-
-};
 
 
 function obnovit_stranicu() {
@@ -403,17 +343,7 @@ function read_random(){
 	//}
 };
 
-//Запуск текущего состояния по глубине
-function read_now_depth(){
-	
-	// console.log(curtemp);
-		if (curtemp=='depth'){
-			//refresh = true;
-			read_next();}
-		if (curtemp=='time'){
-			refresh = true;
-			read_next_depth();}
-	}
+
 
 //Запуск текущего состояния по времeни
 function read_now(){
