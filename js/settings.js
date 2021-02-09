@@ -2007,7 +2007,7 @@ function adm4() {
 	$('#skvnamelabt').text(skv);
 	// init();
 	// colOK11();
-	read_now();
+	// read_now();
 	curtemp = 'depth';
 	start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
 	//console.log('first read');
