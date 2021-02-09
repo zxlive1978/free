@@ -196,6 +196,7 @@ function read_next(){
 			data: {name: 'Wayne',well_Name: wellName, Kzoom: Sheet.Kzoom},
 			cache: false,
 			success: function(data) {
+				if (curtemp=='time'){
 				//var jsonn = JSON.encode(data);
 				/* console.log(data); */
 				//<?php echo ' d110d = '.json_encode(data).';' ?>;
@@ -239,7 +240,7 @@ function read_next(){
 				back_end_time = end_time;
 				repaint();
 				refresh=true;
-				timer=setTimeout(function(){read_next();}, 3000);
+				timer=setTimeout(function(){read_next();}, 3000);}
 			},
 			error: function(){
 			refresh=true;
