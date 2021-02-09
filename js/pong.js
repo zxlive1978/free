@@ -131,6 +131,13 @@ function read_cycle (){
 // ).then(function() {
 //     // when all AJAX requests are complete
 // });
+//Узнаем последнюю глубину
+function read_depth_last(){
+
+
+}
+
+
 var timer;
 //Чтение последних значений
 function read_next(){
