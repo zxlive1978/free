@@ -1977,7 +1977,7 @@ function adm4() {
 		//удаление старых потоков
 		deleteoldcams();
 	}
-	curtemp = 'depth';
+	
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu1').hide();
 	$('#dropdownMenu2').hide();
@@ -2007,6 +2007,8 @@ function adm4() {
 	$('#skvnamelabt').text(skv);
 	// init();
 	// colOK11();
+	read_now();
+	curtemp = 'depth';
 	start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
 	//console.log('first read');
 	read_now();
