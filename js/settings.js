@@ -1327,50 +1327,50 @@ function colPan10(name_select) {
 	};
 
 
-	// if (curtemp == 'depth') {
-	// 	//добавление в список
-	// 	for (var keey in wells) {
-	// 		$('#wellNdepth').append($('<option>',
-	// 			{
-	// 				value: wells[keey].wellN,
-	// 				text: wells[keey].txt
-	// 			}));
-	// 	}
-	// 	//Восстановление выбора
-	// 	$('#wellNdepth').val(wellName);
+	if (curtemp == 'depth') {
+		//добавление в список
+		for (var keey in wells) {
+			$('#wellNdepth').append($('<option>',
+				{
+					value: wells[keey].wellN,
+					text: wells[keey].txt
+				}));
+		}
+		//Восстановление выбора
+		$('#wellNdepth').val(wellName);
 
 
-	// 	if ((Object.keys(wells).length > 0)) {
-	// 		for (var keey in wells) {
-	// 			if (wells[keey].txt == skv) {
-	// 				$("#wellNwork1depth").text(wells[keey].type);
-	// 				$("#wellNwork2depth").text(wells[keey].typeStn);
-	// 				$("#wellNwork3depth").text(wells[keey].nach);
-	// 				$("#wellNwork4depth").text(wells[keey].tel);
-	// 				$("#wellNwork5depth").text(wells[keey].email);
-	// 			}
-	// 		}
-	// 	}
+		if ((Object.keys(wells).length > 0)) {
+			for (var keey in wells) {
+				if (wells[keey].txt == skv) {
+					$("#wellNwork1depth").text(wells[keey].type);
+					$("#wellNwork2depth").text(wells[keey].typeStn);
+					$("#wellNwork3depth").text(wells[keey].nach);
+					$("#wellNwork4depth").text(wells[keey].tel);
+					$("#wellNwork5depth").text(wells[keey].email);
+				}
+			}
+		}
 
-	// 	//Выбранная скважина
-	// 	$('#wellNdepth').on('change', function () {
-	// 		wellSelectBase = $("#wellNdepth").prop('value');
-	// 		wellSelectName = $("#wellNdepth option:selected").text();
+		//Выбранная скважина
+		$('#wellNdepth').on('change', function () {
+			wellSelectBase = $("#wellNdepth").prop('value');
+			wellSelectName = $("#wellNdepth option:selected").text();
 
-	// 		for (var keey in wells) {
-	// 			if (wells[keey].txt == wellSelectName) {
-	// 				$("#wellNwork1depth").text(wells[keey].type);
-	// 				$("#wellNwork2depth").text(wells[keey].typeStn);
-	// 				$("#wellNwork3depth").text(wells[keey].nach);
-	// 				$("#wellNwork4depth").text(wells[keey].tel);
-	// 				$("#wellNwork5depth").text(wells[keey].email);
-	// 			}
-	// 		}
+			for (var keey in wells) {
+				if (wells[keey].txt == wellSelectName) {
+					$("#wellNwork1depth").text(wells[keey].type);
+					$("#wellNwork2depth").text(wells[keey].typeStn);
+					$("#wellNwork3depth").text(wells[keey].nach);
+					$("#wellNwork4depth").text(wells[keey].tel);
+					$("#wellNwork5depth").text(wells[keey].email);
+				}
+			}
 		
-	// 	});
+		});
 
-	// 	$("#myModal13").modal('show');
-	// };
+		$("#myModal13").modal('show');
+	};
 
 
 	if (curtemp == 'video') {
@@ -1455,9 +1455,12 @@ function colOK10() {
 		//Сохранить в локальное хранилище
 		colPan9save(wellName, skv, namecmt, formname);
 		
-		read_now();
+		// read_now();
+		// start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
+		// read_now();
 		start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
-		read_now();
+		console.log('first read');
+		read_now_depth();
 	}
 
 }
