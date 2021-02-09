@@ -1455,13 +1455,13 @@ function colOK10() {
 		//Сохранить в локальное хранилище
 		colPan9save(wellName, skv, namecmt, formname);
 		
-		// read_now();
-		// start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
-		// read_now();
-		read_now_depth();
+		read_now();
 		start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
+		read_now();
+		// read_now_depth();
+		// start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
 		console.log('first read');
-		read_now_depth();
+		// read_now_depth();
 	}
 
 }
