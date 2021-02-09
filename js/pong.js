@@ -387,7 +387,7 @@ function read_random(){
 	//}
 };
 
-//Запуск текущего состояния по времeни
+//Запуск текущего состояния по глубине
 function read_now_depth(){
 	
 	// console.log(curtemp);
