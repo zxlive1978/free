@@ -122,7 +122,15 @@ function read_cycle (){
 }
 
 
-var timer;
+// var timer;
+// $.when(
+//     $.ajax({/*settings*/}),
+//     $.ajax({/*settings*/}),
+//     $.ajax({/*settings*/}),
+//     $.ajax({/*settings*/}),
+// ).then(function() {
+//     // when all AJAX requests are complete
+// });
 //Чтение последних значений
 function read_next(){
 	if (curtemp=='depth'){
