@@ -142,14 +142,8 @@ function read_next(){
 		online = false;
 		
 		end_time=start_time + Kzoomdepth*10+Kzoomdepth/10;
-		// console.log(start_time);
-		// console.log(end_time);
-		wellNamedepth =wellName +"depth_all";
-		// console.log(wellName +' '+ wellNamedepth);
 
-		// if (refresh==true &&  wellName!='' ){
-		
-		
+		wellNamedepth =wellName +"depth_all";
 		$.ajax({
 			type: "POST",
 			url: 'js/read_depth.php',
@@ -172,22 +166,6 @@ function read_next(){
 					back_end_time = end_time;
 				}
 				catch (e) { }
-				
-				
-				// console.log(end_time);
-				/* console.log(d110d); */
-			
-				//А ЭТО АХУЕННО ИНТЕРЕСНО!
-				//Если нет данных
-				/* if (d110d.length == 0){
-					drawGraf = false ;
-					d110d = beg_rec.slice();
-					numbs110d = d110d.length;
-					d110d[0]["Vrema"] = start_time;
-					d110d[d110d.length-1]["Vrema"] = end_time;
-				
-					} else {drawGraf = true ;} */
-				
 				repaint();
 				
 			}
@@ -206,23 +184,10 @@ function read_next(){
 			cache: false,
 			success: function(data) {
 				if (curtemp=='time'){
-				//var jsonn = JSON.encode(data);
-				/* console.log(data); */
-				//<?php echo ' d110d = '.json_encode(data).';' ?>;
-				//console.log(json["Vrema"]);
-				//alert(json["Vrema"]);
-				
-				/* var mass = eval(data); */
-				//var mass = data;
-				
-				/* alert(mass); */
-				/* d110d.length = null;
-				d110d.length = 0; */
+			
 				d110d = null;
 				d110d = JSON.parse(data);
-				/* d110d = eval(data); */
 				data = null;
-				//numbs110d = null;
 				var numbs110d = null;
 				numbs110d = d110d.length;
 				start_time = null;
@@ -230,19 +195,6 @@ function read_next(){
 				end_time = null;
 				end_time = Number(d110d[d110d.length-1]["Vrema"]);
 				
-				/* console.log(d110d.length); */
-				/* console.log(d110d); */
-			
-				//А ЭТО АХУЕННО ИНТЕРЕСНО!
-				//Если нет данных
-				/* if (d110d.length == 0){
-					drawGraf = false ;
-					d110d = beg_rec.slice();
-					numbs110d = d110d.length;
-					d110d[0]["Vrema"] = start_time;
-					d110d[d110d.length-1]["Vrema"] = end_time;
-				
-					} else {drawGraf = true ;} */
 				var back_start_time = null;
 				back_start_time = start_time;
 				back_end_time = null;
@@ -259,11 +211,6 @@ function read_next(){
 	
 	}}
 
-	
-	
-// }	
-	/* back_start_time = start_time;
-	back_end_time = end_time; */
 };
 
 
@@ -311,36 +258,14 @@ function read_random(){
 		success: function(data){
 			
 			var mass = eval(data);
-			//var mass = data;
-			//console.log(mass);
-			//alert(mass);
 			d110d = null;
 			d110d = mass.slice();
-			
-			//numbs110d = null;
-			
-			
-			//А ЭТО АХУЕННО ИНТЕРЕСНО!
-			//Если нет данных
-			/* if (d110d.length == 0){
-				drawGraf =false ;
-				d110d = beg_rec.slice();
-				d110d[0]["Vrema"] = start_time;
-				d110d[d110d.length-1]["Vrema"] = end_time;
-				//console.log (beg_rec);
-				//console.log (d110d);
-				} else {drawGraf = true ;} */
-			//ГО
+		
 			repaint ();
 			
 		}
 	});
-/* 	}
-	setTimeout(read_random, 3000); */
-	//} else {
-	//start_time = back_start_time;
-	//end_time = back_end_time;
-	//}
+
 };
 
 
