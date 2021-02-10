@@ -145,6 +145,7 @@ function read_depth_last(){
 					d110d = null;
 					d110d = JSON.parse(data);
 					curtemp = 'depth';
+					console.log(d110d[d110d.length-1]['Zaboj']);
 					if (d110d.length>0){
 					start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);} 
 					else {start_time=0;}
