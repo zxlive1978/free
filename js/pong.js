@@ -143,22 +143,12 @@ function read_depth_last(){
 		
 			d110d = null;
 			d110d = JSON.parse(data);
-			data = null;
-			var numbs110d = null;
-			numbs110d = d110d.length;
-			start_time = null;
-			start_time = Number(d110d[0]["Vrema"]);
-			end_time = null;
-			end_time = Number(d110d[d110d.length-1]["Vrema"]);
 			
-			var back_start_time = null;
-			back_start_time = start_time;
-			back_end_time = null;
-			back_end_time = end_time;
 			curtemp = 'depth';
-			// console.log(d110d.length);
+			if (d110d!=null){
 			if (d110d.length>0){
 			start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);} 
+			else {start_time=0;}}
 			else {start_time=0;}
 			read_now();
 			// refresh=true;
