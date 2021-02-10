@@ -59,6 +59,13 @@
 
 	//read all
 	if ( $whatdo == 'read_last'){
+
+		$max = "SELECT MAX(Zaboj) as id FROM ".$name_base.".".$table.";";
+		$max1 =  mysqli_query($dblink, $max);
+		$row = mysqli_fetch_assoc($max1);    // this was missing
+		$id=$row['id'];
+		echo $id;
+
 		$query = "SELECT * FROM ".$name_base.".".$table." ORDER BY 'Zaboj' DESC LIMIT 1;";
 		echo $query;
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
