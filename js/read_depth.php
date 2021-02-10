@@ -59,9 +59,9 @@
 
 	//read all
 	if ( $whatdo == 'read_last'){
-		$result = mysql_query("SELECT MAX(Zaboj) AS Zaboj FROM ".$name_base.".".$table.";");
+		$result = mysql_query("SELECT MAX('Zaboj') AS 'Zaboj' FROM ".$name_base.".".$table.";");
 		$row = mysql_fetch_array($result);
-		echo $row["Zaboj"];
+		echo $row['Zaboj'];
 		mysqli_free_result($result);
 		}
 
