@@ -59,7 +59,8 @@
 
 	//read all
 	if ( $whatdo == 'read_last'){
-		$query="SELECT MAX('Zaboj') FROM ".$name_base.".".$table.";";
+		
+		$query="SELECT MAX('Zaboj') AS comment FROM ".$name_base.".".$table.";";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		$comment = array();
 		while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
