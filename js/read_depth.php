@@ -62,11 +62,7 @@
 
 		$max = "SELECT MAX(Zaboj) as Zaboj FROM ".$name_base.".".$table.";";
 		$max1 =  mysqli_query($dbc, $max) or die(mysqli_sqlstate($dbc));
-		$row = mysqli_fetch_assoc($max1);    // this was missing
-		// $id=$row['id'];
-		// echo $id;
-
-		
+		$row = mysqli_fetch_assoc($max1);    // this was missing		
 		mysqli_free_result($max1);
 		
 		echo json_encode($row);}
