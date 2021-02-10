@@ -141,10 +141,10 @@ function read_depth_last(){
 			cache: false,
 			async: false,
 			success: function(data) {
-				// if (curtemp=='time'){
+			
 			
 				d110d = null;
-				console.log(d110d);
+				console.log(data);
 				d110d = JSON.parse(data);
 				console.log(d110d);
 				
@@ -155,9 +155,7 @@ function read_depth_last(){
 				else {start_time=0;}}
 				else {start_time=0;}
 				read_now();
-				// refresh=true;
-				// timer=setTimeout(function(){read_next();}, 3000);read_last
-			// }
+			
 			},
 			error: function(){
 			refresh=true;
