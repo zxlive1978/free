@@ -241,7 +241,7 @@ function read_next(){
 				
 				repaint();
 				refresh=true;
-				timer=setTimeout(function(){read_next();}, 3000);}
+				timer=setTimeout(function(){read_next();}, 3000);
 			},
 			error: function(){
 			refresh=true;
