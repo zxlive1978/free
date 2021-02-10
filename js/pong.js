@@ -220,22 +220,25 @@ function read_next(){
 			cache: false,
 			success: function(data) {
 				if (curtemp=='time'){
-			
-				d110d = null;
-				d110d = JSON.parse(data);
-				data = null;
-				var numbs110d = null;
-				numbs110d = d110d.length;
-				start_time = null;
-				if (!!d110d){
-				start_time = Number(d110d[0]["Vrema"]);
-				end_time = null;
-				end_time = Number(d110d[d110d.length-1]["Vrema"]);
+					try {
+						d110d = null;
+						d110d = JSON.parse(data);
+						data = null;
+						var numbs110d = null;
+						numbs110d = d110d.length;
+						start_time = null;
+						
+						start_time = Number(d110d[0]["Vrema"]);
+						end_time = null;
+						end_time = Number(d110d[d110d.length-1]["Vrema"]);
+						
+						var back_start_time = null;
+						back_start_time = start_time;
+						back_end_time = null;
+						back_end_time = end_time;}
+					catch (e) { }
+			}
 				
-				var back_start_time = null;
-				back_start_time = start_time;
-				back_end_time = null;
-				back_end_time = end_time;}
 				repaint();
 				refresh=true;
 				timer=setTimeout(function(){read_next();}, 3000);}
