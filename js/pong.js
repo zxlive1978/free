@@ -141,17 +141,17 @@ function read_depth_last(){
 			cache: false,
 			async: false,
 			success: function(data) {
-				// try {
+				try {
 					d110d = null;
 					d110d = JSON.parse(data);
-					console.log(d110d);
+					
 					curtemp = 'depth';
-					console.log(d110d[d110d.length-1]['Zaboj']);
-					if (d110d.length>0){
-					start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);} 
+					
+					if (!!d110d){
+					start_time=Number(d110d['Zaboj'])-Kzoomdepth*10;} 
 					else {start_time=0;}
-				// }
-				// catch (e) { start_time=0;}
+				}
+				catch (e) { start_time=0;}
 				read_now();
 			
 			},
