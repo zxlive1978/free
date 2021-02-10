@@ -62,9 +62,9 @@
 		$query = "SELECT MAX('Zaboj') AS 'Zaboj' FROM ".$name_base.".".$table.";";
 		echo $query;
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
-		echo $result;
+		// echo $result;
 		$row = mysql_fetch_array($result);
-		echo $row['Zaboj'];
+		// echo $row['Zaboj'];
 		mysqli_free_result($result);
 		}
 
