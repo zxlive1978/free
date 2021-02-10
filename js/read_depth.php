@@ -57,7 +57,7 @@
 		echo json_encode($comment);}
 
 
-	//read all
+	//read all max value depth
 	if ( $whatdo == 'read_last'){
 
 		$max = "SELECT MAX(Zaboj) as id FROM ".$name_base.".".$table.";";
