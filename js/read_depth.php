@@ -59,7 +59,7 @@
 
 	//read all
 	if ( $whatdo == 'read_last'){
-		$query = "SELECT * FROM ".$name_base.".".$table." ORDER BY `Zaboj` DESC LIMIT 1"";";
+		$query = "SELECT * FROM ".$name_base.".".$table." ORDER BY 'Zaboj' DESC LIMIT 1;";
 		echo $query;
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		$comment = array();
