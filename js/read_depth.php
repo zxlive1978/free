@@ -63,8 +63,8 @@
 		echo $query;
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		$comment = array();
-		$row=mysqli_fetch_array($result,MYSQLI_ASSOC)
-		echo $row;
+		$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
+		echo json_encode($row);
 		while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
 			//echo $row[$x_id]." - ".$row[$y_id]."<br />";
 			$cur_rec= array('p000'=>'par'.$row['id'], 'skvjson'=> $row['skvjson']);
