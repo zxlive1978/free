@@ -144,6 +144,7 @@ function read_depth_last(){
 				// try {
 					d110d = null;
 					d110d = JSON.parse(data);
+					console.log(d110d);
 					curtemp = 'depth';
 					console.log(d110d[d110d.length-1]['Zaboj']);
 					if (d110d.length>0){
