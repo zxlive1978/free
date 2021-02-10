@@ -145,6 +145,7 @@ function read_depth_last(){
 			
 				d110d = null;
 				d110d = JSON.parse(data);
+				console.log(d110d);
 				
 				curtemp = 'depth';
 				if (!!d110d){
