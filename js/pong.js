@@ -133,34 +133,35 @@ function read_cycle (){
 // });
 //Узнаем последнюю глубину
 function read_depth_last(){
-	wellNamedepth =wellName +"depth_all";
 	$.ajax({
-		type: "POST",
-			url: 'js/read_depth.php',
-			data: {whatdo:'read_last', table:wellNamedepth ,start_time: start_time, end_time:end_time },
-			cache: false,
-			async: false,
-			success: function(data) {
-				try {
-					d110d = null;
-					d110d = JSON.parse(data);
-					
-					curtemp = 'depth';
-					if (!!d110d){
-					start_time=Number(d110d['Zaboj'])-Kzoomdepth*10;} 
-					else {start_time=0;}
-				}
-				catch (e) { start_time=0;}
-				read_now();
+		type: "GET",
+		url: 'js/read_next.php',
+		data: {name: 'Wayne',well_Name: wellName, Kzoom: Sheet.Kzoom},
+		cache: false,
+		success: function(data) {
+			// if (curtemp=='time'){
+		
+			d110d = null;
+			d110d = JSON.parse(data);
 			
-			},
-			error: function(){
-			refresh=true;
 			curtemp = 'depth';
-			start_time=0;
+			if (!!d110d){
+			if (d110d.length>0){
+			start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);} 
+			else {start_time=0;}}
+			else {start_time=0;}
 			read_now();
+			// refresh=true;
 			// timer=setTimeout(function(){read_next();}, 3000);
-		}
+		// }
+		},
+		error: function(){
+		refresh=true;
+		curtemp = 'depth';
+		start_time=0;
+		read_now();
+		// timer=setTimeout(function(){read_next();}, 3000);
+	}
 	});
 
 }
