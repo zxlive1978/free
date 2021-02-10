@@ -60,7 +60,7 @@
 	//read all max value depth
 	if ( $whatdo == 'read_last'){
 
-		$max = "SELECT MAX(Zaboj) as id FROM ".$name_base.".".$table.";";
+		$max = "SELECT MAX(Zaboj) as Zaboj FROM ".$name_base.".".$table.";";
 		$max1 =  mysqli_query($dbc, $max) or die(mysqli_sqlstate($dbc));
 		$row = mysqli_fetch_assoc($max1);    // this was missing
 		// $id=$row['id'];
