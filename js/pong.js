@@ -141,7 +141,7 @@ function read_depth_last(){
 			cache: false,
 			async: false,
 			success: function(data) {
-				try {
+				// try {
 					d110d = null;
 					d110d = JSON.parse(data);
 					curtemp = 'depth';
@@ -149,8 +149,8 @@ function read_depth_last(){
 					if (d110d.length>0){
 					start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);} 
 					else {start_time=0;}
-				}
-				catch (e) { start_time=0;}
+				// }
+				// catch (e) { start_time=0;}
 				read_now();
 			
 			},
