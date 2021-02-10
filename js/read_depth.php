@@ -59,12 +59,12 @@
 
 	//read all
 	if ( $whatdo == 'read_last'){
-		$query = "SELECT MAX('Zaboj') AS 'Zaboj' FROM ".$name_base.".".$table.";";
+		$query = "SELECT * FROM ".$name_base.".".$table." ORDER BY `Zaboj` DESC LIMIT 1"";";
 		echo $query;
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		$comment = array();
 		$row=mysqli_fetch_array($result,MYSQLI_ASSOC);
-		echo json_encode($row);
+		echo json_encode($row['Zaboj']);
 		while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
 			//echo $row[$x_id]." - ".$row[$y_id]."<br />";
 			$cur_rec= array('p000'=>'par'.$row['id'], 'skvjson'=> $row['skvjson']);
