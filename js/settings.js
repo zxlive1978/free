@@ -744,8 +744,10 @@ function colOK3() {
 	if (curtemp == 'depth'){
 		refresh = false; //navigation.js
 		start_time = Number($("#depth222").val());
-		Sheet.Kzoomdepth = Number($("#zzzzooom1depth option:selected").val())/10;
+		Sheet.Kzoomdepth = Number($("#zzzzooom1depth option:selected").text())/10;
+		console.log($("#zzzzooom1depth option:selected").text());
 		Kzoomdepth = Sheet.Kzoomdepth;
+		console.log(Kzoomdepth);
 		read_next();
 	}
 	
