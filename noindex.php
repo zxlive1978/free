@@ -161,6 +161,7 @@ if (!$_SESSION['auth']) {
     <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg'  width="30" height="30">  Видеокамеры</button>
     <div class="dropdown-divider"></div>
     <button class='btn  btn-dark btn-block text-left'  onClick="colPan10();" ><img src='css/well.svg'  width="30" height="30">  Выбор текущей скважины</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="colPan3();" ><img src='css/lupa.svg'  width="30" height="30">  Выбор глубины и интервала</button>
     <div class="dropdown-divider"></div>
     <button class='btn btn-dark  btn-block text-left '  onClick="exit('exit','exit','exit');"  ><img src='css/exit.svg'  width="30" height="30">  Выход из приложения</button>
     
