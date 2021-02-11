@@ -112,7 +112,7 @@ if (!$_SESSION['auth']) {
 <div class="text-left">
 
 <div class="dropdown">
-<!-- <a class='btn  '  data-toggle="tooltip" data-placement="bottom" title="Основное меню регистрируемых данных станции ЭГТИ" onClick="$('#myModal11').modal('show');"><img src='css/menu.png'  width="20" height="20"></a> -->
+<!-- Время -->
 <button class='btn   bg-secondary '  id='dropdownMenu1' data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" padding-top:3; padding-bottom:3; " ><img src='css/burg.svg'  width="27" height="27"></button>
 <div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu1" style=" width: 300px !important;">
 
@@ -134,8 +134,9 @@ if (!$_SESSION['auth']) {
     
   </div>
   </div>
+
   <div class="dropdown">
-<!-- <a class='btn  '  data-toggle="tooltip" data-placement="bottom" title="Основное меню регистрируемых данных станции ЭГТИ" onClick="$('#myModal11').modal('show');"><img src='css/menu.png'  width="20" height="20"></a> -->
+<!-- Видео -->
 <button class='btn   bg-secondary'  id='dropdownMenu2'  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" display:none; padding-top:3; padding-bottom:3;" ><img src='css/burg.svg'  width="27" height="27"></button>
 <div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu2" style=" width: 300px !important;">
 
@@ -151,7 +152,7 @@ if (!$_SESSION['auth']) {
   </div>
 
   <div class="dropdown">
-<!-- <a class='btn  '  data-toggle="tooltip" data-placement="bottom" title="Основное меню регистрируемых данных станции ЭГТИ" onClick="$('#myModal11').modal('show');"><img src='css/menu.png'  width="20" height="20"></a> -->
+<!-- Глубина -->
 <button class='btn   bg-secondary'  id='dropdownMenu3'  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" display:none; padding-top:3; padding-bottom:3;" ><img src='css/burg.svg'  width="27" height="27"></button>
 <div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu2" style=" width: 300px !important;">
 
