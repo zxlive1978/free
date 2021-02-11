@@ -745,6 +745,7 @@ function colOK3() {
 		refresh = false; //navigation.js
 		start_time = Number($("#depth222").val());
 		Sheet.Kzoomdepth = Number($("#zzzzooom1depth").val());
+		Kzoomdepth = Number($("#zzzzooom1depth").val());
 		read_next();
 	}
 	
