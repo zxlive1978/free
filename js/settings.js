@@ -721,20 +721,13 @@ function colOK2() {
 
 
 
-//Кнопка календарь
+//Выбор даты или глубины
 function colPan3() {
 	refresh = false;
-
-	/* $("#kalendar").css('background-color', Sheet.curcolorval);
-	$('#kalendar').iziModal('open'); */
-
-	//bootstrap modal
-	//document.getElementById('localdate1').valueAsDate = '2020/10/26';
 	if (curtemp == 'time'){
-	$("#myModal2").modal('show');}
+		$("#myModal2").modal('show');}
 	if (curtemp == 'depth'){
 		$("#myModal2depth").modal('show');}
-
 }
 
 function colOK3() {
@@ -747,6 +740,14 @@ function colOK3() {
 	Sheet.Kzoom = Number($("#zooom1").val());
 	read_random();
 	}
+
+	if (curtemp == 'depth'){
+		refresh = false; //navigation.js
+		start_time = Number($("#zooom1").val());
+		end_time = start_time + disp_time;
+		Sheet.Kzoom = Number($("#zooom1").val());
+		read_random();
+		}
 	
 }
 
