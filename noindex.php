@@ -399,15 +399,13 @@ window.onload = getStart;
         
         <!-- Modal body -->
         <div class="modal-body">
-        <label for="hcolcolor">Выбор глубины:</label><input class="form-control input-lg bg-dark text-light"  type="text" id="depth222" name="depth222" value="0"/>
-
-<<label for="hcolcolor"class="control-label">Ширина интервала:</label><select id="zzzzooom1depth" class="form-control input-lg bg-dark text-light" name="zzzzooom1depth" value="3">
+<label for="hcolcolor">Выбор глубины:</label><input class="form-control input-lg bg-dark text-light"  type="text" id="depth222" name="depth222" value="0"/>
+<label for="hcolcolor" class="control-label" >Ширина интервала:</label><select id="zzzzooom1depth" class="form-control input-lg bg-dark text-light" name="zzzzooom1depth" value="3">
 <option value="100">100</option>
    <option value="200">200</option>
    <option value="200">500</option>
    <option value="200">1000</option>
   </select>
-
 </div>        
         <!-- Modal footer -->
         <div class="modal-footer">
