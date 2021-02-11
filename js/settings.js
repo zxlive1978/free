@@ -743,11 +743,11 @@ function colOK3() {
 
 	if (curtemp == 'depth'){
 		refresh = false; //navigation.js
-		start_time = Number($("#zooom1").val());
+		start_time = Number($("#depth222").val());
 		end_time = start_time + disp_time;
-		Sheet.Kzoom = Number($("#zooom1").val());
+		Sheet.Kzoomdepth = Number($("#zzzzooom1depth").val());
 		read_random();
-		}
+	}
 	
 }
 
