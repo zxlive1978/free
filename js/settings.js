@@ -727,6 +727,8 @@ function colPan3() {
 	if (curtemp == 'time'){
 		$("#myModal2").modal('show');}
 	if (curtemp == 'depth'){
+		$("#depth222").val(start_time);
+
 		$("#myModal2depth").modal('show');}
 }
 
@@ -744,10 +746,8 @@ function colOK3() {
 	if (curtemp == 'depth'){
 		refresh = false; //navigation.js
 		start_time = Number($("#depth222").val());
-		Sheet.Kzoomdepth = Number($("#zzzzooom1depth option:selected").text())/10;
-		console.log($("#zzzzooom1depth option:selected").text());
-		Kzoomdepth = Sheet.Kzoomdepth;
-		console.log(Kzoomdepth);
+		// Sheet.Kzoomdepth = Number($("#zzzzooom1depth option:selected").text())/10;
+		// Kzoomdepth = Sheet.Kzoomdepth;
 		read_next();
 	}
 	
