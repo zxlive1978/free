@@ -738,22 +738,16 @@ function colPan3() {
 }
 
 function colOK3() {
-	/* PArmyDialog3.hide(); */
-	//rem();
-
+	
+	if (curtemp == 'time'){
 	refresh = false; //navigation.js
 	var dataEnd = $('input[name="date1"]').val();
 	start_time = Math.round(Number((new Date(dataEnd)).getTime()) / 1000) - 14400;
 	end_time = start_time + disp_time;
-	//alert(start_time);
-	//alert(end_time);
-	//var disp_time = d110d[d110d.length-1]["Vrema"] - d110d[0]["Vrema"];
-
 	Sheet.Kzoom = Number($("#zooom1").val());
 	read_random();
-	//read_random();
-	/* $('#kalendar').iziModal('close'); */
-
+	}
+	
 }
 
 
