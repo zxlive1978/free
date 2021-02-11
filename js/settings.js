@@ -733,7 +733,7 @@ function colPan3() {
 	if (curtemp == 'time'){
 	$("#myModal2").modal('show');}
 	if (curtemp == 'depth'){
-		$("#myModal2").modal('show');}
+		$("#myModal2depth").modal('show');}
 
 }
 

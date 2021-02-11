@@ -387,6 +387,38 @@ window.onload = getStart;
     </div>
   </div>
 
+  <div class="modal fade" id="myModal2depth">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Выбор глубины</h4>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <label for="hcolcolor">Выбор глубины:</label><input class="form-control input-lg bg-dark text-light"  type="text" id="depth222" name="depth222" value="0"/>
+
+<<label for="hcolcolor"class="control-label">Ширина интервала:</label><select id="zzzzooom1depth" class="form-control input-lg bg-dark text-light" name="zzzzooom1depth" value="3">
+<option value="100">100</option>
+   <option value="200">200</option>
+   <option value="200">500</option>
+   <option value="200">1000</option>
+  </select>
+
+</div>        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK3()'>Применить</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
 <div class="modal fade" id="myModal3">
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
