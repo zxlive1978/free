@@ -269,7 +269,7 @@ var Columns = {
 
 //Маcштаб (час)
 var Kzoom = Sheet.Kzoom;
-//Маcштаб (час)
+//Маcштаб (м)
 var Kzoomdepth = Sheet.Kzoomdepth;
 
 //Плюс
