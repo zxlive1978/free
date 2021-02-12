@@ -1973,6 +1973,7 @@ function adm3() {
 
 //вкладка По Глубине
 function adm4() {
+	
 	if (curtemp=='video'){
 		//удаление старых потоков
 		deleteoldcams();
@@ -2000,6 +2001,9 @@ function adm4() {
 	// $('#tabs').hide();
 
 	$('#drawing').empty();
+	//Загрузка формы глубины
+	colOK8start(formnamedepth);
+	
 	$('#drawing').show();
 	$('#skvnamelab').show();
 	refresh = false; 
