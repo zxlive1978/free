@@ -1148,7 +1148,7 @@ function colOK8() {
 		//Сохранить в локальное хранилище
 		colPan9save(wellName, skv, namecmt, filesss[$("#colitems9")[0].selectedIndex]);
 		formname = filesss[$("#colitems9")[0].selectedIndex];
-		repaint();
+		// repaint();
 	} else {
 
 	}
