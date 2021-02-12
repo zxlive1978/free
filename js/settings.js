@@ -1975,7 +1975,7 @@ function adm3() {
 
 //вкладка По Глубине
 function adm4() {
-	d110d= null;
+	
 	if (curtemp=='video'){
 		//удаление старых потоков
 		deleteoldcams();
@@ -2012,6 +2012,27 @@ function adm4() {
 	$('#skvnamelabt').text(skv);
 	// init();
 	// colOK11();
+
+
+
+
+
+		refresh = false; //pong.js
+		online = false;
+		//$('#wells').iziModal('close');
+		skv = wellSelectName;
+		wellName = wellSelectBase;
+		namecmt = wellName + "kr";
+		//Сменить название в шапке
+		$('#skvnamelabt').text(skv);
+		//Сохранить в локальное хранилище
+		colPan9save(wellName, skv, namecmt, formname);
+
+
+
+
+
+
 	// read_now();
 	read_depth_last();
 	//Загрузка формы глубины
