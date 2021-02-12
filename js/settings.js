@@ -2016,7 +2016,7 @@ function adm4() {
 	read_depth_last();
 	//Загрузка формы глубины
 	colOK8start(formnamedepth);
-	$('#drawing').show();
+	
 	
 
 }
