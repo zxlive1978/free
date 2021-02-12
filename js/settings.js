@@ -2005,7 +2005,7 @@ function adm4() {
 	$('#drawing').empty();
 	
 	
-	$('#drawing').show();
+	
 	$('#skvnamelab').show();
 	refresh = false; 
 	online = false;
@@ -2016,6 +2016,7 @@ function adm4() {
 	read_depth_last();
 	//Загрузка формы глубины
 	colOK8start(formnamedepth);
+	$('#drawing').show();
 	
 
 }
