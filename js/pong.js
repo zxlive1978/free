@@ -49,7 +49,7 @@ var formnamedepth = "depth\Под телефон";
 
 if (!isMobile){
 	formname="Под планшет(ПК) светлая";
-	formnamedepth = "depth\Под планшет(ПК) светлая";
+	formnamedepth = "depth\Под планшет(ПК) темная";
 }
 
 //Сохранение и чтение настроей из локального хранилища
