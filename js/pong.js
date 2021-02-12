@@ -203,7 +203,7 @@ function read_next(){
 				}
 				catch (e) { }
 				repaint();
-				$('#drawing').show();
+				
 				
 			}
 		});
