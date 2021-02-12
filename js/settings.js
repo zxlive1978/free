@@ -1975,7 +1975,7 @@ function adm3() {
 
 //вкладка По Глубине
 function adm4() {
-	
+	d110d= null;
 	if (curtemp=='video'){
 		//удаление старых потоков
 		deleteoldcams();
