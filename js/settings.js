@@ -1933,6 +1933,8 @@ function adm2() {
 
 //вкладка По времени
 function adm3() {
+	//Загрузка формы По времени
+	colOK8start(formname);
 	if (curtemp=='video'){
 		//удаление старых потоков
 		deleteoldcams();
