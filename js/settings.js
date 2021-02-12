@@ -2001,8 +2001,7 @@ function adm4() {
 	// $('#tabs').hide();
 
 	$('#drawing').empty();
-	//Загрузка формы глубины
-	colOK8start(formnamedepth);
+	
 	
 	$('#drawing').show();
 	$('#skvnamelab').show();
@@ -2013,6 +2012,8 @@ function adm4() {
 	// colOK11();
 	// read_now();
 	read_depth_last();
+	//Загрузка формы глубины
+	colOK8start(formnamedepth);
 	
 
 }
