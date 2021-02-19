@@ -2000,18 +2000,25 @@ if (curtemp=='depth'){
 
 			let event = null;
 
-			colmn2.addEventListener("touchstart", function (e) {
-				event = e;
-			});
-			colmn2.addEventListener("touchmove", function (e) {
-				if (event) {
-					alert("Move delta: " + (e.touches[0].pageY - event.touches[0].pageY))
-				}
-			});
-			colmn2.addEventListener("touched", function (e) {
-				event = null;
-			});
+			// colmn2.addEventListener("touchstart", function (e) {
+			// 	event = e;
+			// });
 
+			colmn2.touchstart(function (e) {
+				event = e;
+				});
+
+			colmn2.touchmove(function (e) {
+				if (event) {
+					alert("Move delta: " + (e.touches[0].pageY - event.touches[0].pageY));
+				}
+				});
+
+			colmn2.touched(function (e) {
+				event = null;
+				});
+
+		
 			colmn2.click(function (e) {
 				alert('тадаds');
 
