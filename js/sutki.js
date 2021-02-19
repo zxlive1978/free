@@ -2014,8 +2014,8 @@ if (curtemp=='depth'){
 				}
 				});
 
-			colmn2.touched(function (e) {
-				//event = null;
+			colmn2.touchend(function (e) {
+				event = null;
 				});
 
 		
