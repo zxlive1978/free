@@ -2025,12 +2025,12 @@ if (curtemp=='depth'){
 			// colmn2.touchend(function (e) {
 			// 	event = null;
 			// 	});
-			var hammertime = new Hammer(colmn2);
+			// var hammertime = new Hammer(colmn2);
 			
-			hammertime.on('swipe', function(ev) {
-				alert(ev);
-			});
-			hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+			// hammertime.on('swipe', function(ev) {
+			// 	alert(ev);
+			// });
+			// hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
 
 
 		
