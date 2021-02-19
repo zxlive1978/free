@@ -1998,33 +1998,40 @@ if (curtemp=='depth'){
 
 			// });
 
-			let event = null;
+			// let event = null;
 
-			// colmn2.addEventListener("touchstart", function (e) {
+			// // colmn2.addEventListener("touchstart", function (e) {
+			// // 	event = e;
+			// // });
+
+			// colmn2.touchstart(function (e) {
 			// 	event = e;
-			// });
+			// 	});
 
-			colmn2.touchstart(function (e) {
-				event = e;
-				});
+			// colmn2.touchmove(function (e) {
+			// 	e.preventDefault();
+			// 	if (event) {
+			// 		let difmove=(e.touches[0].pageY - event.touches[0].pageY);
+			// 		if (difmove>0){
+			// 			read_down();
 
-			colmn2.touchmove(function (e) {
-				e.preventDefault();
-				if (event) {
-					let difmove=(e.touches[0].pageY - event.touches[0].pageY);
-					if (difmove>0){
-						read_down();
+			// 		} else{
+			// 			read_up();
+			// 		}
+			// 		//alert("Move delta: " + (e.touches[0].pageY - event.touches[0].pageY));
+			// 	}
+			// 	});
 
-					} else{
-						read_up();
-					}
-					//alert("Move delta: " + (e.touches[0].pageY - event.touches[0].pageY));
-				}
-				});
+			// colmn2.touchend(function (e) {
+			// 	event = null;
+			// 	});
+			var hammertime = new Hammer(colmn2, "myOptions");
+			
+			hammertime.on('swipe', function(ev) {
+				alert(ev);
+			});
+			hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
 
-			colmn2.touchend(function (e) {
-				event = null;
-				});
 
 		
 			colmn2.click(function (e) {
