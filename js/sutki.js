@@ -1992,10 +1992,24 @@ if (curtemp=='depth'){
 			// 	gfx_group = draw.group();
 			// });
 
-			colmn2.touchmove(function (e) {
-				alert('слайдер');
+			// colmn2.touchmove(function (e) {
+			// 	alert('слайдер');
 
 
+			// });
+
+			let event = null;
+
+			colmn2.addEventListener("touchstart", function (e) {
+				event = e;
+			});
+			colmn2.addEventListener("touchmove", function (e) {
+				if (event) {
+					alert("Move delta: " + (e.touches[0].pageY - event.touches[0].pageY))
+				}
+			});
+			colmn2.addEventListener("touched", function (e) {
+				event = null;
 			});
 
 			colmn2.click(function (e) {
