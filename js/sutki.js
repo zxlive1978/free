@@ -2031,8 +2031,26 @@ if (curtemp=='depth'){
 			// 	alert(ev);
 			// });
 			// hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-
-
+			if (isMobile) { 
+			colmn2.on('beforedrag', function (e) {
+				e.detail.event.stopPropagation();
+				refresh = false; //navigation.js
+				draggi = true;
+				this.front();
+			})
+			colmn2.draggable().on('dragstart', function (e) {
+				exs = e.detail.p.x;
+				eys = e.detail.p.y;
+			})
+			colmn2.draggable().on('dragmove', function (e) {
+				ex = e.detail.p.x -exs;
+				ey = e.detail.p.y;
+				if (ex>0){read_down();}
+				else{read_up();}
+			})
+			colmn2.draggable(
+			).on('dragend', function (e) {})
+			}
 		
 			colmn2.click(function (e) {
 
