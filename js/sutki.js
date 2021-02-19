@@ -2035,8 +2035,7 @@ if (curtemp=='depth'){
 			colmn2.on('beforedrag', function (e) {
 				e.detail.event.stopPropagation();
 				refresh = false; //navigation.js
-				draggi = true;
-				this.front();
+				
 			})
 			colmn2.draggable().on('dragstart', function (e) {
 				exs = e.detail.p.x;
@@ -2045,6 +2044,7 @@ if (curtemp=='depth'){
 			colmn2.draggable().on('dragmove', function (e) {
 				ex = e.detail.p.x -exs;
 				ey = e.detail.p.y;
+				alert('слайдер');
 				if (ex>0){read_down();}
 				else{read_up();}
 			})
