@@ -2045,8 +2045,8 @@ if (curtemp=='depth'){
 				ex = e.detail.p.x -exs;
 				ey = e.detail.p.y;
 				alert('слайдер');
-				if (ex>0){read_down();}
-				else{read_up();}
+				if (ex>0){read_down(); alert('слайдерdown');}
+				else{read_up(); alert('слайдерup');}
 			})
 			colmn2.draggable(
 			).on('dragend', function (e) {})
