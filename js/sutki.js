@@ -2025,7 +2025,7 @@ if (curtemp=='depth'){
 			// colmn2.touchend(function (e) {
 			// 	event = null;
 			// 	});
-			var hammertime = new Hammer(colmn2, "myOptions");
+			var hammertime = new Hammer(colmn2);
 			
 			hammertime.on('swipe', function(ev) {
 				alert(ev);
