@@ -66,7 +66,8 @@ if (!$_SESSION['auth']) {
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <!-- 6. Подключить js-файл библиотеки Bootstrap 3 DateTimePicker -->
-<!-- <script src="js/bootstrap-datetimepicker.min.js"></script> -->
+<!-- touch events -->
+<script src="js/hammer.min.js"></script>
 
 
 <script type="text/javascript" src="js/svg.min.js"></script>
