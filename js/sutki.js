@@ -2028,7 +2028,6 @@ if (curtemp=='depth'){
 
 		
 			colmn2.click(function (e) {
-				alert('тадаds');
 
 				// gfx_group.clear();
 				// if (mouseDwn){
