@@ -2015,7 +2015,7 @@ if (curtemp=='depth'){
 				});
 
 			colmn2.touched(function (e) {
-				event = null;
+				//event = null;
 				});
 
 		
