@@ -2010,8 +2010,16 @@ if (curtemp=='depth'){
 				});
 
 			colmn2.touchmove(function (e) {
+				e.preventDefault();
 				if (event) {
-					alert("Move delta: " + (e.touches[0].pageY - event.touches[0].pageY));
+					let difmove=(e.touches[0].pageY - event.touches[0].pageY);
+					if (difmove>0){
+						read_down();
+
+					} else{
+						read_up();
+					}
+					//alert("Move delta: " + (e.touches[0].pageY - event.touches[0].pageY));
 				}
 				});
 
