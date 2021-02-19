@@ -2031,26 +2031,53 @@ if (curtemp=='depth'){
 			// 	alert(ev);
 			// });
 			// hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-			if (isMobile) { 
-			colmn2.on('beforedrag', function (e) {
-				e.stopPropagation();
-				refresh = false; //navigation.js
+			
+			
+			
+			
+			// if (isMobile) { 
+			// colmn2.on('beforedrag', function (e) {
+			// 	e.stopPropagation();
+			// 	refresh = false; //navigation.js
 				
-			})
-			colmn2.draggable().on('dragstart', function (e) {
-				exs = e.detail.p.x;
-				eys = e.detail.p.y;
-			})
-			colmn2.draggable().on('dragmove', function (e) {
-				ex = e.detail.p.x -exs;
-				ey = e.detail.p.y;
-				alert('слайдер');
-				if (ex>0){read_down(); alert('слайдерdown');}
-				else{read_up(); alert('слайдерup');}
-			})
-			colmn2.draggable(
-			).on('dragend', function (e) {})
-			}
+			// })
+			// colmn2.draggable().on('dragstart', function (e) {
+			// 	exs = e.detail.p.x;
+			// 	eys = e.detail.p.y;
+			// })
+			// colmn2.draggable().on('dragmove', function (e) {
+			// 	ex = e.detail.p.x -exs;
+			// 	ey = e.detail.p.y;
+			// 	alert('слайдер');
+			// 	if (ex>0){read_down(); alert('слайдерdown');}
+			// 	else{read_up(); alert('слайдерup');}
+			// })
+			// colmn2.draggable(
+			// ).on('dragend', function (e) {})
+			// }
+
+			if (isMobile) { 
+				colmn2.on('beforedrag', function (e) {
+					e.stopPropagation();
+					refresh = false; //navigation.js
+					
+				})
+				colmn2.draggable().on('touchstart', function (e) {
+					refresh = false;
+					e.stopPropagation();
+					exs = e.detail.p.x;
+					eys = e.detail.p.y;
+				})
+				colmn2.draggable().on('touchmove', function (e) {
+					ex = e.detail.p.x -exs;
+					ey = e.detail.p.y;
+					// alert('слайдер');
+					if (ex>0){read_down(); alert('слайдерdown');}
+					else{read_up(); alert('слайдерup');}
+				})
+				colmn2.draggable(
+				).on('touchend', function (e) {})
+				}
 		
 			colmn2.click(function (e) {
 
