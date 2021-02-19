@@ -1995,7 +1995,8 @@ if (curtemp=='depth'){
 			colmn2.touchmove(function (e) {
 				console.log('тада');
 
-			}
+
+			});
 
 			colmn2.click(function (e) {
 
