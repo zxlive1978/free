@@ -1992,7 +1992,10 @@ if (curtemp=='depth'){
 			// 	gfx_group = draw.group();
 			// });
 
+			colmn2.touchmove(function (e) {
+				console.log('тада');
 
+			}
 
 			colmn2.click(function (e) {
 
