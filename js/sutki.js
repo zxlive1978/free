@@ -2005,7 +2005,6 @@ if (curtemp=='depth'){
 			// });
 
 			colmn2.touchstart(function (e) {
-				e.preventDefault();
 				event = e;
 				});
 
