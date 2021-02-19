@@ -2057,14 +2057,13 @@ if (curtemp=='depth'){
 			// }
 
 			if (isMobile) { 
-				colmn2.on('beforedrag', function (e) {
+				colmn2.on('beforetouch', function (e) {
 					e.stopPropagation();
 					refresh = false; //navigation.js
 					
 				})
 				colmn2.draggable().on('touchstart', function (e) {
 					refresh = false;
-					e.stopPropagation();
 					exs = e.detail.p.x;
 					eys = e.detail.p.y;
 				})
