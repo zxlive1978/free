@@ -1993,7 +1993,7 @@ if (curtemp=='depth'){
 			// });
 
 			colmn2.touchmove(function (e) {
-				console.log('тада');
+				alert('тада');
 
 
 			});
