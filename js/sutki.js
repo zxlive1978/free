@@ -2033,7 +2033,7 @@ if (curtemp=='depth'){
 			// hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
 			if (isMobile) { 
 			colmn2.on('beforedrag', function (e) {
-				e.detail.event.stopPropagation();
+				e.stopPropagation();
 				refresh = false; //navigation.js
 				
 			})
