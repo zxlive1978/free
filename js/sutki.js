@@ -2028,7 +2028,7 @@ if (curtemp=='depth'){
 				}
 
 
-				event = null;
+				//event = null;
 				});
 
 
