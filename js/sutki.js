@@ -2009,11 +2009,12 @@ if (curtemp=='depth'){
 				});
 
 			colmn2.touchmove(function (e) {
-				alert("Move delta: " + (e.touches[0].pageY - event.touches[0].pageY));
+				
 				
 				});
 
 			colmn2.touchend(function (e) {
+				alert("Move delta: " + (e.touches[0].pageY - event.touches[0].pageY));
 				e.preventDefault();
 				if (event) {
 					let difmove=(e.touches[0].pageY - event.touches[0].pageY);
