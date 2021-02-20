@@ -2016,21 +2016,15 @@ if (curtemp=='depth'){
 				});
 
 			colmn2.touchend(function (e) {
-				alert("Move delta: ");
-				
-				if (event) {
-					//let difmove=(e.touches[0].pageY - event.touches[0].pageY);
+		
 					if (difmove>0){
 						read_down();
 
 					} else{
 						read_up();
 					}
-					//alert("Move delta: " + (e.touches[0].pageY - event.touches[0].pageY));
-				}
-
-
-				//event = null;
+		
+				event = null;
 				});
 
 
