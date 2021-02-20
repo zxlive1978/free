@@ -1998,11 +1998,12 @@ if (curtemp=='depth'){
 
 			// });
 
-			var event = null;
+			let event = null;
 
 			// colmn2.addEventListener("touchstart", function (e) {
 			// 	event = e;
 			// });
+			let difmove;
 
 			colmn2.touchstart(function (e) {
 				// e.preventDefault();
@@ -2010,15 +2011,15 @@ if (curtemp=='depth'){
 				});
 
 			colmn2.touchmove(function (e) {
-				
+				difmove=(e.touches[0].pageY - event.touches[0].pageY);
 				
 				});
 
 			colmn2.touchend(function (e) {
-				alert("Move delta: " + (e.touches[0].pageY - event.touches[0].pageY));
+				alert("Move delta: ");
 				
 				if (event) {
-					let difmove=(e.touches[0].pageY - event.touches[0].pageY);
+					//let difmove=(e.touches[0].pageY - event.touches[0].pageY);
 					if (difmove>0){
 						read_down();
 
