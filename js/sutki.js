@@ -1997,13 +1997,14 @@ if (curtemp=='depth'){
 
 
 			// });
-
+			
 			let event = null;
 
 			// colmn2.addEventListener("touchstart", function (e) {
 			// 	event = e;
 			// });
 			let difmove;
+			let onclickk =true;
 
 			colmn2.touchstart(function (e) {
 				// e.preventDefault();
@@ -2011,17 +2012,17 @@ if (curtemp=='depth'){
 				});
 
 			colmn2.touchmove(function (e) {
+				e.preventDefault();
 				difmove=(e.touches[0].pageY - event.touches[0].pageY);
 				
 				});
 
 			colmn2.touchend(function (e) {
 		
-					if (difmove>0){
-						read_down();
-
-					} else{
+					if (difmove>0 && onclickk){
 						read_up();
+					} else{
+						read_down();
 					}
 		
 				event = null;
@@ -2082,6 +2083,7 @@ if (curtemp=='depth'){
 			// 	}
 		
 			colmn2.click(function (e) {
+				onclickk =false;
 
 				// gfx_group.clear();
 				// if (mouseDwn){
