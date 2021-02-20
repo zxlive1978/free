@@ -1995,10 +1995,108 @@ if (curtemp=='depth'){
 			// colmn2.touchmove(function (e) {
 			// 	alert('слайдер');
 
-			colmn2.click(function (e) {
-				
-				var gfx_group = draw.group();
 
+			// });
+			
+			let event = null;
+
+			// colmn2.addEventListener("touchstart", function (e) {
+			// 	event = e;
+			// });
+			let difmove;
+			let onclickk =true;
+
+			colmn2.draggable().on('touchstart', function (e) {
+				// e.preventDefault();
+				// e.preventDefault();
+				event = e;
+				});
+
+			colmn2.draggable().on('touchmove', function (e) {
+				// e.preventDefault();
+				difmove=(e.touches[0].pageY - event.touches[0].pageY);
+				
+				});
+
+			colmn2.draggable().on('touchend', function (e) {
+				let mi = Sheet.markwidthtime / 2;
+				 if(!!difmove){
+					if (difmove>0){
+						cir1.dy(mi);
+						cir2.dy(mi);
+						cir4.dy(mi);
+						read_up();
+					} else{
+						cir1.dy(-mi);
+						cir2.dy(-mi);
+						cir4.dy(-mi);
+						read_down();
+					} 
+				}else {
+					//клик
+				
+
+				}
+		
+				event = null;
+				});
+
+
+			// var hammertime = new Hammer(colmn2);
+			
+			// hammertime.on('swipe', function(ev) {
+			// 	alert(ev);
+			// });
+			// hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+			
+			
+			
+			
+			// if (isMobile) { 
+			// colmn2.on('beforedrag', function (e) {
+			// 	e.stopPropagation();
+			// 	refresh = false; //navigation.js
+				
+			// })
+			// colmn2.draggable().on('dragstart', function (e) {
+			// 	exs = e.detail.p.x;
+			// 	eys = e.detail.p.y;
+			// })
+			// colmn2.draggable().on('dragmove', function (e) {
+			// 	ex = e.detail.p.x -exs;
+			// 	ey = e.detail.p.y;
+			// 	alert('слайдер');
+			// 	if (ex>0){read_down(); alert('слайдерdown');}
+			// 	else{read_up(); alert('слайдерup');}
+			// })
+			// colmn2.draggable(
+			// ).on('dragend', function (e) {})
+			// }
+
+			// if (isMobile) { 
+			// 	colmn2.on('beforetouch', function (e) {
+			// 		e.stopPropagation();
+			// 		refresh = false; //navigation.js
+					
+			// 	})
+			// 	colmn2.draggable().on('touchstart', function (e) {
+			// 		refresh = false;
+			// 		exs = e.detail.p.x;
+			// 		eys = e.detail.p.y;
+			// 	})
+			// 	colmn2.draggable().on('touchmove', function (e) {
+			// 		ex = e.detail.p.x -exs;
+			// 		ey = e.detail.p.y;
+			// 		// alert('слайдер');
+			// 		if (ex>0){read_down(); alert('слайдерdown');}
+			// 		else{read_up(); alert('слайдерup');}
+			// 	})
+			// 	colmn2.draggable(
+			// 	).on('touchend', function (e) {})
+			// 	}
+			
+			colmn2.click(function (e) {
+	
 				// gfx_group.clear();
 				// if (mouseDwn){
 				// 	//var gfx_group = draw.group();
@@ -2008,37 +2106,16 @@ if (curtemp=='depth'){
 				let X_cur_mouse_click = cursor.x;
 				let Y_cur_mouse_click = cursor.y;
 				//Группа
-				
+				var gfx_group = draw.group();
 				//parPan(this.attr('id'));
 				//Выкл обновления
 				refresh = false;
-				// if (!isMobile) {
-				// 	Sheet.height_value = disp_up;
-				// } else {
-
-				// 	Sheet.height_value = disp_up;
-				// }
-				//не уверен!
-
 
 				var text_size_value = size_text_p;
-				/* if (resizeH>resizeV) {text_size_value=resizeV;} */
-				/* text_size_value = Sheet.curvalsize; */
 				if (text_size_value > Sheet.height_value * h1 / 7.6) {
 					text_size_value = Sheet.height_value * h1 / 7.6;
 				}
-
-
-
-				// let wcol=w1/2.0*Number(Columns[this.attr('id')].size.w);
-				// console.log(w1/2.0*Number(Columns[this.attr('id')].size.w));
-				// var gfxr = draw.polygon((X_cur_mouse_click-wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+wcol)+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-wcol)+' '+Y_cur_mouse_click)
-
-				//var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
 				var gfxr = draw.polygon((X_cur_mouse_click - w1 * (Sheet.width_value / 2)) + ',' + (Y_cur_mouse_click - h1 * (Sheet.height_value)) + ' ' + (X_cur_mouse_click + w1 * (Sheet.width_value / 2)) + ',' + (Y_cur_mouse_click - h1 * (Sheet.height_value)) + ' ' + (X_cur_mouse_click + w1 * (Sheet.width_value / 2)) + ',' + Y_cur_mouse_click + ' ' + (X_cur_mouse_click - w1 * (Sheet.width_value / 2)) + ',' + Y_cur_mouse_click)
-					//ширина поля со клик зачениями
-					// weight_colmn1 = w1*(Columns["col"+String(Number((txtPar[keey].poz.x)))].size.w)/2;
-					// var gfxr = draw.polygon((X_cur_mouse_click-weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+weight_colmn1)+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-weight_colmn1)+','+Y_cur_mouse_click)
 					.fill({ color: Sheet.curcolorval })
 					.stroke({ width: Sheet.width_gxf_line, dasharray: '2,3', color: Sheet.syscolor })
 					.id(this.attr('id'));
@@ -2051,18 +2128,14 @@ if (curtemp=='depth'){
 					.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
 
 				gfx_group.add(gfxr_line);
-
-				//var cur_value_y_step_val = (h1*100 - (Number(Columns[this.attr('id')].size.h)*h1))/d110d.length;
-
-
-
 				//БУМ ШОКО var name_p1= String(d110d[Math.ceil(i*step_txt_numb_rec)]['Vrema'])+" - " + String ((startTime.getTime() + i* stepMin* 60 *1000)/1000);
 				//var name_p1 =d110d[Math.ceil(i*step_txt_numb_rec)][keey];
 				//Точное время
 				//String ((startTime.getTime() + i* stepMin* 60 *1000)/1000)
-				var cur_value_y_step_val = (h1 * 100 - (Number(Columns[this.attr('id')].size.h) * h1)) / (Sheet.Kzoom * 60 * 60);
+				// var cur_value_y_step_val = (h1 * 100 - (Number(Columns[this.attr('id')].size.h) * h1)) / (Kzoomdepth);
+				var cur_value_y_step_val = K_rul;
 				// var ttime =start_time/1 + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h)*h1)/cur_value_y_step_val);
-				var ttime = start_time + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h) * h1) / cur_value_y_step_val);
+				var ttime = start_time + ((Y_cur_mouse_click -h1*Number(Columns[this.attr('id')].size.h)))*(last_time2-start_time)/(h1*100-h1*Number(Columns[this.attr('id')].size.h));
 				//Индекс искомой записи -1 не найдена
 				var disp_val1 = -1;
 				//Разница между значение записи и клика
@@ -2071,11 +2144,14 @@ if (curtemp=='depth'){
 				var fidx = -1;
 				// Последняя запись индекс
 				var lidx = -1;
+				// console.log(start_time+' + '+ttime+' + '+ ((Y_cur_mouse_click -h1*Number(Columns[this.attr('id')].size.h)))*(last_time2-start_time)/(h1*100-h1*Number(Columns[this.attr('id')].size.h)));
+				// console.log((Y_cur_mouse_click +"  "+((Y_cur_mouse_click) -Number(Columns[this.attr('id')].size.h)* h1))*K_rul);
+
 				for (let tmark in d110d) {
 
-					sub = (d110d[tmark]['Vrema']) - ttime;
-					/* console.log (Number (d110d[tmark]['Vrema']) ,'-',ttime,'-' ,sub); */
-					if (sub < 60 && sub > -60) {
+					sub = (d110d[tmark]['Zaboj']) - ttime;
+					// console.log (Number (d110d[tmark]['Zaboj']) ,'-',ttime,'-' ,sub);
+					if (sub < 0.5 && sub > -0.5) {
 						if (fidx == -1) {
 							fidx = tmark;
 						}
@@ -2091,14 +2167,6 @@ if (curtemp=='depth'){
 					if (fidx != -1) { disp_val1 = lidx; }
 				}
 
-
-				/* console.log (fidx,lidx,disp_val1); */
-				//1543429113 - 15434189587804
-				//1543429431 - 159636.9304
-				//1543429509 - 154345667.4
-				/* var disp_val1 = start_time + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h)*h1)/cur_value_y_step_val); */
-				//console.log (start_time+disp_val1);
-				//Обрезка col(Номер столбца)
 				var strN = Number(this.attr('id').toString().substr(3));
 				//ЧИсло параметров
 				var numb_value = 0;
@@ -2242,7 +2310,9 @@ if (curtemp=='depth'){
 							var month = day.getMonth() + 1;
 							if (month < 10) { month = "0" + month; }
 							var time_viz1 = ' ' + last_hour + ":" + minutes + " " + dates + "." + month + (2000 - yearr);
-							var text_value = draw.text(txtOknOPar[keey].txt + " " + time_viz1 + " (" + txtOknOPar[keey].unit + ")")
+							//console.log(time_viz1);
+							cur_val=time_viz1;
+							var text_value = draw.text(txtOknOPar[keey].txt + " " + cur_val + " (" + txtOknOPar[keey].unit + ")")
 								.font({ family: Sheet.fnt, size: text_size_value })
 								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
@@ -2256,7 +2326,7 @@ if (curtemp=='depth'){
 								var coef = text_value.length() / text_value.attr('font-size')
 								text_value.clear();
 								delete (text_value);
-								var text_value = draw.text(txtOknOPar[keey].txt + " " + time_viz1 + " (" + txtOknOPar[keey].unit + ")")
+								var text_value = draw.text(txtOknOPar[keey].txt + " " + cur_val + " (" + txtOknOPar[keey].unit + ")")
 									.font({ family: Sheet.fnt, size: Sheet.width_value * w1 / (coef * 1.1) })
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
@@ -2272,7 +2342,7 @@ if (curtemp=='depth'){
 								//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
 								text_value.clear();
 								delete (text_value);
-								var text_value = draw.text(txtOknOPar[keey].txt + " " + time_viz1 + " (" + txtOknOPar[keey].unit + ")")
+								var text_value = draw.text(txtOknOPar[keey].txt + " " + cur_val + " (" + txtOknOPar[keey].unit + ")")
 									.font({ family: Sheet.fnt, size: resizeV })
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
@@ -2287,10 +2357,6 @@ if (curtemp=='depth'){
 				}
 				var gfxr = draw.polygon((X_cur_mouse_click - w1 * (Sheet.width_value / 2 - 0.5)) + ',' + (Y_cur_mouse_click - h1 * (Sheet.height_value + 0.5)) + ' ' + (X_cur_mouse_click + w1 * (Sheet.width_value / 2 + 0.5)) + ',' + (Y_cur_mouse_click - h1 * (Sheet.height_value + 0.5)) + ' ' + (X_cur_mouse_click + w1 * (Sheet.width_value / 2 + 0.5)) + ' ' + Y_cur_mouse_click + ' ' + (X_cur_mouse_click - w1 * (Sheet.width_value / 2 - 0.5)) + ' ' + Y_cur_mouse_click)
 
-					//var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
-					//ширина поля со клик зачениями
-					// weight_colmn1 = w1*(Columns["col"+String(Number((txtPar[keey].poz.x)))].size.w)/2;
-					// var gfxr = draw.polygon((X_cur_mouse_click-weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+weight_colmn1)+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-weight_colmn1)+','+Y_cur_mouse_click)
 					.fill({ color: Sheet.curcolorval })
 					.opacity(0)
 					.stroke({ width: Sheet.width_gxf_line, dasharray: '2,3', color: Sheet.syscolor })
@@ -2299,150 +2365,20 @@ if (curtemp=='depth'){
 
 
 				gfx_group.add(gfxr);
-				//console.log(gfxr.attr(id));
-				//gfx_group.after(colmn2);
-
-				//inv_col.front();
-				// gfx_group.mousemove(function(){
-				// 	//mouseDwn = false;
-				// 	gfx_group.clear();
-				// });
 				gfx_group
-					//.delay(5000)
 					.rotate(-90)
-					// .move(1000,1000)
-					//.scale(0.1)
 					.opacity(0)
 					.animate(1500, 'expoOut')
-					// .scale(1.0)//.cy(h1*Sheet.height_value/2)
 					.opacity(1)
 					.rotate(0)
-				// .move(0,0)
-				//.reverse(true)
-				//.loop()
-
 
 				//Удаление текущих значений
 				gfxr.click(function () {
-					
+
 					gfx_group.clear();
-				
-					/* if (online == true){refresh = true;} */
-
-
-
-					// this.remove();
-					// gfx_group.remove();
-
-
-
-					//Очистка холста и перерисовка
-					//repaint();
-				})
-
-				// onclickk =false;
-				
-			})
-			// });
-			
-			let event = null;
-
-			// colmn2.addEventListener("touchstart", function (e) {
-			// 	event = e;
-			// });
-			let difmove;
-			let onclickk =true;
-
-			colmn2.draggable().on('touchstart', function (e) {
-				// e.preventDefault();
-				// e.preventDefault();
-				event = e;
-				});
-
-			colmn2.draggable().on('touchmove', function (e) {
-				// e.preventDefault();
-				difmove=(e.touches[0].pageY - event.touches[0].pageY);
-				
-				});
-
-				colmn2.draggable().on('touchend', function (e) {
-				let mi = Sheet.markwidthtime / 2;
-				 if(!!difmove){
-					if (difmove>0){
-						cir1.dy(mi);
-						cir2.dy(mi);
-						cir4.dy(mi);
-						read_up();
-					} else{
-						cir1.dy(-mi);
-						cir2.dy(-mi);
-						cir4.dy(-mi);
-						read_down();
-					} 
-				}else {
-					//клик
-				
-
-				}
-		
-				event = null;
-				});
-
-
-			// var hammertime = new Hammer(colmn2);
-			
-			// hammertime.on('swipe', function(ev) {
-			// 	alert(ev);
-			// });
-			// hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-			
-			
-			
-			
-			// if (isMobile) { 
-			// colmn2.on('beforedrag', function (e) {
-			// 	e.stopPropagation();
-			// 	refresh = false; //navigation.js
-				
-			// })
-			// colmn2.draggable().on('dragstart', function (e) {
-			// 	exs = e.detail.p.x;
-			// 	eys = e.detail.p.y;
-			// })
-			// colmn2.draggable().on('dragmove', function (e) {
-			// 	ex = e.detail.p.x -exs;
-			// 	ey = e.detail.p.y;
-			// 	alert('слайдер');
-			// 	if (ex>0){read_down(); alert('слайдерdown');}
-			// 	else{read_up(); alert('слайдерup');}
-			// })
-			// colmn2.draggable(
-			// ).on('dragend', function (e) {})
-			// }
-
-			// if (isMobile) { 
-			// 	colmn2.on('beforetouch', function (e) {
-			// 		e.stopPropagation();
-			// 		refresh = false; //navigation.js
 					
-			// 	})
-			// 	colmn2.draggable().on('touchstart', function (e) {
-			// 		refresh = false;
-			// 		exs = e.detail.p.x;
-			// 		eys = e.detail.p.y;
-			// 	})
-			// 	colmn2.draggable().on('touchmove', function (e) {
-			// 		ex = e.detail.p.x -exs;
-			// 		ey = e.detail.p.y;
-			// 		// alert('слайдер');
-			// 		if (ex>0){read_down(); alert('слайдерdown');}
-			// 		else{read_up(); alert('слайдерup');}
-			// 	})
-			// 	colmn2.draggable(
-			// 	).on('touchend', function (e) {})
-			// 	}
-			
-
+				})
+			})
 		}
 	}
 	}
