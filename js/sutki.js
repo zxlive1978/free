@@ -2008,11 +2008,12 @@ if (curtemp=='depth'){
 
 			colmn2.touchstart(function (e) {
 				// e.preventDefault();
+				// e.preventDefault();
 				event = e;
 				});
 
 			colmn2.touchmove(function (e) {
-				e.preventDefault();
+				// e.preventDefault();
 				difmove=(e.touches[0].pageY - event.touches[0].pageY);
 				
 				});
@@ -2091,7 +2092,7 @@ if (curtemp=='depth'){
 			// 	}
 		
 			colmn2.click(function (e) {
-				onclickk =false;
+				// onclickk =false;
 
 				// gfx_group.clear();
 				// if (mouseDwn){
