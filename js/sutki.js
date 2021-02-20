@@ -1976,7 +1976,7 @@ if (curtemp=='depth'){
 			var colmn2 = draw.polygon(Number(Columns[key].poz.x) * w1 + ',' + (Number(Columns[key].poz.y) * h1 + Number(Columns[key].size.h) * h1) + ' ' + (Number(Columns[key].poz.x) * w1 + Number(Columns[key].size.w) * w1) + ',' + (Number(Columns[key].poz.y) * h1 + Number(Columns[key].size.h) * h1) + ' ' + (Number(Columns[key].poz.x) * w1 + Number(Columns[key].size.w) * w1) + ',' + 100 * h1 + ' ' + Number(Columns[key].poz.x) * w1 + ',' + 100 * h1)
 				.fill({ color: getRandomColor() })
 				.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor })
-				.opacity(0)
+				.opacity(0.5)
 				.id(key);
 			// colmn2.attr({'fill-opacity': 0.5});
 			// //inv_col.add(colmn2);
@@ -2421,6 +2421,7 @@ if (curtemp=='depth'){
 				gfxr.click(function () {
 
 					gfx_group.clear();
+				
 					/* if (online == true){refresh = true;} */
 
 
