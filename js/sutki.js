@@ -2009,7 +2009,7 @@ if (curtemp=='depth'){
 				});
 
 			colmn2.touchmove(function (e) {
-				
+				alert("Move delta: " + (e.touches[0].pageY - event.touches[0].pageY));
 				
 				});
 
