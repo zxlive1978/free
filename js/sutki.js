@@ -2090,9 +2090,10 @@ if (curtemp=='depth'){
 			// 	colmn2.draggable(
 			// 	).on('touchend', function (e) {})
 			// 	}
-		
+			
 			colmn2.click(function (e) {
 				// onclickk =false;
+				var gfx_group = draw.group();
 
 				// gfx_group.clear();
 				// if (mouseDwn){
@@ -2103,7 +2104,7 @@ if (curtemp=='depth'){
 				let X_cur_mouse_click = cursor.x;
 				let Y_cur_mouse_click = cursor.y;
 				//Группа
-				var gfx_group = draw.group();
+				
 				//parPan(this.attr('id'));
 				//Выкл обновления
 				refresh = false;
@@ -2419,7 +2420,7 @@ if (curtemp=='depth'){
 
 				//Удаление текущих значений
 				gfxr.click(function () {
-
+					
 					gfx_group.clear();
 				
 					/* if (online == true){refresh = true;} */
