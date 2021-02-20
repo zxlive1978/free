@@ -2031,69 +2031,9 @@ if (curtemp=='depth'){
 						cir2.dy(-mi);
 						cir4.dy(-mi);
 						read_down();
-					}
-				}
-		
-				event = null;
-				});
-
-
-			// var hammertime = new Hammer(colmn2);
-			
-			// hammertime.on('swipe', function(ev) {
-			// 	alert(ev);
-			// });
-			// hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
-			
-			
-			
-			
-			// if (isMobile) { 
-			// colmn2.on('beforedrag', function (e) {
-			// 	e.stopPropagation();
-			// 	refresh = false; //navigation.js
-				
-			// })
-			// colmn2.draggable().on('dragstart', function (e) {
-			// 	exs = e.detail.p.x;
-			// 	eys = e.detail.p.y;
-			// })
-			// colmn2.draggable().on('dragmove', function (e) {
-			// 	ex = e.detail.p.x -exs;
-			// 	ey = e.detail.p.y;
-			// 	alert('слайдер');
-			// 	if (ex>0){read_down(); alert('слайдерdown');}
-			// 	else{read_up(); alert('слайдерup');}
-			// })
-			// colmn2.draggable(
-			// ).on('dragend', function (e) {})
-			// }
-
-			// if (isMobile) { 
-			// 	colmn2.on('beforetouch', function (e) {
-			// 		e.stopPropagation();
-			// 		refresh = false; //navigation.js
-					
-			// 	})
-			// 	colmn2.draggable().on('touchstart', function (e) {
-			// 		refresh = false;
-			// 		exs = e.detail.p.x;
-			// 		eys = e.detail.p.y;
-			// 	})
-			// 	colmn2.draggable().on('touchmove', function (e) {
-			// 		ex = e.detail.p.x -exs;
-			// 		ey = e.detail.p.y;
-			// 		// alert('слайдер');
-			// 		if (ex>0){read_down(); alert('слайдерdown');}
-			// 		else{read_up(); alert('слайдерup');}
-			// 	})
-			// 	colmn2.draggable(
-			// 	).on('touchend', function (e) {})
-			// 	}
-			
-			colmn2.click(function (e) {
-				// onclickk =false;
-				var gfx_group = draw.group();
+					} else {
+						//клик
+						var gfx_group = draw.group();
 
 				// gfx_group.clear();
 				// if (mouseDwn){
@@ -2435,6 +2375,71 @@ if (curtemp=='depth'){
 					//Очистка холста и перерисовка
 					//repaint();
 				})
+
+
+					}
+				}
+		
+				event = null;
+				});
+
+
+			// var hammertime = new Hammer(colmn2);
+			
+			// hammertime.on('swipe', function(ev) {
+			// 	alert(ev);
+			// });
+			// hammertime.get('swipe').set({ direction: Hammer.DIRECTION_VERTICAL });
+			
+			
+			
+			
+			// if (isMobile) { 
+			// colmn2.on('beforedrag', function (e) {
+			// 	e.stopPropagation();
+			// 	refresh = false; //navigation.js
+				
+			// })
+			// colmn2.draggable().on('dragstart', function (e) {
+			// 	exs = e.detail.p.x;
+			// 	eys = e.detail.p.y;
+			// })
+			// colmn2.draggable().on('dragmove', function (e) {
+			// 	ex = e.detail.p.x -exs;
+			// 	ey = e.detail.p.y;
+			// 	alert('слайдер');
+			// 	if (ex>0){read_down(); alert('слайдерdown');}
+			// 	else{read_up(); alert('слайдерup');}
+			// })
+			// colmn2.draggable(
+			// ).on('dragend', function (e) {})
+			// }
+
+			// if (isMobile) { 
+			// 	colmn2.on('beforetouch', function (e) {
+			// 		e.stopPropagation();
+			// 		refresh = false; //navigation.js
+					
+			// 	})
+			// 	colmn2.draggable().on('touchstart', function (e) {
+			// 		refresh = false;
+			// 		exs = e.detail.p.x;
+			// 		eys = e.detail.p.y;
+			// 	})
+			// 	colmn2.draggable().on('touchmove', function (e) {
+			// 		ex = e.detail.p.x -exs;
+			// 		ey = e.detail.p.y;
+			// 		// alert('слайдер');
+			// 		if (ex>0){read_down(); alert('слайдерdown');}
+			// 		else{read_up(); alert('слайдерup');}
+			// 	})
+			// 	colmn2.draggable(
+			// 	).on('touchend', function (e) {})
+			// 	}
+			
+			colmn2.click(function (e) {
+				// onclickk =false;
+				
 			})
 		}
 	}
