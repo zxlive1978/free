@@ -2006,19 +2006,19 @@ if (curtemp=='depth'){
 			let difmove;
 			let onclickk =true;
 
-			colmn2.touchstart(function (e) {
+			colmn2.draggable().on('touchstart', function (e) {
 				// e.preventDefault();
 				// e.preventDefault();
 				event = e;
 				});
 
-			colmn2.touchmove(function (e) {
+			colmn2.draggable().on('touchmove', function (e) {
 				// e.preventDefault();
 				difmove=(e.touches[0].pageY - event.touches[0].pageY);
 				
 				});
 
-			colmn2.touchend(function (e) {
+			colmn2.draggable().on('touchend', function (e) {
 				let mi = Sheet.markwidthtime / 2;
 				 if(!!difmove){
 					if (difmove>0){
@@ -2090,7 +2090,7 @@ if (curtemp=='depth'){
 			// 	colmn2.draggable(
 			// 	).on('touchend', function (e) {})
 			// 	}
-			colmn2.front();
+			
 			colmn2.click(function (e) {
 				// onclickk =false;
 				var gfx_group = draw.group();
@@ -2803,9 +2803,7 @@ if (curtemp=='depth'){
 
 
 	if (isMobile) {
-		cir4.draggable(
-
-		).on('touchstart', function (e) {
+		cir4.draggable().on('touchstart', function (e) {
 			
 			// var touchobj1 = e.changedTouches[0] // первая точка прикосновения
 			// exs = e.detail.p.x;
@@ -2816,9 +2814,7 @@ if (curtemp=='depth'){
 		})
 
 
-		cir4.draggable(
-
-		).on('touchmove', function (e) {
+		cir4.draggable().on('touchmove', function (e) {
 			// e.preventDefault();
 			// ex = e.detail.p.x;
 			// ey = e.detail.p.y;
