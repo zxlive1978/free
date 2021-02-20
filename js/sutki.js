@@ -2090,7 +2090,7 @@ if (curtemp=='depth'){
 			// 	colmn2.draggable(
 			// 	).on('touchend', function (e) {})
 			// 	}
-			
+			colmn2.front();
 			colmn2.click(function (e) {
 				// onclickk =false;
 				var gfx_group = draw.group();
