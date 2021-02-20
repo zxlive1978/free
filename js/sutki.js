@@ -1998,13 +1998,14 @@ if (curtemp=='depth'){
 
 			// });
 
-			let event = null;
+			var event = null;
 
 			// colmn2.addEventListener("touchstart", function (e) {
 			// 	event = e;
 			// });
 
 			colmn2.touchstart(function (e) {
+				e.preventDefault();
 				event = e;
 				});
 
@@ -2015,7 +2016,7 @@ if (curtemp=='depth'){
 
 			colmn2.touchend(function (e) {
 				alert("Move delta: " + (e.touches[0].pageY - event.touches[0].pageY));
-				e.preventDefault();
+				
 				if (event) {
 					let difmove=(e.touches[0].pageY - event.touches[0].pageY);
 					if (difmove>0){
