@@ -2006,36 +2006,6 @@ if (curtemp=='depth'){
 			let difmove;
 			let onclickk =true;
 
-			colmn2.draggable().on('touchstart', function (e) {
-				// e.preventDefault();
-				// e.preventDefault();
-				event = e;
-				});
-
-			colmn2.draggable().on('touchmove', function (e) {
-				// e.preventDefault();
-				difmove=(e.touches[0].pageY - event.touches[0].pageY);
-				
-				});
-
-			colmn2.draggable().on('touchend', function (e) {
-				let mi = Sheet.markwidthtime / 2;
-				 if(!!difmove){
-					if (difmove>0){
-						cir1.dy(mi);
-						cir2.dy(mi);
-						cir4.dy(mi);
-						read_up();
-					} else{
-						cir1.dy(-mi);
-						cir2.dy(-mi);
-						cir4.dy(-mi);
-						read_down();
-					}
-				}
-		
-				event = null;
-				});
 
 
 			// var hammertime = new Hammer(colmn2);
@@ -2436,6 +2406,38 @@ if (curtemp=='depth'){
 					//repaint();
 				})
 			})
+
+			
+			colmn2.draggable().on('touchstart', function (e) {
+				// e.preventDefault();
+				// e.preventDefault();
+				event = e;
+				});
+
+			colmn2.draggable().on('touchmove', function (e) {
+				// e.preventDefault();
+				difmove=(e.touches[0].pageY - event.touches[0].pageY);
+				
+				});
+
+			colmn2.draggable().on('touchend', function (e) {
+				let mi = Sheet.markwidthtime / 2;
+				 if(!!difmove){
+					if (difmove>0){
+						cir1.dy(mi);
+						cir2.dy(mi);
+						cir4.dy(mi);
+						read_up();
+					} else{
+						cir1.dy(-mi);
+						cir2.dy(-mi);
+						cir4.dy(-mi);
+						read_down();
+					}
+				}
+		
+				event = null;
+				});
 		}
 	}
 	}
@@ -2877,7 +2879,7 @@ if (curtemp=='depth'){
 				}//см .navigation.js 
 			} else {
 				if (loaddata == false) {
-					read_up()
+					read_up();
 				};//см .navigation.js 
 			}
 		})
