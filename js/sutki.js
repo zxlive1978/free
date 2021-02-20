@@ -1995,46 +1995,9 @@ if (curtemp=='depth'){
 			// colmn2.touchmove(function (e) {
 			// 	alert('слайдер');
 
-
-			// });
-			
-			let event = null;
-
-			// colmn2.addEventListener("touchstart", function (e) {
-			// 	event = e;
-			// });
-			let difmove;
-			let onclickk =true;
-
-			colmn2.draggable().on('touchstart', function (e) {
-				// e.preventDefault();
-				// e.preventDefault();
-				event = e;
-				});
-
-			colmn2.draggable().on('touchmove', function (e) {
-				// e.preventDefault();
-				difmove=(e.touches[0].pageY - event.touches[0].pageY);
+			colmn2.click(function (e) {
 				
-				});
-
-				colmn2.draggable().on('touchend', function (e) {
-				let mi = Sheet.markwidthtime / 2;
-				 if(!!difmove){
-					if (difmove>0){
-						cir1.dy(mi);
-						cir2.dy(mi);
-						cir4.dy(mi);
-						read_up();
-					} else{
-						cir1.dy(-mi);
-						cir2.dy(-mi);
-						cir4.dy(-mi);
-						read_down();
-					} 
-				}else {
-					//клик
-					var gfx_group = draw.group();
+				var gfx_group = draw.group();
 
 				// gfx_group.clear();
 				// if (mouseDwn){
@@ -2377,6 +2340,48 @@ if (curtemp=='depth'){
 					//repaint();
 				})
 
+				// onclickk =false;
+				
+			})
+			// });
+			
+			let event = null;
+
+			// colmn2.addEventListener("touchstart", function (e) {
+			// 	event = e;
+			// });
+			let difmove;
+			let onclickk =true;
+
+			colmn2.draggable().on('touchstart', function (e) {
+				// e.preventDefault();
+				// e.preventDefault();
+				event = e;
+				});
+
+			colmn2.draggable().on('touchmove', function (e) {
+				// e.preventDefault();
+				difmove=(e.touches[0].pageY - event.touches[0].pageY);
+				
+				});
+
+				colmn2.draggable().on('touchend', function (e) {
+				let mi = Sheet.markwidthtime / 2;
+				 if(!!difmove){
+					if (difmove>0){
+						cir1.dy(mi);
+						cir2.dy(mi);
+						cir4.dy(mi);
+						read_up();
+					} else{
+						cir1.dy(-mi);
+						cir2.dy(-mi);
+						cir4.dy(-mi);
+						read_down();
+					} 
+				}else {
+					//клик
+				
 
 				}
 		
@@ -2437,10 +2442,7 @@ if (curtemp=='depth'){
 			// 	).on('touchend', function (e) {})
 			// 	}
 			
-			colmn2.click(function (e) {
-				// onclickk =false;
-				
-			})
+
 		}
 	}
 	}
