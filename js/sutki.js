@@ -1976,21 +1976,45 @@ if (curtemp=='depth'){
 			var colmn2 = draw.polygon(Number(Columns[key].poz.x) * w1 + ',' + (Number(Columns[key].poz.y) * h1 + Number(Columns[key].size.h) * h1) + ' ' + (Number(Columns[key].poz.x) * w1 + Number(Columns[key].size.w) * w1) + ',' + (Number(Columns[key].poz.y) * h1 + Number(Columns[key].size.h) * h1) + ' ' + (Number(Columns[key].poz.x) * w1 + Number(Columns[key].size.w) * w1) + ',' + 100 * h1 + ' ' + Number(Columns[key].poz.x) * w1 + ',' + 100 * h1)
 				.fill({ color: getRandomColor() })
 				.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor })
-				.opacity(0)
+				.opacity(0.5)
 				.id(key);
-			// colmn2.attr({'fill-opacity': 0.5});
-			// //inv_col.add(colmn2);
-			// var gfx_group = draw.group()
-			// .id(key);
-			// var mouseDwn = false;
+			
+			/////////
+			let event = null;
+			let difmove;
+			let onclickk =true;
 
-			// colmn2.mouseup(function(e) {
-			// 	mouseDwn = false;
-			// 	//inv_col.clear();
-			// 	//inv_col = draw.group();
-			// 	gfx_group.remove();
-			// 	gfx_group = draw.group();
-			// });
+			colmn2.draggable().on('touchstart', function (e) {
+				event = e;
+				});
+
+			colmn2.draggable().on('touchmove', function (e) {
+				difmove=(e.touches[0].pageY - event.touches[0].pageY);
+				
+				});
+
+			colmn2.draggable().on('touchend', function (e) {
+				let mi = Sheet.markwidthtime / 2;
+				 if(!!difmove){
+					if (difmove>0){
+						cir1.dy(mi);
+						cir2.dy(mi);
+						cir4.dy(mi);
+						read_up();
+					} else{
+						cir1.dy(-mi);
+						cir2.dy(-mi);
+						cir4.dy(-mi);
+						read_down();
+					} 
+				}else {
+					//клик
+				
+
+				}
+		
+				event = null;
+				});
 
 
 
