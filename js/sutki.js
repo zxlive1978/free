@@ -2019,8 +2019,8 @@ if (curtemp=='depth'){
 
 			colmn2.touchend(function (e) {
 				let mi = Sheet.markwidthtime / 2;
-				 alert(difmove);
-					if (difmove>0 && onclickk){
+				 if(!!difmove){
+					if (difmove>0){
 						cir1.dy(mi);
 						cir2.dy(mi);
 						cir4.dy(mi);
@@ -2031,6 +2031,7 @@ if (curtemp=='depth'){
 						cir4.dy(-mi);
 						read_down();
 					}
+				}
 		
 				event = null;
 				});
