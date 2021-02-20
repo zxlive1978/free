@@ -2019,6 +2019,7 @@ if (curtemp=='depth'){
 
 			colmn2.touchend(function (e) {
 				let mi = Sheet.markwidthtime / 2;
+				 alert(difmove);
 					if (difmove>0 && onclickk){
 						cir1.dy(mi);
 						cir2.dy(mi);
