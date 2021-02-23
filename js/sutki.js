@@ -1979,8 +1979,8 @@ if (curtemp=='depth'){
 				.opacity(0.5)
 				.id(key);
 			
-				colmn2.mousedorwn(function (e) {
-					//alert('mousedown');
+				colmn2.mousedown(function (e) {
+					alert('mousedown');
 
 					// gfx_group.clear();
 					// if (mouseDwn){
@@ -2354,7 +2354,7 @@ if (curtemp=='depth'){
 					} 
 				}else {
 					//клик
-					colmn2.mousedorwn(e);
+					colmn2.mousedown(e);
 				
 
 				}
