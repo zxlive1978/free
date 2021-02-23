@@ -1990,7 +1990,7 @@ if (curtemp=='depth'){
 					let X_cur_mouse_click = cursor.x;
 					let Y_cur_mouse_click = cursor.y;
 					//Группа
-					var gfx_group = draw.group();
+					var gfx_group = nested.group();
 					//parPan(this.attr('id'));
 					//Выкл обновления
 					refresh = false;
