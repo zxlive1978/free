@@ -2324,12 +2324,12 @@ if (curtemp=='depth'){
 				})
 			/////////
 			let event = null;
-			let difmove;
+			let difmove=-10500;
 			let onclickk =true;
 
 			colmn2.draggable().on('touchstart', function (e) {
 				event = e;
-				alert('mousedown');
+				//
 
 				});
 
@@ -2340,7 +2340,7 @@ if (curtemp=='depth'){
 
 			colmn2.draggable().on('touchend', function (e) {
 				let mi = Sheet.markwidthtime / 2;
-				 if(!!difmove){
+				 if(difmove!=-10500){
 					if (difmove>0){
 						cir1.dy(mi);
 						cir2.dy(mi);
@@ -2354,6 +2354,7 @@ if (curtemp=='depth'){
 					} 
 				}else {
 					//клик
+					alert('mousedown');
 				
 
 				}
