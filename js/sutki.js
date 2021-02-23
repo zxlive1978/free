@@ -2354,6 +2354,7 @@ if (curtemp=='depth'){
 				}else {
 					//клик
 					// e.preventDefault();
+					alert('gf');
 					colmn2.fire('click');
 
 				}
