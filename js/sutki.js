@@ -2329,6 +2329,8 @@ if (curtemp=='depth'){
 
 			colmn2.draggable().on('touchstart', function (e) {
 				event = e;
+				alert('mousedown');
+
 				});
 
 			colmn2.draggable().on('touchmove', function (e) {
