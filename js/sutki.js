@@ -2324,7 +2324,7 @@ if (curtemp=='depth'){
 			let difmove=-10500;
 			let onclickk =true;
 
-			colmn2.draggable().on('touchstart', function (e) {
+			colmn2.draggable().on('mousedown', function (e) {
 				var cursor = getCursorPosition(e, svg);
 				var X_cur_mouse_click = cursor.x;
 				var Y_cur_mouse_click = cursor.y;
