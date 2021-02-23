@@ -1979,16 +1979,14 @@ if (curtemp=='depth'){
 				.opacity(0.5)
 				.id(key);
 			
-				colmn2.click(function (e) {
+				colmn2.on('clack',function (e) {
 					
 					// gfx_group.clear();
 					// if (mouseDwn){
 					// 	//var gfx_group = draw.group();
 					// 	gfx_group.clear();
 					// 	// inv_col.clear();
-					let cursor = getCursorPosition(e, svg);
-					let X_cur_mouse_click = cursor.x;
-					let Y_cur_mouse_click = cursor.y;
+				
 					//Группа
 					var gfx_group = draw.group();
 					//parPan(this.attr('id'));
@@ -2327,6 +2325,9 @@ if (curtemp=='depth'){
 			let onclickk =true;
 
 			colmn2.draggable().on('touchstart', function (e) {
+				var cursor = getCursorPosition(e, svg);
+				var X_cur_mouse_click = cursor.x;
+				var Y_cur_mouse_click = cursor.y;
 				event = e;
 				//
 
@@ -2354,8 +2355,8 @@ if (curtemp=='depth'){
 				}else {
 					//клик
 					// e.preventDefault();
-					alert('gf');
-					colmn2.fire('click');
+				
+					colmn2.fire('clack');
 
 				}
 		
