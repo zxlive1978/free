@@ -2007,14 +2007,15 @@ if (curtemp=='depth'){
 				let mi = Sheet.markwidthtime / 2;
 				 if(difmove!=-10500){
 					if (difmove>0){
-						cir1.dy(mi);
-						cir2.dy(mi);
-						cir4.dy(mi);
-						read_up();
-					} else{
 						cir1.dy(-mi);
 						cir2.dy(-mi);
 						cir4.dy(-mi);
+						
+						read_up();
+					} else{
+						cir1.dy(mi);
+						cir2.dy(mi);
+						cir4.dy(mi);
 						read_down();
 					} 
 				}else {
