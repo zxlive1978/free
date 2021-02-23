@@ -2323,6 +2323,7 @@ if (curtemp=='depth'){
 			let event = null;
 			let difmove=-10500;
 			let onclickk =true;
+			
 			colmn2.click(function(e){
 				var cursor = getCursorPosition(e, svg);
 					var X_cur_mouse_click = cursor.x;
