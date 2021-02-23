@@ -1979,9 +1979,8 @@ if (curtemp=='depth'){
 				.opacity(0.5)
 				.id(key);
 			
-				colmn2.mousedown(function (e) {
-					alert('mousedown');
-
+				colmn2.click(function (e) {
+					
 					// gfx_group.clear();
 					// if (mouseDwn){
 					// 	//var gfx_group = draw.group();
@@ -2354,7 +2353,7 @@ if (curtemp=='depth'){
 					} 
 				}else {
 					//клик
-					colmn2.mousedown(e);
+					colmn2.click(e);
 				
 
 				}
