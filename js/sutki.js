@@ -1979,8 +1979,59 @@ if (curtemp=='depth'){
 				.opacity(0.5)
 				.id(key);
 			
-				colmn2.on('clack',function (e) {
+			
+			/////////
+			let event = null;
+			let difmove=-10500;
+			let onclickk =true;
+
+			// colmn2.click(function(e){
+			// 	var cursor = getCursorPosition(e, svg);
+			// 		var X_cur_mouse_click = cursor.x;
+			// 		var Y_cur_mouse_click = cursor.y;
+			// });
+
+			colmn2.draggable().on('touchstart', function (e) {
 					
+				event = e;
+				//
+
+				});
+
+			colmn2.draggable().on('touchmove', function (e) {
+				difmove=(e.touches[0].pageY - event.touches[0].pageY);
+				
+				});
+
+			colmn2.draggable().on('touchend', function (e) {
+				let mi = Sheet.markwidthtime / 2;
+				 if(difmove!=-10500){
+					if (difmove>0){
+						cir1.dy(mi);
+						cir2.dy(mi);
+						cir4.dy(mi);
+						read_up();
+					} else{
+						cir1.dy(-mi);
+						cir2.dy(-mi);
+						cir4.dy(-mi);
+						read_down();
+					} 
+				}else {
+					//клик
+					// e.preventDefault();
+				
+					colmn2.fire('click');
+
+				}
+		
+				event = null;
+				});
+
+				colmn2.click(function(e){
+					var cursor = getCursorPosition(e, svg);
+						var X_cur_mouse_click = cursor.x;
+						var Y_cur_mouse_click = cursor.y;
 					// gfx_group.clear();
 					// if (mouseDwn){
 					// 	//var gfx_group = draw.group();
@@ -2319,55 +2370,6 @@ if (curtemp=='depth'){
 						//repaint();
 					})
 				})
-			/////////
-			let event = null;
-			let difmove=-10500;
-			let onclickk =true;
-			
-			colmn2.click(function(e){
-				var cursor = getCursorPosition(e, svg);
-					var X_cur_mouse_click = cursor.x;
-					var Y_cur_mouse_click = cursor.y;
-			});
-
-			colmn2.draggable().on('touchstart', function (e) {
-					
-				event = e;
-				//
-
-				});
-
-			colmn2.draggable().on('touchmove', function (e) {
-				difmove=(e.touches[0].pageY - event.touches[0].pageY);
-				
-				});
-
-			colmn2.draggable().on('touchend', function (e) {
-				let mi = Sheet.markwidthtime / 2;
-				 if(difmove!=-10500){
-					if (difmove>0){
-						cir1.dy(mi);
-						cir2.dy(mi);
-						cir4.dy(mi);
-						read_up();
-					} else{
-						cir1.dy(-mi);
-						cir2.dy(-mi);
-						cir4.dy(-mi);
-						read_down();
-					} 
-				}else {
-					//клик
-					// e.preventDefault();
-				
-					colmn2.fire('clack');
-
-				}
-		
-				event = null;
-				});
-
-
 
 			
 		}
