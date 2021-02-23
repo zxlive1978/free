@@ -2021,7 +2021,7 @@ if (curtemp=='depth'){
 					//клик
 					// e.preventDefault();
 				
-					colmn2.fire('click');
+					// colmn2.fire('click');
 
 				}
 		
