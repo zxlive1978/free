@@ -2042,11 +2042,10 @@ if (curtemp=='depth'){
 				});
 
 				colmn2.click(function(e){
-					// var cursor = getCursorPosition(e, svg);
-					// var X_cur_mouse_click = cursor.x;
-					// var Y_cur_mouse_click = cursor.y;
-					var X_cur_mouse_click = e.clientX;
-					var Y_cur_mouse_click = e.clientY;
+					var cursor = getCursorPosition(e, svg);
+					var X_cur_mouse_click = cursor.x;
+					var Y_cur_mouse_click = cursor.y;
+				
 
 
 
