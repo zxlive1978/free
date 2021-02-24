@@ -2023,14 +2023,14 @@ if (curtemp=='depth'){
 				}else {
 					//клик
 					// e.preventDefault();
-				
+					var X_cur_mouse_click = e.clientX;
+					var Y_cur_mouse_click = e.clientY;
 					colmn2.fire('click');
-					colmn2.click (function(e){
+					// colmn2.click (function(e){
 						// var cursor = getCursorPosition(e, svg);
 						// var X_cur_mouse_click = cursor.x;
 						// var Y_cur_mouse_click = cursor.y;
-						var X_cur_mouse_click = e.clientX;
-						var Y_cur_mouse_click = e.clientY;
+					
 		
 					})
 				
