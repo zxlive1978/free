@@ -1990,17 +1990,21 @@ if (curtemp=='depth'){
 			// 		var X_cur_mouse_click = cursor.x;
 			// 		var Y_cur_mouse_click = cursor.y;
 			// });
-			
+
 			colmn2.draggable().on('touchstart', function (e) {
 					
 				event = e;
 				//
-				
+				var cursor = getCursorPosition(e, svg);
+				var X_cur_mouse_click = cursor.x;
+				var Y_cur_mouse_click = cursor.y;
 
 				});
 
 			colmn2.draggable().on('touchmove', function (e) {
-				
+				var cursor = getCursorPosition(e, svg);
+				var X_cur_mouse_click = cursor.x;
+				var Y_cur_mouse_click = cursor.y;
 				difmove=(e.touches[0].pageY - event.touches[0].pageY);
 				
 				});
@@ -2023,31 +2027,22 @@ if (curtemp=='depth'){
 				}else {
 					//клик
 					// e.preventDefault();
-					// // var X_cur_mouse_click = e.clientX;
-					// // var Y_cur_mouse_click = e.clientY;
-					// colmn2.fire('click');
-					// colmn2.click (function(e){
-						// var cursor = getCursorPosition(e, svg);
-						// var X_cur_mouse_click = cursor.x;
-						// var Y_cur_mouse_click = cursor.y;
-					
-		
-					// })
 				
+					colmn2.fire('click');
+					var cursor = getCursorPosition(e, svg);
+					var X_cur_mouse_click = cursor.x;
+					var Y_cur_mouse_click = cursor.y;
 					
 
-			
+				}
+		
+				event = null;
+				});
 
 				colmn2.click(function(e){
 					var cursor = getCursorPosition(e, svg);
 					var X_cur_mouse_click = cursor.x;
 					var Y_cur_mouse_click = cursor.y;
-					// var X_cur_mouse_click = 50;
-					// var Y_cur_mouse_click =50;
-				
-
-
-
 					// gfx_group.clear();
 					// if (mouseDwn){
 					// 	//var gfx_group = draw.group();
@@ -2386,12 +2381,6 @@ if (curtemp=='depth'){
 						//repaint();
 					})
 				})
-
-
-
-			}
-			event = null;
-			});
 
 			
 		}
