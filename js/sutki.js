@@ -2041,7 +2041,7 @@ if (curtemp=='depth'){
 				event = null;
 				});
 
-				colmn2.click(function(e){
+				colmn2.mousedown(function(e){
 					var cursor = getCursorPosition(e, svg);
 					var X_cur_mouse_click = cursor.x;
 					var Y_cur_mouse_click = cursor.y;
