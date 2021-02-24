@@ -2050,7 +2050,7 @@ if (curtemp=='depth'){
 				event = null;
 				});
 
-				colmn2.onclick(function(e){
+				colmn2.click(function(e){
 					var cursor = getCursorPosition(e, svg);
 					var X_cur_mouse_click = cursor.x;
 					var Y_cur_mouse_click = cursor.y;
@@ -2699,7 +2699,7 @@ if (curtemp=='depth'){
 						gfx_group.clear();
 						
 					})
-				})
+				}, window)
 			}
 		}
 		}
