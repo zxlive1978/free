@@ -1990,14 +1990,17 @@ if (curtemp=='depth'){
 			// 		var X_cur_mouse_click = cursor.x;
 			// 		var Y_cur_mouse_click = cursor.y;
 			// });
+			colmn2.click (function(e){
+				var cursor = getCursorPosition(e, svg);
+				var X_cur_mouse_click = cursor.x;
+				var Y_cur_mouse_click = cursor.y;
 
+			})
 			colmn2.draggable().on('touchstart', function (e) {
 					
 				event = e;
 				//
-				var cursor = getCursorPosition(e, svg);
-				var X_cur_mouse_click = cursor.x;
-				var Y_cur_mouse_click = cursor.y;
+				
 
 				});
 
