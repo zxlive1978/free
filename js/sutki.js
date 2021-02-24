@@ -2032,7 +2032,7 @@ if (curtemp=='depth'){
 						// var Y_cur_mouse_click = cursor.y;
 					
 		
-					})
+					// })
 				
 					
 
