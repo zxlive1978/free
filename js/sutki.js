@@ -1990,12 +1990,7 @@ if (curtemp=='depth'){
 			// 		var X_cur_mouse_click = cursor.x;
 			// 		var Y_cur_mouse_click = cursor.y;
 			// });
-			colmn2.click (function(e){
-				var cursor = getCursorPosition(e, svg);
-				var X_cur_mouse_click = cursor.x;
-				var Y_cur_mouse_click = cursor.y;
-
-			})
+			
 			colmn2.draggable().on('touchstart', function (e) {
 					
 				event = e;
@@ -2030,6 +2025,14 @@ if (curtemp=='depth'){
 					// e.preventDefault();
 				
 					colmn2.fire('click');
+					colmn2.click (function(e){
+						var cursor = getCursorPosition(e, svg);
+						// var X_cur_mouse_click = cursor.x;
+						// var Y_cur_mouse_click = cursor.y;
+						var X_cur_mouse_click = event.touches[0].pageX;
+						var Y_cur_mouse_click =event.touches[0].pageY;
+		
+					})
 				
 					
 
