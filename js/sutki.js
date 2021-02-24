@@ -1979,7 +1979,26 @@ if (curtemp=='depth'){
 				.opacity(0.5)
 				.id(key);
 			
-			
+			//////////////////////
+			var dragging = 0;
+
+		// $('.drag').mousedown(function() {
+		// 	$(document).mousemove(function(){
+		// 	dragging = 1;
+		// 	});
+		// });
+
+		// $(document).mouseup(function(){
+		// 	dragging = 0;
+		// 	$(document).unbind('mousemove');
+		// });
+
+		// $('.class').click(function() {
+		// 	if (dragging == 0){
+		// 	// default behaviour goes here
+		// 	}
+		// 	else {return false;}
+		// });
 			/////////
 			let event = null;
 			let difmove=-10500;
@@ -2022,11 +2041,7 @@ if (curtemp=='depth'){
 				}else {
 					//клик
 					// e.preventDefault();
-					var cursor = getCursorPosition(e, svg);
-					var X_cur_mouse_click = cursor.x;
-					var Y_cur_mouse_click = cursor.y;
 				
-					colmn2.fire('click');
 				
 					
 
@@ -2035,10 +2050,10 @@ if (curtemp=='depth'){
 				event = null;
 				});
 
-				colmn2.click(function(e){
-					// var cursor = getCursorPosition(e, svg);
-					// var X_cur_mouse_click = cursor.x;
-					// var Y_cur_mouse_click = cursor.y;
+				colmn2.onclick(function(e){
+					var cursor = getCursorPosition(e, svg);
+					var X_cur_mouse_click = cursor.x;
+					var Y_cur_mouse_click = cursor.y;
 
 
 					// gfx_group.clear();
