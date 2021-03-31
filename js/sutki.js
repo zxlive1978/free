@@ -2028,9 +2028,8 @@ if (curtemp=='depth'){
 					//клик
 					// e.preventDefault();
 					var cursor = getCursorPosition(e, svg);
-					X_cur_mouse_click = event.touches[0].pageX;
-					Y_cur_mouse_click = event.touches[0].pageY;
-					console.log(X_cur_mouse_click);
+					var X_cur_mouse_click = cursor.x;
+					var Y_cur_mouse_click = cursor.y;
 					colmn2.fire('click');
 					// var cursor = getCursorPosition(e, svg);
 					// var X_cur_mouse_click = cursor.x;
@@ -2039,7 +2038,7 @@ if (curtemp=='depth'){
 
 				}
 		
-				//event = null;
+				event = null;
 				});
 
 				colmn2.click(function(e){
