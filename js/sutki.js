@@ -1994,6 +1994,7 @@ if (curtemp=='depth'){
 			colmn2.draggable().on('touchstart', function (e) {
 					
 				event = e;
+				alert(e.pageY);
 				//
 				// var cursor = getCursorPosition(e, svg);
 				// var X_cur_mouse_click = cursor.x;
@@ -2038,7 +2039,7 @@ if (curtemp=='depth'){
 
 				}
 		
-				event = null;
+				// event = null;
 				});
 
 				colmn2.click(function(e){
