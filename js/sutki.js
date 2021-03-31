@@ -2028,8 +2028,8 @@ if (curtemp=='depth'){
 					//клик
 					// e.preventDefault();
 					var cursor = getCursorPosition(e, svg);
-					var X_cur_mouse_click = cursor.x;
-					var Y_cur_mouse_click = cursor.y;
+					var X_cur_mouse_click = event.touches[0].pageX;
+					var Y_cur_mouse_click = event.touches[0].pageY;
 					console.log(cursor.y);
 					colmn2.fire('click');
 					// var cursor = getCursorPosition(e, svg);
