@@ -2028,9 +2028,9 @@ if (curtemp=='depth'){
 					//клик
 					// e.preventDefault();
 					var cursor = getCursorPosition(e, svg);
-					var X_cur_mouse_click = event.touches[0].pageX;
-					var Y_cur_mouse_click = event.touches[0].pageY;
-					console.log(cursor.y);
+					X_cur_mouse_click = event.touches[0].pageX;
+					Y_cur_mouse_click = event.touches[0].pageY;
+					console.log(X_cur_mouse_click);
 					colmn2.fire('click');
 					// var cursor = getCursorPosition(e, svg);
 					// var X_cur_mouse_click = cursor.x;
@@ -2039,7 +2039,7 @@ if (curtemp=='depth'){
 
 				}
 		
-				event = null;
+				//event = null;
 				});
 
 				colmn2.click(function(e){
