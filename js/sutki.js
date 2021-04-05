@@ -247,7 +247,7 @@ function init() {
 		Sheet.numbs_colmns += 1;
 	}
 	//console.log(max_numb);
-	//Вычисляемая высота на основе количества параметров
+	// Вычисляемая высота на основе количества параметров
 	max_numb += 1;
 	if (max_numb < 4) { max_numb = 4; }
 	Sheet.numbs_colmn1 = max_numb;
