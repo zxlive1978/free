@@ -1993,9 +1993,11 @@ if (curtemp=='depth'){
 			var touchOffsetX;
 			var touchOffsetY;
 			colmn2.touchstart( function (e) {
+				e.stopPropagation();
+				e.preventDefault();
 				e=event;
 				event.preventDefault();
-				event.stopPropagation();
+				
 				if (event.targetTouches.length == 1) {
 					var touch=event.targetTouches[0];
 					touchOffsetX = touch.pageX - touch.target.offsetLeft;
