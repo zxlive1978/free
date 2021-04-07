@@ -1981,7 +1981,7 @@ if (curtemp=='depth'){
 			
 			
 			/////////
-			let event = null;
+			var event = null;
 			let difmove=-10500;
 			let onclickk =true;
 
@@ -1990,10 +1990,9 @@ if (curtemp=='depth'){
 			// 		var X_cur_mouse_click = cursor.x;
 			// 		var Y_cur_mouse_click = cursor.y;
 			// });
-			var event;
 			var touchOffsetX;
 			var touchOffsetY;
-			colmn2.draggable().on('touchstart', function (e) {
+			colmn2.touchstart( function (e) {
 				e=event;
 				event.preventDefault();
 				event.stopPropagation();
@@ -2009,7 +2008,7 @@ if (curtemp=='depth'){
 
 				});
 
-			colmn2.draggable().on('touchmove', function (e) {
+			colmn2.touchmove( function (e) {
 				// var cursor = getCursorPosition(e, svg);
 				// var X_cur_mouse_click = cursor.x;
 				// var Y_cur_mouse_click = cursor.y;
@@ -2017,7 +2016,7 @@ if (curtemp=='depth'){
 				
 				});
 
-			colmn2.draggable().on('touchend', function (e) {
+			colmn2.touchend( function (e) {
 				let mi = Sheet.markwidthtime / 2;
 				 if(difmove!=-10500){
 					if (difmove>0){

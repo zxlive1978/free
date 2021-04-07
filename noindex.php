@@ -14,7 +14,8 @@ if (!$_SESSION['auth']) {
 </title>
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+<!-- <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="UTF-8">
 <script>const _uz=<?php echo $_SESSION['skvjson']; ?>;</script>
 <script>const _ut=<?php echo $_SESSION['time']; ?>;</script>
@@ -73,6 +74,9 @@ if (!$_SESSION['auth']) {
 <script type="text/javascript" src="js/svg.min.js"></script>
 <script type="text/javascript" src="js/svg.draggable.min.js"></script>
 <script type="text/javascript" src="js/svg.easing.min.js"></script>
+
+<script type="text/javascript" src="js/touch-emulator.js"></script>
+<script> TouchEmulator(); </script>
 
 <script type="text/javascript" src="js/loadsave.js"></script>
 <script type="text/javascript" src="js/cams.js"></script>
