@@ -1995,14 +1995,15 @@ if (curtemp=='depth'){
 			colmn2.touchstart( function (e) {
 				e.stopPropagation();
 				e.preventDefault();
-				e=event;
-				event.preventDefault();
 				
-				if (event.targetTouches.length == 1) {
-					var touch=event.targetTouches[0];
+				
+				
+				if (e.targetTouches.length == 1) {
+					var touch=e.targetTouches[0];
 					touchOffsetX = touch.pageX - touch.target.offsetLeft;
 					touchOffsetY = touch.pageY - touch.target.offsetTop;
-				alert(touchOffsetY);}
+				alert(touchOffsetY);
+			}
 				//
 				// var cursor = getCursorPosition(e, svg);
 				// var X_cur_mouse_click = cursor.x;
@@ -2014,7 +2015,7 @@ if (curtemp=='depth'){
 				// var cursor = getCursorPosition(e, svg);
 				// var X_cur_mouse_click = cursor.x;
 				// var Y_cur_mouse_click = cursor.y;
-				difmove=(e.touches[0].pageY - event.touches[0].pageY);
+				difmove=(e.touches[0].pageY - e.touches[0].pageY);
 				
 				});
 
