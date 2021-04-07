@@ -20,7 +20,7 @@ if (!$_SESSION['auth']) {
 <script>const _uz=<?php echo $_SESSION['skvjson']; ?>;</script>
 <script>const _ut=<?php echo $_SESSION['time']; ?>;</script>
 <link rel="stylesheet" type="text/css" href="css/jschart5.css">
-<link rel="stylesheet" href="css/iziModal.min.css">
+<!-- <link rel="stylesheet" href="css/iziModal.min.css"> -->
 
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -77,6 +77,13 @@ if (!$_SESSION['auth']) {
 
 <script type="text/javascript" src="js/touch-emulator.js"></script>
 <script> TouchEmulator(); </script>
+
+<script type="text/javascript" >
+   function preventBack(){window.history.forward();}
+    setTimeout("preventBack()", 0);
+    window.onunload=function(){null};
+</script>
+
 
 <script type="text/javascript" src="js/loadsave.js"></script>
 <script type="text/javascript" src="js/cams.js"></script>
