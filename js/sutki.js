@@ -1990,12 +1990,18 @@ if (curtemp=='depth'){
 			// 		var X_cur_mouse_click = cursor.x;
 			// 		var Y_cur_mouse_click = cursor.y;
 			// });
-
-			colmn2.draggable().on('mousedown', function (e) {
-					
-				event = e;
-				let x=event.clientY;
-				alert(x);
+			var event;
+			var touchOffsetX;
+			var touchOffsetY;
+			colmn2.draggable().on('touchstart', function (e) {
+				e=event;
+				event.preventDefault();
+				event.stopPropagation();
+				if (event.targetTouches.length == 1) {
+					var touch=event.targetTouches[0];
+					touchOffsetX = touch.pageX - touch.target.offsetLeft;
+					touchOffsetY = touch.pageY - touch.target.offsetTop;
+				alert(touchOffsetY);}
 				//
 				// var cursor = getCursorPosition(e, svg);
 				// var X_cur_mouse_click = cursor.x;
@@ -2003,7 +2009,7 @@ if (curtemp=='depth'){
 
 				});
 
-			colmn2.draggable().on('mousemove', function (e) {
+			colmn2.draggable().on('touchmove', function (e) {
 				// var cursor = getCursorPosition(e, svg);
 				// var X_cur_mouse_click = cursor.x;
 				// var Y_cur_mouse_click = cursor.y;
@@ -2011,7 +2017,7 @@ if (curtemp=='depth'){
 				
 				});
 
-			colmn2.draggable().on('mouseup', function (e) {
+			colmn2.draggable().on('touchend', function (e) {
 				let mi = Sheet.markwidthtime / 2;
 				 if(difmove!=-10500){
 					if (difmove>0){
