@@ -2000,8 +2000,8 @@ if (curtemp=='depth'){
 				
 				if (e.targetTouches.length == 1) {
 					var touch=e.targetTouches[0];
-					touchOffsetX = touch.pageX*w1;
-					touchOffsetY = touch.pageY*h1;
+					touchOffsetX = touch.pageX;
+					touchOffsetY = touch.pageY;
 				console.log(touch.pageX);
 				console.log(touch.pageY);
 			}
@@ -2013,16 +2013,17 @@ if (curtemp=='depth'){
 				});
 
 			colmn2.touchmove( function (e) {
-				// var cursor = getCursorPosition(e, svg);
-				// var X_cur_mouse_click = cursor.x;
-				// var Y_cur_mouse_click = cursor.y;
 				
+				e.stopPropagation();
+				e.preventDefault();
 				
 				//difmove=(e.touches[0].pageY - touchOffsetY);
 				
 				});
 
 			colmn2.touchend( function (e) {
+				e.stopPropagation();
+				e.preventDefault();
 				let mi = Sheet.markwidthtime / 2;
 				 if(difmove!=-10500){
 					if (difmove>0){
@@ -2040,8 +2041,11 @@ if (curtemp=='depth'){
 				}else {
 					//клик
 					
-					var X_cur_mouse_click = touchOffsetX;
-					var Y_cur_mouse_click = touchOffsetY;
+					X_cur_mouse_click = touchOffsetX;
+					Y_cur_mouse_click = touchOffsetY;
+					console.log(X_cur_mouse_click);
+					console.log(Y_cur_mouse_click);
+					
 					colmn2.fire('click');
 					// var cursor = getCursorPosition(e, svg);
 					// var X_cur_mouse_click = cursor.x;
