@@ -1991,7 +1991,7 @@ if (curtemp=='depth'){
 			// 		var Y_cur_mouse_click = cursor.y;
 			// });
 
-			colmn2.draggable().on('touchstart', function (e) {
+			colmn2.draggable().on('mousestart', function (e) {
 					
 				event = e;
 				let x=event.clientY;
