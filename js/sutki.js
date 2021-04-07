@@ -1994,7 +1994,7 @@ if (curtemp=='depth'){
 			colmn2.draggable().on('touchstart', function (e) {
 					
 				event = e;
-				let x=this.pageX;
+				let x=event.clientY;
 				alert(x);
 				//
 				// var cursor = getCursorPosition(e, svg);
