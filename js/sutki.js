@@ -2016,7 +2016,9 @@ if (curtemp=='depth'){
 				// var cursor = getCursorPosition(e, svg);
 				// var X_cur_mouse_click = cursor.x;
 				// var Y_cur_mouse_click = cursor.y;
-				difmove=(e.touches[0].pageY - touchOffsetY);
+				
+				
+				//difmove=(e.touches[0].pageY - touchOffsetY);
 				
 				});
 
