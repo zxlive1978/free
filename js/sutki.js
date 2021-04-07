@@ -2045,20 +2045,6 @@ if (curtemp=='depth'){
 					Y_cur_mouse_click = touchOffsetY;
 					console.log(X_cur_mouse_click);
 					console.log(Y_cur_mouse_click);
-					
-					colmn2.fire('click');
-					// var cursor = getCursorPosition(e, svg);
-					// var X_cur_mouse_click = cursor.x;
-					// var Y_cur_mouse_click = cursor.y;
-					
-
-				}
-		
-				// event = null;
-				});
-
-				colmn2.click(function(e){
-					
 					// gfx_group.clear();
 					// if (mouseDwn){
 					// 	//var gfx_group = draw.group();
@@ -2396,7 +2382,22 @@ if (curtemp=='depth'){
 						//Очистка холста и перерисовка
 						//repaint();
 					})
-				})
+					
+					// colmn2.fire('click');
+					// var cursor = getCursorPosition(e, svg);
+					// var X_cur_mouse_click = cursor.x;
+					// var Y_cur_mouse_click = cursor.y;
+					
+
+				}
+		
+				// event = null;
+				});
+
+				// colmn2.click(function(e){
+					
+					
+				// })
 
 			
 		}
