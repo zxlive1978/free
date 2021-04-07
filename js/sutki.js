@@ -2000,9 +2000,10 @@ if (curtemp=='depth'){
 				
 				if (e.targetTouches.length == 1) {
 					var touch=e.targetTouches[0];
-					touchOffsetX = touch.pageX - touch.target.offsetLeft;
-					touchOffsetY = touch.pageY - touch.target.offsetTop;
-				alert(touchOffsetY);
+					touchOffsetX = touch.pageX;
+					touchOffsetY = touch.pageY;
+				console.log(touch.pageX);
+				console.log(touch.pageY);
 			}
 				//
 				// var cursor = getCursorPosition(e, svg);
@@ -2015,7 +2016,7 @@ if (curtemp=='depth'){
 				// var cursor = getCursorPosition(e, svg);
 				// var X_cur_mouse_click = cursor.x;
 				// var Y_cur_mouse_click = cursor.y;
-				difmove=(e.touches[0].pageY - e.touches[0].pageY);
+				difmove=(e.touches[0].pageY - touchOffsetY);
 				
 				});
 
@@ -2036,10 +2037,9 @@ if (curtemp=='depth'){
 					} 
 				}else {
 					//клик
-					// e.preventDefault();
-					var cursor = getCursorPosition(e, svg);
-					var X_cur_mouse_click = cursor.x;
-					var Y_cur_mouse_click = cursor.y;
+					
+					var X_cur_mouse_click = touchOffsetX;
+					var Y_cur_mouse_click = touchOffsetY;
 					colmn2.fire('click');
 					// var cursor = getCursorPosition(e, svg);
 					// var X_cur_mouse_click = cursor.x;
