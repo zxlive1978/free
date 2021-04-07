@@ -2017,7 +2017,7 @@ if (curtemp=='depth'){
 				e.stopPropagation();
 				e.preventDefault();
 				
-				//difmove=(e.touches[0].pageY - touchOffsetY);
+				difmove=(e.touches[0].pageY - touchOffsetY);
 				
 				});
 
