@@ -1991,7 +1991,7 @@ if (curtemp=='depth'){
 			// 		var Y_cur_mouse_click = cursor.y;
 			// });
 
-			colmn2.draggable().on('mousestart', function (e) {
+			colmn2.draggable().on('mousedown', function (e) {
 					
 				event = e;
 				let x=event.clientY;
@@ -2003,7 +2003,7 @@ if (curtemp=='depth'){
 
 				});
 
-			colmn2.draggable().on('touchmove', function (e) {
+			colmn2.draggable().on('mousemove', function (e) {
 				// var cursor = getCursorPosition(e, svg);
 				// var X_cur_mouse_click = cursor.x;
 				// var Y_cur_mouse_click = cursor.y;
@@ -2011,7 +2011,7 @@ if (curtemp=='depth'){
 				
 				});
 
-			colmn2.draggable().on('touchend', function (e) {
+			colmn2.draggable().on('mouseup', function (e) {
 				let mi = Sheet.markwidthtime / 2;
 				 if(difmove!=-10500){
 					if (difmove>0){
