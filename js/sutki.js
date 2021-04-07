@@ -2000,8 +2000,8 @@ if (curtemp=='depth'){
 				
 				if (e.targetTouches.length == 1) {
 					var touch=e.targetTouches[0];
-					touchOffsetX = touch.pageX;
-					touchOffsetY = touch.pageY;
+					touchOffsetX = touch.clientX;
+					touchOffsetY = touch.clientY;
 				console.log(touch.pageX);
 				console.log(touch.pageY);
 			}
