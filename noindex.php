@@ -14,13 +14,12 @@ if (!$_SESSION['auth']) {
 </title>
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<!-- <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1"> -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <script>const _uz=<?php echo $_SESSION['skvjson']; ?>;</script>
 <script>const _ut=<?php echo $_SESSION['time']; ?>;</script>
 <link rel="stylesheet" type="text/css" href="css/jschart5.css">
-<!-- <link rel="stylesheet" href="css/iziModal.min.css"> -->
+<link rel="stylesheet" href="css/iziModal.min.css">
 
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -67,23 +66,12 @@ if (!$_SESSION['auth']) {
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <!-- 6. Подключить js-файл библиотеки Bootstrap 3 DateTimePicker -->
-
+<!-- <script src="js/bootstrap-datetimepicker.min.js"></script> -->
 
 
 <script type="text/javascript" src="js/svg.min.js"></script>
 <script type="text/javascript" src="js/svg.draggable.min.js"></script>
 <script type="text/javascript" src="js/svg.easing.min.js"></script>
-
-<!-- touch events -->
-<!-- <script src="js/hammer.min.js"></script>
-<script type="text/javascript" src="js/touch-emulator.js"></script>
-<script> TouchEmulator(); </script>
-<script type="text/javascript" >
-   function preventBack(){window.history.forward();}
-    setTimeout("preventBack()", 0);
-    window.onunload=function(){null};
-</script> -->
-
 
 <script type="text/javascript" src="js/loadsave.js"></script>
 <script type="text/javascript" src="js/cams.js"></script>

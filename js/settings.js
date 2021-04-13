@@ -1148,7 +1148,7 @@ function colOK8() {
 		//Сохранить в локальное хранилище
 		colPan9save(wellName, skv, namecmt, filesss[$("#colitems9")[0].selectedIndex]);
 		formname = filesss[$("#colitems9")[0].selectedIndex];
-		// repaint();
+		repaint();
 	} else {
 
 	}
@@ -1933,8 +1933,6 @@ function adm2() {
 
 //вкладка По времени
 function adm3() {
-	//Загрузка формы По времени
-	colOK8start(formname);
 	if (curtemp=='video'){
 		//удаление старых потоков
 		deleteoldcams();
@@ -1975,7 +1973,6 @@ function adm3() {
 
 //вкладка По Глубине
 function adm4() {
-	
 	if (curtemp=='video'){
 		//удаление старых потоков
 		deleteoldcams();
@@ -2003,9 +2000,7 @@ function adm4() {
 	// $('#tabs').hide();
 
 	$('#drawing').empty();
-	
-	
-	
+	$('#drawing').show();
 	$('#skvnamelab').show();
 	refresh = false; 
 	online = false;
@@ -2014,9 +2009,6 @@ function adm4() {
 	// colOK11();
 	// read_now();
 	read_depth_last();
-	//Загрузка формы глубины
-	colOK8start(formnamedepth);
-	
 	
 
 }

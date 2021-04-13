@@ -45,11 +45,11 @@ var skv ="";
 var namecmt = wellName + "kr";
 var wellNamedepth ="" +"depth_all";
 var formname = "Под телефон";
-var formnamedepth = "depth/Под телефон";
+var formnamedepth = "depth\Под телефон";
 
 if (!isMobile){
 	formname="Под планшет(ПК) светлая";
-	formnamedepth = "depth/Под планшет(ПК) темная";
+	formnamedepth = "depth\Под планшет(ПК) светлая";
 }
 
 //Сохранение и чтение настроей из локального хранилища
@@ -203,7 +203,6 @@ function read_next(){
 				}
 				catch (e) { }
 				repaint();
-				
 				
 			}
 		});

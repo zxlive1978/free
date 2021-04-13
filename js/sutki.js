@@ -247,7 +247,7 @@ function init() {
 		Sheet.numbs_colmns += 1;
 	}
 	//console.log(max_numb);
-	// Вычисляемая высота на основе количества параметров
+	//Вычисляемая высота на основе количества параметров
 	max_numb += 1;
 	if (max_numb < 4) { max_numb = 4; }
 	Sheet.numbs_colmn1 = max_numb;
@@ -1976,432 +1976,366 @@ if (curtemp=='depth'){
 			var colmn2 = draw.polygon(Number(Columns[key].poz.x) * w1 + ',' + (Number(Columns[key].poz.y) * h1 + Number(Columns[key].size.h) * h1) + ' ' + (Number(Columns[key].poz.x) * w1 + Number(Columns[key].size.w) * w1) + ',' + (Number(Columns[key].poz.y) * h1 + Number(Columns[key].size.h) * h1) + ' ' + (Number(Columns[key].poz.x) * w1 + Number(Columns[key].size.w) * w1) + ',' + 100 * h1 + ' ' + Number(Columns[key].poz.x) * w1 + ',' + 100 * h1)
 				.fill({ color: getRandomColor() })
 				.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor })
-				.opacity(0.5)
+				.opacity(0)
 				.id(key);
-			
-			
-			/////////
-			var event = null;
-			let difmove=-10500;
-			let onclickk =true;
+			// colmn2.attr({'fill-opacity': 0.5});
+			// //inv_col.add(colmn2);
+			// var gfx_group = draw.group()
+			// .id(key);
+			// var mouseDwn = false;
 
-			// colmn2.click(function(e){
-			// 	var cursor = getCursorPosition(e, svg);
-			// 		var X_cur_mouse_click = cursor.x;
-			// 		var Y_cur_mouse_click = cursor.y;
+			// colmn2.mouseup(function(e) {
+			// 	mouseDwn = false;
+			// 	//inv_col.clear();
+			// 	//inv_col = draw.group();
+			// 	gfx_group.remove();
+			// 	gfx_group = draw.group();
 			// });
-			var touchOffsetX=0;
-			var touchOffsetY=0;
-			colmn2.touchstart( function (e) {
-				e.stopPropagation();
-				e.preventDefault();
-				
-				
-				
-				if (e.targetTouches.length >= 1) {
-					var touch=e.targetTouches[e.targetTouches.length-1];
-					touchOffsetX = touch.clientX;
-					touchOffsetY = touch.clientY;
-				console.log(touch.pageX);
-				console.log(touch.pageY);
-			}
-				//
-				// var cursor = getCursorPosition(e, svg);
-				// var X_cur_mouse_click = cursor.x;
-				// var Y_cur_mouse_click = cursor.y;
 
-				});
 
-			colmn2.touchmove( function (e) {
-				
-				e.stopPropagation();
-				e.preventDefault();
-				alert('move');
-				difmove=(e.targetTouches[0].clientY - touchOffsetY);
-				
-				});
 
-			colmn2.touchend( function (e) {
-				e.stopPropagation();
-				e.preventDefault();
-				let mi = Sheet.markwidthtime / 2;
-				 if(difmove!=-10500){
-					if (difmove>0){
-						cir1.dy(-mi);
-						cir2.dy(-mi);
-						cir4.dy(-mi);
-						
-						read_up();
-					} else{
-						cir1.dy(mi);
-						cir2.dy(mi);
-						cir4.dy(mi);
-						read_down();
-					} 
-				}else {
-					//клик
-					
-					X_cur_mouse_click = touchOffsetX;
-					Y_cur_mouse_click = touchOffsetY;
-					console.log(X_cur_mouse_click);
-					console.log(Y_cur_mouse_click);
-					// gfx_group.clear();
-					// if (mouseDwn){
-					// 	//var gfx_group = draw.group();
-					// 	gfx_group.clear();
-					// 	// inv_col.clear();
-				
-					//Группа
-					var gfx_group = draw.group();
-					//parPan(this.attr('id'));
-					//Выкл обновления
-					refresh = false;
-					// if (!isMobile) {
-					// 	Sheet.height_value = disp_up;
-					// } else {
-	
-					// 	Sheet.height_value = disp_up;
-					// }
-					//не уверен!
-	
-	
-					var text_size_value = size_text_p;
-					/* if (resizeH>resizeV) {text_size_value=resizeV;} */
-					/* text_size_value = Sheet.curvalsize; */
-					if (text_size_value > Sheet.height_value * h1 / 7.6) {
-						text_size_value = Sheet.height_value * h1 / 7.6;
-					}
-	
-	
-	
-					// let wcol=w1/2.0*Number(Columns[this.attr('id')].size.w);
-					// console.log(w1/2.0*Number(Columns[this.attr('id')].size.w));
-					// var gfxr = draw.polygon((X_cur_mouse_click-wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+wcol)+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-wcol)+' '+Y_cur_mouse_click)
-	
-					//var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
-					var gfxr = draw.polygon((X_cur_mouse_click - w1 * (Sheet.width_value / 2)) + ',' + (Y_cur_mouse_click - h1 * (Sheet.height_value)) + ' ' + (X_cur_mouse_click + w1 * (Sheet.width_value / 2)) + ',' + (Y_cur_mouse_click - h1 * (Sheet.height_value)) + ' ' + (X_cur_mouse_click + w1 * (Sheet.width_value / 2)) + ',' + Y_cur_mouse_click + ' ' + (X_cur_mouse_click - w1 * (Sheet.width_value / 2)) + ',' + Y_cur_mouse_click)
-						//ширина поля со клик зачениями
-						// weight_colmn1 = w1*(Columns["col"+String(Number((txtPar[keey].poz.x)))].size.w)/2;
-						// var gfxr = draw.polygon((X_cur_mouse_click-weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+weight_colmn1)+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-weight_colmn1)+','+Y_cur_mouse_click)
-						.fill({ color: Sheet.curcolorval })
-						.stroke({ width: Sheet.width_gxf_line, dasharray: '2,3', color: Sheet.syscolor })
-						.id(this.attr('id'));
-					gfx_group.add(gfxr);
-	
-					//Визир
-					gfxr.attr({ 'fill-opacity': Sheet.faderr });
-					//var gfxr_line = draw.line( '0 ,'+ Y_cur_mouse_click +' ' +(w1*100)+',' + Y_cur_mouse_click)
-					var gfxr_line = draw.line('0 ,' + Y_cur_mouse_click + ' ' + (w1 * 100) + ',' + Y_cur_mouse_click)
-						.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
-	
-					gfx_group.add(gfxr_line);
-	
-					//var cur_value_y_step_val = (h1*100 - (Number(Columns[this.attr('id')].size.h)*h1))/d110d.length;
-	
-	
-	
-					//БУМ ШОКО var name_p1= String(d110d[Math.ceil(i*step_txt_numb_rec)]['Vrema'])+" - " + String ((startTime.getTime() + i* stepMin* 60 *1000)/1000);
-					//var name_p1 =d110d[Math.ceil(i*step_txt_numb_rec)][keey];
-					//Точное время
-					//String ((startTime.getTime() + i* stepMin* 60 *1000)/1000)
-					var cur_value_y_step_val = (h1 * 100 - (Number(Columns[this.attr('id')].size.h) * h1)) / (Sheet.Kzoom * 60 * 60);
-					// var ttime =start_time/1 + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h)*h1)/cur_value_y_step_val);
-					var ttime = start_time + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h) * h1) / cur_value_y_step_val);
-					//Индекс искомой записи -1 не найдена
-					var disp_val1 = -1;
-					//Разница между значение записи и клика
-					var sub;
-					// Первая запись индекс
-					var fidx = -1;
-					// Последняя запись индекс
-					var lidx = -1;
-					for (let tmark in d110d) {
-	
-						sub = (d110d[tmark]['Vrema']) - ttime;
-						/* console.log (Number (d110d[tmark]['Vrema']) ,'-',ttime,'-' ,sub); */
-						if (sub < 60 && sub > -60) {
-							if (fidx == -1) {
-								fidx = tmark;
-							}
-							lidx = tmark;
-	
+			colmn2.click(function (e) {
+
+				// gfx_group.clear();
+				// if (mouseDwn){
+				// 	//var gfx_group = draw.group();
+				// 	gfx_group.clear();
+				// 	// inv_col.clear();
+				let cursor = getCursorPosition(e, svg);
+				let X_cur_mouse_click = cursor.x;
+				let Y_cur_mouse_click = cursor.y;
+				//Группа
+				var gfx_group = draw.group();
+				//parPan(this.attr('id'));
+				//Выкл обновления
+				refresh = false;
+				// if (!isMobile) {
+				// 	Sheet.height_value = disp_up;
+				// } else {
+
+				// 	Sheet.height_value = disp_up;
+				// }
+				//не уверен!
+
+
+				var text_size_value = size_text_p;
+				/* if (resizeH>resizeV) {text_size_value=resizeV;} */
+				/* text_size_value = Sheet.curvalsize; */
+				if (text_size_value > Sheet.height_value * h1 / 7.6) {
+					text_size_value = Sheet.height_value * h1 / 7.6;
+				}
+
+
+
+				// let wcol=w1/2.0*Number(Columns[this.attr('id')].size.w);
+				// console.log(w1/2.0*Number(Columns[this.attr('id')].size.w));
+				// var gfxr = draw.polygon((X_cur_mouse_click-wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+wcol)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+wcol)+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-wcol)+' '+Y_cur_mouse_click)
+
+				//var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
+				var gfxr = draw.polygon((X_cur_mouse_click - w1 * (Sheet.width_value / 2)) + ',' + (Y_cur_mouse_click - h1 * (Sheet.height_value)) + ' ' + (X_cur_mouse_click + w1 * (Sheet.width_value / 2)) + ',' + (Y_cur_mouse_click - h1 * (Sheet.height_value)) + ' ' + (X_cur_mouse_click + w1 * (Sheet.width_value / 2)) + ',' + Y_cur_mouse_click + ' ' + (X_cur_mouse_click - w1 * (Sheet.width_value / 2)) + ',' + Y_cur_mouse_click)
+					//ширина поля со клик зачениями
+					// weight_colmn1 = w1*(Columns["col"+String(Number((txtPar[keey].poz.x)))].size.w)/2;
+					// var gfxr = draw.polygon((X_cur_mouse_click-weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+weight_colmn1)+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-weight_colmn1)+','+Y_cur_mouse_click)
+					.fill({ color: Sheet.curcolorval })
+					.stroke({ width: Sheet.width_gxf_line, dasharray: '2,3', color: Sheet.syscolor })
+					.id(this.attr('id'));
+				gfx_group.add(gfxr);
+
+				//Визир
+				gfxr.attr({ 'fill-opacity': Sheet.faderr });
+				//var gfxr_line = draw.line( '0 ,'+ Y_cur_mouse_click +' ' +(w1*100)+',' + Y_cur_mouse_click)
+				var gfxr_line = draw.line('0 ,' + Y_cur_mouse_click + ' ' + (w1 * 100) + ',' + Y_cur_mouse_click)
+					.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor });
+
+				gfx_group.add(gfxr_line);
+
+				//var cur_value_y_step_val = (h1*100 - (Number(Columns[this.attr('id')].size.h)*h1))/d110d.length;
+
+
+
+				//БУМ ШОКО var name_p1= String(d110d[Math.ceil(i*step_txt_numb_rec)]['Vrema'])+" - " + String ((startTime.getTime() + i* stepMin* 60 *1000)/1000);
+				//var name_p1 =d110d[Math.ceil(i*step_txt_numb_rec)][keey];
+				//Точное время
+				//String ((startTime.getTime() + i* stepMin* 60 *1000)/1000)
+				var cur_value_y_step_val = (h1 * 100 - (Number(Columns[this.attr('id')].size.h) * h1)) / (Sheet.Kzoom * 60 * 60);
+				// var ttime =start_time/1 + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h)*h1)/cur_value_y_step_val);
+				var ttime = start_time + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h) * h1) / cur_value_y_step_val);
+				//Индекс искомой записи -1 не найдена
+				var disp_val1 = -1;
+				//Разница между значение записи и клика
+				var sub;
+				// Первая запись индекс
+				var fidx = -1;
+				// Последняя запись индекс
+				var lidx = -1;
+				for (let tmark in d110d) {
+
+					sub = (d110d[tmark]['Vrema']) - ttime;
+					/* console.log (Number (d110d[tmark]['Vrema']) ,'-',ttime,'-' ,sub); */
+					if (sub < 60 && sub > -60) {
+						if (fidx == -1) {
+							fidx = tmark;
 						}
-	
+						lidx = tmark;
+
 					}
-					// Если несколько записей подходят в диапазон
-					if (fidx != lidx && fidx != -1 && lidx != -1) {
-						disp_val1 = Number(fidx) + Number(Math.floor((lidx - fidx) / 2.0));
-					} else {
-						if (fidx != -1) { disp_val1 = lidx; }
+
+				}
+				// Если несколько записей подходят в диапазон
+				if (fidx != lidx && fidx != -1 && lidx != -1) {
+					disp_val1 = Number(fidx) + Number(Math.floor((lidx - fidx) / 2.0));
+				} else {
+					if (fidx != -1) { disp_val1 = lidx; }
+				}
+
+
+				/* console.log (fidx,lidx,disp_val1); */
+				//1543429113 - 15434189587804
+				//1543429431 - 159636.9304
+				//1543429509 - 154345667.4
+				/* var disp_val1 = start_time + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h)*h1)/cur_value_y_step_val); */
+				//console.log (start_time+disp_val1);
+				//Обрезка col(Номер столбца)
+				var strN = Number(this.attr('id').toString().substr(3));
+				//ЧИсло параметров
+				var numb_value = 0;
+				for (keey in basePar) {
+					if (basePar[keey].poz.x == strN) {
+						numb_value = numb_value + 1;
 					}
-	
-	
-					/* console.log (fidx,lidx,disp_val1); */
-					//1543429113 - 15434189587804
-					//1543429431 - 159636.9304
-					//1543429509 - 154345667.4
-					/* var disp_val1 = start_time + Math.round((Y_cur_mouse_click - Number(Columns[this.attr('id')].size.h)*h1)/cur_value_y_step_val); */
-					//console.log (start_time+disp_val1);
-					//Обрезка col(Номер столбца)
-					var strN = Number(this.attr('id').toString().substr(3));
-					//ЧИсло параметров
-					var numb_value = 0;
-					for (keey in basePar) {
-						if (basePar[keey].poz.x == strN) {
-							numb_value = numb_value + 1;
-						}
+				}
+				for (keey in txtPar) {
+					if (txtPar[keey].poz.x == strN) {
+						numb_value = numb_value + 1;
 					}
-					for (keey in txtPar) {
-						if (txtPar[keey].poz.x == strN) {
-							numb_value = numb_value + 1;
-						}
+				}
+				for (keey in txtOknOPar) {
+					if (txtOknOPar[keey].poz.x == strN) {
+						numb_value = numb_value + 1;
 					}
-					for (keey in txtOknOPar) {
-						if (txtOknOPar[keey].poz.x == strN) {
-							numb_value = numb_value + 1;
-						}
-					}
-	
-					//Шаг вертикального отступа
-					var step_val = Sheet.height_value / numb_value;
-					var all_step = 0;
-					//Значения
-					for (keey in basePar) {
-						//График
-						if (basePar[keey].poz.x == strN) {
-							var cur_val = -2147480;
-							if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][basePar[keey].par]) };
-							if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
+				}
+
+				//Шаг вертикального отступа
+				var step_val = Sheet.height_value / numb_value;
+				var all_step = 0;
+				//Значения
+				for (keey in basePar) {
+					//График
+					if (basePar[keey].poz.x == strN) {
+						var cur_val = -2147480;
+						if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][basePar[keey].par]) };
+						if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
+						var text_value = draw.text(basePar[keey].txt + " " + cur_val + " (" + basePar[keey].unit + ")")
+							.font({ family: Sheet.fnt, size: text_size_value })
+							// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+							.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+							.cx(X_cur_mouse_click)
+							.fill(basePar[keey].color);
+						text_value.attr({ 'fill-opacity': 1 });
+
+
+
+						//Ресайз текста если не влезает!
+						if (text_value.length() > Sheet.width_value * w1) {
+							var coef = text_value.length() / text_value.attr('font-size')
+							text_value.clear();
+							delete (text_value);
 							var text_value = draw.text(basePar[keey].txt + " " + cur_val + " (" + basePar[keey].unit + ")")
-								.font({ family: Sheet.fnt, size: text_size_value })
+								.font({ family: Sheet.fnt, size: Sheet.width_value * w1 / (coef * 1.1) })
 								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
 								.cx(X_cur_mouse_click)
 								.fill(basePar[keey].color);
 							text_value.attr({ 'fill-opacity': 1 });
-	
-	
-	
-							//Ресайз текста если не влезает!
-							if (text_value.length() > Sheet.width_value * w1) {
-								var coef = text_value.length() / text_value.attr('font-size')
-								text_value.clear();
-								delete (text_value);
-								var text_value = draw.text(basePar[keey].txt + " " + cur_val + " (" + basePar[keey].unit + ")")
-									.font({ family: Sheet.fnt, size: Sheet.width_value * w1 / (coef * 1.1) })
-									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
-									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
-									.cx(X_cur_mouse_click)
-									.fill(basePar[keey].color);
-								text_value.attr({ 'fill-opacity': 1 });
-	
-	
-							}
-	
-							if (Number(text_value.attr('font-size')) > Sheet.height_value * h1 / 7.7) {
-								let resizeV = Sheet.height_value * h1 / 7.7;
-								//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
-								text_value.clear();
-								delete (text_value);
-								var text_value = draw.text(basePar[keey].txt + " " + cur_val + " (" + basePar[keey].unit + ")")
-									.font({ family: Sheet.fnt, size: resizeV })
-									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
-									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
-									.cx(X_cur_mouse_click)
-									.fill(basePar[keey].color);
-								text_value.attr({ 'fill-opacity': 1 });
-							}
-	
-	
-							all_step = all_step + step_val;
-							gfx_group.add(text_value);
-							// console.log(text_value.length());
+
+
 						}
+
+						if (Number(text_value.attr('font-size')) > Sheet.height_value * h1 / 7.7) {
+							let resizeV = Sheet.height_value * h1 / 7.7;
+							//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
+							text_value.clear();
+							delete (text_value);
+							var text_value = draw.text(basePar[keey].txt + " " + cur_val + " (" + basePar[keey].unit + ")")
+								.font({ family: Sheet.fnt, size: resizeV })
+								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+								.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+								.cx(X_cur_mouse_click)
+								.fill(basePar[keey].color);
+							text_value.attr({ 'fill-opacity': 1 });
+						}
+
+
+						all_step = all_step + step_val;
+						gfx_group.add(text_value);
+						// console.log(text_value.length());
 					}
-					//Текстовые метки
-					for (keey in txtPar) {
-						if (txtPar[keey].poz.x == strN) {
-							var cur_val = -2147480;
-							if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtPar[keey].par]) };
-							if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
+				}
+				//Текстовые метки
+				for (keey in txtPar) {
+					if (txtPar[keey].poz.x == strN) {
+						var cur_val = -2147480;
+						if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtPar[keey].par]) };
+						if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
+						var text_value = draw.text(txtPar[keey].txt + " " + cur_val + " (" + txtPar[keey].unit + ")")
+							.font({ family: Sheet.fnt, size: text_size_value })
+							// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+							.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+							.cx(X_cur_mouse_click)
+							.fill(txtPar[keey].color);
+						text_value.attr({ 'fill-opacity': 1 });
+
+
+						//Ресайз текста если не влезает!
+
+						if (text_value.length() > Sheet.width_value * w1) {
+							var coef = text_value.length() / text_value.attr('font-size')
+							text_value.clear();
+							delete (text_value);
 							var text_value = draw.text(txtPar[keey].txt + " " + cur_val + " (" + txtPar[keey].unit + ")")
-								.font({ family: Sheet.fnt, size: text_size_value })
+								.font({ family: Sheet.fnt, size: Sheet.width_value * w1 / (coef * 1.1) })
 								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
 								.cx(X_cur_mouse_click)
 								.fill(txtPar[keey].color);
 							text_value.attr({ 'fill-opacity': 1 });
-	
-	
+
+
+						}
+
+						if (Number(text_value.attr('font-size')) > Sheet.height_value * h1 / 7.7) {
+							let resizeV = Sheet.height_value * h1 / 7.7;
+							//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
+							text_value.clear();
+							delete (text_value);
+							var text_value = draw.text(txtPar[keey].txt + " " + cur_val + " (" + txtPar[keey].unit + ")")
+								.font({ family: Sheet.fnt, size: resizeV })
+								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+								.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+								.cx(X_cur_mouse_click)
+								.fill(txtPar[keey].color);
+							text_value.attr({ 'fill-opacity': 1 });
+						}
+						all_step = all_step + step_val;
+						gfx_group.add(text_value);
+					}
+				}
+				//Текстовые метки Ключевой параметр
+				for (keey in txtOknOPar) {
+					if (txtOknOPar[keey].poz.x == strN) {
+
+						if (txtOknOPar[keey].par == "Vrema") {
+							var cur_val = -2147480;
+							if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtOknOPar[keey].par]) };
+							if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
+							var day = new Date(cur_val * 1000);
+							var last_hour = day.getHours();
+							var minutes = day.getMinutes();
+							if (last_hour < 10) { last_hour = "0" + last_hour; }
+							if (minutes < 10) { minutes = "0" + minutes; }
+							var yearr = day.getFullYear();
+							var dates = day.getDate();
+							if (dates < 10) { dates = "0" + dates; }
+							var month = day.getMonth() + 1;
+							if (month < 10) { month = "0" + month; }
+							var time_viz1 = ' ' + last_hour + ":" + minutes + " " + dates + "." + month + (2000 - yearr);
+							var text_value = draw.text(txtOknOPar[keey].txt + " " + time_viz1 + " (" + txtOknOPar[keey].unit + ")")
+								.font({ family: Sheet.fnt, size: text_size_value })
+								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+								.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+								.cx(X_cur_mouse_click)
+								.fill(txtOknOPar[keey].color);
+							text_value.attr({ 'fill-opacity': 1 });
+
 							//Ресайз текста если не влезает!
-	
+
 							if (text_value.length() > Sheet.width_value * w1) {
 								var coef = text_value.length() / text_value.attr('font-size')
 								text_value.clear();
 								delete (text_value);
-								var text_value = draw.text(txtPar[keey].txt + " " + cur_val + " (" + txtPar[keey].unit + ")")
+								var text_value = draw.text(txtOknOPar[keey].txt + " " + time_viz1 + " (" + txtOknOPar[keey].unit + ")")
 									.font({ family: Sheet.fnt, size: Sheet.width_value * w1 / (coef * 1.1) })
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
 									.cx(X_cur_mouse_click)
-									.fill(txtPar[keey].color);
+									.fill(txtOknOPar[keey].color);
 								text_value.attr({ 'fill-opacity': 1 });
-	
-	
+
+
 							}
-	
+
 							if (Number(text_value.attr('font-size')) > Sheet.height_value * h1 / 7.7) {
 								let resizeV = Sheet.height_value * h1 / 7.7;
 								//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
 								text_value.clear();
 								delete (text_value);
-								var text_value = draw.text(txtPar[keey].txt + " " + cur_val + " (" + txtPar[keey].unit + ")")
+								var text_value = draw.text(txtOknOPar[keey].txt + " " + time_viz1 + " (" + txtOknOPar[keey].unit + ")")
 									.font({ family: Sheet.fnt, size: resizeV })
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
 									.cx(X_cur_mouse_click)
-									.fill(txtPar[keey].color);
+									.fill(txtOknOPar[keey].color);
 								text_value.attr({ 'fill-opacity': 1 });
 							}
 							all_step = all_step + step_val;
 							gfx_group.add(text_value);
 						}
 					}
-					//Текстовые метки Ключевой параметр
-					for (keey in txtOknOPar) {
-						if (txtOknOPar[keey].poz.x == strN) {
-	
-							if (txtOknOPar[keey].par == "Vrema") {
-								var cur_val = -2147480;
-								if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtOknOPar[keey].par]) };
-								if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
-								var day = new Date(cur_val * 1000);
-								var last_hour = day.getHours();
-								var minutes = day.getMinutes();
-								if (last_hour < 10) { last_hour = "0" + last_hour; }
-								if (minutes < 10) { minutes = "0" + minutes; }
-								var yearr = day.getFullYear();
-								var dates = day.getDate();
-								if (dates < 10) { dates = "0" + dates; }
-								var month = day.getMonth() + 1;
-								if (month < 10) { month = "0" + month; }
-								var time_viz1 = ' ' + last_hour + ":" + minutes + " " + dates + "." + month + (2000 - yearr);
-								var text_value = draw.text(txtOknOPar[keey].txt + " " + time_viz1 + " (" + txtOknOPar[keey].unit + ")")
-									.font({ family: Sheet.fnt, size: text_size_value })
-									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
-									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
-									.cx(X_cur_mouse_click)
-									.fill(txtOknOPar[keey].color);
-								text_value.attr({ 'fill-opacity': 1 });
-	
-								//Ресайз текста если не влезает!
-	
-								if (text_value.length() > Sheet.width_value * w1) {
-									var coef = text_value.length() / text_value.attr('font-size')
-									text_value.clear();
-									delete (text_value);
-									var text_value = draw.text(txtOknOPar[keey].txt + " " + time_viz1 + " (" + txtOknOPar[keey].unit + ")")
-										.font({ family: Sheet.fnt, size: Sheet.width_value * w1 / (coef * 1.1) })
-										// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
-										.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
-										.cx(X_cur_mouse_click)
-										.fill(txtOknOPar[keey].color);
-									text_value.attr({ 'fill-opacity': 1 });
-	
-	
-								}
-	
-								if (Number(text_value.attr('font-size')) > Sheet.height_value * h1 / 7.7) {
-									let resizeV = Sheet.height_value * h1 / 7.7;
-									//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
-									text_value.clear();
-									delete (text_value);
-									var text_value = draw.text(txtOknOPar[keey].txt + " " + time_viz1 + " (" + txtOknOPar[keey].unit + ")")
-										.font({ family: Sheet.fnt, size: resizeV })
-										// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
-										.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
-										.cx(X_cur_mouse_click)
-										.fill(txtOknOPar[keey].color);
-									text_value.attr({ 'fill-opacity': 1 });
-								}
-								all_step = all_step + step_val;
-								gfx_group.add(text_value);
-							}
-						}
-					}
-					var gfxr = draw.polygon((X_cur_mouse_click - w1 * (Sheet.width_value / 2 - 0.5)) + ',' + (Y_cur_mouse_click - h1 * (Sheet.height_value + 0.5)) + ' ' + (X_cur_mouse_click + w1 * (Sheet.width_value / 2 + 0.5)) + ',' + (Y_cur_mouse_click - h1 * (Sheet.height_value + 0.5)) + ' ' + (X_cur_mouse_click + w1 * (Sheet.width_value / 2 + 0.5)) + ' ' + Y_cur_mouse_click + ' ' + (X_cur_mouse_click - w1 * (Sheet.width_value / 2 - 0.5)) + ' ' + Y_cur_mouse_click)
-	
-						//var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
-						//ширина поля со клик зачениями
-						// weight_colmn1 = w1*(Columns["col"+String(Number((txtPar[keey].poz.x)))].size.w)/2;
-						// var gfxr = draw.polygon((X_cur_mouse_click-weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+weight_colmn1)+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-weight_colmn1)+','+Y_cur_mouse_click)
-						.fill({ color: Sheet.curcolorval })
-						.opacity(0)
-						.stroke({ width: Sheet.width_gxf_line, dasharray: '2,3', color: Sheet.syscolor })
-						.id(this.attr('id'))
-	
-	
-	
-					gfx_group.add(gfxr);
-					//console.log(gfxr.attr(id));
-					//gfx_group.after(colmn2);
-	
-					//inv_col.front();
-					// gfx_group.mousemove(function(){
-					// 	//mouseDwn = false;
-					// 	gfx_group.clear();
-					// });
-					gfx_group
-						//.delay(5000)
-						.rotate(-90)
-						// .move(1000,1000)
-						//.scale(0.1)
-						.opacity(0)
-						.animate(1500, 'expoOut')
-						// .scale(1.0)//.cy(h1*Sheet.height_value/2)
-						.opacity(1)
-						.rotate(0)
-					// .move(0,0)
-					//.reverse(true)
-					//.loop()
-	
-	
-					//Удаление текущих значений
-					gfxr.click(function () {
-	
-						gfx_group.clear();
-						// colmn2.front();
-						
-						/* if (online == true){refresh = true;} */
-	
-	
-	
-						// this.remove();
-						// gfx_group.remove();
-	
-	
-	
-						//Очистка холста и перерисовка
-						//repaint();
-					})
-					
-					// colmn2.fire('click');
-					// var cursor = getCursorPosition(e, svg);
-					// var X_cur_mouse_click = cursor.x;
-					// var Y_cur_mouse_click = cursor.y;
-					
-
 				}
-		
-				// event = null;
-				});
+				var gfxr = draw.polygon((X_cur_mouse_click - w1 * (Sheet.width_value / 2 - 0.5)) + ',' + (Y_cur_mouse_click - h1 * (Sheet.height_value + 0.5)) + ' ' + (X_cur_mouse_click + w1 * (Sheet.width_value / 2 + 0.5)) + ',' + (Y_cur_mouse_click - h1 * (Sheet.height_value + 0.5)) + ' ' + (X_cur_mouse_click + w1 * (Sheet.width_value / 2 + 0.5)) + ' ' + Y_cur_mouse_click + ' ' + (X_cur_mouse_click - w1 * (Sheet.width_value / 2 - 0.5)) + ' ' + Y_cur_mouse_click)
 
-				// colmn2.click(function(e){
-					
-					
-				// })
+					//var gfxr = draw.polygon((X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+w1*(Sheet.width_value/2+0.5))+' '+Y_cur_mouse_click+' '+(X_cur_mouse_click-w1*(Sheet.width_value/2-0.5))+' '+Y_cur_mouse_click)
+					//ширина поля со клик зачениями
+					// weight_colmn1 = w1*(Columns["col"+String(Number((txtPar[keey].poz.x)))].size.w)/2;
+					// var gfxr = draw.polygon((X_cur_mouse_click-weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5)) +' '+(X_cur_mouse_click+weight_colmn1)+','+(Y_cur_mouse_click -h1*(Sheet.height_value+0.5))+' '+(X_cur_mouse_click+weight_colmn1)+','+Y_cur_mouse_click+' '+(X_cur_mouse_click-weight_colmn1)+','+Y_cur_mouse_click)
+					.fill({ color: Sheet.curcolorval })
+					.opacity(0)
+					.stroke({ width: Sheet.width_gxf_line, dasharray: '2,3', color: Sheet.syscolor })
+					.id(this.attr('id'))
 
-			
+
+
+				gfx_group.add(gfxr);
+				//console.log(gfxr.attr(id));
+				//gfx_group.after(colmn2);
+
+				//inv_col.front();
+				// gfx_group.mousemove(function(){
+				// 	//mouseDwn = false;
+				// 	gfx_group.clear();
+				// });
+				gfx_group
+					//.delay(5000)
+					.rotate(-90)
+					// .move(1000,1000)
+					//.scale(0.1)
+					.opacity(0)
+					.animate(1500, 'expoOut')
+					// .scale(1.0)//.cy(h1*Sheet.height_value/2)
+					.opacity(1)
+					.rotate(0)
+				// .move(0,0)
+				//.reverse(true)
+				//.loop()
+
+
+				//Удаление текущих значений
+				gfxr.click(function () {
+
+					gfx_group.clear();
+					/* if (online == true){refresh = true;} */
+
+
+
+					// this.remove();
+					// gfx_group.remove();
+
+
+
+					//Очистка холста и перерисовка
+					//repaint();
+				})
+			})
 		}
 	}
 	}
