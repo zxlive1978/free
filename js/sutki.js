@@ -2016,8 +2016,8 @@ if (curtemp=='depth'){
 				
 				e.stopPropagation();
 				e.preventDefault();
-				
-				difmove=(e.touches[0].pageY - touchOffsetY);
+				alert('move');
+				difmove=(e.targetTouches[0].clientY - touchOffsetY);
 				
 				});
 
