@@ -1990,8 +1990,8 @@ if (curtemp=='depth'){
 			// 		var X_cur_mouse_click = cursor.x;
 			// 		var Y_cur_mouse_click = cursor.y;
 			// });
-			var touchOffsetX;
-			var touchOffsetY;
+			var touchOffsetX=0;
+			var touchOffsetY=0;
 			colmn2.touchstart( function (e) {
 				e.stopPropagation();
 				e.preventDefault();
