@@ -2370,6 +2370,8 @@ if (curtemp=='depth'){
 					gfxr.click(function () {
 	
 						gfx_group.clear();
+						colmn2.front();
+						
 						/* if (online == true){refresh = true;} */
 	
 	
