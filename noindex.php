@@ -67,22 +67,22 @@ if (!$_SESSION['auth']) {
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <!-- 6. Подключить js-файл библиотеки Bootstrap 3 DateTimePicker -->
-<!-- touch events -->
-<script src="js/hammer.min.js"></script>
+
 
 
 <script type="text/javascript" src="js/svg.min.js"></script>
 <script type="text/javascript" src="js/svg.draggable.min.js"></script>
 <script type="text/javascript" src="js/svg.easing.min.js"></script>
 
+<!-- touch events -->
+<!-- <script src="js/hammer.min.js"></script>
 <script type="text/javascript" src="js/touch-emulator.js"></script>
 <script> TouchEmulator(); </script>
-
 <script type="text/javascript" >
    function preventBack(){window.history.forward();}
     setTimeout("preventBack()", 0);
     window.onunload=function(){null};
-</script>
+</script> -->
 
 
 <script type="text/javascript" src="js/loadsave.js"></script>
