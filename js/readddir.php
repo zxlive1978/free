@@ -15,9 +15,10 @@
 		echo 'Сохранено';}
 	else 
 	    echo "Ошибка"; */
-	$dir= '../scr'.$myFile;
-	$files = array_slice(scandir($dir), 2);
-	echo json_encode($files);
+		$dir= '../scr'.$myFile;
+		$dirandfile =array_filter(scandir($dir), function($item) {return !is_dir($dir . $item);});
+		$files = array_slice($dirandfile, 1);
+		echo json_encode($files);
 	/* $str = file_get_contents('../scr/scr11.scr');
 	echo json_decode($str); */
 	
