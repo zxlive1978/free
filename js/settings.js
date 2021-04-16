@@ -1159,9 +1159,9 @@ function colOK8() {
 }
 
 //Сохранить в локальное хранилище текущие настройки
-function colPan9save(wellName, skv, namecmt, formname) {
+function colPan9save(wellName, skv, namecmt, formname, formnamedepth) {
 	localStorage.setItem(_uz[0],
-		window.btoa(unescape(encodeURIComponent(wellName + ',' + skv + ',' + namecmt + ',' + formname))));
+		window.btoa(unescape(encodeURIComponent(wellName + ',' + skv + ',' + namecmt + ',' + formname + ',' + formnamedepth ))));
 
 
 
