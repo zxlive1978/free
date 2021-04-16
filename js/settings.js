@@ -1146,8 +1146,14 @@ function colOK8() {
 		loadddata(filesss[$("#colitems9")[0].selectedIndex]);
 
 		//Сохранить в локальное хранилище
-		colPan9save(wellName, skv, namecmt, filesss[$("#colitems9")[0].selectedIndex]);
-		formname = filesss[$("#colitems9")[0].selectedIndex];
+		
+		if (curtemp='time'){
+			colPan9save(wellName, skv, namecmt, filesss[$("#colitems9")[0].selectedIndex], filenamedepth);
+			formname = filesss[$("#colitems9")[0].selectedIndex];}
+		if (curtemp='depth'){
+			colPan9save(wellName, skv, namecmt, filename, filesss[$("#colitems9")[0].selectedIndex]);
+			formnamedepth = filesss[$("#colitems9")[0].selectedIndex];}
+
 		repaint();
 	} else {
 
@@ -1214,9 +1220,16 @@ function colOK9() {
 	refresh = false; //navigation.js
 	if (($("#colitems99").val()) != "") {
 		savedata($("#colitems99").val());
-		//Сохранить в локальное хранилище
-		colPan9save(wellName, skv, namecmt, $("#colitems99").val());
-		fileName = String($("#colitems99").val());
+		
+		
+		if (curtemp='time'){
+			//Сохранить в локальное хранилище
+			colPan9save(wellName, skv, namecmt, $("#colitems99").val(),filenamedepth);
+			formname = String($("#colitems99").val());}
+		if (curtemp='depth'){
+			//Сохранить в локальное хранилище
+			colPan9save(wellName, skv, namecmt, filename, $("#colitems99").val());
+			formnamedepth = String($("#colitems99").val());}
 
 		repaint();
 		/* loadddata(filesss[$("#colitems8")[0].selectedIndex]); */
@@ -1418,7 +1431,7 @@ function colOK10() {
 		//Сменить название в шапке
 		$('#skvnamelabt').text(skv);
 		//Сохранить в локальное хранилище
-		colPan9save(wellName, skv, namecmt, formname);
+		colPan9save(wellName, skv, namecmt, formname, formnamedepth);
 		refresh = true;
 		read_next();
 		/* repaint(); */
@@ -1453,7 +1466,7 @@ function colOK10() {
 		//Сменить название в шапке
 		$('#skvnamelabt').text(skv);
 		//Сохранить в локальное хранилище
-		colPan9save(wellName, skv, namecmt, formname);
+		colPan9save(wellName, skv, namecmt, formname, formnamedepth);
 		adm4();
 		
 		// read_now();
