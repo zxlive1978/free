@@ -44,6 +44,7 @@ var wellName ="";
 var skv ="";
 var namecmt = wellName + "kr";
 var wellNamedepth ="" +"depth_all";
+var formdirdepth ="depth\\";
 var formname = "Под телефон";
 var formnamedepth = "depth\Под телефон";
 
