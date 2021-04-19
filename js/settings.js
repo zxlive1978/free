@@ -1956,7 +1956,7 @@ function adm3() {
 	
 
 	curtemp = 'time';
-	loaddata('time');
+	loadddata('time');
 
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu3').hide();
@@ -2003,7 +2003,7 @@ function adm4() {
 	
 
 	curtemp = 'depth';
-	loaddata('depth');
+	loadddata('depth');
 
 	
 	$("#myModal11").modal('hide');
