@@ -174,7 +174,7 @@ function init() {
 					cir1.dy(mi);
 					cir2.dy(mi);
 					cir4.dy(mi);
-					read_down();
+					read_up();
 				};//см .navigation.js 
 
 			} else {
@@ -182,8 +182,9 @@ function init() {
 					cir1.dy(-mi);
 					cir2.dy(-mi);
 					cir4.dy(-mi);
+					read_down();
 
-					read_up();
+					
 				}//см .navigation.js 
 			}
 		}
