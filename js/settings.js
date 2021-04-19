@@ -1239,7 +1239,7 @@ function colOK9() {
 			//Сохранить в локальное хранилище
 			colPan9save(wellName, skv, namecmt, formname, $("#colitems99").val());
 			formnamedepth = String($("#colitems99").val());
-			savedata(formnamedepth);
+			savedata(formdirdepth+ formnamedepth);
 		
 		}
 
