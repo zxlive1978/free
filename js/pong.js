@@ -44,13 +44,13 @@ var wellName ="";
 var skv ="";
 var namecmt = wellName + "kr";
 var wellNamedepth ="" +"depth_all";
-var formdirdepth ="depth";
+var formdirdepth ="\depth\\";
 var formname = "Под телефон";
-var formnamedepth = "depth\Под телефон";
+var formnamedepth = "Под телефон";
 
 if (!isMobile){
 	formname="Под планшет(ПК) светлая";
-	formnamedepth = "depth\Под планшет(ПК) светлая";
+	formnamedepth = "Под планшет(ПК) светлая";
 }
 
 //Сохранение и чтение настроей из локального хранилища
