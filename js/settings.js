@@ -2001,7 +2001,7 @@ function adm4() {
 
 	}
 	
-
+	
 	curtemp = 'depth';
 
 
@@ -2036,6 +2036,7 @@ function adm4() {
 	// init();
 	// colOK11();
 	// read_now();
+	colOK8start(formdirdepth+formnamedepth);
 	read_depth_last();
 	
 
