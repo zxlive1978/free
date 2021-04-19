@@ -1951,12 +1951,12 @@ function adm3() {
 		deleteoldcams();
 	}
 	if (curtemp=='depth'){
-		savedata('depth');
+		
 	}
 	
 
 	curtemp = 'time';
-	loadddata('time');
+
 
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu3').hide();
@@ -1998,12 +1998,12 @@ function adm4() {
 		deleteoldcams();
 	}
 	if (curtemp=='time'){
-		savedata('time');
+
 	}
 	
 
 	curtemp = 'depth';
-	loadddata('depth');
+
 
 	
 	$("#myModal11").modal('hide');
