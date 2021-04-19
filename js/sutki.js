@@ -2740,11 +2740,12 @@ if (curtemp=='depth'){
 		).on('touchend', function (e) {
 			if (cir4.attr('y') >  0) {
 				if (loaddata == false) {
-					read_down();
+					read_up();
+					
 				}//см .navigation.js 
 			} else {
 				if (loaddata == false) {
-					read_up()
+					read_down();
 				};//см .navigation.js 
 			}
 		})
@@ -2777,11 +2778,12 @@ if (curtemp=='depth'){
 
 			if (ey > eys) {
 				if (loaddata == false) {
-					read_down();
+					read_up();
 				}//см .navigation.js 
 			} else {
 				if (loaddata == false) {
-					read_up()
+					read_down();
+					
 				};//см .navigation.js 
 			}
 		})
