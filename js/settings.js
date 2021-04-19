@@ -1229,11 +1229,11 @@ function colOK9() {
 		savedata($("#colitems99").val());
 		
 		
-		if (curtemp='time'){
+		if (curtemp=='time'){
 			//Сохранить в локальное хранилище
 			colPan9save(wellName, skv, namecmt, $("#colitems99").val(), formnamedepth);
 			formname = String($("#colitems99").val());}
-		if (curtemp='depth'){
+		if (curtemp=='depth'){
 			//Сохранить в локальное хранилище
 			colPan9save(wellName, skv, namecmt, formname, $("#colitems99").val());
 			formnamedepth = String($("#colitems99").val());}
