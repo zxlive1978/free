@@ -1954,7 +1954,7 @@ function adm3() {
 		
 	}
 	
-
+	readsavestartstorage();
 	curtemp = 'time';
 
 
@@ -1987,6 +1987,7 @@ function adm3() {
 	$('#skvnamelabt').text(skv);
 	// init();
 	// colOK11();
+	
 	colOK8start(formname);
 	read_now();
 
@@ -2002,7 +2003,7 @@ function adm4() {
 
 	}
 	
-	
+	readsavestartstorage();
 	curtemp = 'depth';
 
 
