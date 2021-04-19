@@ -134,7 +134,7 @@ function readddir() {
 	if (curtemp == 'time'){
 		filedir = filedir+'/';}
 	if (curtemp == 'depth'){
-		filedir = filedir+formdirdepth;
+		filedir = filedir+'/depth/';
 	}
 	
 	$.ajax({
