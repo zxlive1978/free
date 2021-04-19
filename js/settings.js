@@ -1226,17 +1226,22 @@ function colOK9() {
 	Sheet.editscrn = false;
 	refresh = false; //navigation.js
 	if (($("#colitems99").val()) != "") {
-		savedata($("#colitems99").val());
+		
 		
 		
 		if (curtemp=='time'){
 			//Сохранить в локальное хранилище
 			colPan9save(wellName, skv, namecmt, $("#colitems99").val(), formnamedepth);
-			formname = String($("#colitems99").val());}
+			formname = String($("#colitems99").val());
+			savedata(formname);
+		}
 		if (curtemp=='depth'){
 			//Сохранить в локальное хранилище
 			colPan9save(wellName, skv, namecmt, formname, $("#colitems99").val());
-			formnamedepth = String($("#colitems99").val());}
+			formnamedepth = String($("#colitems99").val());
+			savedata(formnamedepth);
+		
+		}
 
 		repaint();
 		/* loadddata(filesss[$("#colitems8")[0].selectedIndex]); */
