@@ -97,7 +97,7 @@ function loadddata(name) {
 		let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
 		filedir=_uzdec;
 		filedir = filedir+'/'+ formname;}
-		if (curtemp='depth'){
+	if (curtemp='depth'){
 		let _uzdec =decodeURIComponent(escape(window.atob(_uz[5])));
 		filedir=_uzdec;
 		filedir = filedir+formdirdepth+ formnamedepth;}

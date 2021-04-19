@@ -1950,7 +1950,14 @@ function adm3() {
 		//удаление старых потоков
 		deleteoldcams();
 	}
+	if (curtemp=='depth'){
+		savedata('depth');
+	}
+	
+
 	curtemp = 'time';
+	loaddata('time');
+
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu3').hide();
 	$('#dropdownMenu2').hide();
@@ -1990,6 +1997,14 @@ function adm4() {
 		//удаление старых потоков
 		deleteoldcams();
 	}
+	if (curtemp=='time'){
+		savedata('time');
+	}
+	
+
+	curtemp = 'depth';
+	loaddata('depth');
+
 	
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu1').hide();
