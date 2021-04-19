@@ -52,7 +52,7 @@ function savedata111() {
 function savedata(name){
 
 	localStorage.setItem(_uz[0],
-		window.btoa(unescape(encodeURIComponent(wellName+','+skv+','+namecmt+','+formname))));
+		window.btoa(unescape(encodeURIComponent(wellName+','+skv+','+namecmt+','+formname+','+formnamedepth))));
 	var curscr =[];
 	/* curscr =JSON.parse(curscr); */
 	curscr.push(Sheet);
@@ -63,9 +63,14 @@ function savedata(name){
 	/* console.log(curscr); */
 	curscr = JSON.stringify(Object.assign({}, curscr));
 	/* console.log(curscr); */
+	if (curtemp='time'){
 	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
 	filedir=_uzdec;
-	filedir = filedir+'/'+ name;
+	filedir = filedir+'/'+ formname;}
+	if (curtemp='depth'){
+	let _uzdec =decodeURIComponent(escape(window.atob(_uz[5])));
+	filedir=_uzdec;
+	filedir = filedir+formdirdepth+ formnamedepth;}
 	
 	$.ajax({
 			type: "POST",
@@ -88,9 +93,14 @@ function savedata(name){
 
 //Загрузка файла с сервера
 function loadddata(name) {
-	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
-	var filedir=_uzdec;
-	filedir = filedir+'/'+ name;
+	if (curtemp='time'){
+		let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
+		filedir=_uzdec;
+		filedir = filedir+'/'+ formname;}
+		if (curtemp='depth'){
+		let _uzdec =decodeURIComponent(escape(window.atob(_uz[5])));
+		filedir=_uzdec;
+		filedir = filedir+formdirdepth+ formnamedepth;}
 	//console.log(filedir);
 	$.ajax({
 			type: "GET",
