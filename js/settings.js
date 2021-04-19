@@ -1148,12 +1148,12 @@ function colOK8() {
 		//Сохранить в локальное хранилище
 		
 		if (curtemp=='time'){
-			colPan9save(wellName, skv, namecmt, filesss[$("#colitems9")[0].selectedIndex], filenamedepth);
+			colPan9save(wellName, skv, namecmt, filesss[$("#colitems9")[0].selectedIndex], formnamedepth);
 			formname = filesss[$("#colitems9")[0].selectedIndex];
 			loadddata(formname);
 		}
 		if (curtemp=='depth'){
-			colPan9save(wellName, skv, namecmt, filename, filesss[$("#colitems9")[0].selectedIndex]);
+			colPan9save(wellName, skv, namecmt, formname, filesss[$("#colitems9")[0].selectedIndex]);
 			formnamedepth = filesss[$("#colitems9")[0].selectedIndex];
 			loadddata(formdirdepth+formnamedepth);
 		}
