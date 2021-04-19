@@ -1143,16 +1143,20 @@ function colOK8() {
 	refresh = false; //navigation.js
 	toponof = true;
 	if (($("#colitems9")[0].selectedIndex) > -1) {
-		loadddata(filesss[$("#colitems9")[0].selectedIndex]);
+		
 
 		//Сохранить в локальное хранилище
 		
-		if (curtemp='time'){
+		if (curtemp=='time'){
 			colPan9save(wellName, skv, namecmt, filesss[$("#colitems9")[0].selectedIndex], filenamedepth);
-			formname = filesss[$("#colitems9")[0].selectedIndex];}
-		if (curtemp='depth'){
+			formname = filesss[$("#colitems9")[0].selectedIndex];
+			loadddata(formname);
+		}
+		if (curtemp=='depth'){
 			colPan9save(wellName, skv, namecmt, filename, filesss[$("#colitems9")[0].selectedIndex]);
-			formnamedepth = filesss[$("#colitems9")[0].selectedIndex];}
+			formnamedepth = filesss[$("#colitems9")[0].selectedIndex];
+			loadddata(formdirdepth+formnamedepth);
+		}
 
 		repaint();
 	} else {
