@@ -1183,9 +1183,9 @@ function colPan9(name_select) {
 	refresh = false;
 	filesss = {};
 	$('#colitems9').empty();
-	if (curtemp=='time'){
+	if (curtemp =='time'){
 	$("#colitems99").val(formname);}
-	if (curtemp=='depth'){
+	if (curtemp == 'depth'){
 		$("#colitems99").val(formnamedepth);}
 	//Чтение списка  файлов
 	readddir();
