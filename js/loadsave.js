@@ -63,11 +63,11 @@ function savedata(name){
 	/* console.log(curscr); */
 	curscr = JSON.stringify(Object.assign({}, curscr));
 	/* console.log(curscr); */
-	if (curtemp='time'){
+	if (curtemp=='time'){
 	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
 	filedir=_uzdec;
 	filedir = filedir+'/'+ formname;}
-	if (curtemp='depth'){
+	if (curtemp=='depth'){
 	let _uzdec =decodeURIComponent(escape(window.atob(_uz[5])));
 	filedir=_uzdec;
 	filedir = filedir+formdirdepth+ formnamedepth;}
@@ -93,11 +93,11 @@ function savedata(name){
 
 //Загрузка файла с сервера
 function loadddata(name) {
-	if (curtemp='time'){
+	if (curtemp=='time'){
 		let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
 		filedir=_uzdec;
 		filedir = filedir+'/'+ formname;}
-	if (curtemp='depth'){
+	if (curtemp=='depth'){
 		let _uzdec =decodeURIComponent(escape(window.atob(_uz[5])));
 		filedir=_uzdec;
 		filedir = filedir+formdirdepth+ formnamedepth;}
@@ -143,7 +143,7 @@ function readddir() {
 	if (curtemp == 'time'){
 		filedir = filedir+'/';}
 	if (curtemp == 'depth'){
-		filedir = filedir+'/depth/';
+		filedir = filedir+formdirdepth;
 	}
 	
 	$.ajax({
