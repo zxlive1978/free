@@ -1183,7 +1183,10 @@ function colPan9(name_select) {
 	refresh = false;
 	filesss = {};
 	$('#colitems9').empty();
-	$("#colitems99").val(formname);
+	if (curtemp='time'){
+	$("#colitems99").val(formname);}
+	if (curtemp='depth'){
+		$("#colitems99").val(formnamedepth);}
 	//Чтение списка  файлов
 	readddir();
 	//из json объекта в массив
