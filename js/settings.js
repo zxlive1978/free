@@ -2036,6 +2036,8 @@ function adm4() {
 	// init();
 	// colOK11();
 	// read_now();
+	loadddata(filesss[$("#colitems9")[0].selectedIndex]);
+
 	read_depth_last();
 	
 
