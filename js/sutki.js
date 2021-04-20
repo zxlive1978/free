@@ -2660,56 +2660,64 @@ if (curtemp=='depth'){
 
 	//Маркер сдвига по времени и глубине
 	/////////////////////
-	//var colmn4 = draw.circle(Sheet.markheighttime*h1)
-	//.move((Columns.col0.poz.x+Columns.col0.size.w/2)*w1, (Columns.col0.poz.y+Columns.col0.size.h/2)*h1)
+	
 	Sheet.markwidthtime = (100 - Columns.col0.size.h) / 1.5;
 	Sheet.markheighttime = Columns.col0.size.w / 1.1;
-	var cir1 = draw.polygon(0 + ',' + Sheet.markheighttime * w1 / 2 + ' ' + Sheet.markheighttime * w1 / 2 + ',' + 0 + ' ' + Sheet.markheighttime * w1 + ',' + Sheet.markheighttime * w1 / 2 + ' ' + Sheet.markheighttime * w1 + ',' + (Sheet.markwidthtime * h1 - Sheet.markheighttime * w1 / 2) + ' ' + Sheet.markheighttime * w1 / 2 + ',' + Sheet.markwidthtime * h1 + ' ' + 0 + ',' + (Sheet.markwidthtime * h1 - Sheet.markheighttime * w1 / 2))
-		//var cir4 = draw.polygon( Number(Columns[key].poz.x)*w1+','+(Number(Columns[key].poz.y)*h1+Number(Columns[key].size.h)*h1)+' '+(Number(Columns[key].poz.x)*w1+Number(Columns[key].size.w)*w1)+','+(Number(Columns[key].poz.y)*h1+Number(Columns[key].size.h)*h1)+' '+(Number(Columns[key].poz.x)*w1+Number(Columns[key].size.w)*w1)+','+100*h1+' '+Number(Columns[key].poz.x)*w1+','+100*h1 )
+
+	
+	
+	
+	// var cir1 = draw.polygon(0 + ',' + Sheet.markheighttime * w1 / 2 + ' ' + Sheet.markheighttime * w1 / 2 + ',' + 0 + ' ' + Sheet.markheighttime * w1 + ',' + Sheet.markheighttime * w1 / 2 + ' ' + Sheet.markheighttime * w1 + ',' + (Sheet.markwidthtime * h1 - Sheet.markheighttime * w1 / 2) + ' ' + Sheet.markheighttime * w1 / 2 + ',' + Sheet.markwidthtime * h1 + ' ' + 0 + ',' + (Sheet.markwidthtime * h1 - Sheet.markheighttime * w1 / 2))
+	// 	.move((Columns.col0.poz.x + Columns.col0.size.w / 2) * w1, ((Columns.col0.poz.y + Columns.col0.size.h) + (100 - (Columns.col0.poz.y + Columns.col0.size.h)) / 2) * h1)
+	// 	.fill({ color: Sheet.marktime })
+	// 	.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor })
+	// 	.opacity(0.001)
+	// 	.center((Columns.col0.poz.x + Columns.col0.size.w / 2) * w1, ((Columns.col0.poz.y + Columns.col0.size.h) + (100 - (Columns.col0.poz.y + Columns.col0.size.h)) / 2) * h1);
+	
+
+	var cir1 = draw.polygon(0 + ',' + 0 + ' ' +  Columns.col0.size.w*w1 + ',' + 0 + ' ' + Columns.col0.size.w*w1 + ',' + Columns.col0.size.h*h1 + ' ' + 0 + ',' + Columns.col0.size.h*h1)
 		.move((Columns.col0.poz.x + Columns.col0.size.w / 2) * w1, ((Columns.col0.poz.y + Columns.col0.size.h) + (100 - (Columns.col0.poz.y + Columns.col0.size.h)) / 2) * h1)
 		.fill({ color: Sheet.marktime })
-		//.fill('none')
 		.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor })
 		.opacity(0.001)
 		.center((Columns.col0.poz.x + Columns.col0.size.w / 2) * w1, ((Columns.col0.poz.y + Columns.col0.size.h) + (100 - (Columns.col0.poz.y + Columns.col0.size.h)) / 2) * h1);
-	//.cy(((Columns.col0.poz.y+Columns.col0.size.h)+(100-(Columns.col0.poz.y+Columns.col0.size.h))/2)*h1);
+	
 	
 
-	// //Главный сдвигатель(непрозрачен)
-	// var cir2 = draw.polygon(0 + ',' + Sheet.markheighttime * w1 / 2 + ' ' + Sheet.markheighttime * w1 / 2 + ',' + 0 + ' ' + Sheet.markheighttime * w1 + ',' + Sheet.markheighttime * w1 / 2 + ' ' + Sheet.markheighttime * w1 + ',' + (Sheet.markwidthtime * h1 - Sheet.markheighttime * w1 / 2) + ' ' + Sheet.markheighttime * w1 / 2 + ',' + Sheet.markwidthtime * h1 + ' ' + 0 + ',' + (Sheet.markwidthtime * h1 - Sheet.markheighttime * w1 / 2))
-	// 	//var cir4 = draw.polygon( Number(Columns[key].poz.x)*w1+','+(Number(Columns[key].poz.y)*h1+Number(Columns[key].size.h)*h1)+' '+(Number(Columns[key].poz.x)*w1+Number(Columns[key].size.w)*w1)+','+(Number(Columns[key].poz.y)*h1+Number(Columns[key].size.h)*h1)+' '+(Number(Columns[key].poz.x)*w1+Number(Columns[key].size.w)*w1)+','+100*h1+' '+Number(Columns[key].poz.x)*w1+','+100*h1 )
-	// 	.move((Columns.col0.poz.x + Columns.col0.size.w / 2) * w1, ((Columns.col0.poz.y + Columns.col0.size.h) + (100 - (Columns.col0.poz.y + Columns.col0.size.h)) / 2) * h1)
-	// 	//.fill({ color: Sheet.marktime})
-	// 	.fill('none')
-	// 	.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor })
-	// 	.opacity(1)
-	// 	.center((Columns.col0.poz.x + Columns.col0.size.w / 2) * w1, ((Columns.col0.poz.y + Columns.col0.size.h) + (100 - (Columns.col0.poz.y + Columns.col0.size.h)) / 2) * h1);
+	//Главный сдвигатель(непрозрачен)
+	var cir2 = draw.polygon(0 + ',' + Sheet.markheighttime * w1 / 2 + ' ' + Sheet.markheighttime * w1 / 2 + ',' + 0 + ' ' + Sheet.markheighttime * w1 + ',' + Sheet.markheighttime * w1 / 2 + ' ' + Sheet.markheighttime * w1 + ',' + (Sheet.markwidthtime * h1 - Sheet.markheighttime * w1 / 2) + ' ' + Sheet.markheighttime * w1 / 2 + ',' + Sheet.markwidthtime * h1 + ' ' + 0 + ',' + (Sheet.markwidthtime * h1 - Sheet.markheighttime * w1 / 2))
+		//var cir4 = draw.polygon( Number(Columns[key].poz.x)*w1+','+(Number(Columns[key].poz.y)*h1+Number(Columns[key].size.h)*h1)+' '+(Number(Columns[key].poz.x)*w1+Number(Columns[key].size.w)*w1)+','+(Number(Columns[key].poz.y)*h1+Number(Columns[key].size.h)*h1)+' '+(Number(Columns[key].poz.x)*w1+Number(Columns[key].size.w)*w1)+','+100*h1+' '+Number(Columns[key].poz.x)*w1+','+100*h1 )
+		.move((Columns.col0.poz.x + Columns.col0.size.w / 2) * w1, ((Columns.col0.poz.y + Columns.col0.size.h) + (100 - (Columns.col0.poz.y + Columns.col0.size.h)) / 2) * h1)
+		//.fill({ color: Sheet.marktime})
+		.fill('none')
+		.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor })
+		.opacity(0)
+		.center((Columns.col0.poz.x + Columns.col0.size.w / 2) * w1, ((Columns.col0.poz.y + Columns.col0.size.h) + (100 - (Columns.col0.poz.y + Columns.col0.size.h)) / 2) * h1);
 
 
 
 	var cir4 = draw.group()
 	.style({ cursor: 'pointer' });
 	cir4.add(cir1);
-	// cir4.add(cir2); //Главный сдвигатель(непрозрачен)
+	cir4.add(cir2); //Главный сдвигатель(непрозрачен)
 	cir4.front();
 	if (isMobile) {
 	var cir4 = draw.nested()
 	.style({ cursor: 'pointer' });
 	cir4.add(cir1);
-	// cir4.add(cir2); //Главный сдвигатель(непрозрачен)
+	cir4.add(cir2); //Главный сдвигатель(непрозрачен)
 	cir4.front();} 
 
 	var ex = 0;
 	var ey = 0;
 	var exs = 0;
 	var eys = 0;
-
-
+	
 	if (isMobile) {
 		cir4.draggable(
 
 		).on('touchstart', function (e) {
-			
+			cir2.opacity(1);
 			// var touchobj1 = e.changedTouches[0] // первая точка прикосновения
 			// exs = e.detail.p.x;
 			// eys = e.detail.p.y;
@@ -2756,6 +2764,7 @@ if (curtemp=='depth'){
 		cir4.draggable(
 
 		).on('dragstart', function (e) {
+			cir2.opacity(1);
 			exs = e.detail.p.x;
 			eys = e.detail.p.y;
 		})
