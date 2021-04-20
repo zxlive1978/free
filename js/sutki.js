@@ -2675,7 +2675,7 @@ if (curtemp=='depth'){
 	// 	.center((Columns.col0.poz.x + Columns.col0.size.w / 2) * w1, ((Columns.col0.poz.y + Columns.col0.size.h) + (100 - (Columns.col0.poz.y + Columns.col0.size.h)) / 2) * h1);
 	
 
-	var cir1 = draw.polygon(0 + ',' + 0 + ' ' +  Columns.col0.size.w*w1 + ',' + 0 + ' ' + Columns.col0.size.w*w1 + ',' + Columns.col0.size.h*h1 + ' ' + 0 + ',' + Columns.col0.size.h*h1)
+	var cir1 = draw.polygon(0 + ',' + Sheet.markheighttime * w1 / 2 + ' ' + Sheet.markheighttime * w1 / 2 + ',' + 0 + ' ' + Sheet.markheighttime * w1 + ',' + Sheet.markheighttime * w1 / 2 + ' ' + Sheet.markheighttime * w1 + ',' + (Sheet.markwidthtime * h1 - Sheet.markheighttime * w1 / 2) + ' ' + Sheet.markheighttime * w1 / 2 + ',' + (100 - Columns.col0.size.h) * h1 + ' ' + 0 + ',' + ((100 - Columns.col0.size.h) - Sheet.markheighttime * w1 / 2))
 		.move((Columns.col0.poz.x + Columns.col0.size.w / 2) * w1, ((Columns.col0.poz.y + Columns.col0.size.h) + (100 - (Columns.col0.poz.y + Columns.col0.size.h)) / 2) * h1)
 		.fill({ color: Sheet.marktime })
 		.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor })
