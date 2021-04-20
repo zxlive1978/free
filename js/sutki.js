@@ -2670,7 +2670,7 @@ if (curtemp=='depth'){
 		.fill({ color: Sheet.marktime })
 		//.fill('none')
 		.stroke({ width: Sheet.width_line_p, color: Sheet.syscolor })
-		.opacity(0.1)
+		.opacity(0.001)
 		.center((Columns.col0.poz.x + Columns.col0.size.w / 2) * w1, ((Columns.col0.poz.y + Columns.col0.size.h) + (100 - (Columns.col0.poz.y + Columns.col0.size.h)) / 2) * h1);
 	//.cy(((Columns.col0.poz.y+Columns.col0.size.h)+(100-(Columns.col0.poz.y+Columns.col0.size.h))/2)*h1);
 	
