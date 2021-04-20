@@ -17,7 +17,7 @@
 	    echo "Ошибка"; */
 		$dir= '../scr'.$myFile;
 		$dirandfile =array_filter(scandir($dir), function($item) {return !is_dir($dir . $item);});
-		$files = array_slice($dirandfile, 1);
+		$files = array_slice($dirandfile, 0, 1);
 		echo json_encode($files);
 	/* $str = file_get_contents('../scr/scr11.scr');
 	echo json_decode($str); */
