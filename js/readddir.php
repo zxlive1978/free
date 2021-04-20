@@ -16,11 +16,16 @@
 	else 
 	    echo "Ошибка"; */
 		$dir= '../scr'.$myFile;
-		$dirandfile =array_filter(scandir($dir), function($item) {return !is_dir($dir . $item);});
-		$files = array_slice($dirandfile, 0, 1);
-		echo json_encode($files);
-	/* $str = file_get_contents('../scr/scr11.scr');
-	echo json_decode($str); */
-	
-	/* $myfile = fopen("../scr/testfile.txt", "w"); */
+		// $dirandfile =array_filter(scandir($dir), function($item) {return !is_dir($dir . $item);});
+		$files = scandir($dir); 
+		$forms = array();
+		foreach($files as $file)
+		{
+    		if(is_file($dir.$file)){
+				array_push($forms, $dir.$file);
+			}
+		}
+		echo json_encode($forms);
+		// $files = array_slice($dirandfile, 0);
+		// echo json_encode($files);
 ?>
