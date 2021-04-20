@@ -1194,11 +1194,11 @@ function colPan9(name_select) {
 	for (keey in filesss) {
 		let strarr = filesss[keey].split('/');
 		let str = strarr[strarr.length-1];
-		console.log(str);
+		//console.log(str);
 		$('#colitems9').append($('<option>',
 			{
-				value: filesss[keey],
-				text: filesss[keey]
+				value: str,
+				text: str
 			}));
 
 	}
