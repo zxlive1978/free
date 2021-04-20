@@ -1194,6 +1194,7 @@ function colPan9(name_select) {
 	for (keey in filesss) {
 		let strarr = filesss[keey].split('/');
 		let str = strarr[strarr.length-1];
+		filesss[keey]= str;
 		//console.log(str);
 		$('#colitems9').append($('<option>',
 			{
@@ -1204,7 +1205,7 @@ function colPan9(name_select) {
 	}
 	//`Выбор файла для перезаписи
 	$("#colitems9").change(function () {
-		$("#colitems99").val($("#colitems9 option:selected").text());
+		$("#colitems99").val(filesss[$("#colitems9")[0].selectedIndex]);
 	});
 	//Длина объекта
 	/* alert(filesss.length); */
