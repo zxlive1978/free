@@ -1192,7 +1192,7 @@ function colPan9(name_select) {
 	//из json объекта в массив
 	/* var arr = Object.values(filesss); */
 	for (keey in filesss) {
-		console.log( filesss[keey]);
+		// console.log( filesss[keey]);
 		$('#colitems9').append($('<option>',
 			{
 				value: filesss[keey],
