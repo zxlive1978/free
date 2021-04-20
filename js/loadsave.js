@@ -67,7 +67,7 @@ function savedata(name){
 	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
 	filedir=_uzdec;
 	filedir = filedir+'/'+ name;
-	console.log(filedir);
+	// console.log(filedir);
 	$.ajax({
 			type: "POST",
 			url: 'js/savetoserver.php',
