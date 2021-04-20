@@ -1204,7 +1204,7 @@ function colPan9(name_select) {
 	}
 	//`Выбор файла для перезаписи
 	$("#colitems9").change(function () {
-		$("#colitems99").val($("#colitems9")[0].selectedIndex);
+		$("#colitems99").val($("#colitems9 option:selected").text());
 	});
 	//Длина объекта
 	/* alert(filesss.length); */
