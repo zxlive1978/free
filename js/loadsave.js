@@ -60,6 +60,7 @@ function savedata(name){
 	curscr.push(basePar);
 	curscr.push(txtPar);
 	curscr.push(txtOknOPar);
+	curscr.push(geoOknOPar);
 	/* console.log(curscr); */
 	curscr = JSON.stringify(Object.assign({}, curscr));
 	/* console.log(curscr); */
@@ -110,6 +111,7 @@ function loadddata(name) {
 				basePar = plan[2];
 				txtPar = plan[3];
 				txtOknOPar = plan[4];
+				geoOknOPar = plan[5];
 				read_now();
 				//Перерисовка
 				try {
