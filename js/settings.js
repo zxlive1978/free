@@ -594,7 +594,7 @@ if (curtemp == 'time'){
 			}));
 	}
 }
-if (curtemp='depth'){
+if (curtemp == 'depth'){
 	ParSelect = name_select;
 	var numbcol = 0;
 	//Очистка списка
