@@ -623,6 +623,7 @@ if (curtemp='depth'){
 						text: bigPar[keey].txt
 					}));
 			}
+		}
 		
 		if ($("#colitems7")[0].selectedIndex == 2 ) {
 			$('#colitems2').empty();
