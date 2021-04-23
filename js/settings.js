@@ -629,6 +629,7 @@ if (curtemp='depth'){
 			$('#colitems2').empty();
 			//добавление в список
 			for (var keey in geoOknOPar) {
+				console.log(geoOknOPar[keey].txt)
 				
 				$('#colitems2').append($('<option>',
 					{
