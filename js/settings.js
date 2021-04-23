@@ -561,6 +561,7 @@ function colOK() {
 
 //Кнопка Добавить график
 function colPan1(name_select) {
+if (curtemp='time'){
 	ParSelect = name_select;
 	var numbcol = 0;
 	//Очистка списка
@@ -591,24 +592,67 @@ function colPan1(name_select) {
 				value: keey,
 				text: bigPar[keey].txt
 			}));
-		/* if (basePar[keey].poz.x == Number(name_select.toString().substr(3))){
-			$('#colitems1').append($('<option>',
-			{
-				value:  basePar[keey].par,
-				text : basePar[keey].txt
-				}));
-				numbcol +=1;
-				console.log(basePar[keey].txt);
-				} */
 	}
+}
+if (curtemp='depth'){
+	ParSelect = name_select;
+	var numbcol = 0;
+	//Очистка списка
+	$('#colitems2').empty();
+	$('#colitems7').empty();
+	$('#colitems7').append($('<option>', { value: basePar, text: 'Графический параметр' }));
+	$('#colitems7').append($('<option>', { value: txtPar, text: 'Цифровой  параметр' }));
+	$('#colitems7').append($('<option>', { value: txtPar, text: 'Геология' }));
+	$('#colitems7').append($('<option>', { value: txtOknOPar, text: 'Название скважины' }));
+	$("#colitems2").show();
+	$("#colitems22").show();
+
+	$("#colitems7").change(function () {
+		if ($("#colitems7")[0].selectedIndex == 3) {
+			$("#colitems2").hide();
+			$("#colitems22").hide();
+		}
+		if ($("#colitems7")[0].selectedIndex == 0 || $("#colitems7")[0].selectedIndex == 1 ) {
+			$('#colitems2').empty();
+			//добавление в список
+			for (var keey in bigPar) {
+				
+				$('#colitems2').append($('<option>',
+					{
+						value: keey,
+						text: bigPar[keey].txt
+					}));
+			}
+		
+		if ($("#colitems7")[0].selectedIndex == 2 ) {
+			$('#colitems2').empty();
+			//добавление в список
+			for (var keey in bigPar) {
+				
+				$('#colitems2').append($('<option>',
+					{
+						value: keey,
+						text: geoOknOPar[keey].txt
+					}));
+			}
+			$("#colitems2").show();
+			$("#colitems22").show();
+		}
+	});
 
 
-	/* PArmyDialog2.show(); */
-	/* $("#addgraf").css('background-color', Sheet.curcolorval);
-	 $('#addgraf').iziModal('open'); */
 
-	//bootstrap modal
-	$("#myModal5").modal('show');
+	//добавление в список
+	for (var keey in bigPar) {
+		$('#colitems2').append($('<option>',
+			{
+				value: keey,
+				text: bigPar[keey].txt
+			}));
+	}
+}
+
+$("#myModal5").modal('show');
 
 }
 
