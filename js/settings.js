@@ -137,6 +137,7 @@ var geoOknOPar = {
 //Шаблон Геология
 var ShablongeoOknOPar = {
 	par0: { par: 'Litol', txt: 'Литология', color: '#000000', poz: { x: 3, y: 3 }, unit: '' },
+	par1: { par: 'Shlam', txt: 'Шламограмма', color: '#000000', poz: { x: 2, y: 3 }, unit: '' },
 };
 
 //Список шрифтов
@@ -629,15 +630,13 @@ if (curtemp == 'depth'){
 		}
 		
 		if ($("#colitems7")[0].selectedIndex == 2 ) {
-			console.log($("#colitems7")[0].selectedIndex);
+			$('#colitems2').empty();
 			//добавление в список
-			for (var keey in geoOknOPar) {
-				console.log(geoOknOPar[keey].txt)
-				
+			for (var keey in ShablongeoOknOPar) {
 				$('#colitems2').append($('<option>',
 					{
 						value: keey,
-						text: geoOknOPar[keey].txt
+						text: ShablongeoOknOPar[keey].txt
 					}));
 			}
 			$("#colitems2").show();
