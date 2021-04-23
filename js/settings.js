@@ -561,7 +561,7 @@ function colOK() {
 
 //Кнопка Добавить график
 function colPan1(name_select) {
-if (curtemp='time'){
+if (curtemp == 'time'){
 	ParSelect = name_select;
 	var numbcol = 0;
 	//Очистка списка
