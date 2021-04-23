@@ -732,9 +732,6 @@ function colOK2() {
 
 	//Выбрана геология
 	if (($("#colitems7")[0].selectedIndex == 2 && curtemp=='depth') ) {
-		for (var keey in geoOknOPar){
-			console.log (geoOknOPar[keey].txt);
-		}
 		//Копирование в объект
 		curPar = JSON.stringify(Object.assign({}, geoOknOPar['par'+$("#colitems2")[0].selectedIndex]));
 		curPar = JSON.parse(curPar);
