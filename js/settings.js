@@ -629,7 +629,6 @@ if (curtemp == 'depth'){
 		}
 		
 		if ($("#colitems7")[0].selectedIndex == 2 ) {
-			$('#colitems2').empty();
 			console.log($("#colitems7")[0].selectedIndex);
 			//добавление в список
 			for (var keey in geoOknOPar) {
