@@ -612,6 +612,7 @@ if (curtemp='depth'){
 			$("#colitems2").hide();
 			$("#colitems22").hide();
 		}
+
 		if ($("#colitems7")[0].selectedIndex == 0 || $("#colitems7")[0].selectedIndex == 1 ) {
 			$('#colitems2').empty();
 			//добавление в список
@@ -623,6 +624,8 @@ if (curtemp='depth'){
 						text: bigPar[keey].txt
 					}));
 			}
+			$("#colitems2").show();
+			$("#colitems22").show();
 		}
 		
 		if ($("#colitems7")[0].selectedIndex == 2 ) {
