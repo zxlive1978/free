@@ -268,11 +268,13 @@ function read_next(){
 						var back_start_time = null;
 						back_start_time = start_time;
 						back_end_time = null;
-						back_end_time = end_time;}
+						back_end_time = end_time;
+						repaint();
+					}
 					catch (e) { }
 			}
 				
-				repaint();
+				
 				refresh=true;
 				timer=setTimeout(function(){read_next();}, 3000);
 			},
