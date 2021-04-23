@@ -187,6 +187,7 @@ function read_next(){
 		end_time=start_time + Kzoomdepth*10+Kzoomdepth/10;
 
 		wellNamedepth =wellName +"depth_all";
+		wellNamelith =wellName +"lith_all";
 		$.ajax({
 			type: "POST",
 			url: 'js/read_depth.php',
