@@ -129,7 +129,6 @@ var ShablontxtOknOPar = {
 };
 
 //Геология
-geoOknOPar
 var geoOknOPar = {
 	par0: { par: 'Litol', txt: 'Литология', color: '#000000', poz: { x: 3, y: 3 }, unit: '' },
 	par1: { par: 'Shlam', txt: 'Шламограмма', color: '#000000', poz: { x: 2, y: 3 }, unit: '' },
