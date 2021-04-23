@@ -39,11 +39,16 @@ let d110d =function (){
 	let d110d ={};
 }
 
-//var d110d = null;
+//имя скважины;
 var wellName ="";
 var skv ="";
+//коментарии
 var namecmt = wellName + "kr";
+//глубинка
 var wellNamedepth ="" +"depth_all";
+//литология шламограмма
+var wellNamelith ="" +"lith_all";
+//формы
 var formdirdepth ="/depth/";
 var formname = "Под телефон";
 var formnamedepth = "Под телефон";
