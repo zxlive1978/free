@@ -39,6 +39,10 @@ let d110d =function (){
 	let d110d ={};
 }
 
+let d110l =function (){
+	let d110l ={};
+}
+
 //имя скважины;
 var wellName ="";
 var skv ="";
