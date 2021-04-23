@@ -628,7 +628,7 @@ if (curtemp='depth'){
 		if ($("#colitems7")[0].selectedIndex == 2 ) {
 			$('#colitems2').empty();
 			//добавление в список
-			for (var keey in bigPar) {
+			for (var keey in geoOknOPar) {
 				
 				$('#colitems2').append($('<option>',
 					{
