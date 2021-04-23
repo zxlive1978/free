@@ -225,7 +225,7 @@ function read_next(){
 							try {
 								d110l = null;
 								d110l = JSON.parse(data);
-								/* d110d = eval(data); */
+								console.log(d110l)
 								repaint();
 							}
 							catch (e) { }
