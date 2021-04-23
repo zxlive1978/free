@@ -97,8 +97,8 @@ var bigPar = {
 	par36: { par: 'C1C5sh', txt: 'Сумма шламу С1...С5', min: 0, max: 5, color: '#000000', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: '%', log: false },
 	par37: { par: 'Minbx', txt: 'Минерализация на вх', min: 0, max: 100, color: '#855f30', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'мг/дм3', log: false },
 	par38: { par: 'Minbix', txt: 'Минерализация на вых', min: 0, max: 100, color: '#f21890', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'мг/дм3', log: false },
-	par39: { par: 'Kalcid', txt: 'Кальцид', min: 0, max: 100, color: '#006eea', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'мг/дм3', log: false },
-	par40: { par: 'Dolomit', txt: 'Доломит', min: 100, max: 0, color: '#f40503', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: 'мг/дм3', log: false },
+	par39: { par: 'Kalcid', txt: 'Кальцид', min: 0, max: 100, color: '#006eea', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: '%', log: false },
+	par40: { par: 'Dolomit', txt: 'Доломит', min: 100, max: 0, color: '#f40503', poz: { x: 2, y: 7 }, show: true, step: 0.75, unit: '%', log: false },
 	
 	
 };
