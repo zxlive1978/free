@@ -39,7 +39,9 @@
 			//echo $row[$x_id]." - ".$row[$y_id]."<br />";
 			//$cur_rec['Wkp'] = $row['Wkp'];
 
-			$cur_rec= array('Vrema' => $row['Vrema'],'Wkp' => $row['Wkp'],);
+			$cur_rec= array('type' => $row['type'],'top' => $row['top'],
+							'bot' => $row['bot'],'code' => $row['code'],
+							'proc' => $row['proc'],'numb' => $row['numb']);
 			array_push($comment, $cur_rec);
 			}
 		mysqli_free_result($result);
