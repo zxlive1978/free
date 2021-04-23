@@ -212,9 +212,30 @@ function read_next(){
 					back_start_time = start_time;
 					back_end_time = null;
 					back_end_time = end_time;
+
+
+					$.ajax({
+						type: "POST",
+						url: 'js/read_litholog.php',
+						data: {whatdo:'read', table:wellNamelith ,start_time: start_time, end_time:end_time },
+						cache: false,
+						async: false,
+						success: function(data){
+							
+							try {
+								d110l = null;
+								d110l = JSON.parse(data);
+								/* d110d = eval(data); */
+								repaint();
+							}
+							catch (e) { }
+							
+							
+						}
+					});
 				}
 				catch (e) { }
-				repaint();
+				// repaint();
 				
 			}
 		});
