@@ -738,7 +738,7 @@ function colOK2() {
 			console.log (geoOknOPar[keey].txt);
 		}
 		//Копирование в объект
-		curPar = JSON.stringify(Object.assign({}, ShablontxtOknOPar['par'+$("#colitems2")[0].selectedIndex]));
+		curPar = JSON.stringify(Object.assign({}, geoOknOPar['par'+$("#colitems2")[0].selectedIndex]));
 		curPar = JSON.parse(curPar);
 
 		curPar.par = geoOknOPar['par'+$("#colitems2")[0].selectedIndex].par;
