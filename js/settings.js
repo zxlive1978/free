@@ -741,8 +741,8 @@ function colOK2() {
 		curPar = JSON.stringify(Object.assign({}, ShablontxtOknOPar['par'+$("#colitems2")[0].selectedIndex]));
 		curPar = JSON.parse(curPar);
 
-		curPar.par = ShablontxtOknOPar['par'+$("#colitems2")[0].selectedIndex].par;
-		curPar.txt = ShablontxtOknOPar['par'+$("#colitems2")[0].selectedIndex].txt;
+		curPar.par = geoOknOPar['par'+$("#colitems2")[0].selectedIndex].par;
+		curPar.txt = geoOknOPar['par'+$("#colitems2")[0].selectedIndex].txt;
 		curPar.poz.y = curXpoz + 1;
 		curPar.poz.x = Number(ParSelect.substr(3));
 		//console.log(curPar);
