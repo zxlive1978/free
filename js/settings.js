@@ -128,6 +128,17 @@ var ShablontxtOknOPar = {
 	par0: { par: 'Vrema', txt: 'Время', color: '#000000', poz: { x: 1, y: 7 }, unit: 'ч' },
 };
 
+//Геология
+var geoOknOPar = {
+	par0: { par: 'Litol', txt: 'Литология', color: '#000000', poz: { x: 3, y: 3 }, unit: '' },
+	par1: { par: 'Shlam', txt: 'Шламограмма', color: '#000000', poz: { x: 2, y: 3 }, unit: '' },
+};
+
+//Шаблон Геология
+var ShablongeoOknOPar = {
+	par0: { par: 'Litol', txt: 'Литология', color: '#000000', poz: { x: 3, y: 3 }, unit: '' },
+};
+
 //Список шрифтов
 var fonts = {
 	0: { name: "Arial Black" },
