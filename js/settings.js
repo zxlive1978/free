@@ -733,11 +733,11 @@ function colOK2() {
 	//Выбрана геология
 	if (($("#colitems7")[0].selectedIndex == 2 && curtemp=='depth') ) {
 		//Копирование в объект
-		curPar = JSON.stringify(Object.assign({}, geoOknOPar['par'+$("#colitems2")[0].selectedIndex]));
+		curPar = JSON.stringify(Object.assign({}, ShablongeoOknOPar['par'+$("#colitems2")[0].selectedIndex]));
 		curPar = JSON.parse(curPar);
 
-		curPar.par = geoOknOPar['par'+$("#colitems2")[0].selectedIndex].par;
-		curPar.txt = geoOknOPar['par'+$("#colitems2")[0].selectedIndex].txt;
+		curPar.par = ShablongeoOknOPar['par'+$("#colitems2")[0].selectedIndex].par;
+		curPar.txt = ShablongeoOknOPar['par'+$("#colitems2")[0].selectedIndex].txt;
 		curPar.poz.y = curXpoz + 1;
 		curPar.poz.x = Number(ParSelect.substr(3));
 		//console.log(curPar);
