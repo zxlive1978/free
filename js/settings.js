@@ -748,6 +748,9 @@ function colOK2() {
 		//Создание новой записи параметра!!!
 		//basePar[String('par'+(Object.keys(basePar).length+1))]=curPar;
 		geoOknOPar[String('par' + idr)] = curPar;
+		for (var keey in geoOknOPar){
+			console.log (txtPgeoOknOPar[keey].txt);
+		}
 		/* console.log (txtPar); */
 	}
 
