@@ -732,8 +732,27 @@ function colOK2() {
 		/* console.log (txtPar); */
 	}
 
+	//Выбрана геология
+	if (($("#colitems7")[0].selectedIndex == 2 && curtemp=='depth') ) {
+		//Копирование в объект
+		curPar = JSON.stringify(Object.assign({}, ShablontxtOknOPar['par'+$("#colitems2")[0].selectedIndex]));
+		curPar = JSON.parse(curPar);
+
+		curPar.par = ShablontxtOknOPar['par'+$("#colitems2")[0].selectedIndex].par;
+		curPar.txt = ShablontxtOknOPar['par'+$("#colitems2")[0].selectedIndex].txt;
+		curPar.poz.y = curXpoz + 1;
+		curPar.poz.x = Number(ParSelect.substr(3));
+		//console.log(curPar);
+		var idr = makeid();
+		//var idr = bigPar[String($("#colitems2").val())].par;
+		//Создание новой записи параметра!!!
+		//basePar[String('par'+(Object.keys(basePar).length+1))]=curPar;
+		geoOknOPar[String('par' + idr)] = curPar;
+		/* console.log (txtPar); */
+	}
+
 	//Выбрана текстовая метка
-	if ($("#colitems7")[0].selectedIndex == 2) {
+	if (($("#colitems7")[0].selectedIndex == 2 && curtemp=='time') || ($("#colitems7")[0].selectedIndex == 3 && curtemp=='depth')) {
 		//Копирование в объект
 		curPar = JSON.stringify(Object.assign({}, ShablontxtOknOPar['par0']));
 		curPar = JSON.parse(curPar);
