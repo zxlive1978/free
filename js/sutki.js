@@ -1404,56 +1404,7 @@ for (var key in geoOknOPar) {
 		}
 
 
-		//Границы параметра
-		var l_p1 = geoOknOPar[key].min;
-		var r_p1 = geoOknOPar[key].max;
-		var sizeedge = size_text_p;
-		if ((size_text_p != resizeH) && (resizeH < resizeV)) { sizeedge = resizeH; }
-		if ((size_text_p != resizeV) && (resizeV < resizeH)) { sizeedge = resizeV; }
-		//console.log(size_text_p, resizeH, resizeV);
-		var text_l_p1 = draw.text(String(l_p1))
-			.font({ family: Sheet.fnt, size: sizeedge })
-			.move(colmn11_x0 + w1 * steep_risk1 / 4, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
-			.center(colmn11_x0 + w1 * steep_risk1 / 4, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
-			.fill(geoOknOPar[key].color)
-
-		//Ресайз текста если не влезает!
-		if (text_l_p1.length() > weight_colmn1 * w1 * 0.1) {
-
-			var coef = text_l_p1.length() / text_l_p1.attr('font-size');
-			resizeH = weight_colmn1 * w1 / coef * 0.1;
-			text_l_p1.clear();
-			delete (text_l_p1);
-			var text_l_p1 = draw.text(String(l_p1))
-				.font({ family: Sheet.fnt, size: resizeH })
-				.move(colmn11_x0 + w1 * steep_risk1 / 4, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
-				.center(colmn11_x0 + w1 * steep_risk1 / 4, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
-				.fill(geoOknOPar[key].color)
-		}
-
-
-		var text_r_p1 = draw.text(String(r_p1))
-			.font({ family: Sheet.fnt, size: sizeedge })
-			.move(colmn11_x0 + 9.3 * w1 * steep_risk1 / 2, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
-			.center(colmn11_x0 + 9.3 * w1 * steep_risk1 / 2, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
-			.fill(geoOknOPar[key].color)
-
-		//Ресайз текста если не влезает!
-		if (text_r_p1.length() > weight_colmn1 * w1 * 0.1) {
-
-			var coef = text_r_p1.length() / text_r_p1.attr('font-size');
-			resizeH = weight_colmn1 * w1 / coef * 0.1;
-			text_r_p1.clear();
-			delete (text_r_p1);
-			var text_r_p1 = draw.text(String(r_p1))
-				.font({ family: Sheet.fnt, size: resizeH })
-				.move(colmn11_x0 + 9.3 * w1 * steep_risk1 / 2, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
-				.center(colmn11_x0 + 9.3 * w1 * steep_risk1 / 2, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
-				.fill(geoOknOPar[key].color)
-		}
-
-		meg.add(text_l_p1);
-		meg.add(text_r_p1);
+		
 		meg.add(text_name_p1);
 		meg.id(key);
 		//DragnDrop
