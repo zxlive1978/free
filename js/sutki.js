@@ -1322,7 +1322,7 @@ for (var key in geoOknOPar) {
 	if (geoOknOPar[key].poz.x <= Number(Sheet.numbs_colmns)) {
 
 
-		var rect = draw.rect(100, 100)
+		var rect = draw.image('css/1.bmp')
 		.move(colmn11_x0 + w1 * weight_colmn1 / 2, ycolmn1Poz*h1 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
 		.center(colmn11_x0 + w1 * weight_colmn1 / 2, ycolmn1Poz*h1 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
 
