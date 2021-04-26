@@ -1326,8 +1326,8 @@ for (var key in geoOknOPar) {
 			add.image('css/1.bmp');
 		  })
 		var rec=draw.rect(100, 100)
-		.radius(100)
-		// .fill(pattern)
+		// .radius(100)
+		.fill(pattern)
 		.move(colmn11_x0 + w1 * weight_colmn1 / 2, ycolmn1Poz*h1 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
 		.center(colmn11_x0 + w1 * weight_colmn1 / 2, ycolmn1Poz*h1 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
 
