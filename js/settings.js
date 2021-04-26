@@ -747,7 +747,7 @@ function colOK2() {
 		//basePar[String('par'+(Object.keys(basePar).length+1))]=curPar;
 		geoOknOPar[String('par' + idr)] = curPar;
 		// for (var keey in geoOknOPar){
-		// 	// console.log (geoOknOPar[keey].txt);
+		//  	// console.log (geoOknOPar[keey].txt);
 		// }
 		/* console.log (txtPar); */
 	}
