@@ -240,6 +240,12 @@ function init() {
 				}
 			}
 
+			for (keey in geoOknOPar) {
+				if (geoOknOPar[keey].poz.x == strNcol) {
+					numb_value = numb_value + 1;
+				}
+			}
+
 			if (max_numb < numb_value) {
 				max_numb = numb_value;
 			}
@@ -261,6 +267,10 @@ function init() {
 	}
 	for (key in txtOknOPar) {
 		if (txtOknOPar[key].poz.y > max_numb) { max_numb = txtOknOPar[key].poz.y; }
+	}
+
+	for (key in geoOknOPar) {
+		if (geoOknOPar[key].poz.y > max_numb) { max_numb = geoOknOPar[key].poz.y; }
 	}
 	var height_colmn1_p1 = h1 * Number(Sheet.disp_up) / max_numb;
 
