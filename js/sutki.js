@@ -1323,7 +1323,7 @@ for (var key in geoOknOPar) {
 
 		var img= draw.image('css/1.bmp')
 		var pattern = draw.pattern(200, 200, function(add) {
-			add.img();
+			add.img;
 		  })
 		var rec=draw.rect(100, 100)
 		.radius(100)
