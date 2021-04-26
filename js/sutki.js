@@ -1359,7 +1359,7 @@ for (var key in geoOknOPar) {
 			cur_val = String(d110d[d110d.length - 1][geoOknOPar[key].par]);
 		} catch (e) { cur_val = -2147480; }
 		if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
-		var name_p1 = geoOknOPar[key].txt + ' ' + cur_val + ' (' + geoOknOPar[key].unit + ')';
+		var name_p1 = geoOknOPar[key].txt;
 		var text_name_p1 = draw.text(name_p1)
 			.font({ family: Sheet.fnt, size: size_text_p })
 			.move(colmn11_x0 + w1 * weight_colmn1 / 2, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
