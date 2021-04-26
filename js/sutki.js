@@ -1101,6 +1101,15 @@ function init() {
 											}
 										}
 									}
+									for (var keey in geoOknOPar) {
+										//Ищем текущий столбец
+										var how = oldStr - newStr;
+										if (geoOknOPar[keey].poz.x == newCol) {
+											if (geoOknOPar[keey].poz.y >= newStr) {
+												geoOknOPar[keey].poz.y = geoOknOPar[keey].poz.y + 1;
+											}
+										}
+									}
 
 								}
 								basePar[this.attr('id')].poz.x = Number(newCol);
