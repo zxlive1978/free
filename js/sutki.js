@@ -1318,7 +1318,426 @@ function init() {
 		}
 	}
 
-
+	for (var key in geoOknOPar) {
+		if (geoOknOPar[key].poz.x <= Number(Sheet.numbs_colmns)) {
+	
+	
+	
+	
+			//Текущий столбец
+			//Ширина текущего столбца
+			weight_colmn1 = Columns["col" + String(Number((geoOknOPar[key].poz.x)))].size.w;
+			//Отступ Столбца
+			xcolmn1Poz = Columns["col" + String(Number((geoOknOPar[key].poz.x)))].poz.x;
+			ycolmn1Poz = Columns["col" + String(Number((geoOknOPar[key].poz.x)))].poz.y;
+			steep_risk1 = weight_colmn1 / Sheet.numbs_risk;
+	
+			//Шапка отступ Столбца № по Х
+			var colmn11_x0 = w1 * xcolmn1Poz;
+			var colmn11_x1 = w1 * xcolmn1Poz + w1 * weight_colmn1;
+			var colmn1_y0 = h1 * ycolmn1Poz;
+	
+			//Мегагруппа
+			var meg = draw.nested();
+			//Линия c насечками
+	
+			var line_new = draw.line(colmn11_x0, height_colmn1_p1 * Number(geoOknOPar[key].poz.y), colmn11_x1, height_colmn1_p1 * Number(geoOknOPar[key].poz.y));
+			line_new.stroke({ width: Sheet.width_line_p, color: geoOknOPar[key].color });
+			meg.add(line_new);
+	
+			for (let i = 1; i < Sheet.numbs_risk; i++) {
+				var linerisk = height_colmn1_p1 * 0.13;
+				if (linerisk > Sheet.height_risk * h1) { linerisk = Sheet.height_risk * h1; }
+				var line_new = draw.line(i * w1 * steep_risk1 + colmn11_x0, height_colmn1_p1 * Number(geoOknOPar[key].poz.y), i * w1 * steep_risk1 + colmn11_x0, Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - linerisk);
+				line_new.stroke({ width: Sheet.width_line_p, color: geoOknOPar[key].color });
+				meg.add(line_new);
+			}
+	
+			//Название параметра  и текущее значение
+			var cur_val;
+			try {
+				cur_val = String(d110d[d110d.length - 1][geoOknOPar[key].par]);
+			} catch (e) { cur_val = -2147480; }
+			if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
+			var name_p1 = geoOknOPar[key].txt + ' ' + cur_val + ' (' + geoOknOPar[key].unit + ')';
+			var text_name_p1 = draw.text(name_p1)
+				.font({ family: Sheet.fnt, size: size_text_p })
+				.move(colmn11_x0 + w1 * weight_colmn1 / 2, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
+				.center(colmn11_x0 + w1 * weight_colmn1 / 2, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
+				.fill(geoOknOPar[key].color)
+				.id(key)
+				.style({ cursor: 'pointer' });
+	
+			var resizeH = size_text_p;
+			//Ресайз текста если не влезает!
+			if (text_name_p1.length() > weight_colmn1 * w1 * 0.7) {
+	
+				var coef = text_name_p1.length() / text_name_p1.attr('font-size');
+				resizeH = weight_colmn1 * w1 / coef * 0.7;
+				text_name_p1.clear();
+				delete (text_name_p1);
+				var text_name_p1 = draw.text(name_p1)
+					.font({ family: Sheet.fnt, size: weight_colmn1 * w1 / coef * 0.7 })
+					.move(colmn11_x0 + w1 * weight_colmn1 / 2, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
+					.center(colmn11_x0 + w1 * weight_colmn1 / 2, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
+					.fill(geoOknOPar[key].color)
+					.id(key)
+					.style({ cursor: 'pointer' });
+			}
+	
+			var resizeV = size_text_p;
+			//console.log(Number(text_name_p1.attr('font-size')), height_colmn1_p1*h1, text_name_p1.attr());
+			if (Number(text_name_p1.attr('font-size')) > height_colmn1_p1 * h1 / 7.7) {
+				resizeV = height_colmn1_p1 * h1 / 7.7;
+				//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
+				text_name_p1.clear();
+				delete (text_name_p1);
+				var text_name_p1 = draw.text(name_p1)
+					.font({ family: Sheet.fnt, size: resizeV })
+					.move(colmn11_x0 + w1 * weight_colmn1 / 2, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
+					.center(colmn11_x0 + w1 * weight_colmn1 / 2, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
+					.fill(geoOknOPar[key].color)
+					.id(key)
+					.style({ cursor: 'pointer' });
+	
+				sizeedge = height_colmn1_p1 * h1 / 7.7;
+			}
+	
+	
+			//Границы параметра
+			var l_p1 = geoOknOPar[key].min;
+			var r_p1 = geoOknOPar[key].max;
+			var sizeedge = size_text_p;
+			if ((size_text_p != resizeH) && (resizeH < resizeV)) { sizeedge = resizeH; }
+			if ((size_text_p != resizeV) && (resizeV < resizeH)) { sizeedge = resizeV; }
+			//console.log(size_text_p, resizeH, resizeV);
+			var text_l_p1 = draw.text(String(l_p1))
+				.font({ family: Sheet.fnt, size: sizeedge })
+				.move(colmn11_x0 + w1 * steep_risk1 / 4, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
+				.center(colmn11_x0 + w1 * steep_risk1 / 4, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
+				.fill(geoOknOPar[key].color)
+	
+			//Ресайз текста если не влезает!
+			if (text_l_p1.length() > weight_colmn1 * w1 * 0.1) {
+	
+				var coef = text_l_p1.length() / text_l_p1.attr('font-size');
+				resizeH = weight_colmn1 * w1 / coef * 0.1;
+				text_l_p1.clear();
+				delete (text_l_p1);
+				var text_l_p1 = draw.text(String(l_p1))
+					.font({ family: Sheet.fnt, size: resizeH })
+					.move(colmn11_x0 + w1 * steep_risk1 / 4, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
+					.center(colmn11_x0 + w1 * steep_risk1 / 4, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
+					.fill(geoOknOPar[key].color)
+			}
+	
+	
+			var text_r_p1 = draw.text(String(r_p1))
+				.font({ family: Sheet.fnt, size: sizeedge })
+				.move(colmn11_x0 + 9.3 * w1 * steep_risk1 / 2, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
+				.center(colmn11_x0 + 9.3 * w1 * steep_risk1 / 2, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
+				.fill(geoOknOPar[key].color)
+	
+			//Ресайз текста если не влезает!
+			if (text_r_p1.length() > weight_colmn1 * w1 * 0.1) {
+	
+				var coef = text_r_p1.length() / text_r_p1.attr('font-size');
+				resizeH = weight_colmn1 * w1 / coef * 0.1;
+				text_r_p1.clear();
+				delete (text_r_p1);
+				var text_r_p1 = draw.text(String(r_p1))
+					.font({ family: Sheet.fnt, size: resizeH })
+					.move(colmn11_x0 + 9.3 * w1 * steep_risk1 / 2, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
+					.center(colmn11_x0 + 9.3 * w1 * steep_risk1 / 2, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
+					.fill(geoOknOPar[key].color)
+			}
+	
+			meg.add(text_l_p1);
+			meg.add(text_r_p1);
+			meg.add(text_name_p1);
+			meg.id(key);
+			//DragnDrop
+			//Контроль что начался драг
+			if (Sheet.editscrn) {
+				var draggi = false;
+				meg.on('beforedrag', function (e) {
+					e.detail.event.stopPropagation();
+					refresh = false; //navigation.js
+					draggi = true;
+					this.front();
+				})
+	
+				meg.draggable().on('dragstart', function (e) {
+					exs = e.detail.p.x;
+					eys = e.detail.p.y;
+				})
+	
+				meg.draggable().on('dragmove', function (e) {
+					ex = e.detail.p.x;
+					ey = e.detail.p.y;
+				})
+	
+				meg.draggable(
+					/* {minX: time_w*w1
+						, minY: curicosize
+						, maxX: 100*w1
+						, maxY: disp_up*h1} */
+					//, snapToGrid: height_colmn1_p1*h1/10 }
+				).on('dragend', function (e) {
+					if (isMobile) { parPan(this.attr('id')); }
+					//console.log(exs,eys,ex,ey);
+					//console.log('парам.',this.attr('id'), geoOknOPar[this.attr('id')]);
+					//console.log('полож.столб',exs/w1, ex/w1);
+					//Старое положение
+					var oldCol = geoOknOPar[this.attr('id')].poz.x;
+					var oldStr = geoOknOPar[this.attr('id')].poz.y;
+	
+					for (var key in Columns) {
+						//В какой столбец дропнуто
+						if (Columns[key].poz.x <= ex / w1 && ((Columns[key].poz.x + Columns[key].size.w) >= ex / w1)) {
+	
+							var newCol = Number(key.substr(3));
+							//Отступ в столбце
+							ycolmn1Poz = h1 * Columns[key].poz.y;
+							//В какую строку дропнуто
+							var newStr = Math.trunc((ey) / height_colmn1_p1) + 1;
+							if (newStr > 0) {
+								//если текущий столбец 
+								if (newCol == oldCol) {
+									for (var keey in basePar) {
+										//Ищем текущий столбец
+										var how = oldStr - newStr;
+										if (basePar[keey].poz.x == newCol) {
+											if (oldStr < newStr) {
+												if (basePar[keey].poz.y <= newStr && basePar[keey].poz.y > oldStr) {
+													basePar[keey].poz.y = basePar[keey].poz.y - 1;
+												}
+											} else {
+												if (basePar[keey].poz.y >= newStr && basePar[keey].poz.y < oldStr) {
+													basePar[keey].poz.y = basePar[keey].poz.y + 1;
+												}
+											}
+										}
+									}
+									for (var keey in txtPar) {
+										//Ищем текущий столбец
+										var how = oldStr - newStr;
+										if (txtPar[keey].poz.x == newCol) {
+											if (oldStr < newStr) {
+												if (txtPar[keey].poz.y <= newStr && txtPar[keey].poz.y > oldStr) {
+													txtPar[keey].poz.y = txtPar[keey].poz.y - 1;
+												}
+											} else {
+												if (txtPar[keey].poz.y >= newStr && txtPar[keey].poz.y < oldStr) {
+													txtPar[keey].poz.y = txtPar[keey].poz.y + 1;
+												}
+											}
+										}
+									}
+									for (var keey in txtOknOPar) {
+										//Ищем текущий столбец
+										var how = oldStr - newStr;
+										if (txtOknOPar[keey].poz.x == newCol) {
+											if (oldStr < newStr) {
+												if (txtOknOPar[keey].poz.y <= newStr && txtOknOPar[keey].poz.y > oldStr) {
+													txtOknOPar[keey].poz.y = txtOknOPar[keey].poz.y - 1;
+												}
+											} else {
+												if (txtOknOPar[keey].poz.y >= newStr && txtOknOPar[keey].poz.y < oldStr) {
+													txtOknOPar[keey].poz.y = txtOknOPar[keey].poz.y + 1;
+												}
+											}
+										}
+									}
+									for (var keey in geoOknOPar) {
+										//Ищем текущий столбец
+										var how = oldStr - newStr;
+										if (geoOknOPar[keey].poz.x == newCol) {
+											if (oldStr < newStr) {
+												if (geoOknOPar[keey].poz.y <= newStr && geoOknOPar[keey].poz.y > oldStr) {
+													geoOknOPar[keey].poz.y = geoOknOPar[keey].poz.y - 1;
+												}
+											} else {
+												if (geoOknOPar[keey].poz.y >= newStr && geoOknOPar[keey].poz.y < oldStr) {
+													geoOknOPar[keey].poz.y = geoOknOPar[keey].poz.y + 1;
+												}
+											}
+										}
+									}
+	
+								} else {
+									for (var keey in basePar) {
+										//Ищем текущий столбец
+										var how = oldStr - newStr;
+										if (basePar[keey].poz.x == newCol) {
+											if (basePar[keey].poz.y >= newStr) {
+												basePar[keey].poz.y = basePar[keey].poz.y + 1;
+											}
+										}
+									}
+									for (var keey in txtPar) {
+										//Ищем текущий столбец
+										var how = oldStr - newStr;
+										if (txtPar[keey].poz.x == newCol) {
+											if (txtPar[keey].poz.y >= newStr) {
+												txtPar[keey].poz.y = txtPar[keey].poz.y + 1;
+											}
+										}
+									}
+									for (var keey in txtOknOPar) {
+										//Ищем текущий столбец
+										var how = oldStr - newStr;
+										if (txtOknOPar[keey].poz.x == newCol) {
+											if (txtOknOPar[keey].poz.y >= newStr) {
+												txtOknOPar[keey].poz.y = txtOknOPar[keey].poz.y + 1;
+											}
+										}
+									}
+									for (var keey in geoOknOPar) {
+										//Ищем текущий столбец
+										var how = oldStr - newStr;
+										if (geoOknOPar[keey].poz.x == newCol) {
+											if (geoOknOPar[keey].poz.y >= newStr) {
+												geoOknOPar[keey].poz.y = geoOknOPar[keey].poz.y + 1;
+											}
+										}
+									}
+	
+								}
+								geoOknOPar[this.attr('id')].poz.x = Number(newCol);
+								geoOknOPar[this.attr('id')].poz.y = newStr;
+								/* if (Sheet.numbs_colmn1>(newStr+1)){
+									geoOknOPar[this.attr('id')].poz.y=newStr+1;
+								} else {
+									
+									geoOknOPar[this.attr('id')].poz.y=Sheet.numbs_colmn1;
+								} */
+							}
+						}
+					}
+					repaint();
+				})
+	
+				//Клик по названию параметра
+				//События Драг
+				var flag = 0;
+				meg.mousedown(function () {
+					flag = 0;
+				}, false);
+				meg.mousemove(function () {
+					flag = 1;
+				}, false);
+				meg.mouseup(function () {
+					if (flag === 0) {
+						/* console.log("click"); */
+						//Панель настроек параметра см.settings.js
+						parPan(this.attr('id'));
+					}
+					else if (flag === 1) {
+						//console.log("drag");
+					}
+				}, false);
+	
+	
+				/* text_name_p1.click(function(e) { 
+				//if (draggi){e.detail.event.stopPropagation(); return;}
+				parPan(this.attr('id'));
+				})
+				*/
+				//На шрифте по названию параметра
+				meg.mouseover(function (e) {
+					this.attr('font-size', Number(this.attr('font-size' + 3)));
+					// backcolor=this.attr('fill');
+					// this.attr('fill', getRandomColor()) ;
+				})
+	
+				//За шрифтом по названию параметра
+				meg.mouseout(function (e) {
+					//this.attr(font,({ family: Sheet.fnt, size: size_text_p }));
+					//this.attr('font-size', Number(size_text_p)) ;			
+					this.attr('fill', backcolor);
+					//console.log(this.attr());
+				})
+			}
+	
+	
+			//Графики рисуем полилинию
+			
+			if (curtemp=="depth"){
+				if (drawGraf == true && d110d.length > 0) {
+					var K_x1 = (w1 * weight_colmn1) / ((Number(geoOknOPar[key].max)) - (Number(geoOknOPar[key].min)));
+					var value = ''; 
+					var cur_value_x = colmn11_x0;
+					var cur_value_y = height_colmn1_p1 * h1;
+					//var cur_value_y_step = (h1*100 - h1*disp_up)/(end_time-start_time);
+					var cur_value_y_step = (h1 * 100 - h1 * disp_up) / (Kzoomdepth* 10);
+				
+					//Если есть хоть одна запись, то рисуем начало и конец линий(первая и последняя запись) чтобы не было дырок
+					//Первая запись если меньше 10 сек то полоса
+					if (d110d.length > 1) {
+						if (d110d[0]["Zaboj"] - start_time > 1) {
+							//cur_value_y = h1*disp_up;
+							cur_value_y = h1 * disp_up + (d110d[0]["Zaboj"] - start_time) * cur_value_y_step;
+						}
+						else {
+							cur_value_y = h1 * disp_up;
+						}
+				
+						cur_value_x = colmn11_x0 + (d110d[0][geoOknOPar[key].par]) * K_x1 - (Number(geoOknOPar[key].min)) * K_x1;
+						if (cur_value_x <= colmn11_x0) { cur_value_x = colmn11_x0 }
+						if (cur_value_x > colmn11_x1) { cur_value_x = colmn11_x1 }
+						if (cur_value_x >= 0) {
+							value = value + cur_value_x;
+							value = value + ',' + cur_value_y + ' ';
+						}
+					}
+				
+					//Последующие записи
+					for (let j = 1; j <= d110d.length -1; j++) {
+						cur_value_x = colmn11_x0 + (d110d[j][geoOknOPar[key].par]) * K_x1 - (Number(geoOknOPar[key].min)) * K_x1;
+						cur_value_y = h1 * disp_up + (d110d[j]["Zaboj"] - start_time) * cur_value_y_step;
+						//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+						/* cur_value_y =  (d110d[j]["Zaboj"]-start_time)*cur_value_y_step; */
+						if (cur_value_x <= colmn11_x0) { cur_value_x = colmn11_x0 }
+						if (cur_value_x > colmn11_x1) { cur_value_x = colmn11_x1 }
+						if (cur_value_x >= 0) {
+							value = value + cur_value_x;
+							value = value + ',' + cur_value_y + ' ';
+						}
+					}
+				
+					//Последняя запись если меньше 10 сек то полоса
+					if (d110d.length > 1) {
+						cur_value_x = colmn11_x0 + (d110d[d110d.length - 1][geoOknOPar[key].par]) * K_x1 - (Number(geoOknOPar[key].min)) * K_x1;
+						if (d110d[d110d.length - 1]["Zaboj"] - end_time > 0.1) {
+							cur_value_y = h1 * 100;
+						}
+						else {
+							//cur_value_y = h1*100;
+							cur_value_y = h1 * disp_up + (d110d[d110d.length - 1]["Zaboj"] - start_time) * cur_value_y_step;
+						}
+						cur_value_x = colmn11_x0 + (d110d[d110d.length - 1][geoOknOPar[key].par]) * K_x1 - (Number(geoOknOPar[key].min)) * K_x1;
+						if (cur_value_x <= colmn11_x0) { cur_value_x = colmn11_x0 }
+						if (cur_value_x > colmn11_x1) { cur_value_x = colmn11_x1 }
+						if (cur_value_x >= 0) {
+							value = value + cur_value_x;
+							value = value + ',' + cur_value_y + ' ';
+						}
+					}
+				
+					var polyline = draw.polyline(value).fill('none').stroke({ width: Sheet.width_gxf_line, color: geoOknOPar[key].color });
+					//polyline.back();
+					grafgroup.add(polyline);
+					//Все тела назад
+					bodygroup.back();
+					//Кривые после шапок
+					grafgroup.after(headgroup);
+	
+				}}
+		} catch (e) { }
+	
+		}
+	}
 
 
 
