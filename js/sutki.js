@@ -487,6 +487,22 @@ function init() {
 										}
 									}
 
+									for (var keey in geoOknOPar) {
+										//Ищем текущий столбец
+										var how = oldStr - newStr;
+										if (geoOknOPar[keey].poz.x == newCol) {
+											if (oldStr < newStr) {
+												if (geoOknOPar[keey].poz.y <= newStr && geoOknOPar[keey].poz.y > oldStr) {
+													geoOknOPar[keey].poz.y = geoOknOPar[keey].poz.y - 1;
+												}
+											} else {
+												if (geoOknOPar[keey].poz.y >= newStr && geoOknOPar[keey].poz.y < oldStr) {
+													geoOknOPar[keey].poz.y = geoOknOPar[keey].poz.y + 1;
+												}
+											}
+										}
+									}
+
 								} else {
 									for (var keey in basePar) {
 										//Ищем текущий столбец
@@ -512,6 +528,15 @@ function init() {
 										if (txtOknOPar[keey].poz.x == newCol) {
 											if (txtOknOPar[keey].poz.y >= newStr) {
 												txtOknOPar[keey].poz.y = txtOknOPar[keey].poz.y + 1;
+											}
+										}
+									}
+									for (var keey in geoOknOPar) {
+										//Ищем текущий столбец
+										var how = oldStr - newStr;
+										if (geoOknOPar[keey].poz.x == newCol) {
+											if (geoOknOPar[keey].poz.y >= newStr) {
+												geoOknOPar[keey].poz.y = geoOknOPar[keey].poz.y + 1;
 											}
 										}
 									}
@@ -738,6 +763,16 @@ function init() {
 									if (txtOknOPar[keey].poz.x == newCol) {
 										if (txtOknOPar[keey].poz.y >= newStr) {
 											txtOknOPar[keey].poz.y = txtOknOPar[keey].poz.y + 1;
+										}
+									}
+								}
+
+								for (var keey in geoOknOPar) {
+									//Ищем текущий столбец
+									var how = oldStr - newStr;
+									if (geoOknOPar[keey].poz.x == newCol) {
+										if (geoOknOPar[keey].poz.y >= newStr) {
+											geoOknOPar[keey].poz.y = geoOknOPar[keey].poz.y + 1;
 										}
 									}
 								}
