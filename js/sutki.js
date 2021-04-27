@@ -1318,6 +1318,7 @@ function init() {
 		}
 	}
 
+//Геология
 for (var key in geoOknOPar) {
 	if (geoOknOPar[key].poz.x <= Number(Sheet.numbs_colmns)) {
 
