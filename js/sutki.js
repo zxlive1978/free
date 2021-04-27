@@ -1321,7 +1321,7 @@ function init() {
 for (var key in geoOknOPar) {
 	if (geoOknOPar[key].poz.x <= Number(Sheet.numbs_colmns)) {
 
-		var img= draw.image('css/1.bmp')
+		// var img= draw.image('css/1.bmp')
 		var pattern = draw.pattern(16, 16, function(add) {
 			add.image('css/1.bmp');
 		  })
