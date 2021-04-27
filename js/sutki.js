@@ -1344,7 +1344,7 @@ for (var key in geoOknOPar) {
 		  })
 
 		// var rec=draw.rect(100, 100)
-		var poli=draw.polygon('0,0 100,50 50,100')
+		var poli= draw.polygon('50,0 60,40 100,50 60,60 50,100 40,60 0,50 40,40')
 		.fill(pattern)
 		.move(colmn11_x0 + w1 * weight_colmn1 / 2, h1 * disp_up)
 		.center(colmn11_x0 + w1 * weight_colmn1 / 2, h1 * disp_up)
