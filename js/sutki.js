@@ -1321,6 +1321,22 @@ function init() {
 for (var key in geoOknOPar) {
 	if (geoOknOPar[key].poz.x <= Number(Sheet.numbs_colmns)) {
 
+		
+		//Текущий столбец
+		//Ширина текущего столбца
+		weight_colmn1 = Columns["col" + String(Number((geoOknOPar[key].poz.x)))].size.w;
+		//Отступ Столбца
+		xcolmn1Poz = Columns["col" + String(Number((geoOknOPar[key].poz.x)))].poz.x;
+		ycolmn1Poz = Columns["col" + String(Number((geoOknOPar[key].poz.x)))].poz.y;
+		steep_risk1 = weight_colmn1 / Sheet.numbs_risk;
+
+
+		//Шапка отступ Столбца № по Х
+		var colmn11_x0 = w1 * xcolmn1Poz;
+		var colmn11_x1 = w1 * xcolmn1Poz + w1 * weight_colmn1;
+		var colmn1_y0 = h1 * ycolmn1Poz;
+
+		//тестирование отрисовки текстуры
 		// var img= draw.image('css/1.bmp')
 		var pattern = draw.pattern(16, 16, function(add) {
 			add.image('css/1.bmp');
@@ -1331,18 +1347,6 @@ for (var key in geoOknOPar) {
 		.move(colmn11_x0 + w1 * weight_colmn1 / 2, ycolmn1Poz*h1 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
 		.center(colmn11_x0 + w1 * weight_colmn1 / 2, ycolmn1Poz*h1 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1 - height_colmn1_p1 / 2)
 
-		//Текущий столбец
-		//Ширина текущего столбца
-		weight_colmn1 = Columns["col" + String(Number((geoOknOPar[key].poz.x)))].size.w;
-		//Отступ Столбца
-		xcolmn1Poz = Columns["col" + String(Number((geoOknOPar[key].poz.x)))].poz.x;
-		ycolmn1Poz = Columns["col" + String(Number((geoOknOPar[key].poz.x)))].poz.y;
-		steep_risk1 = weight_colmn1 / Sheet.numbs_risk;
-
-		//Шапка отступ Столбца № по Х
-		var colmn11_x0 = w1 * xcolmn1Poz;
-		var colmn11_x1 = w1 * xcolmn1Poz + w1 * weight_colmn1;
-		var colmn1_y0 = h1 * ycolmn1Poz;
 
 		//Мегагруппа
 		var meg = draw.nested();
