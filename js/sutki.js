@@ -1345,8 +1345,8 @@ for (var key in geoOknOPar) {
 		var rec=draw.rect(100, 100)
 		// .radius(100)
 		.fill(pattern)
-		.move(colmn11_x0 + w1 * weight_colmn1 / 2, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1)
-		.center(colmn11_x0 + w1 * weight_colmn1 / 2, colmn1_y0 + Number(geoOknOPar[key].poz.y) * height_colmn1_p1)
+		.move(colmn11_x0 + w1 * weight_colmn1 / 2, h1 * disp_up)
+		.center(colmn11_x0 + w1 * weight_colmn1 / 2, h1 * disp_up)
 
 
 		//Мегагруппа
