@@ -298,7 +298,7 @@ var ref_rocks = {
 		 txt:'Песчаник глин'
 	},
 	rock1:{
-		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">  <image id="image0" width="16" height="16" x="0" y="0"xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQAAAAA3iMLMAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAd2KE6QAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAHdElNRQflBBsPFRo5Tg6cAAAAKUlEQVQI1xWIsQkAAAyDPL2P5oIekDFtQEQEiMgSM67b+o3CBj9TfysHRlEZ3+9R3JoAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjEtMDQtMjdUMTU6MjE6MjYrMDM6MDDf13pRAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIxLTA0LTI3VDE1OjIxOjI2KzAzOjAwrorC7QAAAABJRU5ErkJggg==" /></svg>',
+		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">  <image id="image0" width="16" height="16" x="0" y="0"xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABlBMVEUA/wD///9vvVhRAAAAAXRSTlMAQObYZgAAAAFiS0dEAf8CLd4AAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAHdElNRQflBBwPDAjMIO51AAAAGklEQVQI12NgP8Dw/z8U/bAHITj3gzyCDUMAgBMcLZy4sSoAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjEtMDQtMjhUMTU6MTI6MDgrMDM6MDAx8rxJAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIxLTA0LTI4VDE1OjEyOjA4KzAzOjAwQK8E9QAAAABJRU5ErkJggg==" /></svg>',
 		txt:'Глина с ОРД'
    },
 }
