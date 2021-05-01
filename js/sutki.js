@@ -1724,9 +1724,9 @@ for (var key in geoOknOPar) {
 						
 						console.log(value);
 						var polyline = draw.polyline(value).fill('none').stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
-						grafgroup.add(polyline);
+						// grafgroup.add(polyline);
 						//Все тела назад
-						bodygroup.back();
+						// bodygroup.back();
 					}
 
 
@@ -1734,7 +1734,7 @@ for (var key in geoOknOPar) {
 			
 				
 				//Кривые после шапок
-				grafgroup.after(headgroup);
+				// grafgroup.after(headgroup);
 
 			}}
 	} catch (e) { }
