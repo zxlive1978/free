@@ -1694,7 +1694,7 @@ for (var key in geoOknOPar) {
 				var addon=0;
 				for (var keys in d110l) {
 					if ((geoOknOPar[key].par=='Litol' && d110l[keys].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[keys].type =='0')){
-						if ((kurnumb<Number(d110l[keys].numb)) &&  (oldgeo.top == d110l[keys].top) && (oldgeo.bot== d110l[keys].bot)){
+						if ((oldgeo.top == d110l[keys].top) && (oldgeo.bot== d110l[keys].bot)){
 							addon=Number(oldgeo.proc * K_x1);
 						} else {
 							addon=0;
@@ -1721,6 +1721,7 @@ for (var key in geoOknOPar) {
 						value = value + ',' + cur_value_y + ' ';
 						oldgeo = d110l[keys];
 						kurnumb=Number(oldgeo.numb);
+						
 						var polyline = draw.polyline(value).fill(pattern).stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
 						grafgroup.add(polyline);
 						//Все тела назад
