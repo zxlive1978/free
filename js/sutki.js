@@ -1727,8 +1727,9 @@ for (var key in geoOknOPar) {
 						grafgroup.add(polyline);
 						//Все тела назад
 						bodygroup.back();
-						value='';
+						
 					}
+					value='';
 
 
 				}
