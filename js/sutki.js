@@ -1689,9 +1689,15 @@ for (var key in geoOknOPar) {
 				// 	}
 				// }
 				for (var key in d110l) {
-					cur_value_x = colmn11_x0 + (d110l[d110l.length - 1][geoOknOPar[key].]) * K_x1;
-						value = value + cur_value_x;
-						value = value + ',' + cur_value_y + ' ';
+					cur_value_x = colmn11_x0 + d110l[key].proc * K_x1;
+					cur_value_y =  h1 * disp_up  + (d110l[key].top -start_time)*cur_value_y_step;
+					value = value + cur_value_x;
+					value = value + ',' + cur_value_y + ' ';
+					cur_value_x = colmn11_x0 + d110l[key].proc * K_x1;
+					cur_value_y =  h1 * disp_up  + (d110l[key].bot -start_time)*cur_value_y_step;
+					value = value + cur_value_x;
+					value = value + ',' + cur_value_y + ' ';
+
 
 				}
 			
