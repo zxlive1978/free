@@ -1688,8 +1688,8 @@ for (var key in geoOknOPar) {
 				// 		value = value + ',' + cur_value_y + ' ';
 				// 	}
 				// }
-				for (let j = 1; j <= d110l.length -1; j++) {
-					cur_value_x = colmn11_x0 + (d110d[d110d.length - 1][geoOknOPar[key].par]) * K_x1 - (Number(geoOknOPar[key].min)) * K_x1;
+				for (var key in d110l) {
+					cur_value_x = colmn11_x0 + (d110l[d110l.length - 1][geoOknOPar[key].]) * K_x1;
 						value = value + cur_value_x;
 						value = value + ',' + cur_value_y + ' ';
 
