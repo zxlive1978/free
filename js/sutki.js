@@ -1721,7 +1721,8 @@ for (var key in geoOknOPar) {
 						value = value + ',' + cur_value_y + ' ';
 						oldgeo = d110l[keys];
 						kurnumb=oldgeo.numb;
-					// console.log(d110l[keys]);
+						var polyline = draw.polyline(value).fill(pattern).stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
+						grafgroup.add(polyline);
 					}
 
 
