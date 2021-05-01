@@ -1723,17 +1723,14 @@ for (var key in geoOknOPar) {
 						kurnumb=oldgeo.numb;
 						var polyline = draw.polyline(value).fill(pattern).stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
 						grafgroup.add(polyline);
+						//Все тела назад
+						bodygroup.back();
 					}
 
 
 				}
 			
-				var polyline = draw.polyline(value).fill(pattern).stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
-				// console.log(value);
-				//polyline.back();
-				grafgroup.add(polyline);
-				//Все тела назад
-				bodygroup.back();
+				
 				//Кривые после шапок
 				grafgroup.after(headgroup);
 
