@@ -1722,6 +1722,7 @@ for (var key in geoOknOPar) {
 						oldgeo = d110l[keys];
 						kurnumb=Number(oldgeo.numb);
 						
+						console.log(value);
 						var polyline = draw.polyline(value).fill(pattern).stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
 						grafgroup.add(polyline);
 						//Все тела назад
