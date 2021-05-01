@@ -1343,11 +1343,11 @@ for (var key in geoOknOPar) {
 			add.svg(ref_rocks.rock4.img);
 		  })
 
-		var rec=draw.rect(100, 100)
-		// var poli= draw.polygon('50,0 60,40 100,50 60,60 50,100 40,60 0,50 40,40')
-		.fill(pattern)
-		.move(colmn11_x0 + w1 * weight_colmn1 / 2, h1 * disp_up*3)
-		.center(colmn11_x0 + w1 * weight_colmn1 / 2, h1 * disp_up*3)
+		// var rec=draw.rect(100, 100)
+		// // var poli= draw.polygon('50,0 60,40 100,50 60,60 50,100 40,60 0,50 40,40')
+		// .fill(pattern)
+		// .move(colmn11_x0 + w1 * weight_colmn1 / 2, h1 * disp_up*3)
+		// .center(colmn11_x0 + w1 * weight_colmn1 / 2, h1 * disp_up*3)
 
 
 		//Мегагруппа
