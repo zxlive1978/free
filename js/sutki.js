@@ -1689,7 +1689,7 @@ for (var key in geoOknOPar) {
 				// 	}
 				// }
 				for (var keys in d110l) {
-					if (geoOknOPar[key].par && d110l){
+					if ((geoOknOPar[key].par=='Litol' && d110l[key].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[key].type =='0')){
  					cur_value_x = colmn11_x0 + d110l[keys].proc * K_x1;
 					cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
 					value = value + cur_value_x;
