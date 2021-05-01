@@ -1722,7 +1722,7 @@ for (var key in geoOknOPar) {
 						oldgeo = d110l[keys];
 						kurnumb=Number(oldgeo.numb);
 						
-						console.log(value);
+						value='';
 						var polyline = draw.polyline(value).fill('none').stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
 						grafgroup.add(polyline);
 						//Все тела назад
