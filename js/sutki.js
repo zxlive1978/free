@@ -1688,25 +1688,34 @@ for (var key in geoOknOPar) {
 				// 		value = value + ',' + cur_value_y + ' ';
 				// 	}
 				// }
-				// console.log(geoOknOPar[key].par);
+				// прошлая запись
+				var oldgeo = d110l[0];
+				var kurnumb=oldgeo.numb;
+				var addon=0;
 				for (var keys in d110l) {
 					if ((geoOknOPar[key].par=='Litol' && d110l[keys].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[keys].type =='0')){
-					cur_value_x = colmn11_x0;
-					cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
-					value = value + cur_value_x;
-					value = value + ',' + cur_value_y + ' ';
-					cur_value_x = colmn11_x0 + d110l[keys].proc * K_x1;
-					cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
-					value = value + cur_value_x;
-					value = value + ',' + cur_value_y + ' ';
-					cur_value_x = colmn11_x0 + d110l[keys].proc * K_x1;
-					cur_value_y =  h1 * disp_up  + (d110l[keys].bot -start_time)*cur_value_y_step;
-					value = value + cur_value_x;
-					value = value + ',' + cur_value_y + ' ';
-					cur_value_x = colmn11_x0;
-					cur_value_y =  h1 * disp_up  + (d110l[keys].bot -start_time)*cur_value_y_step;
-					value = value + cur_value_x;
-					value = value + ',' + cur_value_y + ' ';
+						if (kurnumb<Number(d110l[keys].numb)){
+							addon=oldgeo.proc * K_x1;
+						} else {
+							addon=0;
+						}
+						cur_value_x = colmn11_x0 + addon;
+						cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
+						value = value + cur_value_x;
+						value = value + ',' + cur_value_y + ' ';
+						cur_value_x = colmn11_x0 + d110l[keys].proc * K_x1 + addon;
+						cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
+						value = value + cur_value_x;
+						value = value + ',' + cur_value_y + ' ';
+						cur_value_x = colmn11_x0 + d110l[keys].proc * K_x1 + addon;
+						cur_value_y =  h1 * disp_up  + (d110l[keys].bot -start_time)*cur_value_y_step;
+						value = value + cur_value_x;
+						value = value + ',' + cur_value_y + ' ';
+						cur_value_x = colmn11_x0 + addon;
+						cur_value_y =  h1 * disp_up  + (d110l[keys].bot -start_time)*cur_value_y_step;
+						value = value + cur_value_x;
+						value = value + ',' + cur_value_y + ' ';
+						oldgeo = d110l[keys];
 					// console.log(d110l[keys]);
 					}
 
