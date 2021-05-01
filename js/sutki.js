@@ -1691,11 +1691,19 @@ for (var key in geoOknOPar) {
 				// console.log(geoOknOPar[key].par);
 				for (var keys in d110l) {
 					if ((geoOknOPar[key].par=='Litol' && d110l[keys].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[keys].type =='0')){
- 					cur_value_x = colmn11_x0 + d110l[keys].proc * K_x1;
+					cur_value_x = colmn11_x0;
 					cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
 					value = value + cur_value_x;
 					value = value + ',' + cur_value_y + ' ';
 					cur_value_x = colmn11_x0 + d110l[keys].proc * K_x1;
+					cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
+					value = value + cur_value_x;
+					value = value + ',' + cur_value_y + ' ';
+					cur_value_x = colmn11_x0 + d110l[keys].proc * K_x1;
+					cur_value_y =  h1 * disp_up  + (d110l[keys].bot -start_time)*cur_value_y_step;
+					value = value + cur_value_x;
+					value = value + ',' + cur_value_y + ' ';
+					cur_value_x = colmn11_x0;
 					cur_value_y =  h1 * disp_up  + (d110l[keys].bot -start_time)*cur_value_y_step;
 					value = value + cur_value_x;
 					value = value + ',' + cur_value_y + ' ';
