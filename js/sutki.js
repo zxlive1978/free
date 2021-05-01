@@ -1692,8 +1692,7 @@ for (var key in geoOknOPar) {
 				var oldgeo = d110l[0];
 				var kurnumb=Number(oldgeo.numb);
 				var addon=0;
-				// for (var keys in d110l) {
-				var keys = d110l.length-1;
+				for (var keys in d110l) {
 					if ((geoOknOPar[key].par=='Litol' && d110l[keys].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[keys].type =='0')){
 						if ((kurnumb<Number(d110l[keys].numb)) &&  (oldgeo.top == d110l[keys].top) && (oldgeo.bot== d110l[keys].bot)){
 							addon=Number(oldgeo.proc * K_x1);
