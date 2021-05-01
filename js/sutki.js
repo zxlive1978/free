@@ -1699,13 +1699,14 @@ for (var key in geoOknOPar) {
 					cur_value_y =  h1 * disp_up  + (d110l[keys].bot -start_time)*cur_value_y_step;
 					value = value + cur_value_x;
 					value = value + ',' + cur_value_y + ' ';
+					console.log(d110l[keys]);
 					}
 
 
 				}
 			
 				var polyline = draw.polyline(value).fill('none').stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
-				console.log(value);
+				// console.log(value);
 				//polyline.back();
 				grafgroup.add(polyline);
 				//Все тела назад
