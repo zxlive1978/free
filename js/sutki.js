@@ -1690,11 +1690,11 @@ for (var key in geoOknOPar) {
 				// }
 				// прошлая запись
 				var oldgeo = d110l[0];
-				var kurnumb=oldgeo.numb;
+				var kurnumb=Number(oldgeo.numb);
 				var addon=0;
 				for (var keys in d110l) {
 					if ((geoOknOPar[key].par=='Litol' && d110l[keys].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[keys].type =='0')){
-						if (kurnumb<Number(d110l[keys].numb)){
+						if (kurnumb<Number(d110l[keys].numb)  && ){
 							addon=oldgeo.proc * K_x1;
 						} else {
 							addon=0;
