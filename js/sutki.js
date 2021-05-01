@@ -1707,26 +1707,26 @@ for (var key in geoOknOPar) {
 						cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
 						value = value + cur_value_x;
 						value = value + ',' + cur_value_y + ' ';
-						cur_value_x = colmn11_x0 + d110l[keys].proc * K_x1 + addon;
-						cur_value_y =  h1 * disp_up  + (d110l[keys].bot -start_time)*cur_value_y_step;
-						value = value + cur_value_x;
-						value = value + ',' + cur_value_y + ' ';
-						cur_value_x = colmn11_x0 + addon;
-						cur_value_y =  h1 * disp_up  + (d110l[keys].bot -start_time)*cur_value_y_step;
-						value = value + cur_value_x;
-						value = value + ',' + cur_value_y + ' ';
-						cur_value_x = colmn11_x0 + addon;
-						cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
-						value = value + cur_value_x;
-						value = value + ',' + cur_value_y + ' ';
+						// cur_value_x = colmn11_x0 + d110l[keys].proc * K_x1 + addon;
+						// cur_value_y =  h1 * disp_up  + (d110l[keys].bot -start_time)*cur_value_y_step;
+						// value = value + cur_value_x;
+						// value = value + ',' + cur_value_y + ' ';
+						// cur_value_x = colmn11_x0 + addon;
+						// cur_value_y =  h1 * disp_up  + (d110l[keys].bot -start_time)*cur_value_y_step;
+						// value = value + cur_value_x;
+						// value = value + ',' + cur_value_y + ' ';
+						// cur_value_x = colmn11_x0 + addon;
+						// cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
+						// value = value + cur_value_x;
+						// value = value + ',' + cur_value_y + ' ';
 						oldgeo = d110l[keys];
 						kurnumb=Number(oldgeo.numb);
 						
 						console.log(value);
 						var polyline = draw.polyline(value).fill('none').stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
-						// grafgroup.add(polyline);
+						grafgroup.add(polyline);
 						//Все тела назад
-						// bodygroup.back();
+						bodygroup.back();
 					}
 
 
@@ -1734,7 +1734,7 @@ for (var key in geoOknOPar) {
 			
 				
 				//Кривые после шапок
-				// grafgroup.after(headgroup);
+				grafgroup.after(headgroup);
 
 			}}
 	} catch (e) { }
