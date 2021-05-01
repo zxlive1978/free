@@ -1713,7 +1713,7 @@ for (var key in geoOknOPar) {
 
 				}
 			
-				var polyline = draw.polyline(value).fill('none').stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
+				var polyline = draw.polyline(value).fill(pattern).stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
 				// console.log(value);
 				//polyline.back();
 				grafgroup.add(polyline);
