@@ -1688,6 +1688,7 @@ for (var key in geoOknOPar) {
 				// 		value = value + ',' + cur_value_y + ' ';
 				// 	}
 				// }
+				console.log(geoOknOPar[key].par);
 				for (var keys in d110l) {
 					if ((geoOknOPar[key].par=='Litol' && d110l[key].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[key].type =='0')){
  					cur_value_x = colmn11_x0 + d110l[keys].proc * K_x1;
