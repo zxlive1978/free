@@ -1697,11 +1697,13 @@ for (var key in geoOknOPar) {
 					cur_value_y =  h1 * disp_up  + (d110l[key].bot -start_time)*cur_value_y_step;
 					value = value + cur_value_x;
 					value = value + ',' + cur_value_y + ' ';
+					
 
 
 				}
 			
 				var polyline = draw.polyline(value).fill('none').stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
+				console.log(value);
 				//polyline.back();
 				grafgroup.add(polyline);
 				//Все тела назад
