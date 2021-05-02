@@ -1728,7 +1728,7 @@ for (var key in geoOknOPar) {
 						kurnumb=Number(oldgeo.numb);
 						if (oldgeo.code == d110l[keys].code){
 							newrock = false;
-						}
+						} else {newrock = true;}
 						
 						var polyline = draw.polyline(value).fill(pattern).stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
 						grafgroup.add(polyline);
