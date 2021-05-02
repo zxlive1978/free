@@ -402,20 +402,20 @@ var ref_rocks = {
 		txt:'Нефть'
 	},
 	rock206:{
-		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="14px" viewBox="0 0 16 14" enable-background="new 0 0 16 14" xml:space="preserve"> <image id="image0" width="16" height="14" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOAgMAAABbQXQZAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEUA/wAAAAD///+llsk0 AAAAAWJLR0QCZgt8ZAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5I1hxONIAAAAX SURBVAjXY2BgZAACXEQoEOCTBxIgJQA3IgK1zFhrxQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0w NS0wMlQxNjo1NzozNiswMzowMPMVvkwAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDUtMDJUMTY6 NTc6MzUrMDM6MDCzoBxtAAAAAElFTkSuQmCC" /> </svg> ',
+		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve"> <image id="image0" width="10" height="10" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKAgMAAADwXCcuAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEX///8AgP/+/v5+0lLM AAAAAWJLR0QCZgt8ZAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5I1hxONIAAAAf SURBVAjXY2AIYGBgDWVgEA11AOPQ0AAwhvFBckA1AHZQBfF4MppWAAAAJXRFWHRkYXRlOmNyZWF0 ZQAyMDIxLTA1LTAyVDE2OjU3OjM2KzAzOjAw8xW+TAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0w NS0wMlQxNjo1NzozNSswMzowMLOgHG0AAAAASUVORK5CYII=" /> </svg> ',
 		txt:'Вода'
 	},
-	rock:{
-		img:'',
-		txt:''
+	rock207:{
+		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve"> <image id="image0" width="10" height="10" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKAgMAAADwXCcuAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAADFBMVEWAgIAAAAD//4D///8H jZiBAAAAAWJLR0QDEQxM8gAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5I1hxONIA AAAoSURBVAjXY2DMWsDAtiqAQWolA0PWKgcgnsCwatUCMAaxpYBibCsZAPylDQbINeY/AAAAJXRF WHRkYXRlOmNyZWF0ZQAyMDIxLTA1LTAyVDE2OjU3OjM2KzAzOjAw8xW+TAAAACV0RVh0ZGF0ZTpt b2RpZnkAMjAyMS0wNS0wMlQxNjo1NzozNSswMzowMLOgHG0AAAAASUVORK5CYII=" /> </svg> ',
+		txt:'Газ'
 	},
-	rock:{
-		img:'',
-		txt:''
+	rock208:{
+		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"> <image id="image0" width="16" height="16" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAADFBMVEX///8A/wD//wD////w 2U75AAAAAWJLR0QDEQxM8gAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5I1hxONIA AAAbSURBVAjXY2ANDWWAAq0GKBGq1RoK5cIBkeoAVXMIDbBly0MAAAAldEVYdGRhdGU6Y3JlYXRl ADIwMjEtMDUtMDJUMTY6NTc6MzYrMDM6MDDzFb5MAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIxLTA1 LTAyVDE2OjU3OjM1KzAzOjAws6AcbQAAAABJRU5ErkJggg==" /> </svg> ',
+		txt:'Глина с пиритом'
 	},
-	rock:{
-		img:'',
-		txt:''
+	rock209:{
+		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"> <image id="image0" width="16" height="16" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEUAgAD////+/v5PnUtZ AAAAAWJLR0QCZgt8ZAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5I1hxONIAAAAf SURBVAjXY2AAgVAggBCMAoKMSFw0WQcXFgfcsiC9ADYUDlde8ddLAAAAJXRFWHRkYXRlOmNyZWF0 ZQAyMDIxLTA1LTAyVDE2OjU3OjM2KzAzOjAw8xW+TAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0w NS0wMlQxNjo1NzozNSswMzowMLOgHG0AAAAASUVORK5CYII=" /> </svg> ',
+		txt:'Агриллит с пиритом'
 	},
 	rock:{
 		img:'',
