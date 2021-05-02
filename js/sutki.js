@@ -1745,6 +1745,8 @@ for (var key in geoOknOPar) {
 							value='';}
 						oldgeo = d110l[keys];
 						kurnumb=Number(oldgeo.numb);
+
+						value='';
 						
 					}
 					
