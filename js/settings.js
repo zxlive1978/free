@@ -417,13 +417,13 @@ var ref_rocks = {
 		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"> <image id="image0" width="16" height="16" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEUAgAD////+/v5PnUtZ AAAAAWJLR0QCZgt8ZAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5I1hxONIAAAAf SURBVAjXY2AAgVAggBCMAoKMSFw0WQcXFgfcsiC9ADYUDlde8ddLAAAAJXRFWHRkYXRlOmNyZWF0 ZQAyMDIxLTA1LTAyVDE2OjU3OjM2KzAzOjAw8xW+TAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0w NS0wMlQxNjo1NzozNSswMzowMLOgHG0AAAAASUVORK5CYII=" /> </svg> ',
 		txt:'Агриллит с пиритом'
 	},
-	rock:{
-		img:'',
-		txt:''
+	rock210:{
+		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"> <image id="image0" width="16" height="16" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEX/AAD////+/v5V6cLI AAAAAWJLR0QCZgt8ZAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5JMYVrXEAAAA1 SURBVAjXLclBDQAwDAJATNRPPxVAMvxbGWXjcSEAbCTSnDEqNEza3/wmpIQzRhUar2Xb9wJU3A/h MZhThAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0wNS0wMlQxNjo1NzozNiswMzowMPMVvkwAAAAl dEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDUtMDJUMTY6NTc6MzYrMDM6MDCCSAbwAAAAAElFTkSuQmCC" /> </svg> ',
+		txt:'Песчаник битум'
 	},
-	rock:{
-		img:'',
-		txt:''
+	rock211:{
+		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"> <image id="image0" width="16" height="16" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEX//////wD+/v4/kYjv AAAAAWJLR0QCZgt8ZAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5JMYVrXEAAAAa SURBVAjXY2AAAdHQAAEGNBAgIBqKLkZYHQCGdAMpBKKpmAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAy MS0wNS0wMlQxNjo1NzozNiswMzowMPMVvkwAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDUtMDJU MTY6NTc6MzYrMDM6MDCCSAbwAAAAAElFTkSuQmCC" /> </svg> ',
+		txt:'Алеврит'
 	},
 	rock:{
 		img:'',
