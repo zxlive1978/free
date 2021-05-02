@@ -401,9 +401,9 @@ var ref_rocks = {
 		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="10px" viewBox="0 0 10 10" enable-background="new 0 0 10 10" xml:space="preserve"> <image id="image0" width="10" height="10" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKAgMAAADwXCcuAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEX///+AQAD+/v5Xcqg+ AAAAAWJLR0QCZgt8ZAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5I1hxONIAAAAf SURBVAjXY2AIYGBgDWVgEA11AOPQ0AAwhvFBckA1AHZQBfF4MppWAAAAJXRFWHRkYXRlOmNyZWF0 ZQAyMDIxLTA1LTAyVDE2OjU3OjM2KzAzOjAw8xW+TAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0w NS0wMlQxNjo1NzozNSswMzowMLOgHG0AAAAASUVORK5CYII=" /> </svg> ',
 		txt:'Нефть'
 	},
-	rock:{
-		img:'',
-		txt:''
+	rock206:{
+		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="14px" viewBox="0 0 16 14" enable-background="new 0 0 16 14" xml:space="preserve"> <image id="image0" width="16" height="14" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOAgMAAABbQXQZAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEUA/wAAAAD///+llsk0 AAAAAWJLR0QCZgt8ZAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5I1hxONIAAAAX SURBVAjXY2BgZAACXEQoEOCTBxIgJQA3IgK1zFhrxQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0w NS0wMlQxNjo1NzozNiswMzowMPMVvkwAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDUtMDJUMTY6 NTc6MzUrMDM6MDCzoBxtAAAAAElFTkSuQmCC" /> </svg> ',
+		txt:'Вода'
 	},
 	rock:{
 		img:'',
