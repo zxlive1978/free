@@ -1339,7 +1339,7 @@ for (var key in geoOknOPar) {
 
 		//тестирование отрисовки текстуры
 		// var img= draw.image('css/1.bmp')
-		var txt7=3;
+		var txt7=0;
 		var pattern = draw.pattern(16, 16, function(add) {
 			add.svg(ref_rocks["rock"+String(txt7)].img);
 		  })
