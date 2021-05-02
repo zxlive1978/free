@@ -341,9 +341,9 @@ var ref_rocks = {
 		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"> <image id="image0" width="16" height="16" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEUA///////+/v6o24JV AAAAAWJLR0QCZgt8ZAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5I1hxONIAAAAY SURBVAjXY2AAgcDQ0FACBBiEhgaG4icAsWISYdr4/TYAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjEt MDUtMDJUMTY6NTc6MzYrMDM6MDDzFb5MAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIxLTA1LTAyVDE2 OjU3OjM1KzAzOjAws6AcbQAAAABJRU5ErkJggg==" /> </svg> ',
 		txt:'Известняк'
 	},
-	rock:{
-		img:'',
-		txt:''
+	rock181:{
+		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"> <image id="image0" width="16" height="16" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEUA///////+/v6o24JV AAAAAWJLR0QCZgt8ZAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5I1hxONIAAAAj SURBVAjXY2AAgdDQwFAkgoE1MARDDAQCQ0NDkYkQBlY0MQCAvBEVFFtH2QAAACV0RVh0ZGF0ZTpj cmVhdGUAMjAyMS0wNS0wMlQxNjo1NzozNiswMzowMPMVvkwAAAAldEVYdGRhdGU6bW9kaWZ5ADIw MjEtMDUtMDJUMTY6NTc6MzUrMDM6MDCzoBxtAAAAAElFTkSuQmCC" /> </svg> ',
+		txt:'Известн. глин.'
 	},
 	rock:{
 		img:'',
