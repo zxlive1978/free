@@ -1730,7 +1730,7 @@ for (var key in geoOknOPar) {
 						
 						
 						
-						var polyline = draw.polyline(value).fill(pattern).stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
+						var polyline = draw.polyline(value).fill(pattern);//.stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
 						grafgroup.add(polyline);
 						//Все тела назад
 						bodygroup.back();
