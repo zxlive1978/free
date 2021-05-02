@@ -317,17 +317,17 @@ var ref_rocks = {
 		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"> <image id="image0" width="16" height="16" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEX/////AAD+/v719U9j AAAAAWJLR0QCZgt8ZAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5I1hxONIAAAAb SURBVAjXYxBgEGRgwE+EAgEDgwsDCwECpA4AofYFiB8Q78gAAAAldEVYdGRhdGU6Y3JlYXRlADIw MjEtMDUtMDJUMTY6NTc6MzYrMDM6MDDzFb5MAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDIxLTA1LTAy VDE2OjU3OjM1KzAzOjAws6AcbQAAAABJRU5ErkJggg==" /> </svg> ',
 		txt:'Доломит извест.'
 	},
-	rock:{
-		img:'',
-		txt:''
+	rock175:{
+		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"> <image id="image0" width="16" height="16" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEX//wD////+/v5zosQu AAAAAXRSTlMAQObYZgAAAAFiS0dEAmYLfGQAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAHdElNRQfl BQIQOSNYcTjSAAAAHUlEQVQI12MIBQIGMACzEASrqwOGGDZ1DkCVCC4Ak7ARBd6/KcoAAAAldEVY dGRhdGU6Y3JlYXRlADIwMjEtMDUtMDJUMTY6NTc6MzYrMDM6MDDzFb5MAAAAJXRFWHRkYXRlOm1v ZGlmeQAyMDIxLTA1LTAyVDE2OjU3OjM1KzAzOjAws6AcbQAAAABJRU5ErkJggg==" /> </svg> ',
+		txt:'Алевролит'
 	},
-	rock:{
-		img:'',
-		txt:''
+	rock176:{
+		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"> <image id="image0" width="16" height="16" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEXAgAD////+/v73WkgR AAAAAXRSTlMAQObYZgAAAAFiS0dEAmYLfGQAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAHdElNRQfl BQIQOSNYcTjSAAAAHUlEQVQI12MIBQIGMACzEASrqwOGGDZ1DkCVCC4Ak7ARBd6/KcoAAAAldEVY dGRhdGU6Y3JlYXRlADIwMjEtMDUtMDJUMTY6NTc6MzYrMDM6MDDzFb5MAAAAJXRFWHRkYXRlOm1v ZGlmeQAyMDIxLTA1LTAyVDE2OjU3OjM1KzAzOjAws6AcbQAAAABJRU5ErkJggg==" /> </svg> ',
+		txt:'Алевролит бит.'
 	},
-	rock:{
-		img:'',
-		txt:''
+	rock177:{
+		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"> <image id="image0" width="16" height="16" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEX///8A/wD+/v7bVSMj AAAAAWJLR0QCZgt8ZAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5I1hxONIAAAAW SURBVAjXY2ANDWVAB6EMrBiCRKoDAII8Ar3o7UxPAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDIxLTA1 LTAyVDE2OjU3OjM2KzAzOjAw8xW+TAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAyMS0wNS0wMlQxNjo1 NzozNSswMzowMLOgHG0AAAAASUVORK5CYII=" /> </svg> ',
+		txt:'Глина'
 	},
 	rock:{
 		img:'',
