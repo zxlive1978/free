@@ -1692,6 +1692,7 @@ for (var key in geoOknOPar) {
 				var oldgeo = d110l[0];
 				var kurnumb=Number(oldgeo.numb);
 				var addon=0;
+				var newrock =true;
 				for (var keys in d110l) {
 					if ((geoOknOPar[key].par=='Litol' && d110l[keys].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[keys].type =='0')){
 						if ((kurnumb<Number(d110l[keys].numb)) &&  (oldgeo.top == d110l[keys].top) && (oldgeo.bot== d110l[keys].bot)){
@@ -1699,10 +1700,11 @@ for (var key in geoOknOPar) {
 						} else {
 							addon=0;
 						}
+						if (newrock){
 						cur_value_x = colmn11_x0 + addon;
 						cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
 						value = value + cur_value_x;
-						value = value + ',' + cur_value_y + ' ';
+						value = value + ',' + cur_value_y + ' ';}
 						cur_value_x = colmn11_x0 + d110l[keys].proc * K_x1 + addon;
 						cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
 						value = value + cur_value_x;
@@ -1721,7 +1723,9 @@ for (var key in geoOknOPar) {
 						value = value + ',' + cur_value_y + ' ';
 						oldgeo = d110l[keys];
 						kurnumb=Number(oldgeo.numb);
-						
+						if (oldgeo.code == d110l[keys].code){
+							newrock = false;
+						}
 						
 						var polyline = draw.polyline(value).fill(pattern).stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
 						grafgroup.add(polyline);
