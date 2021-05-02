@@ -1337,12 +1337,12 @@ for (var key in geoOknOPar) {
 		var colmn11_x1 = w1 * xcolmn1Poz + w1 * weight_colmn1;
 		var colmn1_y0 = h1 * ycolmn1Poz;
 
-		//тестирование отрисовки текстуры
+		// тестирование отрисовки текстуры
 		// var img= draw.image('css/1.bmp')
-		var txt7=172;
-		var pattern = draw.pattern(16, 16, function(add) {
-			add.svg(ref_rocks["rock"+String(txt7)].img);
-		  })
+		// var txt7=172;
+		// var pattern = draw.pattern(16, 16, function(add) {
+		// 	add.svg(ref_rocks["rock"+String(txt7)].img);
+		//   })
 
 		// var rec=draw.rect(100, 100)
 		// // var poli= draw.polygon('50,0 60,40 100,50 60,60 50,100 40,60 0,50 40,40')
@@ -1729,7 +1729,10 @@ for (var key in geoOknOPar) {
 						value = value + ',' + cur_value_y + ' ';
 						// }
 						
-						
+						//прорисовка породы геологии
+						var pattern = draw.pattern(16, 16, function(add) {
+							add.svg(ref_rocks["rock"+String(d110l[keys].code)].img);
+						})
 						
 						var polyline = draw.polyline(value).fill(pattern).stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
 						grafgroup.add(polyline);
