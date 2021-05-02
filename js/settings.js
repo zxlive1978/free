@@ -441,13 +441,9 @@ var ref_rocks = {
 		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"> <image id="image0" width="16" height="16" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQAAAAA3iMLMAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAd2KE6QAAAAJcEhZ cwAADsQAAA7EAZUrDhsAAAAHdElNRQflBQIQOSTGFa1xAAAADklEQVQI12P4/5+BFAQA/U4f4XOL pqwAAAAldEVYdGRhdGU6Y3JlYXRlADIwMjEtMDUtMDJUMTY6NTc6MzYrMDM6MDDzFb5MAAAAJXRF WHRkYXRlOm1vZGlmeQAyMDIxLTA1LTAyVDE2OjU3OjM2KzAzOjAwgkgG8AAAAABJRU5ErkJggg==" /> </svg> ',
 		txt:'ПУСТАЯ'
 	},
-	rock:{
-		img:'',
-		txt:''
-	},
-	rock:{
-		img:'',
-		txt:''
+	rock217:{
+		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"> <image id="image0" width="16" height="16" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEX///8AAP/+/v7PNOJe AAAAAWJLR0QCZgt8ZAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5JMYVrXEAAAAy SURBVAjXY2BAAAEBBgZRFscQBgYWByCXESYeCgQwFSwsQElGAQYWx0ABkAoHJP0gdQCeygUgkn51 nAAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0wNS0wMlQxNjo1NzozNiswMzowMPMVvkwAAAAldEVY dGRhdGU6bW9kaWZ5ADIwMjEtMDUtMDJUMTY6NTc6MzYrMDM6MDCCSAbwAAAAAElFTkSuQmCC" /> </svg> ',
+		txt:'Терригенно-сульфатно-галогенная'
 	},
 	
 
