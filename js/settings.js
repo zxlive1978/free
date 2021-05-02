@@ -389,9 +389,9 @@ var ref_rocks = {
 		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"> <image id="image0" width="16" height="16" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEX///8AAP/+/v7PNOJe AAAAAWJLR0QCZgt8ZAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5I1hxONIAAAA4 SURBVAjXNYvBCQAwDAJPcICMlEdX6P6r1ATqQ0FPAEFbiRKmN9Px7UZkiQ6FwuAcKHuuwXcd7gGD hARxK6O9SwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0wNS0wMlQxNjo1NzozNiswMzowMPMVvkwA AAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDUtMDJUMTY6NTc6MzUrMDM6MDCzoBxtAAAAAElFTkSu QmCC" /> </svg> ',
 		txt:'Кремнистая пор.'
 	},
-	rock:{
-		img:'',
-		txt:''
+	rock199:{
+		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="14px" viewBox="0 0 16 14" enable-background="new 0 0 16 14" xml:space="preserve"> <image id="image0" width="16" height="14" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAOAgMAAABbQXQZAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEUA/wAAAAD///+llsk0 AAAAAWJLR0QCZgt8ZAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5I1hxONIAAAAX SURBVAjXY2BgZAACXEQoEOCTBxIgJQA3IgK1zFhrxQAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0w NS0wMlQxNjo1NzozNiswMzowMPMVvkwAAAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDUtMDJUMTY6 NTc6MzUrMDM6MDCzoBxtAAAAAElFTkSuQmCC" /> </svg> ',
+		txt:'Кальцит'
 	},
 	rock:{
 		img:'',
