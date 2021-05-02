@@ -433,9 +433,9 @@ var ref_rocks = {
 		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"> <image id="image0" width="16" height="16" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEUAAP/////+/v6OkISz AAAAAWJLR0QCZgt8ZAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5JMYVrXEAAAAi SURBVAjXY2AAgdDQQFEkgoEVhQsRA4FA0dBQFIKBFU0MAP93DZdesCs0AAAAJXRFWHRkYXRlOmNy ZWF0ZQAyMDIxLTA1LTAyVDE2OjU3OjM2KzAzOjAw8xW+TAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAy MS0wNS0wMlQxNjo1NzozNiswMzowMIJIBvAAAAAASUVORK5CYII=" /> </svg> ',
 		txt:'Доломит глин'
 	},
-	rock:{
-		img:'',
-		txt:''
+	rock214:{
+		img:'<?xml version="1.0" encoding="UTF-8" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px" viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve"> <image id="image0" width="16" height="16" x="0" y="0" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAACBjSFJN AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACVBMVEUAAP/////+/v6OkISz AAAAAWJLR0QCZgt8ZAAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAAd0SU1FB+UFAhA5JMYVrXEAAAA4 SURBVAjXY2AAgVAggBAhoaGiDIECIq4MgaIhrgyuroGBEAlkdaJAIsQ1lMFBxJWRITQwMBRhAABZ nxAu9r49fwAAACV0RVh0ZGF0ZTpjcmVhdGUAMjAyMS0wNS0wMlQxNjo1NzozNiswMzowMPMVvkwA AAAldEVYdGRhdGU6bW9kaWZ5ADIwMjEtMDUtMDJUMTY6NTc6MzYrMDM6MDCCSAbwAAAAAElFTkSu QmCC" /> </svg> ',
+		txt:'Сульфатно-терригенная'
 	},
 	rock:{
 		img:'',
