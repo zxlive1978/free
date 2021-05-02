@@ -1734,6 +1734,7 @@ for (var key in geoOknOPar) {
 						grafgroup.add(polyline);
 						//Все тела назад
 						bodygroup.back();
+						
 						if (oldgeo.code == d110l[keys].code){
 							newrock = false;
 						} else {newrock = true;
