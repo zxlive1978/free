@@ -1750,6 +1750,7 @@ for (var key in geoOknOPar) {
 								// }
 								console.log(d110l[keys].top);
 								console.log(addon);
+								console.log(value);
 								// if (d110l[keys].top==3820){
 								// 	console.log(kurnumb);
 								// 	console.log(d110l[keys].numb);
