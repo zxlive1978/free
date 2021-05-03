@@ -1713,7 +1713,7 @@ for (var key in geoOknOPar) {
 									addon=0;
 								}
 								if (d110l[keys].top==3820){
-									console.log(d110l);
+									console.log(d110l[keys]);
 								}
 								// if (newrock){
 								cur_value_x = colmn11_x0 + addon;
