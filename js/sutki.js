@@ -1748,7 +1748,7 @@ for (var key in geoOknOPar) {
 								value = value + cur_value_x;
 								value = value + ',' + cur_value_y + ' ';
 								// }
-
+								console.log(d110l[keys].top);
 								// if (d110l[keys].top==3820){
 								// 	console.log(kurnumb);
 								// 	console.log(d110l[keys].numb);
