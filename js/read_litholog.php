@@ -32,7 +32,7 @@
 	
 	//read all
 	if ( $whatdo == 'read'){
-		$query="SELECT * FROM ".$name_base.".".$table." WHERE (".$x_id_top.">=".(int)$start_time." AND ".$x_id_top."<=".(int)$end_time.") OR (".$x_id_bot.">=".(int)$start_time." AND ".$x_id_bot."<=".(int)$end_time.") OR (".$x_id_top."<=".(int)$start_time." AND ".$x_id_bot.">=".(int)$end_time.") ORDER BY top;";
+		$query="SELECT * FROM ".$name_base.".".$table." WHERE (".$x_id_top.">=".(int)$start_time." AND ".$x_id_top."<=".(int)$end_time.") OR (".$x_id_bot.">=".(int)$start_time." AND ".$x_id_bot."<=".(int)$end_time.") OR (".$x_id_top."<=".(int)$start_time." AND ".$x_id_bot.">=".(int)$end_time.") ORDER BY top, numb;";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		$comment = array();
 		while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
