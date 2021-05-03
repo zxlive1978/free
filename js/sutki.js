@@ -1713,6 +1713,8 @@ for (var key in geoOknOPar) {
 									addon=0;
 								}
 								if (d110l[keys].top==3820){
+									console.log(kurnumb);
+									console.log(d110l[keys].numb);
 									console.log(d110l[keys]);
 								}
 								// if (newrock){
