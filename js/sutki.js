@@ -1689,67 +1689,74 @@ for (var key in geoOknOPar) {
 				// 		value = value + ',' + cur_value_y + ' ';
 				// 	}
 				// }
-				// прошлая запись
-				var oldgeo = d110l[0];
-				var kurnumb=Number(oldgeo.numb);
-				var addon=0;
-				var newrock =true;
-				for (var keys in d110l) {
-					if ((geoOknOPar[key].par=='Litol' && d110l[keys].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[keys].type =='0')){
-						if ((kurnumb<Number(d110l[keys].numb)) &&  (oldgeo.top == d110l[keys].top) && (oldgeo.bot== d110l[keys].bot)){
-							addon=addon+Number(oldgeo.proc * K_x1);
-						} else {
-							addon=0;
-						}
-						
-						// if (newrock){
-						cur_value_x = colmn11_x0 + addon;
-						cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
-						value = value + cur_value_x;
-						value = value + ',' + cur_value_y + ' ';
-					// }
+				for (var heys in d110l) {
+					if (((Number(d110l[heys].numb==0)))&&((geoOknOPar[heys].par=='Litol' && d110l[heys].type =='1') || (geoOknOPar[heys].par=='Shlam' && d110l[heys].type =='0'))){
+						// прошлая запись
+						var oldgeo = d110l[heys];
+						var kurnumb=Number(oldgeo.numb);
+						var addon=0;
+						var newrock =true;
+						for (var keys in d110l) {
+							//литология или шламограмма
+							if ((geoOknOPar[key].par=='Litol' && d110l[keys].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[keys].type =='0')){
+								//текущий интервал
+								if ((kurnumb<Number(d110l[keys].numb)) &&  (oldgeo.top == d110l[keys].top) && (oldgeo.bot== d110l[keys].bot)){
+									addon=addon+Number(oldgeo.proc * K_x1);
+								} else {
+									addon=0;
+								}
+								
+								// if (newrock){
+								cur_value_x = colmn11_x0 + addon;
+								cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
+								value = value + cur_value_x;
+								value = value + ',' + cur_value_y + ' ';
+							// }
 
-						cur_value_x = colmn11_x0 + d110l[keys].proc * K_x1 + addon;
-						cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
-						value = value + cur_value_x;
-						value = value + ',' + cur_value_y + ' ';
-						cur_value_x = colmn11_x0 + d110l[keys].proc * K_x1 + addon;
-						cur_value_y =  h1 * disp_up  + (d110l[keys].bot -start_time)*cur_value_y_step;
-						value = value + cur_value_x;
-						value = value + ',' + cur_value_y + ' ';
-						
-						// if (newrock){
-						cur_value_x = colmn11_x0 + addon;
-						cur_value_y =  h1 * disp_up  + (d110l[keys].bot -start_time)*cur_value_y_step;
-						value = value + cur_value_x;
-						value = value + ',' + cur_value_y + ' ';
-						cur_value_x = colmn11_x0 + addon;
-						cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
-						value = value + cur_value_x;
-						value = value + ',' + cur_value_y + ' ';
-						// }
-						
-						//прорисовка породы геологии
-						var pattern = draw.pattern(16, 16, function(add) {
-							add.svg(ref_rocks["rock"+String(d110l[keys].code)].img);
-						})
-						
-						var polyline = draw.polyline(value).fill(pattern).stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
-						grafgroup.add(polyline);
-						//Все тела назад
-						bodygroup.back();
+								cur_value_x = colmn11_x0 + d110l[keys].proc * K_x1 + addon;
+								cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
+								value = value + cur_value_x;
+								value = value + ',' + cur_value_y + ' ';
+								cur_value_x = colmn11_x0 + d110l[keys].proc * K_x1 + addon;
+								cur_value_y =  h1 * disp_up  + (d110l[keys].bot -start_time)*cur_value_y_step;
+								value = value + cur_value_x;
+								value = value + ',' + cur_value_y + ' ';
+								
+								// if (newrock){
+								cur_value_x = colmn11_x0 + addon;
+								cur_value_y =  h1 * disp_up  + (d110l[keys].bot -start_time)*cur_value_y_step;
+								value = value + cur_value_x;
+								value = value + ',' + cur_value_y + ' ';
+								cur_value_x = colmn11_x0 + addon;
+								cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
+								value = value + cur_value_x;
+								value = value + ',' + cur_value_y + ' ';
+								// }
+								
+								//прорисовка породы геологии
+								var pattern = draw.pattern(16, 16, function(add) {
+									add.svg(ref_rocks["rock"+String(d110l[keys].code)].img);
+								})
+								
+								var polyline = draw.polyline(value).fill(pattern).stroke({ width: Sheet.width_gxf_line, color: Sheet.syscolor });
+								grafgroup.add(polyline);
+								//Все тела назад
+								bodygroup.back();
 
-						if (oldgeo.code == d110l[keys].code){
-							newrock = false;
-						} else {newrock = true;
-							value='';}
-						oldgeo = d110l[keys];
-						kurnumb=Number(oldgeo.numb);
+								if (oldgeo.code == d110l[keys].code){
+									newrock = false;
+								} else {newrock = true;
+									value='';}
+								oldgeo = d110l[keys];
+								kurnumb=Number(oldgeo.numb);
 
-						value='';
-						
+								value='';
+								
 					}
-					
+
+
+				}
+			}
 
 
 				}
