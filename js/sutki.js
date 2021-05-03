@@ -1689,6 +1689,7 @@ for (var key in geoOknOPar) {
 				// 		value = value + ',' + cur_value_y + ' ';
 				// 	}
 				// }
+				console.log(d110l);
 				for (var heys in d110l) {
 					// console.log(Number(d110l[heys].numb);
 					if ((Number(d110l[heys].numb)==0)&&((geoOknOPar[key].par=='Litol' && d110l[heys].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[heys].type =='0'))){
