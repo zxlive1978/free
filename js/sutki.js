@@ -1702,6 +1702,7 @@ for (var key in geoOknOPar) {
 						var kurnumb=Number(oldgeo.numb);
 						var addon=0;
 						var newrock =true;
+						var yes=false;
 
 						for (var keys in d110l) {
 							//литология или шламограмма
@@ -1709,7 +1710,9 @@ for (var key in geoOknOPar) {
 								//текущий интервал
 								if ((oldgeo.top >= d110l[keys].top) && (oldgeo.bot <= d110l[keys].bot)){
 									addon=addon+Number(oldgeo.proc) * K_x1;
+									yes=true;
 								} else {
+									yes=false;
 									addon=0;
 								}
 								// if (d110l[keys].top==3820){
@@ -1752,6 +1755,7 @@ for (var key in geoOknOPar) {
 									console.log(d110l[keys]);
 									console.log(value);
 									console.log(addon);
+									console.log(yes);
 								}
 								
 								//прорисовка породы геологии
