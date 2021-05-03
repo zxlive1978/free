@@ -1689,20 +1689,25 @@ for (var key in geoOknOPar) {
 				// 		value = value + ',' + cur_value_y + ' ';
 				// 	}
 				// }
-				console.log(d110l);
-				for (var heys in d110l) {
-					// console.log(Number(d110l[heys].numb);
-					if ((Number(d110l[heys].numb)==0)&&((geoOknOPar[key].par=='Litol' && d110l[heys].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[heys].type =='0'))){
-						// прошлая запись
-						var oldgeo = d110l[heys];
+				// console.log(d110l);
+				// for (var heys in d110l) {
+				// 	// console.log(Number(d110l[heys].numb);
+				// 	if ((Number(d110l[heys].numb)==0)&&((geoOknOPar[key].par=='Litol' && d110l[heys].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[heys].type =='0'))){
+				// 		// прошлая запись
+				// 		var oldgeo = d110l[heys];
+				// 		var kurnumb=Number(oldgeo.numb);
+				// 		var addon=0;
+				// 		var newrock =true;
+						var oldgeo = d110l[0];
 						var kurnumb=Number(oldgeo.numb);
 						var addon=0;
 						var newrock =true;
+
 						for (var keys in d110l) {
 							//литология или шламограмма
 							if ((geoOknOPar[key].par=='Litol' && d110l[keys].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[keys].type =='0')){
 								//текущий интервал
-								if ((kurnumb<Number(d110l[keys].numb)) &&  (oldgeo.top == d110l[keys].top) && (oldgeo.bot== d110l[keys].bot)){
+								if ((kurnumb<Number(d110l[keys].numb)) &&  (oldgeo.top >= d110l[keys].top) && (oldgeo.bot <= d110l[keys].bot)){
 									addon=addon+Number(oldgeo.proc * K_x1);
 								} else {
 									addon=0;
@@ -1757,8 +1762,8 @@ for (var key in geoOknOPar) {
 					}
 
 
-				}
-			}
+			// 	}
+			// }
 
 
 				}
