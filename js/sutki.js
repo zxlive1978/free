@@ -1767,7 +1767,7 @@ for (var key in geoOknOPar) {
 								// } else {newrock = true;
 								// 	value='';}
 								oldgeo = d110l[keys];
-								kurnumb=Number(oldgeo.numb);
+								kurnumb=d110l[keys].numb;
 
 								value='';
 								
