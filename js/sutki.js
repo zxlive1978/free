@@ -1738,6 +1738,7 @@ for (var key in geoOknOPar) {
 								cur_value_y =  h1 * disp_up  + (d110l[keys].bot -start_time)*cur_value_y_step;
 								value = value + cur_value_x;
 								value = value + ',' + cur_value_y + ' ';
+
 								cur_value_x = colmn11_x0 + addon;
 								cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
 								value = value + cur_value_x;
@@ -1761,10 +1762,10 @@ for (var key in geoOknOPar) {
 								//Все тела назад
 								bodygroup.back();
 
-								if (oldgeo.code == d110l[keys].code){
-									newrock = false;
-								} else {newrock = true;
-									value='';}
+								// if (oldgeo.code == d110l[keys].code){
+								// 	newrock = false;
+								// } else {newrock = true;
+								// 	value='';}
 								oldgeo = d110l[keys];
 								kurnumb=Number(oldgeo.numb);
 
