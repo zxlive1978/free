@@ -1749,18 +1749,18 @@ for (var key in geoOknOPar) {
 								value = value + ',' + cur_value_y + ' ';
 								// }
 
-								if (d110l[keys].top==3820){
-									console.log(kurnumb);
-									console.log(d110l[keys].numb);
-									console.log(d110l[keys]);
-									console.log(value);
-									console.log(addon);
-									console.log(yes);
-									console.log(d110l[keys].top);
-									console.log(d110l[keys].bot);
-									console.log(oldgeo.top);
-									console.log(oldgeo.bot);
-								}
+								// if (d110l[keys].top==3820){
+								// 	console.log(kurnumb);
+								// 	console.log(d110l[keys].numb);
+								// 	console.log(d110l[keys]);
+								// 	console.log(value);
+								// 	console.log(addon);
+								// 	console.log(yes);
+								// 	console.log(d110l[keys].top);
+								// 	console.log(d110l[keys].bot);
+								// 	console.log(oldgeo.top);
+								// 	console.log(oldgeo.bot);
+								// }
 								
 								//прорисовка породы геологии
 								var pattern = draw.pattern(16, 16, function(add) {
