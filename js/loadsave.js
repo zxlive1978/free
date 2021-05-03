@@ -90,6 +90,7 @@ function savedata(name){
 
 //Загрузка файла с сервера
 function loadddata(name) {
+	read_now();
 	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
 	var filedir=_uzdec;
 	filedir = filedir+'/'+ name;
@@ -114,7 +115,7 @@ function loadddata(name) {
 				if (plan[5]==null){geoOknOPar ={}; } 
 				else{geoOknOPar = plan[5];}
 				
-				read_now();
+				
 				//Перерисовка
 				try {
 				$("#drawing").find("*").not("rect, g").remove();
