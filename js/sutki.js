@@ -1710,9 +1710,10 @@ for (var key in geoOknOPar) {
 								//текущий интервал
 								if ((oldgeo.top == d110l[keys].top) && (oldgeo.bot == d110l[keys].bot)){
 									addon=addon+Number(oldgeo.proc) * K_x1;
-									yes=true;
 								} else {
-									yes=false;
+									addon=0;
+								}
+								if (d110l[keys].numb==0) {
 									addon=0;
 								}
 								// if (d110l[keys].top==3820){
