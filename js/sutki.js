@@ -1756,6 +1756,10 @@ for (var key in geoOknOPar) {
 									console.log(value);
 									console.log(addon);
 									console.log(yes);
+									console.log(d110l[keys].top);
+									console.log(d110l[keys].bot);
+									console.log(oldgeo.top);
+									console.log(oldgeo.bot);
 								}
 								
 								//прорисовка породы геологии
