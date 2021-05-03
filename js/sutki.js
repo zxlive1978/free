@@ -1690,13 +1690,12 @@ for (var key in geoOknOPar) {
 				// 	}
 				// }
 				for (var heys in d110l) {
-					if ((geoOknOPar[heys].par=='Litol' && d110l[heys].type =='1') || (geoOknOPar[heys].par=='Shlam' && d110l[heys].type =='0')){
+					if ((Number(d110l[heys].numb)==0)&&((geoOknOPar[key].par=='Litol' && d110l[heys].type =='1') || (geoOknOPar[heys].par=='Shlam' && d110l[keys].type =='0'))){
 						// прошлая запись
 						var oldgeo = d110l[heys];
 						var kurnumb=Number(oldgeo.numb);
 						var addon=0;
 						var newrock =true;
-						console.log(kurnumb);
 						for (var keys in d110l) {
 							//литология или шламограмма
 							if ((geoOknOPar[key].par=='Litol' && d110l[keys].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[keys].type =='0')){
