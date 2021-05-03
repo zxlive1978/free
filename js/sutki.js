@@ -1696,6 +1696,7 @@ for (var key in geoOknOPar) {
 						var kurnumb=Number(oldgeo.numb);
 						var addon=0;
 						var newrock =true;
+						console.log(kurnumb);
 						for (var keys in d110l) {
 							//литология или шламограмма
 							if ((geoOknOPar[key].par=='Litol' && d110l[keys].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[keys].type =='0')){
