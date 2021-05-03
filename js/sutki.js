@@ -1707,7 +1707,7 @@ for (var key in geoOknOPar) {
 							//литология или шламограмма
 							if ((geoOknOPar[key].par=='Litol' && d110l[keys].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[keys].type =='0')){
 								//текущий интервал
-								if ((kurnumb<Number(d110l[keys].numb)) &&  (oldgeo.top >= d110l[keys].top) && (oldgeo.bot <= d110l[keys].bot)){
+								if ((kurnumb<Number(d110l[keys].numb)) &&  (Number(oldgeo.top) >= Number(d110l[keys].top)) && (Number(oldgeo.bot) <= Number(d110l[keys].bot))){
 									addon=addon+Number(oldgeo.proc * K_x1);
 								} else {
 									addon=0;
