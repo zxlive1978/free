@@ -1708,17 +1708,13 @@ for (var key in geoOknOPar) {
 							//литология или шламограмма
 							if ((geoOknOPar[key].par=='Litol' && d110l[keys].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[keys].type =='0')){
 								//текущий интервал
-								if ((oldgeo.top == d110l[keys].top) && (oldgeo.bot == d110l[keys].bot)){
+								if ((kurnumb< d110l[keys].numb)&&(oldgeo.top == d110l[keys].top) && (oldgeo.bot == d110l[keys].bot)){
 									addon=addon+Number(oldgeo.proc) * K_x1;
 								} else {
 									addon=0;
 								}
-								if (d110l[keys].numb==0) {
-									addon=0;
-								}
-								if (d110l[keys].numb==1) {
-									addon=addon+Number(oldgeo.proc) * K_x1;
-								}
+								
+								
 								// if (d110l[keys].top==3820){
 								// 	console.log(kurnumb);
 								// 	console.log(d110l[keys].numb);
