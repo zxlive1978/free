@@ -117,12 +117,12 @@ function loadddata(name) {
 				
 				
 				//Перерисовка
-				try {
-				$("#drawing").find("*").not("rect, g").remove();
-				}
-				catch(e){ }
-				onoffpan();
-				init();
+				// try {
+				// $("#drawing").find("*").not("rect, g").remove();
+				// }
+				// catch(e){ }
+				// onoffpan();
+				// init();
 				
 				
 				
