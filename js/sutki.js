@@ -1690,7 +1690,7 @@ for (var key in geoOknOPar) {
 				// 	}
 				// }
 				for (var heys in d110l) {
-					if (((Number(d110l[heys].numb==0)))&&((geoOknOPar[heys].par=='Litol' && d110l[heys].type =='1') || (geoOknOPar[heys].par=='Shlam' && d110l[heys].type =='0'))){
+					if ((geoOknOPar[heys].par=='Litol' && d110l[heys].type =='1') || (geoOknOPar[heys].par=='Shlam' && d110l[heys].type =='0')){
 						// прошлая запись
 						var oldgeo = d110l[heys];
 						var kurnumb=Number(oldgeo.numb);
