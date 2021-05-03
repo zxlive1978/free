@@ -1716,6 +1716,9 @@ for (var key in geoOknOPar) {
 								if (d110l[keys].numb==0) {
 									addon=0;
 								}
+								if (d110l[keys].numb==1) {
+									addon=addon+Number(oldgeo.proc) * K_x1;
+								}
 								// if (d110l[keys].top==3820){
 								// 	console.log(kurnumb);
 								// 	console.log(d110l[keys].numb);
