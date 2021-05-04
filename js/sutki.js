@@ -1626,7 +1626,7 @@ for (var key in geoOknOPar) {
 		}
 
 
-		//Графики рисуем полилинию
+		//Графики рисуем Геологию полилинию
 		try { 
 		if (curtemp=="depth"){
 			if (drawGraf == true && d110l.length > 0) {
@@ -1637,67 +1637,7 @@ for (var key in geoOknOPar) {
 				//var cur_value_y_step = (h1*100 - h1*disp_up)/(end_time-start_time);
 				var cur_value_y_step = (h1 * 100 - h1 * disp_up) / (Kzoomdepth* 10);
 			
-				// //Если есть хоть одна запись, то рисуем начало и конец линий(первая и последняя запись) чтобы не было дырок
-				// //Первая запись если меньше 10 сек то полоса
-				// if (d110l.length > 1) {
-				// 	if (d110d[0]["Zaboj"] - start_time > 1) {
-				// 		//cur_value_y = h1*disp_up;
-				// 		cur_value_y = h1 * disp_up + (d110d[0]["Zaboj"] - start_time) * cur_value_y_step;
-				// 	}
-				// 	else {
-				// 		cur_value_y = h1 * disp_up;
-				// 	}
-			
-				// 	cur_value_x = colmn11_x0 + (d110d[0][geoOknOPar[key].par]) * K_x1 - (Number(geoOknOPar[key].min)) * K_x1;
-				// 	if (cur_value_x <= colmn11_x0) { cur_value_x = colmn11_x0 }
-				// 	if (cur_value_x > colmn11_x1) { cur_value_x = colmn11_x1 }
-				// 	if (cur_value_x >= 0) {
-				// 		value = value + cur_value_x;
-				// 		value = value + ',' + cur_value_y + ' ';
-				// 	}
-				// }
-			
-				// //Последующие записи
-				// for (let j = 1; j <= d110d.length -1; j++) {
-				// 	cur_value_x = colmn11_x0 + (d110d[j][geoOknOPar[key].par]) * K_x1 - (Number(geoOknOPar[key].min)) * K_x1;
-				// 	cur_value_y = h1 * disp_up + (d110d[j]["Zaboj"] - start_time) * cur_value_y_step;
-				// 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-				// 	/* cur_value_y =  (d110d[j]["Zaboj"]-start_time)*cur_value_y_step; */
-				// 	if (cur_value_x <= colmn11_x0) { cur_value_x = colmn11_x0 }
-				// 	if (cur_value_x > colmn11_x1) { cur_value_x = colmn11_x1 }
-				// 	if (cur_value_x >= 0) {
-				// 		value = value + cur_value_x;
-				// 		value = value + ',' + cur_value_y + ' ';
-				// 	}
-				// }
-			
-				// //Последняя запись если меньше 10 сек то полоса
-				// if (d110d.length > 1) {
-				// 	cur_value_x = colmn11_x0 + (d110d[d110d.length - 1][geoOknOPar[key].par]) * K_x1 - (Number(geoOknOPar[key].min)) * K_x1;
-				// 	if (d110d[d110d.length - 1]["Zaboj"] - end_time > 0.1) {
-				// 		cur_value_y = h1 * 100;
-				// 	}
-				// 	else {
-				// 		//cur_value_y = h1*100;
-				// 		cur_value_y = h1 * disp_up + (d110d[d110d.length - 1]["Zaboj"] - start_time) * cur_value_y_step;
-				// 	}
-				// 	cur_value_x = colmn11_x0 + (d110d[d110d.length - 1][geoOknOPar[key].par]) * K_x1 - (Number(geoOknOPar[key].min)) * K_x1;
-				// 	if (cur_value_x <= colmn11_x0) { cur_value_x = colmn11_x0 }
-				// 	if (cur_value_x > colmn11_x1) { cur_value_x = colmn11_x1 }
-				// 	if (cur_value_x >= 0) {
-				// 		value = value + cur_value_x;
-				// 		value = value + ',' + cur_value_y + ' ';
-				// 	}
-				// }
-				// console.log(d110l);
-				// for (var heys in d110l) {
-				// 	// console.log(Number(d110l[heys].numb);
-				// 	if ((Number(d110l[heys].numb)==0)&&((geoOknOPar[key].par=='Litol' && d110l[heys].type =='1') || (geoOknOPar[key].par=='Shlam' && d110l[heys].type =='0'))){
-				// 		// прошлая запись
-				// 		var oldgeo = d110l[heys];
-				// 		var kurnumb=Number(oldgeo.numb);
-				// 		var addon=0;
-				// 		var newrock =true;
+				
 						var oldgeo = d110l[0];
 						var kurnumb=Number(oldgeo.numb);
 						var addon=0;
@@ -1737,7 +1677,7 @@ for (var key in geoOknOPar) {
 								value = value + cur_value_x;
 								value = value + ',' + cur_value_y + ' ';
 								
-								// if (newrock){
+								
 								cur_value_x = colmn11_x0 + addon;
 								cur_value_y =  h1 * disp_up  + (d110l[keys].bot -start_time)*cur_value_y_step;
 								value = value + cur_value_x;
@@ -1747,22 +1687,7 @@ for (var key in geoOknOPar) {
 								cur_value_y =  h1 * disp_up  + (d110l[keys].top -start_time)*cur_value_y_step;
 								value = value + cur_value_x;
 								value = value + ',' + cur_value_y + ' ';
-								// }
-								// console.log(d110l[keys].top);
-								// console.log(addon);
-								// console.log(value);
-								// if (d110l[keys].top==3820){
-								// 	console.log(kurnumb);
-								// 	console.log(d110l[keys].numb);
-								// 	console.log(d110l[keys]);
-								// 	console.log(value);
-								// 	console.log(addon);
-								// 	console.log(yes);
-								// 	console.log(d110l[keys].top);
-								// 	console.log(d110l[keys].bot);
-								// 	console.log(oldgeo.top);
-								// 	console.log(oldgeo.bot);
-								// }
+							
 								
 								//прорисовка породы геологии
 								var pattern = draw.pattern(16, 16, function(add) {
