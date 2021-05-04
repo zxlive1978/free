@@ -242,6 +242,7 @@ function read_next(){
 				
 			}
 		});
+		repaint();
 	}
 	
 	if (curtemp=='time'){
