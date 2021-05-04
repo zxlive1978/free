@@ -2221,7 +2221,7 @@ if (curtemp=='depth'){
 			if (strix !='col0'){
 				// var line = draw.line(w1 * time_w, beg_plats, w1 * 100, beg_plats);
 				// line.stroke({ width: Sheet.width_line_p, color: Sheet.dashcol1, dasharray: Sheet.dasharray });
-				var line = draw.line(strix.poz.x*w1, beg_plats, strix.poz.x*w1+strix.size.w*w1, beg_plats);
+				var line = draw.line(Columns[strix].poz.x*w1, beg_plats, Columns[strix].poz.x*w1+Columns[strix].size.w*w1, beg_plats);
 				line.stroke({ width: Sheet.width_line_p, color: Sheet.dashcol1, dasharray: Sheet.dasharray });
 			}
 		}
