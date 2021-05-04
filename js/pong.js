@@ -195,25 +195,6 @@ function read_next(){
 
 		$.ajax({
 			type: "POST",
-			url: 'js/read_litholog.php',
-			data: {whatdo:'read', table:wellNamelith ,start_time: start_time, end_time:end_time },
-			cache: false,
-			async: false,
-			success: function(data){
-				
-				try {
-					d110l = null;
-					d110l = JSON.parse(data);
-					// console.log(d110l)
-					
-				}
-				catch (e) { }
-				
-				
-			}
-		});
-		$.ajax({
-			type: "POST",
 			url: 'js/read_depth.php',
 			data: {whatdo:'read', table:wellNamedepth ,start_time: start_time, end_time:end_time },
 			cache: false,
@@ -232,7 +213,28 @@ function read_next(){
 					back_start_time = start_time;
 					back_end_time = null;
 					back_end_time = end_time;
-					repaint();
+					// repaint();
+					
+					$.ajax({
+						type: "POST",
+						url: 'js/read_litholog.php',
+						data: {whatdo:'read', table:wellNamelith ,start_time: start_time, end_time:end_time },
+						cache: false,
+						async: false,
+						success: function(data){
+							
+							try {
+								d110l = null;
+								d110l = JSON.parse(data);
+								// console.log(d110l)
+								repaint();
+								
+							}
+							catch (e) { }
+							
+							
+						}
+					});
 
 
 					
@@ -242,7 +244,7 @@ function read_next(){
 				
 			}
 		});
-		repaint();
+		
 	}
 	
 	if (curtemp=='time'){
