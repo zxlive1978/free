@@ -670,6 +670,34 @@ window.onload = getStart;
   </div>
 
 
+  <div class="modal fade" id="myModal99">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Настройки параметра</h4>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+
+<label  class="control-label" for="name">Параметр:  </label><label class="form-control input-lg bg-dark text-light" for="namePar22" name="namePar22" id="namePar22"></label>
+<label  class="control-label" for="ncolor">Цвет:</label><input class="form-control input-lg bg-dark text-light" type="color" id="parcolor66" name="parcolor66" value="#e66465"/><br>
+<div class="form-check"><input class="form-check-input bg-dark text-light" type="checkbox" id="pardel66" name="pardel66"/> <label class="form-check-label" for="ncolor">Удалить параметр?</label></div>
+</div>      
+        <!-- Modal footer -->
+        <div class="modal-footer">
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK66()'>Применить</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
 
 
 <div class="modal fade" id="myModal10">
