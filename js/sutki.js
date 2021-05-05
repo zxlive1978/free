@@ -3130,7 +3130,7 @@ if (curtemp=='depth'){
 							var findidx =0;
 							for (jey in d110l){
 								// console.log(d110l[jey].top);
-								if((d110l[jey].type==0 && (geoOknOPar[keey].par=='Shlam') || (d110l[jey].type==1 && (geoOknOPar[keey].par=='Litol')){
+								if((d110l[jey].type==0 && (geoOknOPar[keey].par=='Shlam')) || (d110l[jey].type==1 && (geoOknOPar[keey].par=='Litol'))){
 								//Поиск по  top bot
 								if ((d110l[jey].top<=ttime)&&(d110l[jey].bot>=ttime)){
 									findRocks['find'+String(findidx)] = d110l[jey];
