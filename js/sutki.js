@@ -3127,11 +3127,13 @@ if (curtemp=='depth'){
 							console.log(geoOknOPar[keey].txt);
 							console.log(ttime);
 							var findRocks ={};
+							var findidx =0;
 							for (jey in d110l){
 								// console.log(d110l[jey].top);
 								if ((Number(d110l[jey].top)<=ttime)&&(Number(d110l[jey].bot)>=ttime)){
-									findRocks = jey;
-									console.log(ref_rocks["rock"+String(d110l[jey].code)].txt);
+									findRocks['find'+String(findidx)] = d110l[jey];
+									// console.log(ref_rocks["rock"+String(d110l[jey].code)].txt);
+									findidx= findidx+1;
 								}
 							}
 							console.log(findRocks);
