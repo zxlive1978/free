@@ -1234,7 +1234,7 @@ function colOK5() {
 }
 
 
-//Выбранный параметр Текстовая метка
+//Выбранный параметр Геология
 function colPan66(name_select) {
 	refresh = false;
 	$("#pardel6").prop("checked", false);
