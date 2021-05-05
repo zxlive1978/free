@@ -2980,7 +2980,7 @@ if (curtemp=='depth'){
 					}
 					//Кровля подошва
 					if (Object.keys(findRocks).length>0){
-							var text_value = draw.text('Кровля '+top+'м Подошва'+bot+'м') 
+							var text_value = draw.text('Кровля '+top+' Подошва'+bot+' Мощ. '+String(Number(bot)-Number(top))) 
 								// + " " + findRocks[keey].proc + " (%)")
 								.font({ family: Sheet.fnt, size: text_size_value })
 								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
@@ -3010,7 +3010,7 @@ if (curtemp=='depth'){
 								//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
 								text_value.clear();
 								delete (text_value);
-								var text_value =   draw.text('Кровля '+top+'м Подошва'+bot+'м') 
+								var text_value =   draw.text('Кровля '+top+' Подошва'+bot+' Мощ. '+String(Number(bot)-Number(top))) 
 									.font({ family: Sheet.fnt, size: resizeV })
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
