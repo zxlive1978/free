@@ -3129,7 +3129,7 @@ if (curtemp=='depth'){
 							for (jey in d110l){
 								// console.log(d110l[jey].top);
 								if ((Number(d110l[jey].top)<=ttime)&&(Number(d110l[jey].bot)>=ttime)){
-									console.log(d110l[jey].code);
+									console.log(ref_rocks["rock"+String(d110l[jey].code)].txt);
 								}
 							}
 						}
