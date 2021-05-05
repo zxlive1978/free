@@ -3138,7 +3138,7 @@ if (curtemp=='depth'){
 									findidx= findidx+1;
 								}}
 							}
-							console.log(findRocks);
+							console.log(findRocks.length);
 						}
 						// 	if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtPar[keey].par]) };
 						// 	if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
