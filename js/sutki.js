@@ -2950,6 +2950,72 @@ if (curtemp=='depth'){
 					//Шаг вертикального отступа
 					var step_val = Sheet.height_value / numb_value;
 					var all_step = 0;
+					//Геология Текстовые метки
+					var findRocks ={};
+					var findidx =0;
+					for (keey in geoOknOPar) {
+						if (geoOknOPar[keey].poz.x == strN) {
+							var cur_val = 'пусто';
+							// console.log(geoOknOPar[keey].txt);
+							// console.log(ttime);
+							
+							for (jey in d110l){
+								// console.log(d110l[jey].top);
+								if((d110l[jey].type==0 && (geoOknOPar[keey].par=='Shlam')) || (d110l[jey].type==1 && (geoOknOPar[keey].par=='Litol'))){
+								//Поиск по  top bot
+								if ((d110l[jey].top<=ttime)&&(d110l[jey].bot>=ttime)){
+									findRocks['find'+String(findidx)] = d110l[jey];
+									// console.log(ref_rocks["rock"+String(d110l[jey].code)].txt);
+									findidx= findidx+1;
+								}}
+							}
+							// console.log(Object.keys(findRocks).length);
+							step_val = Sheet.height_value / (numb_value+Object.keys(findRocks).length+1);
+						}}
+						for (keey in findRocks) {
+						// 	if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtPar[keey].par]) };
+						// 	if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
+							var text_value = draw.text(ref_rocks["rock"+String(findRocks[key].code)].txt + " " + findRocks[key].proc + " (%)")
+								.font({ family: Sheet.fnt, size: text_size_value })
+								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+								.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+								.cx(X_cur_mouse_click)
+								//.fill(txtPar[keey].color);
+							text_value.attr({ 'fill-opacity': 1 });
+	
+	
+						// 	//Ресайз текста если не влезает!
+	
+							if (text_value.length() > Sheet.width_value * w1) {
+								var coef = text_value.length() / text_value.attr('font-size')
+								text_value.clear();
+								delete (text_value);
+								var text_value =  draw.text(ref_rocks["rock"+String(findRocks[key].code)].txt + " " + findRocks[key].proc + " (%)")
+									.font({ family: Sheet.fnt, size: Sheet.width_value * w1 / (coef * 1.1) })
+									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+									.cx(X_cur_mouse_click)
+									// .fill(txtPar[keey].color);
+								text_value.attr({ 'fill-opacity': 1 });
+							}
+	
+							if (Number(text_value.attr('font-size')) > Sheet.height_value * h1 / 7.7) {
+								let resizeV = Sheet.height_value * h1 / 7.7;
+								//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
+								text_value.clear();
+								delete (text_value);
+								var text_value =  draw.text(ref_rocks["rock"+String(findRocks[key].code)].txt + " " + findRocks[key].proc + " (%)")
+									.font({ family: Sheet.fnt, size: resizeV })
+									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+									.cx(X_cur_mouse_click)
+									// .fill(txtPar[keey].color);
+								text_value.attr({ 'fill-opacity': 1 });
+							}
+							all_step = all_step + step_val;
+							gfx_group.add(text_value);
+						
+					}
 					//Значения
 					for (keey in basePar) {
 						//График
@@ -3120,71 +3186,7 @@ if (curtemp=='depth'){
 						}
 					}
 
-					//Геология Текстовые метки
-					for (keey in geoOknOPar) {
-						if (geoOknOPar[keey].poz.x == strN) {
-							var cur_val = 'пусто';
-							console.log(geoOknOPar[keey].txt);
-							console.log(ttime);
-							var findRocks ={};
-							var findidx =0;
-							for (jey in d110l){
-								// console.log(d110l[jey].top);
-								if((d110l[jey].type==0 && (geoOknOPar[keey].par=='Shlam')) || (d110l[jey].type==1 && (geoOknOPar[keey].par=='Litol'))){
-								//Поиск по  top bot
-								if ((d110l[jey].top<=ttime)&&(d110l[jey].bot>=ttime)){
-									findRocks['find'+String(findidx)] = d110l[jey];
-									// console.log(ref_rocks["rock"+String(d110l[jey].code)].txt);
-									findidx= findidx+1;
-								}}
-							}
-							console.log(Object.keys(findRocks).length);
-						}
-						// 	if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtPar[keey].par]) };
-						// 	if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
-						// 	var text_value = draw.text(txtPar[keey].txt + " " + cur_val + " (" + txtPar[keey].unit + ")")
-						// 		.font({ family: Sheet.fnt, size: text_size_value })
-						// 		// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
-						// 		.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
-						// 		.cx(X_cur_mouse_click)
-						// 		.fill(txtPar[keey].color);
-						// 	text_value.attr({ 'fill-opacity': 1 });
-	
-	
-						// 	//Ресайз текста если не влезает!
-	
-						// 	if (text_value.length() > Sheet.width_value * w1) {
-						// 		var coef = text_value.length() / text_value.attr('font-size')
-						// 		text_value.clear();
-						// 		delete (text_value);
-						// 		var text_value = draw.text(txtPar[keey].txt + " " + cur_val + " (" + txtPar[keey].unit + ")")
-						// 			.font({ family: Sheet.fnt, size: Sheet.width_value * w1 / (coef * 1.1) })
-						// 			// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
-						// 			.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
-						// 			.cx(X_cur_mouse_click)
-						// 			.fill(txtPar[keey].color);
-						// 		text_value.attr({ 'fill-opacity': 1 });
-	
-	
-						// 	}
-	
-						// 	if (Number(text_value.attr('font-size')) > Sheet.height_value * h1 / 7.7) {
-						// 		let resizeV = Sheet.height_value * h1 / 7.7;
-						// 		//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
-						// 		text_value.clear();
-						// 		delete (text_value);
-						// 		var text_value = draw.text(txtPar[keey].txt + " " + cur_val + " (" + txtPar[keey].unit + ")")
-						// 			.font({ family: Sheet.fnt, size: resizeV })
-						// 			// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
-						// 			.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
-						// 			.cx(X_cur_mouse_click)
-						// 			.fill(txtPar[keey].color);
-						// 		text_value.attr({ 'fill-opacity': 1 });
-						// 	}
-						// 	all_step = all_step + step_val;
-						// 	gfx_group.add(text_value);
-						// }
-					}
+					
 					var gfxr = draw.polygon((X_cur_mouse_click - w1 * (Sheet.width_value / 2 - 0.5)) + ',' + (Y_cur_mouse_click - h1 * (Sheet.height_value + 0.5)) + ' ' + (X_cur_mouse_click + w1 * (Sheet.width_value / 2 + 0.5)) + ',' + (Y_cur_mouse_click - h1 * (Sheet.height_value + 0.5)) + ' ' + (X_cur_mouse_click + w1 * (Sheet.width_value / 2 + 0.5)) + ' ' + Y_cur_mouse_click + ' ' + (X_cur_mouse_click - w1 * (Sheet.width_value / 2 - 0.5)) + ' ' + Y_cur_mouse_click)
 	
 						.fill({ color: Sheet.curcolorval })
