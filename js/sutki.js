@@ -3127,7 +3127,7 @@ if (curtemp=='depth'){
 							console.log(geoOknOPar[keey].txt);
 							console.log(ttime);
 							for (jey in d110l){
-								// console.log(d110l[jey].code);
+								console.log(d110l[jey].top);
 								if ((Number(d110l[jey].top)>=ttime)&&(Number(d110l[jey].bot)<=ttime)){
 									console.log(d110l[jey].code);
 								}
