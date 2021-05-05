@@ -2951,11 +2951,14 @@ if (curtemp=='depth'){
 					var step_val = Sheet.height_value / numb_value;
 					var all_step = 0;
 					//Геология Текстовые метки
-					var findRocks ={};
-					var findidx =0;
+					let findRocks ={};
+					let findidx =0;
+					let top=0;
+					let bot=0;
+				
 					for (keey in geoOknOPar) {
 						if (geoOknOPar[keey].poz.x == strN) {
-							var cur_val = 'пусто';
+							let cur_val = 'пусто';
 							// console.log(geoOknOPar[keey].txt);
 							// console.log(ttime);
 							
@@ -2967,6 +2970,8 @@ if (curtemp=='depth'){
 									findRocks['find'+String(findidx)] = d110l[jey];
 									// console.log(ref_rocks["rock"+String(d110l[jey].code)].txt);
 									findidx= findidx+1;
+									top=d110l[jey].top;
+									bot=d110l[jey].bot;
 								}}
 							}
 							// console.log(Object.keys(findRocks).length);
@@ -2975,7 +2980,7 @@ if (curtemp=='depth'){
 					}
 					//Кровля подошва
 					if (Object.keys(findRocks).length>0){
-							var text_value = draw.text(findRocks[0].top) 
+							var text_value = draw.text('Кровля '+top+'м Подошва'+bot+'м') 
 								// + " " + findRocks[keey].proc + " (%)")
 								.font({ family: Sheet.fnt, size: text_size_value })
 								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
@@ -2987,34 +2992,34 @@ if (curtemp=='depth'){
 	
 						// // 	//Ресайз текста если не влезает!
 	
-						// 	if (text_value.length() > Sheet.width_value * w1) {
-						// 		var coef = text_value.length() / text_value.attr('font-size')
-						// 		text_value.clear();
-						// 		delete (text_value);
-						// 		var text_value =  draw.text(ref_rocks["rock"+String(findRocks[keey].code)].txt + " " + findRocks[keey].proc + " (%)")
-						// 			.font({ family: Sheet.fnt, size: Sheet.width_value * w1 / (coef * 1.1) })
-						// 			// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
-						// 			.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
-						// 			.cx(X_cur_mouse_click)
-						// 			// .fill(txtPar[keey].color);
-						// 		text_value.attr({ 'fill-opacity': 1 });
-						// 	}
+							if (text_value.length() > Sheet.width_value * w1) {
+								var coef = text_value.length() / text_value.attr('font-size')
+								text_value.clear();
+								delete (text_value);
+								var text_value =   draw.text('Кровля '+top+'м Подошва'+bot+'м') 
+									.font({ family: Sheet.fnt, size: Sheet.width_value * w1 / (coef * 1.1) })
+									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+									.cx(X_cur_mouse_click)
+									// .fill(txtPar[keey].color);
+								text_value.attr({ 'fill-opacity': 1 });
+							}
 	
-						// 	if (Number(text_value.attr('font-size')) > Sheet.height_value * h1 / 7.7) {
-						// 		let resizeV = Sheet.height_value * h1 / 7.7;
-						// 		//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
-						// 		text_value.clear();
-						// 		delete (text_value);
-						// 		var text_value =  draw.text(ref_rocks["rock"+String(findRocks[keey].code)].txt + " " + findRocks[keey].proc + " (%)")
-						// 			.font({ family: Sheet.fnt, size: resizeV })
-						// 			// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
-						// 			.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
-						// 			.cx(X_cur_mouse_click)
-						// 			// .fill(txtPar[keey].color);
-						// 		text_value.attr({ 'fill-opacity': 1 });
-						// 	}
-						// 	all_step = all_step + step_val;
-						// 	gfx_group.add(text_value);
+							if (Number(text_value.attr('font-size')) > Sheet.height_value * h1 / 7.7) {
+								let resizeV = Sheet.height_value * h1 / 7.7;
+								//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
+								text_value.clear();
+								delete (text_value);
+								var text_value =   draw.text('Кровля '+top+'м Подошва'+bot+'м') 
+									.font({ family: Sheet.fnt, size: resizeV })
+									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+									.cx(X_cur_mouse_click)
+									// .fill(txtPar[keey].color);
+								text_value.attr({ 'fill-opacity': 1 });
+							}
+							all_step = all_step + step_val;
+							gfx_group.add(text_value);
 						
 						}
 					// СОдержание породы
