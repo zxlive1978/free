@@ -2225,6 +2225,7 @@ if (curtemp=='depth'){
 		// 		line.stroke({ width: Sheet.width_line_p, color: Sheet.dashcol1, dasharray: Sheet.dasharray });
 		// 	}
 		// }
+		
 		var line = draw.line(w1 * time_w, beg_plats, w1 * 100, beg_plats);
 		line.stroke({ width: Sheet.width_line_p, color: Sheet.dashcol1, dasharray: Sheet.dasharray });
 				
