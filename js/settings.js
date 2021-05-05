@@ -570,6 +570,10 @@ function parOK() {
 
 			if (txtOknOPar[key].poz.x == curcol && txtOknOPar[key].poz.y > curnumb) { txtOknOPar[key].poz.y -= 1; }
 		}
+		for (key in geoOknOPar) {
+
+			if (geoOknOPar[key].poz.x == curcol && geoOknOPar[key].poz.y > curnumb) { geoOknOPar[key].poz.y -= 1; }
+		}
 
 		//Удалить параметр
 		delete (basePar[String(ParSelect)]);
@@ -1234,8 +1238,8 @@ function colOK5() {
 }
 
 
-//Выбранный параметр Геология
-function colPan66(name_select) {
+//Выбранный параметр текстовая метка
+function colPan6(name_select) {
 	refresh = false;
 	$("#pardel6").prop("checked", false);
 	//Установка атрибутов цвет
@@ -1248,7 +1252,7 @@ function colPan66(name_select) {
 
 }
 
-function colOK66() {
+function colOK6() {
 	/* PArmyDialog6.hide(); */
 
 	refresh = false; //navigation.js
@@ -1274,9 +1278,66 @@ function colOK66() {
 
 			if (txtOknOPar[key].poz.x == curcol && txtOknOPar[key].poz.y > curnumb) { txtOknOPar[key].poz.y -= 1; }
 		}
+		for (key in geoOknOPar) {
+
+			if (geoOknOPar[key].poz.x == curcol && geoOknOPar[key].poz.y > curnumb) { geoOknOPar[key].poz.y -= 1; }
+		}
 
 		//Удалить параметр
 		delete (txtOknOPar[String(ParSelect)]);
+	}
+	/* $('#nastrtxtlabel').iziModal('close'); */
+
+	repaint();
+}
+
+//Выбранный параметр Геология
+function colPan66(name_select) {
+	refresh = false;
+	$("#pardel66").prop("checked", false);
+	//Установка атрибутов цвет
+	$("#parcolor66").val(geoOknOPar[name_select].color);
+	ParSelect = name_select;
+	/* PArmyDialog6.show(); */
+	/* $("#nastrtxtlabel").css('background-color', Sheet.curcolorval);
+	$('#nastrtxtlabel').iziModal('open'); */
+	$("#myModal99").modal('show');
+
+}
+
+function colOK66() {
+	/* PArmyDialog6.hide(); */
+
+	refresh = false; //navigation.js
+	geoOknOPar[ParSelect].color = String($("#parcolor66").val());
+
+	//Проверить "Удалить параметр"
+	if ($("#pardel66").prop("checked")) {
+		//Текущая позиция
+		var curcol = geoOknOPar[String(ParSelect)].poz.x;
+		var curnumb = geoOknOPar[String(ParSelect)].poz.y;
+		//парметры
+		for (key in basePar) {
+
+			if (basePar[key].poz.x == curcol && basePar[key].poz.y > curnumb) { basePar[key].poz.y -= 1; }
+		}
+
+		for (key in txtPar) {
+
+			if (txtPar[key].poz.x == curcol && txtPar[key].poz.y > curnumb) { txtPar[key].poz.y -= 1; }
+		}
+
+		for (key in txtOknOPar) {
+
+			if (txtOknOPar[key].poz.x == curcol && txtOknOPar[key].poz.y > curnumb) { txtOknOPar[key].poz.y -= 1; }
+		}
+
+		for (key in geoOknOPar) {
+
+			if (geoOknOPar[key].poz.x == curcol && geoOknOPar[key].poz.y > curnumb) { geoOknOPar[key].poz.y -= 1; }
+		}
+		//Удалить параметр
+		delete (geoOknOPar[String(ParSelect)]);
 	}
 	/* $('#nastrtxtlabel').iziModal('close'); */
 
