@@ -3042,8 +3042,9 @@ if (curtemp=='depth'){
 							var text_value = draw.text(ref_rocks["rock"+String(findRocks[keey].code)].txt + " " + String(findRocks[keey].pro*100) + " (%)")
 								.font({ family: Sheet.fnt, size: text_size_value })
 								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
-								.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+								.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step+step_val*h1/2)
 								.cx(X_cur_mouse_click)
+								.cy()
 								.fill(colith);
 							text_value.attr({ 'fill-opacity': 1 });
 	
@@ -3057,7 +3058,7 @@ if (curtemp=='depth'){
 								var text_value =  draw.text(ref_rocks["rock"+String(findRocks[keey].code)].txt + " " + String(findRocks[keey].proc*100) + " (%)")
 									.font({ family: Sheet.fnt, size: Sheet.width_value * w1 / (coef * 1.1) })
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
-									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step+step_val*h1/2)
 									.cx(X_cur_mouse_click)
 									.fill(colith);
 								text_value.attr({ 'fill-opacity': 1 });
@@ -3071,7 +3072,7 @@ if (curtemp=='depth'){
 								var text_value =  draw.text(ref_rocks["rock"+String(findRocks[keey].code)].txt + " " + String(findRocks[keey].proc*100) + " (%)")
 									.font({ family: Sheet.fnt, size: resizeV })
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
-									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step+step_val*h1/2)
 									.cx(X_cur_mouse_click)
 									.fill(colith);
 								text_value.attr({ 'fill-opacity': 1 });
