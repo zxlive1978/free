@@ -1235,7 +1235,7 @@ function colOK5() {
 
 
 //Выбранный параметр Текстовая метка
-function colPan6(name_select) {
+function colPan66(name_select) {
 	refresh = false;
 	$("#pardel6").prop("checked", false);
 	//Установка атрибутов цвет
@@ -1248,7 +1248,7 @@ function colPan6(name_select) {
 
 }
 
-function colOK6() {
+function colOK66() {
 	/* PArmyDialog6.hide(); */
 
 	refresh = false; //navigation.js
