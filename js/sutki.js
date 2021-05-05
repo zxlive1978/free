@@ -3044,7 +3044,6 @@ if (curtemp=='depth'){
 								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step+step_val*h1/2)
 								.cx(X_cur_mouse_click)
-								.cy()
 								.fill(colith);
 							text_value.attr({ 'fill-opacity': 1 });
 	
