@@ -3123,9 +3123,14 @@ if (curtemp=='depth'){
 					//Геология Текстовые метки
 					for (keey in geoOknOPar) {
 						if (geoOknOPar[keey].poz.x == strN) {
-							var cur_val = -2147480;
+							var cur_val = 'пусто';
 							console.log(geoOknOPar[keey].txt);
 							console.log(ttime);
+							for (jey in d110l){
+								if ((d110l[jey].top>=ttime)&&(d110l[jey].bot<=ttime)){
+									console.log(d110l[jey].code);
+								}
+							}
 						}
 						// 	if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtPar[keey].par]) };
 						// 	if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
