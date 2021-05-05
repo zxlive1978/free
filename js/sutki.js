@@ -2985,40 +2985,39 @@ if (curtemp=='depth'){
 							text_value.attr({ 'fill-opacity': 1 });
 	
 	
-						// 	//Ресайз текста если не влезает!
+						// // 	//Ресайз текста если не влезает!
 	
-							if (text_value.length() > Sheet.width_value * w1) {
-								var coef = text_value.length() / text_value.attr('font-size')
-								text_value.clear();
-								delete (text_value);
-								var text_value =  draw.text(ref_rocks["rock"+String(findRocks[keey].code)].txt + " " + findRocks[keey].proc + " (%)")
-									.font({ family: Sheet.fnt, size: Sheet.width_value * w1 / (coef * 1.1) })
-									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
-									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
-									.cx(X_cur_mouse_click)
-									// .fill(txtPar[keey].color);
-								text_value.attr({ 'fill-opacity': 1 });
-							}
+						// 	if (text_value.length() > Sheet.width_value * w1) {
+						// 		var coef = text_value.length() / text_value.attr('font-size')
+						// 		text_value.clear();
+						// 		delete (text_value);
+						// 		var text_value =  draw.text(ref_rocks["rock"+String(findRocks[keey].code)].txt + " " + findRocks[keey].proc + " (%)")
+						// 			.font({ family: Sheet.fnt, size: Sheet.width_value * w1 / (coef * 1.1) })
+						// 			// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+						// 			.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+						// 			.cx(X_cur_mouse_click)
+						// 			// .fill(txtPar[keey].color);
+						// 		text_value.attr({ 'fill-opacity': 1 });
+						// 	}
 	
-							if (Number(text_value.attr('font-size')) > Sheet.height_value * h1 / 7.7) {
-								let resizeV = Sheet.height_value * h1 / 7.7;
-								//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
-								text_value.clear();
-								delete (text_value);
-								var text_value =  draw.text(ref_rocks["rock"+String(findRocks[keey].code)].txt + " " + findRocks[keey].proc + " (%)")
-									.font({ family: Sheet.fnt, size: resizeV })
-									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
-									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
-									.cx(X_cur_mouse_click)
-									// .fill(txtPar[keey].color);
-								text_value.attr({ 'fill-opacity': 1 });
-							}
-							all_step = all_step + step_val;
-							gfx_group.add(text_value);
+						// 	if (Number(text_value.attr('font-size')) > Sheet.height_value * h1 / 7.7) {
+						// 		let resizeV = Sheet.height_value * h1 / 7.7;
+						// 		//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
+						// 		text_value.clear();
+						// 		delete (text_value);
+						// 		var text_value =  draw.text(ref_rocks["rock"+String(findRocks[keey].code)].txt + " " + findRocks[keey].proc + " (%)")
+						// 			.font({ family: Sheet.fnt, size: resizeV })
+						// 			// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+						// 			.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+						// 			.cx(X_cur_mouse_click)
+						// 			// .fill(txtPar[keey].color);
+						// 		text_value.attr({ 'fill-opacity': 1 });
+						// 	}
+						// 	all_step = all_step + step_val;
+						// 	gfx_group.add(text_value);
 						
-						
-
 						}
+					// СОдержание породы
 					for (keey in findRocks) {
 						// 	if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtPar[keey].par]) };
 						// 	if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
