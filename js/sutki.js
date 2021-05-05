@@ -3052,6 +3052,9 @@ if (curtemp=='depth'){
 							gfx_group.add(text_value);
 						}
 					}
+
+					
+
 					//Текстовые метки Ключевой параметр
 					for (keey in txtOknOPar) {
 						if (txtOknOPar[keey].poz.x == strN) {
@@ -3114,6 +3117,56 @@ if (curtemp=='depth'){
 								all_step = all_step + step_val;
 								gfx_group.add(text_value);
 							}
+						}
+					}
+
+					//Геология Текстовые метки
+					for (keey in txtPar) {
+						if (txtPar[keey].poz.x == strN) {
+							var cur_val = -2147480;
+							if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtPar[keey].par]) };
+							if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
+							var text_value = draw.text(txtPar[keey].txt + " " + cur_val + " (" + txtPar[keey].unit + ")")
+								.font({ family: Sheet.fnt, size: text_size_value })
+								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+								.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+								.cx(X_cur_mouse_click)
+								.fill(txtPar[keey].color);
+							text_value.attr({ 'fill-opacity': 1 });
+	
+	
+							//Ресайз текста если не влезает!
+	
+							if (text_value.length() > Sheet.width_value * w1) {
+								var coef = text_value.length() / text_value.attr('font-size')
+								text_value.clear();
+								delete (text_value);
+								var text_value = draw.text(txtPar[keey].txt + " " + cur_val + " (" + txtPar[keey].unit + ")")
+									.font({ family: Sheet.fnt, size: Sheet.width_value * w1 / (coef * 1.1) })
+									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+									.cx(X_cur_mouse_click)
+									.fill(txtPar[keey].color);
+								text_value.attr({ 'fill-opacity': 1 });
+	
+	
+							}
+	
+							if (Number(text_value.attr('font-size')) > Sheet.height_value * h1 / 7.7) {
+								let resizeV = Sheet.height_value * h1 / 7.7;
+								//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
+								text_value.clear();
+								delete (text_value);
+								var text_value = draw.text(txtPar[keey].txt + " " + cur_val + " (" + txtPar[keey].unit + ")")
+									.font({ family: Sheet.fnt, size: resizeV })
+									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+									.cx(X_cur_mouse_click)
+									.fill(txtPar[keey].color);
+								text_value.attr({ 'fill-opacity': 1 });
+							}
+							all_step = all_step + step_val;
+							gfx_group.add(text_value);
 						}
 					}
 					var gfxr = draw.polygon((X_cur_mouse_click - w1 * (Sheet.width_value / 2 - 0.5)) + ',' + (Y_cur_mouse_click - h1 * (Sheet.height_value + 0.5)) + ' ' + (X_cur_mouse_click + w1 * (Sheet.width_value / 2 + 0.5)) + ',' + (Y_cur_mouse_click - h1 * (Sheet.height_value + 0.5)) + ' ' + (X_cur_mouse_click + w1 * (Sheet.width_value / 2 + 0.5)) + ' ' + Y_cur_mouse_click + ' ' + (X_cur_mouse_click - w1 * (Sheet.width_value / 2 - 0.5)) + ' ' + Y_cur_mouse_click)
