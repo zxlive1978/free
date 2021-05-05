@@ -2955,6 +2955,7 @@ if (curtemp=='depth'){
 					let findidx =0;
 					let top=0;
 					let bot=0;
+					let colith =0;
 				
 					for (keey in geoOknOPar) {
 						if (geoOknOPar[keey].poz.x == strN) {
@@ -2972,6 +2973,7 @@ if (curtemp=='depth'){
 									findidx= findidx+1;
 									top=d110l[jey].top;
 									bot=d110l[jey].bot;
+									colith=geoOknOPar[keey].color;
 								}}
 							}
 							// console.log(Object.keys(findRocks).length);
@@ -2980,13 +2982,13 @@ if (curtemp=='depth'){
 					}
 					//Кровля подошва
 					if (Object.keys(findRocks).length>0){
-							var text_value = draw.text('Кровля '+top+' Подошва'+bot+' Мощ. '+String(Number(bot)-Number(top))) 
+							var text_value = draw.text('Кровля '+top+' Подошва '+bot+' Мощ. '+String(Number(bot)-Number(top))) 
 								// + " " + findRocks[keey].proc + " (%)")
 								.font({ family: Sheet.fnt, size: text_size_value })
 								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
 								.cx(X_cur_mouse_click)
-								//.fill(txtPar[keey].color);
+								.fill(colith);
 							text_value.attr({ 'fill-opacity': 1 });
 	
 	
@@ -2996,12 +2998,12 @@ if (curtemp=='depth'){
 								var coef = text_value.length() / text_value.attr('font-size')
 								text_value.clear();
 								delete (text_value);
-								var text_value =   draw.text('Кровля '+top+' Подошва'+bot+' Мощ. '+String(Number(bot)-Number(top))) 
+								var text_value =   draw.text('Кровля '+top+' Подошва '+bot+' Мощ. '+String(Number(bot)-Number(top))) 
 									.font({ family: Sheet.fnt, size: Sheet.width_value * w1 / (coef * 1.1) })
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
 									.cx(X_cur_mouse_click)
-									// .fill(txtPar[keey].color);
+									.fill(colith);
 								text_value.attr({ 'fill-opacity': 1 });
 							}
 	
@@ -3010,12 +3012,12 @@ if (curtemp=='depth'){
 								//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
 								text_value.clear();
 								delete (text_value);
-								var text_value =   draw.text('Кровля '+top+' Подошва'+bot+' Мощ. '+String(Number(bot)-Number(top))) 
+								var text_value =   draw.text('Кровля '+top+' Подошва '+bot+' Мощ. '+String(Number(bot)-Number(top))) 
 									.font({ family: Sheet.fnt, size: resizeV })
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
 									.cx(X_cur_mouse_click)
-									// .fill(txtPar[keey].color);
+									.fill(colith);
 								text_value.attr({ 'fill-opacity': 1 });
 							}
 							all_step = all_step + step_val;
@@ -3031,7 +3033,7 @@ if (curtemp=='depth'){
 								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
 								.cx(X_cur_mouse_click)
-								//.fill(txtPar[keey].color);
+								.fill(colith);
 							text_value.attr({ 'fill-opacity': 1 });
 	
 	
@@ -3046,7 +3048,7 @@ if (curtemp=='depth'){
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
 									.cx(X_cur_mouse_click)
-									// .fill(txtPar[keey].color);
+									.fill(colith);
 								text_value.attr({ 'fill-opacity': 1 });
 							}
 	
@@ -3060,7 +3062,7 @@ if (curtemp=='depth'){
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
 									.cx(X_cur_mouse_click)
-									// .fill(txtPar[keey].color);
+									.fill(colith);
 								text_value.attr({ 'fill-opacity': 1 });
 							}
 							all_step = all_step + step_val;
