@@ -3125,6 +3125,7 @@ if (curtemp=='depth'){
 						if (geoOknOPar[keey].poz.x == strN) {
 							var cur_val = -2147480;
 							console.log(geoOknOPar[keey].txt);
+						}
 						// 	if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtPar[keey].par]) };
 						// 	if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
 						// 	var text_value = draw.text(txtPar[keey].txt + " " + cur_val + " (" + txtPar[keey].unit + ")")
