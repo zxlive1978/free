@@ -3026,6 +3026,18 @@ if (curtemp=='depth'){
 						}
 					// СОдержание породы
 					for (keey in findRocks) {
+						let curpat = draw.pattern(16, 16, function(add) {
+								add.svg(ref_rocks["rock"+String(findRocks[keey].code)].img);
+							  })
+					
+						var recrock=draw.rect(w1 * (Sheet.width_value), step_val*h1)
+						// var poli= draw.polygon('50,0 60,40 100,50 60,60 50,100 40,60 0,50 40,40')
+						.fill(curpat)
+						.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
+						.cx(X_cur_mouse_click)
+						.fill(colith);
+						gfx_group.add(recrock);
+
 						// 	if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtPar[keey].par]) };
 						// 	if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
 							var text_value = draw.text(ref_rocks["rock"+String(findRocks[keey].code)].txt + " " + String(findRocks[keey].pro*100) + " (%)")
