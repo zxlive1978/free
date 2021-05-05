@@ -2996,7 +2996,7 @@ if (curtemp=='depth'){
 								var coef = text_value.length() / text_value.attr('font-size')
 								text_value.clear();
 								delete (text_value);
-								var text_value =   draw.text('Кровля '+top+' Подошва'+bot+' Мощ. '+String(bot-top)) 
+								var text_value =   draw.text('Кровля '+top+' Подошва'+bot+' Мощ. '+String(Number(bot)-Number(top))) 
 									.font({ family: Sheet.fnt, size: Sheet.width_value * w1 / (coef * 1.1) })
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
