@@ -3126,12 +3126,15 @@ if (curtemp=='depth'){
 							var cur_val = 'пусто';
 							console.log(geoOknOPar[keey].txt);
 							console.log(ttime);
+							var findRocks ={};
 							for (jey in d110l){
 								// console.log(d110l[jey].top);
 								if ((Number(d110l[jey].top)<=ttime)&&(Number(d110l[jey].bot)>=ttime)){
+									findRocks = jey;
 									console.log(ref_rocks["rock"+String(d110l[jey].code)].txt);
 								}
 							}
+							console.log(findRocks);
 						}
 						// 	if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtPar[keey].par]) };
 						// 	if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
