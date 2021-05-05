@@ -3033,6 +3033,7 @@ if (curtemp=='depth'){
 						var recrock=draw.rect(w1 * (Sheet.width_value), step_val*h1)
 						// var poli= draw.polygon('50,0 60,40 100,50 60,60 50,100 40,60 0,50 40,40')
 						.fill(curpat)
+						.opacity(Sheet.faderr)
 						.stroke({ width: Sheet.width_gxf_line, dasharray: '2,3', color: Sheet.syscolor })
 						.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
 						.cx(X_cur_mouse_click);
