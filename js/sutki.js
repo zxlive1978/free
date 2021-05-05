@@ -3034,7 +3034,7 @@ if (curtemp=='depth'){
 						// var poli= draw.polygon('50,0 60,40 100,50 60,60 50,100 40,60 0,50 40,40')
 						.fill(curpat)
 						.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
-						.cx(X_cur_mouse_click)
+						.cx(X_cur_mouse_click);
 						gfx_group.add(recrock);
 
 						// 	if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtPar[keey].par]) };
