@@ -1297,6 +1297,8 @@ function colPan66(name_select) {
 	$("#pardel66").prop("checked", false);
 	//Установка атрибутов цвет
 	$("#parcolor66").val(geoOknOPar[name_select].color);
+	$("#namePar22").val(geoOknOPar[name_select].txt);
+	
 	ParSelect = name_select;
 	/* PArmyDialog6.show(); */
 	/* $("#nastrtxtlabel").css('background-color', Sheet.curcolorval);
