@@ -211,7 +211,6 @@ function read_next(){
 					back_start_time = start_time;
 					back_end_time = null;
 					back_end_time = end_time;
-					
 					// repaint();
 					
 					
@@ -223,7 +222,7 @@ function read_next(){
 			}
 		}));
 				
-				var jsPromise2 = Promise.resolve($.ajax({
+				Promise.resolve($.ajax({
 					type: "POST",
 					url: 'js/read_litholog.php',
 					data: {whatdo:'read', table:wellNamelith ,start_time: start_time, end_time:end_time },
@@ -231,39 +230,27 @@ function read_next(){
 					async: false,
 					success: function(data){
 						
-						// try {
+						try {
 							d110l = null;
 							d110l = JSON.parse(data);
 							// console.log(d110l);
-							setTimeout(() => {
-								repaint();
-							  }, 1000);
+							resolve("result");
+							// repaint();
 							
-							
-						// }
-						// catch (e) { }
-						// repaint();
-						// refresh=true;
-						// timer=setTimeout(function(){read_next();}, 3000);
-					// },
-					// error: function(){
-					// refresh=true;
-					// timer=setTimeout(function(){read_next();}, 3000);
+						}
+						catch (e) { }
 						
 						
 					}
-				}));
-				jsPromise2.then( result => {
+				})).then( result => {
 					// первая функция-обработчик - запустится при вызове resolve
-					// repaint();
-					// console.log('111');
+					repaint();
 				  },
 				  error => {
 					// вторая функция - запустится при вызове reject
-					console.log('[eq');
+					console.log('[eq')
 					
 				  });
-				 
 				
 		
 		
