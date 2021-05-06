@@ -202,9 +202,9 @@ function read_next(){
 			success: function(data){
 				
 				try {
-					// d110d = null;
+					d110d = null;
 					d110d = JSON.parse(data);
-					// data = null;
+					data = null;
 					var numbs110d = null;
 					numbs110d = d110d.length;
 					var back_start_time = null;
@@ -222,9 +222,9 @@ function read_next(){
 						success: function(data){
 							
 							try {
-								// d110l = null;
+								d110l = null;
 								d110l = JSON.parse(data);
-								console.log(d110l);
+								// console.log(d110l);
 								repaint();
 								
 							}
