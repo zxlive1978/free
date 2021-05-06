@@ -212,26 +212,6 @@ function read_next(){
 					back_end_time = null;
 					back_end_time = end_time;
 					// repaint();
-					var jsPromise2 = Promise.resolve($.ajax({
-						type: "POST",
-						url: 'js/read_litholog.php',
-						data: {whatdo:'read', table:wellNamelith ,start_time: start_time, end_time:end_time },
-						cache: false,
-						async: false,
-						success: function(data){
-							
-							try {
-								d110l = null;
-								d110l = JSON.parse(data);
-								// console.log(d110l);
-								repaint();
-								
-							}
-							catch (e) { }
-							
-							
-						}
-					}));
 					
 					
 
@@ -242,7 +222,35 @@ function read_next(){
 			}
 		}));
 				
-				
+				var jsPromise2 = Promise.resolve($.ajax({
+					type: "POST",
+					url: 'js/read_litholog.php',
+					data: {whatdo:'read', table:wellNamelith ,start_time: start_time, end_time:end_time },
+					cache: false,
+					async: false,
+					success: function(data){
+						
+						try {
+							d110l = null;
+							d110l = JSON.parse(data);
+							// console.log(d110l);
+							resolve("result");
+							repaint();
+							
+						}
+						catch (e) { }
+						
+						
+					}
+				}));
+				jsPromise2.then( result => {
+					// первая функция-обработчик - запустится при вызове resolve
+					repaint();
+				  },
+				  error => {
+					// вторая функция - запустится при вызове reject
+					
+				  });
 				
 		
 		
