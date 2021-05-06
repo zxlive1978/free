@@ -61,7 +61,7 @@ if (!isMobile){
 	formname="Под планшет(ПК) светлая";
 	formnamedepth = "Под планшет(ПК) светлая";
 }
-
+var defrr = read_next();;
 //Сохранение и чтение настроей из локального хранилища
 //IE Права icacls %userprofile%\Appdata\LocalLow /t /setintegritylevel (OI)(CI)L
 function readsavestartstorage(){
