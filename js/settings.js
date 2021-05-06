@@ -1439,6 +1439,7 @@ function colOK8start(name_start) {
 	refresh=true;
 	if (curtemp=='time'){
 	read_next();}
+	if (curtemp=='depth'){read_depth_last();}
 
 	onoffpan();
 	
