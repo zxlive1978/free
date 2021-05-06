@@ -230,7 +230,7 @@ function read_next(){
 								init();
 								
 							}
-							catch (e) { }
+							catch (e) {read_next(); }
 							
 							
 						}
@@ -239,7 +239,7 @@ function read_next(){
 
 					
 				}
-				catch (e) { }
+				catch (e) {read_next(); }
 				
 				
 			}
