@@ -193,7 +193,7 @@ function read_next(){
 		wellNamedepth =wellName +"depth_all";
 		wellNamelith =wellName +"lith_all";
 
-		var jsPromise = Promise.resolve($.ajax({
+		$.ajax({
 			type: "POST",
 			url: 'js/read_depth.php',
 			data: {whatdo:'read', table:wellNamedepth ,start_time: start_time, end_time:end_time },
@@ -204,7 +204,9 @@ function read_next(){
 				try {
 					d110d = null;
 					d110d = JSON.parse(data);
+					/* d110d = eval(data); */
 					data = null;
+					//numbs110d = null;
 					var numbs110d = null;
 					numbs110d = d110d.length;
 					var back_start_time = null;
@@ -213,48 +215,35 @@ function read_next(){
 					back_end_time = end_time;
 					// repaint();
 					
-					
+					$.ajax({
+						type: "POST",
+						url: 'js/read_litholog.php',
+						data: {whatdo:'read', table:wellNamelith ,start_time: start_time, end_time:end_time },
+						cache: false,
+						async: false,
+						success: function(data){
+							
+							try {
+								d110l = null;
+								d110l = JSON.parse(data);
+								// console.log(d110l)
+								init();
+								
+							}
+							catch (e) { }
+							
+							
+						}
+					});
 
 
 					
 				}
 				catch (e) { }
+				
+				
 			}
-		}));
-				
-		const promise1 = new Promise((resolve, reject) => {$.ajax({
-					type: "POST",
-					url: 'js/read_litholog.php',
-					data: {whatdo:'read', table:wellNamelith ,start_time: start_time, end_time:end_time },
-					cache: false,
-					async: false,
-					success: function(data){
-						
-						try {
-							d110l = null;
-							d110l = JSON.parse(data);
-							// console.log(d110l);
-							resolve("result");
-							// repaint();
-							
-						}
-						catch (e) { }
-					}
-						
-						
-					})
-				});
-
-				promise1.then((result) => {
-					console.log(result);
-					repaint();
-					// expected output: "foo"
-				  });
-			
-					
-				  
-				
-		
+		});
 		
 	}
 	
