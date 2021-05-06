@@ -252,6 +252,9 @@ function read_next(){
 					console.log('[eq');
 					
 				  });
+				  repaint();
+				  refresh=true;
+				  timer=setTimeout(function(){read_next();}, 3000);
 				
 		
 		
