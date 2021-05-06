@@ -222,7 +222,7 @@ function read_next(){
 			}
 		}));
 				
-				Promise.resolve($.ajax({
+		const promise1 = new Promise((resolve, reject) => {$.ajax({
 					type: "POST",
 					url: 'js/read_litholog.php',
 					data: {whatdo:'read', table:wellNamelith ,start_time: start_time, end_time:end_time },
@@ -239,18 +239,20 @@ function read_next(){
 							
 						}
 						catch (e) { }
-						
-						
 					}
-				})).then( result => {
-					// первая функция-обработчик - запустится при вызове resolve
+						
+						
+					})
+				});
+
+				promise1.then((result) => {
+					console.log(result);
 					repaint();
-				  },
-				  error => {
-					// вторая функция - запустится при вызове reject
-					console.log('[eq')
-					
+					// expected output: "foo"
 				  });
+			
+					
+				  
 				
 		
 		
