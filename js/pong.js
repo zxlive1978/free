@@ -252,7 +252,7 @@ function read_next(){
 				}));
 				jsPromise2.then( result => {
 					// первая функция-обработчик - запустится при вызове resolve
-					repaint();
+					// repaint();
 				  },
 				  error => {
 					// вторая функция - запустится при вызове reject
