@@ -211,6 +211,7 @@ function read_next(){
 					back_start_time = start_time;
 					back_end_time = null;
 					back_end_time = end_time;
+					
 					// repaint();
 					
 					
@@ -230,30 +231,30 @@ function read_next(){
 					async: false,
 					success: function(data){
 						
-						try {
+						// try {
 							d110l = null;
 							d110l = JSON.parse(data);
 							// console.log(d110l);
 							resolve("result");
 							// repaint();
 							
-						}
-						catch (e) { }
-						repaint();
-						refresh=true;
-						timer=setTimeout(function(){read_next();}, 3000);
-					},
-					error: function(){
-					refresh=true;
-					timer=setTimeout(function(){read_next();}, 3000);
+						// }
+						// catch (e) { }
+						// repaint();
+						// refresh=true;
+						// timer=setTimeout(function(){read_next();}, 3000);
+					// },
+					// error: function(){
+					// refresh=true;
+					// timer=setTimeout(function(){read_next();}, 3000);
 						
 						
 					}
 				}));
 				jsPromise2.then( result => {
 					// первая функция-обработчик - запустится при вызове resolve
-					// repaint();
-					console.log('111');
+					repaint();
+					// console.log('111');
 				  },
 				  error => {
 					// вторая функция - запустится при вызове reject
