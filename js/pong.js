@@ -299,9 +299,10 @@ function read_next(){
 
 function obnovit_stranicu() {
 	if (refresh==true){
+		read_next();
 	
   //window.onload = window.location.reload("true");
-		$(read_next());
+		// $(read_next());
 		
   }}
   
