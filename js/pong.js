@@ -193,7 +193,7 @@ function read_next(){
 		wellNamedepth =wellName +"depth_all";
 		wellNamelith =wellName +"lith_all";
 
-		$.ajax({
+		var jsPromise = Promise.resolve($.ajax({
 			type: "POST",
 			url: 'js/read_depth.php',
 			data: {whatdo:'read', table:wellNamedepth ,start_time: start_time, end_time:end_time },
@@ -213,36 +213,37 @@ function read_next(){
 					back_end_time = end_time;
 					// repaint();
 					
-					$.ajax({
-						type: "POST",
-						url: 'js/read_litholog.php',
-						data: {whatdo:'read', table:wellNamelith ,start_time: start_time, end_time:end_time },
-						cache: false,
-						async: false,
-						success: function(data){
-							
-							try {
-								d110l = null;
-								d110l = JSON.parse(data);
-								// console.log(d110l);
-								repaint();
-								
-							}
-							catch (e) { }
-							
-							
-						}
-					});
+					
 
 
 					
 				}
 				catch (e) { }
-				
-				
-				
 			}
-		});
+		}));
+				
+				var jsPromise2 = Promise.resolve($.ajax({
+					type: "POST",
+					url: 'js/read_litholog.php',
+					data: {whatdo:'read', table:wellNamelith ,start_time: start_time, end_time:end_time },
+					cache: false,
+					async: false,
+					success: function(data){
+						
+						try {
+							d110l = null;
+							d110l = JSON.parse(data);
+							// console.log(d110l);
+							repaint();
+							
+						}
+						catch (e) { }
+						
+						
+					}
+				}));
+				
+		
 		
 	}
 	
