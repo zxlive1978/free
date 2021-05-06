@@ -161,6 +161,67 @@ function read_depth_last(){
 			start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);} 
 			else {start_time=0;}}
 			else {start_time=0;}
+
+			refresh = false;
+		online = false;
+		
+		end_time=start_time + Kzoomdepth*10+Kzoomdepth/10;
+
+		wellNamedepth =wellName +"depth_all";
+		wellNamelith =wellName +"lith_all";
+		$.ajax({
+			type: "POST",
+			url: 'js/read_litholog.php',
+			data: {whatdo:'read', table:wellNamelith ,start_time: start_time, end_time:end_time },
+			cache: false,
+			async: false,
+			success: function(data){
+				
+				try {
+					d110l = null;
+					d110l = JSON.parse(data);
+					console.log(d110l)
+					
+					
+				}
+				catch (e) { }
+				
+				
+			}
+		});
+
+		$.ajax({
+			type: "POST",
+			url: 'js/read_depth.php',
+			data: {whatdo:'read', table:wellNamedepth ,start_time: start_time, end_time:end_time },
+			cache: false,
+			async: false,
+			success: function(data){
+				
+				try {
+					d110d = null;
+					d110d = JSON.parse(data);
+					/* d110d = eval(data); */
+					data = null;
+					//numbs110d = null;
+					var numbs110d = null;
+					numbs110d = d110d.length;
+					var back_start_time = null;
+					back_start_time = start_time;
+					back_end_time = null;
+					back_end_time = end_time;
+					repaint();
+					
+					
+
+
+					
+				}
+				catch (e) { }
+				
+				
+			}
+		});
 			// read_now();
 			// refresh=true;
 			// timer=setTimeout(function(){read_next();}, 3000);
