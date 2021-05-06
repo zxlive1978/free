@@ -61,7 +61,7 @@ if (!isMobile){
 	formname="Под планшет(ПК) светлая";
 	formnamedepth = "Под планшет(ПК) светлая";
 }
-var defrr = read_next();;
+
 //Сохранение и чтение настроей из локального хранилища
 //IE Права icacls %userprofile%\Appdata\LocalLow /t /setintegritylevel (OI)(CI)L
 function readsavestartstorage(){
@@ -181,7 +181,6 @@ function read_depth_last(){
 var timer;
 //Чтение последних значений
 function read_next(){
-	var d = $.Deferred();
 	if (curtemp=='depth'){
 		refresh = false;
 		online = false;
@@ -228,7 +227,7 @@ function read_next(){
 								d110l = null;
 								d110l = JSON.parse(data);
 								// console.log(d110l)
-								d.resolve();
+								init();
 								
 							}
 							catch (e) { }
@@ -279,8 +278,7 @@ function read_next(){
 					catch (e) { }
 			}
 				
-				// repaint();
-				d.resolve();
+				repaint();
 				refresh=true;
 				timer=setTimeout(function(){read_next();}, 3000);
 			},
@@ -291,10 +289,9 @@ function read_next(){
 		});
 	
 	}}
-	return d.promise();
+
 };
 
-defrr.done(function(){ repaint(); });
 
 
 
@@ -303,7 +300,7 @@ function obnovit_stranicu() {
 	if (refresh==true){
 	
   //window.onload = window.location.reload("true");
-  var defrr = read_next();
+		$(read_next());
 		
   }}
   
@@ -363,7 +360,6 @@ function read_now(){
 		refresh = true;
 		read_next();}
 }
-
 //Чтение вверх
 function read_up(){
 	//если по времени
