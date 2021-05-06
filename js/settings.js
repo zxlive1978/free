@@ -1436,7 +1436,7 @@ function colOK8start(name_start) {
 	var name = name_start;
 	toponof = true;
 	loadddata(name);
-	// refresh=true;
+	refresh=true;
 	read_next();
 
 	onoffpan();
