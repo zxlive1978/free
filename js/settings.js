@@ -1437,7 +1437,8 @@ function colOK8start(name_start) {
 	toponof = true;
 	loadddata(name);
 	refresh=true;
-	read_next();
+	if (curtemp=='time'){
+	read_next();}
 
 	onoffpan();
 	
