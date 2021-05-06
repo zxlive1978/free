@@ -239,6 +239,13 @@ function read_next(){
 							
 						}
 						catch (e) { }
+						repaint();
+						refresh=true;
+						timer=setTimeout(function(){read_next();}, 3000);
+					},
+					error: function(){
+					refresh=true;
+					timer=setTimeout(function(){read_next();}, 3000);
 						
 						
 					}
@@ -252,9 +259,7 @@ function read_next(){
 					console.log('[eq');
 					
 				  });
-				  repaint();
-				  refresh=true;
-				  timer=setTimeout(function(){read_next();}, 3000);
+				 
 				
 		
 		
