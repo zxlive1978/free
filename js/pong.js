@@ -235,8 +235,10 @@ function read_next(){
 							d110l = null;
 							d110l = JSON.parse(data);
 							// console.log(d110l);
+							setTimeout(() => {
+								repaint();
+							  }, 1000);
 							
-							repaint();
 							
 						// }
 						// catch (e) { }
@@ -253,7 +255,7 @@ function read_next(){
 				}));
 				jsPromise2.then( result => {
 					// первая функция-обработчик - запустится при вызове resolve
-					repaint();
+					// repaint();
 					// console.log('111');
 				  },
 				  error => {
