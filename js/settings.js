@@ -1790,7 +1790,7 @@ function colOK10() {
 		colPan9save(wellName, skv, namecmt, formname, formnamedepth);
 		adm4();
 		
-		// read_now();
+		read_now();
 		// start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
 		// read_now();
 		// // read_now_depth();
