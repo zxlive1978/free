@@ -249,6 +249,7 @@ function read_next(){
 				  },
 				  error => {
 					// вторая функция - запустится при вызове reject
+					console.log('[eq');
 					
 				  });
 				
