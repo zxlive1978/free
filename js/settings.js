@@ -1438,6 +1438,7 @@ function colOK8start(name_start) {
 	loadddata(name);
 
 	onoffpan();
+	refresh=true;
 	read_next();
 
 
