@@ -2365,6 +2365,7 @@ function adm4() {
 	// read_now();
 	colOK8start(formdirdepth+formnamedepth);
 	read_depth_last();
+	read_now();
 	
 
 }
