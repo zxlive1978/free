@@ -114,7 +114,7 @@ function loadddata(name) {
 				txtOknOPar = plan[4];
 				if (plan[5]==null){geoOknOPar ={}; } 
 				else{geoOknOPar = plan[5];}
-				read_now();
+				// read_now();
 				
 				//Перерисовка
 				try {
