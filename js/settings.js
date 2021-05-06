@@ -1786,11 +1786,12 @@ function colOK10() {
 		namecmt = wellName + "kr";
 		//Сменить название в шапке
 		$('#skvnamelabt').text(skv);
+	
+		adm4();
 		//Сохранить в локальное хранилище
 		colPan9save(wellName, skv, namecmt, formname, formnamedepth);
-		adm4();
 		
-		read_now();
+		// read_now();
 		// start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);
 		// read_now();
 		// // read_now_depth();
