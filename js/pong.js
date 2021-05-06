@@ -161,7 +161,7 @@ function read_depth_last(){
 			start_time=Number(d110d[d110d.length-1]['Zaboj']-Kzoomdepth*10);} 
 			else {start_time=0;}}
 			else {start_time=0;}
-			read_now();
+			// read_now();
 			// refresh=true;
 			// timer=setTimeout(function(){read_next();}, 3000);
 		// }
@@ -170,7 +170,7 @@ function read_depth_last(){
 		refresh=true;
 		curtemp = 'depth';
 		start_time=0;
-		read_now();
+		// read_now();
 		// timer=setTimeout(function(){read_next();}, 3000);
 	}
 	});
