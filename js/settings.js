@@ -994,7 +994,7 @@ function colOK3() {
 		start_time = Number($("#depth222").val());
 		// Sheet.Kzoomdepth = Number($("#zzzzooom1depth option:selected").text())/10;
 		// Kzoomdepth = Sheet.Kzoomdepth;
-		read_next();
+		var defrr =read_next();
 	}
 	
 }
@@ -1754,7 +1754,7 @@ function colOK10() {
 		//Сохранить в локальное хранилище
 		colPan9save(wellName, skv, namecmt, formname, formnamedepth);
 		refresh = true;
-		read_next();
+		var defrr = read_next();
 		/* repaint(); */
 		/* namecmt=wellSelectBase + "kr"; */
 	}
