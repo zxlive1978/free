@@ -1596,7 +1596,7 @@ for (var key in geoOknOPar) {
 				if (flag === 0) {
 					/* console.log("click"); */
 					//Панель настроек параметра см.settings.js
-					parPan(this.attr('id'));
+					colPan66(this.attr('id'));
 				}
 				else if (flag === 1) {
 					//console.log("drag");
