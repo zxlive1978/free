@@ -223,14 +223,14 @@ function read_next(){
 						async: false,
 						success: function(data){
 							
-							try {
+							// try {
 								d110l = null;
 								d110l = JSON.parse(data);
 								// console.log(d110l)
 								init();
 								
-							}
-							catch (e) {read_next(); }
+							// }
+							// catch (e) {read_next(); }
 							
 							
 						}
