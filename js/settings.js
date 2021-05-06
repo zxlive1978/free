@@ -1436,10 +1436,11 @@ function colOK8start(name_start) {
 	var name = name_start;
 	toponof = true;
 	loadddata(name);
+	// refresh=true;
+	read_next();
 
 	onoffpan();
-	refresh=true;
-	read_next();
+	
 
 
 
