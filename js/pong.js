@@ -263,7 +263,7 @@ function read_next(){
 					try {
 						d110d = null;
 						d110d = JSON.parse(data);
-						data = null;
+						// data = null;
 						var numbs110d = null;
 						numbs110d = d110d.length;
 						start_time = null;
