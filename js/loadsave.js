@@ -116,7 +116,7 @@ function loadddata(name) {
 				else{geoOknOPar = plan[5];}
 				// read_now();
 				
-				//Перерисовка
+				// Перерисовка
 				try {
 				$("#drawing").find("*").not("rect, g").remove();
 				}
