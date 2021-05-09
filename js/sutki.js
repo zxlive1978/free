@@ -3037,9 +3037,9 @@ if (curtemp=='depth'){
 						.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
 						.cx(X_cur_mouse_click);
 						gfx_group.add(recrock);
-						let proca =Number(findRocks[keey].proс)*100;
+						let proca =Number(findRocks[keey].proc)*100;
 						// let real_proc = proc.toFixed(1);
-						console.log(proca);
+						console.log(findRocks[keey].proc);
 						// console.log(real_proc);
 
 						// 	if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtPar[keey].par]) };
