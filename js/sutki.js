@@ -3039,7 +3039,7 @@ if (curtemp=='depth'){
 						gfx_group.add(recrock);
 						let proca =Number(findRocks[keey].proс)*100;
 						// let real_proc = proc.toFixed(1);
-						console.log(proc);
+						console.log(proca);
 						// console.log(real_proc);
 
 						// 	if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtPar[keey].par]) };
