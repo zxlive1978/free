@@ -3038,13 +3038,11 @@ if (curtemp=='depth'){
 						.cx(X_cur_mouse_click);
 						gfx_group.add(recrock);
 						let proca =(Number(findRocks[keey].proc)*100).toFixed(1);
-						// let real_proc = proc.toFixed(1);
-						console.log(findRocks[keey].proc);
-						console.log(proca);
+						
 
 						// 	if (disp_val1 > 0) { cur_val = String(d110d[disp_val1][txtPar[keey].par]) };
 						// 	if (Number(cur_val) <= -2147480) { cur_val = "NaN"; }
-							var text_value = draw.text(ref_rocks["rock"+String(findRocks[keey].code)].txt + " " + String((findRocks[keey].proс*100).toFixed(1)) + " (%)")
+							var text_value = draw.text(ref_rocks["rock"+String(findRocks[keey].code)].txt + " " + String(proca) + " (%)")
 								.font({ family: Sheet.fnt, size: text_size_value })
 								// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 								.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
@@ -3059,7 +3057,7 @@ if (curtemp=='depth'){
 								var coef = text_value.length() / text_value.attr('font-size')
 								text_value.clear();
 								delete (text_value);
-								var text_value =  draw.text(ref_rocks["rock"+String(findRocks[keey].code)].txt + " " + String((findRocks[keey].proс*100).toFixed(1)) + " (%)")
+								var text_value =  draw.text(ref_rocks["rock"+String(findRocks[keey].code)].txt + " " + String(proca) + " (%)")
 									.font({ family: Sheet.fnt, size: Sheet.width_value * w1 / (coef * 1.1) })
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
@@ -3073,7 +3071,7 @@ if (curtemp=='depth'){
 								//var coef =text_name_p1.length()/text_name_p1.attr('font-size')
 								text_value.clear();
 								delete (text_value);
-								var text_value =  draw.text(ref_rocks["rock"+String(findRocks[keey].code)].txt + " " + String((findRocks[keey].proс*100).toFixed(1)) + " (%)")
+								var text_value =  draw.text(ref_rocks["rock"+String(findRocks[keey].code)].txt + " " + String(proca) + " (%)")
 									.font({ family: Sheet.fnt, size: resizeV })
 									// .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
