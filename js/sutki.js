@@ -1449,7 +1449,7 @@ for (var key in geoOknOPar) {
 					, maxY: disp_up*h1} */
 				//, snapToGrid: height_colmn1_p1*h1/10 }
 			).on('dragend', function (e) {
-				if (isMobile) { parPan(this.attr('id')); }
+				if (isMobile) { colPan66(this.attr('id')); }
 				//console.log(exs,eys,ex,ey);
 				//console.log('парам.',this.attr('id'), geoOknOPar[this.attr('id')]);
 				//console.log('полож.столб',exs/w1, ex/w1);
