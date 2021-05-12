@@ -42,7 +42,7 @@
 
 
 	//$query="SELECT ".$x_id.",".$y_id.",".$z1_id.",".$z2_id.",".$z3_id.",".$z4_id.",".$z5_id.",".$z6_id.",".$z7_id.",".$z8_id.",".$z9_id.",".$z10_id.",".$z11_id.",".$z12_id.",".$z13_id.",".$z14_id.",".$z15_id.",".$z16_id.",".$z17_id.",".$z18_id.",".$z19_id.",".$z20_id.",".$z21_id." FROM ".$name_base.".".$table." WHERE ".$x_id.">".(int)$cur_time.";";
-	$query="SELECT * FROM ".$name_base.".".$table." WHERE ".$x_id.">".(int)$start_time." AND ".$x_id."<".(int)$end_time.";";
+	$query="SELECT * FROM ".$name_base.".".$table." WHERE ".$x_id.">".(int)$start_time." AND ".$x_id."<".(int)$end_time." ORDER BY Vrema;";
 	#echo $table;
 	$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 	//echo mysqli_sqlstate($dbc);
