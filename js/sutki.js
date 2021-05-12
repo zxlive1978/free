@@ -1452,7 +1452,7 @@ for (var key in geoOknOPar) {
 				if (isMobile) { colPan66(this.attr('id')); }
 				//console.log(exs,eys,ex,ey);
 				//console.log('парам.',this.attr('id'), geoOknOPar[this.attr('id')]);
-				//console.log('полож.столб',exs/w1, ex/w1);
+				// console.log('полож.столб',exs/w1, ex/w1);
 				//Старое положение
 				var oldCol = geoOknOPar[this.attr('id')].poz.x;
 				var oldStr = geoOknOPar[this.attr('id')].poz.y;
