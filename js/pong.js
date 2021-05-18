@@ -286,7 +286,7 @@ function read_next(){
 					d110d = null;
 					d110d = JSON.parse(data);
 					/* d110d = eval(data); */
-					data = null;
+					// data = null;
 					//numbs110d = null;
 					var numbs110d = null;
 					numbs110d = d110d.length;
