@@ -245,10 +245,10 @@ function read_next(){
 	if (curtemp=='depth'){
 		if (refresh==true &&  wellName!='' ){
 		refresh = false;
-		online = false;
-		clearTimeout(timer);
+		online = true;
+		// clearTimeout(timer);
 		refresh = false;
-		online = false;
+		online = true;
 		
 		end_time=start_time + Kzoomdepth*10+Kzoomdepth/10;
 
