@@ -243,13 +243,11 @@ var timer;
 //Чтение последних значений
 function read_next(){
 	if (curtemp=='depth'){
-		if (refresh==true &&  wellName!='' ){
-			online = true;
-			refresh=false;
-			let data = null;
-		// clearTimeout(timer);
-		// refresh = false;
-		// online = true;
+		refresh = false;
+		online = false;
+		clearTimeout(timer);
+		refresh = false;
+		online = false;
 		
 		end_time=start_time + Kzoomdepth*10+Kzoomdepth/10;
 
@@ -295,21 +293,21 @@ function read_next(){
 					var back_start_time = null;
 					back_start_time = start_time;
 					back_end_time = null;
-					back_end_time = end_time;}
+					back_end_time = end_time;
+					repaint();
+					
+					
+
+
+					
+				}
 				catch (e) { }
-			
 				
-				repaint();
-				refresh=true;
-				timer=setTimeout(function(){read_next();}, 3000);
-			},
-			error: function(){
-			refresh=true;
-			timer=setTimeout(function(){read_next();}, 3000);
-		}
+				
+			}
 		});
-	
-	}}
+		
+	}
 	
 	if (curtemp=='time'){
 	if (refresh==true &&  wellName!='' ){
