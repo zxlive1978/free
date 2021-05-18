@@ -243,6 +243,7 @@ var timer;
 //Чтение последних значений
 function read_next(){
 	if (curtemp=='depth'){
+		if (refresh==true &&  wellName!='' ){
 		refresh = false;
 		online = false;
 		clearTimeout(timer);
@@ -293,21 +294,21 @@ function read_next(){
 					var back_start_time = null;
 					back_start_time = start_time;
 					back_end_time = null;
-					back_end_time = end_time;
-					repaint();
-					
-					
-
-
-					
-				}
+					back_end_time = end_time;}
 				catch (e) { }
+			
 				
-				
-			}
+				repaint();
+				refresh=true;
+				timer=setTimeout(function(){read_next();}, 3000);
+			},
+			error: function(){
+			refresh=true;
+			timer=setTimeout(function(){read_next();}, 3000);
+		}
 		});
-		
-	}
+	
+	}}
 	
 	if (curtemp=='time'){
 	if (refresh==true &&  wellName!='' ){
