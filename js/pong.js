@@ -244,11 +244,12 @@ var timer;
 function read_next(){
 	if (curtemp=='depth'){
 		if (refresh==true &&  wellName!='' ){
-		refresh = false;
-		online = true;
+			online = true;
+			refresh=false;
+			let data = null;
 		// clearTimeout(timer);
-		refresh = false;
-		online = true;
+		// refresh = false;
+		// online = true;
 		
 		end_time=start_time + Kzoomdepth*10+Kzoomdepth/10;
 
