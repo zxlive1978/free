@@ -993,7 +993,7 @@ function init() {
 					//, snapToGrid: height_colmn1_p1*h1/10 }
 				).on('dragend', function (e) {
 					if (isMobile) { parPan(this.attr('id')); }
-					//console.log(exs,eys,ex,ey);
+					// console.log(exs,eys,ex,ey);
 					//console.log('парам.',this.attr('id'), basePar[this.attr('id')]);
 					//console.log('полож.столб',exs/w1, ex/w1);
 					//Старое положение
