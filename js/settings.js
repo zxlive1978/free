@@ -2405,16 +2405,64 @@ function adm5() {
 	// , 30000);
 
 	
+	//удаление старых потоков
+	deleteoldcams();
+
+	// setTimeout(function(){deleteoldcams();}
+	// , 30000);
+	online = false;
+	refresh = false;
+	$('#drawing').empty();
+	$('#drawing').hide();
+	// $('#skvnamelab').hide();
+
+
+	$('#dialogvideo').dialog("close");// Для скрытия
+
+
+	onofadm = false;
+
+	// getcamswell();
+
 	$('#tabs').hide();
 	$('#camsf2').remove();
 	$('#taabs-1').empty();
 	$('#taabs-2').empty();
-	
-	$('#drawing').empty();
-	$('#drawing').show();
-	$('#skvnamelab').show();
-	refresh = false; 
-	online = false;
+	$('#taabs-1').hide();
+	$('#dropdownMenu1').hide();
+	$('#taabs-3').empty();
+	$('#taabs-3').show();
+	$('#ul1').hide();
+	$('#tabs').show();
+
+	var bigelem2 = '<div class="container container-fluid h-75 text-center bg-dark"  >';
+	bigelem2 = bigelem2 + '<br><br><button type="button"  id="datatab"  class="btn btn-outline-light btn-block " style="width: 75%; margin: 5px auto;  font-weight: bold; font-size: 23px;" onClick="adm3();">Данные "По времени"</button>' +
+		'<button type="button"  id="vidotab"  class="btn btn-outline-light btn-block  "  style="width: 75%; margin: 5px auto; font-weight: bold; font-size: 23px;" onClick="adm();">Видеокамеры</button>' +
+		// '<p><div class="thumbnail bg-info text-light  text-center">'+
+		// //'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
+		// '<div id="iframeembdiv'+camswell[keey].id + '" class="embed-responsive embed-responsive-16by9">'+
+		// '<iframe id="iframeemb'+camswell[keey].id + '" class="embed-responsive-item" src="" allowfullscreen ></iframe>'+  
+		// '</div>'+
+		// '<div class="caption text-center">'+
+		// 	'<h6>'+camswell[keey].txt+' '+camswell[keey].name+'</h6>'+
+		// 	'<div class="progress" >'+
+
+		// 	'<div class="progress-bar progress-bar progress-bar-striped progress-bar-animated bg-success" id="progress'+camswell[keey].id + '" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>'+
+		// 	'<p><button type="button"  class="btn btn-success" id="con'+camswell[keey].id+'" >Подключение</button>'+// <button type="button" disabled class="btn btn-success" id="gogogo'+camswell[keey].id+'">Просмотр</button>'+//<a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
+		// '</div>'+
+		// '</div>'+
+		// '</div>'+
+		'</div>';
+
+
+	$('#taabs-3').html(bigelem2);
+	//Повесить событие клик на подключение
+
+	// $('#con'+camswell[keey].id).click(function() {
+	// 	var idss= $(this).attr('id');
+
+
+	// })
 	$('#skvnamelabt').text(skv);
 	
 	// colOK8start(formdirdepth+formnamedepth);
