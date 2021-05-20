@@ -117,21 +117,21 @@ if (!$_SESSION['auth']) {
 <button class='btn   bg-secondary '  id='dropdownMenu1' data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" padding-top:3; padding-bottom:3; " ><img src='css/burg.svg'  width="27" height="27"></button>
 <div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu1" style=" width: 300px !important;">
 
-    <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg'  width="30" height="30">  Данные "По времени"</button>
-    <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/depth.svg'  width="30" height="30">  Данные "По глубине"</button>
-    <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/report.svg'  width="30" height="30">  Суточные сводки оператора</button>
-    <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/carrot.svg'  width="30" height="30"> Каротажи на кабеле</button>
-    <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg'  width="30" height="30">  Видеокамеры</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg'  width="25" height="25" style=" padding-top:3; padding-bottom:3; ">  Данные "По времени"</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/depth.svg'  width="25" height="25" style=" padding-top:3; padding-bottom:3; ">  Данные "По глубине"</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/report.svg'  width="25" height="25">  Суточные сводки оператора</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/carrot.svg'  width="25" height="25"> Каротажи на кабеле</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg'  width="25" height="25">  Видеокамеры</button>
     <div class="dropdown-divider"></div>
-    <button class='btn  btn-dark btn-block text-left'  onClick="colPan10();" ><img src='css/well.svg'  width="30" height="30">  Выбор текущей скважины</button>
-    <button class='btn  btn-dark btn-block text-left'  onClick="colPan3();" ><img src='css/lupa.svg'  width="30" height="30">  Выбор даты и интервала</button>
-    <button class='btn  btn-dark btn-block text-left'  onClick="colPan9();" ><img src='css/form.svg'  width="30" height="30">  Загр./Сохр.(Создать) форму</button>
-    <button class='btn  btn-dark btn-block text-left'  onClick="colok14();" ><img src='css/wave.svg'  width="30" height="30">  Старт/Стоп прием данных</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="colPan10();" ><img src='css/well.svg'  width="25" height="25">  Выбор текущей скважины</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="colPan3();" ><img src='css/lupa.svg'  width="25" height="25">  Выбор даты и интервала</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="colPan9();" ><img src='css/form.svg'  width="25" height="25">  Загр./Сохр.(Создать) форму</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="colok14();" ><img src='css/wave.svg'  width="25" height="25">  Старт/Стоп прием данных</button>
     
-    <button class='btn btn-dark  btn-block text-left '  onClick="colOK11();"  ><img src='css/lock.svg'  width="30" height="30">  Редактирование формы</button>
-    <button class='btn btn-dark  btn-block text-left '  onClick="colOK15();"  ><img src='css/roll.svg'  width="30" height="30">  Свернуть/Развернуть шапку</button>
+    <button class='btn btn-dark  btn-block text-left '  onClick="colOK11();"  ><img src='css/lock.svg'  width="25" height="25">  Редактирование формы</button>
+    <button class='btn btn-dark  btn-block text-left '  onClick="colOK15();"  ><img src='css/roll.svg'  width="25" height="25">  Свернуть/Развернуть шапку</button>
     <div class="dropdown-divider"></div>
-    <button class='btn btn-dark  btn-block text-left '  onClick="exit('exit','exit','exit');"  ><img src='css/exit.svg'  width="30" height="30">  Выход из приложения</button>
+    <button class='btn btn-dark  btn-block text-left '  onClick="exit('exit','exit','exit');"  ><img src='css/exit.svg'  width="25" height="25">  Выход из приложения</button>
     <!-- <a class='btn ' data-toggle="tooltip" data-placement="bottom" title="Выход из приложения" style=" padding-top:3; padding-bottom:3; font-size: 18px;" onClick="exit('exit','exit','exit');"><img src='css/exit.svg'  width="27" height="27"></a> -->
 
     
@@ -143,13 +143,13 @@ if (!$_SESSION['auth']) {
 <button class='btn   bg-secondary'  id='dropdownMenu2'  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" display:none; padding-top:3; padding-bottom:3;" ><img src='css/burg.svg'  width="27" height="27"></button>
 <div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu2" style=" width: 300px !important;">
 
-    <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg'  width="30" height="30">  Данные "По времени"</button>
-    <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/depth.svg'  width="30" height="30">  Данные "По глубине"</button>
-    <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg'  width="30" height="30">  Видеокамеры</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg'  width="25" height="25">  Данные "По времени"</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/depth.svg'  width="25" height="25">  Данные "По глубине"</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg'  width="25" height="25">  Видеокамеры</button>
     <div class="dropdown-divider"></div>
-    <button class='btn  btn-dark btn-block text-left'  onClick="colPan10();" ><img src='css/well.svg'  width="30" height="30">  Выбор текущей скважины</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="colPan10();" ><img src='css/well.svg'  width="25" height="25">  Выбор текущей скважины</button>
     <div class="dropdown-divider"></div>
-    <button class='btn btn-dark  btn-block text-left '  onClick="exit('exit','exit','exit');"  ><img src='css/exit.svg'  width="30" height="30">  Выход из приложения</button>
+    <button class='btn btn-dark  btn-block text-left '  onClick="exit('exit','exit','exit');"  ><img src='css/exit.svg'  width="25" height="25">  Выход из приложения</button>
     
   </div>
   </div>
@@ -159,17 +159,17 @@ if (!$_SESSION['auth']) {
 <button class='btn   bg-secondary'  id='dropdownMenu3'  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" display:none; padding-top:3; padding-bottom:3;" ><img src='css/burg.svg'  width="27" height="27"></button>
 <div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu2" style=" width: 300px !important;">
 
-    <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg'  width="30" height="30">  Данные "По времени"</button>
-    <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/depth.svg'  width="30" height="30">  Данные "По глубине"</button>
-    <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg'  width="30" height="30">  Видеокамеры</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg'  width="25" height="25">  Данные "По времени"</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/depth.svg'  width="25" height="25">  Данные "По глубине"</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg'  width="25" height="25">  Видеокамеры</button>
     <div class="dropdown-divider"></div>
-    <button class='btn  btn-dark btn-block text-left'  onClick="colPan10();" ><img src='css/well.svg'  width="30" height="30">  Выбор текущей скважины</button>
-    <button class='btn  btn-dark btn-block text-left'  onClick="colPan3();" ><img src='css/lupa.svg'  width="30" height="30">  Выбор глубины</button>
-    <button class='btn  btn-dark btn-block text-left'  onClick="colPan9();" ><img src='css/form.svg'  width="30" height="30">  Загр./Сохр.(Создать) форму</button>
-    <button class='btn btn-dark  btn-block text-left '  onClick="colOK11();"  ><img src='css/lock.svg'  width="30" height="30">  Редактирование формы</button>
-    <button class='btn btn-dark  btn-block text-left '  onClick="colOK15();"  ><img src='css/roll.svg'  width="30" height="30">  Свернуть/Развернуть шапку</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="colPan10();" ><img src='css/well.svg'  width="25" height="25">  Выбор текущей скважины</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="colPan3();" ><img src='css/lupa.svg'  width="25" height="25">  Выбор глубины</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="colPan9();" ><img src='css/form.svg'  width="25" height="25">  Загр./Сохр.(Создать) форму</button>
+    <button class='btn btn-dark  btn-block text-left '  onClick="colOK11();"  ><img src='css/lock.svg'  width="25" height="25">  Редактирование формы</button>
+    <button class='btn btn-dark  btn-block text-left '  onClick="colOK15();"  ><img src='css/roll.svg'  width="25" height="25">  Свернуть/Развернуть шапку</button>
     <div class="dropdown-divider"></div>
-    <button class='btn btn-dark  btn-block text-left '  onClick="exit('exit','exit','exit');"  ><img src='css/exit.svg'  width="30" height="30">  Выход из приложения</button>
+    <button class='btn btn-dark  btn-block text-left '  onClick="exit('exit','exit','exit');"  ><img src='css/exit.svg'  width="25" height="25">  Выход из приложения</button>
     
   </div>
   </div>
@@ -180,7 +180,7 @@ if (!$_SESSION['auth']) {
   <span id="skvnamelab" style="font-weight: bold; font-size: 22px;" onClick="colPan10()" >Скважина</span>
 </button> -->
 <div class="text-center">
-<button type="button"  id="skvnamelab"  data-toggle="tooltip" data-placement="bottom" title="Выбор текущей скважины" class="btn  bg-secondary" style="font-weight: bold; padding-top:0; padding-bottom:0; font-size: 22px;" onClick="colPan10();"><img src='css/well.svg'  width="30" height="30" style="font-weight: bold; padding-top:0; padding-bottom:3px; font-size: 22px;"><a id="skvnamelabt" style="color:white;">Скважина ?</a></button>
+<button type="button"  id="skvnamelab"  data-toggle="tooltip" data-placement="bottom" title="Выбор текущей скважины" class="btn  bg-secondary" style="font-weight: bold; padding-top:0; padding-bottom:0; font-size: 22px;" onClick="colPan10();"><img src='css/well.svg'  width="25" height="25" style="font-weight: bold; padding-top:0; padding-bottom:3px; font-size: 22px;"><a id="skvnamelabt" style="color:white;">Скважина ?</a></button>
 </div>
 <div class="text-right">
 <!-- <a class='btn ' data-toggle="tooltip" data-placement="bottom" title="Выход из приложения" style=" padding-top:3; padding-bottom:3; font-size: 18px;" onClick="exit('exit','exit','exit');"><img src='css/exit.svg'  width="27" height="27"></a> -->
