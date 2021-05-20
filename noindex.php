@@ -117,8 +117,8 @@ if (!$_SESSION['auth']) {
 <button class='btn   bg-secondary '  id='dropdownMenu1' data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" padding-top:3; padding-bottom:3; " ><img src='css/burg.svg'  width="27" height="27"></button>
 <div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu1" style=" width: 300px !important;">
 
-    <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg'  width="25" height="25" style=" padding-top:3; padding-bottom:3; ">  Данные "По времени"</button>
-    <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/depth.svg'  width="25" height="25" style=" padding-top:3; padding-bottom:3; ">  Данные "По глубине"</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg'  width="25" height="25" >  Данные "По времени"</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/depth.svg'  width="25" height="25">  Данные "По глубине"</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/report.svg'  width="25" height="25">  Суточные сводки оператора</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/carrot.svg'  width="25" height="25"> Каротажи на кабеле</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg'  width="25" height="25">  Видеокамеры</button>
