@@ -2122,6 +2122,7 @@ function adm() {
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu1').hide();
 	$('#dropdownMenu3').hide();
+	$('#dropdownMenu4').hide();
 	$("#dropdownMenu2").attr("style", "display:yes; padding-top:3; padding-bottom:3;");
 	$('#dropdownMenu2').show();
 
@@ -2289,6 +2290,7 @@ function adm3() {
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu3').hide();
 	$('#dropdownMenu2').hide();
+	$('#dropdownMenu4').hide();
 	$('#dropdownMenu1').show();
 
 	//$('.modal-backdrop').hide();
@@ -2339,6 +2341,7 @@ function adm4() {
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu1').hide();
 	$('#dropdownMenu2').hide();
+	$('#dropdownMenu4').hide();
 	$('#dropdownMenu3').show();
 	
 
@@ -2368,6 +2371,55 @@ function adm4() {
 	// read_now();
 	colOK8start(formdirdepth+formnamedepth);
 	// read_depth_last();
+	
+
+}
+
+
+//вкладка Суточные сводки
+function adm5() {
+	if (curtemp=='video'){
+		//удаление старых потоков
+		deleteoldcams();
+	}
+	if (curtemp=='time'){
+
+	}
+	
+	readsavestartstorage();
+	curtemp = 'svodka';
+
+
+	
+	$("#myModal11").modal('hide');
+	$('#dropdownMenu1').hide();
+	$('#dropdownMenu2').hide();
+	$('#dropdownMenu3').hide();
+	$('#dropdownMenu4').show();
+	
+
+	//$('.modal-backdrop').hide();
+
+	
+	// setTimeout(function(){deleteoldcams();}
+	// , 30000);
+
+	
+	$('#tabs').hide();
+	$('#camsf2').remove();
+	$('#taabs-1').empty();
+	$('#taabs-2').empty();
+	
+	$('#drawing').empty();
+	$('#drawing').show();
+	$('#skvnamelab').show();
+	refresh = false; 
+	online = false;
+	$('#skvnamelabt').text(skv);
+	
+	// colOK8start(formdirdepth+formnamedepth);
+	// Сводка
+
 	
 
 }
