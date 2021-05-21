@@ -2446,7 +2446,7 @@ function adm5() {
 	// }
 	$.ajax({
 		url : "report/542.html",
-		dataType: "text",
+		dataType: "html",
 		success : function (data) {
 			// $(".text").html(data);
 			bigelem = '<div>' + data+'</div>';
