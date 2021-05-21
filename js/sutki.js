@@ -3073,7 +3073,7 @@ if (curtemp=='depth'){
 								delete (text_value);
 								var text_value =  draw.text(ref_rocks["rock"+String(findRocks[keey].code)].txt + " " + String(proca) + " (%)")
 									.font({ family: Sheet.fnt, size: resizeV })
-									//   .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
+									//  .move(X_cur_mouse_click, Y_cur_mouse_click -h1*Sheet.height_value + h1*all_step)
 									.move(X_cur_mouse_click, Y_cur_mouse_click - h1 * Sheet.height_value + h1 * all_step)
 									.cx(X_cur_mouse_click)
 									.fill(colith);
