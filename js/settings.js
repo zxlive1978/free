@@ -2453,8 +2453,8 @@ function adm5() {
 	// 		$('#taabs-3').html(bigelem);
 	// 	}
 	// });
-	bigelem= bigelem+'<iframe src="/freedepth/report/542.pdf" style="width:100%;height:700px;"></iframe>'+ '</div>';
-
+	bigelem= bigelem+'<iframe src="https://hydrofalll.ddns.net/freedepth/report/542.pdf" style="width:100%;height:700px;"></iframe>'+ '</div>';
+	$('#taabs-3').html(bigelem);
 
 	// bigelem = bigelem + '</div>';
 
