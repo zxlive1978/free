@@ -2420,7 +2420,7 @@ function adm5() {
 	let cam = $('#skvnamelabt').text();
 	//console.log(cam);
 
-	//var bigelem = '<div class="container-fluid"><div class=" row text-justify">';
+	var bigelem = '<div class="container-fluid"><div class=" row text-justify">';
 
 	// for (var keey in camswell) {
 
