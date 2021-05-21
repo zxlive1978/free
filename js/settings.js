@@ -2449,7 +2449,7 @@ function adm5() {
 		dataType: "text",
 		success : function (data) {
 			// $(".text").html(data);
-			bigelem = bigelem + data+'</div>';
+			bigelem = '<div>' + data+'</div>';
 			$('#taabs-3').html(bigelem);
 		}
 	});
