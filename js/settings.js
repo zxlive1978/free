@@ -2444,15 +2444,16 @@ function adm5() {
 	// 			'</div>';
 	// 	}
 	// }
-	$.ajax({
-		url : "report/542.html",
-		dataType: "html",
-		success : function (data) {
-			// $(".text").html(data);
-			bigelem = bigelem + data+'</div>';
-			$('#taabs-3').html(bigelem);
-		}
-	});
+	// $.ajax({
+	// 	url : "report/542.html",
+	// 	dataType: "html",
+	// 	success : function (data) {
+	// 		// $(".text").html(data);
+	// 		bigelem = bigelem + data+'</div>';
+	// 		$('#taabs-3').html(bigelem);
+	// 	}
+	// });
+	bigelem= bigelem+'<iframe src="/report/542.pdf" style="width:100%;height:700px;"></iframe>'+ '</div>';
 
 
 	// bigelem = bigelem + '</div>';
