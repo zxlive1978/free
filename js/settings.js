@@ -2421,33 +2421,43 @@ function adm5() {
 	//console.log(cam);
 
 	var bigelem = '<div class="container-fluid"><div class=" row text-justify">';
-	for (var keey in camswell) {
 
-		if (cam == camswell[keey].txt) {
-			namecams = camswell[keey].txt + '_' + camswell[keey].name;
+	// for (var keey in camswell) {
 
-			bigelem = bigelem + '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >' +
-				'<p><div class="thumbnail border border-white  text-light  text-center ">' +
-				//'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
-				'<div id="iframeembdiv' + camswell[keey].id + '" class="embed-responsive embed-responsive-16by9 border border-white ">' +
-				'<iframe id="iframeemb' + camswell[keey].id + '" class="embed-responsive-item bg-success rounded mx-auto d-block" src="css/cams.svg" allowfullscreen ></iframe>' +
-				'</div>' +
-				'<div class="caption text-center   ">' +
-				'<h6 style="font-weight: bold;" >' + camswell[keey].txt + ' ' + camswell[keey].name + '</h6>' +
-				'<div class="progress m-1" style="height:10px" >' +
+	// 	if (cam == camswell[keey].txt) {
+	// 		namecams = camswell[keey].txt + '_' + camswell[keey].name;
 
-				'<div class="progress-bar  progress-bar-info progress-bar-striped progress-bar-animated bg-success" id="progress' + camswell[keey].id + '" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>' +
-				'<button type="button"  class=" m-1 btn btn-outline-light " id="con' + camswell[keey].id + '" >Подключение</button>' +// <button type="button" disabled class="btn btn-success" id="gogogo'+camswell[keey].id+'">Просмотр</button>'+//<a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
-				'</div>' +
-				'</div>' +
-				'</div>';
+	// 		bigelem = bigelem + '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >' +
+	// 			'<p><div class="thumbnail border border-white  text-light  text-center ">' +
+	// 			//'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
+	// 			'<div id="iframeembdiv' + camswell[keey].id + '" class="embed-responsive embed-responsive-16by9 border border-white ">' +
+	// 			'<iframe id="iframeemb' + camswell[keey].id + '" class="embed-responsive-item bg-success rounded mx-auto d-block" src="css/cams.svg" allowfullscreen ></iframe>' +
+	// 			'</div>' +
+	// 			'<div class="caption text-center   ">' +
+	// 			'<h6 style="font-weight: bold;" >' + camswell[keey].txt + ' ' + camswell[keey].name + '</h6>' +
+	// 			'<div class="progress m-1" style="height:10px" >' +
+
+	// 			'<div class="progress-bar  progress-bar-info progress-bar-striped progress-bar-animated bg-success" id="progress' + camswell[keey].id + '" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>' +
+	// 			'<button type="button"  class=" m-1 btn btn-outline-light " id="con' + camswell[keey].id + '" >Подключение</button>' +// <button type="button" disabled class="btn btn-success" id="gogogo'+camswell[keey].id+'">Просмотр</button>'+//<a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
+	// 			'</div>' +
+	// 			'</div>' +
+	// 			'</div>';
+	// 	}
+	// }
+	$.ajax({
+		url : "542.html",
+		dataType: "text",
+		success : function (data) {
+			// $(".text").html(data);
+			bigelem = bigelem + data;
 		}
-	}
-	
+	});
+
+
 	bigelem = bigelem + '</div>';
 
 	$('#taabs-3').html(bigelem);
-
+	
 
 	// colOK8start(formdirdepth+formnamedepth);
 	// Сводка
