@@ -2414,9 +2414,7 @@ function adm5() {
 	$('#ul1').hide();
 	$('#taabs-3').show();
 	
-	camscreate = true;
-	//Работающие потоки
-	workstream = {};
+	
 
 	//Текущая скважина
 	let cam = $('#skvnamelabt').text();
@@ -2447,7 +2445,7 @@ function adm5() {
 	}
 	bigelem = bigelem + '</div>';
 
-	$('#taabs-1').html(bigelem);
+	$('#taabs-3').html(bigelem);
 
 	}
 	// colOK8start(formdirdepth+formnamedepth);
