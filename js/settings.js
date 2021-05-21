@@ -2445,7 +2445,7 @@ function adm5() {
 	// 	}
 	// }
 	$.ajax({
-		url : "542.html",
+		url : "report/542.html",
 		dataType: "text",
 		success : function (data) {
 			// $(".text").html(data);
