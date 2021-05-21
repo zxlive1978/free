@@ -2382,94 +2382,74 @@ function adm4() {
 
 //вкладка Суточные сводки
 function adm5() {
-	if (curtemp=='video'){
-		//удаление старых потоков
-		deleteoldcams();
-	}
-	if (curtemp=='time'){
-
-	}
-	
-	readsavestartstorage();
-	curtemp = 'svodka';
-
-
-	
+	curtemp = 'video';
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu1').hide();
-	$('#dropdownMenu2').hide();
 	$('#dropdownMenu3').hide();
-	$('#dropdownMenu4').show();
-	
+	$('#dropdownMenu4').hide();
+	$("#dropdownMenu2").attr("style", "display:yes; padding-top:3; padding-bottom:3;");
+	$('#dropdownMenu2').show();
 
+	
 	//$('.modal-backdrop').hide();
 
-	
-	// setTimeout(function(){deleteoldcams();}
-	// , 30000);
-
-	
-	//удаление старых потоков
-	deleteoldcams();
-
-	// setTimeout(function(){deleteoldcams();}
-	// , 30000);
 	online = false;
 	refresh = false;
 	$('#drawing').empty();
 	$('#drawing').hide();
-	// $('#skvnamelab').hide();
+	//$('#skvnamelab').hide();
 
 
-	$('#dialogvideo').dialog("close");// Для скрытия
+
 
 
 	onofadm = false;
 
-	// getcamswell();
-
-	$('#tabs').hide();
-	$('#camsf2').remove();
-	$('#taabs-1').empty();
-	$('#taabs-2').empty();
-	$('#taabs-1').hide();
-	$('#dropdownMenu1').hide();
-
-	$('#taabs-3').empty();
-	$('#taabs-3').show();
-	$('#ul1').hide();
-	$('#tabs').show();
-
-	var bigelem2 = '<div class="container container-fluid h-75 text-center bg-dark"  >';
-	bigelem2 = bigelem2 + '<br><br><button type="button"  id="datatab"  class="btn btn-outline-light btn-block " style="width: 75%; margin: 5px auto;  font-weight: bold; font-size: 23px;" onClick="adm3();">Данные "По времени"</button>' +
-		'<button type="button"  id="vidotab"  class="btn btn-outline-light btn-block  "  style="width: 75%; margin: 5px auto; font-weight: bold; font-size: 23px;" onClick="adm();">Видеокамеры</button>' +
-		// '<p><div class="thumbnail bg-info text-light  text-center">'+
-		// //'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
-		// '<div id="iframeembdiv'+camswell[keey].id + '" class="embed-responsive embed-responsive-16by9">'+
-		// '<iframe id="iframeemb'+camswell[keey].id + '" class="embed-responsive-item" src="" allowfullscreen ></iframe>'+  
-		// '</div>'+
-		// '<div class="caption text-center">'+
-		// 	'<h6>'+camswell[keey].txt+' '+camswell[keey].name+'</h6>'+
-		// 	'<div class="progress" >'+
-
-		// 	'<div class="progress-bar progress-bar progress-bar-striped progress-bar-animated bg-success" id="progress'+camswell[keey].id + '" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>'+
-		// 	'<p><button type="button"  class="btn btn-success" id="con'+camswell[keey].id+'" >Подключение</button>'+// <button type="button" disabled class="btn btn-success" id="gogogo'+camswell[keey].id+'">Просмотр</button>'+//<a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
-		// '</div>'+
-		// '</div>'+
-		// '</div>'+
-		'</div>';
-
-
-	$('#taabs-3').html(bigelem2);
-	//Повесить событие клик на подключение
-
-	// $('#con'+camswell[keey].id).click(function() {
-	// 	var idss= $(this).attr('id');
-
-
-	// })
-	$('#skvnamelabt').text(skv);
+	getcamswell();
 	
+	$('#taabs-1').hide();
+	$('#taabs-2').hide();
+	$('#tabs').show();
+	$('#taabs-3').empty();
+	$('#ul1').hide();
+	$('#taabs-3').show();
+	
+	camscreate = true;
+	//Работающие потоки
+	workstream = {};
+
+	//Текущая скважина
+	let cam = $('#skvnamelabt').text();
+	//console.log(cam);
+
+	var bigelem = '<div class="container-fluid"><div class=" row text-justify">';
+	for (var keey in camswell) {
+
+		if (cam == camswell[keey].txt) {
+			namecams = camswell[keey].txt + '_' + camswell[keey].name;
+
+			bigelem = bigelem + '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >' +
+				'<p><div class="thumbnail border border-white  text-light  text-center ">' +
+				//'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
+				'<div id="iframeembdiv' + camswell[keey].id + '" class="embed-responsive embed-responsive-16by9 border border-white ">' +
+				'<iframe id="iframeemb' + camswell[keey].id + '" class="embed-responsive-item bg-success rounded mx-auto d-block" src="css/cams.svg" allowfullscreen ></iframe>' +
+				'</div>' +
+				'<div class="caption text-center   ">' +
+				'<h6 style="font-weight: bold;" >' + camswell[keey].txt + ' ' + camswell[keey].name + '</h6>' +
+				'<div class="progress m-1" style="height:10px" >' +
+
+				'<div class="progress-bar  progress-bar-info progress-bar-striped progress-bar-animated bg-success" id="progress' + camswell[keey].id + '" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>' +
+				'<button type="button"  class=" m-1 btn btn-outline-light " id="con' + camswell[keey].id + '" >Подключение</button>' +// <button type="button" disabled class="btn btn-success" id="gogogo'+camswell[keey].id+'">Просмотр</button>'+//<a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
+				'</div>' +
+				'</div>' +
+				'</div>';
+		}
+	}
+	bigelem = bigelem + '</div>';
+
+	$('#taabs-1').html(bigelem);
+
+	}
 	// colOK8start(formdirdepth+formnamedepth);
 	// Сводка
 
