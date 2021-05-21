@@ -2449,15 +2449,15 @@ function adm5() {
 		dataType: "text",
 		success : function (data) {
 			// $(".text").html(data);
-			bigelem = bigelem + data;
-			console.log(bigelem);
+			bigelem = bigelem + data+'</div>';
+			$('#taabs-3').html(bigelem);
 		}
 	});
 
 
-	bigelem = bigelem + '</div>';
+	// bigelem = bigelem + '</div>';
 
-	$('#taabs-3').html(bigelem);
+	
 	
 
 	// colOK8start(formdirdepth+formnamedepth);
