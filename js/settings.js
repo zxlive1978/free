@@ -2443,17 +2443,18 @@ function adm5() {
 				'</div>';
 		}
 	}
+	
 	bigelem = bigelem + '</div>';
 
 	$('#taabs-3').html(bigelem);
 
-	}
+
 	// colOK8start(formdirdepth+formnamedepth);
 	// Сводка
 
-	
+}	
 
-}
+
 
 
 //старт стоп прием
