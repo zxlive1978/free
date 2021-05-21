@@ -2450,6 +2450,7 @@ function adm5() {
 		success : function (data) {
 			// $(".text").html(data);
 			bigelem = bigelem + data;
+			console.log(bigelem);
 		}
 	});
 
