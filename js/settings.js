@@ -2455,8 +2455,15 @@ function adm5() {
 	// });
 	bigelem= bigelem+'<iframe src="https://hydrofalll.ddns.net/freedepth/report/542.xlsx" style="width:100%;height:700px;"></iframe>'+ '</div>';
 	$('#taabs-3').html(bigelem);
+// import pdfkit
 
-	// bigelem = bigelem + '</div>';
+// pdfkit.from_url('http://google.com', 'out.pdf')
+// pdfkit.from_file('test.html', 'out.pdf')
+// pdfkit.from_string('Hello!', 'out.pdf')
+	
+
+
+// bigelem = bigelem + '</div>';
 
 	
 	
