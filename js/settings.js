@@ -2411,11 +2411,10 @@ function adm5() {
 	$('#drawing').empty();
 	$('#drawing').hide();
 	$('#taabs-3').empty();
-	$('#taabs-3').show();
 	$('#skvnamelab').show();
-	online = true;
-	refresh = true;
-	onofadm = true;
+	online = false;
+	refresh = false;
+	onofadm = false;
 	$('#skvnamelabt').text(skv);
 
 	var bigelem = '<div class="container container-fluid vh-100 text-center bg-light"  >';
