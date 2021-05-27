@@ -158,7 +158,7 @@ if (!$_SESSION['auth']) {
   <div class="dropdown">
 <!-- Глубина -->
 <button class='btn   bg-secondary'  id='dropdownMenu3'  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" display:none; padding-top:3; padding-bottom:3;" ><img src='css/burg.svg'  width="27" height="27"></button>
-<div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu2" style=" width: 300px !important;">
+<div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu3" style=" width: 300px !important;">
 
     <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg' width="30" height="30">  Данные "По времени"</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/depth.svg' width="30" height="30">  Данные "По глубине"</button>
@@ -179,7 +179,7 @@ if (!$_SESSION['auth']) {
 
 <!-- Суточные сводки -->
 <button class='btn   bg-secondary'  id='dropdownMenu4'  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" display:none; padding-top:3; padding-bottom:3;" ><img src='css/burg.svg'  width="27" height="27"></button>
-<div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu2" style=" width: 300px !important;">
+<div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu4" style=" width: 300px !important;">
 
     <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg' width="30" height="30">  Данные "По времени"</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/depth.svg' width="30" height="30">  Данные "По глубине"</button>

@@ -2389,7 +2389,7 @@ function adm5() {
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu3').hide();
 	$('#dropdownMenu2').hide();
-	$('#dropdownMenu4').hide();
+	$('#dropdownMenu1').hide();
 	$('#dropdownMenu4').show();
 
 	//$('.modal-backdrop').hide();
