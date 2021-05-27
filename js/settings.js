@@ -2239,6 +2239,7 @@ function adm2() {
 	$('#taabs-2').empty();
 	$('#taabs-3').empty();
 	$('#dropdownMenu1').hide();
+	$('#dropdownMenu2').hide();
 	
 	$('#taabs-2').show();
 	$('#ul1').hide();
@@ -2383,11 +2384,13 @@ function adm4() {
 //вкладка Суточные сводки
 function adm5() {
 	curtemp = 'video';
+
+
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu3').hide();
 	$('#dropdownMenu2').hide();
-	$('#dropdownMenu1').hide();
-	$('#dropdownMenu4').show();
+	$('#dropdownMenu4').hide();
+	$('#dropdownMenu1').show();
 
 	//$('.modal-backdrop').hide();
 
@@ -2406,35 +2409,12 @@ function adm5() {
 	// $('#tabs').hide();
 
 	$('#drawing').empty();
-	$('#tabvideo').empty();
-	$('#tabsvodka').empty();
-	$('#tabsvodka').show();
-
-
+	$('#drawing').show();
 	$('#skvnamelab').show();
-	refresh = false; 
-	online = false;
+	online = true;
+	refresh = true;
+	onofadm = true;
 	$('#skvnamelabt').text(skv);
-
-
-
-
-	onofadm = false;
-
-	// getcamswell();
-	
-	// $('#taabs-1').hide();
-	// $('#taabs-2').hide();
-	// $('#tabs').show();
-	// $('#taabs-3').empty();
-	// $('#ul1').hide();
-	// $('#taabs-3').show();
-	
-	
-
-	//Текущая скважина
-	let cam = $('#skvnamelabt').text();
-	//console.log(cam);
 
 	var bigelem = '<div width="100%" height="100%"><div class=" row text-justify">';
 
@@ -2470,7 +2450,7 @@ function adm5() {
 	// 	}
 	// });
 	bigelem= bigelem+'<iframe src="https://hydrofalll.ddns.net/freedepth/report/542.html" style="width:100%;height:700px;"></iframe>'+ '</div></div>';
-	$('#taabs-3').html(bigelem);
+	$('#drawing').html(bigelem);
 // import pdfkit
 
 // pdfkit.from_url('http://google.com', 'out.pdf')
