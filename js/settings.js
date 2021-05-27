@@ -2143,7 +2143,7 @@ function adm() {
 
 	getcamswell();
 	
-	
+	$('#taabs-3').hide();
 	$('#taabs-2').hide();
 	$('#tabs').show();
 	$('#taabs-1').empty();
@@ -2415,14 +2415,15 @@ function adm5() {
 	$('#taabs-1').empty();
 	$('#ul1').hide();
 	$('#taabs-3').show();
-	
+
 	$('#skvnamelab').show();
 	online = false;
 	refresh = false;
 	onofadm = false;
 	$('#skvnamelabt').text(skv);
 
-	var bigelem = '<div class="container container-fluid vh-100 text-center bg-light"  >';
+	var bigelem = '<div class="container-fluid">';
+	// '<div class="container container-fluid vh-100 text-center bg-light"  >';
 
 	// for (var keey in camswell) {
 
@@ -2455,7 +2456,7 @@ function adm5() {
 	// 		$('#taabs-3').html(bigelem);
 	// 	}
 	// });
-	bigelem= bigelem+'<iframe src="https://hydrofalll.ddns.net/mon/poz/svodka/2021-05-21 20:40 АГКМ-АГКМ-542.html" style="width:100%;height:700px;"></iframe>'+ '</div></div>';
+	bigelem= bigelem+'<iframe src="https://hydrofalll.ddns.net/mon/poz/svodka/2021-05-21 20:40 АГКМ-АГКМ-542.html" style="width:100%;height:100%;"></iframe>'+ '</div>';
 	$('#taabs-3').html(bigelem);
 // import pdfkit
 
