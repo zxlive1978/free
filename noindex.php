@@ -215,13 +215,14 @@ if (!$_SESSION['auth']) {
   <ul id="ul1" class="nav nav-tabs bg-dark">
     <li><a href="#tabs-1" > <span id="tabsn-1" >     </span></a></li>
     <li><a href="#tabs-2"> <span id="tabsn-2" >     </span></a></li>
+    <li><a href="#tabs-3"> <span id="tabsn-3" >     </span></a></li>
     <!-- <li><a href="#tabs-3"> <span id="tabsn-3" >     </span></a></li>
     <li><a href="#tabs-4"> <span id="tabsn-4" >     </span></a></li> -->
   </ul>
   <div id="taabs-1" class="bg-dark" style="display: block;  margin: 0 auto; background-color:black;"></div>
   <div id="taabs-2" class="bg-dark" style="display: block;  margin: 0 auto; background-color:black;"></div>
   <!-- <div id="taabs-3" class="bg-dark" style="display: block;  margin: 0 auto; "></div> -->
-  <div id="taabs-3"  class="bg-light 100vh" style="display: block;  margin: 0 auto; background-color:black;"></div>
+  <div id="taabs-3"  class="bg-dark" style="display: block;  margin: 0 auto; background-color:black;"></div>
   
   <!-- <div id="tabs-2">
   </div>
