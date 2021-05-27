@@ -2388,8 +2388,8 @@ function adm5() {
 	$('#dropdownMenu3').hide();
 	$('#dropdownMenu2').hide();
 	$('#dropdownMenu4').hide();
-	// $("#dropdownMenu4").attr("style", "display:yes; padding-top:3; padding-bottom:3;");
-	// $('#dropdownMenu4').show();
+	$("#dropdownMenu4").attr("style", "display:yes; padding-top:3; padding-bottom:3;");
+	$('#dropdownMenu4').show();
 
 	
 	//$('.modal-backdrop').hide();
