@@ -175,7 +175,7 @@ if (!$_SESSION['auth']) {
     
   </div>
   </div>
-</div>
+
 
 <!-- Суточные сводки -->
 <button class='btn   bg-secondary'  id='dropdownMenu4'  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" display:none; padding-top:3; padding-bottom:3;" ><img src='css/burg.svg'  width="27" height="27"></button>
