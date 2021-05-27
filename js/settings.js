@@ -2387,8 +2387,9 @@ function adm5() {
 	$('#dropdownMenu1').hide();
 	$('#dropdownMenu3').hide();
 	$('#dropdownMenu2').hide();
-	$("#dropdownMenu4").attr("style", "display:yes; padding-top:3; padding-bottom:3;");
-	$('#dropdownMenu4').show();
+	$('#dropdownMenu4').hide();
+	// $("#dropdownMenu4").attr("style", "display:yes; padding-top:3; padding-bottom:3;");
+	// $('#dropdownMenu4').show();
 
 	
 	//$('.modal-backdrop').hide();
@@ -2405,7 +2406,7 @@ function adm5() {
 
 	onofadm = false;
 
-	getcamswell();
+	// getcamswell();
 	
 	$('#taabs-1').hide();
 	$('#taabs-2').hide();
