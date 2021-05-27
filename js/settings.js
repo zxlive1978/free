@@ -1745,6 +1745,10 @@ function colPan10(name_select) {
 		$("#myModal12").modal('show');
 	}
 
+	if (curtemp == 'svodka') {
+		$("#myModal21").modal('show');
+	}
+
 }
 
 
