@@ -2383,7 +2383,7 @@ function adm4() {
 
 //вкладка Суточные сводки
 function adm5() {
-	curtemp = 'video';
+	curtemp = 'svodka';
 
 
 	$("#myModal11").modal('hide');
