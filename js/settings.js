@@ -2417,7 +2417,7 @@ function adm5() {
 	onofadm = true;
 	$('#skvnamelabt').text(skv);
 
-	var bigelem = '<div class="container container-fluid vh-100 text-center bg-dark"  >';
+	var bigelem = '<div class="container container-fluid vh-100 text-center bg-light"  >';
 
 	// for (var keey in camswell) {
 
@@ -2451,7 +2451,7 @@ function adm5() {
 	// 	}
 	// });
 	bigelem= bigelem+'<iframe src="https://hydrofalll.ddns.net/mon/poz/svodka/2021-05-21 20:40 АГКМ-АГКМ-542.html" style="width:100%;height:700px;"></iframe>'+ '</div></div>';
-	$('#tabsvodka').html(bigelem);
+	$('#taabs-3').html(bigelem);
 // import pdfkit
 
 // pdfkit.from_url('http://google.com', 'out.pdf')
