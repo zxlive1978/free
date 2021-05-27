@@ -2386,9 +2386,9 @@ function adm5() {
 	$("#myModal11").modal('hide');
 	$('#dropdownMenu1').hide();
 	$('#dropdownMenu3').hide();
-	$('#dropdownMenu4').hide();
-	$("#dropdownMenu2").attr("style", "display:yes; padding-top:3; padding-bottom:3;");
-	$('#dropdownMenu2').show();
+	$('#dropdownMenu2').hide();
+	$("#dropdownMenu4").attr("style", "display:yes; padding-top:3; padding-bottom:3;");
+	$('#dropdownMenu4').show();
 
 	
 	//$('.modal-backdrop').hide();
