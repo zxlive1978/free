@@ -234,7 +234,7 @@ if (!$_SESSION['auth']) {
 <!-- style="touch-action: none;" -->
 <div id="drawing" class="bg-dark"  ></div> 
 <div id="tabvideo" width="100%" height="100%"  class="bg-dark" style = "background-color:black;" ></div>
-<div id="tabsvodka" width="50%" height="100%"  class="bg-dark" style = "background-color:black;" ></div>
+<div id="tabsvodka" width="100%" height="100%"  class="bg-light" style = "background-color:black;" ></div>
 <script type="text/javascript">
 function getStart() {
   $('#dropdownMenu2').hide();
