@@ -2384,22 +2384,37 @@ function adm4() {
 function adm5() {
 	curtemp = 'video';
 	$("#myModal11").modal('hide');
-	$('#dropdownMenu1').hide();
 	$('#dropdownMenu3').hide();
 	$('#dropdownMenu2').hide();
-	$('#dropdownMenu4').hide();
-	// $("#dropdownMenu4").attr("style", "display:yes; padding-top:3; padding-bottom:3;");
+	$('#dropdownMenu1').hide();
 	$('#dropdownMenu4').show();
 
-	
 	//$('.modal-backdrop').hide();
 
-	online = false;
-	refresh = false;
-	$('#drawing').empty();
-	$('#drawing').hide();
-	//$('#skvnamelab').hide();
+	
+	// setTimeout(function(){deleteoldcams();}
+	// , 30000);
 
+	//$('#dialogvideo').dialog( "open" );// Для скрытия
+	$('#tabs').hide();
+	$('#camsf2').remove();
+	$('#taabs-1').empty();
+	$('#taabs-2').empty();
+	$('#taabs-3').empty();
+	//document.getElementById("camsf2").innerHTML="Роторный стол";
+	// $('#tabs').empty();
+	// $('#tabs').hide();
+
+	$('#drawing').empty();
+	$('#tabvideo').empty();
+	$('#tabsvodka').empty();
+	$('#tabsvodka').show();
+
+
+	$('#skvnamelab').show();
+	refresh = false; 
+	online = false;
+	$('#skvnamelabt').text(skv);
 
 
 
@@ -2408,12 +2423,12 @@ function adm5() {
 
 	// getcamswell();
 	
-	$('#taabs-1').hide();
-	$('#taabs-2').hide();
-	$('#tabs').show();
-	$('#taabs-3').empty();
-	$('#ul1').hide();
-	$('#taabs-3').show();
+	// $('#taabs-1').hide();
+	// $('#taabs-2').hide();
+	// $('#tabs').show();
+	// $('#taabs-3').empty();
+	// $('#ul1').hide();
+	// $('#taabs-3').show();
 	
 	
 
