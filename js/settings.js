@@ -2409,6 +2409,7 @@ function adm5() {
 	// $('#tabs').hide();
 
 	$('#drawing').empty();
+	$('#drawing').hide();
 	$('#taabs-3').empty();
 	$('#taabs-3').show();
 	$('#skvnamelab').show();
