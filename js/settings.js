@@ -2410,7 +2410,12 @@ function adm5() {
 
 	$('#drawing').empty();
 	$('#drawing').hide();
-	$('#taabs-3').empty();
+	$('#taabs-2').hide();
+	$('#tabs').show();
+	$('#taabs-1').empty();
+	$('#ul1').hide();
+	$('#taabs-3').show();
+	
 	$('#skvnamelab').show();
 	online = false;
 	refresh = false;
