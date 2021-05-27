@@ -831,6 +831,50 @@ window.onload = getStart;
   </div>
 
 
+
+  <div class="modal fade" id="myModal21">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Выбор скважины</h4>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+        <label for="hcolcolor">Название скважины:</label><select class="form-control input-lg bg-dark text-light" name="videoN" id="videoN"  size="1" ></select>
+        <br>
+        <label for="hcolcolor">Список:</label><br>
+        <label class="radio-inline"><input type="radio" id="real1" name="optradio" checked>   В реальном времени</label>
+        <label class="radio-inline"><input type="radio" id="real2" name="optradio" >     Архив</label><br>
+
+        
+        <label for="hcolcolor"class="control-label">Начало:</label>
+        <input type='date' class="form-control  bg-dark text-light" id='startdate1' name='startdate1' value="<?php echo date('Y-m-d');?>"><input type="time"  class="form-control bg-dark text-light" id="starttime1" name="starttime1" class="form-control  bg-dark text-light " value="01:00" min="00:00" max="24:00" required >
+
+        <label for="hcolcolor"class="control-label">Конец:</label>
+        <input type='date' class="form-control  bg-dark text-light" id='startdate2' name='startdate2' value="<?php echo date('Y-m-d');?>"><input type="time" class="form-control bg-dark text-light" id="starttime2" name="starttime2" class="form-control  bg-dark text-light" value="01:01" min="00:00" max="24:00" required >
+        
+
+        
+        <!-- <label for="hcolcolor"class="control-label">Тип потока:</label><select id="zzzzooom1" class="form-control input-lg bg-dark text-light" name="zzzzooom1" value="3">
+      <option value="01">Основной</option>
+      <option value="02">Дополнительный</option> </select> -->
+  
+</div>        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK10()'>Применить</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
 </main>
 </body>
 </html>
