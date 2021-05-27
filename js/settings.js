@@ -2388,7 +2388,7 @@ function adm5() {
 	$('#dropdownMenu3').hide();
 	$('#dropdownMenu2').hide();
 	$('#dropdownMenu4').hide();
-	$("#dropdownMenu4").attr("style", "display:yes; padding-top:3; padding-bottom:3;");
+	// $("#dropdownMenu4").attr("style", "display:yes; padding-top:3; padding-bottom:3;");
 	$('#dropdownMenu4').show();
 
 	
@@ -2421,7 +2421,7 @@ function adm5() {
 	let cam = $('#skvnamelabt').text();
 	//console.log(cam);
 
-	var bigelem = '<div class="container-fluid"><div class=" row text-justify">';
+	var bigelem = '<div width="100%" height="100%"><div class=" row text-justify">';
 
 	// for (var keey in camswell) {
 
@@ -2454,7 +2454,7 @@ function adm5() {
 	// 		$('#taabs-3').html(bigelem);
 	// 	}
 	// });
-	bigelem= bigelem+'<iframe src="https://hydrofalll.ddns.net/freedepth/report/542.html" style="width:100%;height:700px;"></iframe>'+ '</div>';
+	bigelem= bigelem+'<iframe src="https://hydrofalll.ddns.net/freedepth/report/542.html" style="width:100%;height:700px;"></iframe>'+ '</div></div>';
 	$('#taabs-3').html(bigelem);
 // import pdfkit
 
