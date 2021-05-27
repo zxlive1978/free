@@ -221,7 +221,7 @@ if (!$_SESSION['auth']) {
   <div id="taabs-1" class="bg-dark" style="display: block;  margin: 0 auto; background-color:black;"></div>
   <div id="taabs-2" class="bg-dark" style="display: block;  margin: 0 auto; background-color:black;"></div>
   <!-- <div id="taabs-3" class="bg-dark" style="display: block;  margin: 0 auto; "></div> -->
-  <div id="taabs-3" class="bg-light text-center " style="display: block;  margin: 0 auto; background-color:black;"></div>
+  <div id="taabs-3" class="bg-light " style="display: block;  margin: 0 auto; background-color:black;"></div>
   
   <!-- <div id="tabs-2">
   </div>
