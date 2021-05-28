@@ -1774,7 +1774,6 @@ function colPan10(name_select) {
 			// console.log(cur);
 			if (files_svodka[cur].search(skv) != -1){
 			str=files_svodka[cur];
-			filesss[keey]= str;
 			//console.log(str);
 			$('#colitems17').append($('<option>',
 				{
