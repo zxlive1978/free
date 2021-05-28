@@ -850,15 +850,14 @@ window.onload = getStart;
 
           <!-- Modal body -->
           <div class="modal-body">
-        <label for="hcolcolor">Название скважины:</label><select class="form-control input-lg bg-dark text-light" name="videoN" id="videoN"  size="1" ></select>
+        <label for="hcolcolor">Название скважины:</label><select class="form-control input-lg bg-dark text-light" name="svodkaoN" id="svodkaoN"  size="1" ></select>
         <br>
         <label class="control-label" for="hcolcolor">Каталог форм:   </label><select class="form-control input-lg bg-dark text-light" name="colitems9" id="colitems9"  size="5" ></select>
         <label class="control-label" for="hcolcolor">Имя формы:      </label><input class="form-control input-lg bg-dark text-light" type="text" id="colitems99" name="colitems99" value=""/>
       </div>
         <!-- Modal footer -->
         <div class="modal-footer">
-			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK8()'>Загрузить</button>
-			<button type="button" class="btn btn-warning" data-dismiss="modal" onclick='colOK9()'>Сохранить</button>
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK17()'>Загрузить</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
         
