@@ -1800,7 +1800,7 @@ function colPan10(name_select) {
 			//`Выбор файла для перезаписи
 		$("#colitems17").change(function () {
 			$("#colitems18").val($('input[name="colitems17"]:checked').closest('label').text());
-			cur_svodka=$('select[@name="colitems17"] option:selected').val();;
+			cur_svodka=$('#colitems17').val();
 			console.log(cur_svodka);
 		});
 		$("#myModal21").modal('show');
