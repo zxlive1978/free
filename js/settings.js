@@ -1746,6 +1746,47 @@ function colPan10(name_select) {
 	}
 
 	if (curtemp == 'svodka') {
+
+		for (var keey in wells) {
+			$('#svodkaoN').append($('<option>',
+				{
+					value: wells[keey].wellN,
+					text: wells[keey].txt
+				}));
+		}
+		//Восстановление выбора
+		$('#svodkaoN').val(wellName);
+
+
+		if ((Object.keys(files_svodka).length > 0)) {
+
+
+		}
+
+		$('#svodkaoN').on('change', function () {
+			wellSelectBase = $("#svodkaoN").prop('value');
+			wellSelectName = $("#svodkaoN option:selected").text();
+
+			
+		});
+		$('#colitems9').empty();
+		for (var cur in files_svodka) {
+			// console.log(cur);
+			if (files_svodka[cur].search(skv) != -1){
+			str=files_svodka[cur];
+			filesss[keey]= str;
+			//console.log(str);
+			$('#colitems17').append($('<option>',
+				{
+					value: str,
+					text: str
+				}));
+	
+		}
+		//`Выбор файла для перезаписи
+		$("#colitems17").change(function () {
+			$("#colitems18").val(files_svodka[$("#colitems17")[0].selectedIndex]);
+		});
 		$("#myModal21").modal('show');
 	}
 
@@ -2431,7 +2472,7 @@ function adm5() {
 	for (var cur in files_svodka) {
 		// console.log(cur);
 		if (files_svodka[cur].search(skv) != -1){
-			console.log(files_svodka[cur]);
+			// console.log(files_svodka[cur]);
 			cur_svodka=files_svodka[cur];
 		}
 
