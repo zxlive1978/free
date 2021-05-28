@@ -2429,9 +2429,10 @@ function adm5() {
 	$('#skvnamelabt').text(skv);
 	var cur_svodka =""
 	for (var cur in files_svodka) {
-		if (cur.search(skv) != -1){
-			console.log(cur);
-			cur_svodka=cur;
+		// console.log(cur);
+		if (files_svodka[cur].search(skv) != -1){
+			console.log(files_svodka[cur]);
+			cur_svodka=files_svodka[cur];
 		}
 
 	}
@@ -2470,7 +2471,7 @@ function adm5() {
 	// 		$('#taabs-3').html(bigelem);
 	// 	}
 	// });
-	bigelem= bigelem+'<iframe src="https://hydrofalll.ddns.net'+files_svodka[10].slice(5)+'" style="width:100%;height:100%;"></iframe>'+ '</div>';
+	bigelem= bigelem+'<iframe src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" style="width:100%;height:100%;"></iframe>'+ '</div>';
 	$('#taabs-3').html(bigelem);
 // import pdfkit
 
