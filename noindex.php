@@ -842,13 +842,7 @@ window.onload = getStart;
           <button type="button" class="close" data-dismiss="modal">×</button>
         </div>
    
-        <!-- Modal footer -->
-        <div class="modal-footer">
-			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK10()'>Применить</button>
-          <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
-        </div>
-
-          <!-- Modal body -->
+         <!-- Modal body -->
           <div class="modal-body">
         <label for="hcolcolor">Название скважины:</label><select class="form-control input-lg bg-dark text-light" name="svodkaoN" id="svodkaoN"  size="1" ></select>
         <br>
