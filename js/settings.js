@@ -2390,7 +2390,6 @@ var files_svodka;
 function adm5() {
 	curtemp = 'svodka';
 	read_svodka();
-	console.log(files_svodka);
 
 
 	$("#myModal11").modal('hide');
@@ -2428,6 +2427,14 @@ function adm5() {
 	refresh = false;
 	onofadm = false;
 	$('#skvnamelabt').text(skv);
+	var cur_svodka =""
+	for (var cur in files_svodka) {
+		if (cur.search(skv) != -1){
+			console.log(cur);
+			cur_svodka=cur;
+		}
+
+	}
 
 	var bigelem = '<div class="container-fluid">';
 	// '<div class="container container-fluid vh-100 text-center bg-light"  >';
