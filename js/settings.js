@@ -1800,6 +1800,7 @@ function colPan10(name_select) {
 			//`Выбор файла для перезаписи
 		$("#colitems17").change(function () {
 			$("#colitems18").val(files_svodka[$("#colitems17")[0].selectedIndex]);
+			cur_svodka=files_svodka[$("#colitems17")[0].selectedIndex];
 		});
 		$("#myModal21").modal('show');
 	}
@@ -2588,6 +2589,14 @@ function colOK15() {
 function colOK161() {
 	$('input[name="menu"]:checked').val();
 
+
+}
+//Загрузить сводку
+function colOK17() {
+	$('#taabs-3').empty();
+	var bigelem = '<div class="container-fluid">';
+	bigelem= bigelem+'<iframe src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" style="width:100%;height:90%;"></iframe>'+ '</div>';
+	$('#taabs-3').html(bigelem);
 
 }
 
