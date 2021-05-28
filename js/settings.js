@@ -1799,8 +1799,8 @@ function colPan10(name_select) {
 		}
 			//`Выбор файла для перезаписи
 		$("#colitems17").change(function () {
-			$("#colitems18").val(files_svodka[$("#colitems17")[0].selectedIndex]);
-			cur_svodka=files_svodka[$("#colitems17")[0].selectedIndex];
+			$("#colitems18").val($("#colitems17")[0].selectedText);
+			cur_svodka=$("#colitems17")[0].selectedText;
 		});
 		$("#myModal21").modal('show');
 	}
