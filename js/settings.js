@@ -2389,6 +2389,8 @@ var files_svodka;
 //вкладка Суточные сводки
 function adm5() {
 	curtemp = 'svodka';
+	read_svodka();
+	console.log(files_svodka);
 
 
 	$("#myModal11").modal('hide');
