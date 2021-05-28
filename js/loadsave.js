@@ -196,7 +196,7 @@ function read_svodka() {
 			type: "POST",
 			url: 'js/read_svodka.php',
 			async:false,
-			data: {name: 'Wayne',well_Name: wellName, fileName: filedir},
+			data: {name: 'Wayne',well_Name: wellName, fileName: "filedir"},
 			success: function(data){
 				//Обновление
 				var refresh = false;
