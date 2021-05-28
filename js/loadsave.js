@@ -184,13 +184,13 @@ function readddir() {
 function read_svodka() {
 	/* filesss= {}; */
 	//fileName = '../scr/scr11.scr';
-	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
-	filedir=_uzdec;
-	if (curtemp == 'time'){
-		filedir = filedir+'/';}
-	if (curtemp == 'depth'){
-		filedir = filedir+'/depth/';
-	}
+	// let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
+	// filedir=_uzdec;
+	// if (curtemp == 'time'){
+	// 	filedir = filedir+'/';}
+	// if (curtemp == 'depth'){
+	// 	filedir = filedir+'/depth/';
+	// }
 	
 	$.ajax({
 			type: "POST",
@@ -206,7 +206,7 @@ function read_svodka() {
 				var plan = {};
 				/* console.log(data); */
 				//Чтение формы
-				filesss = JSON.parse(data, filesss);
+				files_svodka = JSON.parse(data, files_svodka);
 				//alert(filesss);
 				/* data = [];
 				return plan; */
