@@ -2594,6 +2594,7 @@ function colOK161() {
 }
 //Загрузить сводку
 function colOK17() {
+	$('#skvnamelabt').text(skv);
 	$('#taabs-3').empty();
 	var bigelem = '<div class="container-fluid">';
 	bigelem= bigelem+'<iframe src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" style="width:100%;height:90%;"></iframe>'+ '</div>';
