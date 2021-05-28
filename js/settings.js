@@ -2492,7 +2492,7 @@ function adm5() {
 		}
 
 	} 
-	if cur_svodka!=''{
+	if (cur_svodka!='') {
 	var bigelem = '<div class="container-fluid">';
 	// '<div class="container container-fluid vh-100 text-center bg-light"  >';
 
