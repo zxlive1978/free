@@ -1766,10 +1766,24 @@ function colPan10(name_select) {
 		$('#svodkaoN').on('change', function () {
 			wellSelectBase = $("#svodkaoN").prop('value');
 			wellSelectName = $("#svodkaoN option:selected").text();
+			$('#colitems17').empty();
+			for (var cur in files_svodka) {
+				// console.log(cur);
+				if (files_svodka[cur].search(wellSelectName) != -1){
+				str=files_svodka[cur];
+				//console.log(str);
+				$('#colitems17').append($('<option>',
+					{
+						value: str,
+						text: str
+					}));
+		
+				}
+		}
 
 			
 		});
-		$('#colitems9').empty();
+		$('#colitems17').empty();
 		for (var cur in files_svodka) {
 			// console.log(cur);
 			if (files_svodka[cur].search(skv) != -1){
