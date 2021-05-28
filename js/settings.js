@@ -1782,8 +1782,9 @@ function colPan10(name_select) {
 					text: str
 				}));
 	
+			}
 		}
-		//`Выбор файла для перезаписи
+			//`Выбор файла для перезаписи
 		$("#colitems17").change(function () {
 			$("#colitems18").val(files_svodka[$("#colitems17")[0].selectedIndex]);
 		});
