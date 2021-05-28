@@ -194,9 +194,9 @@ function read_svodka() {
 	
 	$.ajax({
 			type: "POST",
-			url: 'js/read_svodka.php',
+			url: 'js/readddir.php',
 			async:false,
-			data: {name: 'Wayne',well_Name: wellName, fileName: "filedir"},
+			data: {name: 'Wayne',well_Name: wellName, fileName: ""},
 			success: function(data){
 				//Обновление
 				var refresh = false;
