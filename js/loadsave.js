@@ -180,6 +180,54 @@ function readddir() {
 }
 
 
+//Чтение списка файлов
+function read_svodka() {
+	/* filesss= {}; */
+	//fileName = '../scr/scr11.scr';
+	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
+	filedir=_uzdec;
+	if (curtemp == 'time'){
+		filedir = filedir+'/';}
+	if (curtemp == 'depth'){
+		filedir = filedir+'/depth/';
+	}
+	
+	$.ajax({
+			type: "POST",
+			url: 'js/read_svodka.php',
+			async:false,
+			data: {name: 'Wayne',well_Name: wellName, fileName: filedir},
+			success: function(data){
+				//Обновление
+				var refresh = false;
+				//Онлайн
+				var online = false;
+				
+				var plan = {};
+				/* console.log(data); */
+				//Чтение формы
+				filesss = JSON.parse(data, filesss);
+				//alert(filesss);
+				/* data = [];
+				return plan; */
+				/* Sheet = plan[0];
+				Columns = plan[1];
+				basePar = plan[2];
+				txtPar = plan[3];
+				txtOknOPar = plan[4]; */
+				
+				//Перерисовка
+				/* try {
+				$("#drawing").find("*").not("rect, g").remove();
+				}
+				catch(e){ }
+				init(); */
+				
+			}
+		});
+		//Возращаем список файлов
+		//alert(filesss);
+}
 /* function loaddata() {
 	$.getJSON("/some/url", function(data) { 
 		// Now use this data to update your view models, 

@@ -2384,7 +2384,8 @@ function adm4() {
 
 }
 
-
+//Список файлов
+var files_svodka;
 //вкладка Суточные сводки
 function adm5() {
 	curtemp = 'svodka';
