@@ -2491,8 +2491,8 @@ function adm5() {
 			cur_svodka=files_svodka[cur];
 		}
 
-	}
-
+	} 
+	if cur_svodka!=''{
 	var bigelem = '<div class="container-fluid">';
 	// '<div class="container container-fluid vh-100 text-center bg-light"  >';
 
@@ -2529,6 +2529,7 @@ function adm5() {
 	// });
 	bigelem= bigelem+'<iframe src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" style="width:100%;height:90%;"></iframe>'+ '</div>';
 	$('#taabs-3').html(bigelem);
+	}
 // import pdfkit
 
 // pdfkit.from_url('http://google.com', 'out.pdf')
