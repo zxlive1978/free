@@ -2471,7 +2471,7 @@ function adm5() {
 	// 		$('#taabs-3').html(bigelem);
 	// 	}
 	// });
-	bigelem= bigelem+'<iframe src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" style="width:100%;height:100%;"></iframe>'+ '</div>';
+	bigelem= bigelem+'<iframe src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" style="width:100%;height:90%;"></iframe>'+ '</div>';
 	$('#taabs-3').html(bigelem);
 // import pdfkit
 
