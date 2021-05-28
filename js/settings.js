@@ -2463,7 +2463,7 @@ function adm5() {
 	// 		$('#taabs-3').html(bigelem);
 	// 	}
 	// });
-	bigelem= bigelem+'<iframe src="https://hydrofalll.ddns.net/mon/poz/svodka/2021-05-21 20:40 АГКМ-АГКМ-542.html" style="width:100%;height:100%;"></iframe>'+ '</div>';
+	bigelem= bigelem+'<iframe src="https://hydrofalll.ddns.net'+files_svodka[0].slice(5)+'" style="width:100%;height:100%;"></iframe>'+ '</div>';
 	$('#taabs-3').html(bigelem);
 // import pdfkit
 
