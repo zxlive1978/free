@@ -2528,7 +2528,7 @@ function adm5() {
 	// 		$('#taabs-3').html(bigelem);
 	// 	}
 	// });
-	// style="width:100%;height:90%;"
+	//  style="width:100%;height:90%;"
 	bigelem= bigelem+'<iframe id="svodka" name="svodka" src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" ></iframe>'+ '</div>';
 	$('#taabs-3').html(bigelem);
 	}
