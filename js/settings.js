@@ -2599,7 +2599,7 @@ function colOK17() {
 	$('#skvnamelabt').text(cur_svodka);
 	$('#taabs-3').empty();
 	var bigelem = '<div  class="container-fluid">';
-	bigelem= bigelem+'<iframe id="svodka" name="svodka" src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" style="width:100%;height:90%;"></iframe>'+ '</div>';
+	bigelem= bigelem+'<iframe id="svodka" name="svodka" src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" "></iframe>'+ '</div>';
 	$('#taabs-3').html(bigelem);
 
 }
