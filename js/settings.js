@@ -1762,7 +1762,7 @@ function colPan10(name_select) {
 
 
 		}
-
+		var base_path='svodka/'
 		$('#svodkaoN').on('change', function () {
 			wellSelectBase = $("#svodkaoN").prop('value');
 			wellSelectName = $("#svodkaoN option:selected").text();
@@ -1771,7 +1771,7 @@ function colPan10(name_select) {
 				// console.log(cur);
 				if (files_svodka[cur].search(wellSelectName) != -1){
 				str=files_svodka[cur];
-				str2=files_svodka[cur].slice();
+				str2=files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+len(base_path),-4);
 				//console.log(str);
 				$('#colitems17').append($('<option>',
 					{
@@ -1789,11 +1789,12 @@ function colPan10(name_select) {
 			// console.log(cur);
 			if (files_svodka[cur].search(skv) != -1){
 			str=files_svodka[cur];
+			str2=files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+len(base_path),-4);
 			//console.log(str);
 			$('#colitems17').append($('<option>',
 				{
 					value: str,
-					text: str
+					text: str2
 				}));
 	
 			}
