@@ -1747,7 +1747,7 @@ function colPan10(name_select) {
 
 	if (curtemp == 'svodka') {
 
-		$('#colitems17').empty();
+		$('#svodkaoN').empty();
 		for (var keey in wells) {
 			$('#svodkaoN').append($('<option>',
 				{
@@ -1821,6 +1821,16 @@ function colPan10(name_select) {
 
 
 function colOK10() {
+
+	if (curtemp=='svodka'){
+		$('#taabs-3').empty();
+		var bigelem = '<div  class="container-fluid">';
+		bigelem= bigelem+'<iframe id="svodka" name="svodka" src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" "></iframe>'+ '</div>';
+		$('#taabs-3').html(bigelem);
+
+
+	}
+
 
 	if (curtemp == 'time') {
 		refresh = false; //pong.js
@@ -2607,15 +2617,7 @@ function colOK161() {
 
 
 }
-//Загрузить сводку
-function colOK17() {
-	$('#skvnamelabt').text(cur_svodka);
-	$('#taabs-3').empty();
-	var bigelem = '<div  class="container-fluid">';
-	bigelem= bigelem+'<iframe id="svodka" name="svodka" src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" "></iframe>'+ '</div>';
-	$('#taabs-3').html(bigelem);
 
-}
 
 //Очистка и рендеринг
 function repaint() {

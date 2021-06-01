@@ -851,7 +851,7 @@ window.onload = getStart;
       </div>
         <!-- Modal footer -->
         <div class="modal-footer">
-			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK17()'>Загрузить</button>
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK10()'>Загрузить</button>
           <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
         </div>
         
