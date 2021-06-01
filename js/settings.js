@@ -1772,7 +1772,7 @@ function colPan10(name_select) {
 				// console.log(cur);
 				if (files_svodka[cur].search(wellSelectName) != -1){
 				str=files_svodka[cur];
-				str2=files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length,-files_svodka[cur].lastindexOf(base_path));
+				str2=files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length,-files_svodka[cur].lastindexOf('.'));
 				//console.log(str);
 				$('#colitems17').append($('<option>',
 					{
