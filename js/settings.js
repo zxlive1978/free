@@ -1795,9 +1795,9 @@ function colPan10(name_select) {
 			if (files_svodka[cur].search(skv) != -1){
 			str=files_svodka[cur];
 			if (files_svodka[cur].indexOf('png')!=-1){
-				str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length,-1*(files_svodka[cur]).lastIndexOf('.'));
+				str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length,Number(-1*(files_svodka[cur]).lastIndexOf('.')));
 				} else{
-				str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length,-1*(files_svodka[cur]).lastIndexOf('.'));
+				str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length,Number(-1*(files_svodka[cur]).lastIndexOf('.')));
 				}
 			//console.log(str);
 			$('#colitems17').append($('<option>',
