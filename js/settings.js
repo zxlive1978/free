@@ -1773,9 +1773,9 @@ function colPan10(name_select) {
 				if (files_svodka[cur].search(wellSelectName) != -1){
 				str=files_svodka[cur];
 				if (files_svodka[cur].indexOf('png')!=-1){
-				str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length,-files_svodka[cur].lastindexOf('.'));
+				str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length,-1*(files_svodka[cur]).lastindexOf('.'));
 				} else{
-				str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length,-files_svodka[cur].lastindexOf('.'));
+				str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length,-1*(files_svodka[cur]).lastindexOf('.'));
 				}
 				//console.log(str);
 				$('#colitems17').append($('<option>',
@@ -1795,9 +1795,9 @@ function colPan10(name_select) {
 			if (files_svodka[cur].search(skv) != -1){
 			str=files_svodka[cur];
 			if (files_svodka[cur].indexOf('png')!=-1){
-				str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length,-files_svodka[cur].lastindexOf('.'));
+				str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length,-1*(files_svodka[cur]).lastIndexOf('.'));
 				} else{
-				str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length,-files_svodka[cur].lastindexOf('.'));
+				str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length,-1*(files_svodka[cur]).lastIndexOf('.'));
 				}
 			//console.log(str);
 			$('#colitems17').append($('<option>',
@@ -2478,6 +2478,7 @@ function adm5() {
 	$('#taabs-1').empty();
 	$('#taabs-2').empty();
 	$('#taabs-3').empty();
+	$('#colitems17').empty();
 	//document.getElementById("camsf2").innerHTML="Роторный стол";
 	// $('#tabs').empty();
 	// $('#tabs').hide();
@@ -2496,6 +2497,7 @@ function adm5() {
 	onofadm = false;
 	$('#skvnamelabt').text(skv);
 	var cur_svodka =""
+	var cur_svodka_name=""
 	for (var cur in files_svodka) {
 		// console.log(cur);
 		if (files_svodka[cur].search(skv) != -1){
