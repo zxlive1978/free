@@ -1810,7 +1810,7 @@ function colPan10(name_select) {
 		}
 			//`Выбор файла для перезаписи
 		$("#colitems17").change(function () {
-			$("#colitems18").val($('#colitems17').val());
+			$("#colitems18").val($('#colitems17').text());
 			cur_svodka=$('#colitems17').val();
 			// console.log(cur_svodka);
 		});
