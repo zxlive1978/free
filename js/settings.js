@@ -1824,8 +1824,8 @@ function colOK10() {
 
 	if (curtemp=='svodka'){
 		$('#taabs-3').empty();
-		var bigelem = '<div  class="container-fluid">';
-		bigelem= bigelem+'<iframe id="svodka" name="svodka" src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" "></iframe>'+ '</div>';
+		var bigelem = '<div  class="container-fluid"  >';//align="absmiddle | baseline | bottom | left | middle
+		bigelem= bigelem+'<iframe id="svodka" align="absmiddle" name="svodka" src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" "></iframe>'+ '</div>';
 		$('#taabs-3').html(bigelem);
 
 
