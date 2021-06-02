@@ -2552,7 +2552,7 @@ function adm5() {
 	// 	}
 	// });
 	//  style="width:100%;height:90%;"
-	bigelem= bigelem+'<iframe id="svodka" name="svodka" src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" ></iframe>'+ '</div>';
+	bigelem= bigelem+'<iframe frameborder="1" style="border: 0px solid black" id="svodka" name="svodka" src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" ></iframe>'+ '</div>';
 	$('#taabs-3').html(bigelem);
 	}
 // import pdfkit
