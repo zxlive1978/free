@@ -1774,8 +1774,10 @@ function colPan10(name_select) {
 				str=files_svodka[cur];
 				if (files_svodka[cur].indexOf('png')!=-1){
 				str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
+				str2=str2.slice(0,str2.lastIndexOf('.'));
 				} else{
 				str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
+				str2=str2.slice(0,str2.lastIndexOf('.'));
 				}
 				//console.log(str);
 				$('#colitems17').append($('<option>',
@@ -1796,6 +1798,7 @@ function colPan10(name_select) {
 			str=files_svodka[cur];
 			if (files_svodka[cur].indexOf('png')!=-1){
 				str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
+				
 				} else{
 				str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
 				}
@@ -1810,6 +1813,7 @@ function colPan10(name_select) {
 		}
 			//`Выбор файла для перезаписи
 		$("#colitems17").change(function () {
+			$("#colitems18").empty();
 			$("#colitems18").val($('#colitems17').text());
 			cur_svodka=$('#colitems17').val();
 			// console.log(cur_svodka);
@@ -2466,6 +2470,10 @@ function adm4() {
 var files_svodka;
 //вкладка Суточные сводки
 function adm5() {
+	if (curtemp=='video'){
+		//удаление старых потоков
+		deleteoldcams();
+	}
 	curtemp = 'svodka';
 	read_svodka();
 

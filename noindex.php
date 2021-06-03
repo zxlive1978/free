@@ -846,8 +846,8 @@ window.onload = getStart;
           <div class="modal-body">
         <label for="hcolcolor">Название скважины:</label><select class="form-control input-lg bg-dark text-light" name="svodkaoN" id="svodkaoN"  size="1" ></select>
         <br>
-        <label class="control-label" for="hcolcolor">Каталог сводок:   </label><select class="form-control input-lg bg-dark text-light" name="colitems17" id="colitems17"  size="5" ></select>
-        <label class="control-label" for="hcolcolor">Имя сводки:      </label><input class="form-control input-lg bg-dark text-light" type="text" id="colitems18" name="colitems19" value=""/>
+        <label class="control-label" for="hcolcolor">Каталог документов:   </label><select class="form-control input-lg bg-dark text-light" name="colitems17" id="colitems17"  size="5" ></select>
+        <label class="control-label" for="hcolcolor">Имя документа:      </label><input class="form-control input-lg bg-dark text-light" type="text" id="colitems18" name="colitems19" value=""/>
       </div>
         <!-- Modal footer -->
         <div class="modal-footer">
