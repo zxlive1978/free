@@ -2517,7 +2517,7 @@ function adm5() {
 
 	} 
 	if (cur_svodka!='') {
-	var bigelem = '<div class="container-fluid" style="width:auto; margin: auto;">';
+	var bigelem = '';//'<div class="container-fluid" style="width:auto; margin: auto;">';
 	// '<div class="container container-fluid vh-100 text-center bg-light"  >';
 
 	// for (var keey in camswell) {
@@ -2552,7 +2552,7 @@ function adm5() {
 	// 	}
 	// });
 	//  style="width:100%;height:90%;"
-	bigelem= bigelem+'<iframe frameborder="1" style="border: 0px solid black" id="svodka" name="svodka" src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" ></iframe>'+ '</div>';
+	bigelem= bigelem+'<iframe frameborder="1" style="border: 0px solid black" id="svodka" name="svodka" src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" ></iframe>';//+ '</div>';
 	$('#taabs-3').html(bigelem);
 	}
 // import pdfkit
