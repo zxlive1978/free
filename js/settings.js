@@ -1756,7 +1756,7 @@ function colPan10(name_select) {
 				}));
 		}
 		//Восстановление выбора
-		$('#svodkaoN').val(wellSelectName);
+		$('#svodkaoN').val(wellName);
 
 
 		if ((Object.keys(files_svodka).length > 0)) {
@@ -1767,7 +1767,6 @@ function colPan10(name_select) {
 		$('#svodkaoN').on('change', function () {
 			wellSelectBase = $("#svodkaoN").prop('value');
 			wellSelectName = $("#svodkaoN option:selected").text();
-			$('#svodkaoN').val(wellSelectName);
 			$('#colitems17').empty();
 			for (var cur in files_svodka) {
 				// console.log(cur);
