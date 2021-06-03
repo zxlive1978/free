@@ -1774,10 +1774,10 @@ function colPan10(name_select) {
 				str=files_svodka[cur];
 				if (files_svodka[cur].indexOf('png')!=-1){
 				str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
-				str2=str2.slice(0,str2.lastIndexOf('.'));
+				str2=str2.slice(0,str2.lastIndexOf('АГКМ'));
 				} else{
 				str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
-				str2=str2.slice(0,str2.lastIndexOf('.'));
+				str2=str2.slice(0,str2.lastIndexOf('АГКМ'));
 				}
 				//console.log(str);
 				$('#colitems17').append($('<option>',
@@ -1798,10 +1798,10 @@ function colPan10(name_select) {
 			str=files_svodka[cur];
 			if (files_svodka[cur].indexOf('png')!=-1){
 				str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
-				str2=str2.slice(0,str2.lastIndexOf('.'));
+				str2=str2.slice(0,str2.lastIndexOf('АГКМ'));
 				} else{
 				str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
-				str2=str2.slice(0,str2.lastIndexOf('.'));
+				str2=str2.slice(0,str2.lastIndexOf('АГКМ'));
 				}
 			//console.log(str);
 			$('#colitems17').append($('<option>',
