@@ -1814,8 +1814,9 @@ function colPan10(name_select) {
 		}
 			//`Выбор файла для перезаписи
 		$("#colitems17").change(function () {
+			let selind = document.getElementById("colitems17").options.selectedIndex;
 			$("#colitems18").empty();
-			$("#colitems18").val($(this).val());
+			$("#colitems18").val(document.getElementById("colitems17").options[selind].text);
 			// $("#colitems18").val($('#colitems17').text());
 			cur_svodka=$('#colitems17').val();
 			// console.log(cur_svodka);
