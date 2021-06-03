@@ -1825,7 +1825,7 @@ function colOK10() {
 	if (curtemp=='svodka'){
 		$('#taabs-3').empty();
 		var bigelem = '<div  class="container-fluid"  >';//align="absmiddle | baseline | bottom | left | middle
-		bigelem= bigelem+'<iframe id="svodka" frameborder="1" style="border: 0px solid black" align="absmiddle" name="svodka" src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" "></iframe>'+ '</div>';
+		bigelem= bigelem+'<iframe id="svodka" frameborder="1" style="top: 0; left: 0; border: none; margin: 0; padding: 0;box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" name="svodka" src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" "></iframe>'+ '</div>';
 		$('#taabs-3').html(bigelem);
 
 
