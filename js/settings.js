@@ -1815,7 +1815,8 @@ function colPan10(name_select) {
 			//`Выбор файла для перезаписи
 		$("#colitems17").change(function () {
 			$("#colitems18").empty();
-			$("#colitems18").val($('#colitems17').text());
+			$("#colitems18").val($(this).val());
+			// $("#colitems18").val($('#colitems17').text());
 			cur_svodka=$('#colitems17').val();
 			// console.log(cur_svodka);
 		});
