@@ -2037,7 +2037,7 @@ function colOK13() {
 		}
 	}
 
-	console.log(wells);
+	// console.log(wells);
 	$('#skvs tbody').empty();
 	for (var keey in wells) {
 		$('#skvs tbody').append('<tr><td>' + wells[keey].txt + '</td><td>' + wells[keey].wellN + '</td><td>' + wells[keey].type + '</td><td>' + wells[keey].typeStn + '</td><td>' + wells[keey].nach + '</td><td>' + wells[keey].tel + '</td><td>' + wells[keey].email + '</td></tr>');
@@ -2517,7 +2517,7 @@ function adm5() {
 
 	} 
 	if (cur_svodka!='') {
-	var bigelem = '<div class="container-fluid">';
+	var bigelem = '<div class="container-fluid" style="width:auto; margin: auto;">';
 	// '<div class="container container-fluid vh-100 text-center bg-light"  >';
 
 	// for (var keey in camswell) {
