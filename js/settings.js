@@ -1774,6 +1774,7 @@ function colPan10(name_select) {
 		$('#svodkaoN').on('change', function () {
 			wellSelectBase = $("#svodkaoN").prop('value');
 			wellSelectName = $("#svodkaoN option:selected").text();
+			console.log(wellSelectName);
 			$('#colitems17').empty();
 			for (var cur in files_svodka) {
 				// console.log(cur);
