@@ -1719,7 +1719,8 @@ function colPan10(name_select) {
 		deleteoldcams();
 		$('#videoN').empty();
 
-		//let cams={};
+		//Восстановление выбора
+		$('#videoN').val(wellName);
 
 		for (var keey in camswell) {
 			let no = true;
@@ -1742,6 +1743,12 @@ function colPan10(name_select) {
 			}
 
 		}
+		$('#videoN').on('change', function () {
+			wellSelectBase = $("#videoN").prop('value');
+			wellSelectName = $("#videoN option:selected").text();
+
+			
+			});
 		$("#myModal12").modal('show');
 	}
 
@@ -1830,6 +1837,12 @@ function colPan10(name_select) {
 function colOK10() {
 
 	if (curtemp=='svodka'){
+		skv = wellSelectName;
+		wellName = wellSelectBase;
+		namecmt = wellName + "kr";
+		//Сменить название в шапке
+		$('#skvnamelabt').text(skv);
+		//Сохранить в локальное хранилище
 		$('#taabs-3').empty();
 		var bigelem = '';//align="absmiddle | baseline | bottom | left | middle
 		bigelem= bigelem+'<iframe id="svodka"  style="top: 0; left: 0; border: none; margin: 0; padding: 0;box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" name="svodka" src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" "></iframe>';
@@ -1869,7 +1882,11 @@ function colOK10() {
 		}
 		let n = document.getElementById("videoN").options.selectedIndex;
 		let txt = document.getElementById("videoN").options[n].text;
-		$('#skvnamelabt').text(txt);
+		skv = wellSelectName;
+		wellName = wellSelectBase;
+		namecmt = wellName + "kr";
+		//Сменить название в шапке
+		$('#skvnamelabt').text(skv);
 		adm();
 	}
 
