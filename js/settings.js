@@ -1827,7 +1827,7 @@ function colPan10(name_select) {
 			$("#colitems18").val(document.getElementById("colitems17").options[selind].text);
 			// $("#colitems18").val($('#colitems17').text());
 			cur_svodka=$('#colitems17').val();
-			// console.log(cur_svodka);
+			//  console.log(cur_svodka);
 		});
 		$("#myModal21").modal('show');
 	}
