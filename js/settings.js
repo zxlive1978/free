@@ -1669,6 +1669,8 @@ function colPan10(name_select) {
 
 
 	if (curtemp == 'depth') {
+		wellSelectName=skv;
+		wellSelectBase=wellName;
 		//добавление в список
 		for (var keey in wells) {
 			$('#wellNdepth').append($('<option>',
