@@ -1756,7 +1756,7 @@ function colPan10(name_select) {
 
 	if (curtemp == 'svodka') {
 
-		$('#svodkaoN').empty();
+		// $('#svodkaoN').empty();
 		for (var keey in wells) {
 			$('#svodkaoN').append($('<option>',
 				{
