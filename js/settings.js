@@ -1765,7 +1765,9 @@ function colPan10(name_select) {
 				}));
 		}
 		//Восстановление выбора
-		$('#svodkaoN').val(wellSelectName);
+		$('#svodkaoN').val(wellName);
+		wellSelectBase=wellName
+		wellSelectName=skv
 
 
 		if ((Object.keys(files_svodka).length > 0)) {
