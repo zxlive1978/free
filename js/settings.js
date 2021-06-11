@@ -1756,7 +1756,7 @@ function colPan10(name_select) {
 
 	if (curtemp == 'svodka') {
 
-		// $('#svodkaoN').empty();
+		$('#svodkaoN').empty();
 		for (var keey in wells) {
 			$('#svodkaoN').append($('<option>',
 				{
@@ -1764,7 +1764,6 @@ function colPan10(name_select) {
 					text: wells[keey].txt
 				}));
 		}
-		$('#svodkaoN').empty();
 		//Восстановление выбора
 		$('#svodkaoN').val(wellName);
 		wellSelectBase=wellName
