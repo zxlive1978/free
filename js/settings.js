@@ -1679,7 +1679,7 @@ function colPan10(name_select) {
 					text: wells[keey].txt
 				}));
 		}
-		//Восстановление выбора
+		// Восстанddddddffdовление выбора
 		$('#wellNdepth').val(wellName);
 
 
