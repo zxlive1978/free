@@ -1754,7 +1754,7 @@ function colPan10(name_select) {
 		$("#myModal12").modal('show');
 	}
 
-	if (curtemp   == 'svodka') {
+	if (curtemp == 'svodka') {
 
 		$('#svodkaoN').empty();
 		for (var keey in wells) {
@@ -1764,7 +1764,7 @@ function colPan10(name_select) {
 					text: wells[keey].txt
 				}));
 		}
-		// Восстановление выбора
+		//Восстановление выбора
 		$('#svodkaoN').val(wellName);
 		wellSelectBase=wellName
 		wellSelectName=skv
