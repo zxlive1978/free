@@ -1781,7 +1781,7 @@ function colPan10(name_select) {
 			
 			$('#colitems17').empty();
 			for (var cur in files_svodka) {
-				// console.log(cur);
+				//  console.log(cur);
 				if (files_svodka[cur].search(wellSelectName) != -1){
 				str=files_svodka[cur];
 				if (files_svodka[cur].indexOf('png')!=-1){
