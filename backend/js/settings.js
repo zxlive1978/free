@@ -1954,6 +1954,7 @@ function colOK17 () {
 	for (var keey in cams) {
 		
 		if ( keey== selectcam) {
+			console.log(keey);
 			cams[keey].name = String($("#colitems191").val());
 			cams[keey].txt = String($("#colitems192").val());
 			cams[keey].rtsp = String($("#colitems193").val());
