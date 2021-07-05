@@ -1985,7 +1985,7 @@ function colOK17 () {
 		for (var keey in cams) {
 			// console.log( keey);
 			// console.log( String($("#colitems162").val()));
-			if (cams[keey].name == String($("#colitems191").val())) {
+			if ((cams[keey].name == String($("#colitems191").val())) && (cams[keey].txt == String($("#colitems192").val())) && (cams[keey].rtsp == String($("#colitems193").val()))) {
 				deletecams('delete','cams', keey.slice(3 , ));
 				//console.log( keey, keey.slice(3 , ));
 				delete (cams[keey]);
