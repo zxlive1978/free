@@ -1955,12 +1955,12 @@ function colOK17 () {
 		
 		if ( keey== selectcam) {
 			console.log(keey);
-			// cams[keey].name = String($("#colitems191").val());
-			// cams[keey].txt = String($("#colitems192").val());
-			// cams[keey].rtsp = String($("#colitems193").val());
+			cams[keey].name = String($("#colitems191").val());
+			cams[keey].txt = String($("#colitems192").val());
+			cams[keey].rtsp = String($("#colitems193").val());
 			
-			// //Обновить камеру в mysql в таблицу cams
-			// updatecams('update','cams', keey.slice(3 , ),JSON.stringify(Object.assign({}, cams[keey])));
+			//Обновить камеру в mysql в таблицу cams
+			updatecams('update','cams', keey.slice(3 , ),JSON.stringify(Object.assign({}, cams[keey])));
 		}
 	}
 
