@@ -395,8 +395,9 @@ window.onload = getStart;
         
         <!-- Modal body -->
         <div class="modal-body">
-        <label for="hcolcolor">Выбор даты(<10 дней):</label>
-<input type='date' class="form-control input-lg bg-dark text-light" id='localdate1' name='date1' value="<?php echo date('Y-m-d');?>" max=<?php echo date('Y-m-d');?> min=<?php $date = new DateTime(); $date->modify('-9 day'); echo $date->format('Y-m-d'); ?>>
+        <label for="hcolcolor">Выбор даты:</label>
+<!-- <input type='date' class="form-control input-lg bg-dark text-light" id='localdate1' name='date1' value="<?php echo date('Y-m-d');?>" max=<?php echo date('Y-m-d');?> min=<?php $date = new DateTime(); $date->modify('-9 day'); echo $date->format('Y-m-d'); ?>> -->
+<input type='date' class="form-control input-lg bg-dark text-light" id='localdate1' name='date1' value="<?php echo date('Y-m-d');?>" max=<?php echo date('Y-m-d');?> >
 
 <label for="hcolcolor">Ширина интервала:</label>
 
