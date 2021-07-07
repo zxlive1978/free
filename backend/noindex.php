@@ -333,9 +333,10 @@ if (!$_SESSION['auth']) {
         <!-- Modal body -->
         <div class="modal-body">
 <table>
-  <tr><td>Выбор даты(<10 дней)</td></tr>
+  <tr><td>Выбор даты</td></tr>
   <tr>
-  <td> <input type='date' id='localdate1' name='date1' max=<?php echo date('Y-m-d');?> min=<?php $date = new DateTime(); $date->modify('-9 day'); echo $date->format('Y-m-d'); ?>>
+  <!-- <td> <input type='date' id='localdate1' name='date1' max=<?php echo date('Y-m-d');?> min=<?php $date = new DateTime(); $date->modify('-9 day'); echo $date->format('Y-m-d'); ?>> -->
+  <td> <input type='date' id='localdate1' name='date1' max=<?php echo date('Y-m-d');?> >
   </td> 
   </tr>
 </div>
