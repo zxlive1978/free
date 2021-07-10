@@ -1791,7 +1791,6 @@ function colPan10(name_select) {
 				str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
 				str2=str2.slice(0,str2.lastIndexOf('АГКМ'));
 				}
-				//console.log(str);
 				$('#colitems17').append($('<option>',
 					{
 						value: str,
