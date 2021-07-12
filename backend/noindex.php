@@ -24,6 +24,9 @@ if (!$_SESSION['auth']) {
 <script type="text/javascript" src="js/jquery-ui.min.js"></script>
 
 
+<script type="text/javascript" src="js/fileuploader.js?nc=<?php print time();?>"></script>
+
+
     
   <script>
   //JQUERY tabЫ
