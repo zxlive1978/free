@@ -1668,16 +1668,22 @@ function adm (){
 	//Камеры
 	$('#tabs-4').empty();
 	
-	$('#tabs-4').append('<button type="button" name="addfile" id="addfile" class="btn btn-success mb-1" data-dismiss="modal">+</button>');
-	$('#tabs-4').append('<form name="uploader" enctype="multipart/form-data" method="POST">'
-        +'Отправить этот файл: <input name="userfile" type="file" />'
-        +'<button type="submit" name="submit">Загрузить</button>'
-    +'</form>');
-	$('#tabs-4').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="files" class="table table-bordered table-striped "><thead><tr>'
-	+'<th>Название</th>'
-	+'<th>Скважина</th>'
-	+'<th>Строка подключения</th>'
-	+'</tr></thead><tbody></tbody></table></div>');
+
+	$('#tabs-4').append('<form action="./" method="post" id="uploadform" onsubmit="return false;" style="display:none;">'
+    +'<table cellspacing=1>'
+	+'<tr><td><div id="message">Выберите файл:</div></td><td><input type="file" id="files" name="files[]" /></td></t>'
+    +'</table>'
+    +'<input type="submit" value="Загрузить &gt;&gt;" /></form>');
+	// $('#tabs-4').append('<button type="button" name="addfile" id="addfile" class="btn btn-success mb-1" data-dismiss="modal">+</button>');
+	// $('#tabs-4').append('<form name="uploader" enctype="multipart/form-data" method="POST">'
+    //     +'Отправить этот файл: <input name="userfile" type="file" />'
+    //     +'<button type="submit" name="submit">Загрузить</button>'
+    // +'</form>');
+	// $('#tabs-4').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="files" class="table table-bordered table-striped "><thead><tr>'
+	// +'<th>Название</th>'
+	// +'<th>Скважина</th>'
+	// +'<th>Строка подключения</th>'
+	// +'</tr></thead><tbody></tbody></table></div>');
 
 	} else {
 		
