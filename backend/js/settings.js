@@ -1283,11 +1283,11 @@ $(document).ready(function () {
 	readusers('read','users_rights', '','');
 	//Чтение всех камер
 	readcams('read','cams', '','');
-			//Чтение списка скважин
-			readskvstart('read','skvs', '','');
-			
-			//открыть панель
-			adm();
+	//Чтение списка скважин
+	readskvstart('read','skvs', '','');
+	
+	//открыть панель
+	adm();
 			
 		
 			
@@ -1662,38 +1662,22 @@ function adm (){
 		
 		//alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
 	});
-	// //Клик Камеры
-	// $("#cams tbody").on("click", "tr", function(event){
-	// 	var tableData = $(this).children("td").map(function() {
-	// 		return $(this).text();
-	// 	}).get();
-	
-	// 	alert("Выбрана" + $.trim(tableData[0]) + " , " + $.trim(tableData[1]) + " , " + $.trim(tableData[2]));
-	// });
 
+
+	//Загрузка интервалов
+	//Камеры
+	$('#tabs-4').empty();
 	
-	// $("#myButton").on('click',function(){
- 
-	// 	var arrData=[];
-	// 	// loop over each table row (tr)
-	// 	$("#myTable tr").each(function(){
-	// 		 var currentRow=$(this);
-		 
-	// 		 var col1_value=currentRow.find("td:eq(0)").text();
-	// 		 var col2_value=currentRow.find("td:eq(1)").text();
-	// 		 var col3_value=currentRow.find("td:eq(2)").text();
-	 
-	// 		  var obj={};
-	// 		 obj.col1=col1_value;
-	// 		 obj.col2=col2_value;
-	// 		 obj.col3=col3_value;
-	 
-	// 		 arrData.push(obj);
-	// 	});
-	// 	 alert(arrData);
-	// 	 console.log(arrData);
-	 
-	//  });
+	$('#tabs-4').append('<button type="button" name="addfile" id="addfile" class="btn btn-success mb-1" data-dismiss="modal">+</button>');
+	$('#tabs-4').append('<form name="uploader" enctype="multipart/form-data" method="POST">'
+        +'Отправить этот файл: <input name="userfile" type="file" />'
+        +'<button type="submit" name="submit">Загрузить</button>'
+    +'</form>');
+	$('#tabs-4').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="files" class="table table-bordered table-striped "><thead><tr>'
+	+'<th>Название</th>'
+	+'<th>Скважина</th>'
+	+'<th>Строка подключения</th>'
+	+'</tr></thead><tbody></tbody></table></div>');
 
 	} else {
 		
