@@ -1705,6 +1705,64 @@ function adm (){
 }
 
 
+
+
+//Загрузка файла частями
+function ShowForm() {
+
+    // Создаем объект - FileUploader. Задаем опции.
+    var uploader=new FileUploader( {
+
+        // Сообщение об ошибке
+        message_error: 'Ошибка при загрузке файла',
+
+        // ID элемента формы
+        form: 'uploadform',
+
+        // ID элемента <input type=file
+        formfiles: 'files',
+
+        // Идентификатор загрузки. В нашему случе хэш.
+        uploadid: '<?php print $hash;?>',
+
+        // URL скрипта загрузки (описан выше).
+        uploadscript: './upload.php',
+
+        // URL, куда перенаправить пользователя при успешной загрузке
+        redirect_success: './step2.php?hash=<?php print $hash;?>',
+
+        // URL, куда отправить пользователя при ошибке загрузки
+        redirect_abort: './abort.php?hash=<?php print $hash;?>',
+
+        // Размер порции. 2 Мб
+        portion: 1024*1024*2
+        });
+
+    // Если не удалось создать объект, то перенаправим пользователя на простую форму загруки.
+    if (!uploader) document.location='/upload/simple.php?hash=<?php print $hash;?>';
+    else {
+        // Если браузер не поддерживается, то перенаправим пользователя на простую форму загруки.
+        if (!uploader.CheckBrowser()) document.location='/upload/simple.php?hash=<?php print $hash;?>';
+        else {
+            // Если все нормально, то отобразим форму (по умолчанию она скрыта)
+            var e=document.getElementById('uploadform');
+            if (e) e.style.display='block';
+
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
 var selectuser='';
 //Изменить/ удалить  диалог по пользователю
 function colPan15 () {
