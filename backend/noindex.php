@@ -187,6 +187,7 @@ if (!$_SESSION['auth']) {
     <li><a href="#tabs-2">Скважины</a></li>
     <li><a href="#tabs-1">Пользователи</a></li>
     <li><a href="#tabs-3">Камеры</a></li>
+    <li><a href="#tabs-4">Загрузка интервалов</a></li>
     </ul>
   <div id="tabs-2">
   </div>
@@ -194,6 +195,8 @@ if (!$_SESSION['auth']) {
   <div id="tabs-1">
   </div>
   <div id="tabs-3">
+  </div>
+  <div id="tabs-4">
   </div>
 </div>
 
