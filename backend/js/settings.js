@@ -1726,7 +1726,7 @@ function ShowForm() {
         uploadid: '<?php print $hash;?>',
 
         // URL скрипта загрузки (описан выше).
-        uploadscript: './upload.php',
+        uploadscript: 'js/upload.php',
 
         // URL, куда перенаправить пользователя при успешной загрузке
         redirect_success: './step2.php?hash=<?php print $hash;?>',
