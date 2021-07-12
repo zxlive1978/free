@@ -5,6 +5,11 @@ if (!$_SESSION['auth']) {
 	exit;
 }
 ?>
+
+<?php
+$hash=htmlspecialchars(stripslashes($_GET["hash"]));
+$hash=md5("test");
+?>
 <html>
 <title></title>
 <head>
