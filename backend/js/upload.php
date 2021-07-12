@@ -4,6 +4,7 @@
 $uploaddir="../scr";
 
 $hash=$_SERVER["HTTP_UPLOAD_ID"];
+print $hash;
 
 openlog("html5upload.php", LOG_PID | LOG_PERROR, LOG_LOCAL0);
 
