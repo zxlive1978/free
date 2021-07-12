@@ -1730,7 +1730,7 @@ function ShowForm() {
         uploadscript: 'js/upload.php',
 
         // URL, куда перенаправить пользователя при успешной загрузке
-        redirect_success: './step2.php?hash=<?php print $hash;?>',
+        // redirect_success: './step2.php?hash=<?php print $hash;?>',
 
         // URL, куда отправить пользователя при ошибке загрузки
         redirect_abort: './abort.php?hash=<?php print $hash;?>',

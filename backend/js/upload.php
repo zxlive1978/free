@@ -1,6 +1,6 @@
 <?php                                                                                               
 
-$uploaddir="./uploaddir";
+$uploaddir="../../mon/poz/readrandom/";
 
 $hash=$_SERVER["HTTP_UPLOAD_ID"];
 
