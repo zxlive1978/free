@@ -9,7 +9,7 @@ if (!$_SESSION['auth']) {
 <?php
 $hash=htmlspecialchars(stripslashes($_GET["hash"]));
 $hash=md5("test");
-echo $hash;
+// echo $hash;
 ?>
 <html>
 <title></title>
