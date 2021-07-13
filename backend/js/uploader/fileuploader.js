@@ -170,7 +170,7 @@ function FileUploader(ioptions) {
                                 }
                             // Если все нормально, то отправим пользователя дальше. Там может быть сообщение
                             // об успешной загрузке или следующий шаг формы с дополнительным полями.
-                            // else window.parent.location=that.options['redirect_success'];
+                            //         else window.parent.location=that.options['redirect_success'];
                             }, false);
 
                         // Отправим HTTP GET запрос

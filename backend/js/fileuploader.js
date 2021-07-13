@@ -1,6 +1,6 @@
 
-// Для начала определим метод XMLHttpRequest.sendAsBinary(),
-// если он не определен (Например, для браузера Google Chrome). 
+// Р”Р»СЏ РЅР°С‡Р°Р»Р° РѕРїСЂРµРґРµР»РёРј РјРµС‚РѕРґ XMLHttpRequest.sendAsBinary(),
+// РµСЃР»Рё РѕРЅ РЅРµ РѕРїСЂРµРґРµР»РµРЅ (РќР°РїСЂРёРјРµСЂ, РґР»СЏ Р±СЂР°СѓР·РµСЂР° Google Chrome).
 
 if (!XMLHttpRequest.prototype.sendAsBinary) {
 
@@ -15,97 +15,97 @@ if (!XMLHttpRequest.prototype.sendAsBinary) {
     }
 
 /**
- * Класс FileUploader.
- * @param ioptions Ассоциативный массив опций загрузки 
+ * РљР»Р°СЃСЃ FileUploader.
+ * @param ioptions РђСЃСЃРѕС†РёР°С‚РёРІРЅС‹Р№ РјР°СЃСЃРёРІ РѕРїС†РёР№ Р·Р°РіСЂСѓР·РєРё
  */
 function FileUploader(ioptions) {
 
-	// Позиция, с которой будем загружать файл
+    // РџРѕР·РёС†РёСЏ, СЃ РєРѕС‚РѕСЂРѕР№ Р±СѓРґРµРј Р·Р°РіСЂСѓР¶Р°С‚СЊ С„Р°Р№Р»
     this.position=0;
 
-	// Размер загружаемого файла
+    // Р Р°Р·РјРµСЂ Р·Р°РіСЂСѓР¶Р°РµРјРѕРіРѕ С„Р°Р№Р»Р°
     this.filesize=0;
 
-	// Объект Blob или File (FileList[i])
+    // РћР±СЉРµРєС‚ Blob РёР»Рё File (FileList[i])
     this.file = null;
 
-	// Ассоциативный массив опций
+    // РђСЃСЃРѕС†РёР°С‚РёРІРЅС‹Р№ РјР°СЃСЃРёРІ РѕРїС†РёР№
     this.options=ioptions;
 
-	// Если не определена опция uploadscript, то возвращаем null. Нельзя
-	// продолжать, если эта опция не определена.
+    // Р•СЃР»Рё РЅРµ РѕРїСЂРµРґРµР»РµРЅР° РѕРїС†РёСЏ uploadscript, С‚Рѕ РІРѕР·РІСЂР°С‰Р°РµРј null. РќРµР»СЊР·СЏ
+    // РїСЂРѕРґРѕР»Р¶Р°С‚СЊ, РµСЃР»Рё СЌС‚Р° РѕРїС†РёСЏ РЅРµ РѕРїСЂРµРґРµР»РµРЅР°.
     if (this.options['uploadscript']==undefined) return null;
 
-	/*
-	* Проверка, поддерживает ли браузер необходимые объекты 
-	* @return true, если браузер поддерживает все необходимые объекты
-	*/
+    /*
+    * РџСЂРѕРІРµСЂРєР°, РїРѕРґРґРµСЂР¶РёРІР°РµС‚ Р»Рё Р±СЂР°СѓР·РµСЂ РЅРµРѕР±С…РѕРґРёРјС‹Рµ РѕР±СЉРµРєС‚С‹
+    * @return true, РµСЃР»Рё Р±СЂР°СѓР·РµСЂ РїРѕРґРґРµСЂР¶РёРІР°РµС‚ РІСЃРµ РЅРµРѕР±С…РѕРґРёРјС‹Рµ РѕР±СЉРµРєС‚С‹
+    */
     this.CheckBrowser=function() {
         if (window.File && window.FileReader && window.FileList && window.Blob) return true; else return false;
         }
 
 
-	/*
-	* Загрузка части файла на сервер
-	* @param from Позиция, с которой будем загружать файл
-	*/
+    /*
+    * Р—Р°РіСЂСѓР·РєР° С‡Р°СЃС‚Рё С„Р°Р№Р»Р° РЅР° СЃРµСЂРІРµСЂ
+    * @param from РџРѕР·РёС†РёСЏ, СЃ РєРѕС‚РѕСЂРѕР№ Р±СѓРґРµРј Р·Р°РіСЂСѓР¶Р°С‚СЊ С„Р°Р№Р»
+    */
     this.UploadPortion=function(from) {
 
-		// Объект FileReader, в него будем считывать часть загружаемого файла
+        // РћР±СЉРµРєС‚ FileReader, РІ РЅРµРіРѕ Р±СѓРґРµРј СЃС‡РёС‚С‹РІР°С‚СЊ С‡Р°СЃС‚СЊ Р·Р°РіСЂСѓР¶Р°РµРјРѕРіРѕ С„Р°Р№Р»Р°
         var reader = new FileReader();
 
-		// Текущий объект
+        // РўРµРєСѓС‰РёР№ РѕР±СЉРµРєС‚
         var that=this;
 
-		// Позиция с которой будем загружать файл
+        // РџРѕР·РёС†РёСЏ СЃ РєРѕС‚РѕСЂРѕР№ Р±СѓРґРµРј Р·Р°РіСЂСѓР¶Р°С‚СЊ С„Р°Р№Р»
         var loadfrom=from;
 
-		// Объект Blob, для частичного считывания файла
+        // РћР±СЉРµРєС‚ Blob, РґР»СЏ С‡Р°СЃС‚РёС‡РЅРѕРіРѕ СЃС‡РёС‚С‹РІР°РЅРёСЏ С„Р°Р№Р»Р°
         var blob=null;
 
-		// Таймаут для функции setTimeout. С помощью этой функции реализована повторная попытка загрузки 
-		// по таймауту (что не совсем корректно)
+        // РўР°Р№РјР°СѓС‚ РґР»СЏ С„СѓРЅРєС†РёРё setTimeout. РЎ РїРѕРјРѕС‰СЊСЋ СЌС‚РѕР№ С„СѓРЅРєС†РёРё СЂРµР°Р»РёР·РѕРІР°РЅР° РїРѕРІС‚РѕСЂРЅР°СЏ РїРѕРїС‹С‚РєР° Р·Р°РіСЂСѓР·РєРё
+        // РїРѕ С‚Р°Р№РјР°СѓС‚Сѓ (С‡С‚Рѕ РЅРµ СЃРѕРІСЃРµРј РєРѕСЂСЂРµРєС‚РЅРѕ)
         var xhrHttpTimeout=null;
 
-		/*
-		* Событие срабатывающее после чтения части файла в FileReader
-		* @param evt Событие
-		*/
+        /*
+        * РЎРѕР±С‹С‚РёРµ СЃСЂР°Р±Р°С‚С‹РІР°СЋС‰РµРµ РїРѕСЃР»Рµ С‡С‚РµРЅРёСЏ С‡Р°СЃС‚Рё С„Р°Р№Р»Р° РІ FileReader
+        * @param evt РЎРѕР±С‹С‚РёРµ
+        */
         reader.onloadend = function(evt) {
             if (evt.target.readyState == FileReader.DONE) {
 
-				// Создадим объект XMLHttpRequest, установим адрес скрипта для POST
-				// и необходимые заголовки HTTP запроса.
+                // РЎРѕР·РґР°РґРёРј РѕР±СЉРµРєС‚ XMLHttpRequest, СѓСЃС‚Р°РЅРѕРІРёРј Р°РґСЂРµСЃ СЃРєСЂРёРїС‚Р° РґР»СЏ POST
+                // Рё РЅРµРѕР±С…РѕРґРёРјС‹Рµ Р·Р°РіРѕР»РѕРІРєРё HTTP Р·Р°РїСЂРѕСЃР°.
                 var xhr = new XMLHttpRequest();
                 xhr.open('POST', that.options['uploadscript'], true);
                 xhr.setRequestHeader("Content-Type", "application/x-binary; charset=x-user-defined");
 
-				// Идентификатор загрузки (чтобы знать на стороне сервера что с чем склеивать)
+                // РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РіСЂСѓР·РєРё (С‡С‚РѕР±С‹ Р·РЅР°С‚СЊ РЅР° СЃС‚РѕСЂРѕРЅРµ СЃРµСЂРІРµСЂР° С‡С‚Рѕ СЃ С‡РµРј СЃРєР»РµРёРІР°С‚СЊ)
                 xhr.setRequestHeader("Upload-Id", that.options['uploadid']);
-				// Позиция начала в файле
+                // РџРѕР·РёС†РёСЏ РЅР°С‡Р°Р»Р° РІ С„Р°Р№Р»Рµ
                 xhr.setRequestHeader("Portion-From", from);
-				// Размер порции
+                // Р Р°Р·РјРµСЂ РїРѕСЂС†РёРё
                 xhr.setRequestHeader("Portion-Size", that.options['portion']);
 
-				// Установим таймаут
+                // РЈСЃС‚Р°РЅРѕРІРёРј С‚Р°Р№РјР°СѓС‚
                 that.xhrHttpTimeout=setTimeout(function() {
                     xhr.abort();
                     },that.options['timeout']);
 
-				/*
-				* Событие XMLHttpRequest.onProcess. Отрисовка ProgressBar.
-				* @param evt Событие
-				*/
+                /*
+                * РЎРѕР±С‹С‚РёРµ XMLHttpRequest.onProcess. РћС‚СЂРёСЃРѕРІРєР° ProgressBar.
+                * @param evt РЎРѕР±С‹С‚РёРµ
+                */
                 xhr.upload.addEventListener("progress", function(evt) {
                     if (evt.lengthComputable) {
 
-						// Посчитаем количество закаченного в процентах (с точность до 0.1)
+                        // РџРѕСЃС‡РёС‚Р°РµРј РєРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РєР°С‡РµРЅРЅРѕРіРѕ РІ РїСЂРѕС†РµРЅС‚Р°С… (СЃ С‚РѕС‡РЅРѕСЃС‚СЊ РґРѕ 0.1)
                         var percentComplete = Math.round((loadfrom+evt.loaded) * 1000 / that.filesize);percentComplete/=10;
-			
-						// Посчитаем ширину синей полоски ProgressBar
+           
+                        // РџРѕСЃС‡РёС‚Р°РµРј С€РёСЂРёРЅСѓ СЃРёРЅРµР№ РїРѕР»РѕСЃРєРё ProgressBar
                         var width=Math.round((loadfrom+evt.loaded) * 300 / that.filesize);
 
-						// Изменим свойства элементом ProgressBar'а, добавим к нему текст
+                        // РР·РјРµРЅРёРј СЃРІРѕР№СЃС‚РІР° СЌР»РµРјРµРЅС‚РѕРј ProgressBar'Р°, РґРѕР±Р°РІРёРј Рє РЅРµРјСѓ С‚РµРєСЃС‚
                         var div1=document.getElementById('cnuploader_progressbar');
                         var div2=document.getElementById('cnuploader_progresscomplete');
 
@@ -121,118 +121,118 @@ function FileUploader(ioptions) {
                             div1.textContent='';
                             }
                         }
-                    
+                   
                     }, false);
 
 
 
-				/*
-				* Событие XMLHttpRequest.onLoad. Окончание загрузки порции.
-				* @param evt Событие
-				*/
+                /*
+                * РЎРѕР±С‹С‚РёРµ XMLHttpRequest.onLoad. РћРєРѕРЅС‡Р°РЅРёРµ Р·Р°РіСЂСѓР·РєРё РїРѕСЂС†РёРё.
+                * @param evt РЎРѕР±С‹С‚РёРµ
+                */
                 xhr.addEventListener("load", function(evt) {
 
-					// Очистим таймаут
+                    // РћС‡РёСЃС‚РёРј С‚Р°Р№РјР°СѓС‚
                     clearTimeout(that.xhrHttpTimeout);
 
-					// Если сервер не вернул HTTP статус 200, то выведем окно с сообщением сервера.
+                    // Р•СЃР»Рё СЃРµСЂРІРµСЂ РЅРµ РІРµСЂРЅСѓР» HTTP СЃС‚Р°С‚СѓСЃ 200, С‚Рѕ РІС‹РІРµРґРµРј РѕРєРЅРѕ СЃ СЃРѕРѕР±С‰РµРЅРёРµРј СЃРµСЂРІРµСЂР°.
                     if (evt.target.status!=200) {
                         alert(evt.target.responseText);
                         return;
                         }
 
-					// Добавим к текущей позиции размер порции.
+                    // Р”РѕР±Р°РІРёРј Рє С‚РµРєСѓС‰РµР№ РїРѕР·РёС†РёРё СЂР°Р·РјРµСЂ РїРѕСЂС†РёРё.
                     that.position+=that.options['portion'];
 
-					// Закачаем следующую порцию, если файл еще не кончился.
+                    // Р—Р°РєР°С‡Р°РµРј СЃР»РµРґСѓСЋС‰СѓСЋ РїРѕСЂС†РёСЋ, РµСЃР»Рё С„Р°Р№Р» РµС‰Рµ РЅРµ РєРѕРЅС‡РёР»СЃСЏ.
                     if (that.filesize>that.position) {
                         that.UploadPortion(that.position);
                         }
                     else {
-						// Если все порции загружены, сообщим об этом серверу. XMLHttpRequest, метод GET, 
-						// PHP скрипт тот-же.
+                        // Р•СЃР»Рё РІСЃРµ РїРѕСЂС†РёРё Р·Р°РіСЂСѓР¶РµРЅС‹, СЃРѕРѕР±С‰РёРј РѕР± СЌС‚РѕРј СЃРµСЂРІРµСЂСѓ. XMLHttpRequest, РјРµС‚РѕРґ GET,
+                        // PHP СЃРєСЂРёРїС‚ С‚РѕС‚-Р¶Рµ.
                         var gxhr = new XMLHttpRequest();
                         gxhr.open('GET', that.options['uploadscript']+'?action=done', true);
 
-						// Установим идентификатор загруки.
+                        // РЈСЃС‚Р°РЅРѕРІРёРј РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РіСЂСѓРєРё.
                         gxhr.setRequestHeader("Upload-Id", that.options['uploadid']);
 
-						/*
-						* Событие XMLHttpRequest.onLoad. Окончание загрузки сообщения об окончании загрузки файла :).
-						* @param evt Событие
-						*/
+                        /*
+                        * РЎРѕР±С‹С‚РёРµ XMLHttpRequest.onLoad. РћРєРѕРЅС‡Р°РЅРёРµ Р·Р°РіСЂСѓР·РєРё СЃРѕРѕР±С‰РµРЅРёСЏ РѕР± РѕРєРѕРЅС‡Р°РЅРёРё Р·Р°РіСЂСѓР·РєРё С„Р°Р№Р»Р° :).
+                        * @param evt РЎРѕР±С‹С‚РёРµ
+                        */
                         gxhr.addEventListener("load", function(evt) {
 
-							// Если сервер не вернул HTTP статус 200, то выведем окно с сообщением сервера.
+                            // Р•СЃР»Рё СЃРµСЂРІРµСЂ РЅРµ РІРµСЂРЅСѓР» HTTP СЃС‚Р°С‚СѓСЃ 200, С‚Рѕ РІС‹РІРµРґРµРј РѕРєРЅРѕ СЃ СЃРѕРѕР±С‰РµРЅРёРµРј СЃРµСЂРІРµСЂР°.
                             if (evt.target.status!=200) {
                                 alert(evt.target.responseText.toString());
                                 return;
                                 }
-							// Если все нормально, то отправим пользователя дальше. Там может быть сообщение
-							// об успешной загрузке или следующий шаг формы с дополнительным полями.
-                            else window.parent.location=that.options['redirect_success'];
+                            // Р•СЃР»Рё РІСЃРµ РЅРѕСЂРјР°Р»СЊРЅРѕ, С‚Рѕ РѕС‚РїСЂР°РІРёРј РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РґР°Р»СЊС€Рµ. РўР°Рј РјРѕР¶РµС‚ Р±С‹С‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ
+                            // РѕР± СѓСЃРїРµС€РЅРѕР№ Р·Р°РіСЂСѓР·РєРµ РёР»Рё СЃР»РµРґСѓСЋС‰РёР№ С€Р°Рі С„РѕСЂРјС‹ СЃ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Рј РїРѕР»СЏРјРё.
+                            //         else window.parent.location=that.options['redirect_success'];
                             }, false);
 
-						// Отправим HTTP GET запрос
+                        // РћС‚РїСЂР°РІРёРј HTTP GET Р·Р°РїСЂРѕСЃ
                         gxhr.sendAsBinary('');
                         }
                     }, false);
 
-				/*
-				* Событие XMLHttpRequest.onError. Ошибка при загрузке
-				* @param evt Событие
-				*/
+                /*
+                * РЎРѕР±С‹С‚РёРµ XMLHttpRequest.onError. РћС€РёР±РєР° РїСЂРё Р·Р°РіСЂСѓР·РєРµ
+                * @param evt РЎРѕР±С‹С‚РёРµ
+                */
                 xhr.addEventListener("error", function(evt) {
 
-					// Очистим таймаут
+                    // РћС‡РёСЃС‚РёРј С‚Р°Р№РјР°СѓС‚
                     clearTimeout(that.xhrHttpTimeout);
 
-					// Сообщим серверу об ошибке во время загруке, сервер сможет удалить уже загруженные части.
-					// XMLHttpRequest, метод GET,  PHP скрипт тот-же.
+                    // РЎРѕРѕР±С‰РёРј СЃРµСЂРІРµСЂСѓ РѕР± РѕС€РёР±РєРµ РІРѕ РІСЂРµРјСЏ Р·Р°РіСЂСѓРєРµ, СЃРµСЂРІРµСЂ СЃРјРѕР¶РµС‚ СѓРґР°Р»РёС‚СЊ СѓР¶Рµ Р·Р°РіСЂСѓР¶РµРЅРЅС‹Рµ С‡Р°СЃС‚Рё.
+                    // XMLHttpRequest, РјРµС‚РѕРґ GET,  PHP СЃРєСЂРёРїС‚ С‚РѕС‚-Р¶Рµ.
                     var gxhr = new XMLHttpRequest();
 
                     gxhr.open('GET', that.options['uploadscript']+'?action=abort', true);
 
-					// Установим идентификатор загруки.
+                    // РЈСЃС‚Р°РЅРѕРІРёРј РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РіСЂСѓРєРё.
                     gxhr.setRequestHeader("Upload-Id", that.options['uploadid']);
 
-					/*
-					* Событие XMLHttpRequest.onLoad. Окончание загрузки сообщения об ошибке загрузки :).
-					* @param evt Событие
-					*/
+                    /*
+                    * РЎРѕР±С‹С‚РёРµ XMLHttpRequest.onLoad. РћРєРѕРЅС‡Р°РЅРёРµ Р·Р°РіСЂСѓР·РєРё СЃРѕРѕР±С‰РµРЅРёСЏ РѕР± РѕС€РёР±РєРµ Р·Р°РіСЂСѓР·РєРё :).
+                    * @param evt РЎРѕР±С‹С‚РёРµ
+                    */
                     gxhr.addEventListener("load", function(evt) {
 
-						// Если сервер не вернул HTTP статус 200, то выведем окно с сообщением сервера.
+                        // Р•СЃР»Рё СЃРµСЂРІРµСЂ РЅРµ РІРµСЂРЅСѓР» HTTP СЃС‚Р°С‚СѓСЃ 200, С‚Рѕ РІС‹РІРµРґРµРј РѕРєРЅРѕ СЃ СЃРѕРѕР±С‰РµРЅРёРµРј СЃРµСЂРІРµСЂР°.
                         if (evt.target.status!=200) {
                             alert(evt.target.responseText);
                             return;
                             }
                         }, false);
 
-					// Отправим HTTP GET запрос
+                    // РћС‚РїСЂР°РІРёРј HTTP GET Р·Р°РїСЂРѕСЃ
                     gxhr.sendAsBinary('');
 
-					// Отобразим сообщение об ошибке
+                    // РћС‚РѕР±СЂР°Р·РёРј СЃРѕРѕР±С‰РµРЅРёРµ РѕР± РѕС€РёР±РєРµ
                     if (that.options['message_error']==undefined) alert("There was an error attempting to upload the file."); else alert(that.options['message_error']);
                     }, false);
 
-				/*
-				* Событие XMLHttpRequest.onAbort. Если по какой-то причине передача прервана, повторим попытку.
-				* @param evt Событие
-				*/
+                /*
+                * РЎРѕР±С‹С‚РёРµ XMLHttpRequest.onAbort. Р•СЃР»Рё РїРѕ РєР°РєРѕР№-С‚Рѕ РїСЂРёС‡РёРЅРµ РїРµСЂРµРґР°С‡Р° РїСЂРµСЂРІР°РЅР°, РїРѕРІС‚РѕСЂРёРј РїРѕРїС‹С‚РєСѓ.
+                * @param evt РЎРѕР±С‹С‚РёРµ
+                */
                 xhr.addEventListener("abort", function(evt) {
                     clearTimeout(that.xhrHttpTimeout);
                     that.UploadPortion(that.position);
                     }, false);
 
-				// Отправим порцию методом POST
+                // РћС‚РїСЂР°РІРёРј РїРѕСЂС†РёСЋ РјРµС‚РѕРґРѕРј POST
                 xhr.sendAsBinary(evt.target.result);
                 }
             };
 
         that.blob=null;
 
-		// Считаем порцию в объект Blob. Три условия для трех возможных определений Blob.[.*]slice().
+        // РЎС‡РёС‚Р°РµРј РїРѕСЂС†РёСЋ РІ РѕР±СЉРµРєС‚ Blob. РўСЂРё СѓСЃР»РѕРІРёСЏ РґР»СЏ С‚СЂРµС… РІРѕР·РјРѕР¶РЅС‹С… РѕРїСЂРµРґРµР»РµРЅРёР№ Blob.[.*]slice().
         if (this.file.slice) that.blob=this.file.slice(from,from+that.options['portion']);
         else {
             if (this.file.webkitSlice) that.blob=this.file.webkitSlice(from,from+that.options['portion']);
@@ -241,28 +241,28 @@ function FileUploader(ioptions) {
                 }
             }
 
-		// Считаем Blob (часть файла) в FileReader
+        // РЎС‡РёС‚Р°РµРј Blob (С‡Р°СЃС‚СЊ С„Р°Р№Р»Р°) РІ FileReader
         reader.readAsBinaryString(that.blob);
         }
 
 
-	/*
-	* Загрузка файла на сервер
-	* return Число. Если не 0, то произошла ошибка
-	*/
+    /*
+    * Р—Р°РіСЂСѓР·РєР° С„Р°Р№Р»Р° РЅР° СЃРµСЂРІРµСЂ
+    * return Р§РёСЃР»Рѕ. Р•СЃР»Рё РЅРµ 0, С‚Рѕ РїСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°
+    */
     this.Upload=function() {
 
-		// Скроем форму, чтобы пользователь не отправил файл дважды
+        // РЎРєСЂРѕРµРј С„РѕСЂРјСѓ, С‡С‚РѕР±С‹ РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РЅРµ РѕС‚РїСЂР°РІРёР» С„Р°Р№Р» РґРІР°Р¶РґС‹
         var e=document.getElementById(this.options['form']);
         if (e) e.style.display='none';
 
         if (!this.file) return -1;
         else {
 
-			// Если размер файла больше размера порциии ограничимся одной порцией
+            // Р•СЃР»Рё СЂР°Р·РјРµСЂ С„Р°Р№Р»Р° Р±РѕР»СЊС€Рµ СЂР°Р·РјРµСЂР° РїРѕСЂС†РёРёРё РѕРіСЂР°РЅРёС‡РёРјСЃСЏ РѕРґРЅРѕР№ РїРѕСЂС†РёРµР№
             if (this.filesize>this.options['portion']) this.UploadPortion(0,this.options['portion']);
 
-			// Иначе отправим файл целиком
+            // РРЅР°С‡Рµ РѕС‚РїСЂР°РІРёРј С„Р°Р№Р» С†РµР»РёРєРѕРј
             else this.UploadPortion(0,this.filesize);
             }
         }
@@ -271,18 +271,18 @@ function FileUploader(ioptions) {
 
     if (this.CheckBrowser()) {
 
-		// Установим значения по умолчанию
+        // РЈСЃС‚Р°РЅРѕРІРёРј Р·РЅР°С‡РµРЅРёСЏ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
         if (this.options['portion']==undefined) this.options['portion']=1048576;
         if (this.options['timeout']==undefined) this.options['timeout']=15000;
 
         var that = this;
 
-		// Добавим обработку события выбора файла
+        // Р”РѕР±Р°РІРёРј РѕР±СЂР°Р±РѕС‚РєСѓ СЃРѕР±С‹С‚РёСЏ РІС‹Р±РѕСЂР° С„Р°Р№Р»Р°
         document.getElementById(this.options['formfiles']).addEventListener('change', function (evt) {
 
             var files=evt.target.files;
 
-			// Выберем только первый файл
+            // Р’С‹Р±РµСЂРµРј С‚РѕР»СЊРєРѕ РїРµСЂРІС‹Р№ С„Р°Р№Р»
             for (var i = 0, f; f = files[i]; i++) {
                 that.filesize=f.size;
                 that.file = f;
@@ -290,7 +290,7 @@ function FileUploader(ioptions) {
                 }
             }, false);
 
-		// Добавим обратотку события onSubmit формы
+        // Р”РѕР±Р°РІРёРј РѕР±СЂР°Р±РѕС‚РєСѓ СЃРѕР±С‹С‚РёСЏ onSubmit С„РѕСЂРјС‹
         document.getElementById(this.options['form']).addEventListener('submit', function (evt) {
             that.Upload();
             (arguments[0].preventDefault)? arguments[0].preventDefault(): arguments[0].returnValue = false;
