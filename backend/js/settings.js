@@ -1676,6 +1676,7 @@ function adm (){
     +'<input type="submit" value="Загрузить &gt;&gt;" /></form>'
 	+'<div id="cnuploader_progressbar"></div>'
 	+'<div id="cnuploader_progresscomplete"></div>'
+	+'<div id="c"><br><br></div>'
 	);
 	ShowForm();
 	// var e=document.getElementById('uploadform');
