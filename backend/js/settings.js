@@ -1678,6 +1678,8 @@ function adm (){
 	+'<div id="cnuploader_progresscomplete"></div>'
 	);
 	ShowForm();
+	var e=document.getElementById(this.options['form']);
+    if (e) e.style.display='block';
 	// $('#tabs-4').append('<button type="button" name="addfile" id="addfile" class="btn btn-success mb-1" data-dismiss="modal">+</button>');
 	// $('#tabs-4').append('<form name="uploader" enctype="multipart/form-data" method="POST">'
     //     +'Отправить этот файл: <input name="userfile" type="file" />'
