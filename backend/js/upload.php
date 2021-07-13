@@ -7,7 +7,7 @@ error_reporting(E_ALL ^E_NOTICE);
 $uploaddir="../scr";
 
 $hash=$_SERVER["HTTP_UPLOAD_ID"];
-// print_r $hash;
+//print_r $hash;
 
 openlog("html5upload.php", LOG_PID | LOG_PERROR, LOG_LOCAL0);
 $suka=preg_match("/^[a-f0-9]{32}$/i",$hash);
