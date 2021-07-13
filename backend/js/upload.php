@@ -10,9 +10,10 @@ $hash=$_SERVER["HTTP_UPLOAD_ID"];
 // print_r $hash;
 
 openlog("html5upload.php", LOG_PID | LOG_PERROR, LOG_LOCAL0);
-
+$suka=preg_match("/^[a-f0-9]{32}$/i",$hash);
+echo ($hash);
 // if (preg_match("/^[0123456789abcdef]{32}$/i",$hash)) {
-	if (preg_match("/^[a-f0-9]{32}$/i",$hash)) {
+if (preg_match("/^[a-f0-9]{32}$/i",$hash)) {
 
 	if ($_SERVER["REQUEST_METHOD"]=="GET") {
 		if ($_GET["action"]=="abort") {
