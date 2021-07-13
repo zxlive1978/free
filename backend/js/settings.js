@@ -1675,10 +1675,19 @@ function adm (){
   	+'<input type="file" class="custom-file-input" id="files"  lang="ru">'
   	+'<label class="custom-file-label" for="customFileLang">Выберите файл</label>'
 	+'</div></div></div>'
-	+'<input class="btn btn-success" type="submit" value="Загрузить">'
+	
 	// +'<tr><td><div id="message">Выберите файл:</div></td><td><input type="file" id="files" name="files[]" /></td><td></td></t>'
     // +'</table>'
     // +'<input type="submit" value="Загрузить &gt;&gt;" /></form>'
+	+'<div class="form-row">'
+	+'<div class="form-col">'
+	+'<input class="btn btn-success" type="submit" value="Загрузить">'
+	+'</div>'
+	+'<div class="form-col">'
+	+'<div class="progress">'
+  	+'<div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'
+	+'</div></div></div>'
+
 	+'<div id="cnuploader_progressbar"></div>'
 	+'<div id="cnuploader_progresscomplete"></div>'
 	+'<div id="c"><br><br></div>'
@@ -1688,6 +1697,7 @@ function adm (){
 		//get the file name
 		var fileName = $(this).val();
 		//replace the "Choose a file" label
+		fileName = $(this).val().replace('C:\\fakepath\\', " ");
 		$(this).next('.custom-file-label').html(fileName);
 	})
 	ShowForm();
