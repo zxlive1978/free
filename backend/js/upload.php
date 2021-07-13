@@ -3,8 +3,8 @@
 ini_set('display_errors',1);
 error_reporting(E_ALL ^E_NOTICE);
 
-$uploaddir="../../mon/poz/readrandom";
-// $uploaddir="../scr";
+// $uploaddir="../../mon/poz/readrandom";
+$uploaddir="../scr";
 
 $hash=$_SERVER["HTTP_UPLOAD_ID"];
 //print_r $hash;
