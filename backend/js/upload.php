@@ -11,7 +11,8 @@ $hash=$_SERVER["HTTP_UPLOAD_ID"];
 
 openlog("html5upload.php", LOG_PID | LOG_PERROR, LOG_LOCAL0);
 
-if (preg_match("/^[0123456789abcdef]{32}$/i",$hash)) {
+// if (preg_match("/^[0123456789abcdef]{32}$/i",$hash)) {
+	if (preg_match("\b[A-Fa-f0-9]{64}\b",$hash)) {
 
 	if ($_SERVER["REQUEST_METHOD"]=="GET") {
 		if ($_GET["action"]=="abort") {
