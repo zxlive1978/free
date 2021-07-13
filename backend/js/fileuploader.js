@@ -254,8 +254,8 @@ function FileUploader(ioptions) {
     this.Upload=function() {
 
         // Скроем форму, чтобы пользователь не отправил файл дважды
-        var e=document.getElementById(this.options['form']);
-        if (e) e.style.display='none';
+        // var e=document.getElementById(this.options['form']);
+        // if (e) e.style.display='none';
 
         if (!this.file) return -1;
         else {
