@@ -168,6 +168,7 @@ function FileUploader(ioptions) {
                                 alert(evt.target.responseText.toString());
                                 return;
                                 }
+                            
                             // Если все нормально, то отправим пользователя дальше. Там может быть сообщение
                             // об успешной загрузке или следующий шаг формы с дополнительным полями.
                             //         else window.parent.location=that.options['redirect_success'];
