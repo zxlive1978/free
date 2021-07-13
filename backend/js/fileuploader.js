@@ -86,6 +86,10 @@ function FileUploader(ioptions) {
                 xhr.setRequestHeader("Portion-From", from);
                 // Размер порции
                 xhr.setRequestHeader("Portion-Size", that.options['portion']);
+                //Имя файла
+                console.log($('input[id=files]')[0].files[0].name);
+                xhr.setRequestHeader("FileName", $('input[id=files]')[0].files[0].name);
+
 
                 // Установим таймаут
                 that.xhrHttpTimeout=setTimeout(function() {
