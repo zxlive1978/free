@@ -8,7 +8,8 @@ if (!$_SESSION['auth']) {
 
 <?php
 $hash=htmlspecialchars(stripslashes($_GET["hash"]));
-$hash=sha256("test");
+$hash=md5("test");
+echo $hash;
 ?>
 <html>
 <title></title>
