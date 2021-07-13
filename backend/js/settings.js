@@ -1670,14 +1670,26 @@ function adm (){
 	
 
 	$('#tabs-4').append('<form action="./" method="post" id="uploadform" onsubmit="return false;" style="display:block;">'
-    +'<table cellspacing=1>'
-	+'<tr><td><div id="message">Выберите файл:</div></td><td><input type="file" id="files" name="files[]" /></td></t>'
-    +'</table>'
-    +'<input type="submit" value="Загрузить &gt;&gt;" /></form>'
+	+'<div class="form-row">'
+    +'<div class="col-md-4 mb-3">'
+  	+'<input type="file" class="custom-file-input" id="files"  lang="ru">'
+  	+'<label class="custom-file-label" for="customFileLang">Выберите файл</label>'
+	+'</div></div></div>'
+	+'<input class="btn btn-success" type="submit" value="Загрузить">'
+	// +'<tr><td><div id="message">Выберите файл:</div></td><td><input type="file" id="files" name="files[]" /></td><td></td></t>'
+    // +'</table>'
+    // +'<input type="submit" value="Загрузить &gt;&gt;" /></form>'
 	+'<div id="cnuploader_progressbar"></div>'
 	+'<div id="cnuploader_progresscomplete"></div>'
 	+'<div id="c"><br><br></div>'
 	);
+
+	$('#files').on('change',function(){
+		//get the file name
+		var fileName = $(this).val();
+		//replace the "Choose a file" label
+		$(this).next('.custom-file-label').html(fileName);
+	})
 	ShowForm();
 	// var e=document.getElementById('uploadform');
     // e.style.display='block';
