@@ -181,6 +181,8 @@ function FileUploader(ioptions) {
                             // Если все нормально, то отправим пользователя дальше. Там может быть сообщение
                             // об успешной загрузке или следующий шаг формы с дополнительным полями.
                             //         else window.parent.location=that.options['redirect_success'];
+                            //Перечитываем список архивов
+                            read_dirka_spisok();
                             }, false);
 
                         // Отправим HTTP GET запрос
