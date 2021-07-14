@@ -1709,37 +1709,10 @@ function adm (){
 		$(this).next('.custom-file-label').html(fileName);
 	})
 
-	//Закачка файлов
+	//Закачка файлов объект
 	ShowForm();
-	//Чтение списка файлов
-	read_dirka();
-
-	//
-// 	<option>1</option>
-// 	<option>2</option>
-// 	<option>3</option>
-// 	<option>4</option>
-// 	<option>5</option>
-	$("#files_dirka").empty();
-	var curdirdirka='../../../mon/poz/readrandom/';
-	for (var keey in files_dirka) {
-		let curitem=files_dirka[keey].replace(curdirdirka,'');
-		if (curitem.toString().indexOf('.zip')!=-1){
-		$("#files_dirka").append('<option value="'+keey+'">'+curitem+'</option>');
-		}
-		// str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
-		// 		str2=str2.slice(0,str2.lastIndexOf('АГКМ'));
-		// 		} else{
-		// 		str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
-		// 		str2=str2.slice(0,str2.lastIndexOf('АГКМ'));
-		// 		}
-		// 		$('#colitems17').append($('<option>',
-		// 			{
-		// 				value: str,
-		// 				text: str2
-		// 			}));
-		// console.log(files_dirka);
-	} 
+	//Чтение списка архивов
+	read_dirka_spisok()
 
 	
 	} else {
@@ -1758,8 +1731,20 @@ function adm (){
 
 }
 
-//
-// function read_dirka() {	
+
+//Чтение списка архивов
+function read_dirka_spisok() {
+	read_dirka();
+	$("#files_dirka").empty();
+	var curdirdirka='../../../mon/poz/readrandom/';
+	for (var keey in files_dirka) {
+		let curitem=files_dirka[keey].replace(curdirdirka,'');
+		if (curitem.toString().indexOf('.zip')!=-1){
+		$("#files_dirka").append('<option value="'+keey+'">'+curitem+'</option>');
+		}
+	} 
+	
+}	
 
 
 //Чтение списка архивов 
