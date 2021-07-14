@@ -15,7 +15,7 @@
 		echo 'Сохранено';}
 	else 
 	    echo "Ошибка"; */
-		$dir= '../../mon/poz/readrandom/';//.$myFile;
+		$dir= '../../../mon/poz/readrandom/';//.$myFile;
 		// $dirandfile =array_filter(scandir($dir), function($item) {return !is_dir($dir . $item);});
 		$files = scandir($dir); 
 		$forms = array();
