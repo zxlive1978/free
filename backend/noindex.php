@@ -92,14 +92,7 @@ $hash=md5("test");
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-     
-   
-	 
-
-    
-	  
-	   
+    <ul class="navbar-nav">	   
 		<li>
     <div id="dialogvideo" name="dialogvideo" title="Камера 2">
     <iframe width="100%" height="100%"
