@@ -1680,19 +1680,19 @@ function adm (){
 	
 	// +'<tr><td><div id="message">Выберите файл:</div></td><td><input type="file" id="files" name="files[]" /></td><td></td></t>'
     // +'</table>'
-    // +'<input type="submit" value="Загрузить &gt;&gt;" /></form>'
+    // +'<input type="submit" value="Загрузить &gt;&gt;" />'
 	
 	
-	
+	+'<div class="form-row">'
+    +'<div class="col-md-4 mb-3">'
 	+'<div class="progress">'
-  	+'<div class="progress-bar progress-bar-striped bg-success-sm" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'
-	
-	+'</div></div><br>'
-	
+  	+'<div id="cnuploader_progressbar" class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'
+	+'</div>'
+	+'</div></div>'
 
 	+'<div class="form-row">'
     +'<div class="col-md-4 mb-3">'
-	+'<input class="btn btn-success" type="submit" value="Загрузить">'
+	+'<input class="btn btn-success" type="submit" value="Загрузить"></form>'
 	+'</div></div>'
 
 	+'<div id="cnuploader_progressbar"></div>'
