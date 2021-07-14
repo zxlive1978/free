@@ -1721,9 +1721,23 @@ function adm (){
 // 	<option>4</option>
 // 	<option>5</option>
 	$("#files_dirka").empty();
-
+	var curdirdirka='../../../mon/poz/readrandom/';
 	for (var keey in files_dirka) {
-		$("#files_dirka").append('<option value="'+keey+'">'+files_dirka[keey]+'</option>');
+		let curitem=files_dirka[keey].replace(curdirdirka,'');
+		if (curitem.IndexOf('dep')!=-1){
+		$("#files_dirka").append('<option value="'+keey+'">'+curitem+'</option>');
+		}
+		// str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
+		// 		str2=str2.slice(0,str2.lastIndexOf('АГКМ'));
+		// 		} else{
+		// 		str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
+		// 		str2=str2.slice(0,str2.lastIndexOf('АГКМ'));
+		// 		}
+		// 		$('#colitems17').append($('<option>',
+		// 			{
+		// 				value: str,
+		// 				text: str2
+		// 			}));
 		// console.log(files_dirka);
 	} 
 
