@@ -302,6 +302,8 @@ function FileUploader(ioptions) {
 
         // Добавим обработку события onSubmit формы
         document.getElementById(this.options['form']).addEventListener('submit', function (evt) {
+            let pg = document.getElementById('uploadprogress');
+            pg.style.width='0%';
             that.Upload();
             (arguments[0].preventDefault)? arguments[0].preventDefault(): arguments[0].returnValue = false;
             }, false);
