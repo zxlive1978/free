@@ -183,6 +183,7 @@ function read_dirka() {
 				/* console.log(data); */
 				//Чтение формы
 				files_dirka = JSON.parse(data, files_svodka);
+				console.log(files_dirka);
 				
 			}
 		});
