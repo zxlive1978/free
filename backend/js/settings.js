@@ -1689,7 +1689,7 @@ function adm (){
     +'<div class="col-md-4 mb-3">'
 	+'<div class="form-group">'
 	+'<label for="exampleFormControlTextarea1">Список архивов на сервере</label>'
-	+'<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>'
+	+'<textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>'
 	+'</div>'
 	+'</div></div>'
 	
