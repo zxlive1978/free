@@ -1692,7 +1692,7 @@ function adm (){
 	+'<div class="form-group">'
 	+'<label for="files_dirka">Список архивов на сервере</label>'
 	
-    +'<select class="form-control" id="files_dirka" rows="5"></select>' 
+    +'<select class="form-control" id="files_dirka" size="5"></select>' 
 	//Мультиселкт
 	// +'<select multiple class="form-control" id="files_dirka" rows="5"></select>'
 	// +'<textarea class="form-control" id="files_dirka" rows="5"></textarea>'
