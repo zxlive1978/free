@@ -129,7 +129,7 @@ function FileUploader(ioptions) {
                         //     div2.textContent=percentComplete+'%';
                         //     div1.textContent='';
                         //     }
-                        // }
+                        }
                    
                     }, false);
 
