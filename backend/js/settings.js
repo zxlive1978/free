@@ -1681,10 +1681,11 @@ function adm (){
     // +'<input type="submit" value="Загрузить &gt;&gt;" /></form>'
 	+'<div class="form-row">'
     +'<div class="col-md-4 mb-3">'
-	+'<input class="btn btn-success" type="submit" value="Загрузить">'
+	
 	
 	+'<div class="progress">'
   	+'<div class="progress-bar progress-bar-striped bg-success-sm" role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'
+	+'<input class="btn btn-success" type="submit" value="Загрузить">'
 	+'</div></div>'
 	+'</div></div>'
 
