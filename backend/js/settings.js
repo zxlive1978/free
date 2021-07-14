@@ -1675,27 +1675,23 @@ function adm (){
   	+'<input type="file" class="custom-file-input" id="files"  lang="ru">'
   	+'<label class="custom-file-label" for="customFileLang">Выберите файл</label>'
 	+'</div></div>'
-	
-	// +'<tr><td><div id="message">Выберите файл:</div></td><td><input type="file" id="files" name="files[]" /></td><td></td></t>'
-    // +'</table>'
-    // +'<input type="submit" value="Загрузить &gt;&gt;" />'
-	
-	
 	+'<div class="form-row">'
     +'<div class="col-md-4 mb-3">'
 	+'<div class="progress">'
   	+'<div id="uploadprogress" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width:0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'
 	+'</div>'
 	+'</div></div>'
-
 	+'<div class="form-row">'
     +'<div class="col-md-4 mb-3">'
 	+'<input class="btn btn-success" type="submit" value="Загрузить"></form>'
 	+'</div></div>'
+	+'<div class="form-row">'
+    +'<div class="col-md-4 mb-3">'
 	+'<div class="form-group">'
-	+'<label for="exampleFormControlTextarea1">Example textarea</label>'
+	+'<label for="exampleFormControlTextarea1">Список архивов на сервере</label>'
 	+'<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>'
 	+'</div>'
+	+'</div></div>'
 	
 	);
 
