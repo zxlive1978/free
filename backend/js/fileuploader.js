@@ -161,7 +161,7 @@ function FileUploader(ioptions) {
                         // Если все порции загружены, сообщим об этом серверу. XMLHttpRequest, метод GET,
                         // PHP скрипт тот-же.
                         var gxhr = new XMLHttpRequest();
-                        gxhr.open('GET', that.options['uploadscript']+'?action=done'+'&fille='+ $('input[id=files]')[0].files[0].name), true);
+                        gxhr.open('GET', that.options['uploadscript']+'?action=done'+'&fille='+ $('input[id=files]')[0].files[0].name, true);
 
                         // Установим идентификатор загруки.
                         gxhr.setRequestHeader("Upload-Id", that.options['uploadid']);
