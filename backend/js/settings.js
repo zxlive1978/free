@@ -1495,6 +1495,8 @@ writeskvs('create','skvs', String('par'+String((Object.keys(wells).length-1))),J
 readskvs('read','skvs', '','');
 }
 
+//список архивов для записи интервалов
+var files_dirka;
 //Админка
 function adm (){
 	if (onofadm){
@@ -1688,8 +1690,10 @@ function adm (){
 	+'<div class="form-row">'
     +'<div class="col-md-4 mb-3">'
 	+'<div class="form-group">'
-	+'<label for="exampleFormControlTextarea1">Список архивов на сервере</label>'
-	+'<textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>'
+	+'<label for="files_dirka">Список архивов на сервере</label>'
+	
+    +'<select multiple class="form-control" id="files_dirka" rows="5"></select>'  
+	// +'<textarea class="form-control" id="files_dirka" rows="5"></textarea>'
 	+'</div>'
 	+'</div></div>'
 	
@@ -1708,19 +1712,18 @@ function adm (){
 	//Чтение списка файлов
 	read_dirka();
 
-	// var e=document.getElementById('uploadform');
-    // e.style.display='block';
-	// $('#tabs-4').append('<button type="button" name="addfile" id="addfile" class="btn btn-success mb-1" data-dismiss="modal">+</button>');
-	// $('#tabs-4').append('<form name="uploader" enctype="multipart/form-data" method="POST">'
-    //     +'Отправить этот файл: <input name="userfile" type="file" />'
-    //     +'<button type="submit" name="submit">Загрузить</button>'
-    // +'</form>');
-	// $('#tabs-4').append('<div class="table-responsive table-hover" style="cursor:pointer;"><table id="files" class="table table-bordered table-striped "><thead><tr>'
-	// +'<th>Название</th>'
-	// +'<th>Скважина</th>'
-	// +'<th>Строка подключения</th>'
-	// +'</tr></thead><tbody></tbody></table></div>');
+	//
+// 	<option>1</option>
+// 	<option>2</option>
+// 	<option>3</option>
+// 	<option>4</option>
+// 	<option>5</option>
 
+	for (var keey in files_dirka) {
+
+	} 
+
+	
 	} else {
 		
 		
