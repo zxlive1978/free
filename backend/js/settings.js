@@ -1686,7 +1686,7 @@ function adm (){
 	+'<div class="form-row">'
     +'<div class="col-md-4 mb-3">'
 	+'<div class="progress">'
-  	+'<div id="uploadprogress" class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'
+  	+'<div id="uploadprogress" class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width:0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'
 	+'</div>'
 	+'</div></div>'
 
