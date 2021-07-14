@@ -1722,7 +1722,6 @@ function adm (){
 
 	for (var keey in files_dirka) {
 		$("#files_dirka").append('<option value="'+keey+'">'+keey+'</option>');
-
 	} 
 
 	
