@@ -1665,10 +1665,8 @@ function adm (){
 
 
 	//Загрузка интервалов
-	//Камеры
+	// ==========================
 	$('#tabs-4').empty();
-	
-
 	$('#tabs-4').append('<form action="./" method="post" id="uploadform" onsubmit="return false;" style="display:block;">'
 	+'<label for="hcolcolor">Загрузка архива *.zip( *.dep + *.lst)</label>'
 	+'<div class="form-row">'
@@ -1694,7 +1692,10 @@ function adm (){
     +'<div class="col-md-4 mb-3">'
 	+'<input class="btn btn-success" type="submit" value="Загрузить"></form>'
 	+'</div></div>'
-
+	+'<div class="form-group">'
+	+'<label for="exampleFormControlTextarea1">Example textarea</label>'
+	+'<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+	+'</div>'
 	
 	);
 
