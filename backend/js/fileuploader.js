@@ -109,6 +109,10 @@ function FileUploader(ioptions) {
                         // Посчитаем ширину синей полоски ProgressBar
                         var width=Math.round((loadfrom+evt.loaded) * 300 / that.filesize);
 
+                        let pgg = document.querySelector('uploadprogress');
+	                    pgg.setAttribute('aria-valuenow', '0');
+	                    pgg.setAttribute('style', 'width:' + percentComplete)
+
                         // Изменим свойства элементом ProgressBar'а, добавим к нему текст
                         var div1=document.getElementById('cnuploader_progressbar');
                         var div2=document.getElementById('cnuploader_progresscomplete');
