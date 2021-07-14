@@ -167,17 +167,7 @@ function readddir() {
 	}) 
 	
 }*/
-function read_svodka() {
-	/* filesss= {}; */
-	//fileName = '../scr/scr11.scr';
-	// let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
-	// filedir=_uzdec;
-	// if (curtemp == 'time'){
-	// 	filedir = filedir+'/';}
-	// if (curtemp == 'depth'){
-	// 	filedir = filedir+'/depth/';
-	// }
-	
+function read_dirka() {	
 	$.ajax({
 			type: "POST",
 			url: 'js/read_dirka.php',
