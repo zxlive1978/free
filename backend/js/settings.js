@@ -1747,7 +1747,7 @@ function read_dirka() {
 			type: "POST",
 			url: 'js/read_dirka.php',
 			async:false,
-			data: {name: 'Wayne',well_Name: wellName, fileName: '/video/'},
+			data: {name: 'Wayne', fileName: '/video/'},
 			success: function(data){
 				//Обновление
 				var refresh = false;
