@@ -1694,7 +1694,7 @@ function adm (){
 	
     +'<select class="form-control" id="files_dirka" rows="5"></select>' 
 	//Мультиселкт
-	+'<select multiple class="form-control" id="files_dirka" rows="5"></select>'
+	// +'<select multiple class="form-control" id="files_dirka" rows="5"></select>'
 	// +'<textarea class="form-control" id="files_dirka" rows="5"></textarea>'
 	+'</div>'
 	+'</div></div>'
