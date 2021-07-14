@@ -8,7 +8,7 @@ $uploaddir="../../../mon/poz/readrandom";
 
 $hash=$_SERVER["HTTP_UPLOAD_ID"];
 //print_r $hash;
-$Name= $_SERVER["FileName"];
+$nname= $_SERVER["FILENAME"];
 openlog("html5upload.php", LOG_PID | LOG_PERROR, LOG_LOCAL0);
 $suka=preg_match("/^[a-f0-9]{32}$/i",$hash);
 echo ($hash);
@@ -27,7 +27,7 @@ if (preg_match("/^[a-f0-9]{32}$/i",$hash)==0) {
 
 			if (is_file($uploaddir."/".$hash.".original")) unlink($uploaddir."/".$hash.".original");
 
-			rename($uploaddir."/".$hash.".html5upload",$uploaddir."/".$_SERVER["FileName"]);
+			rename($uploaddir."/".$hash.".html5upload",$uploaddir."/".strval($_SERVER["FILENAME"]));
 
 			// $fw=fopen($uploaddir."/".$hash.".original_ready","wb");if ($fw) fclose($fw);
 			}
