@@ -1718,8 +1718,10 @@ function adm (){
 // 	<option>3</option>
 // 	<option>4</option>
 // 	<option>5</option>
+	$("#files_dirka").empty();
 
 	for (var keey in files_dirka) {
+		$("#files_dirka").append('<option value="'+keey+'">'+keey+'</option>');
 
 	} 
 
