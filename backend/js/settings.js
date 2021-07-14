@@ -1695,9 +1695,7 @@ function adm (){
 	+'<input class="btn btn-success" type="submit" value="Загрузить"></form>'
 	+'</div></div>'
 
-	+'<div id="cnuploader_progressbar"></div>'
-	+'<div id="cnuploader_progresscomplete"></div>'
-	+'<div id="c"><br><br></div>'
+	
 	);
 
 	$('#files').on('change',function(){
