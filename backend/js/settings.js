@@ -1692,7 +1692,9 @@ function adm (){
 	+'<div class="form-group">'
 	+'<label for="files_dirka">Список архивов на сервере</label>'
 	
-    +'<select multiple class="form-control" id="files_dirka" rows="5"></select>'  
+    +'<select class="form-control" id="files_dirka" rows="5"></select>' 
+	//Мультиселкт
+	+'<select multiple class="form-control" id="files_dirka" rows="5"></select>'
 	// +'<textarea class="form-control" id="files_dirka" rows="5"></textarea>'
 	+'</div>'
 	+'</div></div>'
@@ -1721,7 +1723,8 @@ function adm (){
 	$("#files_dirka").empty();
 
 	for (var keey in files_dirka) {
-		$("#files_dirka").append('<option value="'+keey+'">'+keey+'</option>');
+		$("#files_dirka").append('<option value="'+keey+'">'+files_dirka[keey]+'</option>');
+		// console.log(files_dirka);
 	} 
 
 	
@@ -1762,7 +1765,7 @@ function read_dirka() {
 				/* console.log(data); */
 				//Чтение формы
 				files_dirka = JSON.parse(data);
-				console.log(files_dirka);
+				
 				
 			}
 		});
