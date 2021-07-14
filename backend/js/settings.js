@@ -1741,6 +1741,10 @@ function adm (){
 
 }
 
+//
+// function read_dirka() {	
+
+
 //Чтение списка архивов 
 function read_dirka() {	
 	$.ajax({
