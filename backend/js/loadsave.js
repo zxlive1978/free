@@ -167,3 +167,34 @@ function readddir() {
 	}) 
 	
 }*/
+function read_svodka() {
+	/* filesss= {}; */
+	//fileName = '../scr/scr11.scr';
+	// let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
+	// filedir=_uzdec;
+	// if (curtemp == 'time'){
+	// 	filedir = filedir+'/';}
+	// if (curtemp == 'depth'){
+	// 	filedir = filedir+'/depth/';
+	// }
+	
+	$.ajax({
+			type: "POST",
+			url: 'js/read_dirka.php',
+			async:false,
+			data: {name: 'Wayne',well_Name: wellName, fileName: '/video/'},
+			success: function(data){
+				//Обновление
+				var refresh = false;
+				//Онлайн
+				var online = false;
+				
+				var plan = {};
+				/* console.log(data); */
+				//Чтение формы
+				files_dirka = JSON.parse(data, files_svodka);
+				
+			}
+		});
+
+}
