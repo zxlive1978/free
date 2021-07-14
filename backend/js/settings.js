@@ -1741,8 +1741,29 @@ function adm (){
 
 }
 
+//Чтение списка архивов 
+function read_dirka() {	
+	$.ajax({
+			type: "POST",
+			url: 'js/read_dirka.php',
+			async:false,
+			data: {name: 'Wayne',well_Name: wellName, fileName: '/video/'},
+			success: function(data){
+				//Обновление
+				var refresh = false;
+				//Онлайн
+				var online = false;
+				
+				var plan = {};
+				/* console.log(data); */
+				//Чтение формы
+				files_dirka = JSON.parse(data, files_svodka);
+				console.log(files_dirka);
+				
+			}
+		});
 
-
+}
 
 //Загрузка файла частями
 function ShowForm() {
