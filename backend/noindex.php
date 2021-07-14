@@ -60,6 +60,9 @@ $hash=md5("test");
 <style type="text/css">
 #cnuploader_progressbar {display:none;margin-top:10px;height:16px;font-family:sans-serif;font-size:12px;padding:3px;width:300px;position:absolute;text-align:center;color:black;border:1px solid black;display:hidden;}
 #cnuploader_progresscomplete {display:none;margin-top:10px;height:16px;font-family:sans-serif;font-size:12px;padding:3px;width:0;text-align:center;background-color:blue;color:white;border:1px solid transparent;display:hidden;}
+.custom-file-input:lang(en)~.custom-file-label::after {
+    content: "Выберите файл";
+}
 </style>
 
 
