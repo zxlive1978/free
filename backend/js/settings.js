@@ -1761,7 +1761,7 @@ function read_dirka() {
 				var plan = {};
 				/* console.log(data); */
 				//Чтение формы
-				files_dirka = JSON.parse(data, files_svodka);
+				files_dirka = JSON.parse(data, files_dirka);
 				console.log(files_dirka);
 				
 			}
