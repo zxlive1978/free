@@ -2491,7 +2491,7 @@ function adm4() {
 
 }
 
-//Список файлов
+//Список сводок
 var files_svodka;
 //вкладка Суточные сводки
 function adm5() {

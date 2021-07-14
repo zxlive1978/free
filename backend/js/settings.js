@@ -1706,7 +1706,8 @@ function adm (){
 	//Закачка файлов
 	ShowForm();
 	//Чтение списка файлов
-	
+	read_dirka();
+
 	// var e=document.getElementById('uploadform');
     // e.style.display='block';
 	// $('#tabs-4').append('<button type="button" name="addfile" id="addfile" class="btn btn-success mb-1" data-dismiss="modal">+</button>');
