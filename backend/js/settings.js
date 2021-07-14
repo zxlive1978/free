@@ -1724,7 +1724,7 @@ function adm (){
 	var curdirdirka='../../../mon/poz/readrandom/';
 	for (var keey in files_dirka) {
 		let curitem=files_dirka[keey].replace(curdirdirka,'');
-		if (curitem.IndexOf('dep')!=-1){
+		if (curitem,toString().indexOf('dep')!=-1){
 		$("#files_dirka").append('<option value="'+keey+'">'+curitem+'</option>');
 		}
 		// str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
