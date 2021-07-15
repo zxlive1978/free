@@ -1701,10 +1701,13 @@ function adm (){
 	+'<div class="form-row">'
     +'<div class="col-md-4 mb-3">'
 	+'<div class="form-group">'
-	+'<input type="date" id="starthole" name="date1" max=<?php echo date("Y-m-d");?> min=<?php $date = new DateTime(); $date->modify("-9 day"); echo $date->format("Y-m-d"); ?>>'
+	+'<label for="startdirka"class="control-label">Начало:</label>'
+    +'<input type="date" class="form-control  bg-dark text-light" id="startdirka" name="startdirka" value="<?php echo date("Y-m-d");?>"><input type="time"  class="form-control bg-dark text-light" id="starttime1" name="starttime1" class="form-control  bg-dark text-light " value="01:00" min="00:00" max="24:00" required >'
+    +'<label for="stopddirka"class="control-label">Конец:</label>'
+    +'<input type="date" class="form-control  bg-dark text-light" id="stopddirka" name="stopddirka" value="<?php echo date("Y-m-d");?>"><input type="time" class="form-control bg-dark text-light" id="starttime2" name="starttime2" class="form-control  bg-dark text-light" value="01:01" min="00:00" max="24:00" required >'
 	+'</div>'
 	+'</div></div>'
-	+'dasdsg'
+	+'dasdskkg'
 	);
 
 	$('#files').on('change',function(){
