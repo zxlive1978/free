@@ -1732,6 +1732,7 @@ function adm (){
 }
 
 
+var cur_file_dirka;
 //Чтение списка архивов
 function read_dirka_spisok() {
 	read_dirka();
