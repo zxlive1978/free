@@ -1700,7 +1700,9 @@ function adm (){
 	+'</div></div>'
 	+'<div class="form-row">'
     +'<div class="col-md-4 mb-3">'
+	+'<div class="form-group">'
 	+'<input type="date" id="starthole" name="date1" max=<?php echo date("Y-m-d");?> min=<?php $date = new DateTime(); $date->modify("-9 day"); echo $date->format("Y-m-d"); ?>>'
+	+'</div>'
 	+'</div></div>'
 	);
 
