@@ -1704,7 +1704,7 @@ function adm (){
 	+'<input type="date" id="starthole" name="date1" max=<?php echo date("Y-m-d");?> min=<?php $date = new DateTime(); $date->modify("-9 day"); echo $date->format("Y-m-d"); ?>>'
 	+'</div>'
 	+'</div></div>'
-	+'dasds'
+	+'dasdsg'
 	);
 
 	$('#files').on('change',function(){
