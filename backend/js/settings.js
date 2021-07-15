@@ -1698,7 +1698,10 @@ function adm (){
 	// +'<textarea class="form-control" id="files_dirka" rows="5"></textarea>'
 	+'</div>'
 	+'</div></div>'
-	
+	+'<div class="form-row">'
+    +'<div class="col-md-4 mb-3">'
+	+'<input type="date" id="starthole" name="date1" max=<?php echo date("Y-m-d");?> min=<?php $date = new DateTime(); $date->modify("-9 day"); echo $date->format("Y-m-d"); ?>>'
+	+'</div></div>'
 	);
 
 	$('#files').on('change',function(){
