@@ -1668,6 +1668,16 @@ function adm (){
 
 	//Загрузка интервалов
 	// ==========================
+
+	var now = new Date();
+
+	var day = ("0" + now.getDate()).slice(-2);
+	var month = ("0" + (now.getMonth() + 1)).slice(-2);
+
+	var today = now.getFullYear()+"-"+(month)+"-"+(day) ;
+
+	
+
 	$('#tabs-4').empty();
 	$('#tabs-4').append('<form action="./" method="post" id="uploadform" onsubmit="return false;" style="display:block;">'
 	+'<label for="hcolcolor">Загрузка архива *.zip( *.dep + *.lst)</label>'
@@ -1710,6 +1720,7 @@ function adm (){
 	+'dasdskkg'
 	);
 
+	$('#startdirka').val(today);
 	$('#files').on('change',function(){
 		//get the file name
 		var fileName = $(this).val();
