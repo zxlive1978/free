@@ -1684,14 +1684,26 @@ function adm (){
 	// +'<label for="hcolcolor">Загрузка архива *.zip( *.dep + *.lst)</label>'
 	
 	+'<div class="form-row ">'
+    +'<div class="col-md-3 mb-3 p-3 border ">'
+	// +'<div class="form-group ">'
+	+'<label for="files_dirka">Список архивов на сервере</label>'
+	+'<select class="form-control" id="files_dirka" size="5"></select><br></select>' 
+	
+	+'<div class="col text-center">'
+	+'<button type="button"  name="deletedirka"  id="deletedirka"class="btn btn-danger">Удалить</button>'
+	
+	+'</div></div></div>'
+	
+    
+	+'<div class="form-row ">'
     +'<div class="col-md-3 mb-3 border">'
   	+'<input type="file" class="custom-file-input p-4" id="files"  lang="ru"></input>'
-  	+'<label class="custom-file-label" for="customFileLang">Загрузка архива *.zip( *.dep + *.lst)</label>'
+  	+'<label class="custom-file-label" for="customFileLang">Выбор архива *.zip( *.dep + *.lst)</label>'
 	  +'<div class="progress">'
   	+'<div id="uploadprogress" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width:0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'
 	  
 	+'</div>'
-	+'<input class="btn btn-success" type="submit" value="Загрузить">'
+	+'<input class="btn btn-success" type="submit" value="Добавить">'
 	+'</div></div></div></form>'
 	// +'<div class="form-row">'
     // +'<div class="col-md-3 mb-3 ">'
@@ -1709,12 +1721,12 @@ function adm (){
 	// +'</div></div>'
 	
 	+'<div class="form-row ">'
-    +'<div class="col-md-3 mb-3 p-4 border ">'
+    +'<div class="col-md-3 mb-3 p-3 border ">'
 	+'<div class="form-group ">'
-	+'<label for="files_dirka">Список архивов на сервере</label>'
+	// +'<label for="files_dirka">Список архивов на сервере</label>'
 	
-    +'<select class="form-control" id="files_dirka" size="5"></select><br>' 
-	+'<input class="btn btn-danger" name="deletedirka" value="Удалить">'
+    // +'<select class="form-control" id="files_dirka" size="5"></select><br></select>' 
+	
 	+'<label for="hcolcolor"class="control-label">Начало:</label>'
     +'<input type="date" class="form-control  " id="startdirka" name="startdirka" ><input type="time"  class="form-control" id="startdirka2" name="startdirka2" class="form-control  " value="01:00:00" step="1" min="00:00" max="24:00" required >'
     +'<label for="hcolcolor"class="control-label">Конец:</label>'
