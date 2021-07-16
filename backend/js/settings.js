@@ -1721,6 +1721,7 @@ function adm (){
 	);
 
 	$('#startdirka').val(today);
+	$('#stopddirka').val(today);
 	$('#files').on('change',function(){
 		//get the file name
 		var fileName = $(this).val();
