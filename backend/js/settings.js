@@ -1681,6 +1681,7 @@ function adm (){
 	$('#tabs-4').empty();
 	$('#tabs-4').append('<form action="./" method="post" id="uploadform" onsubmit="return false;" style="display:block;">'
 	+'<label for="hcolcolor">Загрузка архива *.zip( *.dep + *.lst)</label>'
+	+'<span class="border border-primary"></span>'
 	+'<div class="form-row">'
     +'<div class="col-md-4 mb-3">'
 
@@ -1697,6 +1698,7 @@ function adm (){
     +'<div class="col-md-4 mb-3">'
 	+'<input class="btn btn-success" type="submit" value="Загрузить"></form>'
 	+'</div></div>'
+	+'</span>'
 	+'<div class="form-row">'
     +'<div class="col-md-4 mb-3">'
 	+'<div class="form-group">'
