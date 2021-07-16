@@ -1781,7 +1781,7 @@ function adm (){
 		event.preventDefault();
 
 		if(cur_file_dirka2!=''){
-
+			console.log(cur_file_dirka2);
 			deletearch('1',cur_file_dirka2,'3','4');
 			read_dirka_spisok();
 		}
