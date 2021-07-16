@@ -1779,7 +1779,7 @@ function adm (){
 
 	$('#deletedirka').on('click', function(event) {
 		event.preventDefault();
-		deletearch();
+		deletearch('1','2','3','4');
 		
 	  });
 
