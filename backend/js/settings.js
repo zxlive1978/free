@@ -1690,21 +1690,34 @@ function adm (){
 	+'<select class="form-control" id="files_dirka" size="5"></select><br></select>' 
 	
 	+'<div class="col text-center">'
-	+'<button type="button"  name="deletedirka"  id="deletedirka"class="btn btn-danger">Удалить</button>'
+	
+	+'<input type="file" class="custom-file-input p-4" id="files"  lang="ru"></input>'
+	+'<label class="custom-file-label" for="customFileLang">Выбор архива *.zip( *.dep + *.lst)</label>'
+	+'<div class="progress">'
+	+'<div id="uploadprogress" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width:0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'
+	
+  +'</div>'
+  +'<input class="btn btn-success" type="submit" value="Добавить"><span><span><span>'
+  +'<button type="button"  name="deletedirka"  id="deletedirka"class="btn btn-danger">Удалить</button>'
+  +'</div></form>'
 	
 	+'</div></div></div>'
 	
     
-	+'<div class="form-row ">'
-    +'<div class="col-md-3 mb-3 border">'
-  	+'<input type="file" class="custom-file-input p-4" id="files"  lang="ru"></input>'
-  	+'<label class="custom-file-label" for="customFileLang">Выбор архива *.zip( *.dep + *.lst)</label>'
-	  +'<div class="progress">'
-  	+'<div id="uploadprogress" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width:0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'
+	// +'<div class="form-row ">'
+    // +'<div class="col-md-3 mb-3 border">'
+  	// +'<input type="file" class="custom-file-input p-4" id="files"  lang="ru"></input>'
+  	// +'<label class="custom-file-label" for="customFileLang">Выбор архива *.zip( *.dep + *.lst)</label>'
+	//   +'<div class="progress">'
+  	// +'<div id="uploadprogress" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width:0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'
 	  
-	+'</div>'
-	+'<input class="btn btn-success" type="submit" value="Добавить">'
-	+'</div></div></div></form>'
+	// +'</div>'
+	// +'<input class="btn btn-success" type="submit" value="Добавить">'
+	// +'</div></div></div></form>'
+
+
+
+
 	// +'<div class="form-row">'
     // +'<div class="col-md-3 mb-3 ">'
 	// +'<label for="hcolcolor">Загрузка архива *.zip( *.dep + *.lst)</label>'
