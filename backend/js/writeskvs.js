@@ -305,4 +305,23 @@ function deletecams(whatdo, table, p000, skvsjson){
 		}
 	});
 
+//Удалить архив
+function deletearch(whatdo, table, p000, skvsjson){
+	refresh = false;
+	online = false;
+	$.ajax({
+		type: "POST",
+		url: 'js/deletearch.php',
+		data: {whatdo:whatdo, table: table, p000: p000, skvsjson:skvsjson },
+		cache: false,
+		async: false,
+		success: function(data){
+			if (Number(data)!=1) {alert('нет связи')};
+			//alert(data);
+			
+		}
+	});
+
+
+
 };
