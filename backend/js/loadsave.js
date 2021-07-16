@@ -160,6 +160,47 @@ function readddir() {
 }
 
 
+//Удаление файла архива
+function deletearch() {
+	/* filesss= {}; */
+	//fileName = '../scr/scr11.scr';
+	$.ajax({
+			type: "POST",
+			url: 'js/deletearch.php',
+			async:false,
+			data: {name: 'Wayne',well_Name: wellName, fileName: fileName},
+			success: function(data){
+				//Обновление
+				var refresh = false;
+				//Онлайн
+				var online = false;
+				
+				var plan = {};
+				/* console.log(data); */
+				//Чтение формы
+				filesss = JSON.parse(data, filesss);
+				//alert(filesss);
+				/* data = [];
+				return plan; */
+				/* Sheet = plan[0];
+				Columns = plan[1];
+				basePar = plan[2];
+				txtPar = plan[3];
+				txtOknOPar = plan[4]; */
+				
+				//Перерисовка
+				/* try {
+				$("#drawing").find("*").not("rect, g").remove();
+				}
+				catch(e){ }
+				init(); */
+				
+			}
+		});
+		//Возращаем список файлов
+		//alert(filesss);
+}
+
 /* function loaddata() {
 	$.getJSON("/some/url", function(data) { 
 		// Now use this data to update your view models, 
