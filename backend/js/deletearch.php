@@ -76,6 +76,9 @@
 	// 	} */
 		
     // mysqli_close($dbc);
+	// echo $result;
+	$result = "OK";
+	echo $result;
 
 		
 ?>
