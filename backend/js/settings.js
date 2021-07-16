@@ -1682,7 +1682,7 @@ function adm (){
 	$('#tabs-4').append('<form action="./" method="post" id="uploadform" onsubmit="return false;" style="display:block;">'
 	
 	+'<label for="hcolcolor">Загрузка архива *.zip( *.dep + *.lst)</label>'
-	+'<span class="border border-secondary"></span>'
+	+'<span class="border "></span>'
 	+'<div class="form-row ">'
     +'<div class="col-md-3 mb-3">'
 
@@ -1701,9 +1701,9 @@ function adm (){
 	+'<input class="btn btn-success" type="submit" value="Загрузить"></form>'
 	+'</div></div>'
 	+'</span>'
-	+'<div class="form-row">'
+	+'<div class="form-row border-secondary">'
     +'<div class="col-md-4 mb-3">'
-	+'<div class="form-group">'
+	+'<div class="form-group ">'
 	+'<label for="files_dirka">Список архивов на сервере</label>'
 	
     +'<select class="form-control" id="files_dirka" size="5"></select>' 
