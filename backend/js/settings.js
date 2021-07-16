@@ -1744,7 +1744,7 @@ function adm (){
     +'<input type="date" class="form-control  " id="startdirka" name="startdirka" ><input type="time"  class="form-control" id="startdirka2" name="startdirka2" class="form-control  " value="01:00:00" step="1" min="00:00" max="24:00" required >'
     +'<label for="hcolcolor"class="control-label">Конец:</label>'
     +'<input type="date" class="form-control  " id="stopddirka" name="stopddirka" ><input type="time" class="form-control " id="stopddirka2" name="stopddirka2" class="form-control  " value="01:00:01"  step="1" min="00:00" max="24:00" required >'
-	+'<div class="form-check">'
+	+'<br><div class="form-check">'
     +'<input type="checkbox" class="form-check-input" id="rewritedirka">'
     +'<label class="form-check-label" for="exampleCheck1">Переписать интервал</label>'
   	+'</div>'
