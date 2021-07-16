@@ -305,6 +305,8 @@ function deletecams(whatdo, table, p000, skvsjson){
 		}
 	});
 
+};
+
 //Удалить архив
 function deletearch(whatdo, table, p000, skvsjson){
 	refresh = false;
@@ -321,7 +323,4 @@ function deletearch(whatdo, table, p000, skvsjson){
 			
 		}
 	});
-
-
-
 };
