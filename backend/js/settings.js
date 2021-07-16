@@ -1771,7 +1771,7 @@ function adm (){
 	$('#stopddirka').val(today);
 	$('#files').on('change',function(){
 		//get the file name
-		var fileName = $(this).val();
+		cur_file_dirka2= $(this).val();
 		//replace the "Choose a file" label
 		fileName = $(this).val().replace('C:\\fakepath\\', " ");
 		$(this).next('.custom-file-label').html(fileName);
@@ -1779,7 +1779,13 @@ function adm (){
 
 	$('#deletedirka').on('click', function(event) {
 		event.preventDefault();
-		deletearch('1','2','3','4');
+		if (){
+			if(cur_file_dirka2!=''){
+
+				deletearch('1',cur_file_dirka2,'3','4');
+				read_dirka_spisok();
+			}
+		}
 		
 	  });
 
@@ -1807,6 +1813,7 @@ function adm (){
 
 
 var cur_file_dirka;
+var cur_file_dirka2;
 //Чтение списка архивов
 function read_dirka_spisok() {
 	read_dirka();

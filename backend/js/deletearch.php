@@ -77,6 +77,15 @@
 		
     // mysqli_close($dbc);
 	// echo $result;
+	$table=$_POST['table'];
+	$whatdo=$_POST['whatdo'];
+	$p000 = $_POST['p000'];
+	$skvjson = $_POST['skvsjson'];
+	
+	
+	$filenames=$_POST['table'];
+	$dir= '../../../mon/poz/readrandom/';
+	// unlink('test.html');
 	$result = "OK";
 	echo $result;
 
