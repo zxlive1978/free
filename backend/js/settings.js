@@ -1680,10 +1680,11 @@ function adm (){
 
 	$('#tabs-4').empty();
 	$('#tabs-4').append('<form action="./" method="post" id="uploadform" onsubmit="return false;" style="display:block;">'
+	
 	+'<label for="hcolcolor">Загрузка архива *.zip( *.dep + *.lst)</label>'
-	+'<span class="border border-primary"></span>'
-	+'<div class="form-row">'
-    +'<div class="col-md-4 mb-3">'
+	+'<span class="border border-secondary"></span>'
+	+'<div class="form-row ">'
+    +'<div class="col-md-3 mb-3">'
 
   	+'<input type="file" class="custom-file-input" id="files"  lang="ru">'
   	+'<label class="custom-file-label" for="customFileLang">Выберите файл</label>'
@@ -1694,6 +1695,7 @@ function adm (){
   	+'<div id="uploadprogress" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width:0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'
 	+'</div>'
 	+'</div></div>'
+	+'</div>'
 	+'<div class="form-row">'
     +'<div class="col-md-4 mb-3">'
 	+'<input class="btn btn-success" type="submit" value="Загрузить"></form>'
@@ -1705,20 +1707,24 @@ function adm (){
 	+'<label for="files_dirka">Список архивов на сервере</label>'
 	
     +'<select class="form-control" id="files_dirka" size="5"></select>' 
+	+'<label for="hcolcolor"class="control-label">Начало:</label>'
+    +'<input type="date" class="form-control  " id="startdirka" name="startdirka" ><input type="time"  class="form-control" id="startdirka2" name="startdirka2" class="form-control  " value="01:00:00" step="1" min="00:00" max="24:00" required >'
+    +'<label for="hcolcolor"class="control-label">Конец:</label>'
+    +'<input type="date" class="form-control  " id="stopddirka" name="stopddirka" ><input type="time" class="form-control " id="stopddirka2" name="stopddirka2" class="form-control  " value="01:00:01"  step="1" min="00:00" max="24:00" required >'
 	//Мультиселкт
 	// +'<select multiple class="form-control" id="files_dirka" rows="5"></select>'
 	// +'<textarea class="form-control" id="files_dirka" rows="5"></textarea>'
 	+'</div>'
 	+'</div></div>'
-	+'<div class="form-row">'
-    +'<div class="col-md-4 mb-3">'
-	+'<div class="form-group">'
-	+'<label for="hcolcolor"class="control-label">Начало:</label>'
-    +'<input type="date" class="form-control  " id="startdirka" name="startdirka" ><input type="time"  class="form-control" id="startdirka2" name="startdirka2" class="form-control  " value="01:00:00" step="1" min="00:00" max="24:00" required >'
-    +'<label for="hcolcolor"class="control-label">Конец:</label>'
-    +'<input type="date" class="form-control  " id="stopddirka" name="stopddirka" ><input type="time" class="form-control " id="stopddirka2" name="stopddirka2" class="form-control  " value="01:00:01"  step="1" min="00:00" max="24:00" required >'
-	+'</div>'
-	+'</div></div>'
+	// +'<div class="form-row">'
+    // +'<div class="col-md-4 mb-3">'
+	// +'<div class="form-group">'
+	// +'<label for="hcolcolor"class="control-label">Начало:</label>'
+    // +'<input type="date" class="form-control  " id="startdirka" name="startdirka" ><input type="time"  class="form-control" id="startdirka2" name="startdirka2" class="form-control  " value="01:00:00" step="1" min="00:00" max="24:00" required >'
+    // +'<label for="hcolcolor"class="control-label">Конец:</label>'
+    // +'<input type="date" class="form-control  " id="stopddirka" name="stopddirka" ><input type="time" class="form-control " id="stopddirka2" name="stopddirka2" class="form-control  " value="01:00:01"  step="1" min="00:00" max="24:00" required >'
+	// +'</div>'
+	// +'</div></div>'
 	+'dasdskkg'
 	);
 
