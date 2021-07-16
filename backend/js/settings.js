@@ -1779,6 +1779,7 @@ function adm (){
 
 	$('#deletedirka').on('click', function(event) {
 		event.preventDefault();
+		deletearch();
 		
 	  });
 
