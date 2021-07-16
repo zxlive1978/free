@@ -263,7 +263,9 @@ function FileUploader(ioptions) {
     * return Число. Если не 0, то произошла ошибка
     */
     this.Upload=function() {
+        if ($('input[id=files]')[0].files[0].name.indexOf('.zip')!=-1){
 
+        
         // Скроем форму, чтобы пользователь не отправил файл дважды
         // var e=document.getElementById(this.options['form']);
         // if (e) e.style.display='none';
@@ -277,6 +279,10 @@ function FileUploader(ioptions) {
             // Иначе отправим файл целиком
             else this.UploadPortion(0,this.filesize);
             }
+
+        } else{
+            alert('Файл - не архив zip!')
+        }
         }
 
 
