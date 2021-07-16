@@ -1779,13 +1779,13 @@ function adm (){
 
 	$('#deletedirka').on('click', function(event) {
 		event.preventDefault();
-		if (){
-			if(cur_file_dirka2!=''){
 
-				deletearch('1',cur_file_dirka2,'3','4');
-				read_dirka_spisok();
-			}
+		if(cur_file_dirka2!=''){
+
+			deletearch('1',cur_file_dirka2,'3','4');
+			read_dirka_spisok();
 		}
+
 		
 	  });
 
