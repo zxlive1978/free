@@ -1697,9 +1697,11 @@ function adm (){
 	+'<div id="uploadprogress" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width:0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'
 	
   +'</div>'
-  +'<input class="btn btn-success" type="submit" value="Добавить"><span><span><span>'
+  +'<div class="col-md-6 col-sm-6 col-xs-12">'
+  +'<input class="btn btn-success" type="submit" value="Добавить"><span>'
   +'<button type="button"  name="deletedirka"  id="deletedirka"class="btn btn-danger">Удалить</button>'
-  +'</div></form>'
+
+  +'</div></div></form>'
 	
 	+'</div></div></div>'
 	
