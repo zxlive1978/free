@@ -85,7 +85,7 @@
 	
 	$filenames=$_POST['table'];
 	$dir= '../../../mon/poz/readrandom/';
-	// unlink('test.html');
+	unlink($dir.$filenames);
 	$result = "OK";
 	echo $result;
 
