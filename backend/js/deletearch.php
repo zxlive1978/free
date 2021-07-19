@@ -86,7 +86,7 @@
 	$filenames=$_POST['table'];
 	$dir= '../../../mon/poz/readrandom/';
 	unlink($dir.$filenames);
-	$result = "OK";
+	$result = $dir.$filenames;
 	echo $result;
 
 		

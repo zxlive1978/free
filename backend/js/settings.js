@@ -1784,7 +1784,7 @@ function adm (){
 	$('#files_dirka').on('change', function(event) {
 		 var optionSelected = $("option:selected", this);
 		 var valueSelected = this.text;
-		 cur_file_dirka2=$(this).text();
+		 cur_file_dirka2=optionSelected.text();
 	});
 
 
