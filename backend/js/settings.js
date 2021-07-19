@@ -1791,7 +1791,7 @@ function adm (){
 	$('#deletedirka').on('click', function(event) {
 		event.preventDefault();
 
-		if(cur_file_dirka2!='' || cur_file_dirka2!='undefined' ){
+		if(cur_file_dirka2!='' || typeof cur_file_dirka2!='undefined' ){
 			// console.log(cur_file_dirka2);
 			deletearch('1',cur_file_dirka2,'3','4');
 			read_dirka_spisok();
