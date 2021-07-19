@@ -1769,19 +1769,30 @@ function adm (){
 
 	$('#startdirka').val(today);
 	$('#stopddirka').val(today);
-	$('#files').on('change',function(){
+	$('#files').on('change', function(event) {
 		//get the file name
-		cur_file_dirka2= $(this).val();
+		
+		// cur_file_dirka2= $(this).val();
+		// console.log(cur_file_dirka2);
 		//replace the "Choose a file" label
 		fileName = $(this).val().replace('C:\\fakepath\\', " ");
+		// console.log(fileName);
+		// cur_file_dirka2=fileName;
 		$(this).next('.custom-file-label').html(fileName);
-	})
+	});
+
+	$('#files_dirka').on('change', function(event) {
+		 var optionSelected = $("option:selected", this);
+		 var valueSelected = this.text;
+		 cur_file_dirka2=$(this).text();
+	});
+
 
 	$('#deletedirka').on('click', function(event) {
 		event.preventDefault();
 
-		if(cur_file_dirka2!=''){
-			console.log(cur_file_dirka2);
+		if(cur_file_dirka2!='' || cur_file_dirka2!='undefined' ){
+			// console.log(cur_file_dirka2);
 			deletearch('1',cur_file_dirka2,'3','4');
 			read_dirka_spisok();
 		}
