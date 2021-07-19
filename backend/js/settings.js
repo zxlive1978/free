@@ -1840,29 +1840,7 @@ function read_dirka_spisok() {
 }	
 
 
-//Чтение списка архивов 
-function read_dirka() {	
-	$.ajax({
-			type: "POST",
-			url: 'js/read_dirka.php',
-			async:false,
-			data: {name: 'Wayne', fileName: '/video/'},
-			success: function(data){
-				//Обновление
-				var refresh = false;
-				//Онлайн
-				var online = false;
-				
-				var plan = {};
-				/* console.log(data); */
-				//Чтение формы
-				files_dirka = JSON.parse(data);
-				
-				
-			}
-		});
 
-}
 
 //Загрузка файла частями
 function ShowForm() {
