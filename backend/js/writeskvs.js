@@ -358,11 +358,7 @@ function add_interval_to_db(whatdo, arch, table, start_int, stop_int) {
 				//Обновление
 				/* console.log(data); */
 				alert(data);
-				//Чтение формы
-				// files_dirka = JSON.parse(data);
-			
-				
-				
+					
 			}
 		});
 
