@@ -1776,8 +1776,10 @@ function adm (){
    $('#addinterval').on('click', function(event) {
 	event.preventDefault();
 	if($('#curdirka_files').val('')!=''){
-		// console.log(cur_file_dirka2);
-		add_interval_to_db('add', arch, table, start_int, stop_int);
+		console.log($('#curdirka_files').val(''));
+		
+		// add_interval_to_db('add', arch, table, start_int, stop_int);
+
 	} else {
 		alert('Выберите архив!')
 	}
