@@ -1686,7 +1686,7 @@ function adm (){
 	+'<div class="form-row ">'
     +'<div class="col-md-3 mb-3 p-3 border ">'
 	// +'<div class="form-group ">'
-	+'<label for="files_dirka">Список архивов на сервере</label>'
+	+'<label for="files_dirka">Список архивов на сервере:</label>'
 	+'<select class="form-control" id="files_dirka" size="5"></select><br></select>' 
 	
 	+'<div class="col text-center">'
