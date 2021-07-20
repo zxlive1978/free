@@ -10,6 +10,7 @@
 	$whatdo= $_POST['whatdo'];
 		
 	$cmd = '/usr/bin/python /var/www/html/mon/poz/dtcis_read_random.py '.$arch.' '.$table.' '.$start_int.' '.$stop_int.' '.$whatdo;
-	$output = shell_exec($cmd);
+	// exec('python blibble.py', $output, $ret_code);
+	exec($cmd, $output, $ret_code);
 	echo $output;
 ?>
