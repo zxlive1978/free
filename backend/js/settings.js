@@ -1739,8 +1739,9 @@ function adm (){
 	// +'<label for="files_dirka">Список архивов на сервере</label>'
 	
     // +'<select class="form-control" id="files_dirka" size="5"></select><br></select>' 
-	+'<input type="text" class="control-label">Текущий архив:</input>'
-	+'<label for="hcolcolor" id="curdirka_files" class="control-label"></label><br>'
+	+'<label for="hcolcolor" class="control-label">Текущий архив:</label>'
+	+'<input type="text" class="form-control input-lg" id="curdirka_files"  value=""/><br>'
+	// +'<label for="hcolcolor" id="curdirka_files" class="control-label"></label><br>'
 	+'<label for="hcolcolor" class="control-label">Скважина:</label>'
 	+'<select class="form-control" id="cur_well_dirka" ></select></select><br>' 
 	+'<label for="hcolcolor" class="control-label">Начало:</label>'
@@ -1788,7 +1789,7 @@ function adm (){
 		 var optionSelected = $("option:selected", this);
 		 var valueSelected = this.text;
 		 cur_file_dirka2=optionSelected.text();
-		 $('#curdirka_files').text(cur_file_dirka2);
+		 $('#curdirka_files').val(cur_file_dirka2);
 	});
 
 
@@ -1799,7 +1800,7 @@ function adm (){
 			// console.log(cur_file_dirka2);
 			deletearch('1',cur_file_dirka2,'3','4');
 			read_dirka_spisok();
-			$('#curdirka_files').text('');
+			$('#curdirka_files').val('');
 
 		}
 

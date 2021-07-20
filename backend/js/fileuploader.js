@@ -183,7 +183,7 @@ function FileUploader(ioptions) {
                             //         else window.parent.location=that.options['redirect_success'];
                             //Перечитываем список архивов
                             read_dirka_spisok();
-                            $('#curdirka_files').text('');
+                            $('#curdirka_files').val('');
                             }, false);
 
                         // Отправим HTTP GET запрос
