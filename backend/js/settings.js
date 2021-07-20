@@ -1799,6 +1799,8 @@ function adm (){
 			// console.log(cur_file_dirka2);
 			deletearch('1',cur_file_dirka2,'3','4');
 			read_dirka_spisok();
+			$('#curdirka_files').text('');
+
 		}
 
 		
@@ -1808,6 +1810,8 @@ function adm (){
 	ShowForm();
 	//Чтение списка архивов
 	read_dirka_spisok();
+
+
 
 	
 	} else {
