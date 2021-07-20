@@ -1739,7 +1739,7 @@ function adm (){
 	// +'<label for="files_dirka">Список архивов на сервере</label>'
 	
     // +'<select class="form-control" id="files_dirka" size="5"></select><br></select>' 
-	+'<label for="hcolcolor" class="control-label">Текущий архив:</label>'
+	+'<input type="text" class="control-label">Текущий архив:</input>'
 	+'<label for="hcolcolor" id="curdirka_files" class="control-label"></label><br>'
 	+'<label for="hcolcolor" class="control-label">Скважина:</label>'
 	+'<select class="form-control" id="cur_well_dirka" ></select></select><br>' 
