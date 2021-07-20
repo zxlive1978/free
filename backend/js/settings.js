@@ -1692,7 +1692,7 @@ function adm (){
 	+'<div class="col text-center">'
 	
 	+'<input type="file" class="custom-file-input p-4" id="files"  lang="ru"></input>'
-	+'<label class="custom-file-label" for="customFileLang">Выбор архива *.zip( *.dep + *.lst)</label>'
+	+'<label class="custom-file-label" for="customFileLang">Архив *.zip( *.dep + *.lst)</label>'
 	+'<div class="progress">'
 	+'<div id="uploadprogress" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width:0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'
 	
