@@ -1803,7 +1803,7 @@ function adm (){
 	//Закачка файлов объект
 	ShowForm();
 	//Чтение списка архивов
-	read_dirka_spisok()
+	read_dirka_spisok();
 
 	
 	} else {
