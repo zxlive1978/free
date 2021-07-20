@@ -1747,6 +1747,7 @@ function adm (){
 			deletearch('1',cur_file_dirka2,'3','4');
 			read_dirka_spisok();
 			$('#curdirka_files').val('');
+			cur_file_dirka2='';
 		}
 	  });
 
@@ -1775,9 +1776,9 @@ function adm (){
    //Добавление данных в бд
    $('#addinterval').on('click', function(event) {
 	event.preventDefault();
-	if($('#curdirka_files').text('')!=''){
+	if(cur_file_dirka2!=''){
 
-		console.log($('#curdirka_files').text(''));
+		console.log(cur_file_dirka2);
 		
 		// add_interval_to_db('add', arch, table, start_int, stop_int);
 
@@ -1806,9 +1807,9 @@ function adm (){
 }
 
 
-var cur_file_dirka;
-var cur_file_dirka2;
-var cur_well_dirka;
+var cur_file_dirka='';
+var cur_file_dirka2='';
+var cur_well_dirka='';
 //Чтение списка архивов
 function read_dirka_spisok() {
 	read_dirka();

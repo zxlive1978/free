@@ -184,6 +184,7 @@ function FileUploader(ioptions) {
                             //Перечитываем список архивов
                             read_dirka_spisok();
                             $('#curdirka_files').val('');
+                            cur_file_dirka2='';
                             }, false);
 
                         // Отправим HTTP GET запрос
