@@ -357,7 +357,10 @@ function add_interval_to_db(whatdo, arch, table, start_int, stop_int) {
 			success: function(data){
 				//Обновление
 				console.log(data);
-				alert(data);
+				for (var txtstr  in data){
+					console.log(txtstr);
+				}
+				// alert(data);
 					
 			}
 		});
