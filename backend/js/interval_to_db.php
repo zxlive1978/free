@@ -9,7 +9,7 @@
 	$stop_int= $_POST['stop_int'];
 	$whatdo= $_POST['whatdo'];
 		
-	$cmd = '/usr/bin/python /var/www/html/mon/poz/dtcis_read_random.py '.$host;
+	$cmd = '/usr/bin/python /var/www/html/mon/poz/dtcis_read_random.py '.$arch.' '.$table.' '.$start_int.' '.$stop_int.' '.$whatdo;
 	$output = shell_exec($cmd);
 	echo $output;
 ?>
