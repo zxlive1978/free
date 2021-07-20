@@ -1775,8 +1775,9 @@ function adm (){
    //Добавление данных в бд
    $('#addinterval').on('click', function(event) {
 	event.preventDefault();
-	if($('#curdirka_files').val('')!=''){
-		console.log($('#curdirka_files').val(''));
+	if($('#curdirka_files').text('')!=''){
+		let 
+		console.log($('#curdirka_files').text(''));
 		
 		// add_interval_to_db('add', arch, table, start_int, stop_int);
 
