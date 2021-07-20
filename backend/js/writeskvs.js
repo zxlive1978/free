@@ -350,7 +350,7 @@ function read_dirka() {
 function add_interval_to_db(whatdo, arch, table, start_int, stop_int) {	
 	$.ajax({
 			type: "POST",
-			url: 'js/add_interval_to_db.php',
+			url: 'js/interval_to_db.php',
 			cache: false,
 			async: false,
 			data: {whatdo:whatdo, arch:arch, table:table, start_int:start_int, stop_int:stop_int},
