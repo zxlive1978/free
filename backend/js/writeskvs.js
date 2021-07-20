@@ -333,11 +333,26 @@ function read_dirka() {
 			data: {name: 'Wayne', fileName: '/video/'},
 			success: function(data){
 				//Обновление
-				var refresh = false;
-				//Онлайн
-				var online = false;
+				/* console.log(data); */
+				//Чтение формы
+				files_dirka = JSON.parse(data);
+			
 				
-				var plan = {};
+				
+			}
+		});
+
+};
+
+//Добавление интервала в базу из архива 
+function read_dirka() {	
+	$.ajax({
+			type: "POST",
+			url: 'js/read_dirka.php',
+			async:false,
+			data: {name: 'Wayne', fileName: '/video/'},
+			success: function(data){
+				//Обновление
 				/* console.log(data); */
 				//Чтение формы
 				files_dirka = JSON.parse(data);
