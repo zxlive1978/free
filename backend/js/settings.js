@@ -1680,95 +1680,41 @@ function adm (){
 
 	$('#tabs-4').empty();
 	$('#tabs-4').append('<form action="./" method="post" id="uploadform" onsubmit="return false;" style="display:block;">'
-	
-	// +'<label for="hcolcolor">Загрузка архива *.zip( *.dep + *.lst)</label>'
-	
 	+'<div class="form-row ">'
     +'<div class="col-md-3 mb-3 p-3 border ">'
-	// +'<div class="form-group ">'
 	+'<label for="files_dirka">Список архивов на сервере:</label>'
 	+'<select class="form-control" id="files_dirka" size="5"></select><br></select>' 
-	
 	+'<div class="col text-center">'
-	
 	+'<input type="file" class="custom-file-input p-4" id="files"  lang="ru"></input>'
 	+'<label class="custom-file-label" for="customFileLang">Архив *.zip( *.dep + *.lst)</label>'
 	+'<div class="progress">'
 	+'<div id="uploadprogress" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width:0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'
-	
 	+'<br></div>'
 	+'<input class="btn btn-success" type="submit" value="Загрузить">'
 	+'<button type="button"  name="deletedirka"  id="deletedirka"class="btn btn-danger">Удалить</button>'
 	+'</div></form>'
-	
 	+'</div></div></div>'
-	
-    
-	// +'<div class="form-row ">'
-    // +'<div class="col-md-3 mb-3 border">'
-  	// +'<input type="file" class="custom-file-input p-4" id="files"  lang="ru"></input>'
-  	// +'<label class="custom-file-label" for="customFileLang">Выбор архива *.zip( *.dep + *.lst)</label>'
-	//   +'<div class="progress">'
-  	// +'<div id="uploadprogress" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width:0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'
-	  
-	// +'</div>'
-	// +'<input class="btn btn-success" type="submit" value="Добавить">'
-	// +'</div></div></div></form>'
-
-
-
-
-	// +'<div class="form-row">'
-    // +'<div class="col-md-3 mb-3 ">'
-	// +'<label for="hcolcolor">Загрузка архива *.zip( *.dep + *.lst)</label>'
-	// +'<input type="file" class="custom-file-input" id="files"  lang="ru">'
-  	// +'<label class="custom-file-label" for="customFileLang">Выберите файл</label>'
-	// +'<div class="progress">'
-  	// +'<div id="uploadprogress" class="progress-bar progress-bar-striped bg-success progress-bar-animated" role="progressbar" style="width:0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>'
-	// +'</div></div>'
-	// +'</div></div>'
-	// +'</div>'
-	// +'<div class="form-row">'
-    // +'<div class="col-md-3 mb-3">'
-	// +'<input class="btn btn-success" type="submit" value="Загрузить"></form>'
-	// +'</div></div>'
-	
 	+'<div class="form-row ">'
     +'<div class="col-md-3 mb-3 p-3 border ">'
 	+'<div class="form-group ">'
-	// +'<label for="files_dirka">Список архивов на сервере</label>'
-	
-    // +'<select class="form-control" id="files_dirka" size="5"></select><br></select>' 
 	+'<label for="hcolcolor" class="control-label">Текущий архив:</label>'
 	+'<input type="text" class="form-control input-lg" id="curdirka_files"  value="" readonly/><br>'
-	// +'<label for="hcolcolor" id="curdirka_files" class="control-label"></label><br>'
 	+'<label for="hcolcolor" class="control-label">Скважина:</label>'
 	+'<select class="form-control" id="cur_well_dirka" ></select><br>' 
 	+'<label for="hcolcolor" class="control-label">Начало:</label>'
     +'<input type="date" class="form-control  " id="startdirka" name="startdirka" ><input type="time"  class="form-control" id="startdirka2" name="startdirka2" class="form-control  " value="01:00:00" step="1" min="00:00" max="24:00" required >'
     +'<label for="hcolcolor"class="control-label">Конец:</label>'
     +'<input type="date" class="form-control  " id="stopddirka" name="stopddirka" ><input type="time" class="form-control " id="stopddirka2" name="stopddirka2" class="form-control  " value="01:00:01"  step="1" min="00:00" max="24:00" required >'
-	+'<br><div class="form-check">'
-    +'<input type="checkbox" class="form-check-input" id="rewritedirka">'
-    +'<label class="form-check-label" for="exampleCheck1">Переписать интервал</label>'
-  	+'</div>'
+	// +'<br><div class="form-check">'
+    // +'<input type="checkbox" class="form-check-input" id="rewritedirka">'
+    // +'<label class="form-check-label" for="exampleCheck1">Переписать интервал</label>'
+  	// +'</div>'
 	+'<br><div class="col text-center">'
 	+'<input class="btn btn-success" type="submit" value="Добавить"><span>'
 	+'<button type="button"  name="deleteinterval"  id="deleteinterval"class="btn btn-danger">Удалить</button>'
-	//Мультиселкт
-	// +'<select multiple class="form-control" id="files_dirka" rows="5"></select>'
-	// +'<textarea class="form-control" id="files_dirka" rows="5"></textarea>'
 	+'</div></div>'
 	+'</div></div>'
-	// +'<div class="form-row">'
-    // +'<div class="col-md-4 mb-3">'
-	// +'<div class="form-group">'
-	// +'<label for="hcolcolor"class="control-label">Начало:</label>'
-    // +'<input type="date" class="form-control  " id="startdirka" name="startdirka" ><input type="time"  class="form-control" id="startdirka2" name="startdirka2" class="form-control  " value="01:00:00" step="1" min="00:00" max="24:00" required >'
-    // +'<label for="hcolcolor"class="control-label">Конец:</label>'
-    // +'<input type="date" class="form-control  " id="stopddirka" name="stopddirka" ><input type="time" class="form-control " id="stopddirka2" name="stopddirka2" class="form-control  " value="01:00:01"  step="1" min="00:00" max="24:00" required >'
-	// +'</div>'
-	// +'</div></div>'
+	
 	);
 
 	$('#startdirka').val(today);
