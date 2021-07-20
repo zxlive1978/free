@@ -1741,6 +1741,8 @@ function adm (){
     // +'<select class="form-control" id="files_dirka" size="5"></select><br></select>' 
 	+'<label for="hcolcolor" class="control-label">Текущий архив:</label>'
 	+'<label for="hcolcolor" id="curdirka_files" class="control-label"></label><br>'
+	+'<label for="hcolcolor" class="control-label">Скважина:</label>'
+	+'<select class="form-control" id="cur_well_dirka" ></select></select><br>' 
 	+'<label for="hcolcolor" class="control-label">Начало:</label>'
     +'<input type="date" class="form-control  " id="startdirka" name="startdirka" ><input type="time"  class="form-control" id="startdirka2" name="startdirka2" class="form-control  " value="01:00:00" step="1" min="00:00" max="24:00" required >'
     +'<label for="hcolcolor"class="control-label">Конец:</label>'
