@@ -346,18 +346,20 @@ function read_dirka() {
 };
 
 //Добавление интервала в базу из архива 
-function add_interval_to_db(whatdo, table, p000, skvsjson) {	
+// python dtcis_read_random.py Time_024.dep s401 14:28:00-07/07/2021 15:40:00-07/07/2021
+function add_interval_to_db(whatdo, arch, table, start_int, stop_int) {	
 	$.ajax({
 			type: "POST",
 			url: 'js/add_interval_to_db.php',
 			cache: false,
 			async: false,
-			data: {name: 'Wayne', fileName: '/video/'},
+			data: {whatdo:whatdo, arch:arch, table:table, start_int:start_int, stop_int:stop_int},
 			success: function(data){
 				//Обновление
 				/* console.log(data); */
+				alert(data);
 				//Чтение формы
-				files_dirka = JSON.parse(data);
+				// files_dirka = JSON.parse(data);
 			
 				
 				
