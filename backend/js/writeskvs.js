@@ -330,6 +330,7 @@ function read_dirka() {
 			type: "POST",
 			url: 'js/read_dirka.php',
 			async:false,
+			cache: false,
 			data: {name: 'Wayne', fileName: '/video/'},
 			success: function(data){
 				//Обновление
@@ -345,11 +346,12 @@ function read_dirka() {
 };
 
 //Добавление интервала в базу из архива 
-function read_dirka() {	
+function add_interval_to_db(whatdo, table, p000, skvsjson) {	
 	$.ajax({
 			type: "POST",
-			url: 'js/read_dirka.php',
-			async:false,
+			url: 'js/add_interval_to_db.php',
+			cache: false,
+			async: false,
 			data: {name: 'Wayne', fileName: '/video/'},
 			success: function(data){
 				//Обновление
