@@ -1818,6 +1818,15 @@ function adm (){
 		// $('#skvs tbody').append('<tr><td>'+wells[keey].txt+'</td><td>'+wells[keey].wellN+'</td><td>'+wells[keey].type+'</td><td>'+wells[keey].typeStn+'</td><td>'+wells[keey].nach+'</td><td>'+wells[keey].tel+'</td><td>'+wells[keey].email+ '</td></tr>');
 		//$('#tabs-2').append('</div>');	
 	}
+	//выбор скважины
+	$('#cur_well_dirka').on('change', function(event) {
+		var optionSelected = $("option:selected", this);
+		var valueSelected = this.text;
+		// cur_well_dirka=optionSelected.text();
+		cur_well_dirka=optionSelected.val();
+		// console.log(optionSelected.val());
+		// $('#curdirka_files').text(cur_file_dirka2);
+   });
 
 
 
@@ -1841,6 +1850,7 @@ function adm (){
 
 var cur_file_dirka;
 var cur_file_dirka2;
+var cur_well_dirka;
 //Чтение списка архивов
 function read_dirka_spisok() {
 	read_dirka();
