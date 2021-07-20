@@ -1710,8 +1710,9 @@ function adm (){
     // +'<label class="form-check-label" for="exampleCheck1">Переписать интервал</label>'
   	// +'</div>'
 	+'<br><div class="col text-center">'
-	+'<input class="btn btn-success" type="submit" value="Добавить"><span>'
-	+'<button type="button"  name="deleteinterval"  id="deleteinterval"class="btn btn-danger">Удалить</button>'
+	// +'<input class="btn btn-success" type="submit" value="Добавить"><span>'
+	+'<button type="button"  name="addinterval"  id="addinterval" class="btn btn-success">Добавить</button>'
+	+'<button type="button"  name="deleteinterval"  id="deleteinterval" class="btn btn-danger">Удалить</button>'
 	+'</div></div>'
 	+'</div></div>'
 	
@@ -1741,16 +1742,12 @@ function adm (){
 
 	$('#deletedirka').on('click', function(event) {
 		event.preventDefault();
-
 		if(cur_file_dirka2!='' || typeof cur_file_dirka2!='undefined' ){
 			// console.log(cur_file_dirka2);
 			deletearch('1',cur_file_dirka2,'3','4');
 			read_dirka_spisok();
 			$('#curdirka_files').val('');
-
 		}
-
-		
 	  });
 
 	//Закачка файлов объект
@@ -1774,6 +1771,17 @@ function adm (){
 		// console.log(optionSelected.val());
 		// $('#curdirka_files').text(cur_file_dirka2);
    });
+
+   //Добавление данных в бд
+   $('#addinterval').on('click', function(event) {
+	event.preventDefault();
+	if($('#curdirka_files').val('')!=''){
+		// console.log(cur_file_dirka2);
+		add_interval_to_db('add', arch, table, start_int, stop_int);
+	} else {
+		alert('Выберите архив!')
+	}
+  });
 
 
 
