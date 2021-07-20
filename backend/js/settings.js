@@ -1776,7 +1776,7 @@ function adm (){
    $('#addinterval').on('click', function(event) {
 	event.preventDefault();
 	if($('#curdirka_files').text('')!=''){
-		let 
+
 		console.log($('#curdirka_files').text(''));
 		
 		// add_interval_to_db('add', arch, table, start_int, stop_int);
