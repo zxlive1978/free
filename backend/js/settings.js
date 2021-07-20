@@ -1778,7 +1778,10 @@ function adm (){
 	event.preventDefault();
 	if(cur_file_dirka2!=''){
 
-		console.log($('#starttime').val());
+		console.log($('#startdirka').val());
+		console.log($('#startdirka2').val());
+		console.log($('#stopdirka').val());
+		console.log($('#stopdirka2').val());
 		
 		// add_interval_to_db('add', cur_file_dirka2, cur_well_dirka, start_int, stop_int);
 
