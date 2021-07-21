@@ -12,7 +12,8 @@
 	$ret_code=123;
 	$output="";
 		
-	$cmd = "/usr/bin/python /var/www/html/mon/poz/readrandom/dtcis_read_random.py ".$arch." ".$table." ".$start_int." ".$stop_int." ".$whatdo." > /dev/null 2>/dev/null &";
+	$cmd = "/usr/bin/python /var/www/html/mon/poz/readrandom/dtcis_read_random.py ".$arch." ".$table." ".$start_int." ".$stop_int." ".$whatdo;
+	// ." > /dev/null 2>/dev/null &";
 	// exec('python blibble.py', $output, $ret_code);
 	// $output=shell_exec($cmd);
 	// exec($cmd, $output, $ret_code);
