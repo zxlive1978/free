@@ -12,7 +12,7 @@
 	$cmd = '/usr/bin/python /var/www/html/mon/poz/readrandom/dtcis_read_random.py '.$arch.' '.$table.' '.$start_int.' '.$stop_int.' '.$whatdo.' > 1.txt';
 	// exec('python blibble.py', $output, $ret_code);
 	// $output=shell_exec($cmd);
-	exec($cmd, $output);
+	exec($cmd, $output, $ret_code);
 	$out = array_values($output);
 	// echo ($arch.' '.$table.' '.$start_int.' '.$stop_int.' '.$whatdo);
 	echo ($out);
