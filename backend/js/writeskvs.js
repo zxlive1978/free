@@ -360,9 +360,9 @@ function add_interval_to_db(whatdo, arch, table, start_int, stop_int) {
 				// for (var txtstr  in data){
 				// 	console.log(data[txtstr]);
 				// }
-				if (data=='0'){
-					alert('Операция выполнена успешно!');
-				}
+				
+					alert(data[0]);
+				
 			}
 		});
 
