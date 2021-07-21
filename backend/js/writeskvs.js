@@ -357,7 +357,7 @@ function add_interval_to_db(whatdo, arch, table, start_int, stop_int) {
 			success: function(data){
 				let mess='';
 				for (var kesy in data) {
-					mess= mess+data[kesy];
+					mess= mess+kesy;
 				}
 					alert(mess);
 				
