@@ -18,6 +18,6 @@
 	exec($cmd, $output, $ret_code);
 	$out = array_values($output);
 	// echo ($arch.' '.$table.' '.$start_int.' '.$stop_int.' '.$whatdo);
-	// echo json_encode($out);
-	echo ini_get('max_execution_time');
+	echo json_encode($out);
+	// echo ini_get('max_execution_time');
 ?>
