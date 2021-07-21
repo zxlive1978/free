@@ -361,7 +361,7 @@ function add_interval_to_db(whatdo, arch, table, start_int, stop_int) {
 				// 	console.log(data[txtstr]);
 				// }
 				
-					alert(data[0]);
+					alert(data);
 				
 			}
 		});
