@@ -1786,7 +1786,7 @@ function adm (){
 		let stop_int=$('#stopddirka2').val()+'-'+$('#stopddirka').val();
 		// console.log(cur_well_dirka);
 		
-		add_interval_to_db('asu', cur_file_dirka2, cur_well_dirka, start_int, stop_int);
+		add_interval_to_db('add', cur_file_dirka2, cur_well_dirka, start_int, stop_int);
 
 	} else {
 		alert('Выберите архив!')
