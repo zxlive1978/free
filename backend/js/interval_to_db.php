@@ -10,9 +10,9 @@
 	$whatdo= $_POST['whatdo'];
 		
 	$cmd = '/usr/bin/python /var/www/html/mon/poz/readrandom/dtcis_read_random.py '.$arch.' '.$table.' '.$start_int.' '.$stop_int.' '.$whatdo.' > 1.txt';
-	exec('python blibble.py', $output, $ret_code);
+	// exec('python blibble.py', $output, $ret_code);
 	// $output=shell_exec($cmd);
-	// shell_exec($cmd, $output);
+	exec($cmd, $output);
 	$out = array_values($output);
 	// echo ($arch.' '.$table.' '.$start_int.' '.$stop_int.' '.$whatdo);
 	echo ($out);
