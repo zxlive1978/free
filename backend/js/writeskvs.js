@@ -348,22 +348,22 @@ function read_dirka() {
 //Добавление интервала в базу из архива 
 // python dtcis_read_random.py Time_024.dep s401 14:28:00-07/07/2021 15:40:00-07/07/2021
 function add_interval_to_db(whatdo, arch, table, start_int, stop_int) {	
-	console.log(whatdo);
-	console.log(arch);
-	console.log(table);
-	console.log(start_int);
-	console.log(stop_int);
-	// $.ajax({
-	// 		type: "POST",
-	// 		url: 'js/interval_to_db.php',
-	// 		cache: false,
-	// 		async: false,
-	// 		data: {whatdo:whatdo, arch:arch, table:table, start_int:start_int, stop_int:stop_int},
-	// 		success: function(data){
+	// console.log(whatdo);
+	// console.log(arch);
+	// console.log(table);
+	// console.log(start_int);
+	// console.log(stop_int);
+	$.ajax({
+			type: "POST",
+			url: 'js/interval_to_db.php',
+			cache: false,
+			async: false,
+			data: {whatdo:whatdo, arch:arch, table:table, start_int:start_int, stop_int:stop_int},
+			success: function(data){
 				
-	// 				alert(data);
+					alert(data);
 				
-	// 		}
-	// 	});
+			}
+		});
 
 };
