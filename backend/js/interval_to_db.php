@@ -11,7 +11,8 @@
 		
 	$cmd = '/usr/bin/python /var/www/html/mon/poz/readrandom/dtcis_read_random.py '.$arch.' '.$table.' '.$start_int.' '.$stop_int.' '.$whatdo.' /dev/null 2>&1 &';
 	// exec('python blibble.py', $output, $ret_code);
-	exec($cmd, $output, $ret_code);
+	$output=shell_exec($cmd);
+	// exec($cmd, $output, $ret_code);
 	$out = array_values($output);
 	// echo ($arch.' '.$table.' '.$start_int.' '.$stop_int.' '.$whatdo);
 	echo json_encode($output);
