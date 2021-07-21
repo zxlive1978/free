@@ -356,7 +356,7 @@ function add_interval_to_db(whatdo, arch, table, start_int, stop_int) {
 			data: {whatdo:whatdo, arch:arch, table:table, start_int:start_int, stop_int:stop_int},
 			success: function(data){
 				
-					alert(data[0]);
+					alert(data);
 				
 			}
 		});
