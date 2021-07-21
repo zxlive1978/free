@@ -1782,8 +1782,9 @@ function adm (){
 		// console.log($('#startdirka2').val());
 		// console.log($('#stopddirka').val());
 		// console.log($('#stopddirka2').val());
-		let start_int=startdirka2+'-'+startdirka;
-		let stop_int=stopddirka2+'-'+stopddirka;
+		let start_int=$('#startdirka2').val()+'-'+$('#startdirka').val();
+		let stop_int=$('#stopddirka2').val()+'-'+$('#stopddirka').val();
+		console.log(cur_well_dirka);
 		
 		add_interval_to_db('add', cur_file_dirka2, cur_well_dirka, start_int, stop_int);
 
