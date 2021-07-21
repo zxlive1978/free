@@ -15,5 +15,5 @@
 	exec($cmd, $output, $ret_code);
 	$out = array_values($output);
 	// echo ($arch.' '.$table.' '.$start_int.' '.$stop_int.' '.$whatdo);
-	echo ($out);
+	echo json_encode($out);
 ?>
