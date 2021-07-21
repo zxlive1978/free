@@ -2,6 +2,7 @@
 	/* Отладка ошибок */
 	ini_set('display_errors',1);
 	error_reporting(E_ALL ^E_NOTICE);
+	set_time_limit(18000);
 	// python dtcis_read_random.py Time_024.dep s401 14:28:00-07/07/2021 15:40:00-07/07/2021
 	$arch = $_POST['arch'];
 	$table= $_POST['table'];
