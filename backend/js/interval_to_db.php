@@ -8,6 +8,8 @@
 	$start_int = $_POST['start_int'];
 	$stop_int= $_POST['stop_int'];
 	$whatdo= $_POST['whatdo'];
+	$ret_code=123;
+	$output="suuka";
 		
 	$cmd = "/usr/bin/python /var/www/html/mon/poz/readrandom/dtcis_read_random.py ".$arch." ".$table." ".$start_int." ".$stop_int." ".$whatdo;
 	// exec('python blibble.py', $output, $ret_code);
