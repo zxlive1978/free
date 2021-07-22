@@ -1668,6 +1668,11 @@ function adm (){
 
 	//Загрузка интервалов
 	// ==========================
+	if (good_connect==false){
+		connect_websocket('pfagg.ru','3333','/ws');
+		sleep(2000);
+
+	}
 
 	var now = new Date();
 
@@ -1780,11 +1785,7 @@ function adm (){
 
 	if(cur_file_dirka2!=''){
 		//
-		if (good_connect==false){
-			connect_websocket('pfagg.ru','3333','/ws');
-			sleep(2000);
-
-		}
+		
 
 		if (good_connect){
 
