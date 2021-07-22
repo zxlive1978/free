@@ -33,7 +33,7 @@
           var uri = $("#uri").val();
  
           // create websocket instance
-          ws = new WebSocket("ws://" + host + ":" + port + uri);
+          ws = new WebSocket("wss://" + host + ":" + port + uri);
            
           // Handle incoming websocket message callback
           ws.onmessage = function(evt) {
