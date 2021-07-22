@@ -1876,8 +1876,8 @@ function connect_websocket(host,port,uri) {
 		
 		// Handle incoming websocket message callback
 		ws.onmessage = function(evt) {
-		log("Message Received: " + evt.data)
-		alert("message received: " + evt.data);
+		log("" + evt.data)
+		alert("" + evt.data);
 		};
 
 		// Close Websocket callback
