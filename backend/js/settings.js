@@ -1773,10 +1773,29 @@ function adm (){
 		// $('#curdirka_files').text(cur_file_dirka2);
    });
 
+
    //Добавление данных в бд
    $('#addinterval').on('click', function(event) {
 	event.preventDefault();
+
 	if(cur_file_dirka2!=''){
+
+		let start_int=$('#startdirka2').val()+'-'+$('#startdirka').val();
+		let stop_int=$('#stopddirka2').val()+'-'+$('#stopddirka').val();
+		// console.log(cur_well_dirka);
+
+		//php ogon!!!:(
+		// add_interval_to_db('add', cur_file_dirka2, cur_well_dirka, start_int, stop_int);
+
+		
+	
+		// Send websocket message function
+		// $("#send").click(function(evt) {
+			log("Sending Message: "+$("#message").val());
+			ws.send($("#message").val());
+		// });
+	 
+
 
 		// console.log($('#startdirka').val());
 		// console.log($('#startdirka2').val());
@@ -1785,8 +1804,9 @@ function adm (){
 		let start_int=$('#startdirka2').val()+'-'+$('#startdirka').val();
 		let stop_int=$('#stopddirka2').val()+'-'+$('#stopddirka').val();
 		// console.log(cur_well_dirka);
-		
-		add_interval_to_db('add', cur_file_dirka2, cur_well_dirka, start_int, stop_int);
+
+		//php ogon!!!:(
+		// add_interval_to_db('add', cur_file_dirka2, cur_well_dirka, start_int, stop_int);
 
 	} else {
 		alert('Выберите архив!')
@@ -1811,6 +1831,58 @@ function adm (){
 	}
 
 }
+
+
+
+function connect_websocket(host,port,uri) {
+
+		 // log function
+		 log = function(data){
+			// $("div#terminal").prepend("</br>" +data);
+			console.log(data);
+		  };
+
+			// $("div#message_details").hide()
+	 
+		var ws;
+	
+		// $("#open").click(function(evt) {
+		// evt.preventDefault();
+	
+		var host = host;
+		var port = port;
+		var uri = uri;
+
+		// create websocket instance
+		ws = new WebSocket("wss://" + host + ":" + port + uri);
+		
+		// Handle incoming websocket message callback
+		ws.onmessage = function(evt) {
+		log("Message Received: " + evt.data)
+		alert("message received: " + evt.data);
+		};
+
+		// Close Websocket callback
+		ws.onclose = function(evt) {
+		log("***Connection Closed***");
+		alert("Connection close");
+		// $("#host").css("background", "#ff0000"); 
+		// $("#port").css("background", "#ff0000"); 
+		// $("#uri").css("background",  "#ff0000");
+		// $("div#message_details").empty();	
+			};
+
+		// Open Websocket callback
+		ws.onopen = function(evt) { 
+		// $("#host").css("background", "#00ff00"); 
+		// $("#port").css("background", "#00ff00"); 
+		// $("#uri").css("background", "#00ff00");
+		// $("div#message_details").show();
+		log("***Connection Opened***");
+		};
+}
+
+
 
 
 var cur_file_dirka='';
