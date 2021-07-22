@@ -1785,13 +1785,14 @@ function adm (){
 			sleep(2000);
 
 		}
-		if (good_connect==false){
 
-		let start_int=$('#startdirka2').val()+'-'+$('#startdirka').val();
-		let stop_int=$('#stopddirka2').val()+'-'+$('#stopddirka').val();
-		messa='add'+' '+cur_file_dirka2+' '+cur_well_dirka+' '+start_int+' '+stop_int
-		log("Sending Message: "+$("#message").val());
-		ws.send(messa);
+		if (good_connect){
+
+			let start_int=$('#startdirka2').val()+'-'+$('#startdirka').val();
+			let stop_int=$('#stopddirka2').val()+'-'+$('#stopddirka').val();
+			messa='add'+' '+cur_file_dirka2+' '+cur_well_dirka+' '+start_int+' '+stop_int
+			log("Sending Message: "+$("#message").val());
+			ws.send(messa);
 		}
 		// console.log(cur_well_dirka);
 
