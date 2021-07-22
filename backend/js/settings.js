@@ -1779,9 +1779,20 @@ function adm (){
 	event.preventDefault();
 
 	if(cur_file_dirka2!=''){
+		//
+		if (good_connect==false){
+			connect_websocket(host,port,uri);
+			sleep(2000);
+
+		}
+		if (good_connect==false){
 
 		let start_int=$('#startdirka2').val()+'-'+$('#startdirka').val();
 		let stop_int=$('#stopddirka2').val()+'-'+$('#stopddirka').val();
+		messa='add'+' '+cur_file_dirka2+' '+cur_well_dirka+' '+start_int+' '+stop_int
+		log("Sending Message: "+$("#message").val());
+		ws.send(messa);
+		}
 		// console.log(cur_well_dirka);
 
 		//php ogon!!!:(
@@ -1791,18 +1802,17 @@ function adm (){
 	
 		// Send websocket message function
 		// $("#send").click(function(evt) {
-			log("Sending Message: "+$("#message").val());
-			ws.send($("#message").val());
+			
 		// });
 	 
 
-
+		//PHPHPHPHPHPH
 		// console.log($('#startdirka').val());
 		// console.log($('#startdirka2').val());
 		// console.log($('#stopddirka').val());
 		// console.log($('#stopddirka2').val());
-		let start_int=$('#startdirka2').val()+'-'+$('#startdirka').val();
-		let stop_int=$('#stopddirka2').val()+'-'+$('#stopddirka').val();
+		// let start_int=$('#startdirka2').val()+'-'+$('#startdirka').val();
+		// let stop_int=$('#stopddirka2').val()+'-'+$('#stopddirka').val();
 		// console.log(cur_well_dirka);
 
 		//php ogon!!!:(
@@ -1833,7 +1843,12 @@ function adm (){
 }
 
 
+function sleep(ms) {
+	ms += new Date().getTime();
+	while (new Date() < ms){}
+	} 
 
+var good_connect =false;
 function connect_websocket(host,port,uri) {
 
 		 // log function
@@ -1878,6 +1893,7 @@ function connect_websocket(host,port,uri) {
 		// $("#port").css("background", "#00ff00"); 
 		// $("#uri").css("background", "#00ff00");
 		// $("div#message_details").show();
+		good_connect=true;
 		log("***Connection Opened***");
 		};
 }
