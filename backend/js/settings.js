@@ -1876,14 +1876,14 @@ function connect_websocket(host,port,uri) {
 		
 		// Handle incoming websocket message callback
 		ws.onmessage = function(evt) {
-		log("" + evt.data)
+		// log("" + evt.data)
 		alert("" + evt.data);
 		};
 
 		// Close Websocket callback
 		ws.onclose = function(evt) {
-		log("***Connection Closed***");
-		alert("Connection close");
+		// log("***Connection Closed***");
+		alert("Потеря соедиения!");
 		// $("#host").css("background", "#ff0000"); 
 		// $("#port").css("background", "#ff0000"); 
 		// $("#uri").css("background",  "#ff0000");
@@ -1897,7 +1897,7 @@ function connect_websocket(host,port,uri) {
 		// $("#uri").css("background", "#00ff00");
 		// $("div#message_details").show();
 		good_connect=true;
-		log("***Connection Opened***");
+		// log("***Connection Opened***");
 		};
 }
 
