@@ -1791,7 +1791,7 @@ function adm (){
 			let start_int=$('#startdirka2').val()+'-'+$('#startdirka').val();
 			let stop_int=$('#stopddirka2').val()+'-'+$('#stopddirka').val();
 			messa='add'+' '+cur_file_dirka2+' '+cur_well_dirka+' '+start_int+' '+stop_int
-			log("Sending Message: "+$("#message").val());
+			log("Sending Message: "+messa);
 			ws.send(messa);
 		}
 		// console.log(cur_well_dirka);
@@ -1850,6 +1850,7 @@ function sleep(ms) {
 	} 
 
 var good_connect =false;
+var ws;
 function connect_websocket(host,port,uri) {
 
 		 // log function
@@ -1860,7 +1861,7 @@ function connect_websocket(host,port,uri) {
 
 			// $("div#message_details").hide()
 	 
-		var ws;
+		
 	
 		// $("#open").click(function(evt) {
 		// evt.preventDefault();
