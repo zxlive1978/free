@@ -1781,7 +1781,7 @@ function adm (){
 	if(cur_file_dirka2!=''){
 		//
 		if (good_connect==false){
-			connect_websocket(host,port,uri);
+			connect_websocket('pfagg.ru','3333','/ws');
 			sleep(2000);
 
 		}
