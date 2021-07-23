@@ -1796,22 +1796,28 @@ function adm (){
 			ws.send(messa);
 		}
 
-	//Удаление данных в бд
-	$('#deleteinterval').on('click', function(event) {
-		event.preventDefault();
-	
-		// if(cur_file_dirka2!=''){
-			//
-			
-	
-		if (good_connect){
+	}
+});
 
-			let start_int=$('#startdirka2').val()+'-'+$('#startdirka').val();
-			let stop_int=$('#stopddirka2').val()+'-'+$('#stopddirka').val();
-			messa='del'+' '+cur_file_dirka2+' '+cur_well_dirka+' '+start_int+' '+stop_int
-			log("Sending Message: "+messa);
-			ws.send(messa);
-		}
+//Удаление данных в бд
+$('#deleteinterval').on('click', function(event) {
+	event.preventDefault();
+
+	if(cur_file_dirka2==''){
+		cur_file_dirka2='agr';
+	
+	}
+		
+
+	if (good_connect){
+
+		let start_int=$('#startdirka2').val()+'-'+$('#startdirka').val();
+		let stop_int=$('#stopddirka2').val()+'-'+$('#stopddirka').val();
+		messa='del'+' '+cur_file_dirka2+' '+cur_well_dirka+' '+start_int+' '+stop_int
+		log("Sending Message: "+messa);
+		ws.send(messa);
+	}
+});
 
 		// console.log(cur_well_dirka);
 
@@ -1841,7 +1847,7 @@ function adm (){
 	// } else {
 	// 	alert('Выберите архив!')
 	// }
-  });
+  
 
 
 
