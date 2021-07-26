@@ -1717,7 +1717,8 @@ function adm (){
 	+'<br><div class="col text-center">'
 	// +'<input class="btn btn-success" type="submit" value="Добавить"><span>'
 	+'<button type="button"  name="addinterval"  id="addinterval" class="btn btn-success">Добавить</button>'
-	+'<button type="button"  name="deleteinterval"  id="deleteinterval" class="btn btn-danger">Удалить</button>'
+	+'<button type="button"  name="deleteinterval"  id="deleteinterval" class="btn btn-danger">Удалить</button><br>'
+	+'<input type="button" class="btn btn-info" value="Input Button" onclick="location.href = 'https:\pfagg.ru\mon\poz\readrandom\gsdtcis.7z';">'
 	+'</div></div>'
 	+'</div></div>'
 	
