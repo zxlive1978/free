@@ -1718,7 +1718,7 @@ function adm (){
 	// +'<input class="btn btn-success" type="submit" value="Добавить"><span>'
 	+'<button type="button"  name="addinterval"  id="addinterval" class="btn btn-success">Добавить</button>'
 	+'<button type="button"  name="deleteinterval"  id="deleteinterval" class="btn btn-danger">Удалить</button><br>'
-	+'<button type="button" class="btn btn-info" value="Input Button">  <a href="js/gsdtcis.7z" style="color:inherit"> Скачать конвертор станции "Разрез" </a> </button>'
+	+'<button type="button" class="btn btn-info" value="Input Button">  <a href="../../../mon/poz/readrandom/gsdtcis.7z" style="color:inherit"> Скачать конвертер станции "Разрез" </a> </button>'
 	+'</div></div>'
 	+'</div></div>'
 	
