@@ -1886,7 +1886,7 @@ function connect_websocket(host,port,uri) {
 		 // log function
 		 log = function(data){
 			// $("div#terminal").prepend("</br>" +data);
-			console.log(data);
+			// console.log(data);
 		  };
 
 			// $("div#message_details").hide()
