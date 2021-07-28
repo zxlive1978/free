@@ -1718,7 +1718,7 @@ function adm (){
 	// +'<input class="btn btn-success" type="submit" value="Добавить"><span>'
 	+'<button type="button"  name="addinterval"  id="addinterval" class="btn btn-success">Добавить</button>'
 	+'<button type="button"  name="deleteinterval"  id="deleteinterval" class="btn btn-danger">Удалить</button><br>'
-	+'<button type="button" class="btn btn-info" value="Input Button">  <a href="../../../mon/poz/readrandom/gsdtcis.7z" name="convDown" id="convDown" style="color:inherit"> Скачать конвертер станции "Разрез" </a> </button>'
+	+'<button type="button" class="btn btn-info" value="Input Button">  <a href="../../../mon/poz/readrandom/gsdtcis.7z" name="convDown" id="convDown" style="color:inherit" download> Скачать конвертер станции "Разрез" </a> </button>'
 	+'</div></div>'
 	+'</div></div>'
 	
@@ -1729,6 +1729,7 @@ function adm (){
 	$('#files').on('change', function(event) {
 		//get the file name
 	document.querySelector('convDown').addEventListener("click", function(event){
+		console.log('dsdsd');
 		event.preventDefault();
 		return false;
 	}, false);	
