@@ -1242,7 +1242,7 @@ function init() {
 
 				}
 			}
-			if (curtemp=="depth"){
+			if (curtemp=="depth" || curtemp=="karot"){
 				if (drawGraf == true && d110d.length > 0) {
 					var K_x1 = (w1 * weight_colmn1) / ((Number(basePar[key].max)) - (Number(basePar[key].min)));
 					var value = ''; 
@@ -1628,7 +1628,7 @@ for (var key in geoOknOPar) {
 
 		//Графики рисуем Геологию 
 		try { 
-		if (curtemp=="depth"){
+		if (curtemp=="depth" || curtemp=="karot"){
 			if (drawGraf == true && d110l.length > 0) {
 				var K_x1 = (w1 * weight_colmn1) / 1;
 				var value = ''; 
@@ -2140,7 +2140,7 @@ for (var key in geoOknOPar) {
 
 
 //Если ШКАЛА ГЛУБИН А
-if (curtemp=='depth'){
+if (curtemp=="depth" || curtemp=="karot"){
 
 	var length = 1.5;
 	var width_line = 2;
@@ -2843,7 +2843,7 @@ if (curtemp=='depth'){
 	//////////////////////
 	//Табличка со значениями ГЛУБИНА
 	///////////////////////
-	if (curtemp=='depth'){
+	if (curtemp=="depth" || curtemp=="karot"){
 		for (key in Columns) {
 			if (key != 'col0') {
 				// var inv_col = draw.group();
