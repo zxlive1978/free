@@ -1462,7 +1462,7 @@ function colOK8() {
 		//Сохранить в локальное хранилище
 		
 		if (curtemp=='time'){
-			colPan9save(wellName, skv, namecmt, filesss[$("#colitems9")[0].selectedIndex], formnamedepth);
+			colPan9save(wellName, skv, namecmt, filesss[$("#colitems9")[0].selectedIndex], formnamedepth, formnamekarot);
 			formname = filesss[$("#colitems9")[0].selectedIndex];
 			loadddata(formname);
 		}
@@ -1488,7 +1488,7 @@ function colOK8() {
 }
 
 //Сохранить в локальное хранилище текущие настройки
-function colPan9save(wellName, skv, namecmt, formname, formnamedepth) {
+function colPan9save(wellName, skv, namecmt, formname, formnamedepth, formnamekarot) {
 	localStorage.setItem(_uz[0],
 		window.btoa(unescape(encodeURIComponent(wellName + ',' + skv + ',' + namecmt + ',' + formname + ',' + formnamedepth+ ',' + formnamekarot ))));
 
@@ -1554,13 +1554,13 @@ function colOK9() {
 		
 		if (curtemp=='time'){
 			//Сохранить в локальное хранилище
-			colPan9save(wellName, skv, namecmt, $("#colitems99").val(), formnamedepth);
+			colPan9save(wellName, skv, namecmt, $("#colitems99").val(), formnamedepth, formnamekarot);
 			formname = String($("#colitems99").val());
 			savedata(formname);
 		}
 		if (curtemp=='depth'){
 			//Сохранить в локальное хранилище
-			colPan9save(wellName, skv, namecmt, formname, $("#colitems99").val());
+			colPan9save(wellName, skv, namecmt, formname, $("#colitems99").val(),formnamedepth, formnamekarot);
 			formnamedepth = String($("#colitems99").val());
 			savedata(formdirdepth+ formnamedepth);
 		
@@ -1568,7 +1568,7 @@ function colOK9() {
 
 		if (curtemp=='karot'){
 			//Сохранить в локальное хранилище
-			colPan9save(wellName, skv, namecmt, formname, $("#colitems99").val());
+			colPan9save(wellName, skv, namecmt, formname, $("#colitems99").val()formnamedepth, formnamekarot);
 			formnamedepth = String($("#colitems99").val());
 			loadddata(formdirkarot+formnamekarot);
 		
