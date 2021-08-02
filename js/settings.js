@@ -1433,7 +1433,7 @@ function colPan8(name_select) {
 }
 //Загрузить форму файл при старте
 function colOK8start(name_start) {
-	console.log(name_start);
+	// console.log(name_start);
 	var name = name_start;
 	toponof = true;
 	loadddata(name);
@@ -2591,7 +2591,7 @@ function adm6() {
 
 	}
 	//Ахтунг!
-	// readsavestartstorage();
+	readsavestartstorage();
 
 	curtemp = 'karot';
 
@@ -2616,7 +2616,7 @@ function adm6() {
 	$('#skvnamelabt').text(skv);
 	
 	//Ахтунг!
-	console.log(formdirkarot+formnamekarot)
+	// console.log(formdirkarot+formnamekarot)
 	colOK8start(formdirkarot+formnamekarot);
 	
 
