@@ -2234,6 +2234,7 @@ function adm() {
 	$('#dropdownMenu1').hide();
 	$('#dropdownMenu3').hide();
 	$('#dropdownMenu4').hide();
+	$('#dropdownMenu5').hide();
 	$("#dropdownMenu2").attr("style", "display:yes; padding-top:3; padding-bottom:3;");
 	$('#dropdownMenu2').show();
 
@@ -2254,8 +2255,11 @@ function adm() {
 
 	getcamswell();
 	
-	$('#taabs-3').hide();
-	$('#taabs-2').hide();
+
+	$('#taabs-2').empty();
+	$('#taabs-3').empty();
+	$('#taabs-4').empty();
+	$('#taabs-5').empty();
 	$('#tabs').show();
 	$('#taabs-1').empty();
 	$('#ul1').hide();
@@ -2349,8 +2353,14 @@ function adm2() {
 	$('#taabs-1').hide();
 	$('#taabs-2').empty();
 	$('#taabs-3').empty();
+	$('#taabs-4').empty();
+	$('#taabs-5').empty();
 	$('#dropdownMenu1').hide();
 	$('#dropdownMenu2').hide();
+	$('#dropdownMenu3').hide();
+	$('#dropdownMenu4').hide();
+	$('#dropdownMenu5').hide();
+	
 	
 	$('#taabs-2').show();
 	$('#ul1').hide();
@@ -2405,6 +2415,7 @@ function adm3() {
 	$('#dropdownMenu3').hide();
 	$('#dropdownMenu2').hide();
 	$('#dropdownMenu4').hide();
+	$('#dropdownMenu5').hide();
 	$('#dropdownMenu1').show();
 
 	//$('.modal-backdrop').hide();
@@ -2419,6 +2430,8 @@ function adm3() {
 	$('#taabs-1').empty();
 	$('#taabs-2').empty();
 	$('#taabs-3').empty();
+	$('#taabs-4').empty();
+	$('#taabs-5').empty();
 	//document.getElementById("camsf2").innerHTML="Роторный стол";
 	// $('#tabs').empty();
 	// $('#tabs').hide();
@@ -2472,6 +2485,7 @@ function adm4() {
 	$('#taabs-1').empty();
 	$('#taabs-2').empty();
 	$('#taabs-3').empty();
+	$('#taabs-5').empty();
 	//document.getElementById("camsf2").innerHTML="Роторный стол";
 	// $('#tabs').empty();
 	// $('#tabs').hide();
@@ -2507,6 +2521,7 @@ function adm5() {
 	$('#dropdownMenu3').hide();
 	$('#dropdownMenu2').hide();
 	$('#dropdownMenu1').hide();
+	$('#dropdownMenu5').hide();
 	$('#dropdownMenu4').show();
 
 	//$('.modal-backdrop').hide();
@@ -2521,6 +2536,7 @@ function adm5() {
 	$('#taabs-1').empty();
 	$('#taabs-2').empty();
 	$('#taabs-3').empty();
+	$('#taabs-5').empty();
 	$('#colitems17').empty();
 	//document.getElementById("camsf2").innerHTML="Роторный стол";
 	// $('#tabs').empty();
