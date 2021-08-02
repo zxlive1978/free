@@ -72,7 +72,10 @@ if(!window.localStorage.getItem(_uz[0])) {
 	//for(keey in wells){}
 	localStorage.setItem(_uz[0],
 	window.btoa(unescape(encodeURIComponent(wellName+','+skv+','+namecmt+','+formname + ',' + formnamedepth + ',' + formnamekarot))));
-	/* console.log('нету'); */
+	console.log('нету');
+	let _uloc = decodeURIComponent(escape(window.atob(localStorage.getItem(_uz[0]))));
+	let arr = _uloc.split(',');
+	console.log(arr);
 	
 } else {
 	wellName="";
@@ -93,7 +96,7 @@ if(!window.localStorage.getItem(_uz[0])) {
 		formname = arr[3];
 		formnamedepth = arr[4];
 		formnamekarot = arr[5];
-		console.log(arr);
+		
 		}
 	}
 	/* console.log('есть'); */
