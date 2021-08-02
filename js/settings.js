@@ -2580,7 +2580,7 @@ function adm5() {
 
 
 //вкладка По Глубине
-function adm4() {
+function adm6() {
 	if (curtemp=='video'){
 		//удаление старых потоков
 		deleteoldcams();
