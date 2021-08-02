@@ -49,7 +49,7 @@ function savedata111() {
 // }
 //download(jsonData, 'json.txt', 'text/plain');
 //Сохранение на сервер файла  и в хранилище
-function savedata(name){
+function savedata(naame){
 
 	localStorage.setItem(_uz[0],
 		window.btoa(unescape(encodeURIComponent(wellName+','+skv+','+namecmt+','+formname+','+formnamedepth+','+formnamekarot))));
@@ -67,7 +67,7 @@ function savedata(name){
 	
 	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
 	filedir=_uzdec;
-	filedir = filedir+'/'+ name;
+	filedir = filedir+'/'+ naame;
 	console.log(filedir);
 	$.ajax({
 			type: "POST",
@@ -89,11 +89,11 @@ function savedata(name){
 }
 
 //Загрузка файла с сервера
-function loadddata(name) {
+function loadddata(naame) {
 	
 	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
 	var filedir=_uzdec;
-	filedir = filedir+'/'+ name;
+	filedir = filedir+'/'+ naame;
 	//console.log(filedir);
 	$.ajax({
 			type: "GET",
