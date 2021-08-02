@@ -1506,6 +1506,8 @@ function colPan9(name_select) {
 	$("#colitems99").val(formname);}
 	if (curtemp == 'depth'){
 		$("#colitems99").val(formnamedepth);}
+	if (curtemp == 'depth'){
+		$("#colitems99").val(formnamekarot);}
 	//Чтение списка  файлов
 	readddir();
 	//из json объекта в массив
