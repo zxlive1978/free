@@ -52,7 +52,7 @@ function savedata111() {
 function savedata(name){
 
 	localStorage.setItem(_uz[0],
-		window.btoa(unescape(encodeURIComponent(wellName+','+skv+','+namecmt+','+formname+','+formnamedepth))));
+		window.btoa(unescape(encodeURIComponent(wellName+','+skv+','+namecmt+','+formname+','+formnamedepth+','+formnamekarot))));
 	var curscr =[];
 	/* curscr =JSON.parse(curscr); */
 	curscr.push(Sheet);
@@ -68,7 +68,7 @@ function savedata(name){
 	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
 	filedir=_uzdec;
 	filedir = filedir+'/'+ name;
-	// console.log(filedir);
+	console.log(filedir);
 	$.ajax({
 			type: "POST",
 			url: 'js/savetoserver.php',
