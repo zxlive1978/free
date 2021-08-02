@@ -1473,7 +1473,7 @@ function colOK8() {
 		}
 		if (curtemp=='karot'){
 			colPan9save(wellName, skv, namecmt, formname, filesss[$("#colitems9")[0].selectedIndex]);
-			formnamedepth = filesss[$("#colitems9")[0].selectedIndex];
+			formnamekarot = filesss[$("#colitems9")[0].selectedIndex];
 			loadddata(formdirkarot+formnamekarot);
 		}
 
@@ -1572,7 +1572,7 @@ function colOK9() {
 			//Сохранить в локальное хранилище
 			colPan9save(wellName, skv, namecmt, formname, $("#colitems99").val(), formnamedepth, formnamekarot);
 			formnamedepth = String($("#colitems99").val());
-			loadddata(formdirkarot+formnamekarot);
+			savedata(formdirkarot+formnamekarot);
 		
 		}
 
