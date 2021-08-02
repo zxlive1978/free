@@ -1729,7 +1729,7 @@ function adm (){
 	$('#files').on('change', function(event) {
 		//get the file name
 	document.querySelector('convDown').addEventListener("click", function(event){
-		console.log('dsdsd');
+		// console.log('dsdsd');
 		event.preventDefault();
 		return false;
 	}, false);	
