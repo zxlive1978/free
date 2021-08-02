@@ -98,6 +98,7 @@ if(!window.localStorage.getItem(_uz[0])) {
 		formnamekarot = arr[5];
 		
 		}
+	console.log(arr);
 	}
 	/* console.log('есть'); */
 }
