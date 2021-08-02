@@ -2616,6 +2616,7 @@ function adm6() {
 	$('#skvnamelabt').text(skv);
 	
 	//Ахтунг!
+	console.log(formdirkarot+formnamekarot)
 	colOK8start(formdirkarot+formnamekarot);
 	
 
