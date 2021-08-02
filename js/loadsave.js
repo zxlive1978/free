@@ -141,7 +141,7 @@ function readddir() {
 	if (curtemp == 'depth'){
 		filedir = filedir+'/depth/';
 	}
-	if (curtemp == 'depth'){
+	if (curtemp == 'karot'){
 		filedir = filedir+'/karot/';
 	}
 	
