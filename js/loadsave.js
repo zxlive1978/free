@@ -63,18 +63,12 @@ function savedata(name){
 	curscr.push(geoOknOPar);
 	/* console.log(curscr); */
 	curscr = JSON.stringify(Object.assign({}, curscr));
+	/* console.log(curscr); */
 	
 	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
 	filedir=_uzdec;
-	if (curtemp == 'time'){
-		filedir = filedir+'/';}
-	if (curtemp == 'depth'){
-		filedir = filedir+'/depth/';
-	}
-	if (curtemp == 'karot'){
-		filedir = filedir+'/karot/';
-	}
-
+	filedir = filedir+'/'+ name;
+	console.log(filedir);
 	$.ajax({
 			type: "POST",
 			url: 'js/savetoserver.php',
@@ -96,16 +90,11 @@ function savedata(name){
 
 //Загрузка файла с сервера
 function loadddata(name) {
+	
 	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
-	filedir=_uzdec;
-	if (curtemp == 'time'){
-		filedir = filedir+'/';}
-	if (curtemp == 'depth'){
-		filedir = filedir+'/depth/';
-	}
-	if (curtemp == 'karot'){
-		filedir = filedir+'/karot/';
-	}
+	var filedir=_uzdec;
+	filedir = filedir+'/'+ name;
+	//console.log(filedir);
 	$.ajax({
 			type: "GET",
 			url: 'js/loadfromserver.php',
@@ -143,7 +132,8 @@ function loadddata(name) {
 
 //Чтение списка файлов
 function readddir() {
-	
+	/* filesss= {}; */
+	//fileName = '../scr/scr11.scr';
 	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
 	filedir=_uzdec;
 	if (curtemp == 'time'){
