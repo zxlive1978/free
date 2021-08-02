@@ -2018,7 +2018,11 @@ for (var key in geoOknOPar) {
 	beg_plats = beg_plats + K_rul * disp_sec_ten;
 
 	//Шаг записей для текстовой глубины долота  и суммы объемов
-	var step_txt_numb_rec = d110d.length / ten_minuts;
+	var step_txt_numb_rec = 1000 / ten_minuts;
+	try{
+		step_txt_numb_rec = d110d.length / ten_minuts;
+	} catch{}
+	// var step_txt_numb_rec = d110d.length / ten_minuts;
 
 	for (let i = 0; i < ten_minuts; i++) {
 		//Проверка на большую или малую засечку

@@ -75,7 +75,7 @@ if(!window.localStorage.getItem(_uz[0])) {
 	console.log('нету');
 	let _uloc = decodeURIComponent(escape(window.atob(localStorage.getItem(_uz[0]))));
 	let arr = _uloc.split(',');
-	console.log(arr);
+	// console.log(arr);
 	
 } else {
 	wellName="";
@@ -98,7 +98,7 @@ if(!window.localStorage.getItem(_uz[0])) {
 		formnamekarot = arr[5];
 		
 		}
-	console.log(arr);
+	// console.log(arr);
 	}
 	/* console.log('есть'); */
 }
