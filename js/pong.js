@@ -93,7 +93,7 @@ if(!window.localStorage.getItem(_uz[0])) {
 		formname = arr[3];
 		formnamedepth = arr[4];
 		formnamekarot = arr[5];
-		// console.log('есть');
+		console.log(formnamekarot);
 		}
 	}
 	/* console.log('есть'); */
