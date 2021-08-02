@@ -1568,7 +1568,7 @@ function colOK9() {
 
 		if (curtemp=='karot'){
 			//Сохранить в локальное хранилище
-			colPan9save(wellName, skv, namecmt, formname, $("#colitems99").val()formnamedepth, formnamekarot);
+			colPan9save(wellName, skv, namecmt, formname, $("#colitems99").val(), formnamedepth, formnamekarot);
 			formnamedepth = String($("#colitems99").val());
 			loadddata(formdirkarot+formnamekarot);
 		
