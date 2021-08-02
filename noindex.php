@@ -18,13 +18,7 @@ if (!$_SESSION['auth']) {
 <meta charset="UTF-8">
 <script>const _uz=<?php echo $_SESSION['skvjson']; ?>;</script>
 <script>const _ut=<?php echo $_SESSION['time']; ?>;</script>
-<script>const _uv=<?php echo $_SESSION['video']; ?>;</script>
-<script>const _uk=<?php echo $_SESSION['karotag']; ?>;</script>
-<script>const _uc=<?php echo $_SESSION['comments']; ?>;</script>
-<script>const _ug=<?php echo $_SESSION['geolog']; ?>;</script>
-<script>const _ud=<?php echo $_SESSION['depth']; ?>;</script>
-<script>const _us=<?php echo $_SESSION['svodka']; ?>;</script>
-<script>const _uh=<?php echo $_SESSION['chat']; ?>;</script>
+
 
 <link rel="stylesheet" type="text/css" href="css/jschart5.css">
 <!-- <link rel="stylesheet" href="css/iziModal.min.css"> -->
