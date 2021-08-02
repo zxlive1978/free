@@ -1431,13 +1431,13 @@ function colPan8(name_select) {
 	$("#myModal8").modal('show');
 
 }
-var name=''
+var naame=''
 //Загрузить форму файл при старте
 function colOK8start(name_start) {
 	// console.log(name_start);
-	name = name_start;
+	naame = name_start;
 	toponof = true;
-	loadddata(name);
+	loadddata(naame);
 	refresh=true;
 	if (curtemp=='time'){
 	read_next();}
