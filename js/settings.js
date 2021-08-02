@@ -1442,6 +1442,8 @@ function colOK8start(name_start) {
 	read_next();}
 	if (curtemp=='depth'){read_depth_last();}
 
+	if (curtemp=='karot'){read_karot_last();}
+
 	onoffpan();
 	
 
@@ -2579,7 +2581,7 @@ function adm5() {
 
 
 
-//вкладка По Глубине
+//вкладка Каротажи
 function adm6() {
 	if (curtemp=='video'){
 		//удаление старых потоков

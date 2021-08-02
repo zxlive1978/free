@@ -238,10 +238,64 @@ function read_depth_last(){
 
 }
 
+//Чтение каротажей
+function read_karot_last(){ 
+
+
+}
+
 
 var timer;
 //Чтение последних значений
 function read_next(){
+
+
+	if (curtemp=='karot'){
+		refresh = false;
+		online = false;
+		clearTimeout(timer);
+		refresh = false;
+		online = false;
+		
+		end_time=start_time + Kzoomdepth*10+Kzoomdepth/10;
+
+		wellNamedepth =wellName +"depth_all";
+		
+		$.ajax({
+			type: "POST",
+			url: 'js/read_karot.php',
+			data: {whatdo:'read', table:wellNamedepth ,start_time: start_time, end_time:end_time },
+			cache: false,
+			async: false,
+			success: function(data){
+				
+				try {
+					d110d = null;
+					d110d = JSON.parse(data);
+					/* d110d = eval(data); */
+					// data = null;
+					//numbs110d = null;
+					var numbs110d = null;
+					numbs110d = d110d.length;
+					var back_start_time = null;
+					back_start_time = start_time;
+					back_end_time = null;
+					back_end_time = end_time;
+					repaint();
+					
+					
+
+
+					
+				}
+				catch (e) { }
+				
+				
+			}
+		});
+		
+	}
+
 	if (curtemp=='depth'){
 		refresh = false;
 		online = false;
