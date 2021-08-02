@@ -1884,7 +1884,7 @@ function colOK10() {
 		//Сменить название в шапке
 		$('#skvnamelabt').text(skv);
 		//Сохранить в локальное хранилище
-		colPan9save(wellName, skv, namecmt, formname, formnamedepth, formdirkarot);
+		colPan9save(wellName, skv, namecmt, formname, formnamedepth, formnamekarot);
 		refresh = true;
 		read_next();
 		/* repaint(); */
@@ -1923,7 +1923,7 @@ function colOK10() {
 		//Сменить название в шапке
 		$('#skvnamelabt').text(skv);
 		//Сохранить в локальное хранилище
-		colPan9save(wellName, skv, namecmt, formname, formnamedepth, formdirkarot);
+		colPan9save(wellName, skv, namecmt, formname, formnamedepth, formnamekarot);
 		adm4();
 		
 		// read_now();
