@@ -120,7 +120,7 @@ if (!$_SESSION['auth']) {
     <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg' width="30" height="30" >  Данные "По времени"</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/depth.svg' width="30" height="30">  Данные "По глубине"</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm5();" ><img src='css/report.svg' width="30" height="30">  Суточные сводки оператора</button>
-    <!-- <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/carrot.svg' width="30" height="30"> Каротажи на кабеле</button> -->
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm6();" ><img src='css/carrot.svg' width="30" height="30"> Каротажи на кабеле</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg' width="30" height="30">  Видеокамеры</button>
     <div class="dropdown-divider"></div>
     <button class='btn  btn-dark btn-block text-left'  onClick="colPan10();" ><img src='css/well.svg' width="30" height="30">  Выбор текущей скважины</button>
@@ -146,6 +146,7 @@ if (!$_SESSION['auth']) {
     <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg' width="30" height="30">  Данные "По времени"</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/depth.svg' width="30" height="30">  Данные "По глубине"</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm5();" ><img src='css/report.svg' width="30" height="30">  Суточные сводки оператора</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm6();" ><img src='css/carrot.svg' width="30" height="30"> Каротажи на кабеле</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg' width="30" height="30">  Видеокамеры</button>
     <div class="dropdown-divider"></div>
     <button class='btn  btn-dark btn-block text-left'  onClick="colPan10();" ><img src='css/well.svg' width="30" height="30">  Выбор текущей скважины</button>
@@ -163,6 +164,7 @@ if (!$_SESSION['auth']) {
     <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg' width="30" height="30">  Данные "По времени"</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/depth.svg' width="30" height="30">  Данные "По глубине"</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm5();" ><img src='css/report.svg' width="30" height="30">  Суточные сводки оператора</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm6();" ><img src='css/carrot.svg' width="30" height="30"> Каротажи на кабеле</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg' width="30" height="30">  Видеокамеры</button>
     <div class="dropdown-divider"></div>
     <button class='btn  btn-dark btn-block text-left'  onClick="colPan10();" ><img src='css/well.svg' width="30" height="30">  Выбор текущей скважины</button>
@@ -184,6 +186,7 @@ if (!$_SESSION['auth']) {
     <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg' width="30" height="30">  Данные "По времени"</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/depth.svg' width="30" height="30">  Данные "По глубине"</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm5();" ><img src='css/report.svg' width="30" height="30">  Суточные сводки оператора</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm6();" ><img src='css/carrot.svg' width="30" height="30"> Каротажи на кабеле</button>
     <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg' width="30" height="30">  Видеокамеры</button>
     <div class="dropdown-divider"></div>
     <button class='btn  btn-dark btn-block text-left'  onClick="colPan10();" ><img src='css/well.svg' width="30" height="30">  Выбор текущей скважины</button>
@@ -197,6 +200,30 @@ if (!$_SESSION['auth']) {
   </div>
   </div>
 </div>
+
+
+<!-- Каротажи -->
+<button class='btn   bg-secondary'  id='dropdownMenu5'  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" display:none; padding-top:3; padding-bottom:3;" ><img src='css/burg.svg'  width="27" height="27"></button>
+<div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu5" style=" width: 300px !important;">
+
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm3();" ><img src='css/time.svg' width="30" height="30">  Данные "По времени"</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm4();" ><img src='css/depth.svg' width="30" height="30">  Данные "По глубине"</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm5();" ><img src='css/report.svg' width="30" height="30">  Суточные сводки оператора</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm6();" ><img src='css/carrot.svg' width="30" height="30"> Каротажи на кабеле</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="adm();" ><img src='css/cam.svg' width="30" height="30">  Видеокамеры</button>
+    <div class="dropdown-divider"></div>
+    <button class='btn  btn-dark btn-block text-left'  onClick="colPan10();" ><img src='css/well.svg' width="30" height="30">  Выбор текущей скважины</button>
+    <!-- <button class='btn  btn-dark btn-block text-left'  onClick="colPan3();" ><img src='css/lupa.svg' width="30" height="30">  Выбор глубины</button>
+    <button class='btn  btn-dark btn-block text-left'  onClick="colPan9();" ><img src='css/form.svg' width="30" height="30">  Загр./Сохр.(Создать) форму</button>
+    <button class='btn btn-dark  btn-block text-left '  onClick="colOK11();"  ><img src='css/lock.svg' width="30" height="30">  Редактирование формы</button> -->
+    <!-- <button class='btn btn-dark  btn-block text-left '  onClick="colOK15();"  ><img src='css/roll.svg' width="30" height="30">  Свернуть/Развернуть шапку</button> -->
+    <div class="dropdown-divider"></div>
+    <button class='btn btn-dark  btn-block text-left '  onClick="exit('exit','exit','exit');"  ><img src='css/exit.svg' width="30" height="30">  Выход из приложения</button>
+    
+  </div>
+  </div>
+</div>
+
 
 
 <!-- <button type="button" class="btn btn-sm text-light "  >
@@ -216,6 +243,7 @@ if (!$_SESSION['auth']) {
     <li><a href="#tabs-1" > <span id="tabsn-1" >     </span></a></li>
     <li><a href="#tabs-2"> <span id="tabsn-2" >     </span></a></li>
     <li><a href="#tabs-3"> <span id="tabsn-3" >     </span></a></li>
+    <li><a href="#tabs-4"> <span id="tabsn-4" >     </span></a></li>
     <!-- <li><a href="#tabs-3"> <span id="tabsn-3" >     </span></a></li>
     <li><a href="#tabs-4"> <span id="tabsn-4" >     </span></a></li> -->
   </ul>
@@ -223,6 +251,8 @@ if (!$_SESSION['auth']) {
   <div id="taabs-2" class="bg-dark" style="display: block;  margin: 0 auto; background-color:black;"></div>
   <!-- <div id="taabs-3" class="bg-dark" style="display: block;  margin: 0 auto; "></div> -->
   <div id="taabs-3"  class="bg-light" style="display: block;  margin: 0 auto; background-color:black; margin: 0; padding: 0;"></div>
+
+  <div id="taabs-4" class="bg-dark" style="display: block;  margin: 0 auto; background-color:black;"></div>
   
   <!-- <div id="tabs-2">
   </div>
