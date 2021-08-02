@@ -1471,6 +1471,11 @@ function colOK8() {
 			formnamedepth = filesss[$("#colitems9")[0].selectedIndex];
 			loadddata(formdirdepth+formnamedepth);
 		}
+		if (curtemp=='karot'){
+			colPan9save(wellName, skv, namecmt, formname, filesss[$("#colitems9")[0].selectedIndex]);
+			formnamedepth = filesss[$("#colitems9")[0].selectedIndex];
+			loadddata(formdirkarot+formnamekarot);
+		}
 
 		repaint();
 	} else {
