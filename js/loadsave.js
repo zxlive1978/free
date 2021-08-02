@@ -141,6 +141,9 @@ function readddir() {
 	if (curtemp == 'depth'){
 		filedir = filedir+'/depth/';
 	}
+	if (curtemp == 'depth'){
+		filedir = filedir+'/karot/';
+	}
 	
 	$.ajax({
 			type: "POST",
