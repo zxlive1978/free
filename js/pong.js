@@ -271,7 +271,7 @@ function read_next(){
 		
 		$.ajax({
 			type: "POST",
-			url: 'js/read_karot.php',
+			url: 'js/read_depth.php',
 			data: {whatdo:'read', table:wellNamedepth ,start_time: start_time, end_time:end_time },
 			cache: false,
 			async: false,
