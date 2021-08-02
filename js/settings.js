@@ -2616,7 +2616,7 @@ function adm6() {
 	$('#skvnamelabt').text(skv);
 	
 	//Ахтунг!
-	// colOK8start(formdirdepth+formnamedepth);
+	colOK8start(formdirkarot+formnamekarot);
 	
 
 }

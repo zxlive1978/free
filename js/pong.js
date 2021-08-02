@@ -54,12 +54,15 @@ var wellNamedepth ="" +"depth_all";
 var wellNamelith ="" +"lith_all";
 //формы
 var formdirdepth ="/depth/";
+var formdirkarot ="/karot/";
 var formname = "Под телефон";
 var formnamedepth = "Под телефон";
+var formnamekarot = "Под телефон";
 
 if (!isMobile){
 	formname="Под планшет(ПК) светлая";
 	formnamedepth = "Под планшет(ПК) светлая";
+	formnamekarot = "Под планшет(ПК) светлая";
 }
 
 //Сохранение и чтение настроей из локального хранилища
