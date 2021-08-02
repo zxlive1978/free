@@ -71,7 +71,7 @@ function readsavestartstorage(){
 if(!window.localStorage.getItem(_uz[0])) {
 	//for(keey in wells){}
 	localStorage.setItem(_uz[0],
-	window.btoa(unescape(encodeURIComponent(wellName+','+skv+','+namecmt+','+formname + ',' + formnamedepth))));
+	window.btoa(unescape(encodeURIComponent(wellName+','+skv+','+namecmt+','+formname + ',' + formnamedepth + ',' + formnamekarot))));
 	/* console.log('нету'); */
 	
 } else {
@@ -92,6 +92,7 @@ if(!window.localStorage.getItem(_uz[0])) {
 		namecmt = arr[2];
 		formname = arr[3];
 		formnamedepth = arr[4];
+		formnamekarot = arr[5];
 		// console.log('есть');
 		}
 	}
