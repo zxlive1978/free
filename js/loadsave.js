@@ -65,10 +65,18 @@ function savedata(name){
 	curscr = JSON.stringify(Object.assign({}, curscr));
 	/* console.log(curscr); */
 	
-	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
-	filedir=_uzdec;
-	filedir = filedir+'/'+ name;
-	console.log(filedir);
+	if (curtemp=='depth'){
+		let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
+		filedir=_uzdec;
+		filedir = '/depth/'+ name;
+		// console.log(filedir);
+	}
+	if (curtemp=='karot'){
+		let _uzdec =decodeURIComponent(escape(window.atob(_uz[5])));
+		filedir=_uzdec;
+		filedir = '/karot/'+ name;
+		// console.log(filedir);
+	}
 	$.ajax({
 			type: "POST",
 			url: 'js/savetoserver.php',
@@ -91,9 +99,18 @@ function savedata(name){
 //Загрузка файла с сервера
 function loadddata(name) {
 	
-	let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
-	var filedir=_uzdec;
-	filedir = filedir+'/'+ name;
+	if (curtemp=='depth'){
+		let _uzdec =decodeURIComponent(escape(window.atob(_uz[4])));
+		filedir=_uzdec;
+		filedir = '/depth/'+ name;
+		// console.log(filedir);
+	}
+	if (curtemp=='karot'){
+		let _uzdec =decodeURIComponent(escape(window.atob(_uz[5])));
+		filedir=_uzdec;
+		filedir = '/karot/'+ name;
+		// console.log(filedir);
+	}
 	//console.log(filedir);
 	$.ajax({
 			type: "GET",
