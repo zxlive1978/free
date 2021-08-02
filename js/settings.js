@@ -1467,12 +1467,12 @@ function colOK8() {
 			loadddata(formname);
 		}
 		if (curtemp=='depth'){
-			colPan9save(wellName, skv, namecmt, formname, filesss[$("#colitems9")[0].selectedIndex]);
+			colPan9save(wellName, skv, namecmt, formname, filesss[$("#colitems9")[0].selectedIndex], formnamedepth, formnamekarot);
 			formnamedepth = filesss[$("#colitems9")[0].selectedIndex];
 			loadddata(formdirdepth+formnamedepth);
 		}
 		if (curtemp=='karot'){
-			colPan9save(wellName, skv, namecmt, formname, filesss[$("#colitems9")[0].selectedIndex]);
+			colPan9save(wellName, skv, namecmt, formname, filesss[$("#colitems9")[0].selectedIndex], formnamedepth, formnamekarot);
 			formnamekarot = filesss[$("#colitems9")[0].selectedIndex];
 			loadddata(formdirkarot+formnamekarot);
 		}
