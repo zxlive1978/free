@@ -1468,12 +1468,12 @@ function colOK8() {
 			loadddata(formname);
 		}
 		if (curtemp=='depth'){
-			colPan9save(wellName, skv, namecmt, formname, filesss[$("#colitems9")[0].selectedIndex], formnamedepth, formnamekarot);
+			colPan9save(wellName, skv, namecmt, formname, filesss[$("#colitems9")[0].selectedIndex], formnamekarot);
 			formnamedepth = filesss[$("#colitems9")[0].selectedIndex];
 			loadddata(formdirdepth+formnamedepth);
 		}
 		if (curtemp=='karot'){
-			colPan9save(wellName, skv, namecmt, formname, filesss[$("#colitems9")[0].selectedIndex], formnamedepth, formnamekarot);
+			colPan9save(wellName, skv, namecmt, formname, formnamedepth,  filesss[$("#colitems9")[0].selectedIndex]);
 			formnamekarot = filesss[$("#colitems9")[0].selectedIndex];
 			loadddata(formdirkarot+formnamekarot);
 		}
@@ -1563,7 +1563,7 @@ function colOK9() {
 		}
 		if (curtemp=='depth'){
 			//Сохранить в локальное хранилище
-			colPan9save(wellName, skv, namecmt, formname, $("#colitems99").val(),formnamedepth, formnamekarot);
+			colPan9save(wellName, skv, namecmt, formname, $("#colitems99").val(), formnamekarot);
 			formnamedepth = String($("#colitems99").val());
 			savedata(formdirdepth+ formnamedepth);
 		
@@ -1571,7 +1571,7 @@ function colOK9() {
 
 		if (curtemp=='karot'){
 			//Сохранить в локальное хранилище
-			colPan9save(wellName, skv, namecmt, formname, $("#colitems99").val(), formnamedepth, formnamekarot);
+			colPan9save(wellName, skv, namecmt, formname,  formnamedepth, $("#colitems99").val());
 			formnamekarot = String($("#colitems99").val());
 			savedata(formdirkarot+formnamekarot);
 		
@@ -1884,7 +1884,7 @@ function colOK10() {
 		//Сменить название в шапке
 		$('#skvnamelabt').text(skv);
 		//Сохранить в локальное хранилище
-		colPan9save(wellName, skv, namecmt, formname, formnamedepth);
+		colPan9save(wellName, skv, namecmt, formname, formnamedepth, formdirkarot);
 		refresh = true;
 		read_next();
 		/* repaint(); */
@@ -1923,7 +1923,7 @@ function colOK10() {
 		//Сменить название в шапке
 		$('#skvnamelabt').text(skv);
 		//Сохранить в локальное хранилище
-		colPan9save(wellName, skv, namecmt, formname, formnamedepth);
+		colPan9save(wellName, skv, namecmt, formname, formnamedepth, formdirkarot);
 		adm4();
 		
 		// read_now();
