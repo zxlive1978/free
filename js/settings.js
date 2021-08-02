@@ -2471,6 +2471,7 @@ function adm4() {
 	$('#dropdownMenu2').hide();
 	$('#dropdownMenu4').hide();
 	$('#dropdownMenu3').show();
+	$('#dropdownMenu5').hide();
 	
 
 	//$('.modal-backdrop').hide();
@@ -2567,62 +2568,56 @@ function adm5() {
 	} 
 	if (cur_svodka!='') {
 	var bigelem = '';//'<div class="container-fluid" style="width:auto; margin: auto;">';
-	// '<div class="container container-fluid vh-100 text-center bg-light"  >';
-
-	// for (var keey in camswell) {
-
-	// 	if (cam == camswell[keey].txt) {
-	// 		namecams = camswell[keey].txt + '_' + camswell[keey].name;
-
-	// 		bigelem = bigelem + '<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 " >' +
-	// 			'<p><div class="thumbnail border border-white  text-light  text-center ">' +
-	// 			//'<img src="css/cam.jpg" class="img-fluid" alt="..."> '+
-	// 			'<div id="iframeembdiv' + camswell[keey].id + '" class="embed-responsive embed-responsive-16by9 border border-white ">' +
-	// 			'<iframe id="iframeemb' + camswell[keey].id + '" class="embed-responsive-item bg-success rounded mx-auto d-block" src="css/cams.svg" allowfullscreen ></iframe>' +
-	// 			'</div>' +
-	// 			'<div class="caption text-center   ">' +
-	// 			'<h6 style="font-weight: bold;" >' + camswell[keey].txt + ' ' + camswell[keey].name + '</h6>' +
-	// 			'<div class="progress m-1" style="height:10px" >' +
-
-	// 			'<div class="progress-bar  progress-bar-info progress-bar-striped progress-bar-animated bg-success" id="progress' + camswell[keey].id + '" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div></div>' +
-	// 			'<button type="button"  class=" m-1 btn btn-outline-light " id="con' + camswell[keey].id + '" >Подключение</button>' +// <button type="button" disabled class="btn btn-success" id="gogogo'+camswell[keey].id+'">Просмотр</button>'+//<a href="#" class="btn btn-default" disabled  id="gogogo'+camswell[keey].id+'" role="button" ">Просмотр</a></p>'+
-	// 			'</div>' +
-	// 			'</div>' +
-	// 			'</div>';
-	// 	}
-	// }
-	// $.ajax({
-	// 	url : "report/542.html",
-	// 	dataType: "html",
-	// 	success : function (data) {
-	// 		// $(".text").html(data);
-	// 		bigelem = bigelem + data+'</div>';
-	// 		$('#taabs-3').html(bigelem);
-	// 	}
-	// });
-	//  style="width:100%;height:90%;"
 	bigelem= bigelem+'<iframe  style="top: 0; left: 0; border: none; margin: 0; padding: 0;box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;" id="svodka" name="svodka" src="https://hydrofalll.ddns.net'+cur_svodka.slice(5)+'" ></iframe>';//+ '</div>';
 	$('#taabs-3').html(bigelem);
 	}
 // import pdfkit
-
 // pdfkit.from_url('http://google.com', 'out.pdf')
 // pdfkit.from_file('test.html', 'out.pdf')
 // pdfkit.from_string('Hello!', 'out.pdf')
-	
-
-
-// bigelem = bigelem + '</div>';
-
-	
-	
-
-	// colOK8start(formdirdepth+formnamedepth);
-	// Сводка
-
 }	
 
 
+
+//вкладка По Глубине
+function adm4() {
+	if (curtemp=='video'){
+		//удаление старых потоков
+		deleteoldcams();
+	}
+	if (curtemp=='time'){
+
+	}
+	//Ахтунг!
+	// readsavestartstorage();
+
+	curtemp = 'karot';
+
+	$("#myModal11").modal('hide');
+	$('#dropdownMenu1').hide();
+	$('#dropdownMenu2').hide();
+	$('#dropdownMenu4').hide();
+	$('#dropdownMenu3').show();
+	
+	$('#tabs').hide();
+	$('#camsf2').remove();
+	$('#taabs-1').empty();
+	$('#taabs-2').empty();
+	$('#taabs-3').empty();
+	$('#taabs-4').empty();
+	
+	$('#drawing').empty();
+	$('#drawing').show();
+	$('#skvnamelab').show();
+	refresh = false; 
+	online = false;
+	$('#skvnamelabt').text(skv);
+	
+	//Ахтунг!
+	// colOK8start(formdirdepth+formnamedepth);
+	
+
+}
 
 
 //старт стоп прием
