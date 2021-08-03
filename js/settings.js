@@ -2555,7 +2555,6 @@ function adm5() {
 	$('#taabs-1').empty();
 	$('#taabs-2').empty();
 	$('#taabs-3').empty();
-	$('#taabs-5').empty();
 	$('#colitems17').empty();
 	//document.getElementById("camsf2").innerHTML="Роторный стол";
 	// $('#tabs').empty();
@@ -2616,7 +2615,7 @@ function adm6() {
 	$('#dropdownMenu2').hide();
 	$('#dropdownMenu3').hide();
 	$('#dropdownMenu4').hide();
-	$('#dropdownMenu5').show();
+	$('#dropdownMenu3').show();
 	
 	$('#tabs').hide();
 	$('#camsf2').remove();
