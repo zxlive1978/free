@@ -2615,7 +2615,7 @@ function adm6() {
 	$('#dropdownMenu2').hide();
 	$('#dropdownMenu3').hide();
 	$('#dropdownMenu4').hide();
-	$('#dropdownMenu3').show();
+	$('#dropdownMenu5').show();
 	
 	$('#tabs').hide();
 	$('#camsf2').remove();
