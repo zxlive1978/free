@@ -2616,14 +2616,14 @@ function adm6() {
 	$('#dropdownMenu2').hide();
 	$('#dropdownMenu3').hide();
 	$('#dropdownMenu4').hide();
-	$('#dropdownMenu5').hide();
+	$('#dropdownMenu5').show();
 	
 	$('#tabs').hide();
 	$('#camsf2').remove();
 	$('#taabs-1').empty();
 	$('#taabs-2').empty();
 	$('#taabs-3').empty();
-	$('#taabs-4').show();
+	$('#taabs-4').empty();
 	
 	$('#drawing').empty();
 	$('#drawing').show();
