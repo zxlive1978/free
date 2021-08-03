@@ -201,6 +201,7 @@ if (!$_SESSION['auth']) {
   </div>
   </div>
 
+  <div class="dropdown">
 <!-- Каротажи -->
   <button class='btn   bg-secondary'  id='dropdownMenu5'  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-placement="bottom" title="Основное меню" style=" display:none; padding-top:3; padding-bottom:3;" ><img src='css/burg.svg'  width="27" height="27"></button>
 <div class="dropdown-menu dropdown-menu-left bg-dark" aria-labelledby="dropdownMenu5" style=" width: 300px !important;">
