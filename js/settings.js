@@ -2449,7 +2449,7 @@ function adm3() {
 	$('#taabs-2').empty();
 	$('#taabs-3').empty();
 	$('#taabs-4').empty();
-	$('#taabs-5').empty();
+	
 	//document.getElementById("camsf2").innerHTML="Роторный стол";
 	// $('#tabs').empty();
 	// $('#tabs').hide();
@@ -2504,7 +2504,7 @@ function adm4() {
 	$('#taabs-1').empty();
 	$('#taabs-2').empty();
 	$('#taabs-3').empty();
-	$('#taabs-5').empty();
+	$('#taabs-4').empty();
 	//document.getElementById("camsf2").innerHTML="Роторный стол";
 	// $('#tabs').empty();
 	// $('#tabs').hide();
@@ -2616,14 +2616,14 @@ function adm6() {
 	$('#dropdownMenu2').hide();
 	$('#dropdownMenu3').hide();
 	$('#dropdownMenu4').hide();
-	$('#dropdownMenu5').show();
+	$('#dropdownMenu5').hide();
 	
 	$('#tabs').hide();
 	$('#camsf2').remove();
 	$('#taabs-1').empty();
 	$('#taabs-2').empty();
 	$('#taabs-3').empty();
-	$('#taabs-4').empty();
+	$('#taabs-4').show();
 	
 	$('#drawing').empty();
 	$('#drawing').show();
