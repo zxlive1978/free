@@ -2112,8 +2112,6 @@ for (var key in geoOknOPar) {
 		for (let j = 0; j < comment.length; j++) {
 			var ncolcmt = colmn11_x0 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8;
 			var left = comment[j]["left_txt"];
-
-			w1 * Columns["col0"].size.w
 			if (left <= 50) { ncolcmt =  w1 * Columns["col0"].size.w + w1 * Columns["col1"].size.w/2.0;}
 			if (left > 50) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 1 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
 			if (left > 100) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 2 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
