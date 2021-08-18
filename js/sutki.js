@@ -2112,12 +2112,14 @@ for (var key in geoOknOPar) {
 		for (let j = 0; j < comment.length; j++) {
 			var ncolcmt = colmn11_x0 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8;
 			var left = comment[j]["left_txt"];
-			
+
+			w1 * Columns["col0"].size.w
+			if (left <= 50) { ncolcmt =  w1 * Columns["col0"].size.w + w1 * weight_colmn1/2.0;}
 			if (left > 50) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 1 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
 			if (left > 100) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 2 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
 			if (left > 140) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 3 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
 			//если отступ меньше начала колонки
-			if (ncolcmt < w1 * weight_colmn1) { ncolcmt = w1 * weight_colmn1; };
+			if (ncolcmt < w1 * weight_colmn1) { w1 * Columns["col0"].size.w + w1 * weight_colmn1/2.0; };
 			//если мобильный, то по середине
 			if(isMobile){ncolcmt =50*w1;}
 			var cury = colmn11_y0 + (comment[j]["Vrema"] - start_time) * cur_value_y_step;
