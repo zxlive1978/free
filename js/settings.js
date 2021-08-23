@@ -1800,16 +1800,16 @@ function colPan10(name_select) {
 			wellSelectName = $("#svodkaoN option:selected").text();
 			
 			$('#colitems17').empty();
-			for (var cur in files_svodka) {
+			for (var cur in files_svodka.reverse()) {
 				//  console.log(cur);
 				if (files_svodka[cur].search(wellSelectName) != -1){
 				str=files_svodka[cur];
 				if (files_svodka[cur].indexOf('png')!=-1){
 				str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
-				str2=str2.slice(0,str2.lastIndexOf('АГКМ'));
+				str2=str2.slice(0,str2.lastIndexOf(wellSelectName));
 				} else{
 				str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
-				str2=str2.slice(0,str2.lastIndexOf('АГКМ'));
+				str2=str2.slice(0,str2.lastIndexOf(wellSelectName));
 				}
 				$('#colitems17').append($('<option>',
 					{
@@ -1823,16 +1823,16 @@ function colPan10(name_select) {
 			
 		});
 		$('#colitems17').empty();
-		for (var cur in files_svodka) {
+		for (var cur in files_svodka.reverse()) {
 			// console.log(cur);
 			if (files_svodka[cur].search(skv) != -1){
 			str=files_svodka[cur];
 			if (files_svodka[cur].indexOf('png')!=-1){
 				str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
-				str2=str2.slice(0,str2.lastIndexOf('АГКМ'));
+				str2=str2.slice(0,str2.lastIndexOf(wellSelectName));
 				} else{
 				str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
-				str2=str2.slice(0,str2.lastIndexOf('АГКМ'));
+				str2=str2.slice(0,str2.lastIndexOf(wellSelectName));
 				}
 			//console.log(str);
 			$('#colitems17').append($('<option>',
