@@ -1763,6 +1763,8 @@ function colPan10(name_select) {
 			}
 
 		}
+		wellSelectBase = $("#videoN").prop('value');
+		wellSelectName = $("#videoN option:selected").text();
 		$('#videoN').on('change', function () {
 			wellSelectBase = $("#videoN").prop('value');
 			wellSelectName = $("#videoN option:selected").text();
