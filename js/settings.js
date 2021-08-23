@@ -1791,7 +1791,7 @@ function colPan10(name_select) {
 
 
 		if ((Object.keys(files_svodka).length > 0)) {
-			files_svodka.reverse();
+			
 
 
 		}
