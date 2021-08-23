@@ -1791,6 +1791,7 @@ function colPan10(name_select) {
 
 
 		if ((Object.keys(files_svodka).length > 0)) {
+			files_svodka.reverse();
 
 
 		}
@@ -1800,7 +1801,7 @@ function colPan10(name_select) {
 			wellSelectName = $("#svodkaoN option:selected").text();
 			
 			$('#colitems17').empty();
-			for (var cur in files_svodka.reverse()) {
+			for (var cur in files_svodka) {
 				//  console.log(cur);
 				if (files_svodka[cur].search(wellSelectName) != -1){
 				str=files_svodka[cur];
@@ -1823,7 +1824,7 @@ function colPan10(name_select) {
 			
 		});
 		$('#colitems17').empty();
-		for (var cur in files_svodka.reverse()) {
+		for (var cur in files_svodka) {
 			// console.log(cur);
 			if (files_svodka[cur].search(skv) != -1){
 			str=files_svodka[cur];
