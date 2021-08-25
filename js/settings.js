@@ -1792,6 +1792,7 @@ function colPan10(name_select) {
 
 		if ((Object.keys(files_svodka).length > 0)) {
 			
+			
 
 
 		}
@@ -1824,7 +1825,9 @@ function colPan10(name_select) {
 			
 		});
 		$('#colitems17').empty();
-		for (var cur in files_svodka) {
+		for (var cur in files_svodka.sort(function sortEggsInNest(a, b) {
+			return a > b ? -1 : b > a ? 1 : 0;
+			})) {
 			// console.log(cur);
 			if (files_svodka[cur].search(skv) != -1){
 			str=files_svodka[cur];
