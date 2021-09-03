@@ -1861,16 +1861,16 @@ function colPan10(name_select) {
 
 
 	if (curtemp == 'karot') {
-		$('#svodkaoN').empty();
+		$('#karotoN').empty();
 		for (var keey in wells) {
-			$('#svodkaoN').append($('<option>',
+			$('#karotoN').append($('<option>',
 				{
 					value: wells[keey].wellN,
 					text: wells[keey].txt
 				}));
 		}
 		//Восстановление выбора
-		$('#svodkaoN').val(wellName);
+		$('#karotoN').val(wellName);
 		wellSelectBase=wellName
 		wellSelectName=skv
 
