@@ -1875,11 +1875,11 @@ function colPan10(name_select) {
 		wellSelectName=skv
 
 
-		$('#svodkaoN').on('change', function () {
-			wellSelectBase = $("#svodkaoN").prop('value');
-			wellSelectName = $("#svodkaoN option:selected").text();
+		// $('#svodkaoN').on('change', function () {
+		// 	wellSelectBase = $("#svodkaoN").prop('value');
+		// 	wellSelectName = $("#svodkaoN option:selected").text();
 			
-			$('#colitems19').empty();
+		// 	$('#colitems19').empty();
 			// for (var cur in bd_karot) {
 				// //  console.log(cur);
 				// if (files_svodka[cur].search(wellSelectName) != -1){
