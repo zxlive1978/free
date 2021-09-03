@@ -883,7 +883,35 @@ window.onload = getStart;
         <label for="hcolcolor">Название скважины:</label><select class="form-control input-lg bg-dark text-light" name="svodkaoN" id="svodkaoN"  size="1" ></select>
         <br>
         <label class="control-label" for="hcolcolor">Каталог документов:   </label><select class="form-control input-lg bg-dark text-light" name="colitems17" id="colitems17"  size="5" ></select>
-        <label class="control-label" for="hcolcolor">Имя документа:      </label><input class="form-control input-lg bg-dark text-light" type="text" id="colitems18" name="colitems19" value=""/>
+        <label class="control-label" for="hcolcolor">Имя документа:      </label><input class="form-control input-lg bg-dark text-light" type="text" id="colitems18" name="colitems18" value=""/>
+      </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+			<button type="button" class="btn btn-success" data-dismiss="modal" onclick='colOK10()'>Загрузить</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Закрыть</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="myModal22">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Выбор скважины</h4>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+   
+         <!-- Modal body -->
+          <div class="modal-body">
+        <label for="hcolcolor">Название скважины:</label><select class="form-control input-lg bg-dark text-light" name="svodkaoN" id="svodkaoN"  size="1" ></select>
+        <br>
+        <label class="control-label" for="hcolcolor">Каталог каротажей:   </label><select class="form-control input-lg bg-dark text-light" name="colitems19" id="colitems19"  size="5" ></select>
+        <label class="control-label" for="hcolcolor">Имя каротажа:      </label><input class="form-control input-lg bg-dark text-light" type="text" id="colitems20" name="colitems20" value=""/>
       </div>
         <!-- Modal footer -->
         <div class="modal-footer">

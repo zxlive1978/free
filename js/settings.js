@@ -1859,6 +1859,84 @@ function colPan10(name_select) {
 		$("#myModal21").modal('show');
 	}
 
+
+	if (curtemp == 'karot') {
+		$('#svodkaoN').empty();
+		for (var keey in wells) {
+			$('#svodkaoN').append($('<option>',
+				{
+					value: wells[keey].wellN,
+					text: wells[keey].txt
+				}));
+		}
+		//Восстановление выбора
+		$('#svodkaoN').val(wellName);
+		wellSelectBase=wellName
+		wellSelectName=skv
+
+
+		$('#svodkaoN').on('change', function () {
+			wellSelectBase = $("#svodkaoN").prop('value');
+			wellSelectName = $("#svodkaoN option:selected").text();
+			
+			$('#colitems18').empty();
+			for (var cur in files_svodka) {
+				// //  console.log(cur);
+				// if (files_svodka[cur].search(wellSelectName) != -1){
+				// str=files_svodka[cur];
+				// if (files_svodka[cur].indexOf('png')!=-1){
+				// str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
+				// str2=str2.slice(0,str2.lastIndexOf(wellSelectName));
+				// } else{
+				// str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
+				// str2=str2.slice(0,str2.lastIndexOf(wellSelectName));
+				// }
+				// $('#colitems17').append($('<option>',
+				// 	{
+				// 		value: str,
+				// 		text: str2
+				// 	}));
+		
+				// }
+		}});
+		
+		$('#colitems17').empty();
+		for (var cur in files_svodka.sort(function sortEggsInNest(a, b) {
+			return a > b ? -1 : b > a ? 1 : 0;
+			})) {
+			// console.log(cur);
+			if (files_svodka[cur].search(skv) != -1){
+			str=files_svodka[cur];
+			if (files_svodka[cur].indexOf('png')!=-1){
+				str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
+				str2=str2.slice(0,str2.lastIndexOf(wellSelectName));
+				} else{
+				str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
+				str2=str2.slice(0,str2.lastIndexOf(wellSelectName));
+				}
+			//console.log(str);
+			$('#colitems17').append($('<option>',
+				{
+					value: str,
+					text: str2
+				}));
+	
+			}
+		}
+			//`Выбор файла для перезаписи
+		$("#colitems17").change(function () {
+			let selind = document.getElementById("colitems17").options.selectedIndex;
+			$("#colitems18").empty();
+			$("#colitems18").val(document.getElementById("colitems17").options[selind].text);
+			// $("#colitems18").val($('#colitems17').text());
+			cur_svodka=$('#colitems17').val();
+			//  console.log(cur_svodka);
+		});
+
+		$("#myModal22").modal('show');
+
+	}
+
 }
 
 
