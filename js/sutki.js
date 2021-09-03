@@ -2440,9 +2440,10 @@ if (curtemp=="depth" || curtemp=="karot"){
 			var ncolcmt = colmn11_x0 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8;
 			var left = Number(comment[j]["left_txt"]);
 			
-			if (left > 30) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 1 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
-			if (left > 40) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 2 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
-			if (left > 50) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 3 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
+			if (left > 0) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 1 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
+			if (left > 30) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 2 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
+			if (left > 40) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 3 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
+			if (left > 50) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 4 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
 			//если отступ меньше начала колонки
 			if (ncolcmt < w1 * weight_colmn1) { ncolcmt = w1 * weight_colmn1; };
 			//если мобильный, то по середине
