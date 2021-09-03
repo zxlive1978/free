@@ -1879,8 +1879,8 @@ function colPan10(name_select) {
 			wellSelectBase = $("#svodkaoN").prop('value');
 			wellSelectName = $("#svodkaoN option:selected").text();
 			
-			$('#colitems18').empty();
-			for (var cur in files_svodka) {
+			$('#colitems19').empty();
+			// for (var cur in bd_karot) {
 				// //  console.log(cur);
 				// if (files_svodka[cur].search(wellSelectName) != -1){
 				// str=files_svodka[cur];
@@ -1898,9 +1898,9 @@ function colPan10(name_select) {
 				// 	}));
 		
 				// }
-		}});
-		
-		$('#colitems17').empty();
+		// }});
+
+		$('#colitems19').empty();
 		for (var cur in files_svodka.sort(function sortEggsInNest(a, b) {
 			return a > b ? -1 : b > a ? 1 : 0;
 			})) {
@@ -1915,7 +1915,7 @@ function colPan10(name_select) {
 				str2=str2.slice(0,str2.lastIndexOf(wellSelectName));
 				}
 			//console.log(str);
-			$('#colitems17').append($('<option>',
+			$('#colitems20').append($('<option>',
 				{
 					value: str,
 					text: str2
@@ -1924,12 +1924,12 @@ function colPan10(name_select) {
 			}
 		}
 			//`Выбор файла для перезаписи
-		$("#colitems17").change(function () {
-			let selind = document.getElementById("colitems17").options.selectedIndex;
-			$("#colitems18").empty();
-			$("#colitems18").val(document.getElementById("colitems17").options[selind].text);
+		$("#colitems19").change(function () {
+			let selind = document.getElementById("colitems19").options.selectedIndex;
+			$("#colitems20").empty();
+			$("#colitems20").val(document.getElementById("colitems19").options[selind].text);
 			// $("#colitems18").val($('#colitems17').text());
-			cur_svodka=$('#colitems17').val();
+			cur_svodka=$('#colitems19').val();
 			//  console.log(cur_svodka);
 		});
 
