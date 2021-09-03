@@ -2439,6 +2439,7 @@ if (curtemp=="depth" || curtemp=="karot"){
 		for (let j = 0; j < comment.length; j++) {
 			var ncolcmt = colmn11_x0 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8;
 			var left = Number(comment[j]["left_txt"]);
+			console.log(left);
 			
 			if (left > 0) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 1 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
 			if (left > 30) { ncolcmt = (w1 * 100 - w1 * Columns["col0"].size.w) / 4 * 2 + (w1 * 100 - w1 * Columns["col0"].size.w) / 8 + w1 * Columns["col0"].size.w; }
