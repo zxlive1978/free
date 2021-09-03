@@ -1901,28 +1901,28 @@ function colPan10(name_select) {
 		// }});
 
 		$('#colitems19').empty();
-		for (var cur in files_svodka.sort(function sortEggsInNest(a, b) {
-			return a > b ? -1 : b > a ? 1 : 0;
-			})) {
-			// console.log(cur);
-			if (files_svodka[cur].search(skv) != -1){
-			str=files_svodka[cur];
-			if (files_svodka[cur].indexOf('png')!=-1){
-				str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
-				str2=str2.slice(0,str2.lastIndexOf(wellSelectName));
-				} else{
-				str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
-				str2=str2.slice(0,str2.lastIndexOf(wellSelectName));
-				}
-			//console.log(str);
-			$('#colitems20').append($('<option>',
-				{
-					value: str,
-					text: str2
-				}));
+		// for (var cur in files_svodka.sort(function sortEggsInNest(a, b) {
+		// 	return a > b ? -1 : b > a ? 1 : 0;
+		// 	})) {
+			
+		// 	if (files_svodka[cur].search(skv) != -1){
+		// 	str=files_svodka[cur];
+		// 	if (files_svodka[cur].indexOf('png')!=-1){
+		// 		str2='Диаграмма '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
+		// 		str2=str2.slice(0,str2.lastIndexOf(wellSelectName));
+		// 		} else{
+		// 		str2='Сводка '+files_svodka[cur].slice(files_svodka[cur].indexOf(base_path)+base_path.length);
+		// 		str2=str2.slice(0,str2.lastIndexOf(wellSelectName));
+		// 		}
+			
+		// 	$('#colitems20').append($('<option>',
+		// 		{
+		// 			value: str,
+		// 			text: str2
+		// 		}));
 	
-			}
-		}
+		// 	}
+		// }
 			//`Выбор файла для перезаписи
 		$("#colitems19").change(function () {
 			let selind = document.getElementById("colitems19").options.selectedIndex;
