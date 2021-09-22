@@ -235,7 +235,7 @@ if (!$_SESSION['auth']) {
   <span id="skvnamelab" style="font-weight: bold; font-size: 22px;" onClick="colPan10()" >Скважина</span>
 </button> -->
 <div class="text-center">
-<button type="button"  id="skvnamelab"  data-toggle="tooltip" data-placement="bottom" title="Выбор текущей скважины" class="btn  bg-secondary" style="font-weight: bold; padding-top:0; padding-bottom:0; font-size: 22px;" onClick="colPan10();"><img src='css/well.svg' width="30" height="30" style="font-weight: bold; padding-top:0; padding-bottom:3px; font-size: 22px;"><a id="skvnamelabt" style="color:white;">Скважина ?</a></button>
+<button type="button"  id="skvnamelab"  data-toggle="tooltip" data-placement="bottom" title="Выбор текущей скважины" class="btn  bg-secondary" style="font-weight: bold; padding-top:0; padding-bottom:0; font-size: 22px;" onClick="colPan10();"><img src='css/well.svg' width="30" height="30" style="font-weight: bold; padding-top:0; padding-bottom:3px; font-size: 22px;"><a id="skvnamelabt" style="color:white;">Выберите скважину</a></button>
 </div>
 <div class="text-right">
 <!-- <a class='btn ' data-toggle="tooltip" data-placement="bottom" title="Выход из приложения" style=" padding-top:3; padding-bottom:3; font-size: 18px;" onClick="exit('exit','exit','exit');"><img src='css/exit.svg'  width="27" height="27"></a> -->
