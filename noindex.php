@@ -275,18 +275,7 @@ function getStart() {
   $('#dropdownMenu2').hide();
       //alert('ok');
 	  pongpong();
-	 /*  $("#wells").iziModal();
-	  //$("#modal").iziModal();
-	  $("#kalendar").iziModal();
-	  $("#lupa").iziModal();
-	  $("#lupa").iziModal();
-	  $("#addgraf").iziModal();
-	  $("#nastrstolb").iziModal();
-	  $("#nastrgraf").iziModal();
-	  $("#nastrtxtpar").iziModal();
-	  $("#nastrtxtlabel").iziModal();
-	  $("#openfile").iziModal();
-    $("#savefile").iziModal(); */
+	 
     window.onresize = function(event) {
     repaint();
     //console.log('ресайз');
