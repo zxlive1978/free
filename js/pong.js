@@ -392,10 +392,46 @@ function read_next(){
 						start_time = null;
 						//Если нет данных сейчас по времени
 
-						
-						console.log(d110d.length);
+
+						// console.log(d110d.length);
 						if (d110d.length==0){
 							console.log(d110d.length);
+							$.ajax({
+								type: "POST",
+								url: 'js/read_depth.php',
+								data: {whatdo:'readlasttime', table:wellName ,start_time: start_time, end_time:end_time },
+								cache: false,
+								async: false,
+								success: function(data){
+									
+									try {
+										d110d = null;
+										d110d = JSON.parse(data);
+										/* d110d = eval(data); */
+										// data = null;
+										//numbs110d = null;
+										var numbs110d = null;
+										numbs110d = d110d.length;
+										var back_start_time = null;
+										back_start_time = start_time;
+										back_end_time = null;
+										back_end_time = end_time;
+										
+										
+										
+										
+										repaint();
+										
+										
+					
+					
+										
+									}
+									catch (e) { }
+									
+									
+								}
+							});
 						}
 
 						start_time = Number(d110d[0]["Vrema"]);
