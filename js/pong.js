@@ -396,7 +396,10 @@ function read_next(){
 						// console.log(d110d.length);
 						if (d110d.length==0){
 							console.log(wellName);
+							start_time=0;
+							end_time=0;
 							console.log(start_time);
+
 							console.log(end_time);
 							$.ajax({
 								type: "POST",
