@@ -85,7 +85,7 @@
 		echo json_encode($comment);}
 
 	//read last time
-	if ( $whatdo == 'read_last'){
+	if ( $whatdo == 'read_last_time'){
 		$x_id='Vrema'
 		$query="SELECT * FROM ".$name_base.".".$table." WHERE ".$x_id.">".(int)$start_time." AND ".$x_id."< SELECT MAX('Vrema') FROM ".$name_base.";";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
