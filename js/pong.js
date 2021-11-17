@@ -404,7 +404,7 @@ function read_next(){
 							$.ajax({
 								type: "POST",
 								url: 'js/read_depth.php',
-								data: {whatdo:'read_last_time', table:wellName ,start_time: start_time, end_time:end_time },
+								data: {whatdo:'read_last_time', table:wellName , start_time: start_time, end_time:end_time },
 								cache: false,
 								async: false,
 								success: function(data){
