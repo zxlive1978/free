@@ -392,7 +392,7 @@ function read_next(){
 						start_time = null;
 						//Если нет данных сейчас по времени
 						if (d110d.length==0){
-							console.log('нет текущих данных')ж
+							console.log('нет текущих данных');
 						}
 
 						start_time = Number(d110d[0]["Vrema"]);
