@@ -141,7 +141,7 @@ function read_next(){
 				end_time = null;
 				end_time = d110d[d110d.length-1]["Vrema"];
 				
-				console.log(d110d.length);
+				// console.log(d110d.length);
 				/* console.log(d110d); */
 			
 				//А ЭТО АХУЕННО ИНТЕРЕСНО!
