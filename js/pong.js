@@ -395,7 +395,7 @@ function read_next(){
 
 						// console.log(d110d.length);
 						if (d110d.length==0){
-							console.log(d110d.length);
+							console.log(wellName);
 							$.ajax({
 								type: "POST",
 								url: 'js/read_depth.php',
