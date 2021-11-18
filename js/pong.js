@@ -424,10 +424,9 @@ function read_next(){
 							
 							try {
 								d110d = null;
-								d110d = JSON.parse(data);
-								/* d110d = eval(data); */
-								// data = null;
-								//numbs110d = null;
+								// d110d = JSON.parse(data);
+								console.log(data);
+							
 								var numbs110d = null;
 								numbs110d = d110d.length;
 								var back_start_time = null;

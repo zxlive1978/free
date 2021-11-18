@@ -112,7 +112,7 @@
 		
 		// echo json_encode($comment);
 		// $query="SUCK"
-		// echo $query;
+		echo ("SUCK");
 	}
 
 	
