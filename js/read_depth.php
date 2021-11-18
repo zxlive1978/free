@@ -86,10 +86,10 @@
 
 	//read last time
 	if ( $whatdo == 'read_last_time'){
-		$x_id="Vrema"
-		$query="SELECT * FROM ".$name_base.".".$table." WHERE ".$x_id.">".(int)$start_time." AND ".$x_id."< SELECT MAX('Vrema') FROM ".$name_base.";";
-		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
-		$comment = array();
+		// $x_id="Vrema"
+		// $query="SELECT * FROM ".$name_base.".".$table." WHERE ".$x_id.">".(int)$start_time." AND ".$x_id."< SELECT MAX('Vrema') FROM ".$name_base.";";
+		// $result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+		// $comment = array();
 		// while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
 		// 	//echo $row[$x_id]." - ".$row[$y_id]."<br />";
 		// 	// $cur_rec= array('p000'=>'par'.$row['id'], 'skvjson'=> $row['skvjson']);
@@ -111,7 +111,8 @@
 		// mysqli_free_result($result);
 		
 		// echo json_encode($comment);
-		echo $query;
+		// $query="SUCK"
+		// echo $query;
 	}
 
 	
