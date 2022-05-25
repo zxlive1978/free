@@ -417,6 +417,7 @@ function read_next(){
 										console.log(data);
 
 										// start_time=JSON.parse(data);
+										
 										// read_random();										
 										
 									}
