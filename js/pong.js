@@ -408,7 +408,7 @@ function read_next(){
 								cache: false,
 								async: false,
 								success: function(data){
-									clearTimeout (timer);
+								
 									
 									try {
 										d110d = null;
@@ -420,9 +420,7 @@ function read_next(){
 										// read_random();										
 										
 									}
-									catch (e) { 
-										clearTimeout (timer);
-										console.log(e);}
+									catch (e) { console.log(e);}
 								}
 							});
 
