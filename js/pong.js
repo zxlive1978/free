@@ -396,13 +396,33 @@ function read_next(){
 						// console.log(d110d.length);
 						if (d110d.length==0){
 							console.log(wellName);
-							start_time=0;
-							end_time=0;
-							console.log(start_time);
 
-							console.log(end_time);
-							
-							
+							online = false;
+							refresh=false;
+							clearTimeout (timer);
+
+							$.ajax({
+								type: "POST",
+								url: 'js/read_depth.php',
+								data: {whatdo:'read_last_time', table:wellName , start_time: start_time, end_time:end_time },
+								cache: false,
+								async: false,
+								success: function(data){
+									
+									try {
+										d110d = null;
+										// d110d = JSON.parse(data);
+
+										console.log(data);
+
+										start_time=JSON.parse(data);
+										read_random();										
+										
+									}
+									catch (e) { console.log(e);}
+								}
+							});
+
 						}
 
 						start_time = Number(d110d[0]["Vrema"]);
@@ -414,43 +434,7 @@ function read_next(){
 						back_end_time = null;
 						back_end_time = end_time;}
 					catch (e) { }
-					// $.ajax({
-					// 	type: "POST",
-					// 	url: 'js/read_depth.php',
-					// 	data: {whatdo:'read_last_time', table:wellName , start_time: start_time, end_time:end_time },
-					// 	cache: false,
-					// 	async: false,
-					// 	success: function(data){
-							
-					// 		try {
-					// 			d110d = null;
-					// 			// d110d = JSON.parse(data);
-					// 			console.log(data);
-							
-					// 			var numbs110d = null;
-					// 			numbs110d = d110d.length;
-					// 			var back_start_time = null;
-					// 			back_start_time = start_time;
-					// 			back_end_time = null;
-					// 			back_end_time = end_time;
-								
-								
-								
-								
-					// 			repaint();
-								
-								
-			
-			
-								
-					// 		}
-					// 		catch (e) { console.log(e);}
-							
-							
-					// 	}
-						
-					// });
-
+					
 					online = false;
 					refresh=false;
 			}
