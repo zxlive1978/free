@@ -414,37 +414,37 @@ function read_next(){
 						back_end_time = null;
 						back_end_time = end_time;}
 					catch (e) { }
-					$.ajax({
-						type: "POST",
-						url: 'js/read_depth.php',
-						data: {whatdo:'read_last_time', table:wellName , start_time: start_time, end_time:end_time },
-						cache: false,
-						async: false,
-						success: function(data){
+					// $.ajax({
+					// 	type: "POST",
+					// 	url: 'js/read_depth.php',
+					// 	data: {whatdo:'read_last_time', table:wellName , start_time: start_time, end_time:end_time },
+					// 	cache: false,
+					// 	async: false,
+					// 	success: function(data){
 							
-							try {
-								d110d = null;
-								// d110d = JSON.parse(data);
-								console.log(data);
+					// 		try {
+					// 			d110d = null;
+					// 			// d110d = JSON.parse(data);
+					// 			console.log(data);
 							
-								var numbs110d = null;
-								numbs110d = d110d.length;
-								var back_start_time = null;
-								back_start_time = start_time;
-								back_end_time = null;
-								back_end_time = end_time;
+					// 			var numbs110d = null;
+					// 			numbs110d = d110d.length;
+					// 			var back_start_time = null;
+					// 			back_start_time = start_time;
+					// 			back_end_time = null;
+					// 			back_end_time = end_time;
 								
 								
 								
 								
-								repaint();
+					// 			repaint();
 								
 								
 			
 			
 								
-							}
-							catch (e) { console.log(e);}
+					// 		}
+					// 		catch (e) { console.log(e);}
 							
 							
 						}
