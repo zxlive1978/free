@@ -447,9 +447,9 @@ function read_next(){
 					// 		catch (e) { console.log(e);}
 							
 							
-						}
+					// 	}
 						
-					});
+					// });
 
 					online = false;
 					refresh=false;
