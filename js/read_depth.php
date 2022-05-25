@@ -87,13 +87,21 @@
 	//read last time
 	if ( $whatdo == 'read_last_time'){
 		// $x_id="Vrema"
-		$query="SELECT 'Vrema' FROM ".$name_base.".".$table." WHERE  SELECT MAX('Vrema') FROM ".$name_base.";";
-		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
-		// $comment = array();
+		$query="SELECT MAX('Vrema') AS max FROM pozitron.s909 ;";
+		// $result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+
+		$rowSQL = mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
+		$row = mysqli_fetch_array($rowSQL);
+		// list($max) = mysqli_fetch_array($rowSQL,MYSQLI_ASSOC);
+		// // $largestNumber = $row['max'];
+		// // $comment = array();
 		// while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
-		// 	//echo $row[$x_id]." - ".$row[$y_id]."<br />";
-		// 	// $cur_rec= array('p000'=>'par'.$row['id'], 'skvjson'=> $row['skvjson']);
-		// 	//$cur_rec['Wkp'] = $row['Wkp'];
+		// 	$cur_rec= array('p000'=>'par'.$row['id'], 'skvjson'=> $row['skvjson']);
+
+		// }
+			//echo $row[$x_id]." - ".$row[$y_id]."<br />";
+			// $cur_rec= array('p000'=>'par'.$row['id'], 'skvjson'=> $row['skvjson']);
+			//$cur_rec['Wkp'] = $row['Wkp'];
 
 		// 	$cur_rec= array('Vrema' => $row['Vrema'],'Wkp' => $row['Wkp'],'Wdol' => $row['Wdol'],'Mpot' => $row['Mpot'],
 		// 	'Npot' => $row['Npot'],'Pbx' => $row['Pbx'],'Qbx' => $row['Qbx'],'Talblok' => $row['Talblok'],
@@ -110,7 +118,7 @@
 		// 	}
 		// mysqli_free_result($result);
 		
-		echo json_encode($result);
+		echo $row;
 		// $query="SUCK"
 		
 	}
