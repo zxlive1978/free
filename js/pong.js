@@ -408,6 +408,7 @@ function read_next(){
 								cache: false,
 								async: false,
 								success: function(data){
+									clearTimeout (timer);
 									
 									try {
 										d110d = null;
@@ -424,6 +425,8 @@ function read_next(){
 										console.log(e);}
 								}
 							});
+
+							break;
 
 						}
 
