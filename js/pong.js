@@ -417,7 +417,7 @@ function read_next(){
 										console.log(data);
 
 										// start_time=JSON.parse(data);
-										read_random();										
+										// read_random();										
 										
 									}
 									catch (e) { 
@@ -426,7 +426,7 @@ function read_next(){
 								}
 							});
 
-							break;
+							return;
 
 						}
 
