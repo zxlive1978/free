@@ -118,7 +118,7 @@
 		// 	}
 		// mysqli_free_result($result);
 		
-		echo $row;
+		echo json_encode( $row);
 		// $query="SUCK"
 		
 	}
