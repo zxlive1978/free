@@ -415,7 +415,7 @@ function read_next(){
 
 										console.log(data);
 
-										start_time=JSON.parse(data);
+										// start_time=JSON.parse(data);
 										read_random();										
 										
 									}
@@ -443,11 +443,11 @@ function read_next(){
 				
 				repaint();
 				refresh=true;
-				timer=setTimeout(function(){read_next();}, 3000);
+				var timer=setTimeout(function(){read_next();}, 3000);
 			},
 			error: function(){
 			refresh=true;
-			timer=setTimeout(function(){read_next();}, 3000);
+			var timer=setTimeout(function(){read_next();}, 3000);
 		}
 		});
 	
