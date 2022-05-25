@@ -419,7 +419,9 @@ function read_next(){
 										read_random();										
 										
 									}
-									catch (e) { console.log(e);}
+									catch (e) { 
+										clearTimeout (timer);
+										console.log(e);}
 								}
 							});
 
