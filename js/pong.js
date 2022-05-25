@@ -495,10 +495,7 @@ function pongpong() {
 	
 }
 
-/* (function doStuff() {
-  // Do stuff
-   setTimeout(doStuff, 1000);
-}()); */
+
 
 //Чтение произвольного куска
 function read_random(){
