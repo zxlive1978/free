@@ -382,7 +382,7 @@ function gogocams() {
 
 
 
-    frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=" + livestatcams[curkey].streamId);
+    frame.setAttribute("SRC", "//monitoring.agg.gazpromnedra.ru:5443/LiveApp/play.html?name=" + livestatcams[curkey].streamId);
 
     var newDiv = document.createElement("div");
     newDiv.innerHTML = "<h1>Привет!</h1>";
@@ -545,7 +545,7 @@ function gocams() {
 
     frame.setAttribute("auto_orient", "true");
     frame.setAttribute("scaling", "fit");
-    frame.setAttribute("SRC", "//hydrofalll.ddns.net:5443/LiveApp/play.html?name=" + livestatcams[curkey].streamId);
+    frame.setAttribute("SRC", "//monitoring.agg.gazpromnedra.ru:5443/LiveApp/play.html?name=" + livestatcams[curkey].streamId);
 
 
     $('#tabvideo').append(frame);

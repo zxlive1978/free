@@ -61,7 +61,7 @@ var bigPar = {
 	par0: { par: 'Wkp', txt: 'Вес на крюке', min: 0, max: 270, color: '#ff0066', poz: { x: 1, y: 2 }, unit: 'т', log: false },
 	par1: { par: 'Wdol', txt: 'Нагрузка на дол.', min: 0, max: 70, color: '#006eea', poz: { x: 1, y: 3 }, unit: 'т', log: false },
 	par2: { par: 'Npot', txt: 'Обороты ротора', min: 0, max: 200, color: '#a92ab8', poz: { x: 1, y: 4 }, unit: '1/мин', log: false },
-	par3: { par: 'Mpot', txt: 'Момент на роторе', min: 0, max: 5, color: '#006400', poz: { x: 1, y: 5 }, unit: 'Н*м', log: false },
+	par3: { par: 'Mpot', txt: 'Момент на роторе', min: 0, max: 5, color: '#006400', poz: { x: 1, y: 5 }, unit: 'тс*м', log: false },
 	par4: { par: 'Pbx', txt: 'Давление на входе', min: 0, max: 300, color: '#f40503', poz: { x: 2, y: 2 }, unit: 'атм', log: false },
 	par5: { par: 'Talblok', txt: 'Пол. тальблока', min: 0, max: 45, color: '#006eea', poz: { x: 2, y: 3 }, unit: 'м', log: false },
 	par6: { par: 'Qbx', txt: 'Расход на входе', min: 0, max: 70, color: '#006400', poz: { x: 2, y: 4 }, unit: 'л/сек', log: false },
@@ -2123,7 +2123,7 @@ function stopCam(event) {
 	//event.preventDefault(); // To prevent following the link (optional)
 	$.ajax({
 		type: 'POST',
-		url: 'https://hydrofalll.ddns.net:5443/LiveApp/rest/broadcasts/stop',
+		url: 'https://monitoring.agg.gazpromnedra.ru:5443/LiveApp/rest/broadcasts/stop',
 		crossDomain: true,
 		data: '{"streamId":"211275258683608619992096"}',
 		dataType: 'jsonp',
@@ -2134,7 +2134,7 @@ function stopCam(event) {
 			alert('POST failed.');
 		}
 	});
-	// $.post('https://hydrofalll.ddns.net:5443/v2/broadcasts/983687349095562644239572/stop', {text: 'Текст'}, function(data){
+	// $.post('https://monitoring.agg.gazpromnedra.ru:5443/v2/broadcasts/983687349095562644239572/stop', {text: 'Текст'}, function(data){
 	// alert(data);});
 };
 

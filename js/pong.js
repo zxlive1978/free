@@ -390,7 +390,41 @@ function read_next(){
 						var numbs110d = null;
 						numbs110d = d110d.length;
 						start_time = null;
-						
+						//Если нет данных сейчас по времени
+
+
+						// console.log(d110d.length);
+						if (d110d.length==0){
+							console.log(wellName);
+
+							online = false;
+							refresh=false;
+							clearTimeout (timer);
+
+							$.ajax({
+								type: "POST",
+								url: 'js/read_depth.php',
+								data: {whatdo:'read_last_time', table:wellName , start_time: start_time, end_time:end_time },
+								cache: false,
+								async: false,
+								success: function(data){
+								
+									
+									try {
+										d110d = null;
+										d110d = JSON.parse(data);
+										start_time=Number(d110d[0]["Vrema"]) -  Sheet.Kzoom*60*60;
+										read_random();										
+										
+									}
+									catch (e) { console.log(e);}
+								}
+							});
+
+							return;
+
+						}
+
 						start_time = Number(d110d[0]["Vrema"]);
 						end_time = null;
 						end_time = Number(d110d[d110d.length-1]["Vrema"]);
@@ -400,15 +434,18 @@ function read_next(){
 						back_end_time = null;
 						back_end_time = end_time;}
 					catch (e) { }
+					
+					online = false;
+					refresh=false;
 			}
 				
 				repaint();
 				refresh=true;
-				timer=setTimeout(function(){read_next();}, 3000);
+				var timer=setTimeout(function(){read_next();}, 3000);
 			},
 			error: function(){
 			refresh=true;
-			timer=setTimeout(function(){read_next();}, 3000);
+			var timer=setTimeout(function(){read_next();}, 3000);
 		}
 		});
 	
@@ -442,10 +479,7 @@ function pongpong() {
 	
 }
 
-/* (function doStuff() {
-  // Do stuff
-   setTimeout(doStuff, 1000);
-}()); */
+
 
 //Чтение произвольного куска
 function read_random(){
