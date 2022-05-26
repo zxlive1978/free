@@ -59,7 +59,7 @@
 
 	//read last depth
 	if ( $whatdo == 'read_last'){
-		$query="SELECT * FROM ".$name_base.".".$table." WHERE ".$x_id.">".(int)$start_time." AND ".$x_id."< SELECT MAX('Zaboj') FROM ".$name_base.";";
+		$query="SELECT * FROM ".$name_base.".".$table." ORDER BY Zaboj DESC LIMIT 1;";
 		$result=mysqli_query($dbc,$query) or die(mysqli_sqlstate($dbc));
 		$comment = array();
 		while($row=mysqli_fetch_array($result,MYSQLI_ASSOC)){
