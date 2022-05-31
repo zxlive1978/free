@@ -415,6 +415,13 @@ function read_next(){
 										d110d = JSON.parse(data);
 										start_time=Number(d110d[0]["Vrema"]) -  Sheet.Kzoom*60*60;
 										read_random();										
+										// d110d = JSON.parse(data);
+
+										console.log(data);
+
+										// start_time=JSON.parse(data);
+										
+										// read_random();										
 										
 									}
 									catch (e) { console.log(e);}
