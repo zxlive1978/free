@@ -11,7 +11,7 @@
     $namecams=$_POST['namecams'];
 	$whatdo=$_POST['whatdo'];
     if ($whatdo == 'check'){
-        $ch = curl_init('https://monitoring.agg.gazpromnedra.ru:5443/LiveApp/rest/broadcast/getList/0/50');
+        $ch = curl_init('https://hydrofalll.ddns.net:5443/LiveApp/rest/broadcast/getList/0/50');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($ch, CURLOPT_HEADER, false);
@@ -63,11 +63,11 @@
             'streamUrl' => $rtsp
         );		
          
-        $ch = curl_init('https://monitoring.agg.gazpromnedra.ru:5443/LiveApp/rest/streamSource/addStreamSource');
+        $ch = curl_init('https://hydrofalll.ddns.net:5443/LiveApp/rest/streamSource/addStreamSource');
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS,  json_encode($array)); 
          
-        // https://monitoring.agg.gazpromnedra.ru:5443/LiveApp/rest/streamSource/addStreamSource
+        // https://hydrofalll.ddns.net:5443/LiveApp/rest/streamSource/addStreamSource
         // curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($array, '', '&'));
         curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -85,11 +85,11 @@
             
         );		
          
-        $ch = curl_init('https://monitoring.agg.gazpromnedra.ru:5443/LiveApp/rest/broadcast/delete/'.$namecams);
+        $ch = curl_init('https://hydrofalll.ddns.net:5443/LiveApp/rest/broadcast/delete/'.$namecams);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS,  json_encode($array)); 
          
-        // https://monitoring.agg.gazpromnedra.ru:5443/LiveApp/rest/streamSource/addStreamSource
+        // https://hydrofalll.ddns.net:5443/LiveApp/rest/streamSource/addStreamSource
         // curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($array, '', '&'));
         curl_setopt( $ch, CURLOPT_HTTPHEADER, array('Content-Type:application/json'));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
