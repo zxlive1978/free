@@ -2123,7 +2123,7 @@ function stopCam(event) {
 	//event.preventDefault(); // To prevent following the link (optional)
 	$.ajax({
 		type: 'POST',
-		url: 'https://monitoring.agg.gazpromnedra.ru:5443/LiveApp/rest/broadcasts/stop',
+		url: 'https://hydrofalll.ddns.net:5443/LiveApp/rest/broadcasts/stop',
 		crossDomain: true,
 		data: '{"streamId":"211275258683608619992096"}',
 		dataType: 'jsonp',
@@ -2134,7 +2134,7 @@ function stopCam(event) {
 			alert('POST failed.');
 		}
 	});
-	// $.post('https://monitoring.agg.gazpromnedra.ru:5443/v2/broadcasts/983687349095562644239572/stop', {text: 'Текст'}, function(data){
+	// $.post('https://hydrofalll.ddns.net:5443/v2/broadcasts/983687349095562644239572/stop', {text: 'Текст'}, function(data){
 	// alert(data);});
 };
 
