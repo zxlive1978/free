@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "net.ddns.hydrofalll.twa",
+        "sha256_cert_fingerprints": ["5F:8B:4C:7D:2A:65:1C:4E:68:52:06:7E:76:5B:92:00:02:F7:B6:65:71:DC:94:0F:E3:59:65:0E:43:4E:D0:6B"]
+      }
+    }]
