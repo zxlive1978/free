@@ -37,6 +37,10 @@
         "url": "https://hydrofalll.ddns.net"
     }
 ],
+"display_override": [
+    "window-controls-overlay",
+    "fullscreen"
+  ],
 "prefer_related_applications": false,
 "shortcuts": [
     {
