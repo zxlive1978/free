@@ -1,8 +1,8 @@
 {
 "name": "Скважины",
 "short_name": "Скважины",
-"start_url": "/?fullscreen=true",
-"display": "fullscreen",
+"start_url": "https://wwww.hydrofalll.ddns.net/free/",
+"display": "standalone",
 "description": "Мониторинг скважин",
 "lang": "ru",
 "dir": "auto",
@@ -11,13 +11,13 @@
 "orientation": "any",
 "icons": [
     {
-        "src": "https://hydrofalll.ddns.net/free/css/android-launchericon-512-512.png",
+        "src": "https://wwww.hydrofalll.ddns.net/free/css/android-launchericon-512-512.png",
         "sizes": "512x512",
         "type": "image/png",
         "purpose": "any"
     },
     {
-        "src": "https://hydrofalll.ddns.net/free/css/android-launchericon-192-192.png",
+        "src": "https://wwww.hydrofalll.ddns.net/free/css/android-launchericon-192-192.png",
         "sizes": "192x192",
         "type": "image/png",
         "purpose": "any"
@@ -25,7 +25,7 @@
 ],
 "screenshots": [
     {
-        "src": "https://hydrofalll.ddns.net/free/css/android-launchericon-512-512.png",
+        "src": "https://wwww.hydrofalll.ddns.net/free/css/android-launchericon-512-512.png",
         "sizes": "2880x1800",
         "type": "image/png",
         "description": "A screenshot of the home page"
@@ -34,7 +34,7 @@
 "related_applications": [
     {
         "platform":"windows",
-        "url": "https://hydrofalll.ddns.net"
+        "url": "https://wwww.hydrofalll.ddns.net/free/"
     }
 ],
 "display_override": [
@@ -46,7 +46,7 @@
     {
         "name":"Скважины",
         "url":"/",
-        "description":"https://hydrofalll.ddns.net"
+        "description":"https://www.hydrofalll.ddns.net/free/"
     }
 ]
 }
