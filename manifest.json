@@ -1,7 +1,7 @@
 {
 "name": "Скважины",
 "short_name": "Скважины",
-"start_url": "https://hydrofalll.ddns.net",
+"start_url": "/?fullscreen=true",
 "display": "fullscreen",
 "description": "Мониторинг скважин",
 "lang": "rus",
