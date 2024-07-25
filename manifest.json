@@ -4,7 +4,7 @@
 "start_url": "/?fullscreen=true",
 "display": "fullscreen",
 "description": "Мониторинг скважин",
-"lang": "Russian",
+"lang": "ru",
 "dir": "auto",
 "theme_color": "#000000",
 "background_color": "#000000",
@@ -14,7 +14,7 @@
         "src": "https://hydrofalll.ddns.net/free/css/android-launchericon-512-512.png",
         "sizes": "512x512",
         "type": "image/png",
-        "purpose": "maskable"
+        "purpose": "any"
     },
     {
         "src": "https://hydrofalll.ddns.net/free/css/android-launchericon-192-192.png",
