@@ -3,6 +3,6 @@
       "target": {
         "namespace": "android_app",
         "package_name": "net.ddns.hydrofalll.twa",
-        "sha256_cert_fingerprints": ["9B:07:A4:E6:16:19:89:84:20:46:10:27:7A:88:CA:65:3A:91:E8:12:E3:E4:22:20:9E:CB:50:B7:ED:43:ED:CB"]
+        "sha256_cert_fingerprints": ["60:B0:E7:B0:C7:E9:AA:3D:A5:E2:2A:98:11:26:71:EE:AD:08:ED:86:0C:38:86:9A:7F:DF:22:9A:88:61:EC:17"]
       }
     }]
